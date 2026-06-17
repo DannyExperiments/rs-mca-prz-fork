@@ -39,3 +39,13 @@ Cycle 2 retry audit:
 
 - `audits/20260618_CYCLE2_PAIRED_BASE_READOUT_RETRY_AUDIT.md`
 - Status: `BANKABLE_LEMMA` / `EXACT_NEW_WALL`.
+
+Cycle 3 local audit:
+
+- `audits/20260618_CODEX_LOCAL_NONCONTAINMENT_SUBSET_LEMMA.md`
+- Status: `BANKABLE_LEMMA` / `AUDIT`.
+
+Cycle 3 Fable audit:
+
+- `audits/20260618_CYCLE3_W_F1_AA_NONCONTAINMENT_AUDIT.md`
+- Status: `BANKABLE_LEMMA` / `EXACT_NEW_WALL`.

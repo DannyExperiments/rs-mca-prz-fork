@@ -109,3 +109,36 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Ask the next worker to attack `W-F1-AA` directly:
   prove a slope-image packing bound, or produce a finite/source-valid
   arbitrary-anchor counterpacket after tangent/contained separation.
+
+### 2026-06-18 - Codex local balanced noncontainment subset lemma
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/audits/20260618_CODEX_LOCAL_NONCONTAINMENT_SUBSET_LEMMA.md`.
+- **Status:** BANKABLE_LEMMA / AUDIT.
+- **What is being added:** In a degree-`t` residue-line datum with nonzero
+  numerator and balanced support size `a=k+t`, no degree-`<k` polynomial can
+  agree with `-Bnum/E` on an `a`-subset. Thus balanced nonzero-numerator
+  supports are automatically noncontained.
+- **How it is useful:** Removes one suspected obstruction in `W-F1-AA`: in the
+  balanced nonzero-numerator case, shrinking to an `a`-subset does not lose
+  noncontainment.
+- **What to do next:** Verify this lemma against the Cycle 3 Opus answer, then
+  retarget `W-F1-AA` to the remaining slope-image packing problem.
+
+### 2026-06-18 - Fable loop cycle 3, W-F1-AA noncontainment
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/prompts/20260618_cycle3_w_f1_aa_noncontainment.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE3_W_F1_AA_NONCONTAINMENT_RAW.md`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE3_W_F1_AA_NONCONTAINMENT_AUDIT.md`.
+- **Status:** BANKABLE_LEMMA / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** The run confirms the noncontainment subset issue is
+  not the live balanced nonzero-numerator obstruction: supports of size at
+  least `a=k+t` are automatically noncontained. The next wall is
+  `W-F1-AA-AGR`, an agreement-rigidity/collision problem for paired readouts.
+- **How it is useful:** Sharpens `W-F1-AA`: future work should control the
+  high-agreement condition `nu(S)>=s_delta`, not ask whether noncontainment
+  survives shrinking to an `a`-subset.
+- **What to do next:** Attack `W-F1-AA-AGR`: prove a high-agreement collision
+  rigidity theorem for arbitrary base anchors, or produce a finite
+  high-agreement counterpacket.
