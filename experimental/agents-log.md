@@ -142,3 +142,20 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Attack `W-F1-AA-AGR`: prove a high-agreement collision
   rigidity theorem for arbitrary base anchors, or produce a finite
   high-agreement counterpacket.
+
+### 2026-06-18 - Fable loop cycle 4, balance-notation route cut
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/prompts/20260618_cycle4_audit_cycle3_balance_notation.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE4_BALANCE_NOTATION_AUDIT_RAW.md`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE4_BALANCE_NOTATION_ROUTE_CUT_AUDIT.md`.
+- **Status:** ROUTE_CUT / BANKABLE_LEMMA / AUDIT.
+- **What is being added:** Cycle 4 cuts Cycle 3's `W-F1-AA-AGR` as a balanced
+  wall. Source notation has `a=ceil((1-delta)n)` and `sigma=a-k`, so balanced
+  `t=sigma` gives `k+t=a=s_delta`; no extra high-agreement layer remains.
+- **How it is useful:** Prevents a false detour. The balanced live target is
+  restored to slope-image/bad-locus packing for the paired base readout, while
+  retaining the noncontainment subset lemma.
+- **What to do next:** Attack restored `W-F1-AA`: bound distinct slopes whose
+  paired readout lands on `F*[Bnum]_E`, after tangent/zero-numerator and
+  quotient-periodic contributions are separated.

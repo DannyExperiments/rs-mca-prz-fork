@@ -49,3 +49,8 @@ Cycle 3 Fable audit:
 
 - `audits/20260618_CYCLE3_W_F1_AA_NONCONTAINMENT_AUDIT.md`
 - Status: `BANKABLE_LEMMA` / `EXACT_NEW_WALL`.
+
+Cycle 4 balance-notation audit:
+
+- `audits/20260618_CYCLE4_BALANCE_NOTATION_ROUTE_CUT_AUDIT.md`
+- Status: `ROUTE_CUT` for `W-F1-AA-AGR` as a balanced wall; the noncontainment lemma remains banked.
