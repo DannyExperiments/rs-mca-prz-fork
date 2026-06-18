@@ -651,3 +651,39 @@ Cycle 30 T2J4 split-quartic gate prompt:
 - Purpose: attack the actual `j=4` gate: bound or refute the number of slopes
   for which `tau(z)=M(z)^(-1)(-C_0(z))` is the elementary-symmetric tuple of a
   distinct 4-subset of `F_p`.
+
+Cycle 30 T2J4 split-quartic gate answer:
+
+- `raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_RECOVERED_CLAUDE_JSONL.md`
+- `raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_RAW.json`
+- `raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_RUN_RESULT.json`
+- `raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`
+- `raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_TUI_RUNNER_RESULT.json`
+- `raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_CREDIT_SURFACE_RUNNER_RESULT.json`
+- `audits/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_AUDIT.md`
+- `local_checks/20260618_cycle30_t2_j4_split_quartic_scan.py`
+- `local_checks/20260618_cycle30_t2_j4_split_quartic_scan_certificate.md`
+- Harness status: `HARNESS_MALFORMED_VISIBLE_TERMINAL`; no clean
+  `response.md` was produced. The readable structured-JSONL recovery was
+  audited conservatively and the visible-terminal scrape is not banked as
+  mathematics.
+- Mathematical audit status: `BANKABLE_LEMMA / EXACT_NEW_WALL / EXPERIMENTAL / AUDIT`.
+- Banked content: the `j=4` split-quartic gate is the vanishing of one
+  `F`-quadric
+  `Phi(tau)=kappa*N_{A/F}(lambda)-(ell[Q_S]_E) wedge_F (b*lambda)` on the
+  elementary-symmetric tuple `tau=e(T)` of a distinct 4-subset `T`.
+- Local experimental scan: direct finite counts through `p=29` lean toward
+  `O(p)`-scale growth, not the recovered answer's generic
+  `Theta(q_line)` heuristic.
+- Exact new wall: `W-F1-AA-RES-T2J4-SPLIT-QUADRIC-COLLAPSE`.
+- Not banked: any proof of `O(p)`, any `Theta(q_line)` counterpacket,
+  corrected-reserve theorem, full MCA bound, `q_gen` consequence,
+  protocol/list/CA/MCA/line-decoding/curve-MCA/SNARK statement, or prize solve.
+
+Cycle 31 T2J4 split-quadric collapse prompt:
+
+- `prompts/20260618_cycle31_t2j4_split_quadric_collapse.md`
+- Status: AUDIT / prompt prepared.
+- Purpose: attack the hidden structure suggested by the finite scan: prove an
+  `O(p)` split-collapse theorem for `Phi(e(T))=0`, or produce a source-valid
+  family that realizes positive-density slopes despite the small-prime data.

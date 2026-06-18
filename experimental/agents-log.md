@@ -715,3 +715,32 @@ Keep entries concise and link to the relevant files.
   totally split distinct locus, produce a source-valid growing-prime
   counterpacket, or reduce the gate to a precise curve/Frobenius/norm
   condition.
+
+### 2026-06-18 - Fable loop cycle 30, T2J4 split-quartic gate
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_RAW.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_RECOVERED_CLAUDE_JSONL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_RUN_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_TUI_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_CREDIT_SURFACE_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE30_T2J4_SPLIT_QUARTIC_GATE_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/local_checks/20260618_cycle30_t2_j4_split_quartic_scan.py`,
+  `experimental/2026-06-18-fable-loop/local_checks/20260618_cycle30_t2_j4_split_quartic_scan_certificate.md`,
+  `experimental/2026-06-18-fable-loop/prompts/20260618_cycle31_t2j4_split_quadric_collapse.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** BANKABLE_LEMMA / EXACT_NEW_WALL / EXPERIMENTAL / AUDIT.
+- **What is being added:** Cycle 30 reduces the `j=4` gate to one
+  source-correct `F`-quadric on elementary-symmetric 4-subset coordinates.
+  Codex's finite scan through `p=29` leans toward `O(p)`-scale counts, not the
+  recovered answer's naive `Theta(q_line)` heuristic.
+- **How it is useful:** The live wall is now a concrete hidden-collapse
+  question: prove the split locus on `Phi(e(T))=0` is only `O(p)`, or find a
+  source-valid family with positive-density slopes that escapes the random
+  scans.
+- **What to do next:** Run Cycle 31 against
+  `W-F1-AA-RES-T2J4-SPLIT-QUADRIC-COLLAPSE`: search for rational-root,
+  discriminant, trace/norm, or Frobenius structure forcing `O(p)`, while
+  keeping the counterpacket alternative open.
