@@ -386,3 +386,39 @@ Cycle 23 nonemptiness/split-count prompt:
 - Purpose: settle whether the explicit `c in B`, `d notin B`, `Delta1==0`,
   `D=0` off-kernel stratum is source-valid and nonempty, and if so whether it
   has `Omega(p^2)` or only `O(p)` split-cubic bad slopes.
+
+Cycle 23 c-in-B D-kernel emptiness answer:
+
+- `raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_RECOVERED_CLAUDE_JSONL.md`
+- `raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_RAW.json`
+- `raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_RUN_RESULT.json`
+- `raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`
+- `raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_TUI_RUNNER_RESULT.json`
+- `raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_CREDIT_SURFACE_RUNNER_RESULT.json`
+- `audits/20260618_CYCLE23_CINB_DKERNEL_EMPTINESS_AUDIT.md`
+- `local_checks/20260618_cycle23_cinb_dkernel_identity_check.py`
+- Harness status: `HARNESS_MALFORMED_VISIBLE_TERMINAL`; no clean
+  `response.md` was produced. The readable structured-JSONL recovery was
+  audited conservatively and the visible-terminal scrape is not banked as
+  mathematics.
+- Mathematical audit status: `BANKABLE_LEMMA / ROUTE_CUT / AUDIT`.
+- Banked content: in the restricted `D=F_p`, `B=F_p`, `F=F_{p^2}`,
+  `t=sigma=2`, `j=3`, off-`R0` window, if `c in B` and `d notin B`, then
+  `ell=[X^p-X]_E=mu*(xi+c/2)` and
+  `D=-mu^2(c^2/4-d)kappa != 0`.
+- Consequence: the `c in B`, `d notin B`, `D=0`, off-`R0` branch is empty;
+  Cycle 22's nonemptiness/split-count target is closed on this subcase.
+- Live wall: `W-F1-AA-RES-T2J3-D-KERNEL-NONSPLIT-C`, the complementary
+  `c notin B` branch.
+- Not banked: nonemptiness or split count in the `c notin B` lane, any
+  `Theta(q_line)` counterpacket, corrected-reserve consequences, or any
+  protocol/list/CA/MCA/line-decoding/curve-MCA/SNARK statement.
+
+Cycle 24 nonsplit-c D-kernel prompt:
+
+- `prompts/20260618_cycle24_nonsplit_c_dkernel.md`
+- Status: AUDIT / prompt staged.
+- Purpose: attack the only surviving `D=0`, off-`R0`, separated-`E` lane:
+  `c notin B`. The prompt asks for a closed form for `[X^p-X]_E`, a bilinear
+  form for `D`, and a proof/counterpacket/exact wall for the joint
+  `D=0`, `Delta1==0` split-cubic slope-count problem.

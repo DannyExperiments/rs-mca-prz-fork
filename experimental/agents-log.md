@@ -479,3 +479,43 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run Cycle 23 to decide nonemptiness and split-cubic
   slope count on that stratum. Do not bank a counterpacket until a growing
   `Omega(p^2)` source-valid family is supplied.
+
+### 2026-06-18 - Fable loop cycle 23, c-in-B D-kernel emptiness
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_RAW.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_RECOVERED_CLAUDE_JSONL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_RUN_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_TUI_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE23_NONEMPTINESS_SPLIT_COUNT_CREDIT_SURFACE_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE23_CINB_DKERNEL_EMPTINESS_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/local_checks/20260618_cycle23_cinb_dkernel_identity_check.py`,
+  and `experimental/2026-06-18-fable-loop/README.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / AUDIT.
+- **What is being added:** Cycle 23 cuts the `c in B`, `d notin B`, `D=0`,
+  off-`R0` branch by the closed form
+  `D=-mu^2(c^2/4-d)kappa`, after `ell=[X^p-X]_E` collapses to
+  `mu*(xi+c/2)`.
+- **How it is useful:** The previous nonemptiness target is no longer a
+  possible counterpacket seed on `c in B`; the only surviving `D=0` branch is
+  the complementary nonsplit-coefficient lane `c notin B`.
+- **What to do next:** Attack `W-F1-AA-RES-T2J3-D-KERNEL-NONSPLIT-C`: compute
+  `[X^p-X]_E` for `c notin B`, rederive `D`, and decide whether
+  `D=0`, `Delta1==0`, off-`R0` gives `O(p)` slopes or a growing
+  `Omega(p^2)=Omega(q_line)` seed.
+
+### 2026-06-18 - Fable loop cycle 24, nonsplit-c D-kernel prompt
+
+- **Agent/model:** Codex directing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/prompts/20260618_cycle24_nonsplit_c_dkernel.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** AUDIT.
+- **What is being added:** A no-internet homerun prompt attacks the remaining
+  nonsplit-`c` branch after Cycle 23 closes the `c in B` half.
+- **How it is useful:** This keeps the loop on the only remaining place where
+  a `Theta(q_line)` seed could hide inside the restricted `t=2,j=3`
+  `D=0` branch.
+- **What to do next:** Audit the Cycle 24 answer conservatively and bank only
+  source-valid proof, counterpacket, route cut, or exact new wall material.
