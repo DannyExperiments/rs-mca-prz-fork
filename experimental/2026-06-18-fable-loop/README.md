@@ -723,3 +723,33 @@ Cycle 32 T2J4 quartic monodromy prompt:
 - Purpose: audit the exact discriminant/resolvent/monodromy invariant for
   `L_{tau(z)}`, including the base-field issue for `z in F_{p^2}` and
   splitting over `B=F_p`.
+
+Cycle 32 T2J4 quartic monodromy answer:
+
+- `raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_RECOVERED_CLAUDE_JSONL.md`
+- `raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_RAW.json`
+- `raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_RUN_RESULT.json`
+- `raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`
+- `raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_TUI_RUNNER_RESULT.json`
+- `raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_CREDIT_SURFACE_RUNNER_RESULT.json`
+- `audits/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_BASE_FIELD_AUDIT.md`
+- `local_checks/20260618_cycle32_t2_j4_monodromy_histogram.py`
+- `local_checks/20260618_cycle32_t2_j4_monodromy_histogram_certificate.md`
+- Harness status: `HARNESS_MALFORMED_VISIBLE_TERMINAL`; no clean
+  `response.md` was produced. The readable structured-JSONL recovery was
+  audited conservatively and the visible-terminal scrape is not banked as
+  mathematics.
+- Mathematical audit status: `ROUTE_CUT / EXACT_NEW_WALL / EXPERIMENTAL / AUDIT`.
+- Banked content: the `t=2,j=4` quartic family is a two-dimensional
+  `B`-surface family over `A^2_B` with coordinates `z=z_0+alpha z_1`, not a
+  one-variable `B(z)` or `F(z)` family. A local Cramer-system histogram checker
+  matches direct support enumeration away from the singular determinant curve.
+- Live wall: `W-F1-AA-RES-T2J4-A2B-MONODROMY-CERTIFICATE`.
+
+Cycle 33 A2_B monodromy certificate prompt:
+
+- `prompts/20260618_cycle33_a2b_monodromy_certificate.md`
+- Status: AUDIT / prompt prepared.
+- Purpose: decide whether the Cycle 32 checker and Cycle 29/30 equations can
+  be upgraded into a real surface monodromy / singular-curve certificate, or
+  whether a constant-field, singular-curve, or checker obstruction remains.

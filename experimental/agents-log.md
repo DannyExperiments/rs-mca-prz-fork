@@ -771,3 +771,34 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run Cycle 32 to compute or source-audit the quartic
   discriminant/resolvent and settle the correct base-field model for
   `z in F_{p^2}` with splitting over `B=F_p`.
+
+### 2026-06-18 - Fable loop cycle 32, quartic monodromy base-field audit
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_RAW.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_RECOVERED_CLAUDE_JSONL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_RUN_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_TUI_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_CREDIT_SURFACE_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE32_T2J4_QUARTIC_MONODROMY_BASE_FIELD_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/local_checks/20260618_cycle32_t2_j4_monodromy_histogram.py`,
+  `experimental/2026-06-18-fable-loop/local_checks/20260618_cycle32_t2_j4_monodromy_histogram_certificate.md`,
+  `experimental/2026-06-18-fable-loop/prompts/20260618_cycle33_a2b_monodromy_certificate.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** ROUTE_CUT / EXACT_NEW_WALL / EXPERIMENTAL / AUDIT.
+- **What is being added:** Cycle 32 cuts the one-variable `B(z)` / `F(z)`
+  framing for the `t=2,j=4` quartic family. The source-correct model is a
+  two-dimensional `B`-surface `A^2_B` with coordinates `z=z_0+alpha z_1`.
+  Codex also adds a local Cramer-system factorization histogram checker,
+  matching direct support enumeration away from the singular determinant curve.
+- **How it is useful:** The live wall is now a precise surface monodromy and
+  singular-bound certificate problem:
+  `W-F1-AA-RES-T2J4-A2B-MONODROMY-CERTIFICATE`.
+- **What to do next:** Run Cycle 33 against
+  `W-F1-AA-RES-T2J4-A2B-MONODROMY-CERTIFICATE`: prove or refute that the
+  singular determinant curve contributes only `O(p)` slopes and that the
+  off-curve quartic family has arithmetic/geometric monodromy with positive
+  split density. Do not promote the checker output to `PROOF` or
+  `COUNTERPACKET`.
