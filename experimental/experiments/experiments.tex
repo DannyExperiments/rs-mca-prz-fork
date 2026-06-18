@@ -1,0 +1,354 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{heuristic}{Heuristic}
+\newtheorem{remark}{Remark}
+
+\newcommand{\F}{\mathbb F}
+\newcommand{\B}{\mathbb B}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Deltaone}{\Delta_1}
+\newcommand{\Deltazero}{\Delta_0}
+\newcommand{\tauone}{\tau_1}
+\newcommand{\tautwo}{\tau_2}
+\newcommand{\tauthree}{\tau_3}
+\newcommand{\Ctwo}{C_2}
+\newcommand{\qline}{q_{\rm line}}
+\newcommand{\qgen}{q_{\rm gen}}
+
+\title{Experimental Theorems for the F1 / Slack-Two Resonance Window}
+\author{RS-MCA experimental notes}
+\date{June 18, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note records restricted experimental theorems and heuristics extracted
+from the Cycle 14--18 Fable-loop audits in the RS-MCA repository.  The main
+new item is a divisibility gate for the non-coprime resonance branch in the
+quadratic-extension, slack-two, three-co-support toy window.  These statements
+are useful for Paper B's residue-line program, but they are not a proof of the
+corrected MCA conjecture and have no direct protocol consequence.
+\end{abstract}
+
+\section{Status and Scope}
+
+All results in this note live in the experimental folder and should be read as
+restricted algebraic facts or proof targets.  We do not edit or supersede the
+main papers A--D.
+
+The common restricted setting is
+\[
+  B=\F_p,\qquad F=\F_{p^2},\qquad D=\F_p,\qquad
+  t=\sigma=2,\qquad j=3,
+\]
+and we work off the tangent/global endpoint
+\[
+  R_0=\{\, [W]_E\wedge [B]_E=0\,\}.
+\]
+Here \(E\in F[X]\) has degree \(2\), \(b=[B]_E\), and
+\[
+  A=F[X]/E.
+\]
+The field ledgers remain distinct:
+\[
+  \qgen=p,\qquad \qline=p^2.
+\]
+The regime is sub-reserve, since \(\eta=\sigma/n=2/n\).  Thus none of the
+following proves a corrected-reserve list, CA, MCA, line-decoding, SNARK, or
+protocol theorem.
+
+\section{Cycle 14 Normal Form}
+
+The Cycle 14 audit reduces the \(t=2,j=3\) landing equation to two affine
+forms in the elementary co-support parameters
+\[
+  \tau=(\tauone,\tautwo,\tauthree).
+\]
+
+\begin{lemma}[Affine wedge normal form]
+\label{lem:affine-wedge}
+Assume \(\{[W]_E,b\}\) is an \(F\)-basis of \(A\).  Then the landing equation
+can be written in the form
+\[
+  \iota(\tau)=A_0(\tauone,\tautwo)-\tauthree [W]_E,\qquad
+  \mu(\tau)=B_0(\tauone,\tautwo)-\tauthree b,
+\]
+where
+\[
+  A_0=p_1[W]_E+p_2 b,\qquad B_0=q_1[W]_E+q_2 b,
+\]
+and \(p_i,q_i\in F\) are affine-linear functions of
+\((\tauone,\tautwo)\).  If the basis is normalized so
+\([W]_E\wedge b=1\), then
+\[
+  \Delta=\iota\wedge\mu
+    =(p_1-\tauthree)(q_2-\tauthree)-p_2q_1.
+\]
+\end{lemma}
+
+\begin{proof}
+The Cycle 14 quotient calculation gives the displayed affine forms.  Expanding
+in the ordered basis \(\{[W]_E,b\}\), the coordinate vector of \(\iota\) is
+\((p_1-\tauthree,p_2)\), while the coordinate vector of \(\mu\) is
+\((q_1,q_2-\tauthree)\).  Their wedge determinant is therefore
+\[
+  (p_1-\tauthree)(q_2-\tauthree)-p_2q_1.
+\]
+\end{proof}
+
+\section{Cycle 18 Component Split}
+
+Choose a basis \(F=B+\alpha B\) with \(\alpha^2=\nu\in B\), and write
+\[
+  p_1=p_{10}+\alpha p_{11},\quad
+  p_2=p_{20}+\alpha p_{21},\quad
+  q_1=q_{10}+\alpha q_{11},\quad
+  q_2=q_{20}+\alpha q_{21}.
+\]
+Split
+\[
+  \Delta=\Deltazero+\alpha\Deltaone,\qquad
+  \Deltazero,\Deltaone\in B[\tauone,\tautwo,\tauthree].
+\]
+
+\begin{theorem}[Monic quadratic and linear alpha component]
+\label{thm:component-split}
+In the setting above,
+\[
+\begin{aligned}
+\Deltazero={}&
+  \tauthree^2-(p_{10}+q_{20})\tauthree
+  +p_{10}q_{20}+\nu p_{11}q_{21}
+  -p_{20}q_{10}-\nu p_{21}q_{11},\\
+\Deltaone={}&
+  -(p_{11}+q_{21})\tauthree
+  +p_{10}q_{21}+p_{11}q_{20}-p_{20}q_{11}-p_{21}q_{10}.
+\end{aligned}
+\]
+Consequently \(\Deltazero\) is monic quadratic in \(\tauthree\), while
+\(\Deltaone\) has degree at most one in \(\tauthree\).
+\end{theorem}
+
+\begin{proof}
+Substitute the coordinate expressions for \(p_i,q_i\) into the identity of
+Lemma~\ref{lem:affine-wedge} and use \(\alpha^2=\nu\).  Collecting the
+coefficient of \(1\) gives the displayed formula for \(\Deltazero\), and
+collecting the coefficient of \(\alpha\) gives the displayed formula for
+\(\Deltaone\).  The coefficient of \(\tauthree^2\) in \(\Deltazero\) is \(1\),
+and the \(\alpha\)-component has no \(\tauthree^2\)-term.
+\end{proof}
+
+\begin{corollary}[Graph reduction outside the zero-alpha branch]
+\label{cor:graph}
+If \(\Deltaone\) is not the zero polynomial, write
+\[
+  \Deltaone=s(\tauone,\tautwo)\tauthree+h(\tauone,\tautwo).
+\]
+On the open locus \(s\ne0\), the common-zero condition
+\(\Deltazero=\Deltaone=0\) is supported on the graph
+\[
+  \tauthree=-h/s.
+\]
+\end{corollary}
+
+\begin{proof}
+This is immediate from solving the linear equation \(\Deltaone=0\) for
+\(\tauthree\) on \(s\ne0\).
+\end{proof}
+
+\section{New Divisibility-Gate Theorem}
+
+The next theorem is the main new theorem extracted from the Cycle 18
+reduction.  It is stronger than merely saying that the branch is a graph: it
+shows that any two-dimensional family must satisfy an explicit divisibility
+identity.
+
+\begin{theorem}[Divisibility gate for the graph branch]
+\label{thm:divisibility-gate}
+Assume the restricted setting above and assume \(\Deltaone\ne0\).  Write
+\[
+  \Deltaone=s(\tauone,\tautwo)\tauthree+h(\tauone,\tautwo),
+\]
+and define the denominator-cleared graph polynomial
+\[
+  G(\tauone,\tautwo)
+  =s(\tauone,\tautwo)^2
+    \Deltazero\bigl(\tauone,\tautwo,-h(\tauone,\tautwo)/s(\tauone,\tautwo)\bigr).
+\]
+Then \(\deg G\le 4\).  If \(G\) is not the zero polynomial, then
+\[
+  \#\{\,\tau\in B^3:\Deltazero(\tau)=\Deltaone(\tau)=0\,\}=O(p).
+\]
+Consequently the corresponding number of distinct slopes satisfies
+\[
+  \Ctwo=O(p)=O(n).
+\]
+Therefore a growing-prime family with
+\[
+  \Ctwo=\Theta(p^2)=\Theta(\qline)
+\]
+in the nonzero-\(\Deltaone\) branch can occur only if \(G\equiv0\).
+\end{theorem}
+
+\begin{proof}
+Because the \(p_i,q_i\) are affine-linear in \((\tauone,\tautwo)\), the
+coefficient \(s\) has degree at most \(1\), and \(h\) has degree at most \(2\).
+Since \(\Deltazero\) is monic quadratic in \(\tauthree\), clearing the
+denominators after substituting \(\tauthree=-h/s\) gives a polynomial \(G\) of
+degree at most \(4\).
+
+On \(s\ne0\), the equation \(\Deltaone=0\) forces
+\(\tauthree=-h/s\).  Hence every common zero on this open locus gives a base
+pair \((\tauone,\tautwo)\) with \(G(\tauone,\tautwo)=0\).  If \(G\) is nonzero,
+Schwartz--Zippel gives at most \(4p\) such base pairs, and each base pair gives
+at most one value of \(\tauthree\).
+
+It remains to count the exceptional locus \(s=0\).  There
+\(\Deltaone=0\) also forces \(h=0\).  If \(s\) is a nonzero affine form, this
+is contained in an affine line; if \(s\equiv0\), then \(h\) is a nonzero
+polynomial of degree at most \(2\).  In either case there are \(O(p)\) base
+pairs.  For each such pair, \(\Deltazero\) is a monic quadratic in
+\(\tauthree\), so it gives at most two values of \(\tauthree\).  The total
+common-zero count is \(O(p)\).
+
+Finally, the number of distinct slopes is bounded by the number of landing
+points \(\tau\).  Thus \(\Ctwo=O(p)\) whenever \(G\not\equiv0\), and any
+\(\Theta(p^2)\) family in this branch must satisfy \(G\equiv0\).
+\end{proof}
+
+\begin{remark}
+The identity \(G\equiv0\) says that, after clearing the \(s\)-denominator,
+\(\Deltazero\) is divisible by the linear equation \(\Deltaone\) on the graph
+branch.  This is now the first exact algebraic gate that a large slope family
+must pass.
+\end{remark}
+
+\section{Nearby Proven Gates}
+
+The same restricted lane contains two other useful gates.  They are included
+here because they explain where the new theorem fits.
+
+\begin{proposition}[Base-component complete-intersection gate]
+\label{prop:complete-intersection}
+Suppose \(\Deltazero,\Deltaone\in B[\tauone,\tautwo,\tauthree]\) have no common
+surface component.  Then
+\[
+  \#V(\Deltazero,\Deltaone)(B)=O(p),
+\]
+and hence this branch contributes \(\Ctwo=O(p)\) slopes.
+\end{proposition}
+
+\begin{proof}
+The two components have bounded degree.  If they share no surface component,
+their common zero set in \(\mathbb A^3_B\) is a curve of bounded degree.  A
+bounded-degree affine curve over \(\F_p\) has \(O(p)\) rational points, and
+slopes are bounded by landing points.
+\end{proof}
+
+\begin{proposition}[Cycle 16 determinant gate]
+\label{prop:det-gate}
+Let \(Q(z_0,z_1)\) be the Cycle 15--16 determinant consistency polynomial for
+the affine system
+\[
+  L_z(\tau)=\iota(\tau)-z\mu(\tau)=0,\qquad z=z_0+\alpha z_1.
+\]
+If \(Q\) is not identically zero, then in the restricted \(D=\F_p\),
+\(t=\sigma=2\), \(j=3\), off-\(R_0\) window,
+\[
+  \Ctwo\le 4p=O(p)=O(n).
+\]
+\end{proposition}
+
+\begin{proof}
+Cycle 16 gives \(\deg Q\le4\) and shows that every landing slope must satisfy
+\(Q(z_0,z_1)=0\).  If \(Q\ne0\), Schwartz--Zippel over \(B=\F_p\) gives at
+most \(4p\) possible pairs \((z_0,z_1)\), hence at most \(4p\) slopes.
+\end{proof}
+
+\section{Slope Map and Remaining Heuristics}
+
+On the graph branch, the landing equation \(\iota=z\mu\) gives
+\[
+  p_1-\tauthree=zq_1,\qquad p_2=z(q_2-\tauthree).
+\]
+Where \(q_1\ne0\), substituting \(\tauthree=-h/s\) yields
+\[
+  z(\tauone,\tautwo)=\frac{p_1+h/s}{q_1}.
+\]
+Equivalently, eliminating \(\tauthree\) recovers the Cycle 14 quadratic
+\[
+  q_1z^2-(p_1-q_2)z-p_2=0,
+\]
+so the residual map is controlled by
+\[
+  (\tauone,\tautwo)\longmapsto [\,q_1:(p_1-q_2):p_2\,]\in\mathbb P^2(F).
+\]
+
+\begin{heuristic}[Exceptional identity should be rare]
+For generic source data, the polynomial \(G\) should not vanish identically.
+Thus the graph branch should usually be curve-sized, and the first possible
+large-slope families should come from algebraically special data satisfying
+the divisibility identity \(G\equiv0\) or from the zero-alpha branch
+\(\Deltaone\equiv0\).
+\end{heuristic}
+
+\begin{heuristic}[What remains after the gate]
+If \(G\equiv0\), the problem is no longer to show that the common-zero set is
+small.  It may be surface-sized.  The remaining question is whether the
+projective coefficient map has one-dimensional image on every source-valid
+surface, giving \(\Ctwo=O(p)\), or whether some growing-prime source-valid
+family has two-dimensional image and \(\Ctwo=\Theta(p^2)\).
+\end{heuristic}
+
+\section{Next Experimental Checks}
+
+A useful scanner should compute, for each source-valid candidate:
+\[
+  \Deltaone=s\tauthree+h,\qquad
+  G=s^2\Deltazero(\tauone,\tautwo,-h/s),
+\]
+then record whether \(G\equiv0\), whether \(\Deltaone\equiv0\), the
+exceptional locus \(s=h=0\), the image size of
+\[
+  [\,q_1:(p_1-q_2):p_2\,],
+\]
+and the direct slope count over distinct split triples \(T\subset\F_p\).
+
+The certificate should keep at least:
+\[
+\begin{gathered}
+  p,\ \qgen,\ \qline,\ E,\ B,\ \text{seed},\ \text{stratum},\
+  R_0\text{-status},\\
+  \Deltaone\equiv0,\quad G\equiv0,\quad
+  \#\{s=h=0\},\quad \#\operatorname{image},\quad
+  \Ctwo,\quad \#\{T\text{ split distinct}\}.
+\end{gathered}
+\]
+
+\section{Non-Claims}
+
+This note does not claim:
+\begin{itemize}
+\item a proof of the corrected MCA conjecture;
+\item a positive theorem above corrected reserve;
+\item a \(\qgen\) local-limit theorem;
+\item a list, CA, MCA, line-decoding, SNARK, or protocol consequence;
+\item a large \(\Theta(p^2)\) counterpacket.
+\end{itemize}
+
+The mathematical value is narrower: the possible large branch in this
+restricted window must satisfy an explicit algebraic identity before it can
+even be surface-sized.
+
+\end{document}

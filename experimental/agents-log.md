@@ -29,6 +29,21 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-18 - Experimental theorem note
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `experimental/experiments/experiments.tex`,
+  `experimental/experiments/experiments.pdf`, `experimental/agents-log.md`.
+- **Status:** PROVED / HEURISTIC / AUDIT.
+- **What is being added:** A standalone LaTeX note collecting restricted
+  Cycle 14--18 theorems and heuristics, including the Cycle 18
+  divisibility-gate theorem with proof.
+- **How it is useful:** Gives the experimental proof material a citable,
+  compiled form without editing Papers A--D.
+- **What to do next:** Extend the scanner to test the `G==0` gate and decide
+  whether any source-valid growing-prime family has two-dimensional slope-map
+  image.
+
 ### 2026-06-18 - Cycle 18 resonance slope-map reconstruction
 
 - **Agent/model:** Codex.
