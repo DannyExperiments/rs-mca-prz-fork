@@ -930,3 +930,42 @@ Cycle 38 homerun prompt:
 - Purpose: take a big-leap/full-solve swing after the Cycle 37 checker failure:
   repair or bypass the certificate route, find an obstruction, or identify a
   higher-value route toward the proximity problem.
+
+Cycle 38 homerun answer:
+
+- `raw/20260618_CYCLE38_HOMERUN_RECOVERED_CLAUDE_JSONL.md`
+- `raw/20260618_CYCLE38_HOMERUN_RAW.json`
+- `raw/20260618_CYCLE38_HOMERUN_RUN_RESULT.json`
+- `raw/20260618_CYCLE38_HOMERUN_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`
+- `raw/20260618_CYCLE38_HOMERUN_TUI_RUNNER_RESULT.json`
+- `raw/20260618_CYCLE38_HOMERUN_CREDIT_SURFACE_RUNNER_RESULT.json`
+- `local_checks/20260618_cycle38_single_prime_s4_cert_patched_checker.py`
+- `local_checks/20260618_cycle38_single_prime_s4_cert_patched_result.txt`
+- `local_checks/20260618_cycle38_single_prime_s4_cert_patched_stdout.txt`
+- `local_checks/20260618_cycle38_single_prime_s4_cert_patched_stderr.txt`
+- `audits/20260618_CYCLE38_HOMERUN_S4_REPAIR_AUDIT.md`
+- Harness status: `HARNESS_MALFORMED_VISIBLE_TERMINAL`; no clean
+  `response.md` was produced. The readable structured-JSONL recovery was
+  audited conservatively and terminal scrape text is not banked as
+  mathematics.
+- Mathematical audit status: `BANKABLE_LEMMA / EXACT_NEW_WALL /
+  EXPERIMENTAL / AUDIT`.
+- Banked content: Cycle 38 finds the exact type error in the Cycle 37 checker:
+  four free top coefficients were residue-pairs but `qres` consumes them as
+  `F`-elements. The repaired checker uses
+  `W_{n-1..n-4}=1,alpha,1+alpha,1`.
+- Local Codex follow-up: the patched checker runs at `p=31` and reports
+  `PASS_S4_finite_place=true`, with `"4"` and `"13"` factorization witnesses,
+  nonsquare-discriminant evidence, and no singular points on the tested line.
+- Not banked: a uniform growing-prime theorem, geometric `S_4` over
+  `B(z_0,z_1)`, a `COUNTERPACKET`, corrected-reserve theorem, MCA/CA/list/
+  line-decoding/curve-MCA/protocol/SNARK statement, or prize solve.
+- Live wall: `W-F1-AA-RES-T2J4-A2B-S4-SYMBOLIC-GOODRED`.
+
+Cycle 39 symbolic good-reduction prompt:
+
+- `prompts/20260618_cycle39_symbolic_goodred_s4.md`
+- Status: AUDIT / prompt prepared.
+- Purpose: upgrade the repaired `p=31` finite-place `S_4` evidence to a
+  symbolic/good-reduction lemma for the explicit family, or identify the exact
+  obstruction that prevents globalization.

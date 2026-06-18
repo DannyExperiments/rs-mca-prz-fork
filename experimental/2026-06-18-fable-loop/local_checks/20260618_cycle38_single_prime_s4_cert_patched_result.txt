@@ -1,0 +1,4 @@
+command=python3 experimental/2026-06-18-fable-loop/local_checks/20260618_cycle38_single_prime_s4_cert_patched_checker.py
+returncode=0
+stdout=experimental/2026-06-18-fable-loop/local_checks/20260618_cycle38_single_prime_s4_cert_patched_stdout.txt
+stderr=experimental/2026-06-18-fable-loop/local_checks/20260618_cycle38_single_prime_s4_cert_patched_stderr.txt

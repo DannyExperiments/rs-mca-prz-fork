@@ -942,3 +942,35 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run Cycle 38 as a homerun prompt: either repair/bypass
   the checker and produce real progress, find the obstruction, or step back to
   the highest-value route toward the proximity problem.
+
+### 2026-06-18 - Fable loop cycle 38, homerun S4 checker repair
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE38_HOMERUN_RAW.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE38_HOMERUN_RECOVERED_CLAUDE_JSONL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE38_HOMERUN_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE38_HOMERUN_RUN_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE38_HOMERUN_TUI_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE38_HOMERUN_CREDIT_SURFACE_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/local_checks/20260618_cycle38_single_prime_s4_cert_patched_checker.py`,
+  `experimental/2026-06-18-fable-loop/local_checks/20260618_cycle38_single_prime_s4_cert_patched_result.txt`,
+  `experimental/2026-06-18-fable-loop/local_checks/20260618_cycle38_single_prime_s4_cert_patched_stdout.txt`,
+  `experimental/2026-06-18-fable-loop/local_checks/20260618_cycle38_single_prime_s4_cert_patched_stderr.txt`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE38_HOMERUN_S4_REPAIR_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/prompts/20260618_cycle39_symbolic_goodred_s4.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** BANKABLE_LEMMA / EXACT_NEW_WALL / EXPERIMENTAL / AUDIT.
+- **What is being added:** Cycle 38 identifies and repairs the exact type
+  error in the Cycle 37 single-prime `S_4` checker. The repaired checker uses
+  `W_{n-1..n-4}=1,alpha,1+alpha,1` as actual `F`-elements and runs locally at
+  `p=31`, reporting `PASS_S4_finite_place=true` with `"4"` and `"13"`
+  factorization witnesses.
+- **How it is useful:** This converts the previous checker crash into
+  reproducible finite-place monodromy evidence for the explicit restricted
+  family. It still does not prove a uniform theorem or counterpacket.
+- **What to do next:** Run Cycle 39 against
+  `W-F1-AA-RES-T2J4-A2B-S4-SYMBOLIC-GOODRED`: prove symbolic/good-reduction
+  `S_4` for the explicit family, find the exact obstruction, or produce a
+  sharper certificate/wall. Future theorem runs should use the clean non-ad
+  lane unless ad credit is explicitly requested.

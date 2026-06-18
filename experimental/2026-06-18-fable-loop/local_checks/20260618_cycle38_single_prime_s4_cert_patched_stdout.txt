@@ -1,0 +1,41 @@
+{
+  "p": 31,
+  "q_gen": 31,
+  "q_line": 961,
+  "NR": -1,
+  "family": "E=X^2+alphaX+1,b=X,nr=-1",
+  "free_data": {
+    "u": "1+X (kappa=u0=1)",
+    "W_{n-1..n-4}": "(1),(alpha),(1+alpha),(1)"
+  },
+  "line": {
+    "m": 1,
+    "e": 0
+  },
+  "singular_on_line": 0,
+  "hist": {
+    "1111": 1,
+    "112": 5,
+    "13": 11,
+    "22": 6,
+    "4": 6,
+    "nonsquarefree": 2
+  },
+  "witness_4cycle": [
+    0,
+    0
+  ],
+  "witness_13": [
+    4,
+    4
+  ],
+  "resolvent_irred_at": [
+    4,
+    4
+  ],
+  "disc_nonsquare_at": [
+    0,
+    0
+  ],
+  "PASS_S4_finite_place": true
+}
