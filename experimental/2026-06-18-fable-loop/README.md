@@ -306,3 +306,27 @@ Cycle 20 rank-one/gate audit prompt:
 - Status: AUDIT / prompt staged.
 - Purpose: prove or refute the Cycle 19 candidate closed forms, the rank-one
   `q1` lemma, the quadric normal form, and the scalar gate `D`.
+
+Cycle 20 rank-one/gate answer:
+
+- `raw/20260618_CYCLE20_RANKONE_GATE_RECOVERED_CLAUDE_JSONL.md`
+- `raw/20260618_CYCLE20_RANKONE_GATE_RAW.json`
+- `raw/20260618_CYCLE20_RANKONE_GATE_RUN_RESULT.json`
+- `raw/20260618_CYCLE20_RANKONE_GATE_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`
+- `raw/20260618_CYCLE20_RANKONE_GATE_TUI_RUNNER_RESULT.json`
+- `raw/20260618_CYCLE20_RANKONE_GATE_CREDIT_SURFACE_RUNNER_RESULT.json`
+- `audits/20260618_CYCLE20_RANKONE_GATE_AUDIT.md`
+- Harness status: `HARNESS_MALFORMED_VISIBLE_TERMINAL`; no clean
+  `response.md` was produced.
+- Mathematical audit status: `BANKABLE_LEMMA / EXACT_NEW_WALL / AUDIT`.
+- Banked content: closed forms for `p1,p2,q1,q2`; rank-one leading coefficient
+  `q1=-(Q_E(b)/kappa)eta`; quadric-branch normal form; and gate identity
+  `det M=(c_b/kappa^2)D`.
+- Live wall: `W-F1-AA-RES-T2J3-B-RANKONE-DESCENT`.
+
+Cycle 21 B-rank-one descent prompt:
+
+- `prompts/20260618_cycle21_b_rankone_descent.md`
+- Status: AUDIT / prompt staged.
+- Purpose: decide whether the `Delta1==0` base-descent equations force
+  `dw wedge d eta == 0`, or expose a source-valid `Theta(q_line)` seed.

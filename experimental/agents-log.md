@@ -391,3 +391,41 @@ Keep entries concise and link to the relevant files.
   counterpacket seed.
 - **What to do next:** Audit the Cycle 20 answer and bank only clean theorem
   artifacts or explicit output files.
+
+### 2026-06-18 - Fable loop cycle 20, rank-one/gate lemma
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE20_RANKONE_GATE_RAW.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE20_RANKONE_GATE_RECOVERED_CLAUDE_JSONL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE20_RANKONE_GATE_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE20_RANKONE_GATE_RUN_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE20_RANKONE_GATE_TUI_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE20_RANKONE_GATE_CREDIT_SURFACE_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE20_RANKONE_GATE_AUDIT.md`,
+  and `experimental/2026-06-18-fable-loop/README.md`.
+- **Status:** BANKABLE_LEMMA / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** In the restricted `D=F_p`, `t=sigma=2`, `j=3`,
+  off-`R0` window, Cycle 20 source-checks the closed forms for `p1,p2,q1,q2`,
+  proves the rank-one leading coefficient, proves the quadric-branch normal
+  form, and banks the gate identity `det M=(c_b/kappa^2)D`.
+- **How it is useful:** It turns the residual collapse problem into a finer
+  `B`-level descent wall on the `Delta1==0` branch rather than a generic
+  slope-image question.
+- **What to do next:** Prove or refute whether the base-descent equations
+  `Im_alpha(p1+q2)=0` and `Im_alpha(det P)=0` force
+  `dw wedge d eta == 0`.
+
+### 2026-06-18 - Fable loop cycle 21, B-rank-one descent prompt
+
+- **Agent/model:** Codex directing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/prompts/20260618_cycle21_b_rankone_descent.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** AUDIT.
+- **What is being added:** A no-internet homerun prompt attacks
+  `W-F1-AA-RES-T2J3-B-RANKONE-DESCENT`, asking whether the `Delta1==0`
+  descent equations force `dw wedge d eta == 0` or yield a counterpacket seed.
+- **How it is useful:** This aims directly at the exact algebraic hinge left by
+  Cycle 20.
+- **What to do next:** Audit the Cycle 21 answer conservatively and continue
+  with proof/counterpacket/source-audit lens rotation.
