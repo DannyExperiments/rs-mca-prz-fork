@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/danielcabezas/OpenClaw/rs-mca/experimental/2026-06-18-fable-loop/local_checks/cycle42_external_5p5_pro/20260618_cycle42_t2j4_goodred_checker_localrun.py", line 18, in <module>
+    import sympy as sp
+ModuleNotFoundError: No module named 'sympy'

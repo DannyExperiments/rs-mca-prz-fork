@@ -1064,3 +1064,35 @@ Keep entries concise and link to the relevant files.
   audit the Codex checker repairs, decide whether the A-side failure is a real
   `ROUTE_CUT` or a line/checker artifact, and, if possible, push the B-side
   good-reduction certificate through global-density.
+
+### 2026-06-18 - Cycle 42 external 5.5 Pro good-reduction and density audit
+
+- **Agent/model:** Codex auditing four external 5.5 Pro answer files and their
+  returned checker/certificate artifacts.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/cycle42_external_5p5_pro/`,
+  `experimental/2026-06-18-fable-loop/local_checks/cycle42_external_5p5_pro/`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE42_EXTERNAL_5P5PRO_GOODRED_DENSITY_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT /
+  EXPERIMENTAL.
+- **What is being added:** Four external answers agree that Cycle 41's A-side
+  failure was a false negative: the patched checker used an overstrong raw
+  affine/Cramer good-reduction gate rather than the primitive/projective tame
+  cover. The returned machine certificates report Subcase A good reduction at
+  `p=7`, Subcase B good reduction at `p=19` or `p=31`, finite `"4"` + `"13"`
+  S4 witnesses, and split-slope density
+  `N_split(p)=p^2/24+O(p^(3/2))`.
+- **How it is useful:** The fixed restricted `t=2,j=4` monodromy branch no
+  longer looks stuck at A-side good reduction. The false route "A fails raw
+  G2/G3, hence A cannot globalize" is cut. The next live wall is reserve
+  scaling, not another quartic good-prime search.
+- **Local execution caveat:** Codex inspected and syntax-checked the Python
+  checkers, but local symbolic execution is blocked because `sympy` is absent
+  from both system Python and the bundled Codex Python. No dependency was
+  fetched or installed. The result is banked as an external-machine
+  certificate pending local SymPy/Sage rerun or PRZ review.
+- **What to do next:** Discuss before prompting again. If accepted, the next
+  target is `W-F1-AA-RES-STRUCTURED-COSUPPORT-RESERVE-LIFT`, with aliases
+  `W-F1-AA-RES-T2J4-TO-CORRECTED-RESERVE-SLOPE-PRESERVING-LIFT` and
+  `W-F1-AA-RES-RESERVE-SCALED-GENERATED-FIELD-QUARTIC-CORE-LIFT`.

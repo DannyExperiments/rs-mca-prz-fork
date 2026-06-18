@@ -1,0 +1,125 @@
+{
+  "A_horizontal": {
+    "Res_Delta_DeltaPrime": {
+      "2": 3,
+      "29": 1,
+      "109": 1
+    },
+    "Res_Delta_H": {
+      "2": 7,
+      "3": 31,
+      "11": 1,
+      "23": 1,
+      "353": 1,
+      "6133": 1
+    },
+    "Res_H_HPrime": {
+      "2": 71,
+      "3": 129,
+      "5": 4,
+      "11": 3,
+      "13": 1,
+      "6299": 2,
+      "51899": 3,
+      "58758059": 1,
+      "134773673": 3,
+      "4141312303": 2,
+      "65954521205827": 3,
+      "185013443251818763385500528775698067": 1
+    },
+    "lc_Delta": {
+      "-1": 1
+    },
+    "lc_H": {
+      "2": 4,
+      "5": 2
+    }
+  },
+  "B_diagonal": {
+    "Res_Delta_DeltaPrime": {
+      "2": 10,
+      "287341": 1
+    },
+    "Res_Delta_H": {
+      "2": 64,
+      "3": 14,
+      "29": 2,
+      "2063": 6,
+      "20558103118321": 1
+    },
+    "Res_H_HPrime": {
+      "2": 396,
+      "3": 99,
+      "5": 6,
+      "11": 3,
+      "29": 1,
+      "41": 3,
+      "2063": 30,
+      "234007": 2,
+      "4711367": 1,
+      "1149593": 1,
+      "429182827": 2,
+      "986904239": 3,
+      "6003144422654343011": 3,
+      "87979847046285199339509999686219951947": 1
+    },
+    "lc_Delta": {
+      "2": 2
+    },
+    "lc_H": {
+      "2": 12,
+      "5": 2
+    }
+  },
+  "conservative_bad_rational_primes_A": [
+    2,
+    3,
+    5,
+    11,
+    13,
+    23,
+    29,
+    109,
+    353,
+    6133,
+    6299,
+    51899,
+    58758059,
+    134773673,
+    4141312303,
+    65954521205827,
+    185013443251818763385500528775698067
+  ],
+  "conservative_bad_rational_primes_B": [
+    2,
+    3,
+    5,
+    11,
+    29,
+    41,
+    2063,
+    234007,
+    287341,
+    1149593,
+    4711367,
+    429182827,
+    986904239,
+    20558103118321,
+    6003144422654343011,
+    87979847046285199339509999686219951947
+  ],
+  "relevant_bad_primes_A_mod20_3_or_7": [
+    3,
+    23,
+    4141312303,
+    65954521205827,
+    185013443251818763385500528775698067
+  ],
+  "relevant_bad_primes_B_mod20_11_or_19": [
+    11,
+    986904239,
+    6003144422654343011
+  ],
+  "gaussian_ideal_rule": "For each rational prime r in the list, exclude every Gaussian prime ideal above r. For the branch sequence p congruent 3 mod 4, (p) is inert, so excluding the rational p is equivalent to excluding the single ideal (p).",
+  "note": "This is the conservative Cycle41-style set. The intrinsic line-cover set may omit Res(Delta,DeltaPrime) and Res(Delta,H), since Delta is a Cramer/pole divisor, not the binary-quartic branch divisor."
+}

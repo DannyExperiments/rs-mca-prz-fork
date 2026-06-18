@@ -1079,3 +1079,40 @@ Cycle 42 external-model homerun handoff:
 - Purpose: send a different model a focused packet to independently audit the
   Cycle 41 characteristic-zero checker, resolve the Subcase A obstruction, and
   push the Subcase B global-density route if the checker survives source audit.
+
+Cycle 42 external 5.5 Pro answers:
+
+- `raw/cycle42_external_5p5_pro/20260618_CYCLE42_5P5PRO_ANSWER_A.md`
+- `raw/cycle42_external_5p5_pro/20260618_CYCLE42_5P5PRO_ANSWER_B.md`
+- `raw/cycle42_external_5p5_pro/20260618_CYCLE42_5P5PRO_ANSWER_C.md`
+- `raw/cycle42_external_5p5_pro/20260618_CYCLE42_5P5PRO_ANSWER_D.md`
+- `raw/cycle42_external_5p5_pro/cycle42_goodred_density_checker.py`
+- `raw/cycle42_external_5p5_pro/cycle42_goodred_density_certificate.json`
+- `raw/cycle42_external_5p5_pro/cycle42_exact_resultants.json`
+- `raw/cycle42_external_5p5_pro/cycle42_bad_prime_sets.json`
+- `raw/cycle42_external_5p5_pro/cycle42_corrected_char0_goodred_checker_result.json`
+- `raw/cycle42_external_5p5_pro/cycle42_corrected_char0_density_certificate.md`
+- `raw/cycle42_external_5p5_pro/cycle42_t2j4_goodred_checker.py`
+- `raw/cycle42_external_5p5_pro/cycle42_t2j4_goodred_checker_result.json`
+- `local_checks/cycle42_external_5p5_pro/20260618_cycle42_goodred_density_checker_external.py`
+- `local_checks/cycle42_external_5p5_pro/20260618_cycle42_t2j4_goodred_checker_external.py`
+- `local_checks/cycle42_external_5p5_pro/20260618_cycle42_t2j4_goodred_checker_localrun.py`
+- `audits/20260618_CYCLE42_EXTERNAL_5P5PRO_GOODRED_DENSITY_AUDIT.md`
+- Mathematical audit status: `BANKABLE_LEMMA / ROUTE_CUT /
+  EXACT_NEW_WALL / AUDIT / EXPERIMENTAL`.
+- Consensus result: the Cycle 41 A-side `G2/G3` failure is a false negative
+  from using raw affine/Cramer branch data as if it were intrinsic. The
+  corrected primitive/projective or horizontal-line certificates give Subcase
+  A good reduction at `p=7`; Subcase B has good reduction at `p=19` or `p=31`.
+- Banked content: cut the route "A fails raw G2/G3, therefore A cannot
+  globalize"; record the fixed `t=2,j=4` branch as externally certified up to
+  split-slope density
+  `N_split(p)=p^2/24+O(p^(3/2))=q_line/24+O(q_line^(3/4))`, pending local
+  SymPy/Sage rerun or PRZ review.
+- Local Codex follow-up: the Python checkers were inspected and syntax-checked,
+  but local execution is blocked because `sympy` is not installed in either
+  system Python or the bundled Codex Python. No dependency was fetched.
+- Not banked: corrected-reserve counterpacket, fixed-rate counterpacket,
+  generated-field theorem, smooth multiplicative-domain theorem, CA/list/
+  line-decoding/curve-MCA/protocol/SNARK statement, or Proximity Prize solve.
+- Live wall: `W-F1-AA-RES-STRUCTURED-COSUPPORT-RESERVE-LIFT`.
