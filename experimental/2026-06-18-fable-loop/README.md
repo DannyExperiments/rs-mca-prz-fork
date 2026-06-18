@@ -232,3 +232,19 @@ Cycle 16 rank/determinant resonance audit:
   verifier target but is not yet banked as proved.
 - Live wall: `W-F1-AA-RES-T2J3-RANK-DET-SPLIT`, the `Q==0` branch restricted
   to distinct `D`-split cubics.
+
+Cycle 17 rank-det split scanner attempt:
+
+- `prompts/20260618_cycle17_rank_det_split_scanner.md`
+- `raw/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_RECOVERED_CLAUDE_JSONL.md`
+- `raw/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_RAW.json`
+- `raw/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_RUN_RESULT.json`
+- `raw/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`
+- `raw/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_TUI_RUNNER_RESULT.json`
+- `audits/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_HARNESS_AUDIT.md`
+- Harness status: `HARNESS_MALFORMED_VISIBLE_TERMINAL`; no `response.md` was
+  produced and no `output_files/` deliverables were written.
+- Mathematical audit status: `AUDIT`; no theorem, counterpacket, or executable
+  scanner is banked. The readable structured-JSONL recovery is preserved as
+  provenance only.
+- Current live wall remains `W-F1-AA-RES-T2J3-RANK-DET-SPLIT`.

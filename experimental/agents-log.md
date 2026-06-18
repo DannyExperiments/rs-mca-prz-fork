@@ -276,3 +276,23 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** When Cycle 17 completes, bank only clean `response.md`
   or clean structured JSONL recovery, commit any useful scanner/certificate
   under `experimental/`, and update this log again.
+
+### 2026-06-18 - Fable loop cycle 17, malformed scanner response
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_RAW.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_RECOVERED_CLAUDE_JSONL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_RUN_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_TUI_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE17_RANK_DET_SPLIT_SCANNER_HARNESS_AUDIT.md`,
+  and `experimental/2026-06-18-fable-loop/README.md`.
+- **Status:** AUDIT / HARNESS_MALFORMED_VISIBLE_TERMINAL.
+- **What is being added:** Cycle 17 completed with a readable structured JSONL
+  recovery but no promoted `response.md` and no written `output_files/`
+  scanner. The recovered text is preserved as provenance only.
+- **How it is useful:** Records the failed scanner attempt without promoting
+  malformed terminal text or an unexecuted inline script to a claim.
+- **What to do next:** Either build the scanner in a clean execution-capable
+  lane or try a high-upside proof/counterpacket prompt against the live wall
+  `W-F1-AA-RES-T2J3-RANK-DET-SPLIT`.
