@@ -829,3 +829,31 @@ Keep entries concise and link to the relevant files.
   of `z -> tau(z)` and compute or reduce the substituted quartic
   resolvent/discriminant and constant-field test. Do not promote this local
   lemma to a corrected-reserve, MCA, protocol, or prize theorem.
+
+### 2026-06-18 - Fable loop cycle 34, A2_B dominance and resolvent reduction
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_RAW.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_RECOVERED_CLAUDE_JSONL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_RUN_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_TUI_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_CREDIT_SURFACE_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/prompts/20260618_cycle35_a2b_geometric_s4_checker_spec.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** Cycle 34 banks the restricted dominance lemma:
+  on the source-valid dense open of the `t=2,j=4` `A^2_B` model, the rational
+  off-curve map `z -> tau(z)=M(z)^(-1)(-C_0(z))` has generic `B`-Jacobian rank
+  two and is birational onto the Cycle 30 quadric image.
+- **How it is useful:** It cuts the rank-one / hidden curve-collapse route for
+  `O(p)` off-curve counts. The remaining gate is geometric monodromy and
+  constant-field stability, not dimension collapse.
+- **What to do next:** Run Cycle 35 against
+  `W-F1-AA-RES-T2J4-A2B-GEOMETRIC-S4`: prove geometric transitivity or full
+  `S_4`, prove no constant-field obstruction, or produce an exact symbolic
+  checker/certificate for the discriminant, resolvent, and constant-field
+  tests. Do not promote this local branch to a corrected-reserve, MCA,
+  protocol, or prize theorem.

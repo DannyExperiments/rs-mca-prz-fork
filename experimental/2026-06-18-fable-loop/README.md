@@ -788,3 +788,40 @@ Cycle 34 A2_B dominance/resolvent prompt:
   `tau(z_0,z_1)=M(z)^(-1)(-C_0(z))` has generic `B`-Jacobian rank two and
   whether the substituted quartic resolvent/discriminant gives a transitive
   monodromy/constant-field certificate.
+
+Cycle 34 A2_B dominance/resolvent answer:
+
+- `raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_RECOVERED_CLAUDE_JSONL.md`
+- `raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_RAW.json`
+- `raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_RUN_RESULT.json`
+- `raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`
+- `raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_TUI_RUNNER_RESULT.json`
+- `raw/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_CREDIT_SURFACE_RUNNER_RESULT.json`
+- `audits/20260618_CYCLE34_A2B_DOMINANCE_RESOLVENT_AUDIT.md`
+- Harness status: `HARNESS_MALFORMED_VISIBLE_TERMINAL`; no clean
+  `response.md` was produced. The readable structured-JSONL recovery was
+  audited conservatively and the visible-terminal scrape is not banked as
+  mathematics.
+- Mathematical audit status: `BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL /
+  AUDIT`.
+- Banked content: in the restricted `D=F_p`, `B=F_p`,
+  `F=F_{p^2}`, `t=sigma=2`, `j=4` branch, on the stated source-valid dense
+  open, the off-curve rational map
+  `psi:z |-> tau(z)=M(z)^(-1)(-C_0(z))` has generic `B`-Jacobian rank two and
+  is birational onto the Cycle 30 quadric image.
+- Route cut: the attempted rank-one / hidden curve-collapse explanation for
+  `O(p)` off-curve split count is eliminated in this branch.
+- Not banked: positive off-curve split density, `S_4`, arithmetic/geometric
+  monodromy equality, a `Theta(q_line)` counterpacket, corrected-reserve
+  theorem, MCA/CA/list/line-decoding/curve-MCA/protocol/SNARK statement, or
+  prize solve.
+- Live wall: `W-F1-AA-RES-T2J4-A2B-GEOMETRIC-S4`.
+
+Cycle 35 A2_B geometric S4 / constant-field prompt:
+
+- `prompts/20260618_cycle35_a2b_geometric_s4_checker_spec.md`
+- Status: AUDIT / prompt prepared.
+- Purpose: attack the remaining off-curve gate directly: prove geometric
+  transitivity or full `S_4`, prove arithmetic/geometric equality, or produce
+  an explicit symbolic checker/certificate for the discriminant, resolvent,
+  and constant-field tests over `B(z_0,z_1)`.
