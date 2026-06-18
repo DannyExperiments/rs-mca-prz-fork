@@ -633,3 +633,31 @@ Keep entries concise and link to the relevant files.
   `Q_4` formula, prove or refute source-valid `Q_4 != 0`, and do not promote
   affine `tau in B^3` consistency to actual line-incidence without the
   distinct split-cubic gate.
+
+### 2026-06-18 - Fable loop cycle 27, Q4 obstruction audit
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE27_Q4_SPLIT_GATE_RAW.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE27_Q4_SPLIT_GATE_RECOVERED_CLAUDE_JSONL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE27_Q4_SPLIT_GATE_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE27_Q4_SPLIT_GATE_RUN_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE27_Q4_SPLIT_GATE_TUI_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/raw/20260618_CYCLE27_Q4_SPLIT_GATE_CREDIT_SURFACE_RUNNER_RESULT.json`,
+  `experimental/2026-06-18-fable-loop/audits/20260618_CYCLE27_Q4_SPLIT_GATE_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/prompts/20260618_cycle28_q4_proof_audit.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / AUDIT.
+- **What is being added:** Cycle 27 banks, conservatively, the candidate top
+  coefficient
+  `Q_4=N(c_b)*(Im(d)^2-Im(c)*Im(conj(c)d))`. Its locator identity says that
+  for `c notin B`, `Q_4=0` iff `E` has an `F_p` root, i.e. iff the Cycle 24
+  locator norm `prod_{a in F_p}E(a)` vanishes; source-validity excludes this.
+  For `c in B`, separatedness gives `d notin B`, so `Q_4=N(c_b)*Im(d)^2`
+  is also nonzero.
+- **How it is useful:** This appears to cut the remaining `Q==0` branch in the
+  restricted `D=F_p`, `B=F_p`, `F=F_{p^2}`, `t=sigma=2`, `j=3` window,
+  reducing it to the Cycle 16 safe side `Q` nonzero implies `O(p)` slopes.
+- **What to do next:** Run Cycle 28 against
+  `W-F1-AA-RES-T2J3-Q4-PROOF-AUDIT` to independently rederive the formula and
+  decide whether this can be promoted from audit/banked lemma to a local proof.

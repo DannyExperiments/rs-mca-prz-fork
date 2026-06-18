@@ -531,3 +531,46 @@ Cycle 27 Q4 obstruction and split-cubic gate prompt:
 - Purpose: verify or refute the Cycle 26 `Q_4` formula, prove or refute
   source-valid `Q_4 != 0` on the NONDEP `c notin B` branch, and keep the
   distinct split-cubic gate separate from affine `tau` consistency.
+
+Cycle 27 Q4 obstruction answer:
+
+- `raw/20260618_CYCLE27_Q4_SPLIT_GATE_RECOVERED_CLAUDE_JSONL.md`
+- `raw/20260618_CYCLE27_Q4_SPLIT_GATE_RAW.json`
+- `raw/20260618_CYCLE27_Q4_SPLIT_GATE_RUN_RESULT.json`
+- `raw/20260618_CYCLE27_Q4_SPLIT_GATE_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`
+- `raw/20260618_CYCLE27_Q4_SPLIT_GATE_TUI_RUNNER_RESULT.json`
+- `raw/20260618_CYCLE27_Q4_SPLIT_GATE_CREDIT_SURFACE_RUNNER_RESULT.json`
+- `audits/20260618_CYCLE27_Q4_SPLIT_GATE_AUDIT.md`
+- Harness status: `HARNESS_MALFORMED_VISIBLE_TERMINAL`; no clean
+  `response.md` was produced. The readable structured-JSONL recovery was
+  audited conservatively and the visible-terminal scrape is not banked as
+  mathematics.
+- Mathematical audit status: `BANKABLE_LEMMA / ROUTE_CUT / AUDIT`.
+- Banked candidate: the corrected top coefficient of `Q` is
+  `Q_4=N(c_b)*(Im(d)^2-Im(c)*Im(conj(c)d))`; the apparent `P`-dependence in
+  the Cycle 26 display cancels because the `P`-part of `q2` is collinear with
+  the rank-one direction of `q1`.
+- Source-valid consequence, subject to independent confirmation of the column
+  conventions: if `c notin B`, then
+  `Q_4=N(c_b)*Im(c)^2*E(-Im(d)/Im(c))`, so `Q_4=0` iff `E` has an
+  `F_p`-root iff `prod_{a in F_p}E(a)=0`. Source-validity excludes this.
+  If `c in B`, then `Q_4=N(c_b)*Im(d)^2`, and separatedness excludes
+  `d in B`. Thus `Q_4!=0` on both separated source-valid branches.
+- Consequence: the source-valid `Q==0` branch in the restricted `t=2,j=3`
+  window appears cut; by Cycle 16 this gives `O(p)` affine-consistent slopes,
+  and the distinct split-cubic gate only shrinks the set.
+- Audit correction: do not promote to `PROOF` until a fresh worker rederives
+  the `Q_4` formula and the `q2` closed form from source definitions.
+- Live wall: `W-F1-AA-RES-T2J3-Q4-PROOF-AUDIT`.
+- Not banked: any corrected-reserve theorem, full MCA bound, `q_gen`
+  consequence, protocol/list/CA/MCA/line-decoding/curve-MCA/SNARK statement,
+  or prize solve.
+
+Cycle 28 Q4 proof-audit prompt:
+
+- `prompts/20260618_cycle28_q4_proof_audit.md`
+- Status: AUDIT / prompt prepared.
+- Purpose: independently rederive the Cycle 27 `Q_4` formula from the
+  Cycle 15/16/20/25 definitions, verify source-valid nonvanishing, and decide
+  whether the restricted `t=2,j=3` branch can be promoted to a local proof or
+  must remain an audit/exact wall.
