@@ -100,3 +100,17 @@ Cycle 7 value-count attempt:
   commute with support interpolation in general.
 - Live wall: `W-F1-AA-RES-TWISTED-READOUT`, a value-count/collision theorem or
   counterpacket for `[interp_S(w0)]_Ehat + theta [interp_S(w1)]_Ehat`.
+
+Cycle 8 twisted-readout attempt:
+
+- `prompts/20260618_cycle8_w_f1_aa_res_twisted_readout.md`
+- `raw/20260618_CYCLE8_W_F1_AA_RES_TWISTED_READOUT_RECOVERED_CLAUDE_JSONL.md`
+- `local_checks/20260618_cycle8_twisted_readout_verify.py`
+- `audits/20260618_CYCLE8_W_F1_AA_RES_TWISTED_READOUT_AUDIT.md`
+- Harness status: clean structured Claude JSONL used for `response.md`.
+- Mathematical audit status: `BANKABLE_LEMMA / EXACT_NEW_WALL`.
+- Banked content: `B[X]/Ehat ~= F[X]/E`, so the twisted readout is exactly
+  `pi^{-1}([interp_S(w)]_E)`; the commutator with pointwise
+  `theta*w1` is locator-divisible.
+- Live wall: `W-F1-AA-RES-RESIDUE-COUNT`, a direct value-count/collision theorem
+  or counterpacket for `[interp_S(w0)+alpha interp_S(w1)]_E`.
