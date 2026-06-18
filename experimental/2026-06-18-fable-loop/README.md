@@ -210,3 +210,25 @@ Cycle 15 surface slope-fiber rank/determinant audit:
   slope set, while `Q==0` identically is the possible large-slope regime.
 - Live wall:
   `W-F1-AA-RES-T2J3-SURFACE-SLOPE-FIBER-RANK-DETERMINANT`.
+
+Cycle 16 rank/determinant resonance audit:
+
+- `prompts/20260618_cycle16_rank_determinant_resonance.md`
+- `raw/20260618_CYCLE16_RANK_DETERMINANT_RESONANCE_RECOVERED_CLAUDE_JSONL.md`
+- `raw/20260618_CYCLE16_RANK_DETERMINANT_RESONANCE_RAW.json`
+- `raw/20260618_CYCLE16_RANK_DETERMINANT_RESONANCE_RUN_RESULT.json`
+- `raw/20260618_CYCLE16_RANK_DETERMINANT_RESONANCE_RESPONSE_MALFORMED_VISIBLE_TERMINAL.md`
+- `audits/20260618_CYCLE16_RANK_DETERMINANT_RESONANCE_AUDIT.md`
+- Harness status: `HARNESS_MALFORMED_VISIBLE_TERMINAL`; terminal scrape is
+  rejected. Clean structured Claude JSONL recovery is the audited math
+  artifact.
+- Source-mount audit: Packy source mirror was stale and did not include Cycle
+  15 audit/certificate files; ledgers were sufficient for this run, but the
+  source mirror must be repaired before Cycle 17.
+- Mathematical audit status: `BANKABLE_LEMMA / EXACT_NEW_WALL / AUDIT`.
+- Banked content: off `R0`, if `Q(z_0,z_1)` is not identically zero, then
+  `C2<=4p=O(p)=O(n)` in the `D=F_p`, `t=sigma=2`, `j=3` regime.
+- Audit-only content: the proposed trace/Gram criterion for `Q==0` is a useful
+  verifier target but is not yet banked as proved.
+- Live wall: `W-F1-AA-RES-T2J3-RANK-DET-SPLIT`, the `Q==0` branch restricted
+  to distinct `D`-split cubics.
