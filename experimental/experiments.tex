@@ -1,7 +1,9 @@
+
 \documentclass[11pt]{article}
 
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[hidelinks]{hyperref}
@@ -12,8 +14,10 @@
 \newtheorem{corollary}{Corollary}
 \newtheorem{heuristic}{Heuristic}
 \newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}
 
 \newcommand{\F}{\mathbb F}
+\newcommand{\RS}{\operatorname{RS}}
 \newcommand{\Bnum}{B_{\rm num}}
 \newcommand{\Deltaone}{\Delta_1}
 \newcommand{\Deltazero}{\Delta_0}
@@ -23,8 +27,17 @@
 \newcommand{\Ctwo}{C_2}
 \newcommand{\qline}{q_{\rm line}}
 \newcommand{\qgen}{q_{\rm gen}}
+\newcommand{\qchal}{q_{\rm chal}}
+\newcommand{\MCA}{\operatorname{MCA}}
+\newcommand{\CA}{\operatorname{CA}}
+\newcommand{\List}{\operatorname{List}}
+\newcommand{\PG}{\operatorname{PG}}
+\newcommand{\BCHKS}{\operatorname{BCHKS}}
+\newcommand{\dist}{\Delta}
+\newcommand{\efib}{c_{\rm fib}}
+\newcommand{\ellpg}{\ell_{\rm pg}}
 
-\title{Experimental Theorems for Paper B's F1 / Slack-Two Resonance Window}
+\title{Experimental Theorems and Imported-Locator Ledger for RS-MCA}
 \author{RS-MCA experimental notes}
 \date{June 18, 2026}
 
@@ -32,41 +45,320 @@
 \maketitle
 
 \begin{abstract}
-This note records restricted experimental theorems and heuristics extracted
-from the Cycle 14--18 audits in the RS-MCA repository.  The main new item is a
-divisibility gate for the non-coprime resonance branch in the
-quadratic-extension, slack-two, three-co-support toy window.  The statements
-are aimed at Paper B's residue-line normal form and per-fiber collision
-program, but they are not a proof of the corrected MCA conjecture and have no
-direct protocol consequence.
+This note is the experimental collection point for statements that are useful
+for the RS-MCA papers but are not yet main-paper theorems.  It has two jobs.
+First, it records the correct provenance of the quotient-locator construction
+used in a separate AI-generated packet: the locator proof underlying item (d)
+is an imported theorem/proof pattern from Ben-Sasson--Carmon--Hab\"ock--
+Kopparty--Saraf, \emph{On Proximity Gaps for Reed--Solomon Codes}
+\cite{BCHKS25}, especially their Theorem~7.1 and the Theorem~1.13 subgroup
+instantiation.  That proof is not a new contribution of this repository.
+Second, it records genuinely local material that may be reusable later: the
+smooth-quotient notation dictionary, a list-fiber pigeonhole wrapper around
+the imported locator construction, the slack-two/subfield bookkeeping target
+for Paper D, and a new divisibility gate for Paper B's quadratic-extension,
+slack-two, three-co-support resonance window.
 
-The note also records an attribution audit for a separate AI-generated packet
-whose item (d) overlapped substantially with Theorem 1.13 of Ben-Sasson,
-Carmon, Habock, Kopparty, and Saraf, \emph{On proximity gaps for
-Reed--Solomon codes}, to appear at STOC 2026.  That overlap should be treated
-as an imported external theorem/proof pattern, not as a new contribution of
-this repository.
+Everything here is experimental or imported unless explicitly promoted by a
+main paper.  In particular, this note does not prove the corrected MCA
+conjecture, does not give a protocol consequence, and does not supersede
+Papers A--D.
 \end{abstract}
 
-\section{Status and Scope}
+\section{Status, Provenance, and What Counts as New}
 
-All results in this note live in the experimental folder and should be read as
-restricted algebraic facts or proof targets.  We do not edit or supersede the
-main papers A--D.
+This file is the place where we collect new things, but it must separate new
+repository contributions from imported constructions.  The status labels used
+below are:
+\[
+\begin{array}{ll}
+\textsc{Imported} & \text{an external theorem, proof pattern, or conversion;}\\
+\textsc{Wrapper} & \text{a repository repackaging, dictionary, or pigeonhole consequence;}\\
+\textsc{New-local} & \text{a restricted algebraic theorem proved in this note;}\\
+\textsc{Target} & \text{a precise proof obligation not yet promoted;}\\
+\textsc{Heuristic} & \text{evidence or a search direction, not a theorem.}
+\end{array}
+\]
 
-The source map is:
+\paragraph{Hard attribution rule.}
+Any locator-polynomial argument derived from the subgroup construction of
+Ben-Sasson--Carmon--Hab\"ock--Kopparty--Saraf must cite \cite[Thm.~7.1]{BCHKS25}
+where the construction is stated or proved.  Any admissible subgroup
+instantiation must also cite \cite[Thm.~1.13]{BCHKS25}.  The citation belongs
+at the theorem statement and again at the proof entry point; a bibliography
+entry or acknowledgement alone is not enough.
+
+\paragraph{What is new in this note.}
+The following items are the repository-side contributions collected here.
+\begin{itemize}
+\item A smooth-quotient notation dictionary translating BCHKS subgroup
+  notation into the RS-MCA notation \(Q=D^{\efib}\) and the dyadic/FFT-domain
+  ledgers used in Papers A--D.
+\item A list-fiber pigeonhole wrapper: once a locator construction assigns
+  many subset certificates to a smaller slope set, one heavy slope has many
+  locator certificates, and, after a distinctness check, many nearby
+  codewords.
+\item A slack-two and subfield-pigeonhole proof target for the Paper D route:
+  the imported locator construction should be run at the augmented-code rung
+  needed by the Crites--Stewart list-to-agreement conversion, and slopes should
+  be pigeonholed over the generated/base field when the construction really
+  takes values there.
+\item A \textsc{New-local} divisibility gate in the restricted Paper B window
+  \(B=\F_p\), \(F=\F_{p^2}\), \(D=\F_p\), \(t=\sigma=2\), \(j=3\).  This is
+  independent of the BCHKS priority issue and is the main theorem proved in
+  Section~\ref{sec:divisibility-gate}.
+\end{itemize}
+
+\paragraph{What is not new.}
+The polynomial identity behind the item-(d) locator proof is not new here.  In
+BCHKS notation it is the expansion of a vanishing polynomial over a complement
+of a chosen subset; in smooth-quotient notation it is the same expansion of
+\(\prod_{b\in A}(X^{\efib}-b)\), up to choosing a subset or its complement.
+The use of \(\ell\) for the chosen subset size also follows the external
+presentation closely enough that it should either be cited or renamed to
+\(\ellpg\).
+
+\paragraph{Source map.}
+The main papers remain the authoritative documents.
 \begin{itemize}
 \item Paper A, \texttt{tex/RS\_disproof\_v3.tex}, refutes the old no-slack
-  smooth-domain support-wise line-MCA statement.
-\item Paper B, \texttt{tex/slackMCA\_v3.tex}, is the main target here.  In
-  particular, this note is a small local contribution to the residue-line
-  normal form around \texttt{def:residue}, \texttt{thm:normalform},
-  \texttt{prob:perfiber}, and \texttt{conj:B}.
-\item Paper D, \texttt{tex/cs25\_cap\_v4.tex}, gives the universal field-size
-  cap and imported list-to-agreement route.  Nothing below changes that cap.
+  smooth-domain support-wise line-MCA statement.  If it uses the locator
+  construction, it should cite BCHKS and call the repository contribution a
+  smooth-domain/list-fiber corollary, not a new locator proof.
+\item Paper B, \texttt{tex/slackMCA\_v3.tex}, is the main target for the local
+  resonance material in Sections~\ref{sec:resonance-setup}--\ref{sec:scanner}.
 \item Paper C, \texttt{tex/snarks\_v4.tex}, records protocol ledgers.  Nothing
-  below may be consumed by a protocol without a separate conversion theorem.
+  in this note may be consumed by a protocol without a separate conversion
+  theorem.
+\item Paper D, \texttt{tex/cs25\_cap\_v4.tex}, gives the universal cap via an
+  imported list-to-agreement route.  Its locator-side input should cite BCHKS
+  explicitly if it uses the quotient-locator construction.
 \end{itemize}
+
+\section{BCHKS Locator Construction in Smooth-Quotient Notation}
+\label{sec:bchks}
+
+\textbf{Status: \textsc{Imported} plus \textsc{Wrapper}.}
+This section is a provenance-safe restatement and dictionary.  It is included
+so later main-paper edits have a clean place to copy from.
+
+\subsection{Imported theorem/proof pattern}
+
+BCHKS prove a general multiplicative-subgroup construction
+\cite[Thm.~7.1]{BCHKS25}.  In a compact form, the imported statement is as
+follows.
+
+\begin{theorem}[BCHKS quotient-locator construction, imported]
+\label{thm:bchks-import}
+Let \(G\subseteq H\subseteq \F_q^*\) be multiplicative subgroups and let
+\(\Phi:H\to G\) be \(x\mapsto x^c\), where \(c=|H|/|G|\).  Let
+\(E\subseteq G\), and let \(\ellpg,a\geq1\) satisfy
+\[
+  |E^{(+\ellpg)}|
+  =\#\{e_1+\cdots+e_{\ellpg}:e_i\in E\text{ distinct}\}\geq a.
+\]
+Let \(D=\Phi^{-1}(E)\), \(n=|D|\), and
+\[
+  C=\RS[\F_q,D,n-(\ellpg+2)c].
+\]
+Then, for \(\gamma=\ellpg c/n\), there are functions
+\(f,g:D\to\F_q\) such that
+\[
+  \#\{z\in\F_q: \dist(f+zg,C)\leq \gamma\}\geq a,
+\]
+while
+\[
+  \dist([f,g],C^2)\geq (\ellpg+1)c/n.
+\]
+\end{theorem}
+
+\begin{proof}[Reference]
+This is exactly the imported construction of \cite[Thm.~7.1]{BCHKS25}; the
+proof is not reproduced as a repository contribution.  BCHKS define the line
+endpoints by the monomials \(x^{n-\ellpg c}\) and
+\(x^{n-(\ellpg+1)c}\), then expand a vanishing polynomial over the complement
+of a chosen \(\ellpg\)-subset.  The coefficient of
+\(X^{n-(\ellpg+1)c}\) is an affine transform of a restricted sum from
+\(E^{(+\ellpg)}\), giving the exceptional slope values.
+\end{proof}
+
+The BCHKS Theorem~1.13 is the admissible-subgroup specialization of this
+construction: take \(E=G\), take \(H=D\), set \(c=|D|/|G|\), and use
+\(\ellpg=|G|/2\).  Any RS-MCA statement corresponding to that specialization
+should cite \cite[Thm.~1.13]{BCHKS25} directly.
+
+\subsection{Notation dictionary}
+
+\begin{center}
+\begin{tabular}{p{0.28\linewidth}p{0.30\linewidth}p{0.32\linewidth}}
+\textbf{BCHKS notation} & \textbf{RS-MCA notation} & \textbf{Meaning}\\
+\hline
+\(H\) & evaluation domain \(D\) & Large multiplicative domain on which codewords are evaluated.\\
+\(G\) & quotient \(Q=D^{\efib}\) & Image of the power map; one point in \(Q\) has \(\efib\) preimages in \(D\).\\
+\(c=|H|/|G|\) & \(\efib=n/|Q|\) & Fiber size of the quotient map.  Avoid calling this \(a\), because BCHKS also uses \(a\) for the number of exceptional slopes.\\
+\(\Phi(x)=x^c\) & \(x\mapsto x^{\efib}\) & Quotient/fiber map.\\
+\(E\subseteq G\) & active quotient subset \(E\subseteq Q\) & Quotient-level support used by the locator.\\
+\(E^{(+\ellpg)}\) & restricted first-coefficient/slope set & Sums of distinct chosen quotient elements; slopes are affine transforms of these sums.\\
+\(\ellpg\) & \(\ellpg\) or renamed subset size & Number of chosen quotient elements.  Use \(\ellpg\) in RS-MCA text to avoid collision with other \(\ell\)'s.\\
+\(f=x^{n-\ellpg c}\), \(g=x^{n-(\ellpg+1)c}\) & locator line endpoints & Same monomial line after quotient notation is substituted.\\
+\(P_S(X)=\prod_{\alpha\in S'}(X^c-\alpha)\) & \(\prod_{b\in A}(X^{\efib}-b)\), possibly after complementing \(A\) & The locator polynomial.\\
+exceptional \(z\)'s & bad slopes / heavy list fibers & Slope parameters for which a line word is close to the RS code.\\
+\end{tabular}
+\end{center}
+
+\subsection{The shared locator identity}
+
+The following identity is written down because it is the exact place where
+priority can be lost.  The identity is the BCHKS identity in RS-MCA notation.
+
+\begin{lemma}[Locator expansion, imported identity]
+\label{lem:locator-imported}
+Let \(D\) map \(\efib\)-to-one onto a quotient set \(E\) by
+\(x\mapsto x^{\efib}\), and let \(A\subseteq E\) have size \(\ellpg\).  Put
+\(A^c=E\setminus A\) and define
+\[
+  P_A(X)=\prod_{\alpha\in A^c}(X^{\efib}-\alpha).
+\]
+Then
+\[
+  P_A(X)
+  =X^{n-\ellpg\efib}
+    -e_1(A^c)X^{n-(\ellpg+1)\efib}
+    +\text{terms of degree at most }n-(\ellpg+2)\efib.
+\]
+Equivalently, since \(e_1(A^c)=e_1(E)-e_1(A)\), the coefficient of the next
+monomial is an affine transform of the restricted sum \(e_1(A)\).
+\end{lemma}
+
+\begin{proof}[Reference]
+This is the elementary expansion used inside \cite[Thm.~7.1]{BCHKS25}.  We
+record it only to fix notation.  It should not be cited as a new lemma of the
+repository unless the BCHKS provenance is present at the statement.
+\end{proof}
+
+\subsection{List-fiber pigeonhole wrapper}
+
+The next proposition is the repository-side wrapper around the imported
+identity.  It is intentionally stated in certificate form, because distinctness
+of the nearby codewords is a separate check in concrete instantiations.
+
+\begin{proposition}[List-fiber pigeonhole wrapper]
+\label{prop:list-fiber-wrapper}
+Let \(\mathcal A\) be a family of \(\ellpg\)-subsets of a quotient set \(E\).
+Suppose the BCHKS locator construction assigns to each \(A\in\mathcal A\) a
+slope \(z(A)\) lying in a finite set \(S\), and a locator certificate showing
+that the corresponding word \(f+z(A)g\) is within radius \(\gamma\) of a
+locator codeword \(P_A\in C\).  Then some slope \(z_0\in S\) has at least
+\[
+  \frac{|\mathcal A|}{|S|}
+\]
+locator certificates above it.  If the codewords \(P_A\) attached to the
+certificates over \(z_0\) are distinct, then the Hamming ball of radius
+\(\gamma\) around \(f+z_0g\) contains at least \(|\mathcal A|/|S|\) codewords
+of \(C\).
+\end{proposition}
+
+\begin{proof}
+The first assertion is the pigeonhole principle applied to the map
+\(A\mapsto z(A)\).  The second assertion is only the definition of list size,
+after the distinctness check removes possible duplicate locator codewords.
+The construction that supplies the certificates is imported from
+Theorem~\ref{thm:bchks-import}.
+\end{proof}
+
+\begin{remark}[What the wrapper adds]
+The new part here is not the locator polynomial.  The wrapper isolates the
+extra bookkeeping needed by RS-MCA: which slope set pays the pigeonhole bill,
+whether the slope set is the ambient field \(\F\) or a generated/base subfield
+\(B\), and whether locator certificates remain distinct after specialization.
+Those are the checks needed before using the construction in Papers A, B, or D.
+\end{remark}
+
+\subsection{Slack-two and subfield target for Paper D}
+
+\textbf{Status: \textsc{Target}.}
+The Paper D route needs a locator-heavy list fiber in the augmented code rung
+\(C^+=\RS[\F,D,k+1]\), because that is the object fed into the
+Crites--Stewart list-to-agreement conversion.  The proof obligation should be
+stated as follows.
+
+\begin{proposition}[Slack-two/subfield locator target]
+\label{prop:slack-two-target}
+Let \(D\subseteq B\subseteq\F\), and suppose a BCHKS-type quotient locator
+construction over \(D\) produces slopes in \(B\), not merely in \(\F\).  If the
+one-rung/augmented-code version produces distinct locator codewords in
+\(C^+=\RS[\F,D,k+1]\) for a family \(\mathcal A\) of certificates, then there
+exists a slope \(z_0\in B\) with list size at least
+\[
+  \frac{|\mathcal A|}{|B|}
+\]
+inside the appropriate Hamming ball for \(C^+\).
+\end{proposition}
+
+\begin{proof}[Bookkeeping only]
+This is Proposition~\ref{prop:list-fiber-wrapper} with \(S=B\).  The nontrivial
+work is external or elsewhere: one must verify the BCHKS locator hypotheses at
+the augmented-code rung, verify that the slope coefficients lie in \(B\), and
+verify distinctness of the produced codewords.  Until those checks are present,
+this proposition is a target, not a promoted Paper D theorem.
+\end{proof}
+
+\subsection{Pasteable main-paper wording}
+
+\paragraph{Paper A wording.}
+The polynomial locator identity used here is the quotient-fiber form of the
+construction of Ben-Sasson--Carmon--Hab\"ock--Kopparty--Saraf
+\cite[Thm.~7.1]{BCHKS25}; their Theorem~1.13 is the admissible subgroup
+instantiation.  Thus the locator proof itself is not a new contribution of
+this manuscript.  The present use is the smooth-domain specialization, the
+field/divisor bookkeeping, and the list-fiber pigeonhole packaging.
+
+\paragraph{Paper D wording.}
+The locator-side input is the BCHKS quotient-locator construction
+\cite[Thm.~7.1; cf.~Thm.~1.13]{BCHKS25}, written in the smooth-domain quotient
+notation \(Q=D^{\efib}\).  The additional bookkeeping needed here is the
+slack-two augmented-code rung and, when available, subfield pigeonholing over
+\(B\) rather than over the ambient extension field \(\F\).
+
+\section{Triage of the AI-Generated Four-Item Packet}
+\label{sec:packet-triage}
+
+\textbf{Status: \textsc{Audit}.}
+The four advertised items should be positioned as follows before any promotion
+into a main paper.
+
+\begin{center}
+\begin{tabular}{p{0.10\linewidth}p{0.34\linewidth}p{0.44\linewidth}}
+\textbf{Item} & \textbf{Limitation} & \textbf{Repository handling}\\
+\hline
+(a) & Works only at slack on the order of \(1/\sqrt n\). & Use as a weak-slack comparison point only.  It does not clear the corrected-reserve MCA objective.\\
+(b) & Applies only to three Fermat-prime cases. & Treat as finite-prime evidence or a worked computation, not as a uniform smooth-domain theorem.\\
+(c) & Requires exponential field size. & Treat as a large-field sanity check.  It is not directly usable for polynomial-field or prize-ledger parameters.\\
+(d) & Most relevant, but the locator proof is essentially BCHKS. & Import, cite, and adapt from \cite[Thm.~7.1 and Thm.~1.13]{BCHKS25}.  The repository contribution is only the smooth-domain/list-fiber/slack-two packaging after exact hypotheses are checked.\\
+\end{tabular}
+\end{center}
+
+\paragraph{Promotion checklist.}
+Before any statement using item (d) moves to Papers A--D, check the following.
+\begin{itemize}
+\item Does the statement cite BCHKS at the theorem and proof entry point?
+\item Is the object a proximity-gap statement, a list statement, CA, MCA,
+  line-decoding, or a protocol-facing theorem?
+\item Which field pays the slope/list pigeonhole bill: \(B\), \(\F\), or
+  another generated field?
+\item Are the locator codewords distinct after specialization?
+\item Is the claimed slack in the same normalization as the consumed theorem?
+\item Are items (a), (b), and (c) kept out of asymptotic/protocol claims unless
+  their limitations are explicitly part of the theorem statement?
+\end{itemize}
+
+\section{Restricted Resonance Setup for Paper B}
+\label{sec:resonance-setup}
+
+\textbf{Status: \textsc{New-local} for the divisibility gate; otherwise local
+normal-form bookkeeping.}
+The remaining sections preserve and reorganize the Cycle 14--18 algebraic
+material.  This branch is independent of the BCHKS priority correction.
 
 The common restricted setting is
 \[
@@ -85,129 +377,14 @@ The regime is sub-reserve, since \(\eta=\sigma/n=2/n\).  Thus none of the
 following proves a corrected-reserve list, CA, MCA, line-decoding, SNARK, or
 protocol theorem.
 
-\section{External Proximity-Gap Attribution Audit}
-
-\textbf{Status: AUDIT / ATTRIBUTION.}
-This section concerns a separate AI-generated packet with four advertised
-results, labeled here only as (a)--(d).  It should guide later edits to the
-main papers, but it is not itself a new theorem.
-
-The cited external source is:
-\[
-  \href{https://www.math.toronto.edu/swastik/rs-proximity-gaps-2025.pdf}
-  {\text{Ben-Sasson--Carmon--Habock--Kopparty--Saraf,
-  \emph{On proximity gaps for Reed--Solomon codes}}}.
-\]
-Swastik Kopparty's paper page lists the same paper with coauthors Eli
-Ben-Sasson, Dan Carmon, Ulrich Habock, and Shubhangi Saraf.  The paper is
-reported to appear at STOC 2026.  The relevant result to audit against is
-Theorem 1.13, with the subgroup/sumset construction and proof pattern around
-Theorem 7.1.
-
-\subsection*{Attribution correction}
-
-Any repository text or AI output claiming the proof of result (d) as a new
-contribution should be treated as incorrect.  The proof strategy of (d) is,
-up to notation and presentation, essentially the proof of Theorem 1.13 in the
-external proximity-gap paper.  In particular, even notation such as using
-\(\ell\) for the size of the chosen subset appears to track the external
-paper closely enough that the safe status is:
-\[
-  \text{result (d): imported theorem/proof pattern, not original.}
-\]
-Before any main-paper promotion, the text should cite the external theorem,
-state exactly which hypotheses are being imported, and explain whether the
-RS-MCA notation changes the object or merely renames it.
-
-\subsection*{How to treat the four advertised results}
-
-\begin{center}
-\begin{tabular}{p{0.12\linewidth}p{0.36\linewidth}p{0.40\linewidth}}
-\textbf{Item} & \textbf{Current limitation} & \textbf{Main-paper handling} \\
-\hline
-(a) & Works only at slack on the order of \(1/\sqrt n\). &
-Use at most as a weak-slack comparison point.  It does not clear Paper B's
-corrected-reserve objective and should not be stated as evidence for
-capacity-minus-explicit-floors MCA. \\
-(b) & Applies only to three Fermat-prime cases. &
-Treat as finite-prime evidence or a worked example.  It is not a uniform
-smooth-domain theorem and should not be allowed to drive asymptotic claims. \\
-(c) & Requires exponential field size. &
-Treat as a large-field construction or sanity check.  It is not directly
-usable for the polynomial-field or Proximity Prize parameter ledger. \\
-(d) & Most mathematically relevant, but the proof is essentially external. &
-Import, cite, and adapt from Theorem 1.13 of the proximity-gap paper.  Do not
-present it as an AI/repository proof.  Audit the exact object before using it
-in Paper B, D, or C. \\
-\end{tabular}
-\end{center}
-
-\subsection*{Main-paper integration plan}
-
-\textbf{Paper B.}
-Add a related-work and dependency paragraph near the local-limit/frontier
-discussion saying that the proximity-gap theorem of Ben-Sasson--Carmon--
-Habock--Kopparty--Saraf is the source for the item-(d) proof pattern.  If a
-Paper B statement uses the theorem, state it as an imported theorem with exact
-parameters: domain, rate, slack, field-size regime, and whether the object is
-a proximity gap, list statement, CA/MCA statement, or line-decoding statement.
-Do not let the \(1/\sqrt n\)-slack result (a), the three-Fermat-prime result
-(b), or the exponential-field result (c) substitute for the corrected-reserve
-MCA conjecture.
-
-\textbf{Paper D.}
-Keep the Crites--Stewart list-to-agreement import separate from this
-proximity-gap import.  If item (d) is relevant to the universal-cap narrative,
-it should be cited as external background or as a separately imported theorem,
-not folded into the cap proof unless the field ledger and radius normalization
-are checked line by line.
-
-\textbf{Paper C.}
-Protocol ledgers should not consume item (d) merely because it is a
-Reed--Solomon proximity theorem.  A protocol-facing use still needs a precise
-conversion into the consumed object: base-list size, interleaved-list size,
-CA, MCA, line-decoding, or curve-MCA.  Until such a conversion is proved, the
-ledger status is \textsc{conditional/imported} at best.
-
-\textbf{Paper A.}
-No change is forced.  These results do not rescue the old no-slack smooth
-support-wise MCA theorem refuted by Paper A.  They should be cited only if
-they clarify the landscape around proximity gaps and explicit slack regimes.
-
-\subsection*{Notation hygiene}
-
-When this material is eventually moved into the main papers, avoid copying the
-external notation silently.  If the external proof uses \(\ell\) for a chosen
-subset size, either keep that notation with an explicit citation or rename it,
-for example to \(\ell_{\rm pg}\), so it is not confused with RS-MCA slack
-\(t,\sigma\), support size, list size, or line-decoding parameters.  The
-ledger notation must still distinguish \(q_{\rm gen}\), \(q_{\rm line}\),
-\(q_{\rm chal}\), \(B\), and \(F\).
-
-\subsection*{Checklist before promotion}
-
-\begin{itemize}
-\item Add a BibTeX entry for the proximity-gap paper before citing it in
-  Papers A--D.
-\item Replace any claim of ``new proof of (d)'' by ``adapted from
-  Theorem 1.13 of Ben-Sasson--Carmon--Habock--Kopparty--Saraf.''
-\item Verify whether item (d)'s theorem object is list/proximity, CA, MCA,
-  line-decoding, or something only convertible under an additional theorem.
-\item Record which of (a)--(d) operate at \(1/\sqrt n\) slack, three Fermat
-  primes, exponential field size, and imported-theorem status.
-\item Re-run the field ledger: do not let an extension field pay a
-  generated-field entropy bill unless the cited theorem explicitly does so.
-\end{itemize}
-
-\section{Notation}
-
 The base/generated field is \(B=\F_p\).  The line field is the quadratic
 extension \(F=\F_{p^2}=B(\alpha)\), with basis \(\{1,\alpha\}\) over \(B\) and
 \(\alpha^2=\nu\in B\).  The domain is \(D=\F_p\), so \(n=|D|=p\).
 
-A degree-two residue-line datum consists of:
+A degree-two residue-line datum consists of
 \[
-  E\in F[X],\qquad \deg E=2,\qquad E(x)\ne0\ \text{for all }x\in D,
+  E\in F[X],\qquad \deg E=2,
+  \qquad E(x)\ne0\ \text{for all }x\in D,
 \]
 and a numerator
 \[
@@ -215,47 +392,52 @@ and a numerator
 \]
 We write
 \[
-  A=F[X]/E,\qquad [P]_E\in A,\qquad b=[\Bnum]_E.
+  A=F[X]/E,
+  \qquad [P]_E\in A,
+  \qquad b=[\Bnum]_E.
 \]
 The anchor word on \(D\) is interpolated by a polynomial \(W\).  The operation
-\(u\wedge v\) means the determinant of the coordinate vectors of
-\(u,v\in A\) in a chosen \(F\)-basis of the two-dimensional \(F\)-space \(A\).
-Off \(R_0\), the pair \(\{[W]_E,b\}\) is such a basis.
+\(u\wedge v\) means the determinant of the coordinate vectors of \(u,v\in A\)
+in a chosen \(F\)-basis of the two-dimensional \(F\)-space \(A\).  Off \(R_0\),
+the pair \(\{[W]_E,b\}\) is such a basis.
 
 The co-support has size \(j=3\).  If \(T\subset D\) is the three-point
 co-support, define
 \[
   \tau_1=e_1(T),\qquad \tau_2=e_2(T),\qquad \tau_3=e_3(T).
 \]
-All valid co-supports have \(\tau_i\in B\).  The quantity \(\Ctwo\) denotes
-the number of distinct slopes produced by the relevant landing branch after
+All valid co-supports have \(\tau_i\in B\).  The quantity \(\Ctwo\) denotes the
+number of distinct slopes produced by the relevant landing branch after
 restricting to valid split triples \(T\subset\F_p\).  Bounding landing points
 therefore bounds \(\Ctwo\), but a sharp slope theorem may require more because
 many landing points can share a slope.
 
 \section{Cycle 14 Normal Form}
+\label{sec:cycle14}
 
-The Cycle 14 audit reduces the \(t=2,j=3\) landing equation to two affine
-forms in the elementary co-support parameters
+The Cycle 14 audit reduces the \(t=2,j=3\) landing equation to two affine forms
+in the elementary co-support parameters
 \[
   \tau=(\tauone,\tautwo,\tauthree).
 \]
 
 \begin{lemma}[Affine wedge normal form]
 \label{lem:affine-wedge}
-Assume \(\{[W]_E,b\}\) is an \(F\)-basis of \(A\).  Then the landing equation
-can be written in the form
+Assume \(\{[W]_E,b\}\) is an \(F\)-basis of \(A\).  Then the landing equation can
+be written in the form
 \[
-  \iota(\tau)=A_0(\tauone,\tautwo)-\tauthree [W]_E,\qquad
+  \iota(\tau)=A_0(\tauone,\tautwo)-\tauthree [W]_E,
+  \qquad
   \mu(\tau)=B_0(\tauone,\tautwo)-\tauthree b,
 \]
 where
 \[
-  A_0=p_1[W]_E+p_2 b,\qquad B_0=q_1[W]_E+q_2 b,
+  A_0=p_1[W]_E+p_2 b,
+  \qquad
+  B_0=q_1[W]_E+q_2 b,
 \]
 and \(p_i,q_i\in F\) are affine-linear functions of
-\((\tauone,\tautwo)\).  If the basis is normalized so
-\([W]_E\wedge b=1\), then
+\((\tauone,\tautwo)\).  If the basis is normalized so \([W]_E\wedge b=1\), then
 \[
   \Delta=\iota\wedge\mu
     =(p_1-\tauthree)(q_2-\tauthree)-p_2q_1.
@@ -274,6 +456,7 @@ ordered basis \(\{[W]_E,b\}\), the coordinate vector of \(\iota\) is
 \end{proof}
 
 \section{Cycle 18 Component Split}
+\label{sec:cycle18}
 
 Choose a basis \(F=B+\alpha B\) with \(\alpha^2=\nu\in B\), and write
 \[
@@ -284,7 +467,8 @@ Choose a basis \(F=B+\alpha B\) with \(\alpha^2=\nu\in B\), and write
 \]
 Split
 \[
-  \Delta=\Deltazero+\alpha\Deltaone,\qquad
+  \Delta=\Deltazero+\alpha\Deltaone,
+  \qquad
   \Deltazero,\Deltaone\in B[\tauone,\tautwo,\tauthree].
 \]
 
@@ -334,11 +518,12 @@ This is immediate from solving the linear equation \(\Deltaone=0\) for
 \end{proof}
 
 \section{New Divisibility-Gate Theorem}
+\label{sec:divisibility-gate}
 
-The next theorem is the main new theorem extracted from the Cycle 18
-reduction.  It is stronger than merely saying that the branch is a graph: it
-shows that any two-dimensional family must satisfy an explicit divisibility
-identity.
+The next theorem is the main \textsc{New-local} theorem extracted from the
+Cycle 18 reduction.  It is stronger than merely saying that the branch is a
+graph: it shows that any two-dimensional family must satisfy an explicit
+divisibility identity.
 
 \begin{theorem}[Divisibility gate for the graph branch]
 \label{thm:divisibility-gate}
@@ -374,19 +559,18 @@ Since \(\Deltazero\) is monic quadratic in \(\tauthree\), clearing the
 denominators after substituting \(\tauthree=-h/s\) gives a polynomial \(G\) of
 degree at most \(4\).
 
-On \(s\ne0\), the equation \(\Deltaone=0\) forces
-\(\tauthree=-h/s\).  Hence every common zero on this open locus gives a base
-pair \((\tauone,\tautwo)\) with \(G(\tauone,\tautwo)=0\).  If \(G\) is nonzero,
+On \(s\ne0\), the equation \(\Deltaone=0\) forces \(\tauthree=-h/s\).  Hence
+every common zero on this open locus gives a base pair
+\((\tauone,\tautwo)\) with \(G(\tauone,\tautwo)=0\).  If \(G\) is nonzero,
 Schwartz--Zippel gives at most \(4p\) such base pairs, and each base pair gives
 at most one value of \(\tauthree\).
 
-It remains to count the exceptional locus \(s=0\).  There
-\(\Deltaone=0\) also forces \(h=0\).  If \(s\) is a nonzero affine form, this
-is contained in an affine line; if \(s\equiv0\), then \(h\) is a nonzero
-polynomial of degree at most \(2\).  In either case there are \(O(p)\) base
-pairs.  For each such pair, \(\Deltazero\) is a monic quadratic in
-\(\tauthree\), so it gives at most two values of \(\tauthree\).  The total
-common-zero count is \(O(p)\).
+It remains to count the exceptional locus \(s=0\).  There \(\Deltaone=0\) also
+forces \(h=0\).  If \(s\) is a nonzero affine form, this is contained in an
+affine line; if \(s\equiv0\), then \(h\) is a nonzero polynomial of degree at
+most \(2\).  In either case there are \(O(p)\) base pairs.  For each such pair,
+\(\Deltazero\) is a monic quadratic in \(\tauthree\), so it gives at most two
+values of \(\tauthree\).  The total common-zero count is \(O(p)\).
 
 Finally, the number of distinct slopes is bounded by the number of landing
 points \(\tau\).  Thus \(\Ctwo=O(p)\) whenever \(G\not\equiv0\), and any
@@ -396,14 +580,15 @@ points \(\tau\).  Thus \(\Ctwo=O(p)\) whenever \(G\not\equiv0\), and any
 \begin{remark}
 The identity \(G\equiv0\) says that, after clearing the \(s\)-denominator,
 \(\Deltazero\) is divisible by the linear equation \(\Deltaone\) on the graph
-branch.  This is now the first exact algebraic gate that a large slope family
-must pass.
+branch.  This is the first exact algebraic gate that a large slope family in
+this restricted window must pass.
 \end{remark}
 
 \section{Nearby Proven Gates}
+\label{sec:nearby-gates}
 
 The same restricted lane contains two other useful gates.  They are included
-here because they explain where the new theorem fits.
+here because they explain where Theorem~\ref{thm:divisibility-gate} fits.
 
 \begin{proposition}[Base-component complete-intersection gate]
 \label{prop:complete-intersection}
@@ -427,7 +612,8 @@ slopes are bounded by landing points.
 Let \(Q(z_0,z_1)\) be the Cycle 15--16 determinant consistency polynomial for
 the affine system
 \[
-  L_z(\tau)=\iota(\tau)-z\mu(\tau)=0,\qquad z=z_0+\alpha z_1.
+  L_z(\tau)=\iota(\tau)-z\mu(\tau)=0,
+  \qquad z=z_0+\alpha z_1.
 \]
 If \(Q\) is not identically zero, then in the restricted \(D=\F_p\),
 \(t=\sigma=2\), \(j=3\), off-\(R_0\) window,
@@ -438,15 +624,18 @@ If \(Q\) is not identically zero, then in the restricted \(D=\F_p\),
 
 \begin{proof}
 Cycle 16 gives \(\deg Q\le4\) and shows that every landing slope must satisfy
-\(Q(z_0,z_1)=0\).  If \(Q\ne0\), Schwartz--Zippel over \(B=\F_p\) gives at
-most \(4p\) possible pairs \((z_0,z_1)\), hence at most \(4p\) slopes.
+\(Q(z_0,z_1)=0\).  If \(Q\ne0\), Schwartz--Zippel over \(B=\F_p\) gives at most
+\(4p\) possible pairs \((z_0,z_1)\), hence at most \(4p\) slopes.
 \end{proof}
 
 \section{Slope Map and Remaining Heuristics}
+\label{sec:slope-map}
 
 On the graph branch, the landing equation \(\iota=z\mu\) gives
 \[
-  p_1-\tauthree=zq_1,\qquad p_2=z(q_2-\tauthree).
+  p_1-\tauthree=zq_1,
+  \qquad
+  p_2=z(q_2-\tauthree).
 \]
 Where \(q_1\ne0\), substituting \(\tauthree=-h/s\) yields
 \[
@@ -458,7 +647,8 @@ Equivalently, eliminating \(\tauthree\) recovers the Cycle 14 quadratic
 \]
 so the residual map is controlled by
 \[
-  (\tauone,\tautwo)\longmapsto [\,q_1:(p_1-q_2):p_2\,]\in\mathbb P^2(F).
+  (\tauone,\tautwo)
+  \longmapsto [\,q_1:(p_1-q_2):p_2\,]\in\mathbb P^2(F).
 \]
 
 \begin{heuristic}[Exceptional identity should be rare]
@@ -478,31 +668,37 @@ family has two-dimensional image and \(\Ctwo=\Theta(p^2)\).
 \end{heuristic}
 
 \section{Next Experimental Checks}
+\label{sec:scanner}
 
-A useful scanner should compute, for each source-valid candidate:
+A useful scanner should compute, for each source-valid candidate,
 \[
-  \Deltaone=s\tauthree+h,\qquad
+  \Deltaone=s\tauthree+h,
+  \qquad
   G=s^2\Deltazero(\tauone,\tautwo,-h/s),
 \]
-then record whether \(G\equiv0\), whether \(\Deltaone\equiv0\), the
-exceptional locus \(s=h=0\), the image size of
+then record whether \(G\equiv0\), whether \(\Deltaone\equiv0\), the exceptional
+locus \(s=h=0\), the image size of
 \[
   [\,q_1:(p_1-q_2):p_2\,],
 \]
 and the direct slope count over distinct split triples \(T\subset\F_p\).
 
-The certificate should keep at least:
+The certificate should keep at least
 \[
 \begin{gathered}
   p,\ \qgen,\ \qline,\ E,\ \Bnum,\ \text{seed},\ \text{stratum},\
   R_0\text{-status},\\
-  \Deltaone\equiv0,\quad G\equiv0,\quad
-  \#\{s=h=0\},\quad \#\operatorname{image},\quad
-  \Ctwo,\quad \#\{T\text{ split distinct}\}.
+  \Deltaone\equiv0,
+  \quad G\equiv0,
+  \quad \#\{s=h=0\},
+  \quad \#\operatorname{image},
+  \quad \Ctwo,
+  \quad \#\{T\text{ split distinct}\}.
 \end{gathered}
 \]
 
 \section{Non-Claims}
+\label{sec:nonclaims}
 
 This note does not claim:
 \begin{itemize}
@@ -510,11 +706,37 @@ This note does not claim:
 \item a positive theorem above corrected reserve;
 \item a \(\qgen\) local-limit theorem;
 \item a list, CA, MCA, line-decoding, SNARK, or protocol consequence;
-\item a large \(\Theta(p^2)\) counterpacket.
+\item a large \(\Theta(p^2)\) counterpacket;
+\item priority for the BCHKS quotient-locator proof pattern.
 \end{itemize}
 
-The mathematical value is narrower: the possible large branch in this
-restricted window must satisfy an explicit algebraic identity before it can
-even be surface-sized.
+The mathematical value is narrower.  On the imported side, the file gives a
+provenance-safe dictionary and wrapper for using BCHKS without claiming it as
+new.  On the local Paper B side, the possible large branch in the restricted
+quadratic-extension window must satisfy an explicit algebraic identity before
+it can even be surface-sized.
+
+\appendix
+
+\section{BibTeX Entry to Copy into Main Papers}
+
+\begin{verbatim}
+@misc{BCHKS25,
+  author = {Eli Ben-Sasson and Dan Carmon and Ulrich Habock and
+            Swastik Kopparty and Shubhangi Saraf},
+  title  = {On Proximity Gaps for Reed--Solomon Codes},
+  year   = {2025},
+  note   = {Manuscript dated November 11, 2025},
+  url    = {https://www.math.toronto.edu/swastik/rs-proximity-gaps-2025.pdf}
+}
+\end{verbatim}
+
+\begin{thebibliography}{9}
+\bibitem{BCHKS25}
+Eli Ben-Sasson, Dan Carmon, Ulrich Hab\"ock, Swastik Kopparty, and Shubhangi
+Saraf.  \emph{On Proximity Gaps for Reed--Solomon Codes}.  Manuscript dated
+November 11, 2025.
+\url{https://www.math.toronto.edu/swastik/rs-proximity-gaps-2025.pdf}.
+\end{thebibliography}
 
 \end{document}

@@ -29,6 +29,33 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-18 - Streamlined imported-locator ledger
+
+- **Agent/model:** Human-provided streamlined note, logged by Codex.
+- **Files added or changed:** `experimental/experiments.tex`,
+  `experimental/experiments.pdf`, `experimental/agents-log.md`.
+- **Status:** AUDIT / IMPORTED / WRAPPER / TARGET / NEW-LOCAL.
+- **What is being added:** Replaces the narrower attribution note with a
+  unified experimental ledger titled *Experimental Theorems and
+  Imported-Locator Ledger for RS-MCA*.  The note explicitly imports the
+  Ben-Sasson--Carmon--Habock--Kopparty--Saraf quotient-locator construction,
+  gives the smooth-quotient notation dictionary, records the shared locator
+  identity as imported rather than new, adds a list-fiber pigeonhole wrapper,
+  states a slack-two/subfield target for the Paper D route, and preserves the
+  Cycle 14--18 Paper B divisibility-gate theorem.
+- **How it is useful:** Streamlines promotion decisions for Papers A--D:
+  locator proofs from BCHKS must be cited at theorem and proof entry points;
+  repository-side contributions are limited to dictionary/wrapper/ledger
+  packaging unless separately proved; Paper D gets a precise augmented-code
+  and subfield-pigeonhole target; Paper B keeps the independent restricted
+  resonance gate as local experimental mathematics.
+- **What to do next:** When editing the main papers, add the `BCHKS25`
+  bibliography entry and cite Theorems 7.1 and 1.13 exactly where the locator
+  construction is used.  Audit the augmented-code rung, slope field
+  (`B` versus `F`), locator-codeword distinctness, and slack normalization
+  before promoting any wrapper to a theorem.  Continue scanner work on the
+  `G==0` divisibility-gate branch for the Paper B resonance window.
+
 ### 2026-06-18 - Proximity-gap attribution audit
 
 - **Agent/model:** Codex.
