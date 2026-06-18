@@ -1096,3 +1096,20 @@ Keep entries concise and link to the relevant files.
   target is `W-F1-AA-RES-STRUCTURED-COSUPPORT-RESERVE-LIFT`, with aliases
   `W-F1-AA-RES-T2J4-TO-CORRECTED-RESERVE-SLOPE-PRESERVING-LIFT` and
   `W-F1-AA-RES-RESERVE-SCALED-GENERATED-FIELD-QUARTIC-CORE-LIFT`.
+
+### 2026-06-19 - Cycle 43 reserve-lift homerun prompt launched
+
+- **Agent/model:** Codex launched `claude-opus-4-8` with
+  `fable_full_experiment` in clean non-ad `artifact_stream` mode.
+- **Run directory:** `/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-18T23-35-34-020Z-cycle43-reserve-lift-homerun-a410a6ef`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/prompts/20260618_cycle43_reserve_lift_homerun.md`
+  and `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** active run / pending audit.
+- **Target:** `W-F1-AA-RES-STRUCTURED-COSUPPORT-RESERVE-LIFT`.
+- **Why this prompt:** Cycle 42 appears to close the fixed restricted
+  `t=2,j=4` branch, so Cycle 43 asks whether that quartic-monodromy mechanism
+  can be lifted to reserve scale (`t=sigma >= C n/log n`, `j=Theta(n)`) or
+  whether there is a theorem-sized obstruction to scaling.
+- **Lane choice:** Clean artifact stream was used instead of the VS Code ads
+  lane because ad credit was not working and theorem progress is higher
+  priority.
