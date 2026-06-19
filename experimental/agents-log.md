@@ -29,6 +29,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 58 5.5 Pro upper-wall audit
+
+- **Agent/model:** Codex auditing nine external 5.5 Pro lanes.
+- **Files added or changed:** `experimental/notes/m1/m1_cycle58_5p5_upper_audit.md`,
+  `experimental/notes/m1/cycle58_5p5_raw/`, and
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / EXPERIMENTAL, with COUNTEREXAMPLE subresults to
+  overbroad upper targets.
+- **What is being added:** A conservative synthesis of the nine Cycle 58
+  theorem-worker responses, plus raw response preservation and checksums.
+- **How it is useful:** Cuts the pure `n^{1+o(1)}` upper target, identifies the
+  necessary occupancy/main term, confirms that literal quotient pullback is too
+  narrow, and re-centers the MCA upper wall on a calibrated syndrome
+  transverse-secant inverse theorem.
+- **What to do next:** Attack
+  `W-MCA-CALIBRATED-SYNDROME-TRANSVERSE-SECANT-INVERSE`, beginning with the
+  quotient-free, envelope-free same-field bound with the Bessel occupancy term
+  included.
+
 ### 2026-06-19 - Experimental folder streamlining
 
 - **Agent/model:** Codex.
