@@ -1184,3 +1184,18 @@ Keep entries concise and link to the relevant files.
   theorem prompt against the L2 anticollision wall: either prove the moment
   anticollision estimate or produce a source-valid growing-family falsifier
   with a high-multiplicity slope.
+
+### 2026-06-19 - Cycle 45 external L2 anticollision packet
+
+- **Agent/model:** Codex preparing prompts for six fresh external 5.5 Pro-style
+  instances.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/handoffs/20260619_cycle45_l2_anticollision_external/`,
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`, and this log.
+- **Status:** EXTERNAL_MODEL_PACKET / AUDIT.
+- **Target:** `W-F1-AA-RES-SYMMETRIC-FUNCTION-CANCELLATION-L2-ANTICOLLISION`.
+- **What is being added:** A role-split packet with common context plus six
+  roles: proof-builder, falsifier hunter, source auditor, finite checker
+  designer, homerun full-solve attempt, and obstruction reducer.
+- **Why:** Cycle 44 produced a precise L2 wall. Six identical homerun prompts
+  would waste model diversity; the role split probes proof and failure modes
+  separately while keeping the same banked identity and ledgers.

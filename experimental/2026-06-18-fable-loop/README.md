@@ -1179,3 +1179,17 @@ Cycle 44 cosupport subset-product homerun:
   positive-density reserve lift, corrected-reserve counterpacket,
   generated-field theorem, MCA/CA/list/line-decoding/curve-MCA/protocol/SNARK
   statement, or prize solve.
+
+Cycle 45 external L2 anticollision packet:
+
+- `handoffs/20260619_cycle45_l2_anticollision_external/README.md`
+- `handoffs/20260619_cycle45_l2_anticollision_external/PROMPT_COMMON.md`
+- `handoffs/20260619_cycle45_l2_anticollision_external/ROLE_PROMPTS.md`
+- `handoffs/20260619_cycle45_l2_anticollision_external/MANIFEST.md`
+- Status: EXTERNAL_MODEL_PACKET / AUDIT.
+- Target:
+  `W-F1-AA-RES-SYMMETRIC-FUNCTION-CANCELLATION-L2-ANTICOLLISION`.
+- Purpose: give six fresh external 5.5 Pro-style instances the same banked
+  Cycle 44 identity and ledgers, but different roles: proof-builder,
+  falsifier hunter, source auditor, finite checker designer, homerun attempt,
+  and obstruction reducer.
