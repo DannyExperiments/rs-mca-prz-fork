@@ -9,6 +9,7 @@ from typing import Sequence, Tuple
 
 from m1_support_occupancy_scan import (
     all_residual_packets_lift_active,
+    ceil_sqrt,
     kummer_quadratic_uniform_prime_threshold,
     quotient_limited_pair_parameter_bound,
     quotient_window_label_nonprincipal_bound,
@@ -90,10 +91,22 @@ FIXED_WINDOW_KUMMER_CASES = (
 R_WINDOW_UNION_KUMMER_CASES = (
     # Exact R=2 union saturation, but below the union Kummer threshold.
     (97, 48, 6, 2, False, False),
-    # The exact R=2 L1 certificate succeeds while the L1 bound fails.
-    (181, 180, 3, 2, True, False),
-    # The exact R=3 coefficient histogram improves the bounded L1 threshold.
-    (113, 112, 4, 3, True, False),
+    # Both union L1 and complement-window L1 certify this R=2 case.
+    (181, 180, 3, 2, True, True),
+    # Both union L1 and complement-window L1 certify this R=3 case.
+    (113, 112, 4, 3, True, True),
+)
+
+EQUAL_LINE_SPLIT_CASES = (
+    (3, 3),
+    (4, 4),
+    (6, 6),
+    (12, 12),
+    (5, 10),
+    (6, 12),
+    (9, 18),
+    (12, 24),
+    (32, 64),
 )
 
 SCAN_LABEL_CASES = (
@@ -140,6 +153,349 @@ def two_fiber_divisor_power_failure_count(
                     if all(exponent == 0 for exponent in divisor_exponents):
                         failures += 1
     return failures
+
+
+def raw_two_coordinate_projective_l1_split(
+    character_order: int,
+    square_coset_index: int,
+) -> dict[str, int]:
+    if square_coset_index % character_order:
+        raise AssertionError((character_order, square_coset_index))
+    lift = square_coset_index // character_order
+    infinity_unramified = 0
+    projective_reciprocal = 0
+    ramified_nonreciprocal = 0
+    coordinate_diagonal = 0
+    coordinate_diagonal_alpha_square_trivial = 0
+    coordinate_diagonal_2f1_cancellation = 0
+    projective_equal_pair = 0
+    equal_line_diagonal = 0
+    projective_asymmetric_line_conic_resonant = 0
+    for first_exponent in range(1, character_order):
+        for second_exponent in range(1, character_order):
+            for conic_exponent in range(1, square_coset_index):
+                first = lift * first_exponent
+                second = lift * second_exponent
+                infinity = (-(first + second + 2 * conic_exponent)) % (
+                    square_coset_index
+                )
+                if infinity == 0:
+                    infinity_unramified += 1
+                elif (
+                    (first + second) % square_coset_index == 0
+                    or (first + infinity) % square_coset_index == 0
+                    or (second + infinity) % square_coset_index == 0
+                ):
+                    projective_reciprocal += 1
+                else:
+                    ramified_nonreciprocal += 1
+                    has_projective_equal_pair = (
+                        first == second
+                        or first == infinity
+                        or second == infinity
+                    )
+                    if first == second:
+                        coordinate_diagonal += 1
+                        alpha = (first + conic_exponent) % square_coset_index
+                        if (2 * alpha) % square_coset_index == 0:
+                            coordinate_diagonal_alpha_square_trivial += 1
+                        if alpha == first or (
+                            square_coset_index % 2 == 0
+                            and alpha == square_coset_index // 2
+                        ):
+                            coordinate_diagonal_2f1_cancellation += 1
+                    if has_projective_equal_pair:
+                        projective_equal_pair += 1
+                    else:
+                        has_line_conic_resonance = (
+                            (first + conic_exponent) % square_coset_index == 0
+                            or (second + conic_exponent)
+                            % square_coset_index
+                            == 0
+                            or (infinity + conic_exponent)
+                            % square_coset_index
+                            == 0
+                        )
+                        if has_line_conic_resonance:
+                            projective_asymmetric_line_conic_resonant += 1
+                    if first == second == infinity:
+                        equal_line_diagonal += 1
+    active_pair_count = 3
+    projective_asymmetric = ramified_nonreciprocal - projective_equal_pair
+    if projective_asymmetric < 0 or projective_asymmetric % 2:
+        raise AssertionError(
+            (character_order, square_coset_index, projective_asymmetric)
+        )
+    projective_asymmetric_line_conic_nonresonant = (
+        projective_asymmetric - projective_asymmetric_line_conic_resonant
+    )
+    if projective_asymmetric_line_conic_nonresonant < 0:
+        raise AssertionError(
+            (
+                character_order,
+                square_coset_index,
+                projective_asymmetric_line_conic_resonant,
+            )
+        )
+    return {
+        "infinity_unramified": active_pair_count * infinity_unramified,
+        "projective_reciprocal": active_pair_count * projective_reciprocal,
+        "ramified_nonreciprocal": active_pair_count * ramified_nonreciprocal,
+        "coordinate_diagonal": active_pair_count * coordinate_diagonal,
+        "coordinate_diagonal_non_equal": (
+            active_pair_count * (coordinate_diagonal - equal_line_diagonal)
+        ),
+        "coordinate_diagonal_alpha_square_trivial_count": (
+            active_pair_count * coordinate_diagonal_alpha_square_trivial
+        ),
+        "coordinate_diagonal_2f1_cancellation_count": (
+            active_pair_count * coordinate_diagonal_2f1_cancellation
+        ),
+        "projective_equal_pair": active_pair_count * projective_equal_pair,
+        "projective_equal_pair_non_coordinate": (
+            active_pair_count * (projective_equal_pair - coordinate_diagonal)
+        ),
+        "projective_asymmetric": active_pair_count * projective_asymmetric,
+        "projective_asymmetric_orbit_count": (
+            active_pair_count * projective_asymmetric // 6
+        ),
+        "projective_asymmetric_line_conic_resonant": (
+            active_pair_count * projective_asymmetric_line_conic_resonant
+        ),
+        "projective_asymmetric_line_conic_nonresonant": (
+            active_pair_count * projective_asymmetric_line_conic_nonresonant
+        ),
+        "projective_asymmetric_line_conic_resonant_orbit_count": (
+            active_pair_count * projective_asymmetric_line_conic_resonant // 6
+        ),
+        "projective_asymmetric_line_conic_nonresonant_orbit_count": (
+            active_pair_count
+            * projective_asymmetric_line_conic_nonresonant
+            // 6
+        ),
+        "equal_line_diagonal": active_pair_count * equal_line_diagonal,
+    }
+
+
+def equal_line_diagonal_pair_count_formula(
+    character_order: int,
+    square_coset_index: int,
+) -> int:
+    if square_coset_index % character_order:
+        raise AssertionError((character_order, square_coset_index))
+    e = character_order
+    q = square_coset_index
+    lift = q // e
+    if lift == 1:
+        if e % 2:
+            return e - math.gcd(e, 3)
+        half = e // 2
+        even_allowed = half - 1 - (1 if e % 4 == 0 else 0)
+        zero_solutions = math.gcd(half, 3) - 1
+        return 2 * even_allowed - zero_solutions
+    if lift == 2:
+        allowed = e - 1 - (1 if e % 2 == 0 else 0)
+        zero_solutions = math.gcd(e, 3) - 1
+        return 2 * allowed - zero_solutions
+    raise AssertionError((character_order, square_coset_index, lift))
+
+
+def coordinate_diagonal_pair_count_formula(
+    character_order: int,
+    square_coset_index: int,
+) -> int:
+    if square_coset_index % character_order:
+        raise AssertionError((character_order, square_coset_index))
+    e = character_order
+    q = square_coset_index
+    lift = q // e
+    if lift == 1:
+        if e % 2:
+            return (e - 1) * (e - 3)
+        even_allowed = e // 2 - 1 - (1 if e % 4 == 0 else 0)
+        return (e - 2) * (e - 3) - 2 * even_allowed
+    if lift == 2:
+        allowed = e - 1 - (1 if e % 2 == 0 else 0)
+        return allowed * (2 * e - 5)
+    raise AssertionError((character_order, square_coset_index, lift))
+
+
+def projective_equal_pair_count_formula(
+    character_order: int,
+    square_coset_index: int,
+) -> int:
+    coordinate = coordinate_diagonal_pair_count_formula(
+        character_order,
+        square_coset_index,
+    )
+    equal_line = equal_line_diagonal_pair_count_formula(
+        character_order,
+        square_coset_index,
+    )
+    return 3 * coordinate - 2 * equal_line
+
+
+def asymmetric_line_conic_resonant_pair_count_formula(
+    character_order: int,
+    square_coset_index: int,
+) -> int:
+    if square_coset_index % character_order:
+        raise AssertionError((character_order, square_coset_index))
+    e = character_order
+    lift = square_coset_index // e
+    if lift not in (1, 2):
+        raise AssertionError((character_order, square_coset_index, lift))
+    single_line_count = (e - 1) * (e - 5)
+    if e % 2 == 0:
+        single_line_count += 3
+    single_line_count += 2 * (math.gcd(e, 3) - 1)
+    return 3 * single_line_count
+
+
+def coordinate_diagonal_parameter_failure_counts(
+    character_order: int,
+    square_coset_index: int,
+) -> dict[str, int]:
+    if square_coset_index % character_order:
+        raise AssertionError((character_order, square_coset_index))
+    e = character_order
+    q = square_coset_index
+    lift = q // e
+    alpha_square_trivial = 0
+    twof1_cancellation = 0
+    for exponent in range(1, e):
+        first = lift * exponent % q
+        for conic_exponent in range(1, q):
+            infinity = (-(2 * first + 2 * conic_exponent)) % q
+            if infinity == 0:
+                continue
+            if (2 * first) % q == 0:
+                continue
+            if (first + infinity) % q == 0:
+                continue
+            alpha = (first + conic_exponent) % q
+            if (2 * alpha) % q == 0:
+                alpha_square_trivial += 1
+            if alpha == first or (q % 2 == 0 and alpha == q // 2):
+                twof1_cancellation += 1
+    return {
+        "alpha_square_trivial": alpha_square_trivial,
+        "twof1_cancellation": twof1_cancellation,
+    }
+
+
+def raw_two_coordinate_projective_l1_split_formula(
+    character_order: int,
+    square_coset_index: int,
+) -> dict[str, int]:
+    if square_coset_index % character_order:
+        raise AssertionError((character_order, square_coset_index))
+    e = character_order
+    q = square_coset_index
+    lift = q // e
+    if lift == 1:
+        if e % 2:
+            infinity_unramified = (e - 1) * (e - 2)
+            projective_reciprocal = 3 * (e - 1) * (e - 2)
+        else:
+            infinity_unramified = (e - 1) * (e - 2) + 1
+            projective_reciprocal = 3 * (e - 2) * (e - 2)
+            if e % 4 == 0:
+                projective_reciprocal += 2
+    elif lift == 2:
+        infinity_unramified = (e - 1) * (2 * e - 3)
+        projective_reciprocal = 6 * (e - 1) * (e - 2)
+        if e % 2 == 0:
+            projective_reciprocal += 2
+    else:
+        raise AssertionError((character_order, square_coset_index, lift))
+    total = (e - 1) * (e - 1) * (q - 1)
+    diagonal_failures = coordinate_diagonal_parameter_failure_counts(
+        character_order,
+        square_coset_index,
+    )
+    if any(diagonal_failures.values()):
+        raise AssertionError(
+            (character_order, square_coset_index, diagonal_failures)
+        )
+    projective_equal_pair = projective_equal_pair_count_formula(
+        character_order,
+        square_coset_index,
+    )
+    projective_asymmetric = (
+        total - infinity_unramified - projective_reciprocal - projective_equal_pair
+    )
+    line_conic_resonant = asymmetric_line_conic_resonant_pair_count_formula(
+        character_order,
+        square_coset_index,
+    )
+    line_conic_nonresonant = projective_asymmetric - line_conic_resonant
+    if line_conic_nonresonant < 0:
+        raise AssertionError(
+            (character_order, square_coset_index, line_conic_resonant)
+        )
+    return {
+        "infinity_unramified": 3 * infinity_unramified,
+        "projective_reciprocal": 3 * projective_reciprocal,
+        "ramified_nonreciprocal": (
+            3 * (total - infinity_unramified - projective_reciprocal)
+        ),
+        "coordinate_diagonal": (
+            3
+            * coordinate_diagonal_pair_count_formula(
+                character_order,
+                square_coset_index,
+            )
+        ),
+        "coordinate_diagonal_non_equal": (
+            3
+            * (
+                coordinate_diagonal_pair_count_formula(
+                    character_order,
+                    square_coset_index,
+                )
+                - equal_line_diagonal_pair_count_formula(
+                    character_order,
+                    square_coset_index,
+                )
+            )
+        ),
+        "coordinate_diagonal_alpha_square_trivial_count": 0,
+        "coordinate_diagonal_2f1_cancellation_count": 0,
+        "projective_equal_pair": (
+            3
+            * projective_equal_pair
+        ),
+        "projective_equal_pair_non_coordinate": (
+            3
+            * (
+                projective_equal_pair
+                - coordinate_diagonal_pair_count_formula(
+                    character_order,
+                    square_coset_index,
+                )
+            )
+        ),
+        "projective_asymmetric": 3 * projective_asymmetric,
+        "projective_asymmetric_orbit_count": projective_asymmetric // 2,
+        "projective_asymmetric_line_conic_resonant": 3 * line_conic_resonant,
+        "projective_asymmetric_line_conic_nonresonant": (
+            3 * line_conic_nonresonant
+        ),
+        "projective_asymmetric_line_conic_resonant_orbit_count": (
+            line_conic_resonant // 2
+        ),
+        "projective_asymmetric_line_conic_nonresonant_orbit_count": (
+            line_conic_nonresonant // 2
+        ),
+        "equal_line_diagonal": (
+            3
+            * equal_line_diagonal_pair_count_formula(
+                character_order,
+                square_coset_index,
+            )
+        ),
+    }
 
 
 def principal_open_count(p: int) -> int:
@@ -342,6 +698,73 @@ def direct_ambient_window_label_l1_bound(
     return square_coset_index * quotient_l1_bound - label_triples
 
 
+def direct_ambient_window_label_one_coordinate_l1_bound(
+    ambient_character_order: int,
+    quotient_order: int,
+    window_size: int,
+) -> int:
+    total = 0
+    for coordinate in range(3):
+        for frequency in range(1, ambient_character_order):
+            triple = [0, 0, 0]
+            triple[coordinate] = frequency
+            total += abs(
+                quotient_window_label_coefficient(
+                    quotient_order,
+                    window_size,
+                    (
+                        triple[0] % quotient_order,
+                        triple[1] % quotient_order,
+                        triple[2] % quotient_order,
+                    ),
+                )
+            )
+    return total
+
+
+def direct_ambient_window_label_coordinate_active_l1_bounds(
+    ambient_character_order: int,
+    quotient_order: int,
+    window_size: int,
+) -> Tuple[int, int, int]:
+    totals = [0, 0, 0, 0]
+    for r in range(ambient_character_order):
+        for s in range(ambient_character_order):
+            for t in range(ambient_character_order):
+                active_count = int(r != 0) + int(s != 0) + int(t != 0)
+                if active_count == 0:
+                    continue
+                totals[active_count] += abs(
+                    quotient_window_label_coefficient(
+                        quotient_order,
+                        window_size,
+                        (
+                            r % quotient_order,
+                            s % quotient_order,
+                            t % quotient_order,
+                        ),
+                    )
+                )
+    return (totals[1], totals[2], totals[3])
+
+
+def fixed_window_parseval_active_l1_bound(
+    quotient_order: int,
+    window_size: int,
+    ambient_restriction_kernel_count: int,
+) -> int:
+    radicand = (quotient_order - 1) * window_size * (
+        quotient_order - window_size
+    )
+    root = math.isqrt(radicand)
+    if root * root < radicand:
+        root += 1
+    return (
+        (ambient_restriction_kernel_count - 1) * window_size
+        + ambient_restriction_kernel_count * root
+    )
+
+
 def kernel_fiber_reduction_counts(
     p: int,
     domain: Sequence[int],
@@ -414,14 +837,115 @@ def main() -> None:
         square_coset_index = int(certificate["square_coset_index"])
         jacobi_l1_bound = character_triple_count - 1
         conic_l1_bound = square_coset_index - 1
-        kummer_l1_bound = jacobi_l1_bound * (square_coset_index - 1)
+        quadratic_conic_character_count = (
+            1 if square_coset_index > 1 and square_coset_index % 2 == 0 else 0
+        )
+        coordinate_one_l1_bound = (
+            3 * (int(certificate["character_order"]) - 1)
+        )
+        coordinate_two_l1_bound = (
+            3 * (int(certificate["character_order"]) - 1) ** 2
+        )
+        coordinate_three_l1_bound = (
+            (int(certificate["character_order"]) - 1) ** 3
+        )
+        quadratic_one_coordinate_l1_bound = (
+            coordinate_one_l1_bound * quadratic_conic_character_count
+        )
+        one_coordinate_kummer_l1_bound = coordinate_one_l1_bound * (
+            square_coset_index - 1 - quadratic_conic_character_count
+        )
+        two_coordinate_kummer_l1_bound = (
+            coordinate_two_l1_bound * (square_coset_index - 1)
+        )
+        two_coordinate_projective_split = raw_two_coordinate_projective_l1_split(
+            int(certificate["character_order"]),
+            square_coset_index,
+        )
+        two_coordinate_projective_formula = (
+            raw_two_coordinate_projective_l1_split_formula(
+                int(certificate["character_order"]),
+                square_coset_index,
+            )
+        )
+        if two_coordinate_projective_split != two_coordinate_projective_formula:
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    two_coordinate_projective_split,
+                    two_coordinate_projective_formula,
+                )
+            )
+        two_coordinate_infinity_unramified_l1_bound = int(
+            two_coordinate_projective_split["infinity_unramified"]
+        )
+        two_coordinate_projective_reciprocal_l1_bound = int(
+            two_coordinate_projective_split["projective_reciprocal"]
+        )
+        two_coordinate_ramified_nonreciprocal_l1_bound = int(
+            two_coordinate_projective_split["ramified_nonreciprocal"]
+        )
+        two_coordinate_equal_line_l1_bound = int(
+            two_coordinate_projective_split["equal_line_diagonal"]
+        )
+        two_coordinate_coordinate_diagonal_l1_bound = int(
+            two_coordinate_projective_split["coordinate_diagonal"]
+        )
+        two_coordinate_projective_equal_pair_l1_bound = int(
+            two_coordinate_projective_split["projective_equal_pair"]
+        )
+        two_coordinate_projective_asymmetric_nonresonant_l1_bound = int(
+            two_coordinate_projective_split[
+                "projective_asymmetric_line_conic_nonresonant"
+            ]
+        )
+        two_coordinate_projective_asymmetric_line_conic_resonant_l1_bound = int(
+            two_coordinate_projective_split[
+                "projective_asymmetric_line_conic_resonant"
+            ]
+        )
+        two_coordinate_ramified_l1_bound = (
+            two_coordinate_kummer_l1_bound
+            - two_coordinate_infinity_unramified_l1_bound
+        )
+        three_coordinate_kummer_l1_bound = (
+            coordinate_three_l1_bound * (square_coset_index - 1)
+        )
+        kummer_l1_bound = (
+            one_coordinate_kummer_l1_bound
+            + two_coordinate_kummer_l1_bound
+            + three_coordinate_kummer_l1_bound
+        )
         weighted_error_l1_bound = (
             jacobi_l1_bound
             + conic_l1_bound
-            + int(certificate["nonprincipal_constant"]) * kummer_l1_bound
+            + int(certificate["quadratic_one_coordinate_error_constant"])
+            * quadratic_one_coordinate_l1_bound
+            + int(certificate["one_coordinate_kummer_error_constant"])
+            * one_coordinate_kummer_l1_bound
+            + int(
+                certificate[
+                    "two_coordinate_infinity_unramified_error_constant"
+                ]
+            )
+            * two_coordinate_infinity_unramified_l1_bound
+            + int(
+                certificate[
+                    "two_coordinate_projective_reciprocal_error_constant"
+                ]
+            )
+            * two_coordinate_projective_reciprocal_l1_bound
+            + int(certificate["two_coordinate_kummer_error_constant"])
+            * two_coordinate_ramified_nonreciprocal_l1_bound
+            + int(certificate["three_coordinate_kummer_error_constant"])
+            * three_coordinate_kummer_l1_bound
         )
         if (
-            jacobi_l1_bound + conic_l1_bound + kummer_l1_bound
+            jacobi_l1_bound
+            + conic_l1_bound
+            + quadratic_one_coordinate_l1_bound
+            + kummer_l1_bound
             != coefficient_l1_bound
         ):
             raise AssertionError((p, n, coefficient_l1_bound, certificate))
@@ -429,20 +953,800 @@ def main() -> None:
             raise AssertionError((p, n, jacobi_l1_bound, certificate))
         if conic_l1_bound != int(certificate["conic_l1_bound"]):
             raise AssertionError((p, n, conic_l1_bound, certificate))
+        if quadratic_one_coordinate_l1_bound != int(
+            certificate["quadratic_one_coordinate_l1_bound"]
+        ):
+            raise AssertionError(
+                (p, n, quadratic_one_coordinate_l1_bound, certificate)
+            )
+        if one_coordinate_kummer_l1_bound != int(
+            certificate["one_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, one_coordinate_kummer_l1_bound))
+        if two_coordinate_kummer_l1_bound != int(
+            certificate["two_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, two_coordinate_kummer_l1_bound))
+        if two_coordinate_infinity_unramified_l1_bound != int(
+            certificate["two_coordinate_infinity_unramified_l1_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    two_coordinate_infinity_unramified_l1_bound,
+                    certificate,
+                )
+            )
+        if two_coordinate_ramified_l1_bound != int(
+            certificate["two_coordinate_ramified_l1_bound"]
+        ):
+            raise AssertionError(
+                (p, n, two_coordinate_ramified_l1_bound, certificate)
+            )
+        if two_coordinate_projective_reciprocal_l1_bound != int(
+            certificate["two_coordinate_projective_reciprocal_l1_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    two_coordinate_projective_reciprocal_l1_bound,
+                    certificate,
+                )
+            )
+        if two_coordinate_ramified_nonreciprocal_l1_bound != int(
+            certificate["two_coordinate_ramified_nonreciprocal_l1_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    two_coordinate_ramified_nonreciprocal_l1_bound,
+                    certificate,
+                )
+            )
+        if two_coordinate_equal_line_l1_bound != int(
+            certificate["two_coordinate_equal_line_l1_bound"]
+        ):
+            raise AssertionError(
+                (p, n, two_coordinate_equal_line_l1_bound, certificate)
+            )
+        if int(two_coordinate_projective_split["coordinate_diagonal"]) != int(
+            certificate["two_coordinate_coordinate_diagonal_l1_bound"]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(
+            two_coordinate_projective_split["coordinate_diagonal_non_equal"]
+        ) != int(
+            certificate[
+                "two_coordinate_coordinate_diagonal_non_equal_l1_bound"
+            ]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(
+            two_coordinate_projective_split[
+                "coordinate_diagonal_alpha_square_trivial_count"
+            ]
+        ) != int(
+            certificate[
+                "two_coordinate_coordinate_diagonal_alpha_square_trivial_count"
+            ]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(
+            two_coordinate_projective_split[
+                "coordinate_diagonal_2f1_cancellation_count"
+            ]
+        ) != int(
+            certificate[
+                "two_coordinate_coordinate_diagonal_2f1_cancellation_count"
+            ]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(two_coordinate_projective_split["projective_equal_pair"]) != int(
+            certificate["two_coordinate_projective_equal_pair_l1_bound"]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(
+            two_coordinate_projective_split[
+                "projective_equal_pair_non_coordinate"
+            ]
+        ) != int(
+            certificate[
+                "two_coordinate_projective_equal_pair_non_coordinate_l1_bound"
+            ]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(two_coordinate_projective_split["projective_asymmetric"]) != int(
+            certificate["two_coordinate_projective_asymmetric_l1_bound"]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(
+            two_coordinate_projective_split[
+                "projective_asymmetric_orbit_count"
+            ]
+        ) != int(
+            certificate["two_coordinate_projective_asymmetric_orbit_count"]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(
+            two_coordinate_projective_split[
+                "projective_asymmetric_line_conic_resonant"
+            ]
+        ) != int(
+            certificate[
+                "two_coordinate_projective_asymmetric_line_conic_"
+                "resonant_l1_bound"
+            ]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(
+            two_coordinate_projective_split[
+                "projective_asymmetric_line_conic_nonresonant"
+            ]
+        ) != int(
+            certificate[
+                "two_coordinate_projective_asymmetric_line_conic_"
+                "nonresonant_l1_bound"
+            ]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(
+            two_coordinate_projective_split[
+                "projective_asymmetric_line_conic_resonant_orbit_count"
+            ]
+        ) != int(
+            certificate[
+                "two_coordinate_projective_asymmetric_line_conic_"
+                "resonant_orbit_count"
+            ]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(
+            two_coordinate_projective_split[
+                "projective_asymmetric_line_conic_nonresonant_orbit_count"
+            ]
+        ) != int(
+            certificate[
+                "two_coordinate_projective_asymmetric_line_conic_"
+                "nonresonant_orbit_count"
+            ]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if int(certificate["two_coordinate_projective_asymmetric_l1_bound"]) % 6:
+            raise AssertionError((p, n, certificate))
+        if two_coordinate_projective_asymmetric_nonresonant_l1_bound != int(
+            certificate[
+                "two_coordinate_projective_asymmetric_nonresonant_l1_bound"
+            ]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if two_coordinate_projective_asymmetric_line_conic_resonant_l1_bound != int(
+            certificate[
+                "two_coordinate_projective_asymmetric_line_conic_"
+                "resonant_l1_bound"
+            ]
+        ):
+            raise AssertionError((p, n, two_coordinate_projective_split, certificate))
+        if three_coordinate_kummer_l1_bound != int(
+            certificate["three_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, three_coordinate_kummer_l1_bound))
         if kummer_l1_bound != int(certificate["kummer_l1_bound"]):
             raise AssertionError((p, n, kummer_l1_bound, certificate))
         if int(certificate["conic_error_constant"]) != 1:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["quadratic_one_coordinate_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["one_coordinate_kummer_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if (
+            int(certificate["two_coordinate_infinity_unramified_error_constant"])
+            != 2
+        ):
+            raise AssertionError((p, n, certificate))
+        if (
+            int(certificate["two_coordinate_infinity_unramified_sqrt_constant"])
+            != 5
+        ):
+            raise AssertionError((p, n, certificate))
+        if (
+            int(certificate["two_coordinate_projective_reciprocal_error_constant"])
+            != 4
+        ):
+            raise AssertionError((p, n, certificate))
+        if (
+            int(certificate["two_coordinate_projective_reciprocal_sqrt_constant"])
+            != 3
+        ):
+            raise AssertionError((p, n, certificate))
+        if int(certificate["two_coordinate_equal_line_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["two_coordinate_equal_line_sqrt_constant"]) != 3:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["two_coordinate_coordinate_diagonal_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["two_coordinate_coordinate_diagonal_sqrt_constant"]) != 3:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["two_coordinate_projective_equal_pair_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["two_coordinate_projective_equal_pair_sqrt_constant"]) != 3:
+            raise AssertionError((p, n, certificate))
+        if (
+            int(
+                certificate[
+                    "two_coordinate_projective_asymmetric_nonresonant_"
+                    "error_constant"
+                ]
+            )
+            != 4
+        ):
+            raise AssertionError((p, n, certificate))
+        if (
+            int(
+                certificate[
+                    "two_coordinate_projective_asymmetric_nonresonant_"
+                    "sqrt_constant"
+                ]
+            )
+            != 3
+        ):
+            raise AssertionError((p, n, certificate))
+        if (
+            int(
+                certificate[
+                    "two_coordinate_projective_asymmetric_line_conic_"
+                    "resonant_error_constant"
+                ]
+            )
+            != 4
+        ):
+            raise AssertionError((p, n, certificate))
+        if (
+            int(
+                certificate[
+                    "two_coordinate_projective_asymmetric_line_conic_"
+                    "resonant_sqrt_constant"
+                ]
+            )
+            != 3
+        ):
+            raise AssertionError((p, n, certificate))
+        if int(certificate["two_coordinate_kummer_error_constant"]) != 9:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["three_coordinate_kummer_error_constant"]) != int(
+            certificate["nonprincipal_constant"]
+        ):
             raise AssertionError((p, n, certificate))
         if weighted_error_l1_bound != int(
             certificate["weighted_error_l1_bound"]
         ):
             raise AssertionError((p, n, weighted_error_l1_bound, certificate))
+        equal_line_leading_l1_drop = 5 * two_coordinate_equal_line_l1_bound
+        equal_line_conditional_weighted_error_l1_bound = (
+            weighted_error_l1_bound - equal_line_leading_l1_drop
+        )
+        coordinate_diagonal_leading_l1_drop = (
+            5 * two_coordinate_coordinate_diagonal_l1_bound
+        )
+        coordinate_diagonal_conditional_weighted_error_l1_bound = (
+            weighted_error_l1_bound - coordinate_diagonal_leading_l1_drop
+        )
+        projective_equal_pair_leading_l1_drop = (
+            5 * two_coordinate_projective_equal_pair_l1_bound
+        )
+        projective_equal_pair_conditional_weighted_error_l1_bound = (
+            weighted_error_l1_bound - projective_equal_pair_leading_l1_drop
+        )
+        projective_asymmetric_nonresonant_leading_l1_drop = (
+            5 * two_coordinate_projective_asymmetric_nonresonant_l1_bound
+        )
+        projective_equal_pair_nonresonant_weighted_error_l1_bound = (
+            weighted_error_l1_bound
+            - projective_equal_pair_leading_l1_drop
+            - projective_asymmetric_nonresonant_leading_l1_drop
+        )
+        projective_asymmetric_line_conic_resonant_leading_l1_drop = (
+            5 * two_coordinate_projective_asymmetric_line_conic_resonant_l1_bound
+        )
+        projective_equal_pair_all_asymmetric_weighted_error_l1_bound = (
+            weighted_error_l1_bound
+            - projective_equal_pair_leading_l1_drop
+            - projective_asymmetric_nonresonant_leading_l1_drop
+            - projective_asymmetric_line_conic_resonant_leading_l1_drop
+        )
+        if equal_line_leading_l1_drop != int(
+            certificate["two_coordinate_equal_line_leading_l1_drop"]
+        ):
+            raise AssertionError(
+                (p, n, equal_line_leading_l1_drop, certificate)
+            )
+        if equal_line_conditional_weighted_error_l1_bound != int(
+            certificate["equal_line_conditional_weighted_error_l1_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    equal_line_conditional_weighted_error_l1_bound,
+                    certificate,
+                )
+            )
+        if coordinate_diagonal_leading_l1_drop != int(
+            certificate["two_coordinate_coordinate_diagonal_leading_l1_drop"]
+        ):
+            raise AssertionError(
+                (p, n, coordinate_diagonal_leading_l1_drop, certificate)
+            )
+        if coordinate_diagonal_conditional_weighted_error_l1_bound != int(
+            certificate["coordinate_diagonal_conditional_weighted_error_l1_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    coordinate_diagonal_conditional_weighted_error_l1_bound,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_leading_l1_drop != int(
+            certificate["two_coordinate_projective_equal_pair_leading_l1_drop"]
+        ):
+            raise AssertionError(
+                (p, n, projective_equal_pair_leading_l1_drop, certificate)
+            )
+        if projective_equal_pair_conditional_weighted_error_l1_bound != int(
+            certificate["projective_equal_pair_conditional_weighted_error_l1_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_conditional_weighted_error_l1_bound,
+                    certificate,
+                )
+            )
+        if projective_asymmetric_nonresonant_leading_l1_drop != int(
+            certificate[
+                "two_coordinate_projective_asymmetric_nonresonant_"
+                "leading_l1_drop"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_asymmetric_nonresonant_leading_l1_drop,
+                    certificate,
+                )
+            )
+        if projective_asymmetric_line_conic_resonant_leading_l1_drop != int(
+            certificate[
+                "two_coordinate_projective_asymmetric_line_conic_"
+                "resonant_leading_l1_drop"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_asymmetric_line_conic_resonant_leading_l1_drop,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_nonresonant_weighted_error_l1_bound != int(
+            certificate[
+                "projective_equal_pair_nonresonant_conditional_"
+                "weighted_error_l1_bound"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_nonresonant_weighted_error_l1_bound,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_all_asymmetric_weighted_error_l1_bound != int(
+            certificate[
+                "projective_equal_pair_all_asymmetric_conditional_"
+                "weighted_error_l1_bound"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_all_asymmetric_weighted_error_l1_bound,
+                    certificate,
+                )
+            )
+        elementary_open_sqrt_error_bound = (
+            6 * ceil_sqrt(p) * (jacobi_l1_bound + conic_l1_bound)
+        )
+        infinity_unramified_sqrt_error_bound = (
+            5
+            * ceil_sqrt(p)
+            * two_coordinate_infinity_unramified_l1_bound
+        )
+        projective_reciprocal_sqrt_error_bound = (
+            3
+            * ceil_sqrt(p)
+            * two_coordinate_projective_reciprocal_l1_bound
+        )
+        if elementary_open_sqrt_error_bound != int(
+            certificate["elementary_open_sqrt_error_bound"]
+        ):
+            raise AssertionError(
+                (p, n, elementary_open_sqrt_error_bound, certificate)
+            )
+        if infinity_unramified_sqrt_error_bound != (
+            ceil_sqrt(p)
+            * int(
+                certificate[
+                    "two_coordinate_infinity_unramified_sqrt_l1_bound"
+                ]
+            )
+        ):
+            raise AssertionError(
+                (p, n, infinity_unramified_sqrt_error_bound, certificate)
+            )
+        if projective_reciprocal_sqrt_error_bound != (
+            ceil_sqrt(p)
+            * int(
+                certificate[
+                    "two_coordinate_projective_reciprocal_sqrt_l1_bound"
+                ]
+            )
+        ):
+            raise AssertionError(
+                (p, n, projective_reciprocal_sqrt_error_bound, certificate)
+            )
+        sqrt_error_bound = (
+            elementary_open_sqrt_error_bound
+            + infinity_unramified_sqrt_error_bound
+            + projective_reciprocal_sqrt_error_bound
+        )
+        equal_line_sqrt_error_bound = (
+            3 * ceil_sqrt(p) * two_coordinate_equal_line_l1_bound
+        )
+        equal_line_conditional_sqrt_error_bound = (
+            sqrt_error_bound + equal_line_sqrt_error_bound
+        )
+        coordinate_diagonal_sqrt_error_bound = (
+            3 * ceil_sqrt(p) * two_coordinate_coordinate_diagonal_l1_bound
+        )
+        coordinate_diagonal_conditional_sqrt_error_bound = (
+            sqrt_error_bound + coordinate_diagonal_sqrt_error_bound
+        )
+        projective_equal_pair_sqrt_error_bound = (
+            3 * ceil_sqrt(p) * two_coordinate_projective_equal_pair_l1_bound
+        )
+        projective_equal_pair_conditional_sqrt_error_bound = (
+            sqrt_error_bound + projective_equal_pair_sqrt_error_bound
+        )
+        projective_asymmetric_nonresonant_sqrt_error_bound = (
+            3
+            * ceil_sqrt(p)
+            * two_coordinate_projective_asymmetric_nonresonant_l1_bound
+        )
+        projective_equal_pair_nonresonant_conditional_sqrt_error_bound = (
+            sqrt_error_bound
+            + projective_equal_pair_sqrt_error_bound
+            + projective_asymmetric_nonresonant_sqrt_error_bound
+        )
+        projective_asymmetric_line_conic_resonant_sqrt_error_bound = (
+            3
+            * ceil_sqrt(p)
+            * two_coordinate_projective_asymmetric_line_conic_resonant_l1_bound
+        )
+        projective_equal_pair_all_asymmetric_conditional_sqrt_error_bound = (
+            projective_equal_pair_nonresonant_conditional_sqrt_error_bound
+            + projective_asymmetric_line_conic_resonant_sqrt_error_bound
+        )
+        if sqrt_error_bound != int(certificate["sqrt_error_bound"]):
+            raise AssertionError((p, n, sqrt_error_bound, certificate))
+        if equal_line_sqrt_error_bound != (
+            ceil_sqrt(p)
+            * int(certificate["two_coordinate_equal_line_sqrt_l1_bound"])
+        ):
+            raise AssertionError((p, n, equal_line_sqrt_error_bound, certificate))
+        if coordinate_diagonal_sqrt_error_bound != (
+            ceil_sqrt(p)
+            * int(
+                certificate[
+                    "two_coordinate_coordinate_diagonal_sqrt_l1_bound"
+                ]
+            )
+        ):
+            raise AssertionError(
+                (p, n, coordinate_diagonal_sqrt_error_bound, certificate)
+            )
+        if projective_equal_pair_sqrt_error_bound != (
+            ceil_sqrt(p)
+            * int(
+                certificate[
+                    "two_coordinate_projective_equal_pair_sqrt_l1_bound"
+                ]
+            )
+        ):
+            raise AssertionError(
+                (p, n, projective_equal_pair_sqrt_error_bound, certificate)
+            )
+        if projective_asymmetric_nonresonant_sqrt_error_bound != (
+            ceil_sqrt(p)
+            * int(
+                certificate[
+                    "two_coordinate_projective_asymmetric_nonresonant_"
+                    "sqrt_l1_bound"
+                ]
+            )
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_asymmetric_nonresonant_sqrt_error_bound,
+                    certificate,
+                )
+            )
+        if projective_asymmetric_line_conic_resonant_sqrt_error_bound != (
+            ceil_sqrt(p)
+            * int(
+                certificate[
+                    "two_coordinate_projective_asymmetric_line_conic_"
+                    "resonant_sqrt_l1_bound"
+                ]
+            )
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_asymmetric_line_conic_resonant_sqrt_error_bound,
+                    certificate,
+                )
+            )
+        if equal_line_conditional_sqrt_error_bound != int(
+            certificate["equal_line_conditional_sqrt_error_bound"]
+        ):
+            raise AssertionError(
+                (p, n, equal_line_conditional_sqrt_error_bound, certificate)
+            )
+        if coordinate_diagonal_conditional_sqrt_error_bound != int(
+            certificate["coordinate_diagonal_conditional_sqrt_error_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    coordinate_diagonal_conditional_sqrt_error_bound,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_conditional_sqrt_error_bound != int(
+            certificate["projective_equal_pair_conditional_sqrt_error_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_conditional_sqrt_error_bound,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_nonresonant_conditional_sqrt_error_bound != int(
+            certificate[
+                "projective_equal_pair_nonresonant_conditional_"
+                "sqrt_error_bound"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_nonresonant_conditional_sqrt_error_bound,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_all_asymmetric_conditional_sqrt_error_bound != int(
+            certificate[
+                "projective_equal_pair_all_asymmetric_conditional_"
+                "sqrt_error_bound"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_all_asymmetric_conditional_sqrt_error_bound,
+                    certificate,
+                )
+            )
+        weighted_error_total_bound = (
+            p * weighted_error_l1_bound + sqrt_error_bound
+        )
+        equal_line_conditional_weighted_error_total_bound = (
+            p * equal_line_conditional_weighted_error_l1_bound
+            + equal_line_conditional_sqrt_error_bound
+        )
+        coordinate_diagonal_conditional_weighted_error_total_bound = (
+            p * coordinate_diagonal_conditional_weighted_error_l1_bound
+            + coordinate_diagonal_conditional_sqrt_error_bound
+        )
+        projective_equal_pair_conditional_weighted_error_total_bound = (
+            p * projective_equal_pair_conditional_weighted_error_l1_bound
+            + projective_equal_pair_conditional_sqrt_error_bound
+        )
+        projective_equal_pair_nonresonant_weighted_error_total_bound = (
+            p * projective_equal_pair_nonresonant_weighted_error_l1_bound
+            + projective_equal_pair_nonresonant_conditional_sqrt_error_bound
+        )
+        projective_equal_pair_all_asymmetric_weighted_error_total_bound = (
+            p * projective_equal_pair_all_asymmetric_weighted_error_l1_bound
+            + projective_equal_pair_all_asymmetric_conditional_sqrt_error_bound
+        )
+        if weighted_error_total_bound != int(
+            certificate["weighted_error_total_bound"]
+        ):
+            raise AssertionError(
+                (p, n, weighted_error_total_bound, certificate)
+            )
+        if equal_line_conditional_weighted_error_total_bound != int(
+            certificate["equal_line_conditional_weighted_error_total_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    equal_line_conditional_weighted_error_total_bound,
+                    certificate,
+                )
+            )
+        if coordinate_diagonal_conditional_weighted_error_total_bound != int(
+            certificate[
+                "coordinate_diagonal_conditional_weighted_error_total_bound"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    coordinate_diagonal_conditional_weighted_error_total_bound,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_conditional_weighted_error_total_bound != int(
+            certificate[
+                "projective_equal_pair_conditional_weighted_error_total_bound"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_conditional_weighted_error_total_bound,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_nonresonant_weighted_error_total_bound != int(
+            certificate[
+                "projective_equal_pair_nonresonant_conditional_"
+                "weighted_error_total_bound"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_nonresonant_weighted_error_total_bound,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_all_asymmetric_weighted_error_total_bound != int(
+            certificate[
+                "projective_equal_pair_all_asymmetric_conditional_"
+                "weighted_error_total_bound"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_all_asymmetric_weighted_error_total_bound,
+                    certificate,
+                )
+            )
         lower_numerator = principal_count - (
             p * weighted_error_l1_bound
+            + sqrt_error_bound
+            + degeneracy_count * int(certificate["denominator"])
+        )
+        equal_line_conditional_lower_numerator = principal_count - (
+            p * equal_line_conditional_weighted_error_l1_bound
+            + equal_line_conditional_sqrt_error_bound
+            + degeneracy_count * int(certificate["denominator"])
+        )
+        coordinate_diagonal_conditional_lower_numerator = principal_count - (
+            p * coordinate_diagonal_conditional_weighted_error_l1_bound
+            + coordinate_diagonal_conditional_sqrt_error_bound
+            + degeneracy_count * int(certificate["denominator"])
+        )
+        projective_equal_pair_conditional_lower_numerator = principal_count - (
+            p * projective_equal_pair_conditional_weighted_error_l1_bound
+            + projective_equal_pair_conditional_sqrt_error_bound
+            + degeneracy_count * int(certificate["denominator"])
+        )
+        projective_equal_pair_nonresonant_lower_numerator = principal_count - (
+            p * projective_equal_pair_nonresonant_weighted_error_l1_bound
+            + projective_equal_pair_nonresonant_conditional_sqrt_error_bound
+            + degeneracy_count * int(certificate["denominator"])
+        )
+        projective_equal_pair_all_asymmetric_lower_numerator = principal_count - (
+            p * projective_equal_pair_all_asymmetric_weighted_error_l1_bound
+            + projective_equal_pair_all_asymmetric_conditional_sqrt_error_bound
             + degeneracy_count * int(certificate["denominator"])
         )
         if lower_numerator != int(certificate["lower_numerator"]):
             raise AssertionError((p, n, lower_numerator, certificate))
+        if equal_line_conditional_lower_numerator != int(
+            certificate["equal_line_conditional_lower_numerator"]
+        ):
+            raise AssertionError(
+                (p, n, equal_line_conditional_lower_numerator, certificate)
+            )
+        if coordinate_diagonal_conditional_lower_numerator != int(
+            certificate["coordinate_diagonal_conditional_lower_numerator"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    coordinate_diagonal_conditional_lower_numerator,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_conditional_lower_numerator != int(
+            certificate["projective_equal_pair_conditional_lower_numerator"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_conditional_lower_numerator,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_nonresonant_lower_numerator != int(
+            certificate[
+                "projective_equal_pair_nonresonant_conditional_"
+                "lower_numerator"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_nonresonant_lower_numerator,
+                    certificate,
+                )
+            )
+        if projective_equal_pair_all_asymmetric_lower_numerator != int(
+            certificate[
+                "projective_equal_pair_all_asymmetric_conditional_"
+                "lower_numerator"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_all_asymmetric_lower_numerator,
+                    certificate,
+                )
+            )
         expected_threshold = kummer_quadratic_uniform_prime_threshold(
             1,
             (
@@ -450,15 +1754,224 @@ def main() -> None:
                 + int(certificate["degeneracy_line_count"])
                 * int(certificate["denominator"])
             ),
+            sqrt_error_weight=int(certificate["sqrt_error_weight"]),
         )
         if expected_threshold != int(certificate["uniform_prime_threshold"]):
             raise AssertionError((p, n, expected_threshold, certificate))
+        equal_line_conditional_expected_threshold = (
+            kummer_quadratic_uniform_prime_threshold(
+                1,
+                (
+                    equal_line_conditional_weighted_error_l1_bound
+                    + int(certificate["degeneracy_line_count"])
+                    * int(certificate["denominator"])
+                ),
+                sqrt_error_weight=int(
+                    certificate["equal_line_conditional_sqrt_error_weight"]
+                ),
+            )
+        )
+        if equal_line_conditional_expected_threshold != int(
+            certificate["equal_line_conditional_uniform_prime_threshold"]
+        ):
+            raise AssertionError(
+                (p, n, equal_line_conditional_expected_threshold, certificate)
+            )
+        coordinate_diagonal_conditional_expected_threshold = (
+            kummer_quadratic_uniform_prime_threshold(
+                1,
+                (
+                    coordinate_diagonal_conditional_weighted_error_l1_bound
+                    + int(certificate["degeneracy_line_count"])
+                    * int(certificate["denominator"])
+                ),
+                sqrt_error_weight=int(
+                    certificate[
+                        "coordinate_diagonal_conditional_sqrt_error_weight"
+                    ]
+                ),
+            )
+        )
+        if coordinate_diagonal_conditional_expected_threshold != int(
+            certificate[
+                "coordinate_diagonal_conditional_uniform_prime_threshold"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    coordinate_diagonal_conditional_expected_threshold,
+                    certificate,
+                )
+            )
+        projective_equal_pair_conditional_expected_threshold = (
+            kummer_quadratic_uniform_prime_threshold(
+                1,
+                (
+                    projective_equal_pair_conditional_weighted_error_l1_bound
+                    + int(certificate["degeneracy_line_count"])
+                    * int(certificate["denominator"])
+                ),
+                sqrt_error_weight=int(
+                    certificate[
+                        "projective_equal_pair_conditional_sqrt_error_weight"
+                    ]
+                ),
+            )
+        )
+        if projective_equal_pair_conditional_expected_threshold != int(
+            certificate[
+                "projective_equal_pair_conditional_uniform_prime_threshold"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_conditional_expected_threshold,
+                    certificate,
+                )
+            )
+        projective_equal_pair_nonresonant_expected_threshold = (
+            kummer_quadratic_uniform_prime_threshold(
+                1,
+                (
+                    projective_equal_pair_nonresonant_weighted_error_l1_bound
+                    + int(certificate["degeneracy_line_count"])
+                    * int(certificate["denominator"])
+                ),
+                sqrt_error_weight=int(
+                    certificate[
+                        "projective_equal_pair_nonresonant_conditional_"
+                        "sqrt_error_weight"
+                    ]
+                ),
+            )
+        )
+        if projective_equal_pair_nonresonant_expected_threshold != int(
+            certificate[
+                "projective_equal_pair_nonresonant_conditional_"
+                "uniform_prime_threshold"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_nonresonant_expected_threshold,
+                    certificate,
+                )
+            )
+        projective_equal_pair_all_asymmetric_expected_threshold = (
+            kummer_quadratic_uniform_prime_threshold(
+                1,
+                (
+                    projective_equal_pair_all_asymmetric_weighted_error_l1_bound
+                    + int(certificate["degeneracy_line_count"])
+                    * int(certificate["denominator"])
+                ),
+                sqrt_error_weight=int(
+                    certificate[
+                        "projective_equal_pair_all_asymmetric_conditional_"
+                        "sqrt_error_weight"
+                    ]
+                ),
+            )
+        )
+        if projective_equal_pair_all_asymmetric_expected_threshold != int(
+            certificate[
+                "projective_equal_pair_all_asymmetric_conditional_"
+                "uniform_prime_threshold"
+            ]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    projective_equal_pair_all_asymmetric_expected_threshold,
+                    certificate,
+                )
+            )
         nonzero_coset_count, total_coset_count = square_coset_counts(p, domain)
         saturates = nonzero_coset_count == total_coset_count
         certificate_positive = bool(certificate["saturation_certificate"])
+        equal_line_conditional_certificate_positive = bool(
+            certificate["equal_line_conditional_saturation_certificate"]
+        )
+        coordinate_diagonal_conditional_certificate_positive = bool(
+            certificate["coordinate_diagonal_conditional_saturation_certificate"]
+        )
+        projective_equal_pair_conditional_certificate_positive = bool(
+            certificate["projective_equal_pair_conditional_saturation_certificate"]
+        )
+        projective_equal_pair_nonresonant_certificate_positive = bool(
+            certificate[
+                "projective_equal_pair_nonresonant_conditional_"
+                "saturation_certificate"
+            ]
+        )
+        projective_equal_pair_all_asymmetric_certificate_positive = bool(
+            certificate[
+                "projective_equal_pair_all_asymmetric_conditional_"
+                "saturation_certificate"
+            ]
+        )
         if certificate_positive != expected_certificate:
             raise AssertionError((p, n, certificate))
         if bool(certificate["uniform_threshold_applies"]) != certificate_positive:
+            raise AssertionError((p, n, certificate))
+        if bool(
+            certificate["equal_line_conditional_uniform_threshold_applies"]
+        ) != equal_line_conditional_certificate_positive:
+            raise AssertionError((p, n, certificate))
+        if bool(
+            certificate[
+                "coordinate_diagonal_conditional_uniform_threshold_applies"
+            ]
+        ) != coordinate_diagonal_conditional_certificate_positive:
+            raise AssertionError((p, n, certificate))
+        if bool(
+            certificate[
+                "projective_equal_pair_conditional_uniform_threshold_applies"
+            ]
+        ) != projective_equal_pair_conditional_certificate_positive:
+            raise AssertionError((p, n, certificate))
+        if bool(
+            certificate[
+                "projective_equal_pair_nonresonant_conditional_"
+                "uniform_threshold_applies"
+            ]
+        ) != projective_equal_pair_nonresonant_certificate_positive:
+            raise AssertionError((p, n, certificate))
+        if bool(
+            certificate[
+                "projective_equal_pair_all_asymmetric_conditional_"
+                "uniform_threshold_applies"
+            ]
+        ) != projective_equal_pair_all_asymmetric_certificate_positive:
+            raise AssertionError((p, n, certificate))
+        if certificate_positive and not equal_line_conditional_certificate_positive:
+            raise AssertionError((p, n, certificate))
+        if (
+            equal_line_conditional_certificate_positive
+            and not coordinate_diagonal_conditional_certificate_positive
+        ):
+            raise AssertionError((p, n, certificate))
+        if (
+            coordinate_diagonal_conditional_certificate_positive
+            and not projective_equal_pair_conditional_certificate_positive
+        ):
+            raise AssertionError((p, n, certificate))
+        if (
+            projective_equal_pair_conditional_certificate_positive
+            and not projective_equal_pair_nonresonant_certificate_positive
+        ):
+            raise AssertionError((p, n, certificate))
+        if (
+            projective_equal_pair_nonresonant_certificate_positive
+            and not projective_equal_pair_all_asymmetric_certificate_positive
+        ):
             raise AssertionError((p, n, certificate))
         if certificate_positive and not saturates:
             raise AssertionError((p, n, nonzero_coset_count, total_coset_count))
@@ -475,6 +1988,98 @@ def main() -> None:
                 degeneracy_count,
                 nonzero_coset_count,
                 total_coset_count,
+            )
+        )
+    equal_line_checked = []
+    for character_order, square_coset_index in EQUAL_LINE_SPLIT_CASES:
+        direct_split = raw_two_coordinate_projective_l1_split(
+            character_order,
+            square_coset_index,
+        )
+        formula_split = raw_two_coordinate_projective_l1_split_formula(
+            character_order,
+            square_coset_index,
+        )
+        if direct_split != formula_split:
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        equal_line_l1 = int(direct_split["equal_line_diagonal"])
+        coordinate_diagonal_l1 = int(direct_split["coordinate_diagonal"])
+        coordinate_diagonal_non_equal_l1 = int(
+            direct_split["coordinate_diagonal_non_equal"]
+        )
+        projective_equal_pair_l1 = int(direct_split["projective_equal_pair"])
+        projective_equal_pair_non_coordinate_l1 = int(
+            direct_split["projective_equal_pair_non_coordinate"]
+        )
+        projective_asymmetric_l1 = int(direct_split["projective_asymmetric"])
+        projective_asymmetric_orbit_count = int(
+            direct_split["projective_asymmetric_orbit_count"]
+        )
+        line_conic_resonant_l1 = int(
+            direct_split["projective_asymmetric_line_conic_resonant"]
+        )
+        line_conic_nonresonant_l1 = int(
+            direct_split["projective_asymmetric_line_conic_nonresonant"]
+        )
+        line_conic_resonant_orbit_count = int(
+            direct_split[
+                "projective_asymmetric_line_conic_resonant_orbit_count"
+            ]
+        )
+        line_conic_nonresonant_orbit_count = int(
+            direct_split[
+                "projective_asymmetric_line_conic_nonresonant_orbit_count"
+            ]
+        )
+        ramified_l1 = int(direct_split["ramified_nonreciprocal"])
+        if equal_line_l1 > ramified_l1:
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        if not equal_line_l1 <= coordinate_diagonal_l1 <= ramified_l1:
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        if coordinate_diagonal_non_equal_l1 != (
+            coordinate_diagonal_l1 - equal_line_l1
+        ):
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        if not coordinate_diagonal_l1 <= projective_equal_pair_l1 <= ramified_l1:
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        if projective_equal_pair_non_coordinate_l1 != (
+            projective_equal_pair_l1 - coordinate_diagonal_l1
+        ):
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        if projective_asymmetric_l1 != ramified_l1 - projective_equal_pair_l1:
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        if projective_asymmetric_l1 != 6 * projective_asymmetric_orbit_count:
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        if projective_asymmetric_l1 != (
+            line_conic_resonant_l1 + line_conic_nonresonant_l1
+        ):
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        if line_conic_resonant_l1 != 6 * line_conic_resonant_orbit_count:
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        if line_conic_nonresonant_l1 != 6 * line_conic_nonresonant_orbit_count:
+            raise AssertionError((character_order, square_coset_index, direct_split))
+        equal_line_checked.append(
+            (
+                character_order,
+                square_coset_index,
+                coordinate_diagonal_l1,
+                coordinate_diagonal_non_equal_l1,
+                projective_equal_pair_l1,
+                projective_equal_pair_non_coordinate_l1,
+                projective_asymmetric_l1,
+                projective_asymmetric_orbit_count,
+                line_conic_resonant_l1,
+                line_conic_nonresonant_l1,
+                line_conic_resonant_orbit_count,
+                line_conic_nonresonant_orbit_count,
+                equal_line_l1,
+                ramified_l1,
+                5 * equal_line_l1,
+                3 * equal_line_l1,
+                5 * coordinate_diagonal_l1,
+                3 * coordinate_diagonal_l1,
+                5 * projective_equal_pair_l1,
+                3 * projective_equal_pair_l1,
             )
         )
     lift_checked = []
@@ -640,29 +2245,79 @@ def main() -> None:
             raise AssertionError((p, n, deligne_constant, certificate))
         principal_count = principal_open_count(p)
         degeneracy_count = degeneracy_line_union_count(p)
-        coefficient_l1_bound = int(certificate["coefficient_abs_bound"]) * (
-            int(certificate["denominator"]) - 1
+        square_coset_index = int(certificate["square_coset_index"])
+        window_size = 2
+        active_character_l1_bound = fixed_window_parseval_active_l1_bound(
+            quotient_order,
+            window_size,
+            int(certificate["ambient_restriction_kernel_count"]),
+        )
+        if active_character_l1_bound != int(
+            certificate["window_one_dimensional_l1_bound"]
+        ):
+            raise AssertionError((p, n, active_character_l1_bound, certificate))
+        coordinate_nonprincipal_l1_bound = (
+            (window_size + active_character_l1_bound) ** 3
+            - int(certificate["principal_weight"])
+        )
+        coefficient_l1_bound = (
+            square_coset_index
+            * (
+                int(certificate["principal_weight"])
+                + coordinate_nonprincipal_l1_bound
+            )
+            - int(certificate["principal_weight"])
         )
         if coefficient_l1_bound != int(certificate["coefficient_l1_bound"]):
             raise AssertionError((p, n, coefficient_l1_bound, certificate))
-        character_triple_count = (
-            int(certificate["kernel_character_order"]) ** 3
-        )
-        square_coset_index = int(certificate["square_coset_index"])
-        jacobi_l1_bound = int(certificate["coefficient_abs_bound"]) * (
-            character_triple_count - 1
-        )
+        jacobi_l1_bound = coordinate_nonprincipal_l1_bound
         conic_l1_bound = int(certificate["principal_weight"]) * (
             square_coset_index - 1
         )
-        kummer_l1_bound = jacobi_l1_bound * (square_coset_index - 1)
+        quadratic_conic_character_count = (
+            1 if square_coset_index > 1 and square_coset_index % 2 == 0 else 0
+        )
+        coordinate_one_l1_bound = (
+            3 * window_size * window_size * active_character_l1_bound
+        )
+        coordinate_two_l1_bound = (
+            3 * window_size * active_character_l1_bound ** 2
+        )
+        coordinate_three_l1_bound = active_character_l1_bound ** 3
+        quadratic_one_coordinate_l1_bound = (
+            coordinate_one_l1_bound * quadratic_conic_character_count
+        )
+        one_coordinate_kummer_l1_bound = coordinate_one_l1_bound * (
+            square_coset_index - 1 - quadratic_conic_character_count
+        )
+        two_coordinate_kummer_l1_bound = (
+            coordinate_two_l1_bound * (square_coset_index - 1)
+        )
+        three_coordinate_kummer_l1_bound = (
+            coordinate_three_l1_bound * (square_coset_index - 1)
+        )
+        kummer_l1_bound = (
+            one_coordinate_kummer_l1_bound
+            + two_coordinate_kummer_l1_bound
+            + three_coordinate_kummer_l1_bound
+        )
         weighted_error_l1_bound = (
             jacobi_l1_bound
             + conic_l1_bound
-            + int(certificate["nonprincipal_constant"]) * kummer_l1_bound
+            + int(certificate["quadratic_one_coordinate_error_constant"])
+            * quadratic_one_coordinate_l1_bound
+            + int(certificate["one_coordinate_kummer_error_constant"])
+            * one_coordinate_kummer_l1_bound
+            + int(certificate["two_coordinate_kummer_error_constant"])
+            * two_coordinate_kummer_l1_bound
+            + int(certificate["three_coordinate_kummer_error_constant"])
+            * three_coordinate_kummer_l1_bound
         )
         if (
-            jacobi_l1_bound + conic_l1_bound + kummer_l1_bound
+            jacobi_l1_bound
+            + conic_l1_bound
+            + quadratic_one_coordinate_l1_bound
+            + kummer_l1_bound
             != coefficient_l1_bound
         ):
             raise AssertionError((p, n, coefficient_l1_bound, certificate))
@@ -670,17 +2325,64 @@ def main() -> None:
             raise AssertionError((p, n, jacobi_l1_bound, certificate))
         if conic_l1_bound != int(certificate["conic_l1_bound"]):
             raise AssertionError((p, n, conic_l1_bound, certificate))
+        if quadratic_one_coordinate_l1_bound != int(
+            certificate["quadratic_one_coordinate_l1_bound"]
+        ):
+            raise AssertionError(
+                (p, n, quadratic_one_coordinate_l1_bound, certificate)
+            )
+        if one_coordinate_kummer_l1_bound != int(
+            certificate["one_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, one_coordinate_kummer_l1_bound))
+        if two_coordinate_kummer_l1_bound != int(
+            certificate["two_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, two_coordinate_kummer_l1_bound))
+        if three_coordinate_kummer_l1_bound != int(
+            certificate["three_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, three_coordinate_kummer_l1_bound))
         if kummer_l1_bound != int(certificate["kummer_l1_bound"]):
             raise AssertionError((p, n, kummer_l1_bound, certificate))
         if int(certificate["conic_error_constant"]) != 1:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["quadratic_one_coordinate_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["one_coordinate_kummer_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["two_coordinate_kummer_error_constant"]) != 9:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["three_coordinate_kummer_error_constant"]) != int(
+            certificate["nonprincipal_constant"]
+        ):
             raise AssertionError((p, n, certificate))
         if weighted_error_l1_bound != int(
             certificate["weighted_error_l1_bound"]
         ):
             raise AssertionError((p, n, weighted_error_l1_bound, certificate))
+        elementary_open_sqrt_error_bound = (
+            6 * ceil_sqrt(p) * (jacobi_l1_bound + conic_l1_bound)
+        )
+        if elementary_open_sqrt_error_bound != int(
+            certificate["elementary_open_sqrt_error_bound"]
+        ):
+            raise AssertionError(
+                (p, n, elementary_open_sqrt_error_bound, certificate)
+            )
+        weighted_error_total_bound = (
+            p * weighted_error_l1_bound + elementary_open_sqrt_error_bound
+        )
+        if weighted_error_total_bound != int(
+            certificate["weighted_error_total_bound"]
+        ):
+            raise AssertionError(
+                (p, n, weighted_error_total_bound, certificate)
+            )
         lower_numerator = (
             int(certificate["principal_weight"]) * principal_count
             - p * weighted_error_l1_bound
+            - elementary_open_sqrt_error_bound
             - degeneracy_count * int(certificate["denominator"])
         )
         if lower_numerator != int(certificate["lower_numerator"]):
@@ -692,6 +2394,7 @@ def main() -> None:
                 + int(certificate["degeneracy_line_count"])
                 * int(certificate["denominator"])
             ),
+            sqrt_error_weight=6 * (jacobi_l1_bound + conic_l1_bound),
         )
         if expected_threshold != int(certificate["uniform_prime_threshold"]):
             raise AssertionError((p, n, expected_threshold, certificate))
@@ -871,29 +2574,78 @@ def main() -> None:
             raise AssertionError((p, n, radical_total, certificate))
         principal_count = principal_open_count(p)
         degeneracy_count = degeneracy_line_union_count(p)
-        coefficient_l1_bound = int(certificate["coefficient_abs_bound"]) * (
-            int(certificate["denominator"]) - 1
+        square_coset_index = int(certificate["square_coset_index"])
+        active_character_l1_bound = fixed_window_parseval_active_l1_bound(
+            quotient_order,
+            window_size,
+            int(certificate["ambient_restriction_kernel_count"]),
+        )
+        if active_character_l1_bound != int(
+            certificate["window_one_dimensional_l1_bound"]
+        ):
+            raise AssertionError((p, n, active_character_l1_bound, certificate))
+        coordinate_nonprincipal_l1_bound = (
+            (window_size + active_character_l1_bound) ** 3
+            - int(certificate["principal_weight"])
+        )
+        coefficient_l1_bound = (
+            square_coset_index
+            * (
+                int(certificate["principal_weight"])
+                + coordinate_nonprincipal_l1_bound
+            )
+            - int(certificate["principal_weight"])
         )
         if coefficient_l1_bound != int(certificate["coefficient_l1_bound"]):
             raise AssertionError((p, n, coefficient_l1_bound, certificate))
-        character_triple_count = (
-            int(certificate["kernel_character_order"]) ** 3
-        )
-        square_coset_index = int(certificate["square_coset_index"])
-        jacobi_l1_bound = int(certificate["coefficient_abs_bound"]) * (
-            character_triple_count - 1
-        )
+        jacobi_l1_bound = coordinate_nonprincipal_l1_bound
         conic_l1_bound = int(certificate["principal_weight"]) * (
             square_coset_index - 1
         )
-        kummer_l1_bound = jacobi_l1_bound * (square_coset_index - 1)
+        quadratic_conic_character_count = (
+            1 if square_coset_index > 1 and square_coset_index % 2 == 0 else 0
+        )
+        coordinate_one_l1_bound = (
+            3 * window_size * window_size * active_character_l1_bound
+        )
+        coordinate_two_l1_bound = (
+            3 * window_size * active_character_l1_bound ** 2
+        )
+        coordinate_three_l1_bound = active_character_l1_bound ** 3
+        quadratic_one_coordinate_l1_bound = (
+            coordinate_one_l1_bound * quadratic_conic_character_count
+        )
+        one_coordinate_kummer_l1_bound = coordinate_one_l1_bound * (
+            square_coset_index - 1 - quadratic_conic_character_count
+        )
+        two_coordinate_kummer_l1_bound = (
+            coordinate_two_l1_bound * (square_coset_index - 1)
+        )
+        three_coordinate_kummer_l1_bound = (
+            coordinate_three_l1_bound * (square_coset_index - 1)
+        )
+        kummer_l1_bound = (
+            one_coordinate_kummer_l1_bound
+            + two_coordinate_kummer_l1_bound
+            + three_coordinate_kummer_l1_bound
+        )
         weighted_error_l1_bound = (
             jacobi_l1_bound
             + conic_l1_bound
-            + int(certificate["nonprincipal_constant"]) * kummer_l1_bound
+            + int(certificate["quadratic_one_coordinate_error_constant"])
+            * quadratic_one_coordinate_l1_bound
+            + int(certificate["one_coordinate_kummer_error_constant"])
+            * one_coordinate_kummer_l1_bound
+            + int(certificate["two_coordinate_kummer_error_constant"])
+            * two_coordinate_kummer_l1_bound
+            + int(certificate["three_coordinate_kummer_error_constant"])
+            * three_coordinate_kummer_l1_bound
         )
         if (
-            jacobi_l1_bound + conic_l1_bound + kummer_l1_bound
+            jacobi_l1_bound
+            + conic_l1_bound
+            + quadratic_one_coordinate_l1_bound
+            + kummer_l1_bound
             != coefficient_l1_bound
         ):
             raise AssertionError((p, n, coefficient_l1_bound, certificate))
@@ -901,17 +2653,64 @@ def main() -> None:
             raise AssertionError((p, n, jacobi_l1_bound, certificate))
         if conic_l1_bound != int(certificate["conic_l1_bound"]):
             raise AssertionError((p, n, conic_l1_bound, certificate))
+        if quadratic_one_coordinate_l1_bound != int(
+            certificate["quadratic_one_coordinate_l1_bound"]
+        ):
+            raise AssertionError(
+                (p, n, quadratic_one_coordinate_l1_bound, certificate)
+            )
+        if one_coordinate_kummer_l1_bound != int(
+            certificate["one_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, one_coordinate_kummer_l1_bound))
+        if two_coordinate_kummer_l1_bound != int(
+            certificate["two_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, two_coordinate_kummer_l1_bound))
+        if three_coordinate_kummer_l1_bound != int(
+            certificate["three_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, three_coordinate_kummer_l1_bound))
         if kummer_l1_bound != int(certificate["kummer_l1_bound"]):
             raise AssertionError((p, n, kummer_l1_bound, certificate))
         if int(certificate["conic_error_constant"]) != 1:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["quadratic_one_coordinate_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["one_coordinate_kummer_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["two_coordinate_kummer_error_constant"]) != 9:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["three_coordinate_kummer_error_constant"]) != int(
+            certificate["nonprincipal_constant"]
+        ):
             raise AssertionError((p, n, certificate))
         if weighted_error_l1_bound != int(
             certificate["weighted_error_l1_bound"]
         ):
             raise AssertionError((p, n, weighted_error_l1_bound, certificate))
+        elementary_open_sqrt_error_bound = (
+            6 * ceil_sqrt(p) * (jacobi_l1_bound + conic_l1_bound)
+        )
+        if elementary_open_sqrt_error_bound != int(
+            certificate["elementary_open_sqrt_error_bound"]
+        ):
+            raise AssertionError(
+                (p, n, elementary_open_sqrt_error_bound, certificate)
+            )
+        weighted_error_total_bound = (
+            p * weighted_error_l1_bound + elementary_open_sqrt_error_bound
+        )
+        if weighted_error_total_bound != int(
+            certificate["weighted_error_total_bound"]
+        ):
+            raise AssertionError(
+                (p, n, weighted_error_total_bound, certificate)
+            )
         lower_numerator = (
             int(certificate["principal_weight"]) * principal_count
             - p * weighted_error_l1_bound
+            - elementary_open_sqrt_error_bound
             - degeneracy_count * int(certificate["denominator"])
         )
         if lower_numerator != int(certificate["lower_numerator"]):
@@ -922,6 +2721,7 @@ def main() -> None:
                 weighted_error_l1_bound
                 + 6 * int(certificate["denominator"])
             ),
+            sqrt_error_weight=6 * (jacobi_l1_bound + conic_l1_bound),
         )
         if expected_threshold != int(certificate["uniform_prime_threshold"]):
             raise AssertionError((p, n, expected_threshold, certificate))
@@ -1079,6 +2879,40 @@ def main() -> None:
             certificate["quotient_coefficient_l1_bound"]
         ):
             raise AssertionError((p, n, quotient_l1_bound, certificate))
+        quotient_one_coordinate_l1_bound = (
+            direct_ambient_window_label_one_coordinate_l1_bound(
+                int(certificate["kernel_character_order"]),
+                quotient_order,
+                remaining_fibers,
+            )
+        )
+        (
+            quotient_active_one_l1_bound,
+            quotient_active_two_l1_bound,
+            quotient_active_three_l1_bound,
+        ) = direct_ambient_window_label_coordinate_active_l1_bounds(
+            int(certificate["kernel_character_order"]),
+            quotient_order,
+            remaining_fibers,
+        )
+        if quotient_active_one_l1_bound != quotient_one_coordinate_l1_bound:
+            raise AssertionError(
+                (p, n, quotient_active_one_l1_bound, certificate)
+            )
+        if quotient_one_coordinate_l1_bound != int(
+            certificate["quotient_one_coordinate_l1_bound"]
+        ):
+            raise AssertionError(
+                (p, n, quotient_one_coordinate_l1_bound, certificate)
+            )
+        if quotient_active_two_l1_bound != int(
+            certificate["quotient_two_coordinate_l1_bound"]
+        ):
+            raise AssertionError((p, n, quotient_active_two_l1_bound))
+        if quotient_active_three_l1_bound != int(
+            certificate["quotient_three_coordinate_l1_bound"]
+        ):
+            raise AssertionError((p, n, quotient_active_three_l1_bound))
         if bool(certificate["quotient_l1_exact"]) != bool(quotient_l1["exact"]):
             raise AssertionError((p, n, quotient_l1, certificate))
         coefficient_l1_bound = direct_ambient_window_label_l1_bound(
@@ -1108,16 +2942,48 @@ def main() -> None:
         conic_l1_bound = int(certificate["principal_weight"]) * (
             int(certificate["square_coset_index"]) - 1
         )
-        kummer_l1_bound = jacobi_l1_bound * (
+        quadratic_conic_character_count = (
+            1
+            if int(certificate["square_coset_index"]) > 1
+            and int(certificate["square_coset_index"]) % 2 == 0
+            else 0
+        )
+        quadratic_one_coordinate_l1_bound = (
+            quotient_one_coordinate_l1_bound * quadratic_conic_character_count
+        )
+        one_coordinate_kummer_l1_bound = quotient_active_one_l1_bound * (
+            int(certificate["square_coset_index"])
+            - 1
+            - quadratic_conic_character_count
+        )
+        two_coordinate_kummer_l1_bound = quotient_active_two_l1_bound * (
             int(certificate["square_coset_index"]) - 1
+        )
+        three_coordinate_kummer_l1_bound = quotient_active_three_l1_bound * (
+            int(certificate["square_coset_index"]) - 1
+        )
+        kummer_l1_bound = (
+            one_coordinate_kummer_l1_bound
+            + two_coordinate_kummer_l1_bound
+            + three_coordinate_kummer_l1_bound
         )
         weighted_error_l1_bound = (
             jacobi_l1_bound
             + conic_l1_bound
-            + int(certificate["nonprincipal_constant"]) * kummer_l1_bound
+            + int(certificate["quadratic_one_coordinate_error_constant"])
+            * quadratic_one_coordinate_l1_bound
+            + int(certificate["one_coordinate_kummer_error_constant"])
+            * one_coordinate_kummer_l1_bound
+            + int(certificate["two_coordinate_kummer_error_constant"])
+            * two_coordinate_kummer_l1_bound
+            + int(certificate["three_coordinate_kummer_error_constant"])
+            * three_coordinate_kummer_l1_bound
         )
         if (
-            jacobi_l1_bound + conic_l1_bound + kummer_l1_bound
+            jacobi_l1_bound
+            + conic_l1_bound
+            + quadratic_one_coordinate_l1_bound
+            + kummer_l1_bound
             != int(certificate["coefficient_l1_bound"])
         ):
             raise AssertionError((p, n, coefficient_l1_bound, certificate))
@@ -1125,33 +2991,137 @@ def main() -> None:
             raise AssertionError((p, n, jacobi_l1_bound, certificate))
         if conic_l1_bound != int(certificate["conic_l1_bound"]):
             raise AssertionError((p, n, conic_l1_bound, certificate))
+        if quadratic_one_coordinate_l1_bound != int(
+            certificate["quadratic_one_coordinate_l1_bound"]
+        ):
+            raise AssertionError(
+                (p, n, quadratic_one_coordinate_l1_bound, certificate)
+            )
+        if one_coordinate_kummer_l1_bound != int(
+            certificate["one_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, one_coordinate_kummer_l1_bound))
+        if two_coordinate_kummer_l1_bound != int(
+            certificate["two_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, two_coordinate_kummer_l1_bound))
+        if three_coordinate_kummer_l1_bound != int(
+            certificate["three_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, three_coordinate_kummer_l1_bound))
         if kummer_l1_bound != int(certificate["kummer_l1_bound"]):
             raise AssertionError((p, n, kummer_l1_bound, certificate))
         if int(certificate["conic_error_constant"]) != 1:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["quadratic_one_coordinate_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["one_coordinate_kummer_error_constant"]) != 4:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["two_coordinate_kummer_error_constant"]) != 9:
+            raise AssertionError((p, n, certificate))
+        if int(certificate["three_coordinate_kummer_error_constant"]) != int(
+            certificate["nonprincipal_constant"]
+        ):
             raise AssertionError((p, n, certificate))
         if weighted_error_l1_bound != int(
             certificate["weighted_error_l1_bound"]
         ):
             raise AssertionError((p, n, weighted_error_l1_bound, certificate))
+        elementary_open_sqrt_error_bound = (
+            6 * ceil_sqrt(p) * (jacobi_l1_bound + conic_l1_bound)
+        )
+        if elementary_open_sqrt_error_bound != int(
+            certificate["elementary_open_sqrt_error_bound"]
+        ):
+            raise AssertionError(
+                (p, n, elementary_open_sqrt_error_bound, certificate)
+            )
+        weighted_error_total_bound = (
+            p * weighted_error_l1_bound + elementary_open_sqrt_error_bound
+        )
+        if weighted_error_total_bound != int(
+            certificate["weighted_error_total_bound"]
+        ):
+            raise AssertionError(
+                (p, n, weighted_error_total_bound, certificate)
+            )
         crude_jacobi_l1_bound = int(
             certificate["crude_coefficient_abs_bound"]
         ) * (int(certificate["kernel_character_order"]) ** 3 - 1)
         crude_conic_l1_bound = int(certificate["principal_weight"]) * (
             int(certificate["square_coset_index"]) - 1
         )
-        crude_kummer_l1_bound = crude_jacobi_l1_bound * (
-            int(certificate["square_coset_index"]) - 1
+        crude_quadratic_one_coordinate_l1_bound = (
+            int(certificate["crude_coefficient_abs_bound"])
+            * 3
+            * (int(certificate["kernel_character_order"]) - 1)
+            * quadratic_conic_character_count
+        )
+        crude_one_coordinate_kummer_l1_bound = (
+            int(certificate["crude_coefficient_abs_bound"])
+            * 3
+            * (int(certificate["kernel_character_order"]) - 1)
+            * (
+                int(certificate["square_coset_index"])
+                - 1
+                - quadratic_conic_character_count
+            )
+        )
+        crude_two_coordinate_kummer_l1_bound = (
+            int(certificate["crude_coefficient_abs_bound"])
+            * 3
+            * (int(certificate["kernel_character_order"]) - 1) ** 2
+            * (int(certificate["square_coset_index"]) - 1)
+        )
+        crude_three_coordinate_kummer_l1_bound = (
+            int(certificate["crude_coefficient_abs_bound"])
+            * (int(certificate["kernel_character_order"]) - 1) ** 3
+            * (int(certificate["square_coset_index"]) - 1)
+        )
+        crude_kummer_l1_bound = (
+            crude_one_coordinate_kummer_l1_bound
+            + crude_two_coordinate_kummer_l1_bound
+            + crude_three_coordinate_kummer_l1_bound
         )
         crude_weighted_error_l1_bound = (
             crude_jacobi_l1_bound
             + crude_conic_l1_bound
-            + int(certificate["nonprincipal_constant"])
-            * crude_kummer_l1_bound
+            + int(certificate["quadratic_one_coordinate_error_constant"])
+            * crude_quadratic_one_coordinate_l1_bound
+            + int(certificate["one_coordinate_kummer_error_constant"])
+            * crude_one_coordinate_kummer_l1_bound
+            + int(certificate["two_coordinate_kummer_error_constant"])
+            * crude_two_coordinate_kummer_l1_bound
+            + int(certificate["three_coordinate_kummer_error_constant"])
+            * crude_three_coordinate_kummer_l1_bound
         )
         if crude_jacobi_l1_bound != int(certificate["crude_jacobi_l1_bound"]):
             raise AssertionError((p, n, crude_jacobi_l1_bound, certificate))
         if crude_conic_l1_bound != int(certificate["crude_conic_l1_bound"]):
             raise AssertionError((p, n, crude_conic_l1_bound, certificate))
+        if crude_quadratic_one_coordinate_l1_bound != int(
+            certificate["crude_quadratic_one_coordinate_l1_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    crude_quadratic_one_coordinate_l1_bound,
+                    certificate,
+                )
+            )
+        if crude_one_coordinate_kummer_l1_bound != int(
+            certificate["crude_one_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, crude_one_coordinate_kummer_l1_bound))
+        if crude_two_coordinate_kummer_l1_bound != int(
+            certificate["crude_two_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, crude_two_coordinate_kummer_l1_bound))
+        if crude_three_coordinate_kummer_l1_bound != int(
+            certificate["crude_three_coordinate_kummer_l1_bound"]
+        ):
+            raise AssertionError((p, n, crude_three_coordinate_kummer_l1_bound))
         if crude_kummer_l1_bound != int(certificate["crude_kummer_l1_bound"]):
             raise AssertionError((p, n, crude_kummer_l1_bound, certificate))
         if crude_weighted_error_l1_bound != int(
@@ -1159,6 +3129,30 @@ def main() -> None:
         ):
             raise AssertionError(
                 (p, n, crude_weighted_error_l1_bound, certificate)
+            )
+        crude_elementary_open_sqrt_error_bound = (
+            6 * ceil_sqrt(p) * (crude_jacobi_l1_bound + crude_conic_l1_bound)
+        )
+        if crude_elementary_open_sqrt_error_bound != int(
+            certificate["crude_elementary_open_sqrt_error_bound"]
+        ):
+            raise AssertionError(
+                (
+                    p,
+                    n,
+                    crude_elementary_open_sqrt_error_bound,
+                    certificate,
+                )
+            )
+        crude_weighted_error_total_bound = (
+            p * crude_weighted_error_l1_bound
+            + crude_elementary_open_sqrt_error_bound
+        )
+        if crude_weighted_error_total_bound != int(
+            certificate["crude_weighted_error_total_bound"]
+        ):
+            raise AssertionError(
+                (p, n, crude_weighted_error_total_bound, certificate)
             )
         failures = two_fiber_divisor_power_failure_count(
             int(certificate["kernel_character_order"]),
@@ -1177,6 +3171,7 @@ def main() -> None:
         lower_numerator = (
             int(certificate["principal_weight"]) * principal_count
             - p * weighted_error_l1_bound
+            - elementary_open_sqrt_error_bound
             - degeneracy_count * int(certificate["denominator"])
         )
         if lower_numerator != int(certificate["lower_numerator"]):
@@ -1184,6 +3179,7 @@ def main() -> None:
         expected_threshold = kummer_quadratic_uniform_prime_threshold(
             int(certificate["principal_weight"]),
             weighted_error_l1_bound + 6 * int(certificate["denominator"]),
+            sqrt_error_weight=6 * (jacobi_l1_bound + conic_l1_bound),
         )
         if expected_threshold != int(certificate["uniform_prime_threshold"]):
             raise AssertionError((p, n, expected_threshold, certificate))
@@ -1201,21 +3197,26 @@ def main() -> None:
             direct_quotient_l1_bound_numerator
             // int(certificate["square_coset_index"])
         )
+        direct_jacobi_l1_bound = (
+            direct_quotient_l1_bound - int(certificate["principal_weight"])
+        )
         direct_weighted_error_l1_bound = (
-            direct_quotient_l1_bound
-            - int(certificate["principal_weight"])
+            direct_jacobi_l1_bound
             + int(certificate["principal_weight"])
             * (int(certificate["square_coset_index"]) - 1)
-            + int(certificate["nonprincipal_constant"])
-            * (int(certificate["square_coset_index"]) - 1)
-            * (
-                direct_quotient_l1_bound
-                - int(certificate["principal_weight"])
-            )
+            + int(certificate["quadratic_one_coordinate_error_constant"])
+            * quadratic_one_coordinate_l1_bound
+            + int(certificate["one_coordinate_kummer_error_constant"])
+            * one_coordinate_kummer_l1_bound
+            + int(certificate["two_coordinate_kummer_error_constant"])
+            * two_coordinate_kummer_l1_bound
+            + int(certificate["three_coordinate_kummer_error_constant"])
+            * three_coordinate_kummer_l1_bound
         )
         direct_lower_numerator = (
             int(certificate["principal_weight"]) * principal_count
             - p * direct_weighted_error_l1_bound
+            - elementary_open_sqrt_error_bound
             - degeneracy_count * int(certificate["denominator"])
         )
         if direct_lower_numerator < lower_numerator:
@@ -1223,6 +3224,7 @@ def main() -> None:
         crude_lower_numerator = (
             int(certificate["principal_weight"]) * principal_count
             - p * crude_weighted_error_l1_bound
+            - crude_elementary_open_sqrt_error_bound
             - degeneracy_count * int(certificate["denominator"])
         )
         if crude_lower_numerator != int(certificate["crude_lower_numerator"]):
@@ -1301,7 +3303,8 @@ def main() -> None:
         scan_label_checked.append((p, n, k, quotient_order, label))
     print(
         "verify_m1_slack_two_depth_two_kummer_saturation: "
-        f"PASS checked={checked} lift_checked={lift_checked} "
+        f"PASS checked={checked} equal_line_checked={equal_line_checked} "
+        f"lift_checked={lift_checked} "
         f"lift_bound_checked={lift_bound_checked} "
         f"kernel_checked={kernel_checked} "
         f"two_fiber_checked={two_fiber_checked} "

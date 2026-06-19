@@ -29,6 +29,40 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-19 - PR #82/#84-#95 experimental integration
+
+- **Agent/model:** AllenGrahamHart, scottdhughes, latifkasuli,
+  DannyExperiments PRs, integrated by Codex.
+- **Files added or changed:** `experimental/pr-triage-2026-06-19.md`,
+  `experimental/SUMMARY.md`, `experimental/agents-log.md`,
+  `experimental/l1_prefix_divisor_count.md`,
+  `experimental/l1_quotient_defect_closure.md`,
+  `experimental/l1_repaired_locator_theorem_package.md`,
+  `experimental/l2_interleaved_dilation_constants.md`,
+  `experimental/2026-06-19-mca-frontier-nfb-certificate/README.md`,
+  `experimental/2026-06-19-mca-frontier-nfb-certificate/nfb_deployed_certificate.json`,
+  `experimental/m1_residue_line_roadmap.md`, M1 depth-two Kummer notes and
+  verifiers, L1/L2 verifier scripts, and the selected
+  `experimental/2026-06-18-fable-loop/PRZ_REVIEW_INDEX.md` Cycle 49--57 audit
+  layer.
+- **Status:** PROVED / CONDITIONAL / CONJECTURAL / EXPERIMENTAL / AUDIT, as
+  marked per file.
+- **What is being added:** Manual integration of the useful recent PRs:
+  PR #93 supersedes #85--#91 as the Scott L1 consolidation; PR #84 adds the
+  L1 prefix/divisor/Fourier split; PR #92 adds L2 interleaved dilation and
+  quotient-core constants; PR #94 adds a compact `F\B` deep-hole certificate
+  packet; PR #82 adds the M1 low-slack Kummer/depth-two packet; PR #95 is
+  integrated only as review index plus cycle audits/prompts, not as a raw
+  225k-line archive.
+- **How it is useful:** Gives future work clear entry points: L1 quotient
+  floors versus aperiodic Fourier cancellation, M1 two-coordinate/conductor
+  targets, L2 aligned interleaved constants, an F1/Paper D explicit-line
+  certificate target, and a compact Fable-loop upper-side route map.
+- **What to do next:** Run and review the integrated verifiers, add a
+  standalone verifier for the NFB JSON certificate, audit the M1 Kummer imports
+  before consuming constants, and continue the Fable-loop program from the
+  high-`j` constant-rate prompt rather than the cut `t=2,j=2` toy regime.
+
 ### 2026-06-18 - PR #79-#81 experimental integration
 
 - **Agent/model:** AllenGrahamHart and scottdhughes PRs, integrated by Codex.

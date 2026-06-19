@@ -9,6 +9,9 @@ papers. The source triage records are:
 - `pr-triage-2026-06-17.md`: PRs #1, #2, #3, and #46 through #66.
 - `pr-triage-2026-06-18.md`: PRs #67 through #77, with #68 and #76
   superseded by #77.
+- `pr-triage-2026-06-18-round3.md`: PRs #79 through #81.
+- `pr-triage-2026-06-19.md`: PRs #82 and #84 through #95, with #85 through
+  #91 superseded by #93 and PR #95 integrated only as a compact review layer.
 
 The common policy was: keep Papers A-D unchanged, land new material in
 `experimental/`, preserve explicit status labels, and require review before any
@@ -35,6 +38,39 @@ large theorem yet; it is the reduction of several vague hazards into named,
 script-checkable walls.
 
 ## What Was Added
+
+### Latest 2026-06-19 integration
+
+The 2026-06-19 PR round adds five durable experimental bundles:
+
+- `l1_prefix_divisor_count.md` gives the cleanest current L1 split: exact
+  quotient-core divisor counts, dilation/localization, arbitrary-word `ImgFib`
+  lift, and a Fourier reduction for the aperiodic remainder.
+- The Scott L1 consolidation files
+  `l1_repaired_locator_theorem_package.md`,
+  `l1_syndrome_catalecticant_shells.md`,
+  `l1_periodic_support_multisequence_reduction.md`, and
+  `l1_quotient_defect_closure.md` turn raw locator fibers into a repaired,
+  quotient-defect-aware certificate program.
+- `m1_residue_line_roadmap.md`,
+  `m1_depth_two_lift_window_theorem.md`, and the new depth-two Kummer notes
+  update the M1 low-slack ledger. They narrow the remaining wall to explicit
+  two-coordinate, line-conic, and conductor targets, but remain conditional or
+  experimental where they consume unproved Kummer estimates.
+- `l2_interleaved_dilation_constants.md` records dilation symmetry, exact
+  aligned quotient-core counts `Quot_mu`, extension-coordinate checks, and
+  small arity scans. This is the current best orientation for avoiding the
+  trivial Cartesian interleaved-list exponent.
+- `2026-06-19-mca-frontier-nfb-certificate/` adds a compact
+  extension-valued deep-hole `F\B` certificate packet related to Paper D's
+  `cor:Fvalued`, while `2026-06-18-fable-loop/PRZ_REVIEW_INDEX.md` records
+  the selected Cycle 49--57 upper-side MCA route map from PR #95.
+
+This round is useful because it makes future work more modular: L1 has a
+quotient/aperiodic divisor ledger, M1 has a named low-slack conductor ledger,
+L2 has an aligned interleaving constant target, and the Fable loop now points
+future agents to the high-`j` constant-rate replacement instead of the cut
+`t=2,j=2` toy regime.
 
 ### Locator fibers and L1
 

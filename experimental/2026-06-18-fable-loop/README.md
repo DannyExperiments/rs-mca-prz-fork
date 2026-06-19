@@ -10,6 +10,11 @@ Source policy:
 - Raw model outputs are provenance, not promoted claims.
 - Audits decide what, if anything, should be treated as `BANKABLE_LEMMA`, `COUNTERPACKET`, `ROUTE_CUT`, or `EXACT_NEW_WALL`.
 
+Later compact review layer:
+
+- `PRZ_REVIEW_INDEX.md` records the selected Cycle 49--57 review path from
+  PR #95. It is a compact audit/prompt integration, not the full raw archive.
+
 Cycle 1 target:
 
 - F1 arbitrary-anchor balanced denominator gap in `tex/slackMCA_v3.tex:def:residue`, with balanced `t=sigma`.

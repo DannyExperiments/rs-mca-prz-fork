@@ -197,9 +197,15 @@ canonical_slack_two_second_r_window_kummer_square_coset_index
 canonical_slack_two_second_r_window_kummer_denominator
 canonical_slack_two_second_r_window_kummer_principal_weight
 canonical_slack_two_second_r_window_kummer_coefficient_bound
+canonical_slack_two_second_r_window_kummer_ambient_kernel_count
+canonical_slack_two_second_r_window_kummer_window_l1_bound
 canonical_slack_two_second_r_window_kummer_coefficient_l1_bound
 canonical_slack_two_second_r_window_kummer_jacobi_l1_bound
 canonical_slack_two_second_r_window_kummer_conic_l1_bound
+canonical_slack_two_second_r_window_kummer_quadratic_one_coordinate_l1_bound
+canonical_slack_two_second_r_window_kummer_one_coordinate_l1_bound
+canonical_slack_two_second_r_window_kummer_two_coordinate_l1_bound
+canonical_slack_two_second_r_window_kummer_three_coordinate_l1_bound
 canonical_slack_two_second_r_window_kummer_kummer_l1_bound
 canonical_slack_two_second_r_window_kummer_weighted_error_l1_bound
 canonical_slack_two_second_r_window_kummer_prime_threshold
@@ -222,13 +228,24 @@ canonical_slack_two_second_r_window_union_kummer_quotient_l1_exact
 canonical_slack_two_second_r_window_union_kummer_zero_subset_histogram
 canonical_slack_two_second_r_window_union_kummer_coefficient_histogram
 canonical_slack_two_second_r_window_union_kummer_quotient_l1_bound
+canonical_slack_two_second_r_window_union_kummer_quotient_one_coordinate_l1_bound
+canonical_slack_two_second_r_window_union_kummer_quotient_two_coordinate_l1_bound
+canonical_slack_two_second_r_window_union_kummer_quotient_three_coordinate_l1_bound
 canonical_slack_two_second_r_window_union_kummer_coefficient_l1_bound
 canonical_slack_two_second_r_window_union_kummer_jacobi_l1_bound
 canonical_slack_two_second_r_window_union_kummer_conic_l1_bound
+canonical_slack_two_second_r_window_union_kummer_quadratic_one_coordinate_l1_bound
+canonical_slack_two_second_r_window_union_kummer_one_coordinate_l1_bound
+canonical_slack_two_second_r_window_union_kummer_two_coordinate_l1_bound
+canonical_slack_two_second_r_window_union_kummer_three_coordinate_l1_bound
 canonical_slack_two_second_r_window_union_kummer_kummer_l1_bound
 canonical_slack_two_second_r_window_union_kummer_weighted_error_l1_bound
 canonical_slack_two_second_r_window_union_kummer_crude_l1_bound
 canonical_slack_two_second_r_window_union_kummer_crude_conic_l1_bound
+canonical_slack_two_second_r_window_union_kummer_crude_quadratic_one_coordinate_l1_bound
+canonical_slack_two_second_r_window_union_kummer_crude_one_coordinate_l1_bound
+canonical_slack_two_second_r_window_union_kummer_crude_two_coordinate_l1_bound
+canonical_slack_two_second_r_window_union_kummer_crude_three_coordinate_l1_bound
 canonical_slack_two_second_r_window_union_kummer_crude_weighted_error_l1_bound
 canonical_slack_two_second_r_window_union_kummer_prime_threshold
 canonical_slack_two_second_r_window_union_kummer_threshold_applies
@@ -243,6 +260,10 @@ canonical_slack_two_second_full_domain_coset_count_check
 canonical_slack_two_second_kummer_coefficient_l1_bound
 canonical_slack_two_second_kummer_jacobi_l1_bound
 canonical_slack_two_second_kummer_conic_l1_bound
+canonical_slack_two_second_kummer_quadratic_one_coordinate_l1_bound
+canonical_slack_two_second_kummer_one_coordinate_l1_bound
+canonical_slack_two_second_kummer_two_coordinate_l1_bound
+canonical_slack_two_second_kummer_three_coordinate_l1_bound
 canonical_slack_two_second_kummer_kummer_l1_bound
 canonical_slack_two_second_kummer_weighted_error_l1_bound
 canonical_slack_two_second_kummer_exact_support_saturation_certificate
@@ -252,9 +273,15 @@ canonical_slack_two_second_two_fiber_kummer_square_coset_index
 canonical_slack_two_second_two_fiber_kummer_denominator
 canonical_slack_two_second_two_fiber_kummer_principal_weight
 canonical_slack_two_second_two_fiber_kummer_coefficient_bound
+canonical_slack_two_second_two_fiber_kummer_ambient_kernel_count
+canonical_slack_two_second_two_fiber_kummer_window_l1_bound
 canonical_slack_two_second_two_fiber_kummer_coefficient_l1_bound
 canonical_slack_two_second_two_fiber_kummer_jacobi_l1_bound
 canonical_slack_two_second_two_fiber_kummer_conic_l1_bound
+canonical_slack_two_second_two_fiber_kummer_quadratic_one_coordinate_l1_bound
+canonical_slack_two_second_two_fiber_kummer_one_coordinate_l1_bound
+canonical_slack_two_second_two_fiber_kummer_two_coordinate_l1_bound
+canonical_slack_two_second_two_fiber_kummer_three_coordinate_l1_bound
 canonical_slack_two_second_two_fiber_kummer_kummer_l1_bound
 canonical_slack_two_second_two_fiber_kummer_weighted_error_l1_bound
 canonical_slack_two_second_two_fiber_kummer_uniform_prime_threshold
@@ -642,15 +669,49 @@ There is also a fixed-window Kummer certificate for this same reduction. For
 a quotient window `W` of size `R`, the indicator of `W` has principal weight
 `R/h`, so the principal term for `u,v,-1-u-v in W` has weight `R^3/(h^3 q)`,
 where `h=[F_p^*:K]` and `q=[F_p^*:D^2]`. The nonprincipal coefficients are
-bounded by `R^3`. The `d=0` part is a three-character Jacobi sum, and the
+controlled by a one-dimensional Parseval bound. Writing `N` for the quotient
+order and `e=h/N`, the nonprincipal quotient Fourier coefficients of a
+size-`R` window satisfy
+`sum_{a!=0} |c_W(a)| <= sqrt((N-1)R(N-R))`, so the ambient nonprincipal
+one-dimensional L1 is bounded by
+
+```text
+A_R = (e-1)R + e ceil(sqrt((N-1)R(N-R))).
+```
+
+If `R=N-1`, the window is missing one quotient label; all nonprincipal
+quotient Fourier coefficients then have absolute value `1`, so the scanner
+uses the exact value `A_R=(2e-1)R`.
+
+The `d=0` part is a three-character Jacobi sum, and the
 coordinate-principal `d!=0` part is a nontrivial character sum of the affine
-quadratic `A(u,v)`; both only cost `p`. The imported `16p` Kummer error is
-paid only for mixed coordinate/conic terms. The conservative lower numerator
-is
+quadratic `A(u,v)`. Their unrestricted sums have linear `p` bounds, but the
+Kummer open set removes the conic or coordinate lines, so the scanner adds an
+elementary open-set correction `6 ceil(sqrt(p))` times their L1 mass. Since
+`q=[F_p^*:D^2]` is even, the unique quadratic conic character with exactly
+one active coordinate character costs `4p`. The remaining mixed Kummer terms
+are charged by radical degree: one-coordinate terms cost `4p`, two-coordinate
+terms cost `9p`, and three-coordinate terms cost `16p`. Put
+
+```text
+M_{R,h,q} = ((R+A_R)^3-R^3) + R^3(q-1)
+            + 12R^2 A_R(q-1)
+            + 27R A_R^2(q-1)
+            + 16A_R^3(q-1).
+```
+
+The elementary open-set mass is
+
+```text
+J_{R,h,q}=((R+A_R)^3-R^3) + R^3(q-1).
+```
+
+The conservative lower numerator is
 
 ```text
 R^3 (p^2 - 4p + 6 + 4 chi(-3))
-  - p R^3((h^3-1) + (q-1) + 16(h^3-1)(q-1))
+  - p M_{R,h,q}
+  - 6 ceil(sqrt(p)) J_{R,h,q}
   - (6p - 11) h^3 q.
 ```
 
@@ -734,26 +795,53 @@ the `D^2`-coset condition, the total nonprincipal coefficient L1 bound is
 E_R <= q S_R - T_R(N).
 ```
 
-The reported numerator uses proved `p` bounds for the `d=0` Jacobi part and
-the coordinate-principal `d!=0` conic-only part. The imported Kummer bound is
-paid only for mixed coordinate/conic terms. Thus the weighted error term is
+The active-coordinate quotient-window L1 terms are exact as well. With `c_R`
+the quotient-label Fourier coefficient, the one-coordinate term is
+
+```text
+O_{R,1} = 3((e-1)T_R(N) + e sum_{a in Q^*} |c_R(a,0,0)|).
+```
+
+Thus
+
+```text
+O_{1,1} = 3(h-1),
+O_{2,1} = 3((e-1)(7N-6) + e(N-1)(3N-6)),
+O_{3,1} = 3((e-1)T_3(N) + e(N-1)(N-2)(N-3)).
+```
+
+The scanner computes `O_{R,2}` and `O_{R,3}` by exact ambient quotient-Fourier
+enumeration and checks that the three active-coordinate terms sum to
+`S_R-T_R(N)`. The reported numerator uses proved linear `p` bounds for the
+`d=0` Jacobi part and the coordinate-principal `d!=0` conic-only part, adds
+the elementary open-set square-root correction for those two masses, then
+charges mixed coordinate/conic terms by radical degree. Its linear weighted
+error term is
 
 ```text
 W_R = (S_R - T_R(N)) + (q-1)T_R(N)
-      + 16(q-1)(S_R - T_R(N)).
+      + (q-1)(4O_{R,1} + 9O_{R,2} + 16O_{R,3}).
+```
+
+The elementary open-set mass is
+
+```text
+J_R = (S_R - T_R(N)) + (q-1)T_R(N).
 ```
 
 Thus the sharpened lower numerator is
 
 ```text
 T_R(N) (p^2 - 4p + 6 + 4 chi(-3))
-  - p W_R - (6p - 11) h^3 q.
+  - p W_R
+  - 6 ceil(sqrt(p)) J_R
+  - (6p - 11) h^3 q.
 ```
 
 The reported uniform prime threshold uses the quadratic implication
 
 ```text
-p >= ceil((W_R + 6h^3q)/T_R(N)) + 4.
+p >= ceil((W_R + 6J_R + 6h^3q)/T_R(N)) + 4.
 ```
 
 When this is positive, the active quotient-window union itself hits every
@@ -832,12 +920,43 @@ imported constant explicit: the squarefree support divisor has component
 degrees `1,1,1,2`, total degree `5`, and the standard two-variable
 Kummer-Weil estimate contributes `(5-1)^2=16`.
 For the raw catalog, with `e=[F_p^*:D]` and `q=[F_p^*:D^2]`, the certificate
-pays the proved Jacobi bound on the `d=0` mass `e^3-1`, the proved affine
-conic bound on the coordinate-principal `d!=0` mass `q-1`, and the imported
-Kummer error only on the mixed mass `(e^3-1)(q-1)`. These are recorded as
-`*_jacobi_l1_bound`, `*_conic_l1_bound`, and `*_kummer_l1_bound`, while
-`*_weighted_error_l1_bound` is the linear error term used in the certificate
-numerator.
+pays the proved linear Jacobi bound on the `d=0` mass `e^3-1`, the proved
+linear affine-conic bound on the coordinate-principal `d!=0` mass `q-1`, and
+the elementary open-set correction on the sum of those two masses. It also
+pays the proved one-coordinate quadratic-conic bound on mass `3(e-1)`. The
+remaining mixed Kummer terms are charged by active coordinate count:
+one-coordinate radicals pay the degree-three constant `4`. Two-coordinate
+radicals with trivial infinity monodromy `mu nu eta^2=1` pay the proved
+open-set bound `2p+5 ceil(sqrt(p))`; remaining two-coordinate radicals with
+a reciprocal projective line-monodromy pair pay
+`4p+3 ceil(sqrt(p))`; the final ramified nonreciprocal two-coordinate
+radicals pay the imported degree-four constant `9`, and only
+three-coordinate radicals pay the full degree-five constant `16`. These are
+recorded as
+`*_jacobi_l1_bound`,
+`*_conic_l1_bound`, `*_quadratic_one_coordinate_l1_bound`,
+`*_one_coordinate_l1_bound`, `*_two_coordinate_l1_bound`,
+`*_two_coordinate_infinity_unramified_l1_bound`,
+`*_two_coordinate_projective_reciprocal_l1_bound`,
+`*_two_coordinate_ramified_nonreciprocal_l1_bound`,
+`*_two_coordinate_ramified_l1_bound`, `*_three_coordinate_l1_bound`, and
+`*_kummer_l1_bound`, while `*_weighted_error_l1_bound` is the linear error
+term and `*_sqrt_error_bound` is the square-root correction used in the
+certificate numerator.
+The raw split is computed by the closed forms recorded in
+`experimental/m1_depth_two_lift_window_theorem.md`, and the verifier compares
+those forms with direct exponent enumeration.
+The scanner also reports conditional alternatives for the ramified
+nonreciprocal two-coordinate residual.  The
+`*_projective_equal_pair_nonresonant_conditional_*` fields assume the
+projective equal-pair conductor import and the clean nonresonant line/conic
+import, while leaving the line-conic-resonant slice at `9p`.  The
+`*_projective_equal_pair_all_asymmetric_conditional_*` fields additionally
+assume the transformed line-conic-resonant core bound `|C|<=4p`; with the
+proved line correction this charges
+`C_2^peq+C_2^anr+C_2^lc = C_2^peq+C_2^asym` at `4p+3 ceil(sqrt(p))`.
+Both alternatives are reported for audit only and are not consumed by the
+active `saturation_certificate`.
 The `*_principal_exact_count` field records the exact principal open-set
 count
 
@@ -861,13 +980,18 @@ U = K union cK
 the indicator `1_U` has principal weight `2/h`, where
 `h=[F_p^*:K]`. Hence the principal term for `u,v,-1-u-v in U` has weight
 `8/(h^3 q)`, with `q=[F_p^*:D^2]`. The coordinate-principal `d!=0` terms are
-conic-only and cost `p`; the same imported Kummer-Weil constant `16` is paid
-only for mixed coordinate/conic terms. Paying the coefficient bound `8`, the
-Jacobi/conic/Kummer split gives the conservative lower numerator
+conic-only and pay their linear `p` part plus the same open-set correction;
+the one-coordinate quadratic-conic terms cost `4p`; and the remaining mixed
+Kummer terms are charged by active radical degree with constants `4`, `9`,
+and `16`. This is the `R=2` specialization of the fixed-window certificate
+above, with the complement exact value
+`A_2=2(2e-1)` when `N=3`.
+The Jacobi/conic/quadratic/Kummer split gives the conservative lower numerator
 
 ```text
 8 (p^2 - 4p + 6 + 4 chi(-3))
-  - p * 8((h^3-1) + (q-1) + 16(h^3-1)(q-1))
+  - p M_{2,h,q}
+  - 6 ceil(sqrt(p)) J_{2,h,q}
   - (6p - 11) h^3 q.
 ```
 
