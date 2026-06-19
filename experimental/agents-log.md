@@ -1353,3 +1353,39 @@ Keep entries concise and link to the relevant files.
   high-cloud inverse theorem for balanced arbitrary-anchor residue clouds,
   after quotient-pullback, tangent/contained, and residual-list templates are
   separated.
+
+### 2026-06-19 - Cycle 48 upper-inverse refresh audit
+
+- **Agent/model:** Codex auditing nine upper/inverse external answers pasted
+  inline or attached after the Cycle 47 lower-branch packet.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/handoffs/cycle48_upper_inverse_context_20260619.zip`,
+  `experimental/2026-06-18-fable-loop/raw/cycle48_upper_inverse_5p5/`,
+  `experimental/2026-06-18-fable-loop/audits/20260619_CYCLE48_UPPER_INVERSE_REFRESH_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** COUNTERPACKET / BANKABLE_LEMMA / EXACT_NEW_WALL / AUDIT.
+- **What changed:** The Cycle 47 lower/failure branch remains banked, but the
+  safe-side upper theorem was not solved. The naive wall
+  `W-MCA-AA-RES-ENTROPY-BOUNDARY-MATCHING-UPPER` is too coarse.
+- **Major route cut:** Literal quotient-pullback aperiodicity is insufficient.
+  Quotient-component denominators with `E | m(X^M)` and fixed-defect
+  quotient-anchor packets can produce large reduced balanced clouds above
+  entropy, even when they are not syntactically `E_0(X^M)` and survive
+  tangent, same-witness, contained, low-denominator, residual-list, and
+  Frobenius/base-core tests.
+- **New quotient invariant:** for each quotient scale `M`, classify
+  `xi_M=[X^M]_E` by `d_M(E)=deg minpoly_F(xi_M)`. Low `d_M(E)` marks a
+  quotient-component packet; `d_M(E)=1` is the punctured-fiber coequalizer
+  obstruction.
+- **Banked reductions:** all-`t` support-syndrome normal form; fixed tangent
+  core cap `j+1`; locator-scroll `E`-resonant circuit certificate; residual
+  slack injection and degree inflation; finite line-occupancy correction; and
+  official-target interleaved-list projection to scalar list.
+- **New main wall:** `W-MCA-SYNDROME-TRANSVERSE-SECANT-ENTROPY-INVERSE`, with
+  companion walls `W-MCA-QUOTIENT-ACTION-RANK-INVERSE`,
+  `W-MCA-AA-RES-LOCATOR-SCROLL-SECTION-OR-QUOTIENT`,
+  `W-MCA-HIGH-DENOMINATOR-THICK-RESIDUE-COMPRESSION`, and
+  `W-L1-ARBITRARY-WORD-FULL-SUPPORT-LOCAL-LIMIT-ABOVE-CORRECTED-RESERVE`.
+- **Finite warning:** a correct finite safe-side statement must include
+  `R_line=ceil(binomial(n,k+t)/Q^(t-1))`; a bare `n^{1+o(1)}` bound immediately
+  after the entropy equality is not the prize-level finite theorem.

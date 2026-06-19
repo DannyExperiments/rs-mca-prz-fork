@@ -1310,3 +1310,32 @@ Cycle 47 domain-uniform Bessel moment audit:
   `W-MCA-AA-RES-ENTROPY-BOUNDARY-MATCHING-UPPER`, equivalently a uniform
   high-cloud inverse theorem for balanced arbitrary-anchor residue clouds after
   quotient-pullback and tangent/contained templates are separated.
+
+Cycle 48 upper-inverse refresh audit:
+
+- `handoffs/cycle48_upper_inverse_context_20260619.zip`
+- `raw/cycle48_upper_inverse_5p5/`
+- `audits/20260619_CYCLE48_UPPER_INVERSE_REFRESH_AUDIT.md`
+- Status: `COUNTERPACKET / BANKABLE_LEMMA / EXACT_NEW_WALL / AUDIT`.
+- Main route cut: a balanced residue-cloud upper theorem with only literal
+  quotient-pullback denominators removed is false or at least incomplete.
+  Quotient-component denominators with `E | m(X^M)` and fixed-defect
+  quotient-anchor packets can produce large clouds above the ambient entropy
+  boundary while surviving the tangent, same-witness, contained,
+  low-denominator, residual-list, and Frobenius/base-core tests.
+- New quotient invariant: for each quotient scale `M`, inspect
+  `xi_M=[X^M]_E` and `d_M(E)=deg minpoly_F(xi_M)`. Low `d_M(E)`, especially
+  `d_M(E)=1`, is a quotient-component packet even when `E` is not syntactically
+  `E_0(X^M)`.
+- Upper-side reformulation: replace the coarse wall with
+  `W-MCA-SYNDROME-TRANSVERSE-SECANT-ENTROPY-INVERSE`, the problem of bounding
+  transverse intersections of a syndrome-space line with the `j`-secant
+  subspace arrangement, after quotient and tangent templates are separated.
+- Finite correction: the safe-side finite theorem must include the random
+  line-occupancy scale `R_line=ceil(binomial(n,k+t)/Q^(t-1))`; a bare
+  `n^{1+o(1)}` upper bound immediately after `Q^t >= binomial(n,k+t)` is not
+  the correct finite prize statement.
+- List-side update: at the official target `epsilon*=2^-128`, the
+  interleaved-list challenge reduces to the scalar list challenge by linear
+  projection whenever `q<2^256`; the remaining list wall is scalar arbitrary
+  word full-support local limit.

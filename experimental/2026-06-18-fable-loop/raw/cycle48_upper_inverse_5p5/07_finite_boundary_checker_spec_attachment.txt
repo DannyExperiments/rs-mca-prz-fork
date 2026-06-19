@@ -1,0 +1,2311 @@
+VERDICT
+
+PROOF: the finite lower/failure theorem, including the stated all-slope criterion.
+
+PROOF: an anchor-free finite reformulation of the balanced upper problem as linear feasibility over selected support families.
+
+PROOF: in the balanced case a=k+t, every witness with B
+
+=0 is automatically noncontained; literal same-witness clusters contribute only one slope.
+
+PROOF_CANDIDATE: a matching finite upper theorem must include the line-occupancy term
+
+R
+line
+	​
+
+:=⌈
+Q
+t−1
+(
+k+t
+n
+	​
+
+)
+	​
+
+⌉.
+
+A bare n
+1+o(1)
+ bound immediately after
+
+Q
+t
+≥(
+k+t
+n
+	​
+
+)
+
+is not the correct finite statement.
+
+EXACT_NEW_WALL: prove a labelled strong-subspace-design/inverse theorem for the residue maps after minimal-denominator and quotient-pullback packets are removed.
+
+Confidence is high for all reductions and exact tests below. The proposed upper inequality remains unproved.
+
+FINITE_THEOREM_STATEMENTS
+
+Let
+
+F=F
+Q
+	​
+
+,L⊂F
+×
+,∣L∣=n,
+
+with distinct evaluation points. Fix
+
+1≤k<n,1≤t≤n−k,a=k+t,j=n−a,
+
+and put
+
+N=(
+a
+n
+	​
+
+)=(
+k+t
+n
+	​
+
+).
+
+Let E∈F[X] have degree t and no roots on L. Let
+
+A
+E
+	​
+
+=F[X]/(E).
+
+For S∈(
+a
+L
+	​
+
+), let I
+S
+	​
+
+(w) be the degree-<a interpolant of w∣
+S
+	​
+
+, and define
+
+R
+S
+E
+	​
+
+(w)=[I
+S
+	​
+
+(w)]
+E
+	​
+
+∈A
+E
+	​
+
+.
+
+For 0
+
+=B∈F[X]
+<t
+	​
+
+, define the balanced residue cloud
+
+C(E,B,w)={z∈F:∃S∈(
+a
+L
+	​
+
+),R
+S
+E
+	​
+
+(w)=z[B]
+E
+	​
+
+}.
+1. Exact balanced-cloud theorem
+
+For B
+
+=0,
+
+z∈C(E,B,w)
+
+if and only if there are P
+z
+	​
+
+∈F[X]
+<k
+	​
+
+ and S
+z
+	​
+
+∈(
+a
+L
+	​
+
+) such that
+
+w(x)=E(x)P
+z
+	​
+
+(x)+zB(x)(x∈S
+z
+	​
+
+).
+
+The corresponding witness polynomial is
+
+Q
+z
+	​
+
+=EP
+z
+	​
+
++zB,degQ
+z
+	​
+
+<a.
+
+Moreover, every such witness is automatically noncontained.
+
+Indeed, if G∈F[X]
+<k
+	​
+
+ satisfied
+
+G=−B/Eon S
+z
+	​
+
+,
+
+then
+
+EG+B
+
+would have at least a=k+t roots but degree at most a−1. Hence EG+B=0, impossible because 0
+
+=B and degB<t=degE.
+
+If B=0, every residue witness is contained: Q=EP, so w/E=P and −B/E=0 on the support. Thus the noncontained balanced cloud is empty.
+
+Consequently, for the balanced problem the checker should exclude B=0 and should not spend computational effort retesting noncontainment.
+
+2. Finite lower/failure theorem
+
+For
+
+K
+d
+	​
+
+=(
+d
+j
+	​
+
+)(
+d
+a
+	​
+
+),
+
+define the exact integers
+
+J
+=
+0≤d<t
+∑
+	​
+
+K
+d
+	​
+
+Q
+t−d
+=Q
+t
+J,
+
+and
+
+V
+=
+0≤d<t
+∑
+	​
+
+K
+d
+	​
+
+(Q
+t−d
+−1).
+
+Thus
+
+J=
+d<t
+∑
+	​
+
+(
+d
+j
+	​
+
+)(
+d
+a
+	​
+
+)Q
+−d
+,
+
+as in the question, while
+
+V:=Q
+−t
+V
+=
+d<t
+∑
+	​
+
+K
+d
+	​
+
+(Q
+−d
+−Q
+−t
+)≤J.
+
+Take B=1. For uniformly random w:L→F, let
+
+ν
+w
+	​
+
+(z)=#{S∈(
+a
+L
+	​
+
+):R
+S
+E
+	​
+
+(w)=z[1]
+E
+	​
+
+},λ=
+Q
+t
+N
+	​
+
+.
+
+The exact pair-rank identity gives
+
+Eν
+w
+	​
+
+(z)=λ,Eν
+w
+	​
+
+(z)
+2
+=λ
+2
++λV.
+
+Therefore:
+
+Finite missed-slope bound
+
+There exists w for which the number M(w) of missed slopes satisfies
+
+M(w)≤⌊
+N
+Q
+V
+	​
+
+⌋.
+
+Equivalently,
+
+∣C(E,1,w)∣≥Q−⌊
+N
+Q
+V
+	​
+
+⌋.
+
+In particular, all slopes occur if
+
+N>Q
+V
+.
+
+Since 
+V
+<
+J
+, the source criterion
+
+N>Q
+J
+
+is sufficient. Written in the notation of the question, this is exactly
+
+(
+k+t
+n
+	​
+
+)>Q
+t+1
+J.
+	​
+
+Finite occupied-slope bound
+
+Paley–Zygmund gives
+
+w
+Pr
+	​
+
+[ν
+w
+	​
+
+(z)>0]≥
+λ+V
+λ
+	​
+
+=
+N+
+V
+N
+	​
+
+.
+
+Hence some anchor satisfies
+
+∣C(E,1,w)∣≥⌈
+N+
+V
+QN
+	​
+
+⌉.
+	​
+
+
+This second inequality is essential near and even somewhat above the central entropy equality.
+
+For any proposed upper threshold U<Q, a universal upper theorem is already falsified whenever
+
+(Q−U)N>U
+V
+.
+	​
+
+3. Literal same-witness theorem
+
+Suppose the same polynomial Q witnesses slopes z,z
+′
+. Then
+
+Q≡zB≡z
+′
+B(modE).
+
+Since B
+
+=0 and degB<t,
+
+z=z
+′
+.
+
+Thus:
+
+One witness polynomial can contribute only one slope.
+	​
+
+
+If
+
+A
+Q
+	​
+
+={x∈L:w(x)=Q(x)},r
+Q
+	​
+
+=∣A
+Q
+	​
+
+∣,
+
+then the number of size-a supports producing this exact witness is
+
+(
+a
+r
+Q
+	​
+
+	​
+
+).
+
+Such a cluster can make support incidence enormous, but it cannot itself create a high slope cloud. An upper checker must count distinct slopes, not raw supports.
+
+For distinct witnesses Q,Q
+′
+ of the same slope,
+
+Q−Q
+′
+=E(P−P
+′
+).
+
+Hence their full agreement sets satisfy
+
+∣A
+Q
+	​
+
+∩A
+Q
+′
+	​
+
+∣≤k−1
+
+unless Q=Q
+′
+.
+
+4. Exact tangent/affine-witness bound
+
+Let Γ⊂F be a set of slopes with selected witnesses satisfying
+
+P
+z
+	​
+
+=P
+0
+	​
+
++zP
+1
+	​
+
+(z∈Γ)
+
+for fixed P
+0
+	​
+
+,P
+1
+	​
+
+∈F[X]
+<k
+	​
+
+.
+
+Define the common core
+
+C
+0
+	​
+
+={x∈L:w(x)=E(x)P
+0
+	​
+
+(x),E(x)P
+1
+	​
+
+(x)+B(x)=0}
+
+and c=∣C
+0
+	​
+
+∣.
+
+Because
+
+EP
+1
+	​
+
++B
+
+≡0
+
+and has degree <a, one has c≤a−1. Outside C
+0
+	​
+
+, each coordinate can agree with at most one slope. Therefore
+
+∣Γ∣≤⌊
+a−c
+n−c
+	​
+
+⌋≤j+1.
+	​
+
+
+This is the exact finite tangent-cluster scale in the balanced stratum.
+
+5. Exact low-denominator theorem
+
+For a word g:L→F, define its effective denominator degree by
+
+τ(g)=min{e:
+∃E
+′
+∈F[X], degE
+′
+=e, E
+′
+(L)
+
+=0,
+∃U∈F[X]
+<k+e
+	​
+
+, U(x)=E
+′
+(x)g(x) ∀x∈L
+	​
+
+}.
+
+Dividing U by E
+′
+ gives
+
+U=E
+′
+R−B
+′
+,degR<k,degB
+′
+<e,
+
+so
+
+g=R−B
+′
+/E
+′
+on L.
+
+For the datum g=−B/E, one always has τ(g)≤t. The datum is denominator-minimal exactly when
+
+τ(−B/E)=t.
+
+If τ(−B/E)=e<t, then the same line has a degree-e residue representation. Every bad slope injects into the set of degree-<k+e polynomials agreeing with the transformed anchor on at least k+t points. The residual list slack is therefore
+
+t−e.
+
+This is the exact finite low-denominator/residual-list reduction.
+
+6. Exact quotient-pullback definition
+
+Let
+
+L=αH,H=⟨ω⟩,∣H∣=n.
+
+For M∣n, let
+
+K
+M
+	​
+
+={κ∈H:κ
+M
+=1},∣K
+M
+	​
+
+∣=M,
+
+and let
+
+π
+M
+	​
+
+(x)=(x/α)
+M
+.
+
+Let
+
+C=RS[F,L,k].
+
+A word v∈F
+L
+ is a quotient pullback modulo C through π
+M
+	​
+
+ if there is c∈C such that v−c is constant on each K
+M
+	​
+
+-orbit.
+
+Equivalently, for a generator κ of K
+M
+	​
+
+,
+
+T
+κ
+	​
+
+v−v∈C,(T
+κ
+	​
+
+v)(x)=v(κx).
+
+Thus a line datum is an M-quotient pullback if this holds for both
+
+f=w/E,g=−B/E.
+
+This definition is invariant under codeword shifts and under changing the residue representation.
+
+On a multiplicative coset, let
+
+v
+(X)=
+r=0
+∑
+n−1
+	​
+
+c
+r
+	​
+
+X
+r
+
+be the degree-<n interpolant of v. Then
+
+T
+κ
+	​
+
+v−v∈C
+
+if and only if
+
+c
+r
+	​
+
+=0for every r≥k with M∤r.
+
+This gives an exact Fourier/coefficient test.
+
+A stricter datum-level twisted pullback has, for some r
+0
+	​
+
+modM,
+
+E(κx)=κ
+r
+0
+	​
+
+E(x),B(κx)=κ
+r
+0
+	​
+
+B(x),
+
+and, after an anchor gauge w↦w+EA,
+
+(w+EA)(κx)=κ
+r
+0
+	​
+
+(w+EA)(x).
+
+Equivalently,
+
+E(X)=X
+r
+0
+	​
+
+E
+0
+	​
+
+((X/α)
+M
+),
+
+and similarly for B and the gauged anchor values. The common twist cancels in w/E and B/E.
+
+A denominator-only identity E(X)=E
+0
+	​
+
+(X
+M
+) is not by itself a complete, representation-invariant high-cloud classification. The checker should report denominator, numerator, anchor, and line-level pullback tests separately.
+
+7. Finite candidate upper theorem
+
+Set
+
+R
+line
+	​
+
+=min{Q,⌈
+Q
+t−1
+N
+	​
+
+⌉}.
+
+For a rational θ>0, set
+
+A
+θ
+	​
+
+(n)=⌈n
+1+θ
+⌉.
+
+The finite candidate theorem is:
+
+Finite balanced aperiodic upper conjecture.
+There are explicit reserve constants C
+0
+	​
+
+(ρ,θ) and n
+0
+	​
+
+(ρ,θ) such that, whenever
+
+t≥⌈C
+0
+	​
+
+log
+2
+	​
+
+n
+n
+	​
+
+⌉,
+
+every denominator-minimal balanced datum (E,B,w) that is not a quotient pullback through any designated proper quotient satisfies
+
+∣C(E,B,w)∣≤min{Q,N,R
+line
+	​
+
++A
+θ
+	​
+
+(n)}.
+	​
+
+
+This is the finite form I recommend checking. The term R
+line
+	​
+
+ is not optional.
+
+If the exact entropy surplus is large enough that
+
+N≤A
+θ
+	​
+
+(n)Q
+t−1
+,
+
+then
+
+R
+line
+	​
+
+≤A
+θ
+	​
+
+(n)
+
+and the candidate gives
+
+∣C(E,B,w)∣≤2A
+θ
+	​
+
+(n).
+
+Under a fixed multiplicative entropy margin, this reduces to the desired n
+1+o(1)
+ aperiodic numerator. At the central equality Q
+t
+=N, however,
+
+R
+line
+	​
+
+=Q,
+
+so the candidate correctly becomes trivial.
+
+For a full finite theorem, quotient-certified slopes are added as an exact packet budget:
+
+∣C∣≤U
+quotient
+	​
+
++R
+line
+	​
+
++A
+θ
+	​
+
+(n),
+
+while a datum of effective degree e<t is routed instead to the corresponding residual-list bound.
+
+CRITICAL_WINDOW
+
+Define the exact entropy displacement
+
+Δ=tlog
+2
+	​
+
+Q−log
+2
+	​
+
+N=log
+2
+	​
+
+N
+Q
+t
+	​
+
+.
+
+The equality Δ=0 is only the center of the transition, not the finite safe boundary.
+
+1. All-slope lower edge
+
+The stated lower theorem gives all slopes if
+
+N>Q
+t+1
+J,
+
+equivalently
+
+Δ<−log
+2
+	​
+
+(QJ).
+	​
+
+
+The exact variance version improves J to V:
+
+N>Q
+V
+.
+2. Partial-cloud lower edge
+
+For every U<Q, the Bessel–Paley construction guarantees an anchor with more than U slopes whenever
+
+(Q−U)N>U
+V
+.
+
+In logarithmic form this is
+
+Δ<log
+2
+	​
+
+UV
+Q−U
+	​
+
+,
+
+where V=Q
+−t
+V
+.
+
+Thus a proposed finite upper H≤U cannot even be considered until this exact obstruction has cleared.
+
+3. Random line-occupancy scale
+
+The expected number of support incidences with the one-dimensional residue line is
+
+Q
+t−1
+N
+	​
+
+=Q2
+−Δ
+.
+
+This falls below an upper budget U exactly when
+
+Δ≥log
+2
+	​
+
+(Q/U).
+	​
+
+
+For U=A
+θ
+	​
+
+(n), the finite upper exits the occupancy window only after
+
+Δ≥log
+2
+	​
+
+A
+θ
+	​
+
+(n)
+Q
+	​
+
+.
+4. Target-dependent critical window
+
+For a desired aperiodic numerator U<Q, define
+
+W
+U
+	​
+
+=[−log
+2
+	​
+
+(QJ), log
+2
+	​
+
+(Q/U)].
+	​
+
+
+Inside this window:
+
+at the left edge, all slopes can occur;
+the Paley lower bound can still force more than U slopes well past the all-slope edge;
+near Δ=0, the natural occupancy scale is Q, not n;
+a genuinely small upper theorem becomes plausible only near the right edge.
+
+The checker should perform all comparisons with integers:
+
+N,Q
+t
+,Q
+J
+,Q
+V
+,(Q−U)N,U
+V
+,⌈N/Q
+t−1
+⌉.
+
+Floating-point entropy calculations should be display-only.
+
+CHECKER_SPEC
+1. Input and normalization
+
+The finite input must contain:
+
+(p,m,Φ),Q=p
+m
+,
+
+where Φ specifies the field representation;
+
+α,ω,n,L={αω
+i
+:0≤i<n};
+
+and
+
+k,t,a=k+t,j=n−a.
+
+The checker verifies:
+
+Φ is irreducible.
+ω has exact order n.
+The n domain points are distinct.
+1≤t≤n−k.
+E is monic of degree t.
+gcd(E,X
+n
+−α
+n
+)=1.
+B
+
+=0, degB<t, with a fixed projective normalization.
+
+The following equivalences should be quotiented out:
+
+w∼w+EA,A∈F[X]
+<k
+	​
+
+,
+
+because this adds a codeword to f=w/E;
+
+w∼w+cB,
+
+because this translates all slopes by c;
+
+B∼cB,c∈F
+×
+,
+
+because this rescales the slope parameter.
+
+For fixed E,B, the anchor quotient therefore has dimension
+
+n−k−1.
+
+Domain multiplication and Frobenius automorphisms may also be used for isomorphism-free enumeration.
+
+2. Direct cloud enumeration for a fixed datum
+
+For every S∈(
+a
+L
+	​
+
+), solve
+
+w(x)=E(x)
+ℓ=0
+∑
+k−1
+	​
+
+p
+ℓ
+	​
+
+x
+ℓ
++zB(x)(x∈S)
+
+for p
+0
+	​
+
+,…,p
+k−1
+	​
+
+,z.
+
+The coefficient matrix has full column rank k+1: a kernel vector would give a polynomial
+
+EP+zB
+
+of degree <a vanishing on a points, hence zero; reduction modulo E then gives z=0, followed by P=0.
+
+Therefore every support yields either no solution or one unique pair (P,z).
+
+The checker records:
+
+slope z;
+witness Q=EP+zB;
+
+full agreement set
+
+A
+Q
+	​
+
+={x:w(x)=Q(x)};
+a canonical support, such as the lexicographically least a-subset of A
+Q
+	​
+
+.
+
+Finally it deduplicates by slope.
+
+3. Anchor-free exhaustive formulation
+
+This is the strongest finite reduction.
+
+Fix E,B and an unordered support family
+
+S=(S
+1
+	​
+
+,…,S
+h
+	​
+
+),S
+i
+	​
+
+∈(
+a
+L
+	​
+
+).
+
+Introduce variables
+
+w
+x
+	​
+
+(x∈L),
+p
+i,ℓ
+	​
+
+(1≤i≤h, 0≤ℓ<k),
+
+and
+
+z
+i
+	​
+
+(1≤i≤h).
+
+Form the homogeneous linear system
+
+w
+x
+	​
+
+−E(x)
+ℓ<k
+∑
+	​
+
+p
+i,ℓ
+	​
+
+x
+ℓ
+−z
+i
+	​
+
+B(x)=0(x∈S
+i
+	​
+
+).
+
+Let K
+S
+	​
+
+(E,B) be its solution space, and let
+
+Z
+S
+	​
+
+(E,B)⊆F
+h
+
+be its projection to the z-coordinates.
+
+Then:
+
+Some anchor has h distinct cloud slopes on these supports
+	​
+
+
+if and only if Z
+S
+	​
+
+(E,B) contains a vector with pairwise distinct coordinates.
+
+Thus anchors need not be enumerated.
+
+Exact all-distinct count
+
+For a set partition π of {1,…,h}, let
+
+D
+π
+	​
+
+={z:z
+i
+	​
+
+=z
+j
+	​
+
+ whenever i,j are in the same block of π}.
+
+Let
+
+μ(π)=
+C∈π
+∏
+	​
+
+(−1)
+∣C∣−1
+(∣C∣−1)!.
+
+The exact number of all-distinct vectors in Z=Z
+S
+	​
+
+ is
+
+Distinct(Z)=
+π
+∑
+	​
+
+μ(π)Q
+dim(Z∩D
+π
+	​
+
+)
+.
+	​
+
+
+Hence:
+
+Distinct(Z)>0 proves feasibility;
+Distinct(Z)=0 proves that this support family cannot produce h distinct slopes for any anchor.
+
+This is practical for small h. For larger h, the checker can seek an explicit distinct vector or use SAT/Gröbner methods.
+
+The exact balanced maximum for fixed E,B is therefore
+
+M(E,B)=max{h:∃S, Distinct(Z
+S
+	​
+
+(E,B))>0}.
+
+The universal finite balanced packing number is the maximum of M(E,B) over normalized E,B.
+
+4. Quotient-pullback tests
+
+For every proper divisor M∣n, the checker performs four distinct tests.
+
+Q-DEN: denominator pullback
+
+Test whether, modulo X
+n
+−α
+n
+,
+
+E(X)=X
+r
+E
+0
+	​
+
+((X/α)
+M
+)
+
+for some rmodM. Equivalently, all nonzero monomial exponents of E are congruent modulo M.
+
+Q-NUM
+
+Apply the same test to B, and check whether it has the same twist r.
+
+Q-ANCH
+
+Solve linearly for A∈F[X]
+<k
+	​
+
+ such that
+
+w+EA
+
+has the same K
+M
+	​
+
+-equivariance:
+
+(w+EA)(κx)=κ
+r
+(w+EA)(x).
+Q-LINE: representation-invariant quotient test
+
+Compute
+
+f=w/E,g=−B/E
+
+as words and their degree-<n interpolants.
+
+For a generator κ of K
+M
+	​
+
+, test
+
+T
+κ
+	​
+
+f−f∈C,T
+κ
+	​
+
+g−g∈C.
+
+Equivalently, all high-degree interpolation coefficients, in degrees r≥k, vanish unless M∣r.
+
+A positive Q-LINE test proves that, after codeword shifts, both f and g descend to L/K
+M
+	​
+
+.
+
+The source-active quotient orders at balanced slack are normally
+
+M
+src
+	​
+
+={M:M∣gcd(n,k), M>t, k/M≤n/M−1}.
+
+For hostile checking, all proper M∣n should also be tested. A counterexample that is nonperiodic only under the narrower source definition may expose a missing quotient template.
+
+A generalized two-character/equivariant test checks whether
+
+span(
+f
+ˉ
+	​
+
+,
+g
+ˉ
+	​
+
+)⊂F
+L
+/C
+
+is invariant under T
+κ
+	​
+
+. This is tested by a rank condition on
+
+[
+f
+ˉ
+	​
+
+,
+g
+ˉ
+	​
+
+,T
+κ
+	​
+
+f
+ˉ
+	​
+
+,T
+κ
+	​
+
+g
+ˉ
+	​
+
+].
+5. Low-denominator test
+
+For every e<t, form the linear system in coefficients of
+
+E
+′
+(X)=
+r=0
+∑
+e
+	​
+
+e
+r
+	​
+
+X
+r
+,U(X)=
+r=0
+∑
+k+e−1
+	​
+
+u
+r
+	​
+
+X
+r
+
+given by
+
+E
+′
+(x)g(x)−U(x)=0(x∈L).
+
+Search its kernel for a vector satisfying
+
+e
+e
+	​
+
+
+=0,E
+′
+(x)
+
+=0∀x∈L.
+
+If found, divide U by E
+′
+ to obtain the lower-degree residue representation.
+
+For small fields, enumerate the projective kernel.
+
+For an exact symbolic count, let K
+e
+	​
+
+ denote the projected kernel in the E
+′
+-coefficients. The number of valid vectors is obtained by inclusion–exclusion over the forbidden hyperplanes
+
+e
+e
+	​
+
+=0,E
+′
+(x)=0(x∈L).
+
+When
+
+Q>n+1,
+
+there is a compact alternative. A vector space over F
+Q
+	​
+
+ cannot be covered by fewer than Q proper hyperplanes. Therefore a valid E
+′
+ exists unless:
+
+K
+e
+	​
+
+=0;
+K
+e
+	​
+
+⊆{e
+e
+	​
+
+=0}; or
+K
+e
+	​
+
+⊆{E
+′
+(x)=0} for some x∈L.
+
+This gives a short exact no-low-denominator certificate in the challenge-size regime.
+
+6. Contained test
+
+For arbitrary, possibly unbalanced input, a support S is contained exactly when both linear systems
+
+A(x)=w(x)/E(x)(x∈S),
+G(x)=−B(x)/E(x)(x∈S)
+
+have degree-<k solutions.
+
+Equivalently, both augmented Vandermonde matrices have the same rank as the S×k Vandermonde matrix.
+
+In the balanced B
+
+=0 case, the checker should replace this computation with the automatic proof above.
+
+7. Same-witness and tangent-cluster tests
+
+For every successful witness Q, compute
+
+r
+Q
+	​
+
+=∣{x:w(x)=Q(x)}∣,m
+Q
+	​
+
+=(
+a
+r
+Q
+	​
+
+	​
+
+).
+
+This is the exact same-witness support multiplicity.
+
+For each slope z, record the set
+
+P
+z
+	​
+
+={P:EP+zB agrees with w on at least a points}.
+
+To find affine/tangent witness clusters, iterate over pairs
+
+(z
+1
+	​
+
+,P
+1
+	​
+
+),(z
+2
+	​
+
+,P
+2
+	​
+
+),z
+1
+	​
+
+
+=z
+2
+	​
+
+,
+
+and define
+
+P
+dir
+	​
+
+=
+z
+2
+	​
+
+−z
+1
+	​
+
+P
+2
+	​
+
+−P
+1
+	​
+
+	​
+
+,P
+base
+	​
+
+=P
+1
+	​
+
+−z
+1
+	​
+
+P
+dir
+	​
+
+.
+
+Count the slopes z for which
+
+P
+base
+	​
+
++zP
+dir
+	​
+
+∈P
+z
+	​
+
+.
+
+Every such cluster must satisfy the exact j+1 bound above. A violation indicates either an implementation error, a nonbalanced input, or a contained/low-denominator degeneration.
+
+8. Pseudocode
+def boundary_ledger(n, Q, k, t):
+    a = k + t
+    j = n - a
+    N = binomial(n, a)
+
+    K = [binomial(j, d) * binomial(a, d) for d in range(t)]
+    Jhat = sum(K[d] * Q**(t - d) for d in range(t))
+    Vhat = sum(K[d] * (Q**(t - d) - 1) for d in range(t))
+
+    lower_all_source = (N > Q * Jhat)
+    lower_all_sharp = (N > Q * Vhat)
+
+    paley_lb = ceil_div(Q * N, N + Vhat)
+    random_line_scale = min(Q, ceil_div(N, Q**(t - 1)))
+
+    return {
+        "a": a,
+        "j": j,
+        "N": N,
+        "Jhat": Jhat,
+        "Vhat": Vhat,
+        "all_slopes_source": lower_all_source,
+        "all_slopes_sharp": lower_all_sharp,
+        "paley_cloud_lower_bound": paley_lb,
+        "random_line_scale": random_line_scale,
+    }
+def support_family_system(field, L, E, B, k, supports):
+    # Variables:
+    #   w[x] for x in L
+    #   p[i,ell] for each support i and 0 <= ell < k
+    #   z[i] for each support i
+    #
+    # Rows encode:
+    #   w[x] - E(x)*sum_ell p[i,ell] x^ell - z[i]*B(x) = 0
+
+    M = sparse_matrix(field, nrows=sum(len(S) for S in supports),
+                      ncols=len(L) + len(supports)*k + len(supports))
+
+    # Fill M exactly.
+    # Return kernel and its projection to z-coordinates.
+    K = M.right_kernel()
+    Z = project_kernel_to_z_coordinates(K)
+    return K, Z
+def distinct_label_count(Z_basis, Q, h):
+    # Exact braid-arrangement inclusion-exclusion.
+    total = 0
+
+    for partition in set_partitions(range(h)):
+        constraints = []
+        for block in partition:
+            root = block[0]
+            for i in block[1:]:
+                constraints.append(z_coordinate(i) - z_coordinate(root))
+
+        dim_intersection = dimension_of_subspace_with_constraints(
+            Z_basis, constraints
+        )
+
+        mu = 1
+        for block in partition:
+            s = len(block)
+            mu *= (-1)**(s - 1) * factorial(s - 1)
+
+        total += mu * Q**dim_intersection
+
+    return total
+def search_counterexample(parameters, U):
+    ledger = boundary_ledger(**parameters)
+
+    # Immediate theorem-level obstruction.
+    if ledger["paley_cloud_lower_bound"] > U:
+        return "FALSIFIED_BY_BESSEL_PALEY"
+
+    for E in canonical_monic_denominators(parameters):
+        for B in canonical_projective_numerators(E, parameters):
+            if effective_denominator_degree(E, B) < parameters.t:
+                classify_as_low_denominator(E, B)
+                continue
+
+            for support_family in canonical_support_families(size=U + 1):
+                K, Z = support_family_system(
+                    field, L, E, B, k, support_family
+                )
+
+                if distinct_label_count(Z, Q, U + 1) == 0:
+                    continue
+
+                solution = extract_all_distinct_solution(K)
+                datum = recover_anchor_and_witnesses(solution)
+
+                classification = run_all_template_tests(datum)
+
+                if classification.is_unclassified:
+                    return make_high_cloud_certificate(datum, U)
+
+    return "CONFIRMED_EXHAUSTIVELY_FOR_THIS_FINITE_PARAMETER_SET"
+
+For challenge-size inputs, the final return value may only be UNRESOLVED unless the search covers a theorem-defined complete family or supplies a formal unsatisfiability certificate.
+
+CERTIFICATE_FORMAT
+1. Explicit high-cloud counterexample certificate
+certificate_version: "RES-CLOUD-1"
+
+claim:
+  theorem_id: "FINITE_BALANCED_APERIODIC_UPPER"
+  claimed_bound: U
+  template_policy_hash: "..."
+
+field:
+  characteristic: p
+  extension_degree: m
+  irreducible_modulus: [...]
+  element_encoding: "power_basis"
+
+domain:
+  alpha: ...
+  omega: ...
+  order: n
+  factorization_of_n: [...]
+  order_witnesses: [...]
+
+parameters:
+  Q: ...
+  k: ...
+  t: ...
+  a: ...
+  j: ...
+  N: ...
+  Jhat: ...
+  Vhat: ...
+  random_line_scale: ...
+
+datum:
+  E_coefficients: [...]
+  B_coefficients: [...]
+  anchor_values: [...]
+  normalization:
+    E_monic: true
+    B_projective_pivot: ...
+
+cloud:
+  distinct_slope_count: h
+  entries:
+    - slope: z
+      P_coefficients: [...]
+      support_bitset: ...
+      full_agreement_bitset: ...
+    - ...
+
+template_negative:
+  low_denominator:
+    degrees_tested: [0, ..., t-1]
+    kernel_rref_certificates: [...]
+    nonvanishing_arrangement_certificates: [...]
+
+  quotient_pullback:
+    divisors_tested: [...]
+    nonzero_high_frequency_witnesses: [...]
+
+  generalized_quotient:
+    rank_minor_witnesses: [...]
+
+  contained:
+    automatic_balanced_B_nonzero: true
+
+  same_witness:
+    witness_hashes: [...]
+    multiplicities: [...]
+
+  affine_clusters:
+    maximum_cluster_size: ...
+    cluster_scan_certificate: ...
+
+The verifier recomputes every field operation, support agreement, congruence
+
+EP
+z
+	​
+
++zB≡zB(modE),
+
+slope distinctness, cloud bound violation, and negative template test.
+
+2. Parametric challenge-size certificate
+
+When listing all slopes is impossible, the certificate may instead give:
+
+a finite parameter set T;
+an injective map z:T→F;
+formulas for P
+τ
+	​
+
+;
+a support predicate S
+τ
+	​
+
+(x);
+a proof that ∣S
+τ
+	​
+
+∣≥a;
+
+a symbolic identity
+
+w(x)=E(x)P
+τ
+	​
+
+(x)+z(τ)B(x)(x∈S
+τ
+	​
+
+);
+an exact count ∣T∣>U;
+an injectivity certificate for z(τ).
+
+Polynomial identities can be certified modulo the field equations and the parameter-set vanishing polynomial. Quotient-union constructions should record the quotient index set and boundary set explicitly.
+
+3. Template classification certificate
+
+A positive template certificate has one of the following payloads.
+
+Quotient pullback
+type: "QUOTIENT_PULLBACK"
+M: ...
+kernel_generator: kappa
+quotient_map: "(x/alpha)^M"
+codeword_shift_f: [...]
+codeword_shift_g: [...]
+descended_f_values: [...]
+descended_g_values: [...]
+
+The verifier checks that the shifted words are constant on K
+M
+	​
+
+-orbits.
+
+Twisted datum pullback
+type: "TWISTED_DATUM_PULLBACK"
+M: ...
+character_exponent: r
+E0: [...]
+B0: [...]
+anchor_codeword_shift: [...]
+descended_anchor_values: [...]
+Low denominator
+type: "LOW_DENOMINATOR"
+effective_degree: e
+E_prime: [...]
+U: [...]
+quotient_R: [...]
+remainder_B_prime: [...]
+
+The verifier checks
+
+E
+′
+g=U=E
+′
+R−B
+′
+
+on every domain point.
+
+Contained
+type: "CONTAINED_SUPPORT"
+slope: z
+support: ...
+A_coefficients: [...]
+G_coefficients: [...]
+Same witness
+type: "SAME_WITNESS_CLUSTER"
+slope: z
+Q_coefficients: [...]
+full_agreement_set: ...
+support_multiplicity: binomial(r_Q, a)
+
+This certifies support multiplicity, not a multi-slope exception.
+
+Affine/tangent cluster
+type: "AFFINE_WITNESS_CLUSTER"
+P_base: [...]
+P_direction: [...]
+slopes: [...]
+selected_supports: [...]
+common_core: ...
+
+The verifier checks all witnesses and the bound
+
+∣Γ∣≤⌊
+a−c
+n−c
+	​
+
+⌋.
+4. Exhaustive upper-confirmation certificate
+
+For a small parameter tuple, a complete confirmation certificate must contain:
+
+the canonical enumeration rules for E,B;
+orbit representatives and orbit sizes;
+for every non-template pair (E,B), every canonical support family of size U+1;
+a proof that its projected label space has zero all-distinct count;
+a checksum or Merkle root over the deterministically ordered cases;
+a total-orbit count matching the independently computed number of normalized inputs.
+
+Random search, failure to find an example, or testing only monomial anchors is not confirmation.
+
+EXPECTED_FAILURE_MODES
+
+The opposite of the all-slope inequality is not a safe regime.
+The range
+
+(
+k+t
+n
+	​
+
+)≤Q
+t+1
+J
+
+still contains anchors with large clouds. The exact Paley test must be run before any upper claim.
+
+Omitting N/Q
+t−1
+.
+At Q
+t
+=N, the random line-occupancy scale is Q. An immediate n
+1+o(1)
+ upper at Δ=0 is not a finite matching theorem.
+Denominator-only quotient classification.
+E(X)=E
+0
+	​
+
+(X
+M
+) is coordinate-dependent and insufficient. Twisted pullbacks, codeword gauges, and quotient-invariant line syndromes must be tested.
+Hidden effective denominator.
+gcd(E,B)=1 does not imply denominator minimality on L. Cancellation can occur modulo X
+n
+−α
+n
+ or after adding a degree-<k polynomial direction.
+Counting supports instead of slopes.
+Codeword anchors and overagreement witnesses can produce (
+a
+r
+Q
+	​
+
+	​
+
+) supports for one slope. Raw support-fiber bounds are the wrong upper object.
+Treating same-witness clusters as a multi-slope obstruction.
+This is impossible for B
+
+=0. A literal common Q fixes the slope.
+Failing to separate affine witness clusters.
+Tangent packets may contain Θ(j) slopes, but in the balanced stratum one affine packet has the exact bound j+1.
+Incorrect field ledger.
+The field in Q
+t
+ must be the residue/line field in which w,E,B,z live. The domain’s generated field, a base field, and a protocol challenge extension cannot be substituted without a transfer theorem.
+Quotient double counting.
+A datum can satisfy several quotient tests. Packet bounds must use an exact union or a deliberately safe sum.
+Assuming E is split or squarefree.
+The residue algebra may contain nilpotents. The linear tests above do not require splitting and should be used instead of CRT-only logic.
+Finite rounding errors.
+Use a=k+t, integer binomial coefficients, and exact comparisons. Do not decide challenge claims from floating entropy approximations.
+Unproved t≤σ normalization in a full-MCA assembly.
+The packet splits t<σ into residual-list cases and t=σ into the balanced wall. To promote this to the full normal-form maximum, one must also prove that relevant minimal denominators can be taken with t≤σ, or separately control t>σ.
+EXACT_NEW_WALL
+
+Let
+
+W
+E,B
+	​
+
+=F
+L
+/(E⋅RS[F,L,k]+F⋅B).
+
+For every support S∈(
+a
+L
+	​
+
+), project the residue map to
+
+R
+S
+	​
+
+:W
+E,B
+	​
+
+⟶A
+E
+	​
+
+/F[B].
+
+A support succeeds for an anchor class 
+w
+ˉ
+ exactly when
+
+R
+S
+	​
+
+(
+w
+ˉ
+)=0.
+
+On that kernel, R
+S
+	​
+
+(w)=z
+S
+	​
+
+B determines a unique label z
+S
+	​
+
+, up to a common translation caused by the quotient w∼w+cB.
+
+The missing theorem is the following finite labelled-subspace-design statement:
+
+Exact residue-line occupancy inverse lemma.
+For every denominator-minimal, quotient-aperiodic pair (E,B) in the corrected reserve range and every anchor class 
+w
+ˉ
+,
+
+#{z
+S
+	​
+
+:S∈(
+a
+L
+	​
+
+), 
+R
+S
+	​
+
+(
+w
+ˉ
+)=0}≤⌈
+Q
+t−1
+(
+a
+n
+	​
+
+)
+	​
+
+⌉+A
+θ
+	​
+
+(n),
+
+unless the successful witnesses contain an explicitly certified quotient-pullback or affine/tangent packet.
+
+Equivalently, for
+
+h>⌈
+Q
+t−1
+N
+	​
+
+⌉+A
+θ
+	​
+
+(n),
+
+every h-support linear system whose label projection contains an all-distinct vector must force one of:
+
+lower effective denominator,quotient symmetry,affine/tangent rank defect,a new explicitly defined template.
+
+Pair-rank information and second moments do not prove this: they control average anchors and establish the lower branch. The new input must classify higher-order rank deficiencies of the support-family linear system.
+
+Do you see a route to a full solve? If yes, what is the next exact lemma or construction? Yes. The next exact lemma is a support-family rank-defect classification: prove that an all-distinct label projection of size exceeding R
+line
+	​
+
++A
+θ
+	​
+
+(n) forces either a lower denominator, a quotient-invariant high-frequency syndrome, or an affine witness packet. The anchor-free linear system above is the exact object on which to prove or finitely falsify that lemma.
