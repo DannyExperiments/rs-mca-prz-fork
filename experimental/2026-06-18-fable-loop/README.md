@@ -1504,3 +1504,12 @@ Cycle 54 t=2 determinantal quadric audit:
   `e_1(T),...,e_j(T)`.
 - New wall: `W-MCA-T2-DETERMINANTAL-QUADRIC-SPLIT-COUNT`.
 - Next target: `W-MCA-T2J2-DETERMINANTAL-CONIC-SPLIT-PAIR-COUNT`.
+
+Cycle 55 staged prompt:
+
+- `prompts/20260619_cycle55_t2j2_determinantal_conic_split_pair.md`
+- Status: `STAGED_PROMPT / NOT_RUN`.
+- Target: `W-MCA-T2J2-DETERMINANTAL-CONIC-SPLIT-PAIR-COUNT`.
+- Purpose: ask for a proof, source-valid counterpacket, or sharper reduction
+  for the smallest open `t=2` case: split pairs `{s,s'}` on the determinantal
+  conic `D(s+s',ss')=0` after quotient/tangent packets are removed.

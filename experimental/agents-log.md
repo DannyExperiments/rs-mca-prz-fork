@@ -1621,3 +1621,19 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Stage `W-MCA-T2J2-DETERMINANTAL-CONIC-SPLIT-PAIR-COUNT`,
   the smallest open case: count split pairs `{s,s'}` on one conic after
   quotient/imprimitive pairs are removed.
+
+### 2026-06-19 - Cycle 55 t=2,j=2 conic prompt staged
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/prompts/20260619_cycle55_t2j2_determinantal_conic_split_pair.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** STAGED_PROMPT / AUDIT.
+- **What is being added:** A focused prompt for
+  `W-MCA-T2J2-DETERMINANTAL-CONIC-SPLIT-PAIR-COUNT`, the smallest open
+  subcase after Cycle54 proved `j=1`.
+- **How it is useful:** It asks the next worker to prove the conic split-pair
+  count, produce a source-valid aperiodic counterpacket, or reduce it to an
+  exact Weil/Stepanov-style character-sum statement.
+- **What to do next:** Launch via artifact stream, preserve the raw response,
+  and audit conservatively.
