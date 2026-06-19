@@ -29,6 +29,31 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 59 5.5/5.6 route-repair audit
+
+- **Agent/model:** Codex auditing nine external 5.5/5.6 theorem-worker lanes.
+- **Files added or changed:** `experimental/notes/m1/m1_cycle59_5p6_route_repair_audit.md`,
+  `experimental/notes/m1/cycle59_5p6_raw/`,
+  `experimental/notes/m1/cycle59_homerun_packet/`,
+  `experimental/notes/m1/cycle60_find_the_theorem_packet/`, and
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / EXPERIMENTAL, with COUNTERPACKET and BANKABLE_LEMMA
+  subresults.
+- **What is being added:** A conservative synthesis of the Cycle 59
+  theorem-worker responses, raw response preservation with checksums, and a
+  follow-up prompt packet targeting the corrected finite container theorem.
+- **How it is useful:** Expands the quotient ledger from monomial
+  `X -> X^M` action rank to projective/split-rational quotient action rank,
+  banks the exact jet-residue bridge for `t < sigma`, cuts pure
+  Kronecker-section extraction and high-denominator compression shortcuts, and
+  sharpens the MCA wall to a finite canonical hereditary affine-secant
+  container theorem.
+- **What to do next:** Attack
+  `W-MCA-PROJECTIVE-SPLIT-RATIONAL-ACTION-RANK-INVERSE`,
+  `W-MCA-QAR-FIXED-DEFECT-COVER`, and the primitive finite affine-secant
+  container bound, while keeping the scalar full-support list container as a
+  parallel wall.
+
 ### 2026-06-20 - Cycle 58 5.5 Pro upper-wall audit
 
 - **Agent/model:** Codex auditing nine external 5.5 Pro lanes.
