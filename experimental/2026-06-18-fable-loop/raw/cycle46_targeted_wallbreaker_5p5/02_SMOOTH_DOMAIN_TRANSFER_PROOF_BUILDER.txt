@@ -1,0 +1,774 @@
+## Verdict
+
+**Yes—for the smooth-domain MCA branch, the random-anchor mechanism transfers directly.** The additive structure of (D=\mathbb F_p) is not used by the pair-rank proof. It works for every evaluation set (L\subseteq F).
+
+The important correction to the Cycle 45 audit is that a **constant** near-diagonal shell bound is unnecessary. Even when (q_{\rm line}=q_{\rm gen}), the shell loss is at most (\exp(O(\sqrt n))), hence subexponential. The entropy surplus still wins in every strict range.
+
+This gives two distinct conclusions:
+
+1. Keeping the quadratic ledger
+   [
+   B=\mathbb F_p,\qquad F=\mathbb F_{p^2},\qquad
+   q_{\rm gen}=p,\qquad q_{\rm line}=p^2,
+   ]
+   one can transfer the (C<H_2(\rho)/2) theorem to genuinely multiplicative, smooth domains (L\subset F^\times) satisfying (B(L)=F).
+
+2. If the intended generated-domain ledger is instead (B=F), so (q_{\rm gen}=q_{\rm line}), the same argument gives the stronger threshold
+   [
+   C<H_2(\rho)
+   ]
+   without any Frobenius-compression lemma.
+
+If the target insists simultaneously on the fixed quadratic ledger and the (C<H_2(\rho)) normalization relative to (\log p), then direct random anchors do hit an exact first-moment obstruction. The required next statement is a compressed-marginal pair-rank lemma described below.
+
+This does not address the (m)-interleaved list-size problem.
+
+---
+
+# 1. The pair-rank theorem is domain-free
+
+Let (F=\mathbb F_Q), let (L\subset F) have cardinality (n), and let (E\in F[X]) have degree (t) and be nonzero on (L). Put
+
+[
+A=F[X]/(E),\qquad \dim_F A=t.
+]
+
+Fix (a\ge t). For (T\subset L) with (|T|=j=n-a), put (S=L\setminus T), and define
+
+[
+R_T(w)=\big[\operatorname{interp}_{S}(w|_S)\big]_E,
+\qquad w\in F^L.
+]
+
+Take (T,T'), with corresponding (S,S'), and write
+
+[
+r=|T\setminus T'|=|S\setminus S'|,
+\qquad
+\mathcal C=S\cap S',
+\qquad |\mathcal C|=a-r.
+]
+
+Then
+
+[
+\operatorname{im}(R_T,R_{T'})
+=============================
+
+\left{(u,v)\in A^2:
+u-v\in [L_{\mathcal C}F[X]_{<r}]_E
+\right}.
+]
+
+Consequently,
+
+[
+\boxed{
+\operatorname{rank}*F(R_T,R*{T'})
+=t+\min(t,r).
+}
+]
+
+### Proof
+
+If
+
+[
+f=\operatorname{interp}*S(w),\qquad
+g=\operatorname{interp}*{S'}(w),
+]
+
+then (f-g) vanishes on (\mathcal C). Since (\deg f,\deg g<a),
+
+[
+f-g=L_{\mathcal C}h,\qquad \deg h<r.
+]
+
+This gives the image inclusion.
+
+Conversely, suppose
+
+[
+u-v=[L_{\mathcal C}h]_E,\qquad \deg h<r.
+]
+
+Choose the degree-(<t) representative (f) of (u), and set
+
+[
+g=f-L_{\mathcal C}h.
+]
+
+Both (f) and (g) have degree (<a), and they agree on (\mathcal C). Hence one can define a word (w) on (S\cup S') by (f) on (S) and (g) on (S'). This word satisfies (R_T(w)=u) and (R_{T'}(w)=v).
+
+Finally, ([L_{\mathcal C}]_E) is a unit because (E) has no roots in (L). Therefore
+
+[
+\dim_F[L_{\mathcal C}F[X]_{<r}]_E
+=\min(t,r).
+]
+
+Nothing here uses additive closure, a subfield domain, (X^p-X), constant derivatives, or symmetric-function identities.
+
+---
+
+# 2. Exact random-anchor theorem for an arbitrary domain
+
+Fix (0\ne b\in A), and for (z\in F) define
+
+[
+\nu_w(z)
+========
+
+#{T\in \tbinom Lj:R_T(w)=zb}.
+]
+
+Put
+
+[
+N=\binom nj,\qquad
+\lambda=\frac{N}{Q^t}.
+]
+
+For every (z),
+
+[
+\mathbb E_w\nu_w(z)=\lambda.
+]
+
+For fixed (T), the number of (T') at exchange distance (r) is
+
+[
+K_r=\binom jr\binom ar.
+]
+
+The domain-free rank theorem gives
+
+[
+\Pr(R_T(w)=zb,\ R_{T'}(w)=zb)
+=============================
+
+Q^{-t-\min(t,r)}.
+]
+
+Since pairs with (r\ge t) are exactly independent, one obtains the exact variance formula
+
+[
+\operatorname{Var}\nu_w(z)
+==========================
+
+\lambda
+\sum_{r=0}^{t-1}
+K_r\bigl(Q^{-r}-Q^{-t}\bigr).
+]
+
+In particular,
+
+[
+\operatorname{Var}\nu_w(z)
+\le
+\lambda,\mathcal J,
+]
+
+where
+
+[
+\mathcal J
+==========
+
+\sum_{r=0}^{t-1}
+\binom ar\binom jrQ^{-r}.
+]
+
+The shell factor satisfies
+
+[
+\begin{aligned}
+\mathcal J
+&\le
+\sum_{r\ge0}
+\frac{(aj/Q)^r}{(r!)^2}  \
+&\le
+\exp!\left(2\sqrt{\frac{aj}{Q}}\right) \
+&\le
+\exp!\left(\frac{n}{\sqrt Q}\right).
+\end{aligned}
+]
+
+Because (L\subset F), necessarily (n\le Q), so universally
+
+[
+\boxed{\mathcal J\le e^{\sqrt n}.}
+]
+
+This is the key replacement for the constant (C_*) in Cycle 45.
+
+A constant bound is convenient but not needed.
+
+---
+
+# 3. Finite all-slope criterion
+
+Chebyshev gives
+
+[
+\Pr_w(\nu_w(z)=0)
+\le
+\frac{\operatorname{Var}\nu_w(z)}{\lambda^2}
+\le
+\frac{\mathcal J}{\lambda}.
+]
+
+Therefore
+
+[
+\Pr_w(\text{some slope is missing})
+\le
+\frac{Q\mathcal J}{\lambda}
+===========================
+
+\frac{Q^{t+1}\mathcal J}{N}.
+]
+
+Hence:
+
+[
+\boxed{
+\binom nj
+
+>
+
+Q^{t+1}
+\exp!\left(\frac{n}{\sqrt Q}\right)
+\quad\Longrightarrow\quad
+\exists w\in F^L
+\text{ for which every }z\in F\text{ occurs}.
+}
+]
+
+More precisely, the sharper sufficient condition is
+
+[
+\binom nj>Q^{t+1}\mathcal J.
+]
+
+Even without the factor (Q), averaging gives an anchor with missing-slope fraction at most
+
+[
+\frac{\mathcal J}{\lambda}
+==========================
+
+\frac{Q^t\mathcal J}{\binom nj}.
+]
+
+Thus near-total slope coverage requires only (\lambda/\mathcal J\to\infty); total coverage follows when (Q\mathcal J/\lambda\to0).
+
+---
+
+# 4. The correct ledger invariant
+
+The quantity controlling the entropy calculation is not (C) by itself. It is
+
+[
+\Theta_n
+========
+
+\frac{t\log_2q_{\rm line}}{n}.
+]
+
+Take
+
+[
+k=\lfloor\rho n\rfloor,\qquad
+a=k+t,\qquad
+j=n-a.
+]
+
+When (t=o(n)),
+
+[
+\log_2\binom nj
+===============
+
+\bigl(H_2(\rho)+o(1)\bigr)n.
+]
+
+The finite criterion has logarithmic right-hand side
+
+[
+t\log_2q_{\rm line}
++\log_2q_{\rm line}
++O!\left(\frac n{\sqrt{q_{\rm line}}}\right).
+]
+
+Consequently, whenever
+
+[
+\log q_{\rm line}=o(n)
+]
+
+and
+
+[
+\Theta_n<H_2(\rho)-\varepsilon,
+]
+
+all slopes occur for a suitable anchor.
+
+Now preserve the two field ledgers. Let
+
+[
+B=\mathbb F_{q_{\rm gen}},\qquad
+F=\mathbb F_{q_{\rm line}},
+\qquad
+q_{\rm line}=q_{\rm gen}^{,m}.
+]
+
+If
+
+[
+t=\left(C+o(1)\right)\frac{n}{\log_2q_{\rm gen}},
+]
+
+then
+
+[
+\Theta_n=mC+o(1).
+]
+
+Therefore the direct random-anchor threshold is
+
+[
+\boxed{
+mC<H_2(\rho).
+}
+]
+
+This recovers both relevant specializations:
+
+[
+\begin{array}{c|c|c}
+\text{ledger}&m&\text{threshold}\ \hline
+B=\mathbb F_p,\ F=\mathbb F_{p^2}&2&C<H_2(\rho)/2\
+B=F=\mathbb F_q&1&C<H_2(\rho).
+\end{array}
+]
+
+Thus the loss of the constant shell bound when (m=1) does **not** prevent the (H_2(\rho)) threshold. The shell loss is only (2^{o(n)}).
+
+---
+
+# 5. A concrete smooth, generated, quadratic-ledger construction
+
+The following keeps exactly the packet’s fields:
+
+[
+B=\mathbb F_p,\qquad
+F=\mathbb F_{p^2},\qquad
+q_{\rm gen}=p,\qquad
+q_{\rm line}=p^2.
+]
+
+Take
+
+[
+n=2^s.
+]
+
+Choose a prime (p) satisfying
+
+[
+p\equiv-1\pmod n
+]
+
+and (p\le n^{O(1)}). Such a choice is supplied unconditionally by the quantitative least-prime theorem for arithmetic progressions.
+
+Because (n\mid p+1), the norm-one group
+
+[
+H={x\in\mathbb F_{p^2}^{\times}:x^{p+1}=1}
+]
+
+contains a subgroup (L) of order (n). Then:
+
+* (L) is a power-of-two smooth multiplicative domain.
+* (L\not\subset\mathbb F_p^\times), because
+  [
+  |L\cap\mathbb F_p^\times|
+  \mid\gcd(n,p-1)=2.
+  ]
+* Hence
+  [
+  \mathbb F_p(L)=\mathbb F_{p^2}.
+  ]
+  Thus the domain genuinely generates the line field over (B).
+* Since (p\le n^{O(1)}),
+  [
+  \log p=o(n).
+  ]
+* In fact (n\le p+1), so
+  [
+  \mathcal J
+  \le
+  \exp(n/p)
+  =========
+
+  O(1).
+  ]
+
+For fixed (0<\rho<1) and
+
+[
+C<\frac{H_2(\rho)}2,
+]
+
+take
+
+[
+k=\lfloor\rho n\rfloor,\qquad
+t=\left\lfloor\frac{Cn}{\log_2p}\right\rfloor.
+]
+
+Then
+
+[
+\log_2\lambda
+=============
+
+# \log_2\binom nj-2t\log_2p
+
+\bigl(H_2(\rho)-2C+o(1)\bigr)n.
+]
+
+Since (p^2=2^{o(n)}), the finite all-slope criterion holds. Therefore some anchor has all (p^2) slopes.
+
+This is a direct smooth/generated transfer of the restricted theorem, with no Frobenius-compression assumption.
+
+---
+
+# 6. Source-valid residue datum and MCA conclusion
+
+Choose a degree-(t) irreducible polynomial
+
+[
+E\in F[X]
+]
+
+and take
+
+[
+B_{\rm num}=1,\qquad b=[1]_E.
+]
+
+An irreducible (E) of degree (t\ge2) has no roots in (F), hence none in (L). For the good anchor (w), every slope (z\in F) has some (T_z) with
+
+[
+R_{T_z}(w)=zb.
+]
+
+Let
+
+[
+S_z=L\setminus T_z,\qquad
+Q_z=\operatorname{interp}_{S_z}(w).
+]
+
+Then
+
+[
+\deg Q_z<|S_z|=k+t,
+]
+
+[
+Q_z\equiv zB_{\rm num}\pmod E,
+]
+
+and
+
+[
+Q_z=w\quad\text{on }S_z.
+]
+
+Noncontainment is automatic. Indeed, if some (G\in F[X]_{<k}) agreed with (-1/E) on (S_z), then
+
+[
+EG+1
+]
+
+would have (k+t) roots but degree (<k+t), forcing (EG+1=0), which is impossible.
+
+Because (L\subset F^\times), the polynomial (X^{n-k}) is nonzero on (L), so the exact residue-line normal form applies. At
+
+[
+\delta
+======
+
+# 1-\frac{k+t}{n}
+
+1-\rho-\frac{C}{\log_2p}+O(n^{-1}),
+]
+
+one obtains
+
+[
+\Lambda^{\rm NC}_{t,\delta}(L,k)=p^2,
+]
+
+and hence
+
+[
+\boxed{
+\operatorname{emca}
+\bigl(\operatorname{RS}[F,L,k],\delta\bigr)=1.
+}
+]
+
+Subject to the official domain-family admissibility, this closes the primary smooth/generated-domain wall in the (C<H_2(\rho)/2) range.
+
+---
+
+# 7. Exact obstruction to reaching (C<H_2(\rho)) with the fixed quadratic ledger
+
+For a full-(F) random anchor, every marginal map
+
+[
+R_T:F^L\longrightarrow A
+]
+
+is surjective. Therefore, for every fixed slope,
+
+[
+\Pr(R_T(w)=zb)
+==============
+
+# |A|^{-1}
+
+p^{-2t}.
+]
+
+This is a first-moment fact. It is independent of:
+
+* additive versus multiplicative domains;
+* smoothness;
+* Frobenius action;
+* the strength of the pair-rank estimate.
+
+Thus, with
+
+[
+t\sim\frac{Cn}{\log_2p},
+]
+
+the mean per slope is
+
+[
+\lambda
+=======
+
+# \binom njp^{-2t}
+
+2^{(H_2(\rho)-2C+o(1))n}.
+]
+
+No improvement of the near-pair estimate changes the coefficient (2C). Consequently, the direct full-(F) random-anchor route cannot reach (C>H_2(\rho)/2).
+
+This is the exact obstruction.
+
+---
+
+# 8. Smallest lemma needed for quadratic-ledger compression
+
+A sufficient next lemma is the following.
+
+## Compressed pair-rank lemma
+
+There exist:
+
+[
+E\in F[X],\qquad
+A=F[X]/E,\qquad
+0\ne b\in A,
+]
+
+a (B)-linear subspace
+
+[
+U\subset A,
+\qquad
+\dim_B U=t+1,
+\qquad
+Fb\subset U,
+]
+
+and a (B)-linear anchor ensemble (\mathcal W\subset F^L), such that for every relevant (T),
+
+[
+R_T(\mathcal W)=U,
+]
+
+and, whenever (r=|T\setminus T'|),
+
+[
+\operatorname{rank}*B
+\left(
+w\mapsto(R_T(w),R*{T'}(w))
+\bigm|_{\mathcal W}
+\right)
+\ge
+(t+1)+\min(t+1,r).
+]
+
+A slightly weaker probabilistic formulation would suffice:
+
+[
+\Pr_{\mathcal W}(R_T(w)=zb)=p^{-(t+1)}
+]
+
+and
+
+[
+\Pr_{\mathcal W}
+(R_T(w)=zb,\ R_{T'}(w)=zb)
+\le
+p^{-(t+1)-\min(t+1,r)}.
+]
+
+Then the same shell calculation, now over (B), gives mean
+
+[
+\lambda_{\rm comp}
+==================
+
+\frac{\binom nj}{p^{t+1}},
+]
+
+and all (p^2) slopes whenever
+
+[
+\binom nj
+
+>
+
+p^{t+3}
+\exp!\left(2\sqrt{\frac{aj}{p}}\right).
+]
+
+For (n=p^{1+o(1)}) or (p=n^{O(1)}), the extra factors are subexponential, giving precisely
+
+[
+C<H_2(\rho).
+]
+
+This is the minimal theorem that changes the first-moment exponent from (2t) to (t+1).
+
+---
+
+# 9. Most concrete Frobenius candidate—and its obstruction
+
+On the norm-one domain, Frobenius acts by
+
+[
+x^p=x^{-1}.
+]
+
+Take (E\in B[X]), so
+
+[
+A\simeq F\otimes_B A_B,
+\qquad A_B=B[X]/E.
+]
+
+Choose (\alpha\in F\setminus B) and (b\in A_B). The natural target is
+
+[
+U=A_B\oplus B\alpha b,
+]
+
+which has dimension (t+1) over (B) and contains
+
+[
+Fb=Bb\oplus B\alpha b.
+]
+
+A particularly small construction lemma would be:
+
+> Find a (B)-valued anchor (h:L\to B) and a balanced map
+> (\eta:\binom Lj\to B) such that
+> [
+> R_T^B(h)=\eta(T)b
+> ]
+> for every (T), with the fibers of (\eta) satisfying Johnson-shell anticollision.
+
+Then, for a random (B)-valued anchor (w_0), set
+
+[
+w=w_0+\alpha h.
+]
+
+For (z=x+\alpha y),
+
+[
+R_T(w)=zb
+]
+
+is equivalent to
+
+[
+\eta(T)=y,\qquad R_T^B(w_0)=xb.
+]
+
+Balanced (\eta)-fibers contribute a factor (p^{-1}), while the random (B)-anchor contributes (p^{-t}), yielding the desired (p^{-(t+1)}) fixed-slope density.
+
+However, there is an exact adjacent-support obstruction. If
+
+[
+S=\mathcal C\cup{x},
+\qquad
+S'=\mathcal C\cup{y},
+]
+
+then
+
+[
+I_S(h)-I_{S'}(h)=\gamma L_{\mathcal C}
+]
+
+for some (\gamma\in B). Therefore
+
+[
+(\eta(S)-\eta(S'))b
+===================
+
+\gamma[L_{\mathcal C}]_E.
+]
+
+Hence (\eta) can change across this Johnson edge only when
+
+[
+[L_{\mathcal C}]_E\in Bb.
+]
+
+So a balanced nonconstant (\eta) requires the exceptional cores
+
+[
+\left{
+\mathcal C:
+[L_{\mathcal C}]_E\in Bb
+\right}
+]
+
+to form a large cut structure in the Johnson graph. For generic (E,b), this should be far too sparse. Multiplicative or Frobenius structure would have to force precisely this exceptional projective-locator concentration.
+
+That is the exact obstruction to the most obvious compressed construction.
+
+---
+
+## Bottom line
+
+* **Pair-rank transfer:** complete; valid for arbitrary (L).
+* **Random-anchor L2 transfer:** complete; the shell loss is at most (e^{\sqrt n}).
+* **Smooth/generated quadratic-ledger construction:** available via power-of-two norm-one subgroups; gives all (p^2) slopes for (C<H_2(\rho)/2).
+* **Single-field generated ledger (B=F):** the same mechanism gives (C<H_2(\rho)).
+* **Fixed quadratic ledger at (C<H_2(\rho)):** requires compressed marginal dimension (t+1); pair-rank alone cannot supply it.
+* **Interleaved list challenge:** untouched.
+
+**Confidence:** high on the domain-free rank theorem, finite variance formula, shell estimate, and smooth norm-one transfer; moderate on whether that construction meets every unstated official admissibility convention; unknown on the compressed Frobenius lemma.

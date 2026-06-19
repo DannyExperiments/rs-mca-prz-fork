@@ -1240,3 +1240,28 @@ Cycle 45 deep literature audit:
   `W-F1-AA-RES-SMOOTH-DOMAIN-ADMISSIBILITY`,
   `W-F1-AA-RES-FROBENIUS-COMPRESSED-LANDING`, and
   `W-F1-LIST-INTERLEAVED-BRIDGE`.
+
+Cycle 46 targeted wallbreaker 5.5 Pro audit:
+
+- `raw/cycle46_targeted_wallbreaker_5p5/`
+- `audits/20260619_CYCLE46_TARGETED_WALLBREAKER_AUDIT.md`
+- Status: `PROOF_CANDIDATE / BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL /
+  AUDIT`.
+- New major claim: the Cycle45 pair-rank lemma is domain-free. For arbitrary
+  `D subset F_Q`, the exact same image/rank proof gives
+  `rank_F(R_T,R_T') = t + min(t, |T\T'|)`.
+- New scalar-MCA route: replace the constant near-shell bound by the
+  domain-uniform Bessel/shell factor
+  `J <= exp(2 sqrt(aj/Q)) <= exp(n/sqrt(Q))`. This is subexponential when
+  `Q >= n`, so smooth prime-field multiplicative subgroups with
+  `log q=o(n)` should give `emca=1` in the strict range `c < H_2(rho)`.
+- Route cut: `W-F1-AA-RES-FROBENIUS-COMPRESSED-LANDING` is no longer the
+  preferred scalar-MCA wall unless the official challenge disallows the
+  prime-field smooth-subgroup route or forces the quadratic extension ledger.
+- New preferred scalar walls:
+  `W-F1-AA-RES-DOMAIN-UNIFORM-BESSEL-MOMENT` and
+  `W-F1-AA-SMOOTH-PRIME-SUBGROUP-MCA-COUNTERPACKET`.
+- List-side update: a direct `m`-anchor zero-residue construction gives a
+  column-distance interleaved list lower bound with exponent
+  `H_2(rho)-m c`, but this may be ordinary volume behavior rather than a full
+  grand list-decoding threshold.

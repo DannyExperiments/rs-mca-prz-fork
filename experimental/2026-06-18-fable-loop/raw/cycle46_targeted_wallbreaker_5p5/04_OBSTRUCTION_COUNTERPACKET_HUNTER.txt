@@ -1,0 +1,450 @@
+According to a document from June 19, 2026, the post-literature wall is probably misidentified. **I do not see a source-valid obstruction to transferring the Cycle45 mechanism to smooth multiplicative domains.** I see:
+
+1. a high-confidence route to the full smooth/generated **MCA counterexample branch**, reaching (C<H_2(\rho)), and
+2. a separate, source-correct construction for the (m)-interleaved list problem, giving exponential lists when (C<H_2(\rho)/m).
+
+This is not yet a Proximity Prize claim: the official normalization and exact interleaved-list target still need to be matched verbatim.
+
+## 1. The pair-rank mechanism is domain-free
+
+The additive structure of (D=\mathbb F_p) is not used in the Cycle45 rank lemma.
+
+Let (F=\mathbb F_q), let (D\subset F) be any set of (n) distinct elements, and let (E\in F[X]) have degree (t) and be nonzero on (D). Put
+[
+A=F[X]/(E).
+]
+For (S\subset D), (|S|=a\ge t), define
+[
+R_S(w)=[\operatorname{interp}_S(w)]_E.
+]
+
+For two (a)-sets (S,S'), set
+[
+C=S\cap S',\qquad r=|S\setminus S'|,
+\qquad L_C(X)=\prod_{c\in C}(X-c).
+]
+
+Then the exact joint image is
+[
+\operatorname{Im}(R_S,R_{S'})
+=============================
+
+\left{(u,v)\in A^2:
+u-v\in [L_CF[X]_{<r}]_E\right}.
+]
+
+Indeed, the two interpolation polynomials agree on (C), so their difference is (L_CH) with (\deg H<r). Conversely, given (v\in A) and such an (H), choose the degree-(<t) representative (V) of (v), put
+[
+U=V+L_CH,
+]
+and prescribe (w=U) on (S), (w=V) on (S'). These prescriptions agree on (C).
+
+Because (E(c)\ne0) for (c\in C), ([L_C]*E) is a unit. Therefore
+[
+\dim_F[L_CF[X]*{<r}]_E=\min(t,r)
+]
+and hence
+[
+\boxed{\operatorname{rank}*F(R_S,R*{S'})
+=t+\min(t,r).}
+]
+
+No additive closure, subfield structure, or identity involving (L_D=X^p-X) occurs. The Cycle44 symmetric-function representation was additive-domain-specific; the Cycle45 pair-rank theorem is not.
+
+## 2. Losing the constant variance factor over (\mathbb F_p) is harmless
+
+Let (a=k+t), (j=n-a), (N=\binom nj), and fix (0\ne b\in A). For a uniformly random anchor (w\in F^D), define
+[
+\nu_w(z)=
+#\left{T\in\binom Dj:
+R_{D\setminus T}(w)=zb\right},
+\qquad
+\lambda=\frac{N}{q^t}.
+]
+
+The domain-free rank identity gives the exact variance estimate
+[
+\operatorname{Var}\nu_w(z)
+==========================
+
+\lambda
+\sum_{0\le r<t}
+\binom ar\binom jr
+\left(q^{-r}-q^{-t}\right)
+\le \lambda\kappa,
+]
+where
+[
+\kappa=
+\sum_{0\le r<t}
+\binom ar\binom jr q^{-r}.
+]
+
+Consequently,
+[
+\mathbb E_w
+\sum_{z\in F}\bigl(\nu_w(z)-\lambda\bigr)^2
+\le q\lambda\kappa.
+]
+Some deterministic anchor therefore satisfies this bound. For that anchor,
+[
+#{\text{missing slopes}}
+\le \frac{q\kappa}{\lambda},
+]
+so every slope occurs whenever
+[
+\boxed{\lambda>q\kappa.}
+]
+
+The Cycle46 packet correctly observes that replacing (q_{\rm line}=p^2) by (q_{\rm line}=p) destroys the **constant** bound (\kappa=O(1)). But constancy is unnecessary. Since (a+j=n) and (n\le q),
+[
+\begin{aligned}
+\kappa
+&\le
+\sum_{r\ge0}
+\frac{(aj/q)^r}{(r!)^2}  \
+&=I_0!\left(2\sqrt{aj/q}\right)\
+&\le \exp!\left(2\sqrt{aj/q}\right)
+\le e^{\sqrt n}.
+\end{aligned}
+]
+Thus
+[
+\log_2\kappa=O(\sqrt n)=o(n).
+]
+
+So the loss is subexponential. In the strict entropy interior, (\lambda) is exponentially large and completely dominates (q\kappa). The claimed “constant-series wall” is an artifact, not an obstruction.
+
+## 3. Exact smooth/generated construction
+
+The source excerpt explicitly discusses prime-field multiplicative subgroups, including power-of-two subgroups, as smooth domains; it also says the residue-line exact normal form is automatic for multiplicative domains. See `04_SOURCE_DEFINITIONS_EXCERPT.md`, especially lines 24 and 56–60, in the [Cycle46 packet](sandbox:/mnt/data/cycle46_targeted_wallbreaker_packet%288%29.zip).
+
+Here is an unconditional infinite-family construction, using the standard Linnik theorem.
+
+Take
+[
+n_s=2^s.
+]
+Choose a prime
+[
+p_s\equiv1\pmod{2n_s}
+]
+with
+[
+p_s\le (2n_s)^L
+]
+for an absolute Linnik constant (L). Let
+[
+F=\mathbb F_{p_s},
+\qquad
+D\le F^\times
+]
+be the unique subgroup of order (n_s). Then:
+
+* (D) is a power-of-two smooth multiplicative domain;
+* (q_{\rm gen}=q_{\rm line}=p_s);
+* (\log p_s=O(\log n_s)=o(n_s)).
+
+Fix (0<\rho<1) and (C<H_2(\rho)), and set
+[
+k=\lfloor\rho n\rfloor,
+\qquad
+t=\left\lfloor\frac{Cn}{\log_2p}\right\rfloor,
+\qquad
+a=k+t,\qquad j=n-a.
+]
+
+Choose
+[
+E(X)=X^t+X-\alpha,\qquad B=1,
+]
+where (\alpha\in\mathbb F_p) avoids:
+
+* the at most (n) values (d^t+d), (d\in D), and
+* the at most (t-1) critical values of (X^t+X).
+
+This is possible because (p\ge2n+1) and (t<n). Hence:
+
+* (E(d)\ne0) for every (d\in D);
+* (E) can be chosen squarefree;
+* the (X)-term prevents a proper power-pullback form.
+
+Now
+[
+\log_2\lambda
+=============
+
+# \log_2\binom nj-t\log_2p
+
+\bigl(H_2(\rho)-C+o(1)\bigr)n.
+]
+Meanwhile
+[
+\log_2(p\kappa)=O(\log p+\sqrt n)=o(n).
+]
+Therefore
+[
+\lambda>p\kappa
+]
+for all sufficiently large (s), and the domain-free random-anchor lemma produces an anchor (w:D\to F) realizing every (z\in F).
+
+For a landing support (S), put
+[
+Q_z=\operatorname{interp}_S(w),
+\qquad
+P_z=\frac{Q_z-z}{E}.
+]
+Then
+[
+\deg P_z<k,\qquad
+P_z=\frac{w-z}{E}\quad\text{on }S.
+]
+
+Noncontainment is automatic. If (G\in F[X]_{<k}) agreed with (-1/E) on (S), then
+[
+EG+1
+]
+would have (|S|=k+t) roots but degree (<k+t), which is impossible.
+
+Thus for
+[
+f=\frac wE,\qquad g=-\frac1E,
+]
+every parameter (z\in\mathbb F_p) is support-wise MCA-bad at
+[
+\delta=\frac jn
+===============
+
+1-\rho-\frac{C}{\log_2p}
++o!\left(\frac1{\log p}\right).
+]
+
+Hence the proposed smooth-domain conclusion is
+[
+\boxed{\emca!\left(
+\operatorname{RS}[\mathbb F_p,D,k],\delta
+\right)=1}
+]
+for every fixed (C<H_2(\rho)), along an infinite sequence of smooth power-of-two multiplicative domains.
+
+### Interpretation
+
+The proposed Frobenius-compressed landing theorem is unnecessary unless the official problem forces one to remain in
+[
+\mathbb F_p\subset\mathbb F_{p^2}.
+]
+Moving to a prime-field multiplicative subgroup removes the factor of two directly:
+[
+q_{\rm gen}=q_{\rm line}=p.
+]
+
+## 4. What is genuinely impossible for the random-anchor mechanism
+
+There is a real first-moment ceiling, but it is ledger-dependent.
+
+Let
+[
+\gamma=
+\frac{\log q_{\rm line}}{\log q_{\rm gen}},
+\qquad
+t\sim \frac{Cn}{\log_2q_{\rm gen}}.
+]
+The expected total number of landing supports is
+[
+\mathbb E_w L
+=============
+
+\frac{\binom nj}{q_{\rm line}^{,t-1}}.
+]
+Therefore
+[
+\frac1n\log_2\mathbb E L
+========================
+
+H_2(\rho)-\gamma C+o(1).
+]
+
+If
+[
+C>\frac{H_2(\rho)}{\gamma},
+]
+then (\mathbb E L\to0) exponentially, and Markov gives
+[
+\Pr_w(L>0)\to0.
+]
+
+This is a genuine obstruction to the **literal uniformly random anchor mechanism**:
+
+* over (\mathbb F_{p^2}) with (q_{\rm gen}=p), (\gamma=2), so the ceiling is (H_2(\rho)/2);
+* over the prime field with (q_{\rm gen}=q_{\rm line}=p), (\gamma=1), so the ceiling is (H_2(\rho)).
+
+No better second-moment argument can cross a range in which the first moment itself tends to zero.
+
+But this is not a universal theorem about all anchors. It does not exclude exceptional, highly structured deterministic anchors. Thus:
+
+[
+\boxed{\text{(H_2(\rho)/2) is a real random-anchor ceiling in the extension branch, not a universal MCA ceiling.}}
+]
+
+## 5. The real MCA-to-interleaved-list obstruction
+
+A direct conversion of the MCA line to a list for (C^{\equiv2}) is genuinely cut.
+
+The MCA construction has
+[
+f=\frac wE,\qquad g=-\frac BE.
+]
+A codeword pair ((A,G)\in C^{\equiv2}) agreeing with the received pair ((f,g)) on a common support (S) would satisfy
+[
+A=f\text{ on }S,\qquad G=g\text{ on }S.
+]
+But this is exactly what the noncontainment condition forbids on every MCA witness support.
+
+Moreover, “one bad parameter per support” prevents obtaining two different slopes from the same support and then solving for (f) and (g).
+
+So
+[
+\text{large MCA line}\quad\not\Longrightarrow\quad
+\text{large list around }(f,g)
+]
+by the naïve interpolation bridge. This is source-valid and not an additive-branch artifact.
+
+## 6. A separate construction for (C^{\equiv m})
+
+There is, however, a direct interleaved construction that avoids the MCA bridge entirely.
+
+Let (m\ge2). Choose (m) independent random anchors
+[
+w^{(1)},\dots,w^{(m)}\in F^D.
+]
+For every (a)-set (S), let
+[
+I_{S,\ell}
+==========
+
+\operatorname{interp}*S(w^{(\ell)}).
+]
+Call (S) a zero landing if
+[
+E\mid I*{S,\ell}
+\qquad\text{for every }1\le\ell\le m.
+]
+Then
+[
+P_{S,\ell}=\frac{I_{S,\ell}}E
+]
+has degree (<k). Define the single fixed received (m)-tuple
+[
+y=
+\left(
+\frac{w^{(1)}}E,\dots,\frac{w^{(m)}}E
+\right).
+]
+For every zero landing (S), the codeword tuple
+[
+P_S=(P_{S,1},\dots,P_{S,m})\in C^{\equiv m}
+]
+agrees with (y) on all columns in (S). Thus it lies in the column-distance list at radius (j/n).
+
+A fixed support is a zero landing with probability (q^{-mt}), so
+[
+\lambda_m=
+\mathbb E#{\text{zero-landing supports}}
+========================================
+
+\frac{\binom nj}{q^{mt}}.
+]
+
+The only issue is duplicate supports producing the same codeword tuple. If (S,S') are at exchange distance (r\ge1), the event that both land and produce the same tuple has probability
+[
+q^{-m(t+r)}.
+]
+Indeed, in each component the anchor must agree on (S\cup S'), of size (a+r), with (EP) for some (P) of degree (<k).
+
+Consequently, the expected number of unordered duplicate pairs is
+[
+\frac{\lambda_m}{2}\beta_m,
+\qquad
+\beta_m=
+\sum_{r\ge1}
+\binom ar\binom jr q^{-mr}.
+]
+Since (q\ge n) and (m\ge2),
+[
+\beta_m
+\le
+\sum_{r\ge1}
+\frac{(aj/q^m)^r}{(r!)^2}
+\le e^{aj/q^m}-1
+\le e^{1/4}-1.
+]
+
+If (L) is the number of landing supports, (C_{\rm dup}) the number of unordered duplicate pairs, and (U) the number of distinct resulting codeword tuples, then
+[
+U\ge L-C_{\rm dup}.
+]
+Therefore some choice of anchors satisfies
+[
+\boxed{
+|\Lambda(C^{\equiv m},j/n;y)|
+\ge
+\frac{3-e^{1/4}}2
+\frac{\binom nj}{q^{mt}}
+}
+]
+with
+[
+\frac{3-e^{1/4}}2\approx0.857987.
+]
+
+On the smooth prime-field subgroup family,
+[
+\log_2|\Lambda|
+\ge
+\bigl(H_2(\rho)-mC+o(1)\bigr)n.
+]
+Hence the list is exponentially large whenever
+[
+\boxed{C<H_2(\rho)/m.}
+]
+
+For (m=2), the (H_2(\rho)/2) threshold reappears for a legitimate reason: there are two independent residue constraints. This is fundamentally different from the extension-field MCA factor of two.
+
+## 7. Obstruction audit
+
+| Candidate obstruction                                                  | Verdict                                                                                                                             |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Pair-rank lemma needs (D=\mathbb F_p) additive                         | **Artifact.** The exact image/rank proof works for arbitrary distinct (D).                                                          |
+| Replacing (p^2) by (p) destroys the proof                              | **Artifact.** It destroys (\kappa=O(1)), but (\kappa\le e^{\sqrt n}=2^{o(n)}), which is sufficient.                                 |
+| (H_2(\rho)/2) is an intrinsic MCA barrier                              | **Artifact.** It is the (\mathbb F_{p^2})-over-(\mathbb F_p) entropy charge.                                                        |
+| Frobenius compression is necessary                                     | **Artifact**, provided prime-field smooth subgroups are admissible.                                                                 |
+| Sparse or zero anchors refute the packing maximum                      | **Artifact.** They refute only a uniform-in-anchor theorem.                                                                         |
+| Uniform random anchors cross (H_2(\rho)/2) in the extension branch     | **Impossible by first moment.** This is real.                                                                                       |
+| The Cycle45 MCA line directly gives an interleaved list around ((f,g)) | **False by noncontainment.** This is real.                                                                                          |
+| Prime-field subgroup admissibility / exact reserve normalization       | **Real source-audit issue.** The excerpt strongly favors admissibility, but the official challenge wording must be checked exactly. |
+| Full multiplicative group required instead of a smooth subgroup        | Potentially real number-theoretic issue, but apparently inconsistent with the source excerpt’s explicit subgroup examples.          |
+
+## Director call
+
+The next exact theorem should be:
+
+> **Domain-Free Smooth-Subgroup Random-Anchor Transfer Lemma.**
+> For arbitrary (D\subset\mathbb F_q), prove the exact pair-rank identity and discrepancy bound with
+> [
+> \kappa=\sum_{r<t}\binom ar\binom jr q^{-r},
+> ]
+> deduce (\kappa\le e^{\sqrt n}), and instantiate it on power-of-two multiplicative subgroups of prime fields to obtain all (q) MCA-bad parameters for every (C<H_2(\rho)).
+
+For the grand list side, the next exact lemma is:
+
+> **(m)-Anchor Zero-Residue Distinctness Lemma.**
+> Prove
+> [
+> \max_y|\Lambda(C^{\equiv m},j/n;y)|
+> \ge
+> \frac{3-e^{1/4}}2
+> \frac{\binom nj}{q^{mt}}
+> ]
+> for (m\ge2).
+
+**Bottom line:** I see a credible two-lemma route to a full counterpacket skeleton. Confidence is high in both mathematical lemmas, moderate-high that the multiplicative subgroup is source-admissible, and unknown on whether the exact Prize normalization and required list regime match these parameters. Frobenius compression should not be the next target unless the official wording first rules out prime-field power-of-two subgroups.

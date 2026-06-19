@@ -1,0 +1,1006 @@
+## Cycle 45 restricted additive-branch theorem
+
+**Status.** The theorem below is complete under the supplied residue-line definitions. It proves an existential, error-one MCA construction for the scalar Reed–Solomon code on the additive domain
+[
+D=\mathbb F_p\subset K=\mathbb F_{p^2}
+]
+in the strict entropy range (c<\tfrac12H_2(\rho)). It does **not**, by itself, settle the Proximity Prize or the interleaved list challenge.
+
+All ranks below are over (K=\mathbb F_{p^2}). Thus
+[
+q_{\mathrm{gen}}=p,\qquad q_{\mathrm{line}}=|K|=p^2.
+]
+
+---
+
+# 1. Finite restricted additive theorem
+
+Let
+[
+K=\mathbb F_{p^2},\qquad D=\mathbb F_p,\qquad q=|K|=p^2,
+]
+and let
+[
+\mathcal C=\operatorname{RS}[K,D,k]
+={\operatorname{ev}*D(P):P\in K[X]*{<k}}.
+]
+
+Fix integers
+[
+1\le k<p,\qquad 1\le t\le p-k,
+]
+and write
+[
+a=k+t,\qquad j=p-a.
+]
+
+Let (E\in K[X]) satisfy
+[
+\deg E=t,\qquad E(d)\ne0\quad(d\in D),
+]
+and let
+[
+0\ne B\in K[X]_{<t}.
+]
+Put
+[
+A=K[X]/(E),\qquad b=[B]_E\in A.
+]
+Because (\deg B<t), the condition (B\ne0) is equivalent to (b\ne0).
+
+For every (T\in\binom Dj), set
+[
+S_T=D\setminus T,\qquad |S_T|=a,
+]
+and let (I_T(w)\in K[X]*{<a}) be the unique polynomial satisfying
+[
+I_T(w)|*{S_T}=w|_{S_T}.
+]
+Define the residue map
+[
+R_T:K^D\longrightarrow A,\qquad R_T(w)=[I_T(w)]_E.
+]
+
+For (z\in K), define
+[
+\nu_w(z)=#{T\in\tbinom Dj:R_T(w)=zb}.
+]
+Also set
+[
+N=\binom pj,\qquad
+\lambda=\frac{N}{q^t},
+]
+and
+[
+\Phi(w)=\sum_{z\in K}\bigl(\nu_w(z)-\lambda\bigr)^2.
+]
+
+Finally, let
+[
+\kappa_0
+=\sum_{r=0}^{\infty}\frac{4^{-r}}{(r!)^2}
+=I_0(1)
+\approx1.2660658777
+<e^{1/4}.
+]
+
+---
+
+## Lemma 1: exact pair-rank formula
+
+For (T,T'\in\binom Dj), let
+[
+r=|T\setminus T'|=|T'\setminus T|
+]
+and
+[
+C=S_T\cap S_{T'}.
+]
+Then
+[
+\operatorname{rank}*K!\left(
+w\longmapsto \bigl(R_T(w),R*{T'}(w)\bigr)
+\right)
+=t+\min(t,r).
+]
+
+More precisely, with
+[
+L_C(X)=\prod_{c\in C}(X-c),
+]
+the joint image is
+[
+\operatorname{im}(R_T,R_{T'})
+=============================
+
+\left{
+(u,v)\in A^2:
+u-v\in[L_CK[X]_{<r}]_E
+\right}.
+]
+
+### Proof
+
+Let
+[
+P=I_T(w),\qquad Q=I_{T'}(w).
+]
+The polynomials (P) and (Q) agree with (w) on (C), so (P-Q) vanishes on (C). Since
+[
+\deg(P-Q)<a,\qquad \deg L_C=|C|=a-r,
+]
+there is an (H\in K[X]*{<r}) such that
+[
+P-Q=L_CH.
+]
+Hence
+[
+R_T(w)-R*{T'}(w)\in[L_CK[X]_{<r}]_E.
+]
+
+Conversely, suppose
+[
+u-v=[L_CH]*E
+]
+for some (H\in K[X]*{<r}). Choose the canonical representative
+[
+V\in K[X]*{<t},\qquad [V]*E=v,
+]
+and set
+[
+Q=V,\qquad P=V+L_CH.
+]
+Then
+[
+\deg Q<t\le a,
+]
+while
+[
+\deg(L_CH)<(a-r)+r=a,
+]
+so (P,Q\in K[X]*{<a}). They agree on (C). We may therefore define (w) by
+[
+w=P\quad\text{on }S_T,\qquad
+w=Q\quad\text{on }S*{T'},
+]
+and arbitrarily elsewhere. This gives
+[
+R_T(w)=u,\qquad R_{T'}(w)=v.
+]
+
+Since (E) has no root in (D),
+[
+\gcd(E,L_C)=1,
+]
+so ([L_C]*E) is a unit in (A). The reduction map
+[
+K[X]*{<r}\longrightarrow A
+]
+has rank (\min(t,r)): it is injective for (r\le t) and surjective for (r\ge t). Therefore
+[
+\dim_K[L_CK[X]_{<r}]_E=\min(t,r).
+]
+The joint image has one free (A)-coordinate and a difference lying in this subspace, hence dimension
+[
+t+\min(t,r).
+]
+∎
+
+---
+
+## Theorem 2: existential (L_2) anticollision and all-slope criterion
+
+Under the hypotheses above, there exists an anchor (w\in K^D) satisfying
+[
+\boxed{;
+\Phi(w)\le \kappa_0q\lambda.
+;}
+]
+
+For this anchor, let
+[
+L(w)=\sum_{z\in K}\nu_w(z),
+\qquad
+M_2(w)=\sum_{z\in K}\nu_w(z)^2,
+]
+and
+[
+Z(w)={z\in K:\nu_w(z)>0}.
+]
+Then
+[
+\left|L(w)-q\lambda\right|
+\le \sqrt{\kappa_0},q\sqrt{\lambda},
+]
+[
+M_2(w)
+\le q\left(\lambda+\sqrt{\kappa_0\lambda}\right)^2,
+]
+and
+[
+q-|Z(w)|
+\le\frac{\kappa_0q}{\lambda}.
+]
+
+Consequently:
+
+1. If (\lambda\to\infty), then
+   [
+   L(w)=(1+o(1))q\lambda
+   ]
+   and
+   [
+   M_2(w)
+   =(1+o(1))\frac{L(w)^2}{q}.
+   ]
+
+2. More explicitly, if
+   [
+   \eta=\sqrt{\frac{\kappa_0}{\lambda}}<1,
+   ]
+   then
+   [
+   M_2(w)
+   \le
+   \left(\frac{1+\eta}{1-\eta}\right)^2
+   \frac{L(w)^2}{q}.
+   ]
+
+3. If
+   [
+   \boxed{;\lambda>\kappa_0q,;}
+   ]
+   then
+   [
+   Z(w)=K;
+   ]
+   every one of the (q=p^2) slopes occurs.
+
+### Proof
+
+Choose (W) uniformly from (K^D). For a fixed (T), the map
+[
+R_T:K^D\to A
+]
+is surjective, so (R_T(W)) is uniform on (A). Hence, for every (z\in K),
+[
+\mathbb E\nu_W(z)
+=Nq^{-t}
+=\lambda.
+]
+
+For fixed (T), the number of (T'\in\binom Dj) with
+[
+|T\setminus T'|=r
+]
+is
+[
+K_r=\binom jr\binom ar.
+]
+By Lemma 1,
+[
+\Pr\bigl(R_T(W)=zb,\ R_{T'}(W)=zb\bigr)
+=q^{-t-\min(t,r)}.
+]
+The target ((zb,zb)) always lies in the joint image because its coordinate difference is zero.
+
+It follows that
+[
+\mathbb E\nu_W(z)^2
+===================
+
+# N\sum_r K_rq^{-t-\min(t,r)}
+
+\lambda\sum_rK_rq^{-\min(t,r)}.
+]
+Since
+[
+\sum_rK_r=N,
+]
+we obtain the exact variance formula
+[
+\operatorname{Var}(\nu_W(z))
+============================
+
+\lambda
+\sum_{0\le r<t}
+K_r\bigl(q^{-r}-q^{-t}\bigr).
+]
+In particular,
+[
+\operatorname{Var}(\nu_W(z))
+\le
+\lambda\sum_{r\ge0}K_rq^{-r}.
+]
+
+Now
+[
+\binom jr\binom ar
+\le\frac{(ja)^r}{(r!)^2}.
+]
+Since (a+j=p),
+[
+ja\le\frac{p^2}{4}=\frac q4.
+]
+Therefore
+[
+K_rq^{-r}
+\le\frac{4^{-r}}{(r!)^2},
+]
+and consequently
+[
+\operatorname{Var}(\nu_W(z))
+\le\kappa_0\lambda.
+]
+
+Summing over (z\in K),
+[
+\mathbb E\Phi(W)
+================
+
+\sum_{z\in K}\operatorname{Var}(\nu_W(z))
+\le\kappa_0q\lambda.
+]
+Thus some deterministic (w) satisfies
+[
+\Phi(w)\le\kappa_0q\lambda.
+]
+
+For this anchor,
+[
+L-q\lambda
+=\sum_z(\nu_w(z)-\lambda).
+]
+Cauchy–Schwarz gives
+[
+|L-q\lambda|^2
+\le q\Phi(w)
+\le\kappa_0q^2\lambda.
+]
+
+Next,
+[
+M_2
+===
+
+# \sum_z\bigl((\nu_w(z)-\lambda)+\lambda\bigr)^2
+
+\Phi(w)+2\lambda(L-q\lambda)+q\lambda^2.
+]
+Hence
+[
+M_2
+\le
+\kappa_0q\lambda
++2\sqrt{\kappa_0},q\lambda^{3/2}
++q\lambda^2
+===========
+
+q\left(\lambda+\sqrt{\kappa_0\lambda}\right)^2.
+]
+
+Finally, every missing slope contributes (\lambda^2) to (\Phi(w)). Thus
+[
+\bigl(q-|Z(w)|\bigr)\lambda^2
+\le\Phi(w)
+\le\kappa_0q\lambda,
+]
+which yields
+[
+q-|Z(w)|
+\le\frac{\kappa_0q}{\lambda}.
+]
+If (\lambda>\kappa_0q), the right-hand side is strictly less than (1), so no slope is missing. ∎
+
+---
+
+# 2. MCA and exact normal-form consequence
+
+Set
+[
+\delta_0=\frac jp=1-\frac{k+t}{p}.
+]
+Then
+[
+s_{\delta_0}
+=\left\lceil(1-\delta_0\right)p
+=p-j
+=a.
+]
+
+For every realized slope (z\in Z(w)), choose a corresponding (T), put
+[
+S_z=S_T,
+\qquad
+Q_z=I_T(w).
+]
+Then
+[
+\deg Q_z<k+t,
+\qquad
+Q_z\equiv zB\pmod E,
+\qquad
+Q_z=w\quad\text{on }S_z,
+]
+and
+[
+|S_z|=k+t=s_{\delta_0}.
+]
+
+Define the line
+[
+f(d)=\frac{w(d)}{E(d)},
+\qquad
+g(d)=-\frac{B(d)}{E(d)}
+\qquad(d\in D).
+]
+Since (Q_z-zB) is divisible by (E), the polynomial
+[
+P_z=\frac{Q_z-zB}{E}
+]
+satisfies
+[
+\deg P_z<k.
+]
+On (S_z),
+[
+P_z(d)
+======
+
+# \frac{w(d)-zB(d)}{E(d)}
+
+f(d)+zg(d).
+]
+Thus (f+zg) agrees with the Reed–Solomon codeword
+(\operatorname{ev}_D(P_z)) on (S_z).
+
+The witness is noncontained. Indeed, if some
+[
+G\in K[X]_{<k}
+]
+agreed with (-B/E) on (S_z), then
+[
+EG+B
+]
+would vanish on all (k+t) points of (S_z), while
+[
+\deg(EG+B)<k+t.
+]
+Hence (EG+B=0) as a polynomial. This is impossible because (B\ne0) and
+(\deg B<t=\deg E).
+
+Therefore every (z\in Z(w)) is support-wise MCA-bad for the line (f+zg), and
+[
+\emca(\mathcal C,\delta_0)
+\ge\frac{|Z(w)|}{q}
+\ge1-\frac{\kappa_0}{\lambda}.
+]
+
+Now let
+[
+r_{\mathcal C}=p-k.
+]
+The exact normal-form hypothesis is satisfied: if
+(\alpha\in K\setminus D), then
+[
+(X-\alpha)^{r_{\mathcal C}}
+]
+has degree (r_{\mathcal C}) and is nonzero at every point of (D). Hence
+[
+\boxed{;
+\emca(\mathcal C,\delta_0)
+==========================
+
+\frac1q
+\max_{1\le s\le p-k}
+\Lambda^{\mathrm{NC}}_{s,\delta_0}(D,k).
+;}
+]
+
+For the particular degree (t) datum above,
+[
+\Lambda^{\mathrm{NC}}_{t,\delta_0}(D,k)
+\ge |Z(w)|.
+]
+Consequently,
+[
+\boxed{;
+\emca(\mathcal C,\delta_0)
+\ge
+1-\frac{\kappa_0}{\lambda}.
+;}
+]
+
+If
+[
+\lambda>\kappa_0q,
+]
+then every slope occurs, so
+[
+\Lambda^{\mathrm{NC}}_{t,\delta_0}(D,k)=q
+]
+and the exact normal form gives
+[
+\boxed{;
+\emca(\mathcal C,\delta_0)=1.
+;}
+]
+
+By monotonicity of (\emca(\mathcal C,\cdot)),
+[
+\emca(\mathcal C,\delta)=1
+\qquad
+\text{for every }\delta\ge\delta_0.
+]
+
+This is the exact normal-form consequence. No grand-challenge promotion is being made.
+
+---
+
+# 3. Reserve-scale asymptotic corollary
+
+Let
+[
+0<\rho<1
+]
+and
+[
+0<c<\frac12H_2(\rho),
+]
+where
+[
+H_2(x)=-x\log_2x-(1-x)\log_2(1-x).
+]
+
+For each sufficiently large prime (p), set
+[
+k_p=\lfloor\rho p\rfloor,
+\qquad
+t_p=\left\lfloor\frac{cp}{\log_2p}\right\rfloor,
+]
+[
+a_p=k_p+t_p,
+\qquad
+j_p=p-a_p,
+\qquad
+\delta_p=\frac{j_p}{p}.
+]
+
+Choose any (t_p) distinct elements
+[
+\alpha_1,\ldots,\alpha_{t_p}\in
+\mathbb F_{p^2}\setminus\mathbb F_p
+]
+and put
+[
+E_p(X)=\prod_{\ell=1}^{t_p}(X-\alpha_\ell),
+\qquad B_p=1.
+]
+Then (E_p) is squarefree and has no zero on (D=\mathbb F_p). Squarefreeness is convenient but not needed by the proof.
+
+Let
+[
+\lambda_p
+=========
+
+\frac{\binom p{j_p}}{(p^2)^{t_p}}.
+]
+Since
+[
+\frac{a_p}{p}=\rho+o(1),
+]
+Stirling’s formula gives
+[
+\log_2\binom p{j_p}
+===================
+
+\bigl(H_2(\rho)+o(1)\bigr)p.
+]
+Moreover,
+[
+2t_p\log_2p=2cp+o(p).
+]
+Hence
+[
+\boxed{;
+\log_2\lambda_p
+===============
+
+\bigl(H_2(\rho)-2c+o(1)\bigr)p.
+;}
+]
+
+Because (2c<H_2(\rho)), (\lambda_p) grows exponentially. In particular,
+[
+\frac{\lambda_p}{p^2}\longrightarrow\infty,
+]
+so for all sufficiently large (p),
+[
+\lambda_p>\kappa_0p^2.
+]
+
+Therefore there is an anchor (w_p:\mathbb F_p\to\mathbb F_{p^2}) such that, for
+[
+f_p=\frac{w_p}{E_p},
+\qquad
+g_p=-\frac1{E_p},
+]
+every parameter
+[
+z\in\mathbb F_{p^2}
+]
+is support-wise MCA-bad for (f_p+zg_p) at radius
+[
+\delta_p
+========
+
+# 1-\frac{k_p+t_p}{p}
+
+1-\rho-\frac{c}{\log_2p}+O!\left(\frac1p\right).
+]
+
+Equivalently,
+[
+\boxed{;
+\Lambda^{\mathrm{NC}}*{t_p,\delta_p}
+(\mathbb F_p,k_p)=p^2
+;}
+]
+and
+[
+\boxed{;
+\emca!\left(
+\operatorname{RS}[\mathbb F*{p^2},\mathbb F_p,k_p],
+\delta_p
+\right)=1.
+;}
+]
+
+For the same anchor,
+[
+L_p=(1+o(1))p^2\lambda_p
+]
+and
+[
+M_{2,p}
+=======
+
+(1+o(1))\frac{L_p^2}{p^2}.
+]
+
+---
+
+# 4. Necessary caveats
+
+1. **The anchor is existential.**
+   The theorem is not uniform in (w). The zero anchor sends every support to slope (0); sparse and one-spike anchors can also have a fiber containing a constant fraction of all landings. Averaging is therefore the correct quantifier for the packing maximum.
+
+2. **(B\ne0) is essential.**
+   It ensures that (z\mapsto zb) is injective and supplies the automatic noncontainment argument.
+
+3. **No separability hypothesis is required.**
+   The proof uses direct interpolation and quotient-space rank. It does not use a trace pairing, so (E) need not be squarefree or étale.
+
+4. **The entropy inequality is strict.**
+   Nothing here resolves the boundary
+   [
+   c=\tfrac12H_2(\rho).
+   ]
+   At the boundary, lower-order terms matter.
+
+5. **The conclusion is at (\delta_p) and larger radii.**
+   It supplies no conclusion for radii strictly below (\delta_p).
+
+6. **This is an additive-subfield domain.**
+   The domain is the full additive copy
+   [
+   \mathbb F_p\subset\mathbb F_{p^2},
+   ]
+   not a multiplicative subgroup or coset generating the line field. Whether this is admissible under the official phrase “smooth evaluation domain” is a source-level question.
+
+7. **The scalar normal form does not address (C^{\equiv m}).**
+   The exact residue-line normal form concerns scalar line-MCA. It does not automatically imply a list-size statement for the (m)-interleaved code with column distance.
+
+---
+
+# 5. Post-lit wall: a direct smooth-domain route
+
+There is a stronger observation than the Cycle 45 audit records:
+
+> The pair-rank lemma does not use (D=\mathbb F_p). The choice (q=p^2) is needed only to make the variance-loss constant absolute. An absolute constant is unnecessary when the landing mean is exponentially large.
+
+This gives a direct candidate transfer to multiplicative smooth domains.
+
+## Domain-uniform moment lemma
+
+Let (K=\mathbb F_Q), let (D\subset K) be any set of (n) distinct points, and retain
+[
+a=k+t,\qquad j=n-a,\qquad
+\lambda=\frac{\binom nj}{Q^t}.
+]
+The proof of Lemma 1 remains unchanged and gives
+[
+\operatorname{rank}*K(R_T,R*{T'})
+=t+\min(t,|T\setminus T'|).
+]
+
+Define
+[
+\Gamma_Q(a,j)
+=============
+
+\sum_{r=0}^{\min(a,j)}
+\binom ar\binom jrQ^{-r}.
+]
+Then random-anchor averaging gives an anchor satisfying
+[
+\Phi(w)\le Q\lambda,\Gamma_Q(a,j),
+]
+and therefore
+[
+Q-|Z(w)|
+\le
+\frac{Q,\Gamma_Q(a,j)}{\lambda}.
+]
+
+The loss satisfies
+[
+\Gamma_Q(a,j)
+\le
+\sum_{r\ge0}
+\frac{(aj/Q)^r}{(r!)^2}
+=======================
+
+I_0!\left(2\sqrt{\frac{aj}{Q}}\right)
+\le
+\exp!\left(2\sqrt{\frac{aj}{Q}}\right).
+]
+Since (aj\le n^2/4),
+[
+\boxed{;
+\Gamma_Q(a,j)\le e^{,n/\sqrt Q}.
+;}
+]
+
+In particular, (Q\ge n) implies
+[
+\Gamma_Q(a,j)\le e^{\sqrt n},
+]
+which is subexponential in (n).
+
+Suppose now that
+
+[
+\log_2Q=o(n),\qquad
+\frac{k}{n}\to\rho,
+\qquad
+t=\left(c+o(1)\right)\frac{n}{\log_2Q}.
+]
+Then
+[
+\log_2\lambda
+=============
+
+\bigl(H_2(\rho)-c+o(1)\bigr)n,
+]
+whereas
+[
+\log_2\bigl(Q\Gamma_Q(a,j)\bigr)=o(n).
+]
+Thus, whenever
+[
+\boxed{;c<H_2(\rho),;}
+]
+one has
+[
+\frac{\lambda}{Q\Gamma_Q(a,j)}\longrightarrow\infty,
+]
+and every slope occurs for all sufficiently large (n).
+
+For a multiplicative domain
+[
+D\subset K^\times,
+]
+the source-valid choice
+[
+E=X^t,\qquad B=1
+]
+is immediate. The exact-normal-form hypothesis is also automatic via
+(X^{n-k}). Therefore, under the displayed field-size assumptions,
+[
+\emca!\left(
+\operatorname{RS}[K,D,k],
+1-\frac{k+t}{n}
+\right)=1
+]
+throughout the strict range (c<H_2(\rho)).
+
+### Consequence for the audit
+
+The statement that replacing (q_{\mathrm{line}}=p^2) by (q_{\mathrm{line}}=p) “destroys the proof” is too strong. It destroys the **absolute constant**
+(\kappa_0), but leaves a loss at most (e^{O(\sqrt n)}). That loss is negligible against
+[
+2^{(H_2(\rho)-c)n}
+]
+in the strict entropy interior.
+
+Thus the next exact scalar-MCA lemma is:
+
+[
+\boxed{
+\begin{minipage}{0.88\linewidth}
+Prove and source-align the domain-uniform discrepancy bound
+[
+\Phi(w)\le
+Q\lambda
+\sum_r\binom ar\binom jrQ^{-r},
+]
+then instantiate it on the official smooth multiplicative domain with
+(E=X^t), (B=1).
+\end{minipage}}
+]
+
+Mathematically, that lemma is already proved by the pair-rank argument above. What remains is checking that the official domain and asymptotic quantifiers are exactly those required by the challenge.
+
+---
+
+# 6. Exact construction for the interleaved list side
+
+The scalar normal form should not be used to infer an interleaved list bound. There is, however, a direct (m)-anchor construction.
+
+Let
+[
+\mathcal C^{\equiv m}
+=====================
+
+{(c^{(1)},\ldots,c^{(m)}):c^{(\ell)}\in\mathcal C}
+]
+be equipped with column Hamming distance.
+
+Choose (m) independent anchors
+[
+w^{(1)},\ldots,w^{(m)}\in K^D
+]
+and define a received word
+[
+\mathbf u(d)
+============
+
+\left(
+\frac{w^{(1)}(d)}{E(d)},\ldots,
+\frac{w^{(m)}(d)}{E(d)}
+\right).
+]
+
+For (T\in\binom Dj), require the simultaneous zero-residue condition
+[
+R_T(w^{(\ell)})=0
+\qquad
+(1\le\ell\le m).
+]
+Then
+[
+I_T(w^{(\ell)})=EP_{\ell,T}
+]
+for some (P_{\ell,T}\in K[X]*{<k}), and the codeword tuple
+[
+\mathbf P_T=(P*{1,T},\ldots,P_{m,T})
+]
+agrees with (\mathbf u) on all (a=k+t) columns of (S_T).
+
+Let (L) be the number of simultaneous zero-residue supports, let (Z) be the number of distinct codeword tuples thereby obtained, and let
+[
+M=\sum_{\mathbf P}\mu(\mathbf P)^2,
+]
+where (\mu(\mathbf P)) counts supports producing (\mathbf P). Pointwise,
+[
+L^2\le ZM.
+]
+
+For (T,T') at exchange distance (r), the event that both produce the same codeword tuple has probability
+[
+Q^{-m(t+r)}.
+]
+Indeed, for one row, the anchor must agree on
+[
+|S_T\cup S_{T'}|=a+r
+]
+points with (EP) for one of the (Q^k) polynomials (P\in K[X]_{<k}). The probability is
+[
+Q^{k-(a+r)}=Q^{-(t+r)}.
+]
+
+Consequently,
+[
+\mathbb EL=\binom njQ^{-mt}
+]
+and
+[
+\mathbb EM
+==========
+
+\binom njQ^{-mt}
+\sum_r\binom ar\binom jrQ^{-mr}.
+]
+Using
+[
+\mathbb EL
+\le\mathbb E\sqrt{ZM}
+\le\sqrt{\mathbb EZ,\mathbb EM},
+]
+we obtain an anchor tuple for which
+[
+\boxed{;
+Z\ge
+\frac{\binom njQ^{-mt}}
+{\displaystyle
+\sum_r\binom ar\binom jrQ^{-mr}}.
+;}
+]
+
+Thus the maximum column-metric list size satisfies
+[
+\boxed{;
+L_{\max}!\left(
+\mathcal C^{\equiv m},
+\frac jn
+\right)
+\ge
+\frac{\binom njQ^{-mt}}
+{\displaystyle
+\sum_r\binom ar\binom jrQ^{-mr}}.
+;}
+]
+
+Moreover,
+[
+\sum_r\binom ar\binom jrQ^{-mr}
+\le
+\exp!\left(2\sqrt{\frac{aj}{Q^m}}\right)
+\le
+\exp!\left(\frac{n}{Q^{m/2}}\right).
+]
+Hence, under
+[
+\log_2Q=o(n),\qquad
+\frac{k}{n}\to\rho,\qquad
+t=\left(c+o(1)\right)\frac{n}{\log_2Q},
+]
+one gets
+[
+\boxed{;
+\log_2 L_{\max}
+\ge
+\bigl(H_2(\rho)-mc+o(1)\bigr)n.
+;}
+]
+In particular, the construction gives exponentially large lists whenever
+[
+\boxed{;c<\frac{H_2(\rho)}m.;}
+]
+
+This is an actual column-distance statement about (C^{\equiv m}), not an MCA-to-list analogy. Whether it reaches the grand list target depends on the target’s exact radius, field-size and list-size quantifiers.
+
+---
+
+# 7. Full-solve assessment
+
+**Restricted additive branch:** solved, with high confidence.
+
+**Scalar smooth-domain MCA branch:** there is a concrete route that appears to bypass the stated Frobenius-compression wall. The exact next lemma is the domain-uniform Bessel-loss moment lemma above. Under the usual multiplicative-domain and subexponential-field assumptions, it gives the full strict range
+[
+c<H_2(\rho).
+]
+
+**Interleaved list branch:** the (m)-anchor zero-residue construction gives a rigorous exponential list lower bound with exponent
+[
+H_2(\rho)-mc.
+]
+This is the exact construction that should be compared against the official (C^{\equiv m}) challenge.
+
+**Entire Proximity Prize:** not yet justified from the supplied packet. The remaining issue is no longer the restricted additive proof. It is the source-level comparison:
+
+1. Does the official smooth-domain family satisfy the hypotheses of the domain-uniform transfer?
+2. Does the official interleaved-list target fall within the range and list exponent proved by the (m)-anchor construction?
+
+Until those two comparisons are made against the literal challenge statement, the correct classification is **promising route to a full solve, not a full solve**.

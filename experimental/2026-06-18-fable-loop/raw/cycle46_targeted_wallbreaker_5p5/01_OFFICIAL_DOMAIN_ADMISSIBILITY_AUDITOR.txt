@@ -1,0 +1,315 @@
+## Admissibility ruling
+
+**No—not on the supplied record.**
+(D=\mathbb F_p\subset\mathbb F_{p^2}) is unquestionably a valid Reed–Solomon evaluation domain, but the source does not certify it as a **smooth evaluation domain**.
+
+The distinction is decisive:
+
+* The MCA definition permits arbitrary (D\subseteq\mathbb F); that establishes legality as an RS instance, not membership in a specially qualified challenge class (`04_SOURCE_DEFINITIONS_EXCERPT.md`, lines 7–19).
+* The exact normal form is likewise stated for general (D); “multiplicative domains” appear only as a sufficient example for one hypothesis (`04`, lines 46–60).
+* “Smooth evaluation domain” is never formally defined in the supplied excerpt. Its contextual examples are FFT domains, multiplicative subgroups, and power-of-two subgroup structure (`04`, line 24).
+* Here (D=\mathbb F_p) is additive/subfield structured, contains (0), has prime cardinality (p), is not a multiplicative subgroup or coset, and generates only (\mathbb F_p), not the ambient line field (\mathbb F_{p^2}).
+
+The condition “some divisor (N\mid n)” does not define smoothness. Otherwise every domain would become “smooth” by taking (N=n), making the adjective vacuous.
+
+So the official audit outcome is:
+
+[
+\boxed{\text{Valid RS/MCA instance, but not certified as an admissible smooth-domain instance.}}
+]
+
+This is a classification failure, not a failure of the restricted theorem.
+
+---
+
+## Exact consequence if the domain were admitted
+
+Let
+
+[
+\mathcal C_p=\operatorname{RS}[\mathbb F_{p^2},\mathbb F_p,k_p],
+\qquad
+k_p=\lfloor \rho p\rfloor ,
+]
+
+and take
+
+[
+t_p=\left\lfloor \frac{C p}{\log_2 p}\right\rfloor,
+\qquad
+a_p=k_p+t_p,
+\qquad
+\delta_p=1-\frac{a_p}{p}.
+]
+
+For fixed (C<H_2(\rho)/2), the banked all-slope result gives, for sufficiently large (p),
+
+[
+\Lambda^{\mathrm{NC}}_{t_p,\delta_p}(\mathbb F_p,k_p)=p^2.
+]
+
+The exact-normal-form hypothesis also holds for this additive domain. If (r=p-k_p), choose (\alpha\in\mathbb F_{p^2}\setminus\mathbb F_p) and
+
+[
+P_r(X)=X^r-\alpha .
+]
+
+For every (x\in\mathbb F_p), (x^r\in\mathbb F_p), hence (P_r(x)\neq0). Thus the normal form applies and yields
+
+[
+\emca(\mathcal C_p,\delta_p)=\frac{p^2}{p^2}=1.
+]
+
+By monotonicity, (\emca(\mathcal C_p,\delta)=1) for every (\delta\ge\delta_p). Therefore, for every fixed or varying (\epsilon_p^*<1),
+
+[
+\boxed{
+\delta^*_{\mathcal C_p}(\epsilon_p^*)
+\le
+1-\frac{k_p+t_p}{p}
+===================
+
+1-\rho-\frac{C}{\log_2 p}+O!\left(\frac1p\right).
+}
+]
+
+There is an important normalization point. The source definition has only the ambient field parameter
+
+[
+q=|\mathbb F|=p^2.
+]
+
+Writing (\gamma=2C), the same statement is
+
+[
+\boxed{
+\delta^*_{\mathcal C_p}(\epsilon_p^*)
+\le
+1-\rho-\frac{\gamma}{\log_2 q}
++O(q^{-1/2})
+\quad\text{for every }\gamma<H_2(\rho).
+}
+]
+
+Thus, **if the additive-subfield family were admitted**, the result would already attain the full entropy constant (H_2(\rho)) in the source’s ambient-(q) normalization. The apparent (H_2(\rho)/2) limitation comes from measuring the gap using (\log p=\log q_{\rm gen}), while the source MCA definition normalizes slopes using (q_{\rm line}=p^2).
+
+Any generated-field requirement must therefore be explicit; it is not present in the supplied MCA definition.
+
+---
+
+## Minimal missing admissibility statement
+
+The smallest sufficient official certificate would be:
+
+> For infinitely many primes (p), the pair
+> [
+> (\mathbb F,D)=(\mathbb F_{p^2},\mathbb F_p)
+> ]
+> is an admissible smooth evaluation-domain family for the grand MCA challenge; the challenge parameter is (q=|\mathbb F|=p^2); and neither multiplicative-domain structure nor (\mathbb F=\mathbb F_p(D)) is required.
+
+Every clause matters. Omitting the final clause leaves the (q_{\rm gen}) versus (q_{\rm line}) assumption unresolved.
+
+If “smooth” officially means multiplicative subgroup/coset, that certificate is false or irrelevant, and a transfer theorem is required.
+
+---
+
+# Route to the full MCA challenge
+
+There is a substantially cleaner route than Frobenius-compressed landing.
+
+The packet treats the pair-rank lemma as additive-domain specific. It is not. The proof is domain-blind.
+
+Let (\mathbb F) have size (q), let (D\subseteq\mathbb F) have size (n), and let (S,S'\subseteq D) both have size (a). Put
+
+[
+r=|S\setminus S'|,
+\qquad C_0=S\cap S'.
+]
+
+For arbitrary (D), the interpolation polynomials (P=\operatorname{interp}*S(w)) and (P'=\operatorname{interp}*{S'}(w)) agree on (C_0), so
+
+[
+P-P'=L_{C_0}H,\qquad \deg H<r.
+]
+
+Conversely, every such pair of polynomials defines a compatible anchor on (S\cup S'). Since (E) has no roots on (D), ([L_{C_0}]_E) is a unit. Consequently, for every evaluation domain,
+
+[
+\boxed{
+\operatorname{rank}*{\mathbb F}
+\bigl(w\mapsto(R_T(w),R*{T'}(w))\bigr)
+======================================
+
+t+\min(t,|T\setminus T'|).
+}
+]
+
+No identity (L_D=X^p-X), no additive subgroup structure, and no subfield structure is used.
+
+## The exact next lemma
+
+The next theorem should retain the nonconstant local-pair factor rather than insisting on an absolute (C_*).
+
+Let
+
+[
+a=k+t,\qquad j=n-a,\qquad
+\lambda=\frac{\binom nj}{q^t},
+]
+
+and define
+
+[
+\Gamma(n,q,a,j,t)
+=================
+
+\sum_{r=0}^{t-1}
+\binom jr\binom ar q^{-r}.
+]
+
+Then the same averaging proves that some anchor (w) satisfies
+
+[
+\boxed{
+\sum_{z\in\mathbb F}
+\bigl(\nu_w(z)-\lambda\bigr)^2
+\le q\lambda,\Gamma.
+}
+]
+
+Hence
+
+[
+\boxed{
+\lambda>q\Gamma
+\quad\Longrightarrow\quad
+\nu_w(z)>0\ \text{for every }z\in\mathbb F.
+}
+]
+
+Indeed, a missing slope contributes (\lambda^2) to the left side.
+
+The combinatorial loss obeys
+
+[
+\Gamma
+\le
+\sum_{r\ge0}\frac{(aj/q)^r}{(r!)^2}
+\le
+\exp!\left(2\sqrt{\frac{aj}{q}}\right)
+\le
+\exp!\left(\frac{n}{\sqrt q}\right).
+]
+
+This is the wallbreaker. Replacing (q_{\rm line}=p^2) by (q_{\rm line}=p) destroys the **absolute constant** bound, but only replaces it by
+
+[
+\Gamma\le e^{O(\sqrt p)}.
+]
+
+That is subexponential. Meanwhile, with
+
+[
+t=\left\lfloor\frac{C n}{\log_2 q}\right\rfloor,
+\qquad
+k=\lfloor\rho n\rfloor,
+]
+
+one has
+
+[
+\lambda
+=======
+
+2^{(H_2(\rho)-C+o(1))n}.
+]
+
+Therefore, whenever
+
+[
+\frac{\log q}{n}\longrightarrow0
+\quad\text{and}\quad
+C<H_2(\rho),
+]
+
+[
+\lambda\gg q\Gamma,
+]
+
+and every slope occurs.
+
+## Smooth generated-field instantiation
+
+Take an actual official smooth multiplicative subgroup or coset
+
+[
+D_i\subseteq\mathbb F_{q_i}^{\times},
+\qquad |D_i|=n_i,
+\qquad \frac{\log q_i}{n_i}\to0.
+]
+
+Set
+
+[
+k_i=\lfloor\rho n_i\rfloor,
+\qquad
+t_i=\left\lfloor\frac{C n_i}{\log_2q_i}\right\rfloor,
+\qquad C<H_2(\rho).
+]
+
+One may take (E=X^{t_i}), since (0\notin D_i), and (B=1). If monomial denominators are externally excluded, take a squarefree or irreducible degree-(t_i) denominator nonzero on (D_i); the rank proof is unchanged.
+
+All (q_i) slopes then have noncontained witnesses at
+
+[
+\delta_i=1-\frac{k_i+t_i}{n_i}.
+]
+
+Because (D_i) is multiplicative, the exact-normal-form hypothesis is automatic via (X^{n_i-k_i}). Thus
+
+[
+\emca!\left(
+\operatorname{RS}[\mathbb F_{q_i},D_i,k_i],
+\delta_i
+\right)=1,
+]
+
+and for every (\epsilon_i^*<1),
+
+[
+\boxed{
+\delta^*
+*{\operatorname{RS}[\mathbb F*{q_i},D_i,k_i]}
+(\epsilon_i^*)
+\le
+1-\rho-\frac{C}{\log_2q_i}
++O!\left(\frac1{n_i}\right),
+\qquad C<H_2(\rho).
+}
+]
+
+This is the generated-field, smooth multiplicative statement the packet was seeking. It does not require transferring the additive anchor or compressing a (2t)-dimensional landing condition. It reruns the domain-independent random-anchor theorem directly in the official coordinates.
+
+The remaining hidden assumption is the asymptotic regime (n/\log q\to\infty). If the official challenge includes domains with (n=\Theta(\log q)), all-slope coverage has an unavoidable support-count cost. Writing
+
+[
+\alpha=\limsup\frac{\log_2q}{n},
+]
+
+the same calculation naturally gives the stricter range approximately
+
+[
+C<H_2(\rho)-\alpha,
+]
+
+not (C<H_2(\rho)). The official quantifiers over (n) and (q) must therefore be checked explicitly.
+
+## Final scope ruling
+
+* **Restricted (D=\mathbb F_p) branch:** does not presently count as smooth-domain admissible.
+* **Grand MCA challenge:** there is a credible, nearly formal route through the domain-independent rank lemma and the subexponential (\Gamma)-bound. Confidence: **high algebraically, moderate-high pending the exact official domain and (n/q) quantifiers**.
+* **Full Proximity Prize:** not solved by this route. Nothing here supplies a lower bound for the column-distance list size of the interleaved code
+  [
+  C^{\equiv m}.
+  ]
+  The interleaved-list bridge remains a separate wall.

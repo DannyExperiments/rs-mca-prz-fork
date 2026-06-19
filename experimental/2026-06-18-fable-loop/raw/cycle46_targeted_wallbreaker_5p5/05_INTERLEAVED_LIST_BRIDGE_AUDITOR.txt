@@ -1,0 +1,560 @@
+## Verdict
+
+**High confidence:** the banked Cycle45 MCA theorem **does not by itself imply a large same-radius interleaved list**, because it counts witnessing supports rather than distinct codewords. However, the **same random-anchor construction can be strengthened by an elementary de-clustering argument** to give:
+
+[
+\bigl|\Lambda(C^{\equiv m},\delta_p)\bigr|
+\ge 2^{(H_2(\rho)-2C-o(1))p}
+]
+
+for every fixed (m), at
+
+[
+\delta_p
+=1-\rho-\frac{C}{\log_2 p}+o(1/\log p),
+\qquad C<\frac{H_2(\rho)}2.
+]
+
+This uses diagonal interleaving. Numerically, the lower bound is **not new**: it is exactly the ordinary scalar volume obstruction transported through the diagonal embedding (C\hookrightarrow C^{\equiv m}). What Cycle45 adds is a nontrivial structural statement: essentially every point on one affine line of (p^2) received words is simultaneously MCA-bad and carries a near-volume scalar/diagonal list.
+
+The relevant packet statements are in the [Cycle45 L2 audit](sandbox:/mnt/data/cycle46_packet/cycle46_targeted_wallbreaker_packet/01_CYCLE45_RANDOM_ANCHOR_L2_AUDIT.md), with definitions in the [source excerpt](sandbox:/mnt/data/cycle46_packet/cycle46_targeted_wallbreaker_packet/04_SOURCE_DEFINITIONS_EXCERPT.md) and the post-lit wall in the [literature audit](sandbox:/mnt/data/cycle46_packet/cycle46_targeted_wallbreaker_packet/02_CYCLE45_DEEP_LIT_AUDIT.md).
+
+---
+
+## 1. The exact mismatch between MCA support counts and list size
+
+Write
+
+[
+Q=p^2,\qquad
+a=k+t,\qquad
+j=p-a,\qquad
+\delta_p=\frac jp,
+\qquad
+\lambda=\frac{\binom pj}{Q^t}.
+]
+
+For the Cycle45 datum,
+
+[
+u_z=\frac{w-zB}{E},
+\qquad z\in F=\mathbb F_{p^2}.
+]
+
+For (c\in C=\operatorname{RS}[F,D,k]), define its agreement count with (u_z) by
+
+[
+r_{z,c}
+=======
+
+# #{d\in D:u_z(d)=c(d)}
+
+#{d:w(d)=E(d)c(d)+zB(d)}.
+]
+
+Let
+
+[
+L_z
+===
+
+# #{c\in C:r_{z,c}\ge a}
+
+\bigl|\Lambda_{u_z}(C,\delta_p)\bigr|.
+]
+
+The exact support-to-codeword identity is
+
+[
+\boxed{\displaystyle
+\nu_w(z)=\sum_{c\in C}\binom{r_{z,c}}a.
+}
+\tag{1}
+]
+
+Indeed, every (a)-subset of the agreement set of (c) gives a landing support, because (Ec+zB) has degree (<k+t=a) and is therefore the interpolant on that support. Conversely, every landing support gives the unique codeword
+
+[
+c=\frac{\operatorname{interp}_S(w)-zB}{E}.
+]
+
+Consequently,
+
+[
+L_z\le \nu_w(z),
+]
+
+but there is no useful converse without controlling the multiplicities (r_{z,c}). A single codeword agreeing on (a+h) coordinates contributes
+
+[
+\binom{a+h}{a}
+]
+
+different landing supports. This is exactly the duplicate-support clustering already visible in the sparse-anchor examples.
+
+Thus the banked conclusion
+
+[
+\nu_w(z)>0\qquad\text{for all }z
+]
+
+implies only that each (u_z) has a nonempty scalar list. It does **not**, by itself, imply that any (L_z) is large.
+
+Noncontainment does not repair this. Noncontainment says that the line coefficients (f,g) are not simultaneously codewords on a witnessing support; it does not stop one scalar codeword (c) from agreeing with (u_z) on many different supports.
+
+---
+
+## 2. The deterministic bridge from the banked theorem loses a factor two in radius
+
+Choose one witnessed pair ((c_z,S_z)) for each bad slope, so
+
+[
+c_z=u_z=f+zg\quad\text{on }S_z,
+\qquad |S_z|=p-j.
+]
+
+For (z\neq z'), put
+
+[
+G_{z,z'}=\frac{c_z-c_{z'}}{z-z'},
+\qquad
+A_{z,z'}=\frac{zc_{z'}-z'c_z}{z-z'}.
+]
+
+Then (A_{z,z'},G_{z,z'}\in C), and on (S_z\cap S_{z'}),
+
+[
+(A_{z,z'},G_{z,z'})=(f,g).
+]
+
+Therefore
+
+[
+(A_{z,z'},G_{z,z'})
+\in
+\Lambda_{(f,g)}(C^{\equiv 2},2j/p),
+]
+
+because
+
+[
+|S_z\cap S_{z'}|\ge p-2j.
+]
+
+One can also control collisions in this map. For fixed ((A,G)), at most (j+1) slopes can satisfy (c_z=A+zG). Hence, if (L) slopes are bad,
+
+[
+\left|\Lambda_{(f,g)}(C^{\equiv2},2j/p)\right|
+\ge
+\frac{\binom L2}{\binom{j+1}2}.
+]
+
+With (L=p^2), this is (\Omega(p^2)).
+
+This is rigorous but not useful asymptotically. At agreement size (p-2j), one normally has (p-2j<k), and fixing any such support already leaves
+
+[
+Q^{,2(k-(p-2j))}
+]
+
+interleaved codeword pairs matching an arbitrary center. Thus the secant bridge is weaker than elementary interpolation.
+
+The radius loss is structural: column distance demands one **common** agreement support, whereas two MCA witnesses supply two unrelated supports. The “one bad parameter per support” theorem also prevents two distinct slopes from sharing an exact noncontained witnessing support.
+
+---
+
+## 3. The strong same-radius bridge
+
+Although the banked deterministic statement is insufficient, the random-anchor selection can be refined to control support multiplicity.
+
+Define
+
+[
+\Delta_z=\nu_w(z)-L_z\ge0,
+\qquad
+\Delta=\sum_z\Delta_z.
+]
+
+For uniformly random (w), and fixed (z,c),
+
+[
+r_{z,c}\sim \operatorname{Bin}(p,Q^{-1}).
+]
+
+Using (1),
+
+[
+\mathbb E\nu_w(z)=\lambda.
+]
+
+Moreover,
+
+[
+\begin{aligned}
+\mathbb E L_z
+&=
+Q^k\Pr\bigl[\operatorname{Bin}(p,Q^{-1})\ge a\bigr] \
+&\ge
+Q^k\binom pa Q^{-a}(1-Q^{-1})^{p-a} \
+&=
+\lambda(1-Q^{-1})^j.
+\end{aligned}
+]
+
+Therefore
+
+[
+\mathbb E\Delta_z
+\le
+\lambda\left(1-(1-Q^{-1})^j\right)
+\le
+\frac jQ\lambda,
+]
+
+and summing over the (Q) slopes gives
+
+[
+\boxed{\mathbb E\Delta\le j\lambda.}
+\tag{2}
+]
+
+Cycle45 supplies
+
+[
+\mathbb E\Phi(w)
+\le C_*Q\lambda,
+\qquad
+\Phi(w)=\sum_z(\nu_w(z)-\lambda)^2.
+\tag{3}
+]
+
+By applying Markov to (2) and (3), there is one anchor satisfying simultaneously
+
+[
+\Phi(w)\le4C_*Q\lambda,
+\qquad
+\Delta\le4j\lambda.
+\tag{4}
+]
+
+For this anchor,
+
+[
+|\nu_w(z)-\lambda|
+\le 2\sqrt{C_*Q\lambda}
+\qquad\text{for every }z.
+\tag{5}
+]
+
+Since (\lambda/Q\to\infty) in the strict entropy range, (5) gives
+
+[
+\nu_w(z)=(1+o(1))\lambda
+]
+
+uniformly over all (z), and in particular every slope remains MCA-bad.
+
+Now let
+
+[
+\eta_p=\sqrt{\frac jQ}=O(p^{-1/2}).
+]
+
+By (4), the number of slopes with (\Delta_z>\eta_p\lambda) is at most
+
+[
+\frac{4j\lambda}{\eta_p\lambda}
+===============================
+
+# 4\sqrt{jQ}
+
+o(Q).
+]
+
+For every remaining slope,
+
+[
+\begin{aligned}
+L_z
+&=\nu_w(z)-\Delta_z\
+&\ge
+\lambda-2\sqrt{C_*Q\lambda}-\eta_p\lambda\
+&=(1-o(1))\lambda.
+\end{aligned}
+]
+
+Since (L_z\le\nu_w(z)), we obtain
+
+[
+\boxed{
+L_z=(1+o(1))\lambda
+\quad\text{for }Q-o(Q)\text{ slopes }z.
+}
+\tag{6}
+]
+
+There is also an all-slope, slightly weaker version. Put
+
+[
+s_p=\left\lceil\frac p{\log_2p}\right\rceil.
+]
+
+A union bound over all (Q^{k+1}) pairs ((z,c)) gives
+
+[
+\begin{aligned}
+\Pr\bigl[\exists z,c:r_{z,c}\ge a+s_p+1\bigr]
+&\le
+Q^{k+1}2^pQ^{-(a+s_p+1)}\
+&=
+2^pQ^{-t-s_p}\
+&=o(1).
+\end{aligned}
+]
+
+Hence the anchor can additionally be chosen so that every codeword contributes at most
+
+[
+\binom{a+s_p}{a}=2^{o(p)}
+]
+
+supports. Combining this with (5),
+
+[
+\boxed{
+L_z\ge\frac{(1-o(1))\lambda}{2^{o(p)}}
+\quad\text{for every }z\in F.
+}
+\tag{7}
+]
+
+Thus the all-(p^2)-slope conclusion survives at the level of exponential list size.
+
+---
+
+## 4. Consequence for (C^{\equiv m})
+
+Assume the standard convention
+
+[
+\Lambda(C^{\equiv m},\delta)
+============================
+
+\max_{\mathbf y}
+\left|
+\left{
+(c_1,\dots,c_m)\in C^m:
+d_{\mathrm{col}}((c_i),\mathbf y)\le\delta
+\right}
+\right|.
+]
+
+For each scalar center (u_z), take the diagonal interleaved center
+
+[
+\mathbf u_z=(u_z,\dots,u_z).
+]
+
+Every scalar list element (c) produces the diagonal tuple
+
+[
+\mathbf c=(c,\dots,c).
+]
+
+Its column agreement set with (\mathbf u_z) is exactly the scalar agreement set of (c) with (u_z). Therefore
+
+[
+|\Lambda_{\mathbf u_z}(C^{\equiv m},\delta_p)|
+\ge L_z.
+]
+
+Combining this with (6),
+
+[
+\boxed{
+|\Lambda(C^{\equiv m},\delta_p)|
+\ge
+(1-o(1))\frac{\binom pj}{p^{2t}}.
+}
+\tag{8}
+]
+
+For
+
+[
+k=\lfloor\rho p\rfloor,
+\qquad
+t=\left\lfloor\frac{Cp}{\log_2p}\right\rfloor,
+\qquad
+C<\frac{H_2(\rho)}2,
+]
+
+this becomes
+
+[
+\boxed{
+|\Lambda(C^{\equiv m},\delta_p)|
+\ge
+2^{(H_2(\rho)-2C+o(1))p}.
+}
+\tag{9}
+]
+
+More structurally, for one anchor:
+
+* all (p^2) scalar centers (u_z) are MCA-bad;
+* all (p^2) diagonal interleaved centers have list size
+  (2^{(H_2(\rho)-2C-o(1))p});
+* (p^2-o(p^2)) of them have list size asymptotic to
+  (\binom pj/p^{2t}).
+
+---
+
+## 5. Why this is not a new worst-case list-size exponent
+
+The same numerical lower bound follows without MCA.
+
+For a uniformly random scalar received word (y\in F^p),
+
+[
+\begin{aligned}
+\mathbb E_y|\Lambda_y(C,\delta_p)|
+&\ge
+Q^k\binom pj(Q-1)^jQ^{-p}\
+&=
+\frac{\binom pj}{Q^t}(1-Q^{-1})^j\
+&=(1-o(1))\lambda.
+\end{aligned}
+]
+
+Hence some scalar center already has a list of size ((1-o(1))\lambda). Also, universally,
+
+[
+\boxed{
+\Lambda(C^{\equiv m},\delta)\ge\Lambda(C,\delta),
+}
+]
+
+because of the diagonal embedding.
+
+So (8)–(9) do **not** improve the ordinary worst-case lower bound. They identify a much more constrained realization of it:
+
+> near-volume lists occur simultaneously at essentially every point of one affine line, and every point of that line is support-wise MCA-bad.
+
+That is a genuine MCA/list interaction, but not a new list-capacity threshold.
+
+---
+
+## 6. A genuinely (m)-row extension
+
+If diagonal or affine-rank-one lists are considered insufficient, the Cycle45 rank mechanism still has a direct tensorized extension.
+
+Take (m) independent anchors (w_1,\dots,w_m), and define
+
+[
+\mathbf R_S(\mathbf w)
+======================
+
+(R_S(w_1),\dots,R_S(w_m))\in A^m.
+]
+
+The pair-rank formula immediately direct-sums to
+
+[
+\boxed{
+\operatorname{rank}*F
+\bigl(
+\mathbf w\mapsto
+(\mathbf R_S(\mathbf w),\mathbf R*{S'}(\mathbf w))
+\bigr)
+======
+
+m\bigl(t+\min(t,|S\setminus S'|)\bigr).
+}
+\tag{10}
+]
+
+For vector slopes (\mathbf z\in F^m), the mean number of common landing supports is
+
+[
+\lambda_m
+=========
+
+\frac{\binom pj}{Q^{mt}}.
+]
+
+The same discrepancy and de-clustering argument then yields genuinely column-aligned interleaved lists of size
+
+[
+(1-o(1))\lambda_m
+]
+
+for almost all vector centers, and exponential size whenever
+
+[
+C<\frac{H_2(\rho)}{2m}.
+]
+
+Random independent rows may additionally be chosen linearly independent modulo (C), since for fixed (m),
+
+[
+\Pr!\left[
+\dim_F\langle u_1+C,\dots,u_m+C\rangle<m
+\right]
+\le
+Q^mQ^{k-p}
+=o(1).
+]
+
+Thus there is a clear route to a **genuinely interleaved, volume-scale lower-bound theorem**. It does not reach the scalar threshold (H_2(\rho)/2); independent rows pay (mt) residue constraints.
+
+---
+
+## 7. Exact remaining lemma for a stronger interleaved result
+
+To obtain the scalar exponent
+
+[
+H_2(\rho)-2C
+]
+
+while retaining genuine quotient-row rank (m), one needs a construction that synchronizes the (m) row landings while paying only (t), rather than (mt), effective residue constraints.
+
+A precise target is:
+
+### Correlated common-support rank-compression lemma
+
+Construct (m) received rows (u_1,\dots,u_m), of rank (m) modulo (C), such that for exponentially many supports (S) of size (k+t),
+
+[
+u_i|_S\in C|_S
+\qquad\text{for every }i=1,\dots,m,
+]
+
+and such that the resulting codeword tuples are de-clustered, while the simultaneous support condition has effective probability
+
+[
+Q^{-t-o(t)}
+]
+
+rather than (Q^{-mt}).
+
+Equivalently, in residue coordinates one needs many (S) for which
+
+[
+(R_S(w_1),\dots,R_S(w_m))
+]
+
+lies in a target set of codimension (t+o(t)), despite the rows remaining independent modulo (C).
+
+This is exactly where the Cycle45 line mechanism fails:
+
+* using one common anchor compresses the residue rank but gives only an affine-rank-one family modulo (C);
+* using independent anchors preserves row rank (m) but costs (mt);
+* using distinct slopes from the same MCA line cannot provide a common noncontained support, by the one-bad-parameter-per-support theorem.
+
+Proving either the rank-compression lemma or a no-go theorem showing that such compression forces quotient rank (<m) would constitute a substantial resolution of the genuinely interleaved wall.
+
+## Bottom line
+
+The restricted Cycle45 construction supports a rigorous same-radius list bridge after one additional de-clustering argument. It yields exponential lists for (C^{\equiv m}), but through the scalar/diagonal obstruction and with the ordinary volume exponent. It does **not** yet solve the intended grand interleaved-list problem if that problem demands genuinely (m)-dimensional lists, a matching upper bound, or an admissible smooth-domain MCA realization.

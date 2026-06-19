@@ -1260,3 +1260,36 @@ Keep entries concise and link to the relevant files.
 - **New walls:** `W-F1-AA-RES-SMOOTH-DOMAIN-ADMISSIBILITY`,
   `W-F1-AA-RES-FROBENIUS-COMPRESSED-LANDING`, and
   `W-F1-LIST-INTERLEAVED-BRIDGE`.
+
+### 2026-06-19 - Cycle 46 targeted wallbreaker audit
+
+- **Agent/model:** Codex auditing six fresh external 5.5 Pro-style targeted
+  wallbreaker answers. Outputs 02 and 03 are byte-identical duplicates.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/cycle46_targeted_wallbreaker_5p5/`,
+  `experimental/2026-06-18-fable-loop/audits/20260619_CYCLE46_TARGETED_WALLBREAKER_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** PROOF_CANDIDATE / BANKABLE_LEMMA / ROUTE_CUT /
+  EXACT_NEW_WALL / AUDIT.
+- **What changed:** The smooth-domain wall may be much weaker than the Cycle45
+  lit audit suggested. The pair-rank theorem is domain-free: for arbitrary
+  `D subset F_Q`, `rank_F(R_T,R_T') = t + min(t, |T\T'|)`.
+- **New scalar-MCA route:** The constant Cycle45 shell bound is not needed.
+  The domain-uniform shell factor is
+  `J <= exp(2 sqrt(aj/Q)) <= exp(n/sqrt(Q))`, hence subexponential for
+  `Q >= n`. This should allow smooth prime-field multiplicative subgroups
+  with `log q=o(n)` to reach `emca=1` throughout the strict range
+  `c < H_2(rho)`.
+- **Route cut:** Frobenius compression is no longer the preferred scalar-MCA
+  wall unless official rules force the quadratic extension ledger or exclude
+  prime-field smooth subgroups.
+- **New walls:** `W-F1-AA-RES-DOMAIN-UNIFORM-BESSEL-MOMENT`,
+  `W-F1-AA-SMOOTH-PRIME-SUBGROUP-MCA-COUNTERPACKET`,
+  `W-F1-LIST-M-ANCHOR-ZERO-RESIDUE-DISTINCTNESS`, and
+  `W-F1-LIST-CORRELATED-COMMON-SUPPORT-RANK-COMPRESSION`.
+- **List-side caution:** The direct `m`-anchor construction gives a real
+  column-distance interleaved lower bound with exponent `H_2(rho)-m c`, but it
+  may be ordinary volume behavior, not a full grand list-decoding threshold.
+- **What to do next:** Formalize/source-audit the domain-uniform Bessel moment
+  theorem and smooth-prime-subgroup MCA counterpacket, then compare literally
+  against the official grand MCA challenge wording.
