@@ -1708,3 +1708,21 @@ Keep entries concise and link to the relevant files.
   before launch.
 - **Heartbeat:** `rs-mca-cycle49-heartbeat` should now target Cycle56 at a
   10-minute cadence.
+
+### 2026-06-19 - Cycle 56 provider-403 partial audit
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/cycle56_t2j2_conic_sqrt_counterpacket_check/`,
+  `experimental/2026-06-18-fable-loop/audits/20260619_CYCLE56_PROVIDER403_PARTIAL_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** HARNESS_FAILURE / PARTIAL_OBSERVATION / NO_PROOF_PROMOTION.
+- **Harness note:** `PROVIDER_API_ERROR_403`, nonretryable, after about
+  `$2.19`; raw artifacts preserved before audit.
+- **Partial observation:** The saved `response.md` is not a theorem answer, but
+  it flags a possible domain-regime issue: Cycle55's `sqrt(Q)` seed uses
+  `L=mu_{Q-1}` with `n approx Q`, while the earlier source-valid `t=2,j=2`
+  checker used `D=F_p`, hence `n=sqrt(Q)`.
+- **What to do next:** Stage a compact retry that forbids broad source scans
+  and asks only whether the `n approx Q` multiplicative-domain seed is
+  source-admissible or killed by the official ledger.

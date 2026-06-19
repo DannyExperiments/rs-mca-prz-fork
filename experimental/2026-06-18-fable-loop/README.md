@@ -1539,7 +1539,7 @@ Cycle 55 t=2,j=2 conic audit:
 Cycle 56 staged prompt:
 
 - `prompts/20260619_cycle56_t2j2_conic_sqrt_counterpacket_check.md`
-- Status: `RUN_ACTIVE` / `GENERATING`.
+- Status: `FAILED_PROVIDER_403`; see the partial audit below.
 - Target: `W-MCA-T2J2-CONIC-SQRT-COUNTERPACKET-CHECK`.
 - Purpose: verify or kill the Cycle55 `Theta(sqrt(Q))` excess seed. A
   `COUNTERPACKET` must supply a source-valid growing family and rule out
@@ -1548,4 +1548,18 @@ Cycle 56 staged prompt:
   that restores an `O(1)` or otherwise harmless bound.
 - Launch receipt:
   `/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-19T11-37-03-979Z-cycle56-t2j2-conic-sqrt-counterpacket-check-a15f0ab3`.
-- Initial status: `generating` / `Claude CLI generating`.
+- Final status: `PROVIDER_API_ERROR_403`; raw partial artifacts preserved.
+
+Cycle 56 provider-403 partial audit:
+
+- `raw/cycle56_t2j2_conic_sqrt_counterpacket_check/`
+- `audits/20260619_CYCLE56_PROVIDER403_PARTIAL_AUDIT.md`
+- Status: `HARNESS_FAILURE / PARTIAL_OBSERVATION / NO_PROOF_PROMOTION`.
+- Harness note: the run consumed about `$2.19`, saved raw JSONL and a short
+  `response.md`, then ended with nonretryable provider status 403.
+- Conservative audit: no theorem label is promoted. The partial notes flag a
+  possible domain-regime issue: Cycle55's `sqrt(Q)` seed uses
+  `L=mu_{Q-1}` with `n approx Q`, while the earlier banked source-valid
+  `t=2,j=2` checker used `D=F_p`, hence `n=sqrt(Q)`.
+- Next action: stage a compact retry that asks only for the final
+  source-admissibility verdict on this domain-regime distinction.
