@@ -1726,3 +1726,18 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Stage a compact retry that forbids broad source scans
   and asks only whether the `n approx Q` multiplicative-domain seed is
   source-admissible or killed by the official ledger.
+
+### 2026-06-19 - Cycle 56b domain-regime finalizer prompt staged
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/prompts/20260619_cycle56b_conic_sqrt_domain_regime_finalizer.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** STAGED_PROMPT / AUDIT.
+- **What is being added:** A compact retry prompt for
+  `W-MCA-T2J2-CONIC-SQRT-DOMAIN-REGIME-FINALIZER`.
+- **How it is useful:** It removes the broad source-read failure mode and asks
+  directly whether the `n approx Q` multiplicative-domain `sqrt(Q)` seed is
+  admissible, or whether Cycle55 was only a relaxed curve-count obstruction.
+- **What to do next:** Launch via artifact stream, preserve the raw response,
+  and audit conservatively.

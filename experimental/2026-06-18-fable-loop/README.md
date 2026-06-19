@@ -1563,3 +1563,14 @@ Cycle 56 provider-403 partial audit:
   `t=2,j=2` checker used `D=F_p`, hence `n=sqrt(Q)`.
 - Next action: stage a compact retry that asks only for the final
   source-admissibility verdict on this domain-regime distinction.
+
+Cycle 56b staged prompt:
+
+- `prompts/20260619_cycle56b_conic_sqrt_domain_regime_finalizer.md`
+- Status: `STAGED_PROMPT`.
+- Target: `W-MCA-T2J2-CONIC-SQRT-DOMAIN-REGIME-FINALIZER`.
+- Purpose: compact retry after provider 403. It supplies the Cycle54/Cycle55
+  facts directly and asks whether the `n approx Q` multiplicative-domain
+  `sqrt(Q)` seed is admissible, or whether the actual source-valid branch is
+  the additive/base-field `n=sqrt(Q)` toy ledger where the Weil error is
+  harmless at the source upper scale.
