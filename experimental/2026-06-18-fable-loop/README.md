@@ -1193,3 +1193,30 @@ Cycle 45 external L2 anticollision packet:
   Cycle 44 identity and ledgers, but different roles: proof-builder,
   falsifier hunter, source auditor, finite checker designer, homerun attempt,
   and obstruction reducer.
+
+Cycle 45 external random-anchor L2 audit:
+
+- `raw/cycle45_external_random_anchor_l2/20260619_CYCLE45_RANDOM_ANCHOR_L2_CERTIFICATE.md`
+- `raw/cycle45_external_random_anchor_l2/cycle45_random_anchor_reserve_lift_certificate.md`
+- `raw/cycle45_external_random_anchor_l2/20260619_cycle45_moment_formula_checker.py`
+- `raw/cycle45_external_random_anchor_l2/20260619_cycle45_moment_formula_checker_sample.txt`
+- `audits/20260619_CYCLE45_EXTERNAL_RANDOM_ANCHOR_L2_AUDIT.md`
+- Status: `PROOF / BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT /
+  EXPERIMENTAL`.
+- Banked content: the literal uniform-in-anchor L2 wall is false, but the
+  existential random-anchor L2 reserve lift is proved in the restricted
+  additive `D=F_p`, `F=F_{p^2}`, `q_line=p^2` residue-line branch.
+- Key lemma:
+  `rank_F(w -> (R_T(w),R_T'(w))) = t + min(t, |T\T'|)`. This gives exact
+  independence once cosupports differ in at least `t` exchanged points and
+  yields `M_2 <= (1+o(1)) #Land^2/q_line` whenever
+  `binom(p,j)/p^(2t) -> infinity`.
+- Reserve consequence: for `t=(C+o(1))p/log_2 p`, `k/p -> rho`, and
+  `C < H_2(rho)/2`, a source-valid deterministic anchor exists with
+  `(1-o(1))p^2` slopes, and the strict interior gives all `p^2` slopes for
+  sufficiently large `p`.
+- Not banked: generated-field theorem, smooth multiplicative-domain theorem,
+  corrected-reserve sufficiency theorem, protocol/SNARK statement, or
+  Proximity Prize solve.
+- New full-problem wall:
+  `W-F1-AA-RES-FROBENIUS-COMPRESSED-LANDING`.

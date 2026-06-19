@@ -1,0 +1,14 @@
+p=31
+q_line=961
+t=2
+j=4
+a=27
+N_subsets=31465
+lambda_float=0.03407069249102078
+lambda_over_q_line=3.545337408014649e-05
+E_nu2_float=0.039056447732110595
+Var_nu_float=0.0378956356452929
+Cstar=1.2660658777520082
+variance_bound_float=0.04313574119426298
+near_weight_float=1.1146765410004276
+variance_bound_pass_using_Cstar_lt_2=True

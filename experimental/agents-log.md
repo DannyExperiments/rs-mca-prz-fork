@@ -1199,3 +1199,39 @@ Keep entries concise and link to the relevant files.
 - **Why:** Cycle 44 produced a precise L2 wall. Six identical homerun prompts
   would waste model diversity; the role split probes proof and failure modes
   separately while keeping the same banked identity and ledgers.
+
+### 2026-06-19 - Cycle 45 external random-anchor L2 audit
+
+- **Agent/model:** Codex auditing external 5.5 Pro-style Cycle 45 answers and
+  local artifacts from Downloads.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/cycle45_external_random_anchor_l2/`,
+  `experimental/2026-06-18-fable-loop/audits/20260619_CYCLE45_EXTERNAL_RANDOM_ANCHOR_L2_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** PROOF / BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT /
+  EXPERIMENTAL.
+- **What is being added:** The external round cuts the universal fixed-anchor
+  version of `W-F1-AA-RES-SYMMETRIC-FUNCTION-CANCELLATION-L2-ANTICOLLISION`,
+  but proves the existential random-anchor L2 reserve lift in the restricted
+  additive branch `D=F_p`, `F=F_{p^2}`, `q_line=p^2`.
+- **Bankable lemma:** For supports/cosupports at exchange distance `r`,
+  `rank_F(w -> (R_T(w),R_T'(w))) = t + min(t,r)`. Thus random-anchor residues
+  are exactly independent once the supports differ in at least `t` exchanged
+  points.
+- **Reserve consequence:** With `lambda=binom(p,j)/p^(2t)`, there exists a
+  deterministic anchor with `M_2 <= (1+o(1))#Land^2/p^2` whenever
+  `lambda -> infinity`; in the strict entropy range
+  `t=(C+o(1))p/log_2 p`, `C < H_2(rho)/2`, this gives `(1-o(1))p^2` slopes
+  and all `p^2` slopes for sufficiently large `p` under the stronger finite
+  gap `lambda >> p^2`.
+- **Audit caveats:** The result needs `b=[B_num]_E != 0`, should use a
+  nondegenerate additive pairing if `E` is not squarefree, and should prefer
+  an aperiodic separated denominator such as `X^t+alpha X+1` for final source
+  hygiene.
+- **What is not banked:** No generated-field theorem, no smooth
+  multiplicative-domain theorem, no corrected-reserve sufficiency theorem, no
+  protocol/SNARK statement, and no Proximity Prize solve.
+- **New wall:** `W-F1-AA-RES-FROBENIUS-COMPRESSED-LANDING`, i.e. a transfer or
+  compression lemma that would reduce the landing codimension from
+  `2(t-1)` `B`-dimensions to `t-1` and move the entropy threshold from
+  `H_2(rho)/2` toward the generated-field scale `H_2(rho)`.
