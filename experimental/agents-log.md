@@ -1741,3 +1741,33 @@ Keep entries concise and link to the relevant files.
   admissible, or whether Cycle55 was only a relaxed curve-count obstruction.
 - **What to do next:** Launch via artifact stream, preserve the raw response,
   and audit conservatively.
+
+### 2026-06-19 - Cycle 56b provider-quota audit
+
+- **Agent/model:** Codex auditing `claude-opus-4-8`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/raw/cycle56b_conic_sqrt_domain_regime_finalizer/`,
+  `experimental/2026-06-18-fable-loop/audits/20260619_CYCLE56B_PROVIDER_QUOTA_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** HARNESS_FAILURE / PROVIDER_QUOTA_EXHAUSTED / NO_PROOF_PROMOTION.
+- **Harness note:** Immediate `PROVIDER_API_ERROR_403`; provider reported
+  exhausted quota, remaining about `-$0.065816`. No model tokens were used.
+- **What to do next:** Stop launching 4.8 artifact-stream runs until quota is
+  restored or another provider lane is intentionally selected.
+
+### 2026-06-19 - Cycle 56 local domain-regime audit
+
+- **Agent/model:** Codex local audit.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/audits/20260619_CYCLE56_LOCAL_DOMAIN_REGIME_AUDIT.md`,
+  `experimental/2026-06-18-fable-loop/README.md`,
+  `experimental/agents-log.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** ROUTE_CUT / BANKABLE_LEMMA / EXACT_NEW_WALL / LOCAL_AUDIT.
+- **Verdict:** The Cycle55 `sqrt(Q)` seed cuts the literal large-domain toy
+  `+O(1)` conic target, but does not promote to an official fixed-rate
+  counterpacket because balanced `t=2,j=2` forces `k=n-4` and `rho -> 1`.
+- **Banked lemma:** `t=2,j=2` is a near-rate-one local algebraic test case, not
+  one of the official rates `1/2,1/4,1/8,1/16`.
+- **New wall:** Return to the constant-rate high-`j` problem:
+  `W-MCA-CONSTANT-RATE-HIGH-J-SPLIT-LOCATOR-INCIDENCE`, or globally
+  `W-MCA-SYNDROME-TRANSVERSE-SECANT-ENTROPY-INVERSE`.

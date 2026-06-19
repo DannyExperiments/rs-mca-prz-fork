@@ -1,0 +1,33 @@
+{
+  "format": "stream-json",
+  "answer": "Failed to authenticate. API Error: 403 用户额度不足, 剩余额度: ＄-0.065816 (request id: 20260619200418997275339JDGvvT8J)",
+  "total_cost_usd": 0,
+  "usage": {
+    "input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 0,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "modelUsage": {},
+  "stop_reason": "stop_sequence",
+  "terminal_reason": "completed",
+  "is_error": true,
+  "api_error_status": 403,
+  "captureWarning": null,
+  "parseErrors": [],
+  "eventCount": 4,
+  "stdoutBytes": 3010,
+  "raw_stderr": ""
+}

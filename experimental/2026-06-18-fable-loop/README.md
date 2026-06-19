@@ -1574,3 +1574,25 @@ Cycle 56b staged prompt:
   `sqrt(Q)` seed is admissible, or whether the actual source-valid branch is
   the additive/base-field `n=sqrt(Q)` toy ledger where the Weil error is
   harmless at the source upper scale.
+
+Cycle 56b provider-quota audit:
+
+- `raw/cycle56b_conic_sqrt_domain_regime_finalizer/`
+- `audits/20260619_CYCLE56B_PROVIDER_QUOTA_AUDIT.md`
+- Status: `HARNESS_FAILURE / PROVIDER_QUOTA_EXHAUSTED / NO_PROOF_PROMOTION`.
+- Harness note: immediate `PROVIDER_API_ERROR_403`; provider reported
+  exhausted quota, remaining about `-$0.065816`. No model tokens were used and
+  no mathematical answer was produced.
+
+Cycle 56 local domain-regime audit:
+
+- `audits/20260619_CYCLE56_LOCAL_DOMAIN_REGIME_AUDIT.md`
+- Status: `ROUTE_CUT / BANKABLE_LEMMA / EXACT_NEW_WALL / LOCAL_AUDIT`.
+- Verdict: the Cycle55 `sqrt(Q)` seed cuts the literal large-domain toy
+  `+O(1)` target, but should not be promoted to an official constant-rate
+  counterpacket because `t=2,j=2` forces `k=n-4`, hence `rho -> 1`.
+- Banked lemma: balanced `t=2,j=2` is a near-rate-one local test case, not one
+  of the official rates `1/2,1/4,1/8,1/16`.
+- Route cut: do not keep trying to promote the `j=2` conic seed to the prize
+  branch. Return to constant-rate high-`j` incidence or the syndrome
+  transverse-secant inverse wall.
