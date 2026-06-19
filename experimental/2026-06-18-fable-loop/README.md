@@ -1596,3 +1596,15 @@ Cycle 56 local domain-regime audit:
 - Route cut: do not keep trying to promote the `j=2` conic seed to the prize
   branch. Return to constant-rate high-`j` incidence or the syndrome
   transverse-secant inverse wall.
+
+Cycle 57 staged prompt:
+
+- `prompts/20260619_cycle57_t2_high_j_quadric_split_count.md`
+- Status: `STAGED_PROMPT`; not launched because the provider quota is
+  exhausted.
+- Target: `W-MCA-T2-HIGH-J-DETERMINANTAL-QUADRIC-SPLIT-COUNT`.
+- Purpose: move from the cut `j=2` toy conic branch back to the official
+  constant-rate regime, where `j=(1-rho)n-sigma` is linear in `n`. The prompt
+  asks whether the `t=2` determinant quadric can be bounded at
+  `n^{1+o(1)}` after quotient/tangent templates, or whether the route should
+  return fully to the syndrome transverse-secant inverse wall.

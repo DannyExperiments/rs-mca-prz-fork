@@ -1771,3 +1771,20 @@ Keep entries concise and link to the relevant files.
 - **New wall:** Return to the constant-rate high-`j` problem:
   `W-MCA-CONSTANT-RATE-HIGH-J-SPLIT-LOCATOR-INCIDENCE`, or globally
   `W-MCA-SYNDROME-TRANSVERSE-SECANT-ENTROPY-INVERSE`.
+
+### 2026-06-19 - Cycle 57 t=2 high-j prompt staged
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/prompts/20260619_cycle57_t2_high_j_quadric_split_count.md`,
+  `experimental/2026-06-18-fable-loop/README.md`,
+  `experimental/agents-log.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** STAGED_PROMPT / PROVIDER_BLOCKED.
+- **What is being added:** A prompt for
+  `W-MCA-T2-HIGH-J-DETERMINANTAL-QUADRIC-SPLIT-COUNT`, the constant-rate
+  replacement for the cut `j=2` conic branch.
+- **Provider note:** Not launched because the Claude provider quota is
+  exhausted.
+- **What to do next:** When quota is restored or another provider lane is
+  selected, launch this prompt or supersede it with the global syndrome
+  transverse-secant inverse prompt.
