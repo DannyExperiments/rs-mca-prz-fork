@@ -1147,3 +1147,17 @@ Cycle 43 reserve-lift homerun:
 - Not banked: positive-density reserve lift, corrected-reserve
   counterpacket, generated-field theorem, MCA/CA/list/line-decoding/
   curve-MCA/protocol/SNARK statement, or prize solve.
+
+Cycle 44 cosupport subset-product homerun:
+
+- `prompts/20260619_cycle44_cosupport_subset_product_homerun.md`
+- Status: active clean non-ad `artifact_stream` run / pending audit.
+- Run directory:
+  `/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-19T00-05-26-501Z-cycle44-cosupport-subset-product-homerun-11471e45`.
+- Target: `W-F1-AA-RES-COSUPPORT-SUBSET-PRODUCT-EQUIDISTRIBUTION`.
+- Purpose: make a slower homerun attack on the reserve-scale wall created by
+  Cycle 43. The prompt asks for a source-valid reserve lift through cosupport
+  subset-product equidistribution, or the smallest exact lemma, obstruction,
+  or falsifier below that wall.
+- Note: no mathematics is banked from Cycle 44 until a clean `response.md`
+  and/or explicit `output_files/` deliverables are preserved and audited.

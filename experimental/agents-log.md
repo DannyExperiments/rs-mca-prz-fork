@@ -1138,3 +1138,23 @@ Keep entries concise and link to the relevant files.
   subset-product/cosupport equidistribution directly, preferably first with a
   finite sweep fixing `t=2` and increasing `j` to see whether
   `|Slopes|/p^2` grows toward a positive constant or stalls.
+
+### 2026-06-19 - Cycle 44 cosupport subset-product homerun launched
+
+- **Agent/model:** Codex launched `claude-opus-4-8` with
+  `fable_full_experiment` in clean non-ad `artifact_stream` mode.
+- **Run directory:** `/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-19T00-05-26-501Z-cycle44-cosupport-subset-product-homerun-11471e45`.
+- **Files added or changed:** `experimental/2026-06-18-fable-loop/prompts/20260619_cycle44_cosupport_subset_product_homerun.md`,
+  `experimental/2026-06-18-fable-loop/README.md`, and
+  `experimental/2026-06-18-fable-loop/SHA256SUMS.txt`.
+- **Status:** active run / pending audit.
+- **Target:** `W-F1-AA-RES-COSUPPORT-SUBSET-PRODUCT-EQUIDISTRIBUTION`.
+- **What is being added:** A slower homerun prompt against the Cycle 43 exact
+  wall, explicitly asking for a source-valid reserve lift through cosupport
+  subset-product equidistribution, or the smallest exact lemma, obstruction,
+  or falsifier below it.
+- **How it is useful:** It points the next theorem-worker call at the actual
+  reserve-scale bottleneck rather than another fixed quartic/S4 audit.
+- **What to do next:** Preserve and audit only clean `response.md` and explicit
+  `output_files/` deliverables. Do not bank Cycle 44 mathematics until the
+  answer is classified conservatively.
