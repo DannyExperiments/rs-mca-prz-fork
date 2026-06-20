@@ -29,6 +29,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 84 MITM wallbreaker packet staged
+
+- **Agent/model:** Codex staging a nine-instance Pro wallbreaker round.
+- **Files added or changed:** `experimental/notes/m1/cycle84_mitm_wallbreaker_packet/`
+  and `experimental/agents-log.md`.
+- **Status:** PROMPT PACKET / PLAN.
+- **What is being added:** A targeted nine-role prompt packet for the exact
+  finite wall left by Cycle 83: prove `m_max(beta)<=12`, find an explicit
+  13-fold colored packet, or specify a reproducible MITM duplicate-detector
+  certificate. The shared context zip is
+  `/Users/danielcabezas/20260621_cycle84_mitm_wallbreaker_context.zip`.
+- **How it is useful:** Keeps the next Pro round on the sharpened finite
+  threshold problem rather than broad prize-level brainstorming. Roles split
+  across direct proof, counterpacket hunting, duplicate-detector design,
+  min-distance-5 strengthening, tau-symmetric energy, ratio cliques, external
+  census certificates, small-model testing, and referee route selection.
+- **What to do next:** Upload the context zip to each Pro instance, paste
+  `COMMON_PROMPT.md`, then append exactly one role prompt.
+
 ### 2026-06-20 - Cycle 83 MITM threshold plan banked
 
 - **Agent/model:** `claude-opus-4-8` via Packy/Fable `artifact_stream`,
