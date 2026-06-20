@@ -29,6 +29,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 64 prefix-collision gadget return banked
+
+- **Agent/model:** `claude-opus-4-8` via Packy/Fable `artifact_stream`,
+  audited by Codex.
+- **Files added or changed:** `experimental/notes/m1/cycle64_prefix_collision_gadget_raw/`,
+  `experimental/notes/m1/m1_cycle64_prefix_collision_gadget_audit.md`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** The Cycle 64 worker proves the exact
+  prefix-collision gadget convolution for fixed subgroup scale, shows the
+  Role 05 characteristic-17 packet is absorbed by seven gadget-class
+  enumerators plus one marker, and cuts the hope that gadget charge gives
+  scalar support-mass smallness.
+- **How it is useful:** Closes the qualitative block-to-prefix-gadget
+  bookkeeping layer while sharpening the live obstruction to thickened MCA
+  color occupancy rather than scalar support mass.
+- **What to do next:** Target
+  `W-MODEL-GJ-THICKENED-GADGET-COLOR-OCCUPANCY` by computing or proving the
+  Role 05 thickened color occupancy, and in parallel keep the finite frontier
+  checker path `RS-PRIZE-FRONTIER-V1-REGISTRY-FIRST-RUN` alive.
+
 ### 2026-06-20 - Cycle 64 prefix-collision gadget prompt launched
 
 - **Agent/model:** Codex launching `claude-opus-4-8` via Packy/Fable
