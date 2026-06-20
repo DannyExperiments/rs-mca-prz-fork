@@ -49,6 +49,24 @@ Keep entries concise and link to the relevant files.
   preserve raw artifacts on completion, audit conservatively, then bank and
   continue with the next exact prompt.
 
+### 2026-06-20 - Cycle 64 local prefix-gadget scout note
+
+- **Agent/model:** Codex local bounded follow-up while Cycle 64 Fable run is
+  active.
+- **Files added or changed:** `experimental/notes/m1/m1_cycle64_local_prefix_gadget_scout.md`
+  and `experimental/agents-log.md`.
+- **Status:** AUDIT / PLAN / LOCAL_REDUCTION.
+- **What is being added:** A compact local reduction observing that the Role
+  05 characteristic-17 packet is exactly the coefficient `[Y^4] W(Y)^7` for a
+  48-state prefix-collision gadget class with
+  `W(Y)=8(Y^1+Y^4+Y^7+Y^9+Y^12+Y^15)`.
+- **How it is useful:** Separates the qualitative repair from the quantitative
+  frontier issue: prefix-gadget charges can absorb the Role 05 packet
+  structurally, but the total charge may still be too large.
+- **What to do next:** If Cycle 64 returns only another wall, aim the next
+  prompt at an implementation-ready
+  `L-MODEL-GJ-PREFIX-GADGET-FRONTIER-CHARGE-CHECKER`.
+
 ### 2026-06-20 - Cycle 63 Round 2 returns banked and audited
 
 - **Agent/model:** External 5.5/5.6 Pro theorem-worker returns, banked and
