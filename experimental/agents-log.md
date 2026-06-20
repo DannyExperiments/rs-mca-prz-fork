@@ -29,6 +29,43 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 68 collision multiplicity prompt staged
+
+- **Agent/model:** Codex staging next Packy/Fable prompt after Cycle 67.
+- **Files added or changed:** `experimental/notes/m1/cycle68_collision_multiplicity_packet/`
+  and `experimental/agents-log.md`.
+- **Status:** PROMPT PACKET / PLAN.
+- **What is being added:** A targeted prompt for
+  `W-CYCLE67-COLLISION-MULTIPLICITY`, asking the next worker to prove
+  `m_max(beta) <= 12`, find a 13-fold collision, or specify a bounded
+  multiplicity verifier for the explicit Cycle 66 model.
+- **How it is useful:** Attacks the exact finite wall left by Cycle 67 and
+  avoids both the pure color shortcut and the full `>2^32` materialized
+  distinct-value count.
+- **What to do next:** Refresh the Packy/Fable source snapshot, run a no-token
+  preview, launch Cycle 68 if the preview includes the Cycle 67 audit/raw
+  answer and Cycle 66 self-check, then heartbeat the active run.
+
+### 2026-06-20 - Cycle 67 cross-color injectivity return banked
+
+- **Agent/model:** `claude-opus-4-8` via Packy/Fable `artifact_stream`,
+  audited by Codex.
+- **Files added or changed:** `experimental/notes/m1/cycle67_cross_color_injectivity_raw/`,
+  `experimental/notes/m1/m1_cycle67_cross_color_injectivity_audit.md`, and
+  `experimental/agents-log.md`.
+- **Status:** EXACT_NEW_WALL / BANKABLE_LEMMA / ROUTE_CUT / PLAN.
+- **What is being added:** The Cycle 67 worker cuts the pure color-class
+  shortcut and replaces it with the exact finite multiplicity target
+  `m_max(beta) <= 12`, where `Occ(beta) >= |P_0|/m_max(beta)` and
+  `|P_0|/12 > 2^32`. It also banks the shared-jet collision reduction
+  `deg(P_T-P_T') <= 107` and the energy/multiplicity formulation.
+- **How it is useful:** Avoids materializing all `>2^32` distinct values and
+  gives a sharper executable wall for the Role 05 model obstruction:
+  prove no value has more than 12 preimages, or exhibit a 13-fold collision.
+- **What to do next:** Stage Cycle 68 against
+  `W-CYCLE67-COLLISION-MULTIPLICITY`, asking for a structural proof, explicit
+  collision packet, or bounded-multiplicity verifier architecture.
+
 ### 2026-06-20 - Cycle 67 cross-color injectivity prompt staged
 
 - **Agent/model:** Codex staging next Packy/Fable prompt after Cycle 66.
