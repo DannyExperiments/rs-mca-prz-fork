@@ -29,6 +29,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 61 planning packet
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `experimental/notes/m1/cycle61_planning_packet/`
+  and `experimental/agents-log.md`.
+- **Status:** AUDIT / EXPERIMENTAL.
+- **What is being added:** A planning-only prompt packet for strong
+  theorem-worker instances, including common instructions, current route
+  state, context read order, and nine role prompts covering executive route
+  planning, MCA safe-side architecture, split-rational/Lattes registry,
+  primitive JR occupancy, scalar list circuits, counterpacket kill tests,
+  finite ledgers, formalization, and meta-referee review.
+- **How it is useful:** Tests whether 5.5-style planning strength can improve
+  the overall solve route after Cycle 60 expanded the quotient and primitive
+  container ledgers. The packet asks for dependency DAGs, theorem packages,
+  kill tests, and next-prompt allocation rather than another direct proof
+  attempt.
+- **What to do next:** Run the nine-role planning round with
+  `/Users/danielcabezas/20260620_cycle61_planning_context.zip`, then bank the
+  returned plans and synthesize a route-board update before launching another
+  theorem-proving round.
+
 ### 2026-06-20 - Cycle 60 find-the-theorem audit
 
 - **Agent/model:** Codex auditing nine external theorem-worker lanes.
