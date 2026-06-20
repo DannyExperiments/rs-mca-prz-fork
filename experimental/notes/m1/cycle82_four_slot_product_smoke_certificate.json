@@ -1,0 +1,60 @@
+{
+  "all_checked_product_injective": true,
+  "decision": "PARTIAL_4_SUBSET_PRODUCT_INJECTIVITY_PASS",
+  "key": "packed_product_only",
+  "model": {
+    "beta": [
+      2,
+      1
+    ],
+    "eta": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6
+    ],
+    "field_poly": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "results": [
+    {
+      "distinct_products": 5308416,
+      "max_multiplicity": 1,
+      "product_injective": true,
+      "slots": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "tuple_count": 5308416
+    }
+  ],
+  "self_test": "scalar_pair_12_matches_vectorized",
+  "subset_size": 4,
+  "subsets_checked": 1,
+  "subsets_requested": 1
+}

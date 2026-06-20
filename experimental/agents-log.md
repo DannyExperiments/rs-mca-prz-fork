@@ -29,6 +29,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 82 four-slot product certificate banked
+
+- **Agent/model:** `claude-opus-4-8` via Packy/Fable `artifact_stream`,
+  audited by Codex with a local NumPy verifier.
+- **Files added or changed:** `experimental/notes/m1/cycle82_four_slot_or_mitm_mmax_raw/`,
+  `experimental/scripts/cycle82_four_slot_product_checker.py`,
+  `experimental/notes/m1/cycle82_four_slot_product_smoke_certificate.json`,
+  `experimental/notes/m1/cycle82_four_slot_product_certificate.json`,
+  `experimental/notes/m1/m1_cycle82_four_slot_or_mitm_mmax_audit.md`,
+  `experimental/notes/m1/cycle83_mitm_mmax_threshold_packet/`, and
+  `experimental/agents-log.md`.
+- **Status:** PROOF / BANKABLE_LEMMA / PLAN.
+- **What is being added:** Codex locally executed the exact four-slot checker
+  and certified all 35 four-slot product maps are injective. The certificate
+  decision is `ALL_4_SUBSETS_PRODUCT_INJECTIVE`, giving product-fiber minimum
+  distance at least `5`.
+- **How it is useful:** Removes the four-slot injectivity guardrail from the
+  live finite wall and narrows the M1 target to the exact color-filtered MITM
+  threshold census for `m_max(beta)<=12`.
+- **What to do next:** Launch Cycle 83 against
+  `V-CYCLE83-MITM-MMAX-THRESHOLD-CERTIFICATE`, seeking either a reproducible
+  no-13 threshold certificate or an explicit 13-fold colored packet.
+
 ### 2026-06-20 - Cycle 82 four-slot/MITM prompt staged
 
 - **Agent/model:** Codex staging next Packy/Fable prompt after Cycle 81.
