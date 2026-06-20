@@ -29,6 +29,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 61 planning synthesis and master referee packet
+
+- **Agent/model:** Codex synthesizing nine external planning lanes.
+- **Files added or changed:** `experimental/notes/m1/cycle61_planning_raw/`,
+  `experimental/notes/m1/m1_cycle61_planning_synthesis.md`,
+  `experimental/notes/m1/cycle61_master_referee_packet/`, and
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / PLAN / CONDITIONAL.
+- **What is being added:** Raw preservation of the nine Cycle 61 planning
+  answers, a consensus/conflict/actionability synthesis, and a
+  master-referee prompt asking one final planning model to choose a primary
+  route, cut distractions, and output a two-round execution plan.
+- **How it is useful:** Converts the planning round into a decision problem:
+  verify Lattes/split-rational registry first, prove support-overlap first,
+  attack the `t=1` apolar/generalized-Jacobian base case, attack scalar
+  list circuits, or build the finite checker first.
+- **What to do next:** Send
+  `/Users/danielcabezas/20260620_cycle61_master_referee_context.zip` plus
+  `MASTER_REFEREE_PROMPT.md` to one strong 5.5 Pro master-referee instance,
+  then bank its route decision before launching another proof round.
+
 ### 2026-06-20 - Cycle 61 planning packet
 
 - **Agent/model:** Codex.
