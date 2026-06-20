@@ -29,6 +29,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 63 block-trade Round 2 packet
+
+- **Agent/model:** Codex, following Cycle 62 Round 1 audit.
+- **Files added or changed:** `experimental/notes/m1/cycle63_block_trade_round2_packet/`
+  and `experimental/agents-log.md`.
+- **Status:** PROMPT PACKET / PLAN.
+- **What is being added:** A 9-worker prompt packet for the repaired
+  scalar-list route after Role 04 cut the one-atom `Q_per` local-limit
+  theorem. The packet centers on
+  `L-MODEL-GJ-MAXIMAL-BLOCK-TRADE-CHARGE` and
+  `W-LIST-MODEL-GJ-NEAR-SPLIT-COLLISION-CLASS-MASS`.
+- **How it is useful:** Converts the Cycle 62 counterpacket into a focused
+  block-trade repair round: formalize the counterpacket, prove block collapse,
+  define canonical maximal `(K,D)` assignment, prove/kill overlap
+  non-double-counting, and keep finite-checker / red-team / MCA-transfer
+  lanes alive.
+- **What to do next:** Upload
+  `/Users/danielcabezas/20260620_cycle63_block_trade_round2_context.zip` to
+  each worker, paste `COMMON_PROMPT.md`, then append one role prompt.
+
 ### 2026-06-20 - Cycle 62 Round 1 returns banked and audited
 
 - **Agent/model:** External 5.5/5.6 Pro theorem-worker returns, banked and
