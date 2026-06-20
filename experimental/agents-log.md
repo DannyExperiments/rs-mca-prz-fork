@@ -29,6 +29,39 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 81 compiled three-slot certificate prompt staged
+
+- **Agent/model:** Codex staging next Packy/Fable prompt after Cycle 80.
+- **Files added or changed:** `experimental/notes/m1/cycle81_compiled_three_slot_certificate_packet/`
+  and `experimental/agents-log.md`.
+- **Status:** PROMPT PACKET / PLAN.
+- **What is being added:** A targeted prompt for
+  `V-CYCLE81-COMPILED-THREE-SLOT-CERTIFICATE`, demanding an executable
+  all-triples product-injectivity certificate or an explicit three-slot
+  collision packet.
+- **How it is useful:** Moves the route from unrun checker sketches to the
+  exact finite certificate needed to bank the minimum-distance rung.
+- **What to do next:** Refresh the Packy/Fable source snapshot, preview,
+  launch Cycle 81, and heartbeat the run.
+
+### 2026-06-20 - Cycle 80 mindistance/symmetric-energy return banked
+
+- **Agent/model:** `claude-opus-4-8` via Packy/Fable `artifact_stream`,
+  audited by Codex with a preserved checker and interrupted local run.
+- **Files added or changed:** `experimental/notes/m1/cycle80_mindist_symmetric_energy_raw/`,
+  `experimental/notes/m1/m1_cycle80_mindist_symmetric_energy_audit.md`,
+  `experimental/scripts/cycle80_three_slot_injectivity_checker.py`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / PLAN.
+- **What is being added:** Cycle 80 banks the weight-3 structure lemma and
+  ratio-triple reformulation: all three-slot collisions must differ in all
+  three slots, and a triple is injective iff `(R_t1 R_t2) cap R_t3` is empty.
+- **How it is useful:** Identifies the exact finite minimum-distance rung below
+  the coherent-ratio route and gives a certificate schema.
+- **What to do next:** Produce an actual compiled/vectorized all-triples
+  certificate or explicit collision packet; the preserved pure-Python checker
+  was too slow for a heartbeat-local run.
+
 ### 2026-06-20 - Cycle 80 mindistance/symmetric-energy prompt staged
 
 - **Agent/model:** Codex staging next Packy/Fable prompt after Cycle 79.
