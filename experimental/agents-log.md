@@ -29,6 +29,40 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 76 right-half/mmax prompt staged
+
+- **Agent/model:** Codex staging next Packy/Fable prompt after Cycle 75.
+- **Files added or changed:** `experimental/notes/m1/cycle76_right_half_mmax_packet/`
+  and `experimental/agents-log.md`.
+- **Status:** PROMPT PACKET / PLAN.
+- **What is being added:** A targeted prompt for
+  `V-CYCLE76-RIGHT-HALF-AND-MMAX-CENSUS`, asking for right-half
+  product-injectivity, a compiled/sharded direct max-fiber census, or an
+  explicit 13-fold collision packet.
+- **How it is useful:** Continues the direct `m_max(beta)<=12` route after
+  Codex locally certified the MITM left half `{1,2,3}`.
+- **What to do next:** Refresh the Packy/Fable source snapshot, preview, launch
+  Cycle 76, and heartbeat the run.
+
+### 2026-06-20 - Cycle 75 direct mmax fiber return banked
+
+- **Agent/model:** `claude-opus-4-8` via Packy/Fable `artifact_stream`,
+  audited by Codex with a bounded local MITM half-rung checker.
+- **Files added or changed:** `experimental/notes/m1/cycle75_direct_mmax_fiber_raw/`,
+  `experimental/notes/m1/m1_cycle75_direct_mmax_fiber_audit.md`,
+  `experimental/scripts/cycle75_mitm_half_rung_check.py`,
+  `experimental/notes/m1/cycle75_mitm_half_rung_certificate.json`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / PLAN.
+- **What is being added:** Cycle 75 banks a meet-in-the-middle
+  subfield-norm-sharded direct max-fiber census design, corrects the collision
+  heuristic to the constrained-domain scale, and cuts ladder-only closure.
+  Codex locally certified product-only injectivity for left slots `{1,2,3}`.
+- **How it is useful:** Moves the finite model route toward direct
+  `m_max(beta)<=12` certification and gives one executed supporting rung.
+- **What to do next:** Stage Cycle 76 for right-half `{4,5,6,7}` certification
+  or a compiled/sharded direct max-fiber census.
+
 ### 2026-06-20 - Cycle 75 direct mmax fiber prompt staged
 
 - **Agent/model:** Codex staging next Packy/Fable prompt after Cycle 74.

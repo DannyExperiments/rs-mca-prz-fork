@@ -1,0 +1,53 @@
+{
+  "decision": "MITM_HALF_RUNG_PASS_FOR_RUN_HALVES",
+  "domain_filter_note": "colors recorded for P0 filtering, not used as equality keys",
+  "key": "packed_product_only",
+  "left_123": {
+    "distinct_products": 110592,
+    "product_injective": true,
+    "slots": [
+      1,
+      2,
+      3
+    ],
+    "tuple_count": 110592
+  },
+  "model": {
+    "beta": [
+      2,
+      1
+    ],
+    "eta": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6
+    ],
+    "field_poly": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "right_4567": "not_run"
+}
