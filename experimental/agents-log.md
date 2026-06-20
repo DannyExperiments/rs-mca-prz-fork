@@ -29,6 +29,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-20 - Cycle 63 Round 2 returns banked and audited
+
+- **Agent/model:** External 5.5/5.6 Pro theorem-worker returns, banked and
+  audited by Codex.
+- **Files added or changed:** `experimental/notes/m1/cycle63_round2_raw/`,
+  `experimental/notes/m1/m1_cycle63_round2_audit.md`, and
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / BANKABLE_LEMMA / COUNTERPACKET / ROUTE_CUT.
+- **What is being added:** Raw Round 2 returns and a compact audit for the
+  scalar-apolar block-trade repair route. Roles 02-04 bank corrected
+  block-collapse, maximal `(K,D)` assignment, and dyadic overlap
+  non-double-counting. Role 05 cuts the hoped block-free residual bound with a
+  characteristic-17 near-split collision-mass packet. Role 08 cuts direct
+  scalar-to-`t=1` MCA color transfer.
+- **How it is useful:** Moves the live wall from "define canonical full-block
+  trades" to the sharper
+  `W-LIST-MODEL-GJ-NEAR-SPLIT-COLLISION-CLASS-MASS` /
+  `L-MODEL-GJ-PREFIX-COLLISION-GADGET-PARTITION-AND-CHARGE` problem, with the
+  finite frontier checker ready as a registry target.
+- **What to do next:** Formalize and verify the Role 05 counterpacket, decide
+  whether prefix-collision gadget charges absorb it or create an official-scale
+  obstruction, and implement the first `RS-PRIZE-FRONTIER-V1` registry run.
+
 ### 2026-06-20 - Cycle 63 block-trade Round 2 packet
 
 - **Agent/model:** Codex, following Cycle 62 Round 1 audit.
