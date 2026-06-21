@@ -29,6 +29,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 103 B1 e1-image flat-variety bound
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle103_e1_image_flat_variety_raw/`,
+  `experimental/notes/m1/m1_cycle103_e1_image_flat_variety_audit.md`,
+  `experimental/notes/m1/cycle104_bandwidth_k_divisor_incidence_prompt.md`,
+  `experimental/scripts/cycle103_b1_divisor_bound_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROOF / EXACT_NEW_WALL.
+- **What is being added:** Cycle103 proves the bandwidth-`1` upper-side
+  distinct-root bound `|Theta_U| <= (n-sigma+1)(sigma+1)` by reducing active
+  roots to divisors `G(theta,X)|1-X^n`. Codex replayed the B1 equivalence in
+  small finite cases.
+- **How it is useful:** It closes the current B1 numerator wall and moves the
+  upper-side route to the general bandwidth `k>=2` affine divisor-incidence
+  problem.
+- **What to do next:** Attack
+  `W-CYCLE104-BANDWIDTH-K-DIVISOR-INCIDENCE`, beginning with the `k=2`
+  non-vanishing/elimination wall.
+
 ### 2026-06-21 - Cycle 102 Padé / uncertainty line-incidence audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
