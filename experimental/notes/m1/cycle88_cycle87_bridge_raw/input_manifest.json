@@ -1,0 +1,128 @@
+{
+  "project": {
+    "id": "rs-mca-proximity-prize-research",
+    "name": "RS-MCA Proximity Prize Research",
+    "description": "Isolated RS-MCA / proximity prize research workspace. Keep separate from Erdos 361 and 346 theorem state.",
+    "sourceDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/source_files",
+    "startFiles": [
+      "README_FOR_FABLE.md",
+      "DIRECTOR_STATE.md",
+      "DIRECTOR_STATE.json",
+      "ROUTE_BOARD_CURRENT.md",
+      "ACTIVE_WALLS.md",
+      "BANKED_LEMMAS.md",
+      "CUTS_AND_FALSE_ROUTES.md",
+      "INSTANCE_REGISTRY.json",
+      "NEXT_PROMPT_QUEUE.md"
+    ],
+    "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research"
+  },
+  "runId": "2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b",
+  "runMode": "artifact_stream",
+  "runDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b",
+  "uploadDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments",
+  "projectCopyDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_project",
+  "outputDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/output_files",
+  "includeProjectSource": true,
+  "allowOutputFiles": false,
+  "allowedTools": [
+    "Read",
+    "Glob",
+    "Grep"
+  ],
+  "embeddedTextAttachments": [],
+  "stagedFiles": [
+    {
+      "name": "20260621_cycle88_cycle87_bridge_context.zip",
+      "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context.zip",
+      "mime": "application/zip",
+      "size": 2123910,
+      "mode": "local_file"
+    }
+  ],
+  "extractedArchives": [
+    {
+      "name": "20260621_cycle88_cycle87_bridge_context.zip",
+      "zipPath": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context.zip",
+      "extractDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted",
+      "extracted": [
+        {
+          "name": "experimental/notes/m1/m1_cycle87_explicit_separator_returns_audit.md",
+          "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted/experimental/notes/m1/m1_cycle87_explicit_separator_returns_audit.md",
+          "size": 7999
+        },
+        {
+          "name": "experimental/notes/m1/cycle87_explicit_separator_returns_raw/SHA256SUMS.txt",
+          "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted/experimental/notes/m1/cycle87_explicit_separator_returns_raw/SHA256SUMS.txt",
+          "size": 4372
+        },
+        {
+          "name": "experimental/notes/m1/cycle87_explicit_separator_returns_raw/02_CYCLE87_U_SEPARATOR_PROOF.md",
+          "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted/experimental/notes/m1/cycle87_explicit_separator_returns_raw/02_CYCLE87_U_SEPARATOR_PROOF.md",
+          "size": 20973
+        },
+        {
+          "name": "experimental/notes/m1/cycle87_explicit_separator_returns_raw/02_cycle87_master_certificate.json",
+          "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted/experimental/notes/m1/cycle87_explicit_separator_returns_raw/02_cycle87_master_certificate.json",
+          "size": 5617
+        },
+        {
+          "name": "experimental/notes/m1/cycle87_explicit_separator_returns_raw/02_cycle87_u_separator_replay_bundle.zip",
+          "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted/experimental/notes/m1/cycle87_explicit_separator_returns_raw/02_cycle87_u_separator_replay_bundle.zip",
+          "size": 1972310
+        },
+        {
+          "name": "experimental/notes/m1/cycle87_explicit_separator_returns_raw/02_cycle87_explicit_two_copy_separator_certificate.zip",
+          "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted/experimental/notes/m1/cycle87_explicit_separator_returns_raw/02_cycle87_explicit_two_copy_separator_certificate.zip",
+          "size": 49533
+        },
+        {
+          "name": "experimental/notes/m1/cycle87_explicit_separator_returns_raw/06_cycle87_u_separator_pass.json",
+          "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted/experimental/notes/m1/cycle87_explicit_separator_returns_raw/06_cycle87_u_separator_pass.json",
+          "size": 1501
+        },
+        {
+          "name": "experimental/notes/m1/cycle87_explicit_separator_returns_raw/06_cycle87_u_smooth_census_result.json",
+          "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted/experimental/notes/m1/cycle87_explicit_separator_returns_raw/06_cycle87_u_smooth_census_result.json",
+          "size": 655
+        },
+        {
+          "name": "experimental/notes/m1/cycle87_explicit_separator_returns_raw/08_cycle87_certificate_engineer_bundle.zip",
+          "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted/experimental/notes/m1/cycle87_explicit_separator_returns_raw/08_cycle87_certificate_engineer_bundle.zip",
+          "size": 60317
+        },
+        {
+          "name": "experimental/agents-log.md",
+          "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments/20260621_cycle88_cycle87_bridge_context_extracted/experimental/agents-log.md",
+          "size": 81823
+        }
+      ],
+      "skipped": [],
+      "totalBytes": 2205100
+    }
+  ],
+  "archiveWarnings": [],
+  "projectSource": {
+    "included": true,
+    "sourceDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/source_files",
+    "copyDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_project"
+  },
+  "fileIndex": {
+    "included": true,
+    "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/FILE_INDEX_FOR_MODEL.md",
+    "sections": [
+      {
+        "title": "Project source copy",
+        "root": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_project",
+        "fileCount": 1314
+      },
+      {
+        "title": "Attachment staging directory",
+        "root": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T08-35-07-288Z-cycle88-cycle87-official-mca-bridge-edc9cb8b/input_attachments",
+        "fileCount": 11
+      }
+    ],
+    "fileCount": 1325
+  },
+  "promptChars": 9157
+}

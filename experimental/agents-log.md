@@ -29,6 +29,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 88 Cycle87 official MCA bridge audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle88_cycle87_bridge_raw/`,
+  `experimental/notes/m1/m1_cycle88_cycle87_bridge_audit.md`,
+  `experimental/notes/m1/cycle89_official_mca_row_identification_prompt.md`,
+  and `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / CONDITIONAL / EXACT_NEW_WALL.
+- **What is being added:** Cycle88 proves the conditional bridge from the
+  Cycle84/Cycle85/Cycle87 finite certificate facts to an explicit
+  `[464,232]` GRS MCA failure row over `17^48`, with at least
+  `1,391,152,917,379,006,070,784` distinct transverse bad slopes, exceeding
+  `floor(17^48/2^128)`.
+- **How it is useful:** It isolates the remaining non-computational gap as an
+  official-definition identification problem against `def:mca`,
+  `def:residue`, and `thm:normalform`, rather than another broad theorem
+  search.
+- **What to do next:** Run Cycle89 on
+  `L-CYCLE89-OFFICIAL-MCA-ROW-IDENTIFICATION`, then separately obtain an
+  independent full replay or human acceptance of the finite census.
+
 ### 2026-06-21 - Cycle 87 explicit separator returns and certificate audit
 
 - **Agent/model:** ChatGPT Pro theorem-worker roles, audited by Codex.
