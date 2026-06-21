@@ -29,6 +29,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 102 Padé / uncertainty line-incidence audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle102_pade_uncertainty_line_incidence_raw/`,
+  `experimental/notes/m1/m1_cycle102_pade_uncertainty_line_incidence_audit.md`,
+  `experimental/notes/m1/cycle103_e1_image_flat_variety_prompt.md`,
+  `experimental/scripts/cycle102_pade_falsifier_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** ROUTE_CUT / BANKABLE_LEMMA / EXACT_NEW_WALL.
+- **What is being added:** Cycle102 gives an explicit `F_29` aperiodic
+  falsifier to the short-window Padé/Berlekamp-Massey divisor route, banks the
+  corrected full-locator statement, and rewrites the distinct numerator as the
+  image of `e_1` on the theta-free `Uhat`-flat locus.
+- **How it is useful:** It prevents the route from relying on a false
+  short-window denominator claim and narrows the upper-side wall to the exact
+  image bound `|e_1(V)| <= n^{O(1)}`.
+- **What to do next:** Attack
+  `L-CYCLE103-E1-IMAGE-ON-FLAT-VARIETY`, proving the e1-image bound or finding
+  a source-valid aperiodic superpolynomial counterpacket.
+
 ### 2026-06-21 - Cycle 101 line-incidence / uncertainty wall
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
