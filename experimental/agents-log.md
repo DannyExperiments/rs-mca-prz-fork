@@ -29,6 +29,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 98 B1 active external-root audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle98_b1_active_external_root_raw/`,
+  `experimental/notes/m1/m1_cycle98_b1_active_external_root_audit.md`,
+  `experimental/notes/m1/cycle99_b1_aperiodic_moment_curve_incidence_prompt.md`,
+  `experimental/scripts/cycle98_moment_curve_incidence_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** Cycle98 banks the exact moment-curve incidence
+  normal form for active external bandwidth-`1` roots:
+  `Theta_U = v(F_p \\ H) cap (P - M_s)`, after the charged `theta in H`
+  branch is removed.
+- **How it is useful:** It isolates the real upper-side wall: a transverse
+  incidence theorem for the subgroup power-sum image, not a direct corollary
+  of the `b=0` prefix local limit.
+- **What to do next:** Attack
+  `L-CYCLE99-B1-APERIODIC-MOMENT-CURVE-INCIDENCE`, proving or killing the
+  polynomial bound for the aperiodic external incidence count.
+
 ### 2026-06-21 - Cycle 97 fixed-prime two-support audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
