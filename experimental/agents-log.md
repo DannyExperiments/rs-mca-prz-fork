@@ -29,6 +29,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 86 two-copy affine-color returns banked
+
+- **Agent/model:** Eight Cycle86 external Pro theorem-worker returns plus one
+  stale Cycle85 continuation lane, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle86_two_copy_affine_color_returns_raw/`,
+  `experimental/notes/m1/m1_cycle86_two_copy_affine_color_returns_audit.md`,
+  and `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** The returns identify a plausible official-scale
+  two-copy affine-color counterpacket route over `F_17^48`, while cutting the
+  false additive formula and the naive tensor/direct-sum route. The audit also
+  records that Role 09 was a stale Cycle85 answer and should not be counted as
+  a Cycle86 worker.
+- **How it is useful:** Moves the M1 route from one-copy finite obstruction
+  status toward an official-rate two-copy GRS/MCA fail row, conditional on an
+  explicit projective separator/domain certificate.
+- **What to do next:** Verify the shortened `(464,232,6,226)` package and run
+  `V-CYCLE86-U-PROJECTIVE-MMAX8-CENSUS` or an equivalent concrete separator
+  checker before promoting any official counterpacket claim.
+
 ### 2026-06-21 - Cycle 86 two-copy affine-color packet staged
 
 - **Agent/model:** Codex staging four continuation and five fresh theorem-worker prompts.
