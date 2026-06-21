@@ -29,6 +29,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 97 fixed-prime two-support audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle97_fixed_prime_two_support_raw/`,
+  `experimental/notes/m1/m1_cycle97_fixed_prime_two_support_audit.md`,
+  `experimental/notes/m1/cycle98_b1_active_external_root_prompt.md`,
+  `experimental/scripts/cycle97_bandwidth1_decomposition_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / AUDIT_CORRECTION / EXACT_NEW_WALL.
+- **What is being added:** A corrected bandwidth-`1` root-configuration
+  decomposition. The raw external-only branch missed repeated roots inside
+  `H`; Codex corrected it with a finite checker.
+- **How it is useful:** Separates the polynomial `theta in H` branch from the
+  real active-external-root wall `theta notin H`.
+- **What to do next:** Attack
+  `L-CYCLE98-B1-ACTIVE-EXTERNAL-ROOT-INCIDENCE`, the polynomial bound for
+  aperiodic active external roots.
+
 ### 2026-06-21 - Cycle 96 arbitrary-word norm-sieve audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
