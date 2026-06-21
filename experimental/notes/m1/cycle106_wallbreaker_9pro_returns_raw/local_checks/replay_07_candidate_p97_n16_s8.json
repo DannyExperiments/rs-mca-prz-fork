@@ -1,0 +1,284 @@
+{
+  "counting_convention": "distinct theta values; witness multiplicity is never substituted for numerator support",
+  "decision": "ROUTE_CUT_FINITE_MODEL_TOO_WEAK",
+  "families": [
+    {
+      "Uhat_coefficients_low_to_high": [
+        1,
+        96,
+        86,
+        56
+      ],
+      "certificate_sha256": "38d36f830bb7283e354adb920172236d0a61b579d658269524d5e27e0aa8e25a",
+      "diagnostics": {
+        "all_witness_equations_verified": true,
+        "close_collision_failures": [],
+        "close_collision_lemma_verified": true,
+        "jet_stabilizer_shifts": [],
+        "model_aperiodicity_AP_block": true,
+        "model_aperiodicity_definition": "trivial U-jet multiplicative stabilizer; every witness support has trivial H-stabilizer; no difference of distinct witness supports is constant on cosets of a proper nontrivial subgroup",
+        "proper_nontrivial_subgroup_orders_tested": [
+          2,
+          4,
+          8
+        ],
+        "support_stabilizer_hits": [],
+        "verification_failures": [],
+        "whole_coset_swap_distinct_theta_failures": [],
+        "whole_coset_swap_hits": [],
+        "whole_coset_swaps_force_same_theta_verified": true
+      },
+      "distinct_external_theta_count": 6,
+      "distinct_theta_count": 7,
+      "external_theta_values": [
+        13,
+        17,
+        45,
+        54,
+        58,
+        77
+      ],
+      "internal_theta_values": [
+        27
+      ],
+      "theta_values": [
+        13,
+        17,
+        27,
+        45,
+        54,
+        58,
+        77
+      ],
+      "witnesses": {
+        "13": [
+          {
+            "support_exponents": [
+              0,
+              3,
+              7,
+              8,
+              10,
+              12,
+              14,
+              15
+            ],
+            "support_values": [
+              1,
+              27,
+              12,
+              96,
+              33,
+              75,
+              47,
+              85
+            ]
+          }
+        ],
+        "17": [
+          {
+            "support_exponents": [
+              0,
+              1,
+              2,
+              6,
+              7,
+              12,
+              13,
+              14
+            ],
+            "support_values": [
+              1,
+              8,
+              64,
+              50,
+              12,
+              75,
+              18,
+              47
+            ]
+          }
+        ],
+        "27": [
+          {
+            "support_exponents": [
+              1,
+              3,
+              4,
+              7,
+              10,
+              11,
+              12,
+              13
+            ],
+            "support_values": [
+              8,
+              27,
+              22,
+              12,
+              33,
+              70,
+              75,
+              18
+            ]
+          }
+        ],
+        "45": [
+          {
+            "support_exponents": [
+              2,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              12
+            ],
+            "support_values": [
+              64,
+              22,
+              50,
+              12,
+              96,
+              89,
+              33,
+              75
+            ]
+          }
+        ],
+        "54": [
+          {
+            "support_exponents": [
+              1,
+              3,
+              5,
+              8,
+              9,
+              11,
+              12,
+              15
+            ],
+            "support_values": [
+              8,
+              27,
+              79,
+              96,
+              89,
+              70,
+              75,
+              85
+            ]
+          }
+        ],
+        "58": [
+          {
+            "support_exponents": [
+              0,
+              1,
+              4,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "support_values": [
+              1,
+              8,
+              22,
+              12,
+              96,
+              89,
+              33,
+              70
+            ]
+          }
+        ],
+        "77": [
+          {
+            "support_exponents": [
+              4,
+              5,
+              8,
+              9,
+              11,
+              13,
+              14,
+              15
+            ],
+            "support_values": [
+              22,
+              79,
+              96,
+              89,
+              70,
+              18,
+              47,
+              85
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "finite_interpretation": {
+    "a_hit_does_not_prove": "source-valid aperiodicity, the corrected-reserve hypothesis, superpolynomial asymptotic growth, or an official Proximity Prize counterpacket without an inflation theorem",
+    "a_hit_proves": "an exact finite Uhat prefix with the listed distinct theta values and verified subset witnesses; it may falsify a proposed finite obstruction classification",
+    "a_pass_does_not_prove": "an unspecified n^{O(1)} asymptotic bound; a fixed finite field always has the vacuous cap p",
+    "a_pass_proves": "absence of any alarm-reaching pair fiber in the declared exhaustive finite window, or absence within the declared local exchange radius"
+  },
+  "parameters": {
+    "alarm_external_distinct_theta": 6,
+    "d": 3,
+    "k": 6,
+    "n": 16,
+    "p": 97,
+    "r": 4,
+    "s": 8,
+    "sigma": 2,
+    "subgroup_generator_omega": 8,
+    "subgroup_values_by_exponent": [
+      1,
+      8,
+      64,
+      27,
+      22,
+      79,
+      50,
+      12,
+      96,
+      89,
+      33,
+      70,
+      75,
+      18,
+      47,
+      85
+    ]
+  },
+  "prospective_decision_if_source_gate_were_verified": "COUNTERPACKET_CANDIDATE",
+  "scan": {
+    "base_support_exponents": [
+      0,
+      3,
+      7,
+      8,
+      10,
+      12,
+      14,
+      15
+    ],
+    "base_theta": 13,
+    "exchange_record_count": 12870,
+    "exhaustive_for_fixed_Uhat": true,
+    "mode": "bounded-local-exchange",
+    "qmax": 8,
+    "scope": "all active supports at exchange distance <=qmax from the supplied active base; when qmax=min(s,n-s), this is exhaustive for that fixed Uhat"
+  },
+  "schema": "cycle106-kfree-stress-v2",
+  "source_aperiodicity_and_reserve_gate": {
+    "available": false,
+    "reason": "The supplied compact Cycle106 packet names above-reserve aperiodicity but contains neither the formal AP_src(Uhat) predicate nor the corrected-reserve inequality. AP_block is only a model obstruction filter and cannot be promoted to source-valid aperiodicity."
+  }
+}

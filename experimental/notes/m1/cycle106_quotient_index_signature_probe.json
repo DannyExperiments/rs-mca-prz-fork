@@ -1,0 +1,88 @@
+{
+  "claim_boundary": "Finite toy stress signatures only; not a theorem, not a source-valid counterpacket, and not prize-level evidence.",
+  "families": {
+    "distributed_dense_tail": {
+      "active_count_by_case": [],
+      "case_totals": [],
+      "family_intersections": [],
+      "occupancy_by_case": [],
+      "s_by_case": [],
+      "tag_intersections": [],
+      "tail_weight_by_case": [],
+      "top_active_set_reuse": [],
+      "top_coarse_signatures": [],
+      "top_examples": {},
+      "top_tail_ratio": [],
+      "top_tail_relations": [],
+      "total": 0
+    },
+    "dominant_cluster": {
+      "active_count_by_case": [],
+      "case_totals": [],
+      "family_intersections": [],
+      "occupancy_by_case": [],
+      "s_by_case": [],
+      "tag_intersections": [],
+      "tail_weight_by_case": [],
+      "top_active_set_reuse": [],
+      "top_coarse_signatures": [],
+      "top_examples": {},
+      "top_tail_ratio": [],
+      "top_tail_relations": [],
+      "total": 0
+    }
+  },
+  "settings": {
+    "candidate_min_active": 3,
+    "cases": [
+      [
+        13,
+        4,
+        2
+      ],
+      [
+        19,
+        6,
+        2
+      ],
+      [
+        17,
+        4,
+        2
+      ],
+      [
+        37,
+        9,
+        2
+      ],
+      [
+        31,
+        6,
+        2
+      ],
+      [
+        41,
+        8,
+        2
+      ],
+      [
+        43,
+        7,
+        2
+      ]
+    ],
+    "families": [
+      "dominant_cluster",
+      "distributed_dense_tail"
+    ],
+    "max_layer_density_den": 20,
+    "max_layer_density_num": 1,
+    "stress_survivor_min_active": 3,
+    "top": 20
+  },
+  "status": "EXPERIMENTAL_SIGNATURE_SUMMARY",
+  "summary_family_count_comparison": {
+    "distributed_dense_tail": [],
+    "dominant_cluster": []
+  }
+}

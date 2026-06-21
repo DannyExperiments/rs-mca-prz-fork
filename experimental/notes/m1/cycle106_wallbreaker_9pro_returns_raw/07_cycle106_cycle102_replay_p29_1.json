@@ -1,0 +1,103 @@
+{
+  "counting_convention": "distinct theta values; witness multiplicity is never substituted for numerator support",
+  "decision": "ROUTE_CUT_FINITE_MODEL_TOO_WEAK",
+  "families": [
+    {
+      "Uhat_coefficients_low_to_high": [
+        1,
+        10,
+        15,
+        7,
+        0
+      ],
+      "certificate_sha256": "d951c8b269c7ba2e960b3a7f33f8a0ce994b11df5e38a38d76891604b61f4402",
+      "diagnostics": {
+        "all_witness_equations_verified": true,
+        "close_collision_failures": [],
+        "close_collision_lemma_verified": true,
+        "jet_stabilizer_shifts": [],
+        "model_aperiodicity_AP_block": true,
+        "model_aperiodicity_definition": "trivial U-jet multiplicative stabilizer; every witness support has trivial H-stabilizer; no difference of distinct witness supports is constant on cosets of a proper nontrivial subgroup",
+        "proper_nontrivial_subgroup_orders_tested": [],
+        "support_stabilizer_hits": [],
+        "verification_failures": [],
+        "whole_coset_swap_distinct_theta_failures": [],
+        "whole_coset_swap_hits": [],
+        "whole_coset_swaps_force_same_theta_verified": true
+      },
+      "distinct_external_theta_count": 1,
+      "distinct_theta_count": 1,
+      "external_theta_values": [
+        2
+      ],
+      "internal_theta_values": [],
+      "theta_values": [
+        2
+      ],
+      "witnesses": {
+        "2": [
+          {
+            "support_exponents": [
+              3,
+              4,
+              5,
+              6
+            ],
+            "support_values": [
+              7,
+              25,
+              23,
+              20
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "finite_interpretation": {
+    "a_hit_does_not_prove": "source-valid aperiodicity, the corrected-reserve hypothesis, superpolynomial asymptotic growth, or an official Proximity Prize counterpacket without an inflation theorem",
+    "a_hit_proves": "an exact finite Uhat prefix with the listed distinct theta values and verified subset witnesses; it may falsify a proposed finite obstruction classification",
+    "a_pass_does_not_prove": "an unspecified n^{O(1)} asymptotic bound; a fixed finite field always has the vacuous cap p",
+    "a_pass_proves": "absence of any alarm-reaching pair fiber in the declared exhaustive finite window, or absence within the declared local exchange radius"
+  },
+  "parameters": {
+    "alarm_external_distinct_theta": 2,
+    "d": 4,
+    "k": 1,
+    "n": 7,
+    "p": 29,
+    "r": 5,
+    "s": 4,
+    "sigma": 3,
+    "subgroup_generator_omega": 16,
+    "subgroup_values_by_exponent": [
+      1,
+      16,
+      24,
+      7,
+      25,
+      23,
+      20
+    ]
+  },
+  "prospective_decision_if_source_gate_were_verified": "PASS_NO_SUPERPOLY_PATTERN_IN_WINDOW",
+  "scan": {
+    "base_support_exponents": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "base_theta": 2,
+    "exchange_record_count": 35,
+    "exhaustive_for_fixed_Uhat": true,
+    "mode": "bounded-local-exchange",
+    "qmax": 3,
+    "scope": "all active supports at exchange distance <=qmax from the supplied active base; when qmax=min(s,n-s), this is exhaustive for that fixed Uhat"
+  },
+  "schema": "cycle106-kfree-stress-v2",
+  "source_aperiodicity_and_reserve_gate": {
+    "available": false,
+    "reason": "The supplied compact Cycle106 packet names above-reserve aperiodicity but contains neither the formal AP_src(Uhat) predicate nor the corrected-reserve inequality. AP_block is only a model obstruction filter and cannot be promoted to source-valid aperiodicity."
+  }
+}

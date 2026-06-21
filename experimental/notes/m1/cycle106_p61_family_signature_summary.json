@@ -1,0 +1,5053 @@
+{
+  "claim_boundary": "Finite toy stress signatures only; not a theorem, not a source-valid counterpacket, and not prize-level evidence.",
+  "families": {
+    "distributed_dense_tail": {
+      "active_count_by_case": [
+        {
+          "count": 35250,
+          "signature": "[\"p=61,n=15,sigma=2\", 3]"
+        },
+        {
+          "count": 18285,
+          "signature": "[\"p=61,n=15,sigma=2\", 4]"
+        },
+        {
+          "count": 5280,
+          "signature": "[\"p=61,n=20,sigma=2\", 3]"
+        },
+        {
+          "count": 3885,
+          "signature": "[\"p=61,n=15,sigma=2\", 5]"
+        },
+        {
+          "count": 2300,
+          "signature": "[\"p=61,n=20,sigma=2\", 4]"
+        },
+        {
+          "count": 1245,
+          "signature": "[\"p=61,n=15,sigma=2\", 6]"
+        },
+        {
+          "count": 408,
+          "signature": "[\"p=61,n=12,sigma=2\", 3]"
+        },
+        {
+          "count": 300,
+          "signature": "[\"p=61,n=20,sigma=2\", 8]"
+        },
+        {
+          "count": 210,
+          "signature": "[\"p=61,n=15,sigma=2\", 7]"
+        },
+        {
+          "count": 120,
+          "signature": "[\"p=61,n=20,sigma=2\", 5]"
+        },
+        {
+          "count": 105,
+          "signature": "[\"p=61,n=15,sigma=2\", 12]"
+        },
+        {
+          "count": 75,
+          "signature": "[\"p=61,n=15,sigma=2\", 11]"
+        },
+        {
+          "count": 60,
+          "signature": "[\"p=61,n=20,sigma=2\", 9]"
+        },
+        {
+          "count": 60,
+          "signature": "[\"p=61,n=15,sigma=2\", 10]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=12,sigma=2\", 4]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", 6]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", 13]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", 8]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", 14]"
+        },
+        {
+          "count": 12,
+          "signature": "[\"p=61,n=12,sigma=2\", 9]"
+        }
+      ],
+      "case_totals": [
+        {
+          "count": 59160,
+          "signature": "p=61,n=15,sigma=2"
+        },
+        {
+          "count": 8080,
+          "signature": "p=61,n=20,sigma=2"
+        },
+        {
+          "count": 456,
+          "signature": "p=61,n=12,sigma=2"
+        }
+      ],
+      "family_intersections": [
+        {
+          "count": 67696,
+          "signature": "all"
+        },
+        {
+          "count": 67696,
+          "signature": "stress_survivor"
+        },
+        {
+          "count": 67696,
+          "signature": "distributed_cover"
+        },
+        {
+          "count": 67696,
+          "signature": "dense_tail"
+        },
+        {
+          "count": 67696,
+          "signature": "distributed_dense_tail"
+        },
+        {
+          "count": 875,
+          "signature": "zero_hit"
+        }
+      ],
+      "occupancy_by_case": [
+        {
+          "count": 35760,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 1, 1]]"
+        },
+        {
+          "count": 15975,
+          "signature": "[\"p=61,n=15,sigma=2\", [2, 1, 1]]"
+        },
+        {
+          "count": 5340,
+          "signature": "[\"p=61,n=20,sigma=2\", [1, 1, 1]]"
+        },
+        {
+          "count": 2295,
+          "signature": "[\"p=61,n=15,sigma=2\", [2, 2, 1]]"
+        },
+        {
+          "count": 2240,
+          "signature": "[\"p=61,n=20,sigma=2\", [2, 1, 1]]"
+        },
+        {
+          "count": 2040,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 1, 1, 1]]"
+        },
+        {
+          "count": 1350,
+          "signature": "[\"p=61,n=15,sigma=2\", [2, 1, 1, 1]]"
+        },
+        {
+          "count": 705,
+          "signature": "[\"p=61,n=15,sigma=2\", [3, 2, 1]]"
+        },
+        {
+          "count": 408,
+          "signature": "[\"p=61,n=12,sigma=2\", [1, 1, 1]]"
+        },
+        {
+          "count": 320,
+          "signature": "[\"p=61,n=20,sigma=2\", [5, 2, 1]]"
+        },
+        {
+          "count": 255,
+          "signature": "[\"p=61,n=15,sigma=2\", [2, 2, 1, 1]]"
+        },
+        {
+          "count": 195,
+          "signature": "[\"p=61,n=15,sigma=2\", [3, 1, 1, 1]]"
+        },
+        {
+          "count": 120,
+          "signature": "[\"p=61,n=20,sigma=2\", [2, 2, 1]]"
+        },
+        {
+          "count": 90,
+          "signature": "[\"p=61,n=15,sigma=2\", [4, 2, 1]]"
+        },
+        {
+          "count": 75,
+          "signature": "[\"p=61,n=15,sigma=2\", [8, 2, 1]]"
+        },
+        {
+          "count": 60,
+          "signature": "[\"p=61,n=15,sigma=2\", [7, 2, 1]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [9, 2, 1]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [3, 1, 1]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [3, 2, 1, 1]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [2, 2, 2]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [3, 3, 1]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=12,sigma=2\", [2, 1, 1]]"
+        },
+        {
+          "count": 30,
+          "signature": "[\"p=61,n=15,sigma=2\", [2, 2, 2, 1]]"
+        },
+        {
+          "count": 30,
+          "signature": "[\"p=61,n=15,sigma=2\", [9, 1, 1, 1]]"
+        },
+        {
+          "count": 30,
+          "signature": "[\"p=61,n=15,sigma=2\", [8, 2, 1, 1]]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", [5, 2, 2]]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", [2, 2, 2]]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", [5, 3, 1]]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", [10, 2, 1]]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", [4, 2, 2]]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", [9, 4, 1]]"
+        },
+        {
+          "count": 12,
+          "signature": "[\"p=61,n=12,sigma=2\", [6, 2, 1]]"
+        }
+      ],
+      "s_by_case": [
+        {
+          "count": 17715,
+          "signature": "[\"p=61,n=15,sigma=2\", 8]"
+        },
+        {
+          "count": 17370,
+          "signature": "[\"p=61,n=15,sigma=2\", 7]"
+        },
+        {
+          "count": 9540,
+          "signature": "[\"p=61,n=15,sigma=2\", 9]"
+        },
+        {
+          "count": 9180,
+          "signature": "[\"p=61,n=15,sigma=2\", 6]"
+        },
+        {
+          "count": 6320,
+          "signature": "[\"p=61,n=20,sigma=2\", 16]"
+        },
+        {
+          "count": 2595,
+          "signature": "[\"p=61,n=15,sigma=2\", 10]"
+        },
+        {
+          "count": 2370,
+          "signature": "[\"p=61,n=15,sigma=2\", 5]"
+        },
+        {
+          "count": 1740,
+          "signature": "[\"p=61,n=20,sigma=2\", 4]"
+        },
+        {
+          "count": 225,
+          "signature": "[\"p=61,n=15,sigma=2\", 4]"
+        },
+        {
+          "count": 180,
+          "signature": "[\"p=61,n=12,sigma=2\", 6]"
+        },
+        {
+          "count": 165,
+          "signature": "[\"p=61,n=15,sigma=2\", 11]"
+        },
+        {
+          "count": 156,
+          "signature": "[\"p=61,n=12,sigma=2\", 7]"
+        },
+        {
+          "count": 84,
+          "signature": "[\"p=61,n=12,sigma=2\", 5]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=12,sigma=2\", 8]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", 17]"
+        }
+      ],
+      "tag_intersections": [
+        {
+          "count": 67696,
+          "signature": "distributed_H_coset_cover"
+        },
+        {
+          "count": 67696,
+          "signature": "multi_hit"
+        },
+        {
+          "count": 67696,
+          "signature": "off_H_coset_set"
+        },
+        {
+          "count": 67696,
+          "signature": "stress_survivor_min_active_pass"
+        },
+        {
+          "count": 67696,
+          "signature": "tail_weight_3"
+        },
+        {
+          "count": 66821,
+          "signature": "nonzero_active_set"
+        },
+        {
+          "count": 63721,
+          "signature": "H_coset_cover_3"
+        },
+        {
+          "count": 63721,
+          "signature": "three_H_coset_cover"
+        },
+        {
+          "count": 10007,
+          "signature": "negation_pair_present"
+        },
+        {
+          "count": 5435,
+          "signature": "inverse_pair_present"
+        },
+        {
+          "count": 3975,
+          "signature": "H_coset_cover_4"
+        },
+        {
+          "count": 3975,
+          "signature": "many_H_coset_cover"
+        },
+        {
+          "count": 1143,
+          "signature": "sigma2_tail_palindrome"
+        },
+        {
+          "count": 875,
+          "signature": "zero_hit"
+        },
+        {
+          "count": 162,
+          "signature": "inverse_symmetric_active_set"
+        },
+        {
+          "count": 30,
+          "signature": "negation_symmetric_active_set"
+        }
+      ],
+      "tail_weight_by_case": [
+        {
+          "count": 59160,
+          "signature": "[\"p=61,n=15,sigma=2\", 3]"
+        },
+        {
+          "count": 8080,
+          "signature": "[\"p=61,n=20,sigma=2\", 3]"
+        },
+        {
+          "count": 456,
+          "signature": "[\"p=61,n=12,sigma=2\", 3]"
+        }
+      ],
+      "top_active_set_reuse": [
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [2, 22, 28]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [21, 32, 47]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [11, 13, 40]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [12, 43, 51]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [8, 15, 18]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [38, 55, 56]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [7, 16, 37]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [6, 44, 57]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [26, 42, 59]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [10, 34, 53]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [9, 17, 23]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [25, 30, 54]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [33, 35, 58]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 29, 50]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [20, 24, 31]]"
+        },
+        {
+          "count": 44,
+          "signature": "[\"p=61,n=15,sigma=2\", [10, 49, 53]]"
+        },
+        {
+          "count": 44,
+          "signature": "[\"p=61,n=15,sigma=2\", [43, 46, 51]]"
+        },
+        {
+          "count": 44,
+          "signature": "[\"p=61,n=15,sigma=2\", [30, 45, 54]]"
+        },
+        {
+          "count": 44,
+          "signature": "[\"p=61,n=15,sigma=2\", [2, 3, 28]]"
+        },
+        {
+          "count": 44,
+          "signature": "[\"p=61,n=15,sigma=2\", [11, 40, 60]]"
+        }
+      ],
+      "top_coarse_signatures": [
+        {
+          "count": 8084,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 8}"
+        },
+        {
+          "count": 7894,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 7}"
+        },
+        {
+          "count": 5122,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 6}"
+        },
+        {
+          "count": 4868,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 9}"
+        },
+        {
+          "count": 4064,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 16}"
+        },
+        {
+          "count": 3735,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1, 1], \"s\": 8}"
+        },
+        {
+          "count": 3698,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1, 1], \"s\": 7}"
+        },
+        {
+          "count": 1877,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1, 1], \"s\": 9}"
+        },
+        {
+          "count": 1735,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1, 1], \"s\": 6}"
+        },
+        {
+          "count": 1662,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 5}"
+        },
+        {
+          "count": 1631,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 10}"
+        },
+        {
+          "count": 1620,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1, 1], \"s\": 16}"
+        },
+        {
+          "count": 1166,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [1, 1, 1], \"s\": 8}"
+        },
+        {
+          "count": 1149,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [1, 1, 1], \"s\": 7}"
+        },
+        {
+          "count": 908,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 4}"
+        },
+        {
+          "count": 820,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [2, 1, 1], \"s\": 8}"
+        },
+        {
+          "count": 744,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [1, 1, 1], \"s\": 9}"
+        },
+        {
+          "count": 697,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [2, 1, 1], \"s\": 7}"
+        },
+        {
+          "count": 620,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [1, 1, 1], \"s\": 6}"
+        },
+        {
+          "count": 551,
+          "signature": "{\"active_count\": 5, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 2, 1], \"s\": 7}"
+        }
+      ],
+      "top_examples": {
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 10}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            14,
+            44,
+            54
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              6,
+              55
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            1,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 10,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 10
+          },
+          "uhat": [
+            1,
+            1,
+            6,
+            55
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 5}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            32,
+            43,
+            52
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              3,
+              8
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            1,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 5,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": false,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 28
+          },
+          "uhat": [
+            1,
+            1,
+            3,
+            8
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 6}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            21,
+            25,
+            41
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              2,
+              22
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 6,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": false,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 36
+          },
+          "uhat": [
+            1,
+            1,
+            2,
+            22
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 7}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            11,
+            47,
+            55
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              2,
+              3
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            1,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 7,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": false,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 16
+          },
+          "uhat": [
+            1,
+            1,
+            2,
+            3
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 8}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            2,
+            10,
+            22
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              2,
+              17
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            1,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 8,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 50
+          },
+          "uhat": [
+            1,
+            1,
+            2,
+            17
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 9}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            25,
+            32,
+            54
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              2,
+              21
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            1,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 9,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 51
+          },
+          "uhat": [
+            1,
+            1,
+            2,
+            21
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [1, 1, 1], \"s\": 6}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 1,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            5,
+            53,
+            56
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              2,
+              43
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            1,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 6,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "negation_pair_present",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 26
+          },
+          "uhat": [
+            1,
+            1,
+            2,
+            43
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [1, 1, 1], \"s\": 7}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 1,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            19,
+            42,
+            51
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              9,
+              17
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            1,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 7,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "negation_pair_present",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 10
+          },
+          "uhat": [
+            1,
+            1,
+            9,
+            17
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [1, 1, 1], \"s\": 8}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 1,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            15,
+            43,
+            46
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              3,
+              7
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 8,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "negation_pair_present",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 55
+          },
+          "uhat": [
+            1,
+            1,
+            3,
+            7
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [1, 1, 1], \"s\": 9}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 1,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            14,
+            29,
+            32
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              10,
+              9
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            1,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 9,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "negation_pair_present",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 19
+          },
+          "uhat": [
+            1,
+            1,
+            10,
+            9
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 16}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            20,
+            30,
+            39
+          ],
+          "case": "p=61,n=20,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              1,
+              9
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            1,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 16,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": false,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 9
+          },
+          "uhat": [
+            1,
+            1,
+            1,
+            9
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [1, 1, 1], \"s\": 4}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              1,
+              1,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 1,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            7,
+            25,
+            33
+          ],
+          "case": "p=61,n=20,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              3,
+              17
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            1,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 4,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": false,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 29
+          },
+          "uhat": [
+            1,
+            1,
+            3,
+            17
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1, 1], \"s\": 6}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              2,
+              1,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            9,
+            23,
+            43,
+            55
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              1,
+              4
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            1,
+            1,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 6,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 4
+          },
+          "uhat": [
+            1,
+            1,
+            1,
+            4
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1, 1], \"s\": 7}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              2,
+              1,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            3,
+            11,
+            27,
+            30
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              1,
+              5
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 7,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 5
+          },
+          "uhat": [
+            1,
+            1,
+            1,
+            5
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1, 1], \"s\": 8}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              2,
+              1,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            27,
+            28,
+            45,
+            53
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              2,
+              24
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 8,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": false,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 6
+          },
+          "uhat": [
+            1,
+            1,
+            2,
+            24
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1, 1], \"s\": 9}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              2,
+              1,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            21,
+            26,
+            33,
+            39
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              2,
+              2
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            1,
+            1,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 9,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 31
+          },
+          "uhat": [
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [2, 1, 1], \"s\": 7}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              2,
+              1,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 1,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            24,
+            37,
+            43,
+            60
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              8,
+              25
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            1,
+            2,
+            3,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 7,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "negation_pair_present",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 49
+          },
+          "uhat": [
+            1,
+            1,
+            8,
+            25
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [2, 1, 1], \"s\": 8}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              2,
+              1,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 1,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            23,
+            27,
+            28,
+            33
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              6,
+              24
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            1,
+            1,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 8,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "negation_pair_present",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": true,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 21
+          },
+          "uhat": [
+            1,
+            1,
+            6,
+            24
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1, 1], \"s\": 16}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              2,
+              1,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            4,
+            9,
+            19,
+            59
+          ],
+          "case": "p=61,n=20,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              1,
+              53
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            0,
+            1,
+            2,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 16,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": false,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 53
+          },
+          "uhat": [
+            1,
+            1,
+            1,
+            53
+          ]
+        },
+        "{\"active_count\": 5, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 2, 1], \"s\": 7}": {
+          "active_profile": {
+            "H_coset_cover_count": 3,
+            "H_coset_occupancies": [
+              2,
+              2,
+              1
+            ],
+            "active_count": 5,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 5,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            3,
+            8,
+            44,
+            45,
+            50
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              3,
+              4
+            ],
+            "tail_weight": 3,
+            "zero_positions": []
+          },
+          "coset_ids": [
+            1,
+            1,
+            2,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "distributed_cover",
+            "dense_tail",
+            "distributed_dense_tail"
+          ],
+          "s": 7,
+          "tags": [
+            "H_coset_cover_3",
+            "distributed_H_coset_cover",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "stress_survivor_min_active_pass",
+            "tail_weight_3",
+            "three_H_coset_cover"
+          ],
+          "tail_relations": {
+            "disc_square": false,
+            "geometric_tail": false,
+            "u1u3_over_u2sq": 14
+          },
+          "uhat": [
+            1,
+            1,
+            3,
+            4
+          ]
+        }
+      },
+      "top_tail_ratio": [
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 8, 53]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 10, 42]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 11, 13]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 11, 21]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 17, 25]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 21, 11]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 24, 15]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 28, 24]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 28, 56]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 29, 47]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 29, 55]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 30, 12]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 31, 10]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 32, 47]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 37, 15]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 37, 43]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 38, 16]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 38, 54]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 43, 51]]"
+        },
+        {
+          "count": 26,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 44, 25]]"
+        }
+      ],
+      "top_tail_relations": [
+        {
+          "count": 1335,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 48}]"
+        },
+        {
+          "count": 1155,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 16}]"
+        },
+        {
+          "count": 1140,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 41}]"
+        },
+        {
+          "count": 1125,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 19}]"
+        },
+        {
+          "count": 1125,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 38}]"
+        },
+        {
+          "count": 1095,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 5}]"
+        },
+        {
+          "count": 1095,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 28}]"
+        },
+        {
+          "count": 1095,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 14}]"
+        },
+        {
+          "count": 1080,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": true, \"u1u3_over_u2sq\": 1}]"
+        },
+        {
+          "count": 1080,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 37}]"
+        },
+        {
+          "count": 1065,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 12}]"
+        },
+        {
+          "count": 1065,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 40}]"
+        },
+        {
+          "count": 1050,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 36}]"
+        },
+        {
+          "count": 1050,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 6}]"
+        },
+        {
+          "count": 1050,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 57}]"
+        },
+        {
+          "count": 1035,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 29}]"
+        },
+        {
+          "count": 1035,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 22}]"
+        },
+        {
+          "count": 1035,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 45}]"
+        },
+        {
+          "count": 1020,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 30}]"
+        },
+        {
+          "count": 1020,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 21}]"
+        }
+      ],
+      "total": 67696
+    },
+    "dominant_cluster": {
+      "active_count_by_case": [
+        {
+          "count": 55995,
+          "signature": "[\"p=61,n=15,sigma=2\", 3]"
+        },
+        {
+          "count": 19480,
+          "signature": "[\"p=61,n=20,sigma=2\", 3]"
+        },
+        {
+          "count": 6630,
+          "signature": "[\"p=61,n=15,sigma=2\", 4]"
+        },
+        {
+          "count": 5180,
+          "signature": "[\"p=61,n=20,sigma=2\", 6]"
+        },
+        {
+          "count": 4110,
+          "signature": "[\"p=61,n=15,sigma=2\", 5]"
+        },
+        {
+          "count": 2535,
+          "signature": "[\"p=61,n=15,sigma=2\", 9]"
+        },
+        {
+          "count": 2490,
+          "signature": "[\"p=61,n=15,sigma=2\", 10]"
+        },
+        {
+          "count": 2340,
+          "signature": "[\"p=61,n=20,sigma=2\", 7]"
+        },
+        {
+          "count": 2205,
+          "signature": "[\"p=61,n=15,sigma=2\", 8]"
+        },
+        {
+          "count": 1640,
+          "signature": "[\"p=61,n=20,sigma=2\", 4]"
+        },
+        {
+          "count": 1425,
+          "signature": "[\"p=61,n=15,sigma=2\", 11]"
+        },
+        {
+          "count": 1125,
+          "signature": "[\"p=61,n=15,sigma=2\", 7]"
+        },
+        {
+          "count": 980,
+          "signature": "[\"p=61,n=20,sigma=2\", 5]"
+        },
+        {
+          "count": 750,
+          "signature": "[\"p=61,n=15,sigma=2\", 6]"
+        },
+        {
+          "count": 520,
+          "signature": "[\"p=61,n=20,sigma=2\", 18]"
+        },
+        {
+          "count": 420,
+          "signature": "[\"p=61,n=15,sigma=2\", 12]"
+        },
+        {
+          "count": 360,
+          "signature": "[\"p=61,n=12,sigma=2\", 3]"
+        },
+        {
+          "count": 348,
+          "signature": "[\"p=61,n=12,sigma=2\", 8]"
+        },
+        {
+          "count": 300,
+          "signature": "[\"p=61,n=12,sigma=2\", 7]"
+        },
+        {
+          "count": 288,
+          "signature": "[\"p=61,n=12,sigma=2\", 9]"
+        },
+        {
+          "count": 180,
+          "signature": "[\"p=61,n=12,sigma=2\", 6]"
+        },
+        {
+          "count": 72,
+          "signature": "[\"p=61,n=12,sigma=2\", 10]"
+        },
+        {
+          "count": 48,
+          "signature": "[\"p=61,n=12,sigma=2\", 5]"
+        },
+        {
+          "count": 40,
+          "signature": "[\"p=61,n=20,sigma=2\", 19]"
+        },
+        {
+          "count": 40,
+          "signature": "[\"p=61,n=20,sigma=2\", 8]"
+        },
+        {
+          "count": 30,
+          "signature": "[\"p=61,n=15,sigma=2\", 13]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", 11]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", 14]"
+        },
+        {
+          "count": 12,
+          "signature": "[\"p=61,n=12,sigma=2\", 12]"
+        }
+      ],
+      "case_totals": [
+        {
+          "count": 77730,
+          "signature": "p=61,n=15,sigma=2"
+        },
+        {
+          "count": 30240,
+          "signature": "p=61,n=20,sigma=2"
+        },
+        {
+          "count": 1608,
+          "signature": "p=61,n=12,sigma=2"
+        }
+      ],
+      "family_intersections": [
+        {
+          "count": 109578,
+          "signature": "all"
+        },
+        {
+          "count": 109578,
+          "signature": "stress_survivor"
+        },
+        {
+          "count": 109578,
+          "signature": "dominant_cluster"
+        },
+        {
+          "count": 104210,
+          "signature": "dense_tail"
+        },
+        {
+          "count": 101085,
+          "signature": "cluster_plus_one"
+        },
+        {
+          "count": 8493,
+          "signature": "cluster_plus_two"
+        },
+        {
+          "count": 5368,
+          "signature": "coefficient_sparse"
+        },
+        {
+          "count": 340,
+          "signature": "zero_hit"
+        }
+      ],
+      "occupancy_by_case": [
+        {
+          "count": 55995,
+          "signature": "[\"p=61,n=15,sigma=2\", [2, 1]]"
+        },
+        {
+          "count": 19480,
+          "signature": "[\"p=61,n=20,sigma=2\", [2, 1]]"
+        },
+        {
+          "count": 6765,
+          "signature": "[\"p=61,n=15,sigma=2\", [3, 1]]"
+        },
+        {
+          "count": 5220,
+          "signature": "[\"p=61,n=20,sigma=2\", [5, 1]]"
+        },
+        {
+          "count": 2205,
+          "signature": "[\"p=61,n=15,sigma=2\", [8, 1]]"
+        },
+        {
+          "count": 2190,
+          "signature": "[\"p=61,n=15,sigma=2\", [3, 1, 1]]"
+        },
+        {
+          "count": 2145,
+          "signature": "[\"p=61,n=15,sigma=2\", [7, 1]]"
+        },
+        {
+          "count": 1725,
+          "signature": "[\"p=61,n=15,sigma=2\", [9, 1]]"
+        },
+        {
+          "count": 1660,
+          "signature": "[\"p=61,n=20,sigma=2\", [3, 1]]"
+        },
+        {
+          "count": 1095,
+          "signature": "[\"p=61,n=15,sigma=2\", [6, 1]]"
+        },
+        {
+          "count": 1065,
+          "signature": "[\"p=61,n=15,sigma=2\", [3, 2]]"
+        },
+        {
+          "count": 960,
+          "signature": "[\"p=61,n=20,sigma=2\", [5, 1, 1]]"
+        },
+        {
+          "count": 940,
+          "signature": "[\"p=61,n=20,sigma=2\", [5, 2]]"
+        },
+        {
+          "count": 855,
+          "signature": "[\"p=61,n=15,sigma=2\", [10, 1]]"
+        },
+        {
+          "count": 750,
+          "signature": "[\"p=61,n=15,sigma=2\", [4, 1]]"
+        },
+        {
+          "count": 680,
+          "signature": "[\"p=61,n=20,sigma=2\", [4, 1]]"
+        },
+        {
+          "count": 585,
+          "signature": "[\"p=61,n=15,sigma=2\", [8, 1, 1]]"
+        },
+        {
+          "count": 520,
+          "signature": "[\"p=61,n=20,sigma=2\", [17, 1]]"
+        },
+        {
+          "count": 405,
+          "signature": "[\"p=61,n=15,sigma=2\", [9, 1, 1]]"
+        },
+        {
+          "count": 360,
+          "signature": "[\"p=61,n=20,sigma=2\", [6, 1]]"
+        },
+        {
+          "count": 360,
+          "signature": "[\"p=61,n=12,sigma=2\", [2, 1]]"
+        },
+        {
+          "count": 315,
+          "signature": "[\"p=61,n=15,sigma=2\", [5, 1]]"
+        },
+        {
+          "count": 300,
+          "signature": "[\"p=61,n=15,sigma=2\", [7, 1, 1]]"
+        },
+        {
+          "count": 276,
+          "signature": "[\"p=61,n=12,sigma=2\", [7, 1]]"
+        },
+        {
+          "count": 270,
+          "signature": "[\"p=61,n=15,sigma=2\", [4, 1, 1]]"
+        },
+        {
+          "count": 264,
+          "signature": "[\"p=61,n=12,sigma=2\", [6, 1]]"
+        },
+        {
+          "count": 225,
+          "signature": "[\"p=61,n=15,sigma=2\", [11, 1]]"
+        },
+        {
+          "count": 204,
+          "signature": "[\"p=61,n=12,sigma=2\", [8, 1]]"
+        },
+        {
+          "count": 180,
+          "signature": "[\"p=61,n=20,sigma=2\", [3, 1, 1]]"
+        },
+        {
+          "count": 180,
+          "signature": "[\"p=61,n=12,sigma=2\", [5, 1]]"
+        },
+        {
+          "count": 150,
+          "signature": "[\"p=61,n=15,sigma=2\", [10, 1, 1]]"
+        },
+        {
+          "count": 150,
+          "signature": "[\"p=61,n=15,sigma=2\", [8, 2]]"
+        },
+        {
+          "count": 150,
+          "signature": "[\"p=61,n=15,sigma=2\", [9, 2]]"
+        },
+        {
+          "count": 135,
+          "signature": "[\"p=61,n=15,sigma=2\", [4, 2]]"
+        },
+        {
+          "count": 100,
+          "signature": "[\"p=61,n=20,sigma=2\", [3, 2]]"
+        },
+        {
+          "count": 75,
+          "signature": "[\"p=61,n=15,sigma=2\", [6, 1, 1]]"
+        },
+        {
+          "count": 60,
+          "signature": "[\"p=61,n=15,sigma=2\", [7, 2]]"
+        },
+        {
+          "count": 60,
+          "signature": "[\"p=61,n=12,sigma=2\", [7, 1, 1]]"
+        },
+        {
+          "count": 48,
+          "signature": "[\"p=61,n=12,sigma=2\", [9, 1]]"
+        },
+        {
+          "count": 48,
+          "signature": "[\"p=61,n=12,sigma=2\", [4, 1]]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", [10, 2]]"
+        },
+        {
+          "count": 40,
+          "signature": "[\"p=61,n=20,sigma=2\", [17, 2]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=12,sigma=2\", [6, 1, 1]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=12,sigma=2\", [6, 2]]"
+        },
+        {
+          "count": 24,
+          "signature": "[\"p=61,n=12,sigma=2\", [7, 2]]"
+        },
+        {
+          "count": 24,
+          "signature": "[\"p=61,n=12,sigma=2\", [5, 1, 1]]"
+        },
+        {
+          "count": 24,
+          "signature": "[\"p=61,n=12,sigma=2\", [8, 1, 1]]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", [6, 2]]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", [6, 1, 1]]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", [10, 1]]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", [4, 2]]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", [4, 1, 1]]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", [12, 1]]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", [5, 2]]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", [5, 1, 1]]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", [13, 1]]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", [11, 1, 1]]"
+        },
+        {
+          "count": 12,
+          "signature": "[\"p=61,n=12,sigma=2\", [5, 2]]"
+        },
+        {
+          "count": 12,
+          "signature": "[\"p=61,n=12,sigma=2\", [10, 1, 1]]"
+        }
+      ],
+      "s_by_case": [
+        {
+          "count": 21465,
+          "signature": "[\"p=61,n=15,sigma=2\", 7]"
+        },
+        {
+          "count": 20835,
+          "signature": "[\"p=61,n=15,sigma=2\", 8]"
+        },
+        {
+          "count": 15260,
+          "signature": "[\"p=61,n=20,sigma=2\", 4]"
+        },
+        {
+          "count": 14320,
+          "signature": "[\"p=61,n=20,sigma=2\", 16]"
+        },
+        {
+          "count": 13560,
+          "signature": "[\"p=61,n=15,sigma=2\", 6]"
+        },
+        {
+          "count": 12480,
+          "signature": "[\"p=61,n=15,sigma=2\", 9]"
+        },
+        {
+          "count": 4365,
+          "signature": "[\"p=61,n=15,sigma=2\", 5]"
+        },
+        {
+          "count": 4020,
+          "signature": "[\"p=61,n=15,sigma=2\", 10]"
+        },
+        {
+          "count": 630,
+          "signature": "[\"p=61,n=15,sigma=2\", 4]"
+        },
+        {
+          "count": 620,
+          "signature": "[\"p=61,n=20,sigma=2\", 3]"
+        },
+        {
+          "count": 468,
+          "signature": "[\"p=61,n=12,sigma=2\", 6]"
+        },
+        {
+          "count": 384,
+          "signature": "[\"p=61,n=12,sigma=2\", 5]"
+        },
+        {
+          "count": 372,
+          "signature": "[\"p=61,n=12,sigma=2\", 7]"
+        },
+        {
+          "count": 360,
+          "signature": "[\"p=61,n=15,sigma=2\", 11]"
+        },
+        {
+          "count": 216,
+          "signature": "[\"p=61,n=12,sigma=2\", 4]"
+        },
+        {
+          "count": 120,
+          "signature": "[\"p=61,n=12,sigma=2\", 8]"
+        },
+        {
+          "count": 48,
+          "signature": "[\"p=61,n=12,sigma=2\", 3]"
+        },
+        {
+          "count": 40,
+          "signature": "[\"p=61,n=20,sigma=2\", 17]"
+        },
+        {
+          "count": 15,
+          "signature": "[\"p=61,n=15,sigma=2\", 3]"
+        }
+      ],
+      "tag_intersections": [
+        {
+          "count": 109578,
+          "signature": "dominant_H_coset_cluster"
+        },
+        {
+          "count": 109578,
+          "signature": "multi_hit"
+        },
+        {
+          "count": 109578,
+          "signature": "off_H_coset_set"
+        },
+        {
+          "count": 109578,
+          "signature": "stress_survivor_min_active_pass"
+        },
+        {
+          "count": 109238,
+          "signature": "nonzero_active_set"
+        },
+        {
+          "count": 104237,
+          "signature": "H_coset_cover_2"
+        },
+        {
+          "count": 104237,
+          "signature": "two_H_coset_cover"
+        },
+        {
+          "count": 104210,
+          "signature": "tail_weight_3"
+        },
+        {
+          "count": 101085,
+          "signature": "single_H_coset_plus_one_outlier"
+        },
+        {
+          "count": 21951,
+          "signature": "inverse_pair_present"
+        },
+        {
+          "count": 13272,
+          "signature": "negation_pair_present"
+        },
+        {
+          "count": 8493,
+          "signature": "single_H_coset_plus_two_outliers"
+        },
+        {
+          "count": 5368,
+          "signature": "coefficient_sparse_tail"
+        },
+        {
+          "count": 5341,
+          "signature": "H_coset_cover_3"
+        },
+        {
+          "count": 5341,
+          "signature": "three_H_coset_cover"
+        },
+        {
+          "count": 5303,
+          "signature": "tail_weight_2"
+        },
+        {
+          "count": 3509,
+          "signature": "sigma2_endpoint_sparse"
+        },
+        {
+          "count": 1909,
+          "signature": "sigma2_odd_tail"
+        },
+        {
+          "count": 1909,
+          "signature": "u2_zero"
+        },
+        {
+          "count": 1870,
+          "signature": "u3_zero"
+        },
+        {
+          "count": 1790,
+          "signature": "sigma2_tail_palindrome"
+        },
+        {
+          "count": 1654,
+          "signature": "u1_zero"
+        },
+        {
+          "count": 340,
+          "signature": "zero_hit"
+        },
+        {
+          "count": 65,
+          "signature": "coefficient_monomial_tail"
+        },
+        {
+          "count": 65,
+          "signature": "tail_weight_1"
+        },
+        {
+          "count": 38,
+          "signature": "inverse_symmetric_active_set"
+        },
+        {
+          "count": 15,
+          "signature": "sigma2_even_tail"
+        }
+      ],
+      "tail_weight_by_case": [
+        {
+          "count": 73710,
+          "signature": "[\"p=61,n=15,sigma=2\", 3]"
+        },
+        {
+          "count": 29000,
+          "signature": "[\"p=61,n=20,sigma=2\", 3]"
+        },
+        {
+          "count": 3975,
+          "signature": "[\"p=61,n=15,sigma=2\", 2]"
+        },
+        {
+          "count": 1500,
+          "signature": "[\"p=61,n=12,sigma=2\", 3]"
+        },
+        {
+          "count": 1220,
+          "signature": "[\"p=61,n=20,sigma=2\", 2]"
+        },
+        {
+          "count": 108,
+          "signature": "[\"p=61,n=12,sigma=2\", 2]"
+        },
+        {
+          "count": 45,
+          "signature": "[\"p=61,n=15,sigma=2\", 1]"
+        },
+        {
+          "count": 20,
+          "signature": "[\"p=61,n=20,sigma=2\", 1]"
+        }
+      ],
+      "top_active_set_reuse": [
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [21, 46, 48]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [10, 19, 49]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [3, 8, 27]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [4, 31, 36]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [11, 27, 60]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [5, 45, 54]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [4, 14, 17]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [37, 41, 52]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [3, 28, 41]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [38, 52, 60]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [19, 35, 36]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [14, 29, 49]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [39, 43, 46]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [39, 45, 59]]"
+        },
+        {
+          "count": 43,
+          "signature": "[\"p=61,n=15,sigma=2\", [5, 6, 48]]"
+        },
+        {
+          "count": 35,
+          "signature": "[\"p=61,n=15,sigma=2\", [9, 23, 32]]"
+        },
+        {
+          "count": 35,
+          "signature": "[\"p=61,n=15,sigma=2\", [13, 40, 53]]"
+        },
+        {
+          "count": 35,
+          "signature": "[\"p=61,n=15,sigma=2\", [18, 32, 47]]"
+        },
+        {
+          "count": 35,
+          "signature": "[\"p=61,n=15,sigma=2\", [2, 22, 24]]"
+        },
+        {
+          "count": 35,
+          "signature": "[\"p=61,n=15,sigma=2\", [40, 44, 57]]"
+        }
+      ],
+      "top_coarse_signatures": [
+        {
+          "count": 13475,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 8}"
+        },
+        {
+          "count": 13203,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 7}"
+        },
+        {
+          "count": 11534,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 16}"
+        },
+        {
+          "count": 8613,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 9}"
+        },
+        {
+          "count": 8225,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 6}"
+        },
+        {
+          "count": 6230,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 4}"
+        },
+        {
+          "count": 3074,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 10}"
+        },
+        {
+          "count": 2548,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 5}"
+        },
+        {
+          "count": 1614,
+          "signature": "{\"active_count\": 6, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [5, 1], \"s\": 4}"
+        },
+        {
+          "count": 1614,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [3, 1], \"s\": 7}"
+        },
+        {
+          "count": 1560,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [3, 1], \"s\": 8}"
+        },
+        {
+          "count": 1184,
+          "signature": "{\"active_count\": 6, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [5, 1], \"s\": 4}"
+        },
+        {
+          "count": 1044,
+          "signature": "{\"active_count\": 6, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 1, \"negation_pairs\": 1, \"occupancies\": [5, 1], \"s\": 4}"
+        },
+        {
+          "count": 1032,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [3, 1], \"s\": 9}"
+        },
+        {
+          "count": 992,
+          "signature": "{\"active_count\": 6, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 1, \"negation_pairs\": 0, \"occupancies\": [5, 1], \"s\": 4}"
+        },
+        {
+          "count": 990,
+          "signature": "{\"active_count\": 9, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 2, \"negation_pairs\": 0, \"occupancies\": [8, 1], \"s\": 7}"
+        },
+        {
+          "count": 912,
+          "signature": "{\"active_count\": 8, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 1, \"negation_pairs\": 0, \"occupancies\": [7, 1], \"s\": 6}"
+        },
+        {
+          "count": 880,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 1, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 8}"
+        },
+        {
+          "count": 828,
+          "signature": "{\"active_count\": 4, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [3, 1], \"s\": 16}"
+        },
+        {
+          "count": 822,
+          "signature": "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 1, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 7}"
+        }
+      ],
+      "top_examples": {
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 10}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              2,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            27,
+            44,
+            45
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              2,
+              3
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            1,
+            2,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 10,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 5}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              2,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            19,
+            33,
+            52
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              2,
+              5
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            1,
+            2,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 5,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            2,
+            5
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 6}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              2,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            26,
+            42,
+            53
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              1,
+              23
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            0,
+            1,
+            1
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 6,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            1,
+            23
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 7}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              2,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            3,
+            39,
+            51
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              1,
+              1
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            1,
+            2,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 7,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 8}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              2,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            6,
+            35,
+            44
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              1,
+              2
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            1,
+            3,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 8,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            1,
+            2
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 9}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              2,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            21,
+            29,
+            46
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              1,
+              4
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            2,
+            3,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 9,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            1,
+            4
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 1, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 7}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              2,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 1,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            14,
+            29,
+            48
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              1,
+              5
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            2,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 7,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "inverse_pair_present",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            1,
+            5
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 1, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 8}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              2,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 1,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            7,
+            36,
+            39
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              2,
+              23
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            1,
+            2,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 8,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "inverse_pair_present",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            2,
+            23
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 16}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              2,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            25,
+            54,
+            56
+          ],
+          "case": "p=61,n=20,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              4,
+              9
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            1,
+            1,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 16,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            4,
+            9
+          ]
+        },
+        "{\"active_count\": 3, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [2, 1], \"s\": 4}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              2,
+              1
+            ],
+            "active_count": 3,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 2,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 3,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            30,
+            32,
+            54
+          ],
+          "case": "p=61,n=20,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              1,
+              2
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            1,
+            2,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 4,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            1,
+            2
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [3, 1], \"s\": 7}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              3,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 3,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            25,
+            30,
+            32,
+            51
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              3,
+              14
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 7,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            3,
+            14
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [3, 1], \"s\": 8}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              3,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 3,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            4,
+            5,
+            30,
+            60
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              1,
+              10
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            1,
+            2,
+            2,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 8,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            1,
+            10
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [3, 1], \"s\": 9}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              3,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 3,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            11,
+            36,
+            52,
+            60
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": true,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": true,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              0,
+              54
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              2
+            ]
+          },
+          "coset_ids": [
+            2,
+            2,
+            2,
+            3
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 9,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_odd_tail",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u2_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            1,
+            0,
+            54
+          ]
+        },
+        "{\"active_count\": 4, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [3, 1], \"s\": 16}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              3,
+              1
+            ],
+            "active_count": 4,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 3,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 4,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            13,
+            15,
+            31,
+            45
+          ],
+          "case": "p=61,n=20,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              1,
+              6
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 16,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            1,
+            6
+          ]
+        },
+        "{\"active_count\": 6, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 0, \"occupancies\": [5, 1], \"s\": 4}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              5,
+              1
+            ],
+            "active_count": 6,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 5,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 6,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            33,
+            41,
+            52,
+            55,
+            58,
+            60
+          ],
+          "case": "p=61,n=20,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              3,
+              29
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 4,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            3,
+            29
+          ]
+        },
+        "{\"active_count\": 6, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 0, \"negation_pairs\": 1, \"occupancies\": [5, 1], \"s\": 4}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              5,
+              1
+            ],
+            "active_count": 6,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 0,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 5,
+            "negation_pair_count": 1,
+            "negation_symmetric": false,
+            "nonzero_count": 6,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            1,
+            11,
+            21,
+            23,
+            27,
+            60
+          ],
+          "case": "p=61,n=20,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              11,
+              1
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 4,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "multi_hit",
+            "negation_pair_present",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            11,
+            1
+          ]
+        },
+        "{\"active_count\": 6, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 1, \"negation_pairs\": 0, \"occupancies\": [5, 1], \"s\": 4}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              5,
+              1
+            ],
+            "active_count": 6,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 1,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 5,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 6,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            27,
+            28,
+            37,
+            38,
+            45,
+            53
+          ],
+          "case": "p=61,n=20,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              1,
+              19
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 4,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "inverse_pair_present",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            1,
+            19
+          ]
+        },
+        "{\"active_count\": 6, \"case\": \"p=61,n=20,sigma=2\", \"inverse_pairs\": 1, \"negation_pairs\": 1, \"occupancies\": [5, 1], \"s\": 4}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              5,
+              1
+            ],
+            "active_count": 6,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 1,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 5,
+            "negation_pair_count": 1,
+            "negation_symmetric": false,
+            "nonzero_count": 6,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            20,
+            33,
+            37,
+            41,
+            52,
+            54
+          ],
+          "case": "p=61,n=20,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              8,
+              9
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 4,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "inverse_pair_present",
+            "multi_hit",
+            "negation_pair_present",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            8,
+            9
+          ]
+        },
+        "{\"active_count\": 8, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 1, \"negation_pairs\": 0, \"occupancies\": [7, 1], \"s\": 6}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              7,
+              1
+            ],
+            "active_count": 8,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 1,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 7,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 8,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            1,
+            13,
+            15,
+            16,
+            22,
+            52,
+            57,
+            58
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              1,
+              3
+            ],
+            "sigma2_endpoint_sparse": false,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": true,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": false,
+            "sigma2_u2_zero": true,
+            "sigma2_u3_zero": false,
+            "tail": [
+              1,
+              0,
+              49
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              2
+            ]
+          },
+          "coset_ids": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 6,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "inverse_pair_present",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_odd_tail",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u2_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            1,
+            0,
+            49
+          ]
+        },
+        "{\"active_count\": 9, \"case\": \"p=61,n=15,sigma=2\", \"inverse_pairs\": 2, \"negation_pairs\": 0, \"occupancies\": [8, 1], \"s\": 7}": {
+          "active_profile": {
+            "H_coset_cover_count": 2,
+            "H_coset_occupancies": [
+              8,
+              1
+            ],
+            "active_count": 9,
+            "contained_in_single_H_coset": false,
+            "inverse_pair_count": 2,
+            "inverse_symmetric": false,
+            "max_H_coset_occupancy": 8,
+            "negation_pair_count": 0,
+            "negation_symmetric": false,
+            "nonzero_count": 9,
+            "zero_count": 0
+          },
+          "active_thetas": [
+            1,
+            9,
+            13,
+            25,
+            34,
+            47,
+            55,
+            57,
+            58
+          ],
+          "case": "p=61,n=15,sigma=2",
+          "coefficient_profile": {
+            "nonzero_positions": [
+              2,
+              3
+            ],
+            "sigma2_endpoint_sparse": true,
+            "sigma2_even_tail": false,
+            "sigma2_odd_tail": false,
+            "sigma2_tail_palindrome": false,
+            "sigma2_u1_zero": true,
+            "sigma2_u2_zero": false,
+            "sigma2_u3_zero": false,
+            "tail": [
+              0,
+              2,
+              41
+            ],
+            "tail_weight": 2,
+            "zero_positions": [
+              1
+            ]
+          },
+          "coset_ids": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "family_tags": [
+            "all",
+            "stress_survivor",
+            "dominant_cluster",
+            "cluster_plus_one",
+            "coefficient_sparse"
+          ],
+          "s": 7,
+          "tags": [
+            "H_coset_cover_2",
+            "coefficient_sparse_tail",
+            "dominant_H_coset_cluster",
+            "inverse_pair_present",
+            "multi_hit",
+            "nonzero_active_set",
+            "off_H_coset_set",
+            "sigma2_endpoint_sparse",
+            "single_H_coset_plus_one_outlier",
+            "stress_survivor_min_active_pass",
+            "tail_weight_2",
+            "two_H_coset_cover",
+            "u1_zero"
+          ],
+          "tail_relations": null,
+          "uhat": [
+            1,
+            0,
+            2,
+            41
+          ]
+        }
+      },
+      "top_tail_ratio": [
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 3]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 5]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 19]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 46]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 48]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 49]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 52]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 60]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 41]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 14]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 4]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 45]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 27]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 36]]"
+        },
+        {
+          "count": 36,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 0, 39]]"
+        },
+        {
+          "count": 35,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 12, 22]]"
+        },
+        {
+          "count": 35,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 13, 47]]"
+        },
+        {
+          "count": 35,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 15, 42]]"
+        },
+        {
+          "count": 35,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 16, 12]]"
+        },
+        {
+          "count": 35,
+          "signature": "[\"p=61,n=15,sigma=2\", [1, 22, 57]]"
+        }
+      ],
+      "top_tail_relations": [
+        {
+          "count": 1545,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 6}]"
+        },
+        {
+          "count": 1500,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 17}]"
+        },
+        {
+          "count": 1455,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 7}]"
+        },
+        {
+          "count": 1455,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 54}]"
+        },
+        {
+          "count": 1455,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 56}]"
+        },
+        {
+          "count": 1440,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 36}]"
+        },
+        {
+          "count": 1395,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 3}]"
+        },
+        {
+          "count": 1395,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 22}]"
+        },
+        {
+          "count": 1365,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 18}]"
+        },
+        {
+          "count": 1365,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 32}]"
+        },
+        {
+          "count": 1365,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 55}]"
+        },
+        {
+          "count": 1350,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 59}]"
+        },
+        {
+          "count": 1335,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 44}]"
+        },
+        {
+          "count": 1335,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 40}]"
+        },
+        {
+          "count": 1320,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 34}]"
+        },
+        {
+          "count": 1320,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 24}]"
+        },
+        {
+          "count": 1320,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 43}]"
+        },
+        {
+          "count": 1320,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 25}]"
+        },
+        {
+          "count": 1320,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": false, \"geometric_tail\": false, \"u1u3_over_u2sq\": 53}]"
+        },
+        {
+          "count": 1320,
+          "signature": "[\"p=61,n=15,sigma=2\", {\"disc_square\": true, \"geometric_tail\": false, \"u1u3_over_u2sq\": 27}]"
+        }
+      ],
+      "total": 109578
+    }
+  },
+  "settings": {
+    "candidate_min_active": 3,
+    "cases": [
+      [
+        61,
+        20,
+        2
+      ],
+      [
+        61,
+        15,
+        2
+      ],
+      [
+        61,
+        12,
+        2
+      ],
+      [
+        61,
+        10,
+        2
+      ]
+    ],
+    "families": [
+      "dominant_cluster",
+      "distributed_dense_tail"
+    ],
+    "max_layer_density_den": 20,
+    "max_layer_density_num": 1,
+    "stress_survivor_min_active": 3,
+    "top": 20
+  },
+  "status": "EXPERIMENTAL_SIGNATURE_SUMMARY",
+  "summary_family_count_comparison": {
+    "distributed_dense_tail": [
+      {
+        "case": "p=61,n=12,sigma=2",
+        "computed": 456,
+        "matches": true,
+        "summary_jsonl": 456
+      },
+      {
+        "case": "p=61,n=15,sigma=2",
+        "computed": 59160,
+        "matches": true,
+        "summary_jsonl": 59160
+      },
+      {
+        "case": "p=61,n=20,sigma=2",
+        "computed": 8080,
+        "matches": true,
+        "summary_jsonl": 8080
+      }
+    ],
+    "dominant_cluster": [
+      {
+        "case": "p=61,n=12,sigma=2",
+        "computed": 1608,
+        "matches": true,
+        "summary_jsonl": 1608
+      },
+      {
+        "case": "p=61,n=15,sigma=2",
+        "computed": 77730,
+        "matches": true,
+        "summary_jsonl": 77730
+      },
+      {
+        "case": "p=61,n=20,sigma=2",
+        "computed": 30240,
+        "matches": true,
+        "summary_jsonl": 30240
+      }
+    ]
+  }
+}

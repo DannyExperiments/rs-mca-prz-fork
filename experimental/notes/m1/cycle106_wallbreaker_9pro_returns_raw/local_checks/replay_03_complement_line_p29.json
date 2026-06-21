@@ -1,0 +1,55 @@
+{
+  "active_theta_count": 1,
+  "active_thetas": [
+    2
+  ],
+  "decision": "LINE_ESCAPES_DEGREE_D_CLOSURE",
+  "dimension_threshold_inequality": {
+    "D0_monomials": 1820,
+    "all_subsets": 35,
+    "current_D_monomials": 1820,
+    "distinct_M_m_points": 35,
+    "two_to_n": 128
+  },
+  "inverse_prefix_v_0_to_d": [
+    1,
+    19,
+    27,
+    18,
+    7
+  ],
+  "parameters": {
+    "D": 12,
+    "d": 4,
+    "m": 3,
+    "n": 7,
+    "p": 29,
+    "s": 4,
+    "sigma": 3
+  },
+  "ranks": {
+    "A": 35,
+    "stacked_A_B": 47
+  },
+  "relation_space_dimension": 1785,
+  "scope": "exact finite/model certificate; exhaustive enumeration; does not certify asymptotic aperiodicity or the official prize chain",
+  "separator": {
+    "restriction_coefficients_low_to_high": [
+      7,
+      11
+    ],
+    "restriction_degree": 1,
+    "terms": [
+      {
+        "coefficient": 1,
+        "exponents": [
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "uniform_dimension_threshold_D0": 12
+}

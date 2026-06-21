@@ -29,6 +29,191 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-22 - Cycle106 9-Pro wallbreaker returns
+
+- **Agent/model:** Nine ChatGPT Pro theorem-worker roles, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle106_wallbreaker_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle106_wallbreaker_9pro_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** Raw preserved returns and downloaded files from the
+  Cycle106 9-Pro wallbreaker round, plus local replay outputs for the generated
+  complement-line eliminant checker and k-free stress checker.
+- **How it is useful:** The round does not prove Cycle106, but it sharpens the
+  wall substantially. Multiple roles converge on the complement-line/rank-one
+  formulation: with `d=sigma+1` and
+  `V=Uhat^{-1} mod X^(d+1)`, activity is reduced to the affine line
+  `(v_j-theta*v_{j-1})_{j=1}^d` meeting `M_m`; a degree-`D` separator gives
+  `|Gamma cap M_s|<=D`. The source audit prevents overclaiming: the compact
+  packet still lacks a formal corrected-reserve aperiodicity predicate and the
+  official bad-slope-to-aperiodic-Gamma cover theorem. The p97 finite candidate
+  has `7` active theta values and `6` external theta values, but the checker
+  correctly emits `ROUTE_CUT_FINITE_MODEL_TOO_WEAK`, not `COUNTERPACKET`.
+- **What to do next:** Attack two gates explicitly:
+  `L-M1-OFFICIAL-BAD-SLOPE-TO-APERIODIC-GAMMA-COVER` and
+  `L-CYCLE107-APERIODIC-COMPLEMENT-LINE-ESCAPE`. Treat finite stress data as
+  route diagnostics only until the source aperiodicity/reserve gate is defined.
+
+### 2026-06-22 - Cycle106 p61 density-gate sensitivity
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/scripts/cycle106_density_sensitivity_from_signatures.py`,
+  `experimental/notes/m1/cycle106_p61_density_sensitivity_summary.json`,
+  `experimental/notes/m1/cycle106_family_signature_analysis.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / EXPERIMENTAL_DENSITY_SENSITIVITY / ROUTE_CUT.
+- **What is being added:** A post-processor derives stricter layer-density
+  gate counts from the saved p=61 Cycle106 signature and stress summaries.
+- **How it is useful:** It cuts the raw D8B mass as a stable object. The
+  distributed dense-tail family drops from `67,696` at `1/20` to `5,831` at
+  `1/50`, `866` at `1/100`, `456` at `1/200`, and zero at `1/500`; dominant
+  cluster drops from `109,578` to `11,658`, `3,273`, `1,623`, and `48` over
+  the same gates. The surviving distributed residual at `1/200` is only q=5
+  `(61,12,2)`.
+- **What to do next:** Match the true reserve/density gate before promoting
+  D8B. If the strict residual survives source-valid aperiodicity filters, split
+  it out as `D8C-CYCLE106-STRICT-DENSITY-RESIDUAL-TRANSVERSAL`.
+
+### 2026-06-22 - Cycle106 p61 fixed-field quotient-index probe
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/scripts/cycle106_kfree_incidence_stress.py`,
+  `experimental/scripts/cycle106_family_signature_miner.py`,
+  `experimental/notes/m1/cycle106_p61_quotient_index_stress_probe.jsonl`,
+  `experimental/notes/m1/cycle106_p61_family_signature_summary.json`,
+  `experimental/notes/m1/cycle106_family_signature_analysis.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / EXPERIMENTAL_STRESS_PROBE / ROUTE_CUT.
+- **What is being added:** A fixed-field `p=61` quotient-index comparison for
+  Cycle106 sigma-2 stress families, plus a small optimization in the stress
+  checker and signature miner that caches `g(theta)` once per `Uhat`.
+- **How it is useful:** It cuts the q=3-specific D8A interpretation. At fixed
+  `p=61`, q=3 `(61,20,2)` has `41,350` stress survivors and `8,080`
+  distributed dense-tail rows, q=4 `(61,15,2)` has `148,545` stress survivors
+  and `59,160` distributed dense-tail rows, q=5 `(61,12,2)` has `2,076`
+  stress survivors and `456` distributed dense-tail rows, and q=6 `(61,10,2)`
+  has none. The new D8 target is
+  `D8B-CYCLE106-DENSITY-ADMITTED-DENSE-TAIL-TRANSVERSAL`, not a
+  quotient-order-three-only wall.
+- **What to do next:** Test whether the dense-tail transversal family survives
+  stronger aperiodicity/source filters or can be charged to quotient/periodic
+  branches. Treat all p=61 evidence as finite toy stress data, not
+  `COUNTERPACKET` or theorem evidence.
+
+### 2026-06-22 - Cycle106 quotient-index stress probe
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle106_quotient_index_signature_probe.json`,
+  `experimental/notes/m1/cycle106_quotient_index_stress_probe.jsonl`,
+  `experimental/notes/m1/cycle106_family_signature_analysis.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / EXPERIMENTAL_STRESS_PROBE.
+- **What is being added:** A small quotient-index probe for Cycle106 sigma-2
+  stress families. It tests quotient-index `3` cases `(13,4,2),(19,6,2)`,
+  quotient-index `4` cases `(17,4,2),(37,9,2)`, quotient-index `5` cases
+  `(31,6,2),(41,8,2)`, and quotient-index `6` case `(43,7,2)`.
+- **How it is useful:** The family miner finds zero dominant-cluster and zero
+  distributed-dense-tail target rows, and the stress checker finds zero gated
+  candidates and zero stress survivors in all seven cases. This cut the naive
+  reading that quotient index `3` alone explains D8; its temporary q=3-specific
+  refinement was later cut by the fixed-field p=61 probe.
+- **What to do next:** Run larger matched-size quotient-index comparisons,
+  especially q=3 versus q=4/q=5 with similar `n`, before promoting any
+  `EXPERIMENTAL_STRESS_FAMILY`.
+
+### 2026-06-22 - Cycle106 family signature mining
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/scripts/cycle106_family_signature_miner.py`,
+  `experimental/notes/m1/cycle106_family_signature_summary.json`,
+  `experimental/notes/m1/cycle106_family_signature_analysis.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / EXPERIMENTAL_SIGNATURE_SUMMARY / EXACT_NEW_WALL.
+- **What is being added:** A reproducible finite signature miner for the
+  Cycle106 dominant-cluster and distributed-dense-tail stress families. The
+  miner recomputes the extended sigma-2 toy grid and compares family totals
+  against `cycle106_kfree_incidence_stress_extended_sigma2.jsonl`; the counts
+  match for both target families.
+- **How it is useful:** It sharpens D3 from a generic dominant-cluster bucket
+  into `D3A-CYCLE106-DOMINANT-H-COSET-OUTLIER-CHARGE`: `31,086/31,798`
+  dominant rows are two-`H`-coset covers, `30,234` are cluster-plus-one, and
+  `1,564` are cluster-plus-two. It gives the original signature evidence later
+  refined again into `D8B-CYCLE106-DENSITY-ADMITTED-DENSE-TAIL-TRANSVERSAL`:
+  the distributed-dense-tail rows in the original extended scan are mostly
+  occupancy `[1,1,1]` or `[2,1,1]`, but later p=61 testing cuts the
+  quotient-order-three-only reading. These are finite toy stress signatures
+  only, not `COUNTERPACKET` or theorem evidence.
+- **What to do next:** Run a quotient-index sweep with additional
+  quotient-order-three and quotient-order-four/five cases, then try to prove
+  or cut D3A/D8B under the true aperiodicity hypotheses before promoting any
+  `EXPERIMENTAL_STRESS_FAMILY`.
+
+### 2026-06-22 - Canonical RS-MCA tracker
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/notes/m1/cycle106_kfree_incidence_stress_candidates.jsonl`,
+  `experimental/notes/m1/cycle106_kfree_incidence_stress_extended_sigma2.jsonl`,
+  `experimental/notes/m1/cycle106_kfree_incidence_stress_dominant_cluster.jsonl`,
+  `experimental/notes/m1/cycle106_kfree_incidence_stress_distributed_dense_tail.jsonl`,
+  `experimental/scripts/cycle106_kfree_incidence_stress.py`,
+  `experimental/agents-log.md`.
+- **Status:** CANONICAL_TRACKER / AUDIT / EXPERIMENTAL.
+- **What is being added:** A single spreadsheet-equivalent route board for the
+  RS-MCA / Proximity Prize work, with stable item IDs for M1, L1, L2, L3, F1,
+  M2, A0--A4, recent Cycle103--106 evaluations, failed routes, open questions,
+  and next exact sub-goals. Also adds a tiny deterministic Cycle106 stress
+  checker for the k-free incidence object `Gamma cap M_s`.
+- **How it is useful:** Gives future agents one canonical queryable state file
+  instead of forcing them to reconstruct the theorem state from raw cycles,
+  packet context, and `agents-log.md`. The stress checker provides a first
+  local baseline for the active wall without promoting tiny evidence to a
+  theorem; its first run shows constant or near-geometric prefixes dominate
+  the tiny-case maxima, so quotient/periodic/geometric tagging is required
+  before the scan has aperiodic route value. A refined run now tags
+  zero-tail, geometric-prefix, and coset-supported hits; sigma-2 rough maxima
+  collapse in the tiny cases, but the `p=17,n=8,sigma=1` rough max remains
+  large until layer density is printed. The latest run shows that row lives in
+  a dense low-slack layer (`69/289`), while the tested sigma-2 layers are much
+  sparser and have rough maxima `2,2,0`. The current script also writes a
+  JSONL stress queue with `5` summary rows and `46` gated candidate rows under
+  the toy density gate `layer_density<=1/20`; all candidate rows have active
+  count `2`, so they are a classification queue, not counterpackets. A later
+  schema pass renames the active-count gate to `stress_survivor_min_active`
+  and adds active-profile and tag histograms. The baseline rerun still has
+  `0` stress survivors above active count `2`. An extended sigma-2 scan over
+  `(23,11,2),(31,10,2),(37,12,2),(41,10,2),(43,14,2)` writes a capped JSONL
+  with `5` summaries and `220` emitted sample rows, while summary counts record
+  `44,014` total multi-hit off-`H`-coset stress survivors. This refutes active
+  count `>=3` as a useful no-counterpacket criterion for the toy filter. A
+  second-layer classifier now tags coefficient-tail weight, two/three
+  `H`-coset covers, dominant coset clusters, distributed covers, negation
+  pairs, and inverse pairs. The refined scan shows coefficient sparsity is a
+  minority explanation: `41,048` of `44,014` survivors have dense tail weight
+  `3`, while all survivors are two- or three-`H`-coset covers; `31,798` have a
+  dominant `H`-coset cluster and `10,424` are distributed-cover residuals. The
+  latest rerun adds family histograms and `--emit-family` filtering, then writes
+  compact dominant-cluster and distributed-dense-tail packets. The dominant
+  packet has `160` emitted rows and the distributed dense-tail packet has `100`;
+  both retain matching full-summary fingerprints. The distributed dense-tail
+  residual is `9,684` survivors.
+- **What to do next:** Keep the tracker updated after every major
+  documentation, evaluation, refinement, or re-evaluation step; use the
+  dominant-cluster packet to test quotient/near-coset charge lemmas, and mine
+  the distributed-dense-tail packet for repeated parametrizations before
+  promoting any `EXPERIMENTAL_STRESS_FAMILY`.
+
 ### 2026-06-22 - Cycle 106 9-Pro wallbreaker packet
 
 - **Agent/model:** Codex.
