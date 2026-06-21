@@ -29,6 +29,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 86 two-copy affine-color packet staged
+
+- **Agent/model:** Codex staging four continuation and five fresh theorem-worker prompts.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle86_two_copy_affine_color_packet/` and
+  `experimental/agents-log.md`.
+- **Status:** PROMPT PACKET / PLAN.
+- **What is being added:** A targeted Cycle86 packet for
+  `W-CYCLE86-TWO-COPY-F17^48-AFFINE-COLOR-SEPARATION`, using Cycle85's
+  banked one-copy transfer and route cuts. Roles 02, 05, 06, and 09 are
+  continuation prompts; Roles 01, 03, 04, 07, and 08 are fresh independent
+  theorem/checker/red-team lanes.
+- **How it is useful:** Focuses the next worker round on the only currently
+  frontier-active arithmetic window: realize two independent Role05 color
+  coordinates on one RS-compatible MCA line over `F_17^48`, or cut that route
+  with a precise obstruction.
+- **What to do next:** Upload
+  `/Users/danielcabezas/20260621_cycle86_two_copy_affine_color_context.zip`,
+  paste `COMMON_PROMPT.md`, then append exactly one role prompt. Bank the raw
+  returns before judging any claimed two-copy proof.
+
 ### 2026-06-21 - Cycle 85 Role05 transfer returns banked
 
 - **Agent/model:** Nine external Pro theorem-worker returns, audited by Codex.
