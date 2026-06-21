@@ -42,6 +42,7 @@ def main() -> None:
     rho_num, rho_den = 1, 16
     k = n * rho_num // rho_den
     ell = k + 1
+    support_count = comb(n, ell)
     threshold = q // 2**128
     single_weight_count = comb(d, ell) * 2**ell
     parity_sum_count = sum(
@@ -63,12 +64,15 @@ def main() -> None:
         "v2_q_minus_1": v2(q - 1),
         "ord_256_5": multiplicative_order(5, 256),
         "floor_q_over_2_128": threshold,
+        "binom_256_17": support_count,
         "single_weight_count": single_weight_count,
         "parity_sum_count": parity_sum_count,
         "single_weight_margin": single_weight_count - threshold,
         "parity_sum_margin": parity_sum_count - threshold,
         "log2_q": log2(q),
         "log2_threshold": log2(threshold),
+        "log2_binom_256_17": log2(support_count),
+        "exact_binomial_reserve_margin_bits": log2(q) - log2(support_count),
         "log2_single_weight_count": log2(single_weight_count),
         "log2_parity_sum_count": log2(parity_sum_count),
         "h2_1_16": entropy,
@@ -81,6 +85,7 @@ def main() -> None:
     assert checks["ord_256_5"] == 64
     assert single_weight_count > threshold
     assert parity_sum_count > threshold
+    assert q > support_count
     assert gap > tau_star_leading
 
     for key, value in checks.items():

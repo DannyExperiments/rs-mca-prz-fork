@@ -29,6 +29,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 92 extension-field admissibility audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle92_extension_field_admissibility_raw/`,
+  `experimental/notes/m1/m1_cycle92_extension_field_admissibility_audit.md`,
+  `experimental/notes/m1/cycle93_corrected_reserve_section7_prompt.md`,
+  `experimental/scripts/cycle91_extension_power_two_arithmetic.py`, and
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** Cycle92 banks the Cycle91 construction as a valid
+  extension-field research certificate and power-basis coverage lemma, but
+  cuts promotion to official prize counterpacket.
+- **How it is useful:** It clarifies that the lower/failure-side row is real
+  but not the prize frontier. Codex also added the exact finite binomial
+  reserve margin to the arithmetic checker.
+- **What to do next:** Run Cycle93 against
+  `W-CYCLE93-CORRECTED-RESERVE-AND-SECTION-7-SPLICE`, then move back toward
+  the upper/residue-cloud wall unless Cycle93 exposes a genuine source issue.
+
 ### 2026-06-21 - Cycle 91 above-reserve power-of-two audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
