@@ -1,0 +1,38 @@
+{
+  "artifacts": {
+    "census_result": "0f96afef0d54e7f930ef65446df4e834fab1b7ea9326bfa9e3c324df48d44249",
+    "census_source": "7a9e53f8e35c16f4f88c51fc8a402bcdbed2d1d8de79fae4bc69181c85b6b9c1",
+    "domain": "2bda8227b5090cb4f9b30e96c2f3442c487a64349ff61fa48dd803e6d1c23abd",
+    "grs_certificate": "fe2c8c4555d44e65b33eb576736c250236bf37f56ea4923626d01557cafd22a6",
+    "line": "dce95315fed38dee0286888a252a16536888f9032d662cdd471cbb2b028a4eb7",
+    "parity_check": "e0e6c4519490b2256d3df81c483f1c6697cbe2433852cf07c53c7f1f1726e281",
+    "setup_certificate": "2b83b632a9153d5359fb99ab1e308181c86301317e4034171b1d0e5aa1a5ea7f"
+  },
+  "claim": "CYCLE87_U_PROJECTIVE_MMAX_LE_8",
+  "decision": "PASS",
+  "deduced": {
+    "T_line": "338617018271848945628",
+    "margin": "1052535899107157125156",
+    "mca_lower": "1391152917379006070784",
+    "mu_proj_upper_bound": 2
+  },
+  "profile": {
+    "j": 226,
+    "k": 232,
+    "n": 464,
+    "q_chal": "115225400457255426923013053222916919834651165519677685328641",
+    "q_code": "115225400457255426923013053222916919834651165519677685328641",
+    "q_gen": "115225400457255426923013053222916919834651165519677685328641",
+    "q_line": "115225400457255426923013053222916919834651165519677685328641",
+    "sigma": 6,
+    "t": 1
+  },
+  "records": "52747567104",
+  "schema": "cycle87.u-separator-result.v1",
+  "smooth": {
+    "max_multiplicity": 2,
+    "occupancy": "52747567062",
+    "order": "48661191882642625923",
+    "ordered_offdiagonal_energy": "84"
+  }
+}

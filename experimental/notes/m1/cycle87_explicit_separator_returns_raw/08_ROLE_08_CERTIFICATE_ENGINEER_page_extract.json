@@ -1,0 +1,209 @@
+{
+  "url": "https://chatgpt.com/c/6a378c4a-88a0-83ec-8801-4873604d2e83",
+  "title": "RS-MCA Cycle 87 Solution",
+  "complete": true,
+  "hasStop": false,
+  "hasGotIt": false,
+  "assistantCount": 5,
+  "userCount": 1,
+  "assistants": [
+    {
+      "i": 0,
+      "text": "I’ll first read the named Cycle84–86 materials and data formats, then specify a reproducible separator checker/verifier bundle with field encoding, sharding, and explicit PASS/FAIL certificates."
+    },
+    {
+      "i": 1,
+      "text": "The reduction now narrows to a one-copy projective census plus the GRS/syndrome-line certificate; I’m checking the 464 shortening and missing dependency hashes before fixing encodings."
+    },
+    {
+      "i": 2,
+      "text": "The checker can avoid full projective-key sorting: use the smooth quotient/additive-log sharding to census buckets, refining only heavy ones, while keeping the exhaustive scan unclaimed until run."
+    },
+    {
+      "i": 3,
+      "text": "The tau-folded census halves the scan to 26,373,783,552 canonical packets with adjusted zero-residue threshold, and 600 of 1,536 shards have passed with max fiber 2."
+    },
+    {
+      "i": 4,
+      "text": "BANKABLE_LEMMA\n\nVerdict\n\nThe full multiplicity census is still unrun, so this is not yet a proof of μ\nproj\n\t​\n\n(U)≤8. Two substantial walls are now discharged:\n\nThe census can be exactly tau-folded from 52,747,567,104 packets to 26,373,783,552 canonical packets.\n\nThe preferred (464,232,6,226) package is valid for the audited explicit model; the 560 fallback is unnecessary.\n\nThe remaining wall is exactly\n\nV-CYCLE87-U-TAU-FOLDED-SMOOTH-MMAX8-CENSUS\n\t​\n\n.\n\nConfidence is high for the reductions, field setup, and 464 geometry. The actual census outcome is unknown.\n\nExact new reductions\n\nLet\n\nq\n0\n\t​\n\n=17\n16\n,S=48,661,191,882,642,625,923,r=48,661,191,868,691,111,041,\n\nwhere\n\n∣L\n×\n/F\n0\n×\n\t​\n\n∣=(q\n0\n2\n\t​\n\n+q\n0\n\t​\n\n+1)=Sr.\n\nHere\n\nS=3⋅7⋅13⋅73⋅307⋅1321⋅72337⋅83233\n\nand r is prime by the complete factorization\n\nr−1=2\n7\n3\n2\n517\n8\n2941761\n\nwith Pocklington witness 7.\n\nFor nonzero b∈L, define\n\nz(b)=b\nq\n0\n\t​\n\n−1\n,s(b)=z(b)\nr\n.\n\nSince z has kernel exactly F\n0\n×\n\t​\n\n, it is an exact projective key. Since s is a quotient of that key,\n\nμ\nproj\n\t​\n\n(U)≤μ\ns\n\t​\n\n(U)\n\t​\n\n.\n\nThus a smooth census proving μ\ns\n\t​\n\n(U)≤8 proves the active projective wall. A smooth collision of size nine does not prove projective failure; it only triggers exact refinement.\n\nExact tau folding\n\nFor the audited option involution\n\nτ(1,a)=(2,a+6),τ(2,a)=(1,a+10),τ(3,a)=(3,a+8),\n\neach slot satisfies\n\nG\nt,k\n\t​\n\n(U)G\nt,τ(k)\n\t​\n\n(U)=C\nt\n\t​\n\n(U).\n\nThe color relation is\n\ncol(k)+col(τ(k))≡8(mod16),\n\nso tau preserves the seven-slot color-4 shell. These option sets and color conventions agree with the pinned Cycle84 model surfaces. \n\ncycle84_tau_fixed_fiber_checker\n\nThe generated smooth logs give\n\nκ=13,943,676,897,899,455,034,δ=κ/2=6,971,838,448,949,727,517(modS).\n\nWriting\n\nx(T)=e(T)−δ,q(T)=min(x(T),S−x(T)),\n\nand selecting the first-slot options\n\n{0,…,15,32,…,39},\n\nchooses exactly one tuple from every tau orbit. If n(q) denotes the resulting canonical count, then\n\nq>0:m\ns\n\t​\n\n(δ+q)=m\ns\n\t​\n\n(δ−q)=n(q),\n\nwhile\n\nq=0:m\ns\n\t​\n\n(δ)=2n(0).\n\nTherefore\n\nμ\ns\n\t​\n\n(U)≤8⟺n(q)≤8 ∀q>0,n(0)≤4.\n\t​\n\n\nThis is an exact equivalence. It is the extension-field analogue of the exact tau-folded counting principle already used in the Cycle84 checker.\n\nMaterialized finite-field setup\n\nThe bundle contains an executable C++20 producer that:\n\nconstructs all 336 factors G\nt,i,a\n\t​\n\n(U);\n\nproves the selected smooth generator has order S;\n\ncomputes every smooth logarithm by exact Pohlig–Hellman and CRT;\n\nre-exponentiates every logarithm;\n\nchecks all exact tau-product identities;\n\nchecks the full and folded color-shell counts.\n\nThe independent Python verifier reconstructs every factor separately and verifies all 336 exponent identities.\n\nKey hashes are:\n\nC++ slot producer:\n2998c0015025c8777cbf27eeb7cad0160c28659ab258014b87243ca552d514e7\n\n336-row slot table:\nbc9e8ef7dfe4fc8cca89e82b3ec150a12ec0cfbe1be3e641b62b05e623ba9987\n\nCanonical record content:\n54c9af836c48a7a8bfa40b8121a82b8c25c180feb8387f371aba2772b7913670\nThe 464 package is valid\n\nFor\n\nD\n−\n=⟨η⟩∖{η\n8b\n:1≤b≤24},∣D\n−\n∣=232,\n\nand\n\nc=β−U,D\n2\n\t​\n\n=D\n−\n∪(c+D\n−\n),\n\nthe verifier establishes:\n\nall one-copy supports survive the shortening;\n\nthe 464 domain elements are distinct;\n\nβ∈\n/\nD\n2\n\t​\n\n;\n\nthe domain generates L;\n\nevery option block has jet 1modt\n6\n;\n\nevery one-copy support has J\nT\n\t​\n\n(t)=1−tmodt\n6\n;\n\nevery combined support has the fixed jet\n\n(1−t)(1−ct)\n112\n(1−(c+1)t)(modt\n6\n);\n\nthe columns\n\nH\nx\n\t​\n\n=(1,x,…,x\n230\n,(β−x)\n−1\n)\nT\n\nform one [464,232] GRS parity-check matrix;\n\nall supports lie on one affine syndrome line;\n\nevery incidence is transverse.\n\nIt additionally verifies one complete 226-point barycentric syndrome identity, including the reciprocal row.\n\nThe resulting hashes are:\n\ndomain:\n6aa1eb735afbaaf36eefb3ac080123fb49c9e32d0dd861cd635c54ad42991f76\n\n464×232 code matrix:\n5ee34d5a29e09180fa82d09ea07abec9006cdead736ce1c9506b76a887f7bcce\n\naffine syndrome line:\n6b49252971502a27e49a673b20f3ed2457557432232eb8116f56da602e272e2a\n\nThus the shortening argument does not fail, and the 560 fallback is not needed for this explicit model.\n\nCertificate-engineering specification\n1. Source files and languages\n\nThe bundle specifies:\n\nC++20:\n  cycle87_build_u_slot_logs.cpp\n  cycle87_tau_folded_scan.cpp       [implementation-complete pseudocode supplied]\n  cycle87_exact_refine.cpp          [logic included in the same pseudocode]\n\nPython 3, standard library:\n  field_reference.py\n  verify_u_slot_logs.py\n  verify_geometry_464.py\n  verify_result_envelope.py\n\nIndependent expensive verifier:\n  Rust verify_shard.rs              [exact contract specified]\n\nThe C++ producer uses no floating point and no randomized equality test. Rust is reserved for independent shard regeneration, so the expensive verifier does not share the producer implementation.\n\n2. Field representation\n\nAn F\n0\n\t​\n\n element is 16 coefficients in increasing powers of X, each stored as one byte. Reduction uses\n\nX\n16\n=−X\n8\n−3.\n\nAn L element is\n\nb\n0\n\t​\n\n+b\n1\n\t​\n\nU+b\n2\n\t​\n\nU\n2\n\nencoded as 48 bytes in U-block-major, X-coefficient-minor order.\n\nThe exact projective key is\n\nencode\n48\n\t​\n\n(P\nT\n\t​\n\n(U)\nq\n0\n\t​\n\n−1\n).\n\nSmooth exponents require 66-bit arithmetic. Folded q-keys require 65 bits.\n\n3. Inputs and hashes\n\ninputs/INPUTS.lock.json pins:\n\nthe Cycle87 state and Cycle84–86 audits;\n\nthe authoritative Cycle68 slot-factor model;\n\nthe Cycle84 exact m\nmax\n\t​\n\n=2 certificate;\n\nthe twelve double-ρ fibers;\n\nthe independent original slot verifier;\n\nthe public full-run and acceptance certificates;\n\nthe newly generated U-slot table and 464 geometry.\n\nThe raw Cycle86 worker slot-table hash is explicitly untrusted because its claimed byte artifact was absent.\n\n4. JSON schemas\n\nThe normative schemas are:\n\nschemas/cycle87_result.schema.json\nschemas/cycle87_shard.schema.json\nschemas/cycle87_geometry_464.schema.json\n\nThe result schema distinguishes:\n\nPASS\nFAIL_PROJECTIVE_MMAX_GE_9\nREFINE_REQUIRED\nERROR\n\nIt separately records finite-model status, one-copy transfer, official two-copy counterpacket status, public replay status, and full-prize-theorem status.\n\n5. Independent verifier\n\nA theorem-grade verifier must independently:\n\nhash every dependency;\n\nreconstruct F\n0\n\t​\n\n, L, and all 336 factors;\n\nverify every smooth logarithm by exponentiation;\n\nverify tau constants and both shell counts;\n\nrebuild the folded MITM side tables;\n\nregenerate every shard;\n\nrefine every threshold-crossing key;\n\nverify any nine-tuple FAIL witness;\n\nverify the pinned 464 geometry hashes;\n\nrecompute NP/8, T\nline\n\t​\n\n, and the margin.\n\nAn aggregate result JSON is not evidence for collision absence.\n\n6. Memory-bounded sharding\n\nThe folded key space has size\n\nH=\n2\nS+1\n\t​\n\n=24,330,595,941,321,312,962.\n\nWith 1536 shards, the largest interval width is\n\n15,840,231,732,631,064<2\n54\n.\n\nThe MITM sides contain\n\nfolded left records = 55,296\nright records       = 5,308,416\n\nand the average shard contains exactly\n\n17,170,432 compatible pairs.\n\nEach shard first counts its records using binary-search interval lengths, then allocates an exact open-address table. A 64-bit table word stores a shard-local offset and a counter saturated at nine. Equality always compares the full offset; the hash only chooses the probe location.\n\nAbsolute folded keys can exceed 2\n64\n−1. Consequently, saturated-key files store 64-bit local offsets plus the decimal shard lower endpoint—not absolute uint64_t keys.\n\n7. FAIL certificate\n\nFor q>0, canonical tuples are normalized into the δ+q smooth fiber:\n\nx=q: T↦T,x=S−q: T↦τ(T).\n\nFor q=0, both T and τ(T) are included.\n\nA valid FAIL contains:\n\ndecision = FAIL_PROJECTIVE_MMAX_GE_9\nfolded_q\ncommon_projective_key_48_hex\nexactly nine distinct packed tuple IDs\n\nThe verifier reconstructs all nine complete locators, including the common U−1 factor, verifies admissibility, and checks exact 48-byte key equality.\n\n8. PASS certificate\n\nA smooth-domination PASS requires:\n\nall 1,536 shards complete\nsum record_count = 26,373,783,552\nmax n(q) <= 8 for q > 0\nn(0) <= 4\n\nAlternatively, coarse thresholds may be exceeded if every such key is exactly refined and the exact projective maximum is at most eight.\n\nThe result must also carry the three pinned 464 geometry hashes and verify\n\n8\nPN\n\t​\n\n=347,788,229,344,751,517,696>338,617,018,271,848,945,628=⌊\n2\n128\n17\n48\n\t​\n\n⌋.\n9. Reviewer reproduction\n\nThe local bundle replay is:\n\nBash\nunzip cycle87_certificate_engineer_bundle.zip\ncd cycle87_certificate_engineer_bundle\n./scripts/reproduce.sh\n\nThe verified markers are:\n\nFIELD_REFERENCE_SELFTEST_PASS\nU_SLOT_LOGS_VERIFY_PASS\nGEOMETRY_464_VERIFY_PASS\nSTATIC_RESULT_ENVELOPE_PASS\nBUNDLE_SELFTEST_PASS\n\nThe full theorem replay then fetches and hash-checks the pinned Cycle84 artifacts, runs all folded shards, merges them, performs exact refinement when necessary, and independently regenerates all shards in Rust. Exact commands are in SPEC.md.\n\nSelf-audit\n\nProved: smooth-projective domination, exact tau folding, the complete 336-row setup, and the preferred 464 one-GRS/one-line construction.\nNot proved: the numerical inequalities n(q)≤8 and n(0)≤4, because the 26.37-billion-record census has not been executed.\n\nThis is an official-prize-relevant finite/model certificate and replay design. It is not yet an official two-copy counterpacket, public replay artifact, or full prize theorem.\n\nThe first unproved mathematical line is:\n\nn(q)≤8(q>0),n(0)≤4.\n\nThe first public-replay operational failure could instead be a mismatch between the pinned authoritative model bytes and the audited explicit constants.\n\nq\n0\n\t​\n\n=17\n16\n is used only internally. For this explicit construction,\n\nq\ngen\n\t​\n\n=q\ncode\n\t​\n\n=q\nline\n\t​\n\n=q\nchal\n\t​\n\n=17\n48\n.\n\nThe denominator is q\nline\n\t​\n\n, and the target is exactly\n⌊q\nline\n\t​\n\n/2\n128\n⌋.\n\nSmooth quotienting can only enlarge fibers, so its PASS implication is safe. Tau folding is exact. The first-copy selector removes all twelve duplicate ρ-representatives, same-slope collisions are charged to μ\nproj\n\t​\n\n, universal shortening loses no supports, and transversality excludes contained incidences. Affine reciprocal normalization is bijective and does not reduce the numerator.\n\nThis is not a PLAN. The exact checker converting it to PROOF is\nV-CYCLE87-U-TAU-FOLDED-SMOOTH-MMAX8-CENSUS, followed when necessary by exact saturated-key refinement. Nine verified exact witnesses convert it to COUNTERPACKET against y=U.\n\nDownload the Cycle87 certificate-engineer bundle\n\nbundle SHA-256:\ncb2794edcd2c4add5bd43620fa761b5c2d4b6411c932645e5cbfd2d7bede820a"
+    }
+  ],
+  "users": [
+    {
+      "i": 0,
+      "text": "20260621_cycle87_explicit_separator_context(7).zip\nZip Archive\n# COMMON PROMPT FOR CYCLE 87\n\nTry to fully solve the problem. If you cannot fully solve it, progress it as\nmuch as possible. No Internet. Take all the time to reason you need. Use MAX\nreasoning.\n\nYou are working on the RS-MCA / proximity-prize finite obstruction route. Do\nnot brainstorm from scratch. Read the attached context first, especially:\n\n- CYCLE87_CURRENT_STATE.md\n- m1_cycle86_two_copy_affine_color_returns_audit.md\n- m1_cycle85_role05_transfer_returns_audit.md\n- m1_cycle84_wallbreaker_returns_audit.md\n- the Cycle86 raw returns if you need to inspect a worker's exact claim\n\nThe active target is:\n\n\ntext\nL-CYCLE86-EXPLICIT-TWO-COPY-SEPARATOR-CERTIFICATE\n\n\nProve, with a replayable certificate, that a concrete separator y for the\ntwo-copy construction has projective multiplicity at most 8 and that the\nresulting supports form one transverse affine syndrome line of a single\nofficial-rate GRS code.\n\nEquivalent checker wall:"
+    }
+  ],
+  "fileLinks": [],
+  "fileButtons": [
+    {
+      "i": 31,
+      "text": "",
+      "aria": "Pin RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" aria-label=\"Pin RS-MCA Two-Copy Proof\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#891f0e\" fill=\"currentColor\"></use></svg></div></button>"
+    },
+    {
+      "i": 32,
+      "text": "",
+      "aria": "Open conversation options for RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" data-testid=\"history-item-2-options\" data-conversation-options-trigger=\"6a378ac5-3e1c-83ec-a4a6-74b3f700f186\" aria-label=\"Open conversation options for RS-MCA Two-Copy Proof\" type=\"button\" id=\"radix-_r_jp_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#"
+    },
+    {
+      "i": 37,
+      "text": "",
+      "aria": "Pin Cycle87 Two-Copy Separator",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" aria-label=\"Pin Cycle87 Two-Copy Separator\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#891f0e\" fill=\"currentColor\"></use></svg></div></button>"
+    },
+    {
+      "i": 38,
+      "text": "",
+      "aria": "Open conversation options for Cycle87 Two-Copy Separator",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" data-testid=\"history-item-5-options\" data-conversation-options-trigger=\"6a378c5a-d018-83ec-8d43-de36e61d87c4\" aria-label=\"Open conversation options for Cycle87 Two-Copy Separator\" type=\"button\" id=\"radix-_r_ac_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4"
+    },
+    {
+      "i": 43,
+      "text": "",
+      "aria": "Pin RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" aria-label=\"Pin RS-MCA Two-Copy Proof\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#891f0e\" fill=\"currentColor\"></use></svg></div></button>"
+    },
+    {
+      "i": 44,
+      "text": "",
+      "aria": "Open conversation options for RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" data-testid=\"history-item-8-options\" data-conversation-options-trigger=\"6a3788e9-db70-83ec-bade-c3646a291f07\" aria-label=\"Open conversation options for RS-MCA Two-Copy Proof\" type=\"button\" id=\"radix-_r_ai_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#"
+    },
+    {
+      "i": 83,
+      "text": "",
+      "aria": "Download apps",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn no-draggable hover:*:bg-token-interactive-bg-secondary-hover keyboard-focused:*:bg-token-interactive-bg-secondary-hover touch:h-10! touch:min-h-10! touch:w-10! my-0! ms-0! me-0.5! h-9! min-h-9! w-9! self-center! rounded-lg! p-0! [&amp;&gt;div]:h-full [&amp;&gt;div]:w-full [&amp;&gt;div]:rounded-lg [&amp;&gt;div]:p-0!\" aria-controls=\"_R_19dlalarlac5797l35_\" aria-expanded=\"false\" aria-haspopup=\"menu\" data-state=\"closed\" s"
+    },
+    {
+      "i": 86,
+      "text": "",
+      "aria": "20260621_cycle87_explicit_separator_context(7).zip",
+      "title": "",
+      "html": "<button type=\"button\" class=\"interactive-bg-secondary border-token-interactive-border-secondary-default corner-superellipse/1.1 keyboard-focused:focus-ring grid rounded-xl border\" aria-label=\"20260621_cycle87_explicit_separator_context(7).zip\"></button>"
+    },
+    {
+      "i": 88,
+      "text": "",
+      "aria": "Copy message",
+      "title": "",
+      "html": "<button type=\"button\" class=\"text-token-text-secondary hover:bg-token-surface-hover rounded-lg\" aria-label=\"Copy message\" data-testid=\"copy-turn-action-button\" data-state=\"closed\"><span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></span></button>"
+    },
+    {
+      "i": 92,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 93,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 94,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 95,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 96,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 97,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 98,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 99,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 100,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 101,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 102,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 103,
+      "text": "Download the Cycle87 certificate-engineer bundle",
+      "aria": "",
+      "title": "",
+      "html": "<button class=\"behavior-btn hover:entity-accent focus-visible:focus-ring entity-underline inline cursor-pointer appearance-none border-0 bg-transparent p-0 text-start align-baseline text-inherit\" type=\"button\">Download the Cycle87 certificate-engineer bundle</button>"
+    },
+    {
+      "i": 104,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 105,
+      "text": "",
+      "aria": "Copy response",
+      "title": "",
+      "html": "<button type=\"button\" class=\"text-token-text-secondary hover:bg-token-surface-hover rounded-lg\" aria-label=\"Copy response\" data-testid=\"copy-turn-action-button\" data-state=\"closed\"><span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></span></button>"
+    },
+    {
+      "i": 114,
+      "text": "",
+      "aria": "Add files and more",
+      "title": "",
+      "html": "<button type=\"button\" class=\"composer-btn\" data-testid=\"composer-plus-btn\" aria-label=\"Add files and more\" id=\"composer-plus-btn\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#decc1a\" fill=\"currentColor\"></use></svg></button>"
+    }
+  ],
+  "bodyTail": "TIC_RESULT_ENVELOPE_PASS\nBUNDLE_SELFTEST_PASS\n\nThe full theorem replay then fetches and hash-checks the pinned Cycle84 artifacts, runs all folded shards, merges them, performs exact refinement when necessary, and independently regenerates all shards in Rust. Exact commands are in SPEC.md.\n\nSelf-audit\n\nProved: smooth-projective domination, exact tau folding, the complete 336-row setup, and the preferred 464 one-GRS/one-line construction.\nNot proved: the numerical inequalities n(q)≤8 and n(0)≤4, because the 26.37-billion-record census has not been executed.\n\nThis is an official-prize-relevant finite/model certificate and replay design. It is not yet an official two-copy counterpacket, public replay artifact, or full prize theorem.\n\nThe first unproved mathematical line is:\n\nn(q)≤8(q>0),n(0)≤4.\n\nThe first public-replay operational failure could instead be a mismatch between the pinned authoritative model bytes and the audited explicit constants.\n\nq\n0\n\t​\n\n=17\n16\n is used only internally. For this explicit construction,\n\nq\ngen\n\t​\n\n=q\ncode\n\t​\n\n=q\nline\n\t​\n\n=q\nchal\n\t​\n\n=17\n48\n.\n\nThe denominator is q\nline\n\t​\n\n, and the target is exactly\n⌊q\nline\n\t​\n\n/2\n128\n⌋.\n\nSmooth quotienting can only enlarge fibers, so its PASS implication is safe. Tau folding is exact. The first-copy selector removes all twelve duplicate ρ-representatives, same-slope collisions are charged to μ\nproj\n\t​\n\n, universal shortening loses no supports, and transversality excludes contained incidences. Affine reciprocal normalization is bijective and does not reduce the numerator.\n\nThis is not a PLAN. The exact checker converting it to PROOF is\nV-CYCLE87-U-TAU-FOLDED-SMOOTH-MMAX8-CENSUS, followed when necessary by exact saturated-key refinement. Nine verified exact witnesses convert it to COUNTERPACKET against y=U.\n\nDownload the Cycle87 certificate-engineer bundle\n\nbundle SHA-256:\ncb2794edcd2c4add5bd43620fa761b5c2d4b6411c932645e5cbfd2d7bede820a\nSources\n\nPro Extended\nChatGPT can make mistakes. Check important info."
+}

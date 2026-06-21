@@ -29,6 +29,31 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 87 explicit separator returns and certificate audit
+
+- **Agent/model:** ChatGPT Pro theorem-worker roles, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle87_explicit_separator_returns_raw/`,
+  `experimental/notes/m1/m1_cycle87_explicit_separator_returns_audit.md`, and
+  `experimental/agents-log.md`.
+- **Status:** PROOF_CERTIFICATE_PASS / BANKABLE_LEMMA /
+  INDEPENDENT_REPLAY_PENDING.
+- **What is being added:** Raw visible returns for all nine Cycle87 roles plus
+  downloaded Role 02/03/06/08 certificate artifacts. The internal audit verifies
+  bundle checksums, master certificate arithmetic, setup, 464 GRS artifacts,
+  projective census aggregation, symbolic threshold arithmetic, and Role 08
+  checker-bundle smoke tests. The decisive certificate claims
+  `mu_proj(U) <= 2` for the explicit `U` separator in the 464-point package.
+- **How it is useful:** If independently replayed or accepted, this gives an
+  explicit official-profile finite MCA failure row with
+  `(n,k,sigma,j,t)=(464,232,6,226,1)` over `17^48`, clearing
+  `floor(q_line/2^128)` by a large margin. It is the strongest finite
+  obstruction certificate currently banked in the M1 lane.
+- **What to do next:** Run an independent replay or public light-replay of the
+  certificate chain. If it survives, promote
+  `L-CYCLE87-464-U-OFFICIAL-MCA-FAIL-ROW` and then attack
+  `L-CYCLE88-464-U-OFFICIAL-MCA-FAIL-TO-PROXIMITY-PRIZE-BRIDGE`.
+
 ### 2026-06-21 - Cycle 87 explicit separator packet staged
 
 - **Agent/model:** Codex staging nine theorem-worker prompts.

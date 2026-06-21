@@ -1,0 +1,125 @@
+{
+  "url": "https://chatgpt.com/c/6a378c19-ae18-83ec-8dca-2542cbe462ef",
+  "title": "RS-MCA Cycle 87 Proof",
+  "complete": true,
+  "hasStop": false,
+  "hasGotIt": false,
+  "assistantCount": 5,
+  "userCount": 1,
+  "assistants": [
+    {
+      "i": 0,
+      "text": "I’ll reconstruct the Cycle 84–87 reduction chain from the supplied context, then stress-test the 464 fusion, affine normalization, multiplicity certificate, and field-size target at their first fragile implications."
+    },
+    {
+      "i": 1,
+      "text": "The leading concern is whether the two witnesses truly share one global six-jet syndrome, rather than consuming separate reserves; the 560 fallback looks algebraically coherent but still needs quotient/color-count auditing."
+    },
+    {
+      "i": 2,
+      "text": "The 464 fusion now survives direct one-code/one-line reconstruction via a 232-row GRS parity check, so the remaining attack is hidden projective multiplicity: quotient symmetries or two-slot relations causing a ninefold collision."
+    },
+    {
+      "i": 3,
+      "text": "The shortening issue has narrowed to terminology: the repaired parity-check restriction preserves dimension and transversality. I’m now seeking a smaller projected census that would imply the full multiplicity bound."
+    },
+    {
+      "i": 4,
+      "text": "BANKABLE_LEMMA\n\nVerdict — confidence high. No fatal flaw appears in the 464-point construction. Assuming a concrete y∈F\n17\n48\n\t​\n\n∖F\n0\n\t​\n\n satisfies μ\nproj\n\t​\n\n(y)≤8, the construction is one [464,232] GRS code, one transverse affine syndrome line, and it clears the official finite target.\n\nThe missing result is still the explicit separator census. In particular, the present material does not prove μ\nproj\n\t​\n\n(U)≤8.\n\nBankable conditional theorem\n\nLet\n\nF\n0\n\t​\n\n=F\n17\n\t​\n\n[X]/(X\n16\n+X\n8\n+3),D=⟨η⟩=μ\n256\n\t​\n\n,β=X+2.\n\nLet P\n0\n\t​\n\n be the banked packet, with\n\nP=∣P\n0\n\t​\n\n∣=52747567104,N=\n\t​\n\n{P\nT\n\t​\n\n(β):T∈P\n0\n\t​\n\n}\n\t​\n\n=52747567092.\n\nEvery T∈P\n0\n\t​\n\n avoids μ\n32\n\t​\n\n∖{1}. Set\n\nZ\n0\n\t​\n\n={η\n8b\n:1≤b≤24},D\n−\n=D∖Z\n0\n\t​\n\n,\n\nso ∣D\n−\n∣=232 and every packet support remains contained in D\n−\n.\n\nTake E=F\n17\n48\n\t​\n\n, choose y∈E∖F\n0\n\t​\n\n, and set c=β−y. Define\n\nD\ny\n\t​\n\n=D\n−\n⊔(c+D\n−\n),∣D\ny\n\t​\n\n∣=464,\n\nand\n\nS(T\n1\n\t​\n\n,T\n2\n\t​\n\n)=T\n1\n\t​\n\n⊔(c+T\n2\n\t​\n\n),∣S(T\n1\n\t​\n\n,T\n2\n\t​\n\n)∣=226.\n\nThen there is a single [464,232] GRS code C\ny\n\t​\n\n and a single affine syndrome line such that every S(T\n1\n\t​\n\n,T\n2\n\t​\n\n) is a full-coordinate transverse incidence, with line parameter\n\nz\nT\n1\n\t​\n\n,T\n2\n\t​\n\n\t​\n\n=\nP\nT\n1\n\t​\n\n\t​\n\n(β)P\nT\n2\n\t​\n\n\t​\n\n(y)\n1\n\t​\n\n\nup to one common affine bijection.\n\nIf\n\nμ\nproj\n\t​\n\n(y)=\nκ∈E\n×\n/F\n0\n×\n\t​\n\nmax\n\t​\n\n#{T∈P\n0\n\t​\n\n:[P\nT\n\t​\n\n(y)]=κ}≤8,\n\nthen\n\nM\nC\ny\n\t​\n\n\t​\n\n(6)≥\n8\nNP\n\t​\n\n=347788229344751517696>338617018271848945628=⌊\n2\n128\n17\n48\n\t​\n\n⌋.\nProof of the 464 construction\nOne GRS code\n\nFor x∈D\ny\n\t​\n\n, use the parity-check column\n\nh\nx\n\t​\n\n=\n\t​\n\n1\nx\n⋮\nx\n230\n(β−x)\n−1\n\t​\n\n\t​\n\n∈E\n232\n.\n\nHere β∈\n/\nD\ny\n\t​\n\n: it is not in D, and β=c+d would imply y=d∈F\n0\n\t​\n\n.\n\nMultiply column h\nx\n\t​\n\n by the nonzero scalar β−x. The resulting rows are evaluations of\n\n1,β−Y,Y(β−Y),…,Y\n230\n(β−Y).\n\nThese form a basis of E[Y]\n≤231\n\t​\n\n, since every polynomial f of degree at most 231 has the unique decomposition\n\nf(Y)=f(β)+(β−Y)Q(Y),degQ≤230.\n\nThus the 232×464 matrix is row- and nonzero-column-equivalent to a Vandermonde parity-check matrix. Its kernel is one [464,232] GRS code.\n\nThe word “shortening” must not be interpreted as ordinary puncturing while preserving an old dimension. That assertion would be false. The valid statement is that the deleted coordinates are unused by all witnesses and the displayed matrix independently defines a new [464,232] GRS code.\n\nOne affine syndrome line\n\nFor a packet support T, write\n\nJ\nT\n\t​\n\n(t)=\nx∈T\n∏\n\t​\n\n(1−xt).\n\nThe banked common-jet identity is\n\nJ\nT\n\t​\n\n(t)≡1−t(modt\n6\n).\n\nTranslation gives\n\nJ\nc+T\n\t​\n\n(t)=(1−ct)\n113\nJ\nT\n\t​\n\n(\n1−ct\nt\n\t​\n\n)≡(1−ct)\n112\n(1−(c+1)t)(modt\n6\n).\n\nHence every combined support S=T\n1\n\t​\n\n⊔(c+T\n2\n\t​\n\n) has the same six-jet\n\nJ\nS\n\t​\n\n(t)≡(1−t)(1−ct)\n112\n(1−(c+1)t)(modt\n6\n).\n\nWrite\n\nJ\nS\n\t​\n\n(t)\n−1\n≡h\n0\n\t​\n\n+h\n1\n\t​\n\nt+⋯+h\n5\n\t​\n\nt\n5\n(modt\n6\n);\n\nthe h\ni\n\t​\n\n are independent of T\n1\n\t​\n\n,T\n2\n\t​\n\n.\n\nLet P\nS\n\t​\n\n(Y)=∏\nx∈S\n\t​\n\n(Y−x) and a\nx\n\t​\n\n=P\nS\n′\n\t​\n\n(x)\n−1\n. Partial fractions give\n\nP\nS\n\t​\n\n(Y)\n1\n\t​\n\n=\nx∈S\n∑\n\t​\n\nY−x\na\nx\n\t​\n\n\t​\n\n.\n\nComparison at infinity yields\n\nx∈S\n∑\n\t​\n\na\nx\n\t​\n\nx\nr\n={\n0,\nh\nr−225\n\t​\n\n,\n\t​\n\n0≤r≤224,\n225≤r≤230.\n\t​\n\n\nEvaluation at Y=β gives\n\nx∈S\n∑\n\t​\n\nβ−x\na\nx\n\t​\n\n\t​\n\n=\nP\nS\n\t​\n\n(β)\n1\n\t​\n\n.\n\nConsequently all supports hit the one affine line\n\nℓ(z)=(\n225\n0,…,0\n\t​\n\n\t​\n\n,h\n0\n\t​\n\n,…,h\n5\n\t​\n\n,z)⊂E\n232\n\nat\n\nz=P\nS\n\t​\n\n(β)\n−1\n.\n\nMoreover,\n\nP\nS\n\t​\n\n(β)=P\nT\n1\n\t​\n\n\t​\n\n(β)P\nc+T\n2\n\t​\n\n\t​\n\n(β)=P\nT\n1\n\t​\n\n\t​\n\n(β)P\nT\n2\n\t​\n\n\t​\n\n(y).\n\nThis is the reciprocal-product composition. There are not two independent syndrome coordinates.\n\nTransversality and full coordinates\n\nEvery a\nx\n\t​\n\n=P\nS\n′\n\t​\n\n(x)\n−1\n is nonzero because S is squarefree.\n\nThe direction of the line is e\n232\n\t​\n\n. If e\n232\n\t​\n\n lay in the span of the columns indexed by S, projection onto the first 231 coordinates would give a linear dependence among the 226 distinct columns\n\n(1,x,…,x\n230\n)\nT\n,x∈S.\n\nThe 231×226 Vandermonde matrix has full column rank. Hence the incidence is transverse and no support span contains the line.\n\nExact collision charge\n\nChoose a subset R⊂P\n0\n\t​\n\n containing one support for each distinct value\n\nρ(T)=P\nT\n\t​\n\n(β).\n\nThen ∣R∣=N, and ρ is injective on R.\n\nConsider\n\nF:R×P\n0\n\t​\n\n⟶E\n×\n,F(T\n1\n\t​\n\n,T\n2\n\t​\n\n)=ρ(T\n1\n\t​\n\n)P\nT\n2\n\t​\n\n\t​\n\n(y).\n\nIf two pairs have the same image, then\n\nP\nT\n2\n′\n\t​\n\n\t​\n\n(y)\nP\nT\n2\n\t​\n\n\t​\n\n(y)\n\t​\n\n=\nρ(T\n1\n\t​\n\n)\nρ(T\n1\n′\n\t​\n\n)\n\t​\n\n∈F\n0\n×\n\t​\n\n.\n\nThus T\n2\n\t​\n\n,T\n2\n′\n\t​\n\n lie in one projective class. For a fixed T\n2\n\t​\n\n and a fixed product value, ρ(T\n1\n\t​\n\n) is uniquely determined, and hence so is T\n1\n\t​\n\n. Therefore every product fiber has size at most μ\nproj\n\t​\n\n(y).\n\nReciprocal inversion and any common affine reparametrization are bijections, so they cause no further loss.\n\nThe bound 8 is genuinely the required threshold for this coarse argument:\n\n⌊\n9\nNP\n\t​\n\n⌋=309145092750890237952<T\nline\n\t​\n\n.\n\nThus μ≤9 alone would not suffice, although the exact slope occupancy could still clear the target.\n\nGeneric existence survives\n\nThe canonical candidate U is unproved, but the separator route itself cannot be killed by a failure at U.\n\nLet q\n0\n\t​\n\n=17\n16\n and fix any cubic extension E/F\n0\n\t​\n\n. For distinct supports T,T\n′\n and λ∈F\n0\n×\n\t​\n\n,\n\nP\nT\n\t​\n\n(Y)−λP\nT\n′\n\t​\n\n(Y)\n\nis a nonzero polynomial of degree at most 113. For λ\n\n=1, its leading coefficient is 1−λ; for λ=1, distinct monic locators cannot be equal.\n\nHence the total number of extension elements causing any projective collision is at most\n\n113(q\n0\n\t​\n\n−1)(\n2\nP\n\t​\n\n)=7649552973225252456065323325775618181693440.\n\nBut\n\n∣E∖F\n0\n\t​\n\n∣=q\n0\n3\n\t​\n\n−q\n0\n\t​\n\n=115225400457255426923013053222916919834602504327802018460160.\n\nTherefore some y∈E∖F\n0\n\t​\n\n has\n\nμ\nproj\n\t​\n\n(y)=1.\n\nThis proves mathematical existence inside a cubic extension. It does not identify a replayable coefficient tuple.\n\nExact correction to the current wall\n\nThe statement that\n\nV-CYCLE86-U-PROJECTIVE-MMAX8-CENSUS\n\nis “equivalent” to the explicit-separator theorem is false.\n\nThe valid implications are\n\nμ\nproj\n\t​\n\n(U)≤8⟹explicit 464 counterpacket,\n\nbut neither\n\nsome good y⟹μ\nproj\n\t​\n\n(U)≤8\n\nnor\n\nμ\nproj\n\t​\n\n(U)>8⟹two-copy route fails\n\nis valid. U is only the canonical first candidate.\n\nNarrower replay checker materialized\n\nFor E=F\n0\n\t​\n\n[U]/(U\n3\n−β), the projective group has order\n\nQ=∣E\n×\n/F\n0\n×\n\t​\n\n∣=q\n0\n2\n\t​\n\n+q\n0\n\t​\n\n+1.\n\nIt has the smooth 66-bit divisor\n\nA\n\t​\n\n=3⋅7⋅13⋅73⋅307⋅1321⋅72337⋅83233\n=48661191882642625923.\n\t​\n\n\nProjection from the full projective group to its cyclic A-component only merges classes. Therefore\n\nμ\nA\n\t​\n\n(U)≤8⟹μ\nproj\n\t​\n\n(U)≤8.\n\nAll prime factors of A are at most 83233, so the 336 slot factors admit exact Pohlig–Hellman logarithms. Also,\n\nA<3⋅2\n64\n,\n\nallowing the same low-64-bit plus kernel-three exact replay architecture used in Cycle84.\n\nI materialized a deterministic front end which:\n\nverifies 1+7U\n2\n as a primitive element;\n\nreproduces the canonical 336 raw slot-factor hash;\n\nemits exact projected slot logs modulo A;\n\nemits the ordered 464-point domain;\n\nverifies injectivity of the 110592-record three-slot table and the 5308416-record four-slot table.\n\nIt does not execute the full 52747567104-record census.\n\nReplay front end and emitted artifacts\n\nThe exact next checker should be\n\nV-CYCLE87-U-A-PREFILTER-FULL-REPLAY-MMAX8-CENSUS-464\n\nwith three stages:\n\nEnumerate all admissible tuples using the exact A-component logs and retain low-64 runs of size at least 9.\n\nLift those runs to exact residues modulo A.\n\nOnly for exact A-runs of size at least 9, replay the full normalized projective keys in E\n×\n/F\n0\n×\n\t​\n\n.\n\nThis has no false negatives: every full projective fiber of size at least 9 survives all three filters. A PASS proves the active target; a FAIL must emit nine supports with the same full projective key.\n\nSelf-audit\n\nProved:\n\nμ\nproj\n\t​\n\n(y)≤8⟹one transverse [464,232] GRS line with M\nC\n\t​\n\n(6)>T\nline\n\t​\n\n.\n\nI also proved that some cubic-extension y has μ\nproj\n\t​\n\n(y)=1.\nNot proved: μ\nproj\n\t​\n\n(U)≤8, nor any concrete separator census.\n\nThe implication is official-profile and prize-relevant: a concrete PASS adds an official finite MCA fail row. The current result and front end remain a research/certification component, not that row and not the full prize theorem.\n\nGiven the banked packet and common six-jet, the first unproved line is exactly\n\nμ\nproj\n\t​\n\n(y)≤8\n\nfor a concretely emitted y. For the canonical route it is μ\nproj\n\t​\n\n(U)≤8.\n\nThe construction uses\n\nq\ngen\n\t​\n\n=q\ncode\n\t​\n\n=q\nline\n\t​\n\n=q\nchal\n\t​\n\n=17\n48\n.\n\nThe target is computed only from q\nline\n\t​\n\n:\n\nT\nline\n\t​\n\n=⌊17\n48\n/2\n128\n⌋.\n\nF\n0\n\t​\n\n=F\n17\n16\n\t​\n\n is a coefficient subfield, not the target denominator field.\n\nThe first-copy double fibers are removed by selecting N representatives. Quotient and periodic structure are charged exactly by μ\nproj\n\t​\n\n. Same-slope collisions are bounded by the projective fiber argument. Contained incidences are excluded by Vandermonde transversality. Common affine normalization and inversion are bijective and cause no numerator loss.\n\nThis is not a PLAN. The exact conversion object is the checker\nV-CYCLE87-U-A-PREFILTER-FULL-REPLAY-MMAX8-CENSUS-464, or an equivalent explicit-y full projective census.\n\nA route to the active full solve exists: execute that exact checker for U; if its full replay finds a ninefold projective class, move to the lexicographically first separator guaranteed by the cubic root-count theorem."
+    }
+  ],
+  "users": [
+    {
+      "i": 0,
+      "text": "20260621_cycle87_explicit_separator_context(4).zip\nZip Archive\n# COMMON PROMPT FOR CYCLE 87\n\nTry to fully solve the problem. If you cannot fully solve it, progress it as\nmuch as possible. No Internet. Take all the time to reason you need. Use MAX\nreasoning.\n\nYou are working on the RS-MCA / proximity-prize finite obstruction route. Do\nnot brainstorm from scratch. Read the attached context first, especially:\n\n- CYCLE87_CURRENT_STATE.md\n- m1_cycle86_two_copy_affine_color_returns_audit.md\n- m1_cycle85_role05_transfer_returns_audit.md\n- m1_cycle84_wallbreaker_returns_audit.md\n- the Cycle86 raw returns if you need to inspect a worker's exact claim\n\nThe active target is:\n\n\ntext\nL-CYCLE86-EXPLICIT-TWO-COPY-SEPARATOR-CERTIFICATE\n\n\nProve, with a replayable certificate, that a concrete separator y for the\ntwo-copy construction has projective multiplicity at most 8 and that the\nresulting supports form one transverse affine syndrome line of a single\nofficial-rate GRS code.\n\nEquivalent checker wall:"
+    }
+  ],
+  "fileLinks": [],
+  "fileButtons": [
+    {
+      "i": 27,
+      "text": "",
+      "aria": "Pin RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" aria-label=\"Pin RS-MCA Two-Copy Proof\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#891f0e\" fill=\"currentColor\"></use></svg></div></button>"
+    },
+    {
+      "i": 28,
+      "text": "",
+      "aria": "Open conversation options for RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" data-testid=\"history-item-0-options\" data-conversation-options-trigger=\"6a378ac5-3e1c-83ec-a4a6-74b3f700f186\" aria-label=\"Open conversation options for RS-MCA Two-Copy Proof\" type=\"button\" id=\"radix-_r_bg_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#"
+    },
+    {
+      "i": 37,
+      "text": "",
+      "aria": "Pin Cycle87 Two-Copy Separator",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" aria-label=\"Pin Cycle87 Two-Copy Separator\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#891f0e\" fill=\"currentColor\"></use></svg></div></button>"
+    },
+    {
+      "i": 38,
+      "text": "",
+      "aria": "Open conversation options for Cycle87 Two-Copy Separator",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" data-testid=\"history-item-5-options\" data-conversation-options-trigger=\"6a378c5a-d018-83ec-8d43-de36e61d87c4\" aria-label=\"Open conversation options for Cycle87 Two-Copy Separator\" type=\"button\" id=\"radix-_r_bq_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4"
+    },
+    {
+      "i": 43,
+      "text": "",
+      "aria": "Pin RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" aria-label=\"Pin RS-MCA Two-Copy Proof\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#891f0e\" fill=\"currentColor\"></use></svg></div></button>"
+    },
+    {
+      "i": 44,
+      "text": "",
+      "aria": "Open conversation options for RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" data-testid=\"history-item-8-options\" data-conversation-options-trigger=\"6a3788e9-db70-83ec-bade-c3646a291f07\" aria-label=\"Open conversation options for RS-MCA Two-Copy Proof\" type=\"button\" id=\"radix-_r_c0_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#"
+    },
+    {
+      "i": 83,
+      "text": "",
+      "aria": "Download apps",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn no-draggable hover:*:bg-token-interactive-bg-secondary-hover keyboard-focused:*:bg-token-interactive-bg-secondary-hover touch:h-10! touch:min-h-10! touch:w-10! my-0! ms-0! me-0.5! h-9! min-h-9! w-9! self-center! rounded-lg! p-0! [&amp;&gt;div]:h-full [&amp;&gt;div]:w-full [&amp;&gt;div]:rounded-lg [&amp;&gt;div]:p-0!\" aria-controls=\"_R_19dlalarlac5797l35_\" aria-expanded=\"false\" aria-haspopup=\"menu\" data-state=\"closed\" s"
+    },
+    {
+      "i": 86,
+      "text": "",
+      "aria": "20260621_cycle87_explicit_separator_context(4).zip",
+      "title": "",
+      "html": "<button type=\"button\" class=\"interactive-bg-secondary border-token-interactive-border-secondary-default corner-superellipse/1.1 keyboard-focused:focus-ring grid rounded-xl border\" aria-label=\"20260621_cycle87_explicit_separator_context(4).zip\"></button>"
+    },
+    {
+      "i": 88,
+      "text": "",
+      "aria": "Copy message",
+      "title": "",
+      "html": "<button type=\"button\" class=\"text-token-text-secondary hover:bg-token-surface-hover rounded-lg\" aria-label=\"Copy message\" data-testid=\"copy-turn-action-button\" data-state=\"closed\"><span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></span></button>"
+    },
+    {
+      "i": 92,
+      "text": "",
+      "aria": "Copy",
+      "title": "",
+      "html": "<button type=\"button\" class=\"flex gap-1 items-center select-none pointer-events-auto py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10 size-9 rounded-full px-2\" aria-label=\"Copy\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-md\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></button>"
+    },
+    {
+      "i": 93,
+      "text": "",
+      "aria": "Copy response",
+      "title": "",
+      "html": "<button type=\"button\" class=\"text-token-text-secondary hover:bg-token-surface-hover rounded-lg\" aria-label=\"Copy response\" data-testid=\"copy-turn-action-button\" data-state=\"closed\"><span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></span></button>"
+    },
+    {
+      "i": 101,
+      "text": "",
+      "aria": "Add files and more",
+      "title": "",
+      "html": "<button type=\"button\" class=\"composer-btn\" data-testid=\"composer-plus-btn\" aria-label=\"Add files and more\" id=\"composer-plus-btn\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#decc1a\" fill=\"currentColor\"></use></svg></button>"
+    }
+  ],
+  "bodyTail": "nly for exact A-runs of size at least 9, replay the full normalized projective keys in E\n×\n/F\n0\n×\n\t​\n\n.\n\nThis has no false negatives: every full projective fiber of size at least 9 survives all three filters. A PASS proves the active target; a FAIL must emit nine supports with the same full projective key.\n\nSelf-audit\n\nProved:\n\nμ\nproj\n\t​\n\n(y)≤8⟹one transverse [464,232] GRS line with M\nC\n\t​\n\n(6)>T\nline\n\t​\n\n.\n\nI also proved that some cubic-extension y has μ\nproj\n\t​\n\n(y)=1.\nNot proved: μ\nproj\n\t​\n\n(U)≤8, nor any concrete separator census.\n\nThe implication is official-profile and prize-relevant: a concrete PASS adds an official finite MCA fail row. The current result and front end remain a research/certification component, not that row and not the full prize theorem.\n\nGiven the banked packet and common six-jet, the first unproved line is exactly\n\nμ\nproj\n\t​\n\n(y)≤8\n\nfor a concretely emitted y. For the canonical route it is μ\nproj\n\t​\n\n(U)≤8.\n\nThe construction uses\n\nq\ngen\n\t​\n\n=q\ncode\n\t​\n\n=q\nline\n\t​\n\n=q\nchal\n\t​\n\n=17\n48\n.\n\nThe target is computed only from q\nline\n\t​\n\n:\n\nT\nline\n\t​\n\n=⌊17\n48\n/2\n128\n⌋.\n\nF\n0\n\t​\n\n=F\n17\n16\n\t​\n\n is a coefficient subfield, not the target denominator field.\n\nThe first-copy double fibers are removed by selecting N representatives. Quotient and periodic structure are charged exactly by μ\nproj\n\t​\n\n. Same-slope collisions are bounded by the projective fiber argument. Contained incidences are excluded by Vandermonde transversality. Common affine normalization and inversion are bijective and cause no numerator loss.\n\nThis is not a PLAN. The exact conversion object is the checker\nV-CYCLE87-U-A-PREFILTER-FULL-REPLAY-MMAX8-CENSUS-464, or an equivalent explicit-y full projective census.\n\nA route to the active full solve exists: execute that exact checker for U; if its full replay finds a ninefold projective class, move to the lexicographically first separator guaranteed by the cubic root-count theorem.\n\nPro Extended\nChatGPT can make mistakes. Check important info."
+}

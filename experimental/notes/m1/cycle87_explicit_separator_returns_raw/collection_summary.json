@@ -1,0 +1,110 @@
+[
+  {
+    "role": "01",
+    "name": "ROLE_01_SHORTENED_464_THEOREM",
+    "complete": true,
+    "hasStop": false,
+    "hasGotIt": false,
+    "assistantCount": 3,
+    "lastLen": 9861,
+    "fileLinks": 0,
+    "fileButtons": 11,
+    "head": "BANKABLE_LEMMA  Confidence: high. The 464 package is algebraically valid, provid"
+  },
+  {
+    "role": "02",
+    "name": "ROLE_02_PROJECTIVE_SEPARATOR_CENSUS",
+    "complete": true,
+    "hasStop": false,
+    "hasGotIt": false,
+    "assistantCount": 5,
+    "lastLen": 4885,
+    "fileLinks": 0,
+    "fileButtons": 18,
+    "head": "PROOF  Confidence: high, conditional on the banked Cycle84/Cycle85 packet and fi"
+  },
+  {
+    "role": "03",
+    "name": "ROLE_03_SEPARATOR_EXISTENCE_ROOT_COUNT",
+    "complete": true,
+    "hasStop": false,
+    "hasGotIt": false,
+    "assistantCount": 4,
+    "lastLen": 8336,
+    "fileLinks": 0,
+    "fileButtons": 12,
+    "head": "BANKABLE_LEMMA  Confidence: high. The generic separator theorem is true, and the"
+  },
+  {
+    "role": "04",
+    "name": "ROLE_04_EXPLICIT_MATERIALIZER",
+    "complete": true,
+    "hasStop": false,
+    "hasGotIt": false,
+    "assistantCount": 5,
+    "lastLen": 161,
+    "fileLinks": 0,
+    "fileButtons": 11,
+    "head": "A network error occurred. Please check your connection and try again. If this is"
+  },
+  {
+    "role": "05",
+    "name": "ROLE_05_COUNTERPACKET_HUNTER",
+    "complete": true,
+    "hasStop": false,
+    "hasGotIt": false,
+    "assistantCount": 5,
+    "lastLen": 9292,
+    "fileLinks": 0,
+    "fileButtons": 12,
+    "head": "BANKABLE_LEMMA  Verdict — confidence high. No fatal flaw appears in the 464-poin"
+  },
+  {
+    "role": "06",
+    "name": "ROLE_06_ONE_LINE_SYNDROME_BUILDER",
+    "complete": true,
+    "hasStop": false,
+    "hasGotIt": false,
+    "assistantCount": 5,
+    "lastLen": 4243,
+    "fileLinks": 0,
+    "fileButtons": 14,
+    "head": "PROOF  The active wall is solved with the concrete separator  y=U∈L=F 0 \t​  [U]/"
+  },
+  {
+    "role": "07",
+    "name": "ROLE_07_FRONTIER_LEDGER_AUDITOR",
+    "complete": true,
+    "hasStop": false,
+    "hasGotIt": false,
+    "assistantCount": 3,
+    "lastLen": 9871,
+    "fileLinks": 0,
+    "fileButtons": 16,
+    "head": "AUDIT  Confidence: high on the conditional ledger implication; moderate on the u"
+  },
+  {
+    "role": "08",
+    "name": "ROLE_08_CERTIFICATE_ENGINEER",
+    "complete": true,
+    "hasStop": false,
+    "hasGotIt": false,
+    "assistantCount": 5,
+    "lastLen": 10472,
+    "fileLinks": 0,
+    "fileButtons": 24,
+    "head": "BANKABLE_LEMMA  Verdict  The full multiplicity census is still unrun, so this is"
+  },
+  {
+    "role": "09",
+    "name": "ROLE_09_REFEREE_PROOF_COMPILER",
+    "complete": true,
+    "hasStop": false,
+    "hasGotIt": false,
+    "assistantCount": 4,
+    "lastLen": 16990,
+    "fileLinks": 0,
+    "fileButtons": 15,
+    "head": "BANKABLE_LEMMA  1. Executive decision  Primary route: the 464 package, construct"
+  }
+]

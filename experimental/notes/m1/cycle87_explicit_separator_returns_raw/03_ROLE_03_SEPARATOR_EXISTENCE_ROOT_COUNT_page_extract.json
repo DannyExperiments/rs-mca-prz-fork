@@ -1,0 +1,121 @@
+{
+  "url": "https://chatgpt.com/c/6a378946-aae8-83ec-a541-bfdf036af5b5",
+  "title": "Cycle 87 Problem Solving",
+  "complete": true,
+  "hasStop": false,
+  "hasGotIt": false,
+  "assistantCount": 4,
+  "userCount": 1,
+  "assistants": [
+    {
+      "i": 0,
+      "text": "I’ll reconstruct the separator setup from the Cycle84–87 materials, formalize the projective collision locus, and test whether root-counting proves μ\nproj\n\t​\n\n≤8 or exposes a concrete obstruction."
+    },
+    {
+      "i": 1,
+      "text": "I’ve separated ordinary scalar collisions from projective collisions, and I’m now testing whether the cubic candidate y=U can be certified or only reduced to a finite exclusion check."
+    },
+    {
+      "i": 2,
+      "text": "The root-count route now gives an existential result stronger than needed: inside the fixed cubic field, all but a 6.64×10\n−17\n fraction of nonbase elements have μ\nproj\n\t​\n\n=1."
+    },
+    {
+      "i": 3,
+      "text": "BANKABLE_LEMMA\n\nConfidence: high. The generic separator theorem is true, and the cubic extension already suffices:\n\n∃y∈L∖F\n0\n\t​\n\nμ\nproj\n\t​\n\n(y)=1.\n\nThis proves an existential official-rate 464-point two-copy counterpacket from the banked Cycle84/85 facts. It does not identify a concrete coefficient vector y, and therefore does not close the explicit replay wall or certify the proposed fixed candidate y=U.\n\nGeneric projective-separator theorem\n\nLet\n\nq\n0\n\t​\n\n=17\n16\n=48661191875666868481,F\n0\n\t​\n\n=F\nq\n0\n\t​\n\n\t​\n\n,\n\nand let P\n0\n\t​\n\n be the banked set of\n\nP=52747567104\n\ndistinct 113-element supports T⊂F\n0\n\t​\n\n. Define the monic locator\n\nP\nT\n\t​\n\n(Y)=\nx∈T\n∏\n\t​\n\n(Y−x)∈F\n0\n\t​\n\n[Y].\n\nLet L/F\n0\n\t​\n\n be any cubic extension. For y∈L∖F\n0\n\t​\n\n, all P\nT\n\t​\n\n(y) are nonzero, because every root of every P\nT\n\t​\n\n lies in F\n0\n\t​\n\n.\n\nFor distinct T,T\n′\n, a projective collision is exactly\n\n[P\nT\n\t​\n\n(y)]=[P\nT\n′\n\t​\n\n(y)]⟺P\nT\n\t​\n\n(y)=λP\nT\n′\n\t​\n\n(y)\n\nfor a unique λ∈F\n0\n×\n\t​\n\n.\n\nFor each triple (T,T\n′\n,λ), put\n\nR\nT,T\n′\n,λ\n\t​\n\n(Y)=P\nT\n\t​\n\n(Y)−λP\nT\n′\n\t​\n\n(Y).\n\nThis polynomial is nonzero:\n\nif λ\n\n=1, its leading coefficient is 1−λ\n\n=0, so its degree is 113;\n\nif λ=1, distinct supports give distinct monic locators, so P\nT\n\t​\n\n−P\nT\n′\n\t​\n\n\n=0, with degree at most 112.\n\nConsequently,\n\n#{y∈L:R\nT,T\n′\n,λ\n\t​\n\n(y)=0}≤{\n113,\n112,\n\t​\n\nλ\n\n=1,\nλ=1.\n\t​\n\n\nTaking the union over unordered pairs gives\n\n#B\nproj\n\t​\n\n≤(112+113(q\n0\n\t​\n\n−2))(\n2\nP\n\t​\n\n)=(113q\n0\n\t​\n\n−114)(\n2\nP\n\t​\n\n).\n\nIn particular, the slightly looser convenient bound is\n\n#B\nproj\n\t​\n\n≤113(q\n0\n\t​\n\n−1)(\n2\nP\n\t​\n\n)=7649552973225252456065323325775618181693440.\n\nOn the other hand,\n\n∣L∖F\n0\n\t​\n\n∣=q\n0\n3\n\t​\n\n−q\n0\n\t​\n\n=115225400457255426923013053222916919834602504327802018460160.\n\nThus\n\n113(q\n0\n\t​\n\n−1)(\n2\nP\n\t​\n\n)<q\n0\n3\n\t​\n\n−q\n0\n\t​\n\n.\n\nTherefore some y∈L∖F\n0\n\t​\n\n avoids every projective collision, and hence\n\nμ\nproj\n\t​\n\n(y)=1.\n\t​\n\n\nThe proportion of non-base elements that the union bound permits to be bad is below\n\n6.64×10\n−17\n.\nThe cubic field is the full 17\n48\n field\n\nTake the concrete Cycle86 model\n\nF\n0\n\t​\n\n=F\n17\n\t​\n\n[X]/(X\n16\n+X\n8\n+3),β=X+2.\n\nDirect field arithmetic gives\n\nβ\n(17\n16\n−1)/3\n=2+5X\n8\n\n=1.\n\nSince 17\n16\n≡1(mod3), this proves that β is not a cube in F\n0\n\t​\n\n. Therefore\n\nU\n3\n−β\n\nhas no root in F\n0\n\t​\n\n, hence is irreducible, and\n\nL=F\n0\n\t​\n\n[U]/(U\n3\n−β)\n\nis a degree-three extension with\n\n∣L∣=(17\n16\n)\n3\n=17\n48\n.\n\nSo the “cubic extension” and the full F\n17\n48\n\t​\n\n are not competing ambient fields: the former is a concrete representation of the latter.\n\nWhat the argument does not prove is that the particular basis element U is good.\n\nIndeed, no theorem using only “monic, squarefree, degree 113, split over F\n0\n\t​\n\n” can certify U. Choose distinct a,b∈F\n0\n×\n\t​\n\n with a\n3\n,b\n3\n\n=β, and a common monic squarefree split polynomial H of degree 110, disjoint from the six relevant cubic roots. Then\n\nf(Y)=H(Y)(Y\n3\n−a\n3\n),g(Y)=H(Y)(Y\n3\n−b\n3\n)\n\nare distinct monic squarefree split polynomials of degree 113, but\n\ng(U)\nf(U)\n\t​\n\n=\nβ−b\n3\nβ−a\n3\n\t​\n\n∈F\n0\n×\n\t​\n\n.\n\nThis does not exhibit a collision inside the special Cycle84 packet. It proves that U requires a packet-specific census; generic root counting cannot certify it.\n\nConsequence for pair-product slopes\n\nLet\n\nΩ={P\nT\n\t​\n\n(β):T∈P\n0\n\t​\n\n}⊂F\n0\n×\n\t​\n\n,∣Ω∣=N=52747567092,\n\nand choose one support T\na\n\t​\n\n for every a∈Ω.\n\nFor fixed y, consider\n\nΦ\ny\n\t​\n\n:Ω×P\n0\n\t​\n\n⟶L\n×\n,Φ\ny\n\t​\n\n(a,T)=aP\nT\n\t​\n\n(y).\n\nIf\n\naP\nT\n\t​\n\n(y)=a\n′\nP\nT\n′\n\t​\n\n(y),\n\nthen\n\nP\nT\n′\n\t​\n\n(y)\nP\nT\n\t​\n\n(y)\n\t​\n\n=\na\na\n′\n\t​\n\n∈F\n0\n×\n\t​\n\n.\n\nHence every fiber of Φ\ny\n\t​\n\n has size at most μ\nproj\n\t​\n\n(y). Therefore\n\n∣imΦ\ny\n\t​\n\n∣≥\nμ\nproj\n\t​\n\n(y)\nNP\n\t​\n\n.\n\nThus the weaker target μ\nproj\n\t​\n\n(y)≤8 gives\n\n∣imΦ\ny\n\t​\n\n∣≥\n8\nNP\n\t​\n\n=347788229344751517696,\n\nwhereas\n\nT\nline\n\t​\n\n=⌊\n2\n128\n17\n48\n\t​\n\n⌋=338617018271848945628.\n\nThe margin is\n\n9171211072902572068.\n\nFor the generic y proved above, μ\nproj\n\t​\n\n(y)=1, so all\n\nNP=2782305834758012141568\n\npair products are distinct.\n\nThe twelve repeated Cycle84 values cause no additional loss: taking one representative per value of Ω handles the first block, while projective multiplicity controls every possible collision involving the second block.\n\nCompatibility with the 464-point package\n\nThe separator theorem fits the shortened construction.\n\nLet η have order 256, and put\n\nK\n0\n\t​\n\n=⟨η\n8\n⟩,∣K\n0\n\t​\n\n∣=32.\n\nFrom the explicit seven-slot support formula, every support satisfies\n\nT∩K\n0\n\t​\n\n={1}.\n\nIndeed, all non-1 support exponents are congruent to one of 1,…,7(mod8), including after multiplication by −1=η\n128\n. Hence any fixed 24-element subset\n\nZ\n0\n\t​\n\n⊂K\n0\n\t​\n\n∖{1}\n\nis universally unused. Set\n\nD\n−\n=D∖Z\n0\n\t​\n\n,∣D\n−\n∣=232.\n\nFor a good y, let\n\nc=β−y,D\ny\n\t​\n\n=D\n−\n⊔(c+D\n−\n).\n\nBecause y,c∈\n/\nF\n0\n\t​\n\n, the two blocks are disjoint and β∈\n/\nD\ny\n\t​\n\n. Define\n\nS\na,T\n\t​\n\n=T\na\n\t​\n\n∪(c+T).\n\nThen\n\n∣D\ny\n\t​\n\n∣=464,∣S\na,T\n\t​\n\n∣=226.\n\nThe banked jet identity\n\nJ\nT\n\t​\n\n(t)=\nx∈T\n∏\n\t​\n\n(1−xt)≡1−t(modt\n6\n)\n\ngives\n\nJ\nc+T\n\t​\n\n(t)=(1−ct)\n113\nJ\nT\n\t​\n\n(\n1−ct\nt\n\t​\n\n)≡(1−ct)\n112\n(1−(c+1)t)(modt\n6\n).\n\nTherefore every S\na,T\n\t​\n\n has the same six-jet.\n\nUse the 232×464 parity-check columns\n\nh\nx\n\t​\n\n=\n\t​\n\n1\nx\n⋮\nx\n230\n(β−x)\n−1\n\t​\n\n\t​\n\n.\n\nAfter scaling column x by β−x, the rows are evaluations of\n\n1,β−Y,Y(β−Y),…,Y\n230\n(β−Y),\n\nwhich form a basis of L[Y]\n≤231\n\t​\n\n. Thus this is one GRS parity-check matrix, giving a single\n\n[464,232]\n\nGRS code.\n\nFor S=S\na,T\n\t​\n\n, take weights\n\nw\nx\n\t​\n\n=\nP\nS\n′\n\t​\n\n(x)\n1\n\t​\n\n.\n\nPartial fractions show that the first 231 syndrome coordinates depend only on the common six-jet, while the final coordinate is\n\nx∈S\n∑\n\t​\n\nβ−x\nw\nx\n\t​\n\n\t​\n\n=\nP\nS\n\t​\n\n(β)\n1\n\t​\n\n=\naP\nT\n\t​\n\n(y)\n1\n\t​\n\n.\n\nHence all supports lie on one affine syndrome line, and their slopes are the reciprocal products above.\n\nTransversality is also uniform: if the line direction belonged to the span of a support’s columns, projection to the first 231 coordinates would give a dependence among 226 distinct Vandermonde columns. Those columns are independent. All witness coefficients are nonzero because every support is squarefree.\n\nThus, from the banked Cycle84/85 packet facts,\n\n∃ an official-rate (464,232,6,226) one-line GRS counterpacket with NP distinct slopes.\n\t​\n\n\nThis is an existential theorem, not the requested explicit replay artifact.\n\nSelf-audit\n\nExact implication proved: the banked distinct-support packet implies the existence of y∈F\n17\n48\n\t​\n\n∖F\n0\n\t​\n\n with μ\nproj\n\t​\n\n(y)=1, and consequently an existential single-code, single-line 464-point GRS packet with NP distinct slopes.\nNot proved: μ\nproj\n\t​\n\n(U)≤8, coordinates of any good y, an ordered-domain digest, or a completed public projective census.\n\nThe result is official-prize-relevant mathematically: it gives an existential official-rate MCA fail row. It is not yet a public replay artifact and is not the full proximity-prize theorem.\n\nThe first possible failure in the generic proof is the hypothesis that the P packet objects are distinct supports, hence distinct monic locators. Duplicate tuple encodings would give identical locators and permanent collisions. For the explicit target, the first unproved line is:\n\nthe serialized candidate y satisfies μ\nproj\n\t​\n\n(y)≤8.\n\nThe root count uses\n\nq\n0\n\t​\n\n=17\n16\n,∣L∣=17\n48\n,\n\nand compares bad elements against ∣L∖F\n0\n\t​\n\n∣. For the 464 construction,\n\nq\ngen\n\t​\n\n=q\ncode\n\t​\n\n=q\nline\n\t​\n\n=17\n48\n.\n\nThe challenge field may be declared\n\nq\nchal\n\t​\n\n=17\n48\n,\n\nbut it does not enter the MCA threshold. The 2\n−128\n comparison correctly uses only q\nline\n\t​\n\n.\n\nProjective quotient loss is exactly charged by μ\nproj\n\t​\n\n. Periodic or duplicate support encodings must be eliminated before applying the theorem. The twelve same-ρ fibers are removed by choosing one representative per Ω-value. Contained incidences are excluded by Vandermonde rank. Reciprocal and any common affine normalization are injective, so they do not reduce the numerator.\n\nThis is not a PLAN. The exact remaining construction is:\n\nV-CYCLE87-DETERMINISTIC-SEPARATOR-MATERIALIZER-464.\n\nIt should test U first, then deterministic full-field candidates, and output the first y with μ\nproj\n\t​\n\n(y)≤8, together with its 48 base-17 coefficients, projective-census shard hashes, 464-point domain digest, GRS fingerprint, common-line data, and threshold calculation. The theorem above guarantees that this search has a successful endpoint.\n\nGeneric separator replay script\n\nReplay result JSON"
+    }
+  ],
+  "users": [
+    {
+      "i": 0,
+      "text": "20260621_cycle87_explicit_separator_context(2).zip\nZip Archive\n# COMMON PROMPT FOR CYCLE 87\n\nTry to fully solve the problem. If you cannot fully solve it, progress it as\nmuch as possible. No Internet. Take all the time to reason you need. Use MAX\nreasoning.\n\nYou are working on the RS-MCA / proximity-prize finite obstruction route. Do\nnot brainstorm from scratch. Read the attached context first, especially:\n\n- CYCLE87_CURRENT_STATE.md\n- m1_cycle86_two_copy_affine_color_returns_audit.md\n- m1_cycle85_role05_transfer_returns_audit.md\n- m1_cycle84_wallbreaker_returns_audit.md\n- the Cycle86 raw returns if you need to inspect a worker's exact claim\n\nThe active target is:\n\n\ntext\nL-CYCLE86-EXPLICIT-TWO-COPY-SEPARATOR-CERTIFICATE\n\n\nProve, with a replayable certificate, that a concrete separator y for the\ntwo-copy construction has projective multiplicity at most 8 and that the\nresulting supports form one transverse affine syndrome line of a single\nofficial-rate GRS code.\n\nEquivalent checker wall:"
+    }
+  ],
+  "fileLinks": [],
+  "fileButtons": [
+    {
+      "i": 27,
+      "text": "",
+      "aria": "Pin RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" aria-label=\"Pin RS-MCA Two-Copy Proof\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#891f0e\" fill=\"currentColor\"></use></svg></div></button>"
+    },
+    {
+      "i": 28,
+      "text": "",
+      "aria": "Open conversation options for RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" data-testid=\"history-item-0-options\" data-conversation-options-trigger=\"6a378ac5-3e1c-83ec-a4a6-74b3f700f186\" aria-label=\"Open conversation options for RS-MCA Two-Copy Proof\" type=\"button\" id=\"radix-_r_su_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#"
+    },
+    {
+      "i": 37,
+      "text": "",
+      "aria": "Pin Cycle87 Two-Copy Separator",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" aria-label=\"Pin Cycle87 Two-Copy Separator\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#891f0e\" fill=\"currentColor\"></use></svg></div></button>"
+    },
+    {
+      "i": 38,
+      "text": "",
+      "aria": "Open conversation options for Cycle87 Two-Copy Separator",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" data-testid=\"history-item-5-options\" data-conversation-options-trigger=\"6a378c5a-d018-83ec-8d43-de36e61d87c4\" aria-label=\"Open conversation options for Cycle87 Two-Copy Separator\" type=\"button\" id=\"radix-_r_t8_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4"
+    },
+    {
+      "i": 43,
+      "text": "",
+      "aria": "Pin RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" aria-label=\"Pin RS-MCA Two-Copy Proof\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#891f0e\" fill=\"currentColor\"></use></svg></div></button>"
+    },
+    {
+      "i": 44,
+      "text": "",
+      "aria": "Open conversation options for RS-MCA Two-Copy Proof",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn\" data-testid=\"history-item-8-options\" data-conversation-options-trigger=\"6a3788e9-db70-83ec-bade-c3646a291f07\" aria-label=\"Open conversation options for RS-MCA Two-Copy Proof\" type=\"button\" id=\"radix-_r_tc_\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><div><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon-sm\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#"
+    },
+    {
+      "i": 83,
+      "text": "",
+      "aria": "Download apps",
+      "title": "",
+      "html": "<button tabindex=\"0\" data-trailing-button=\"\" class=\"__menu-item-trailing-btn no-draggable hover:*:bg-token-interactive-bg-secondary-hover keyboard-focused:*:bg-token-interactive-bg-secondary-hover touch:h-10! touch:min-h-10! touch:w-10! my-0! ms-0! me-0.5! h-9! min-h-9! w-9! self-center! rounded-lg! p-0! [&amp;&gt;div]:h-full [&amp;&gt;div]:w-full [&amp;&gt;div]:rounded-lg [&amp;&gt;div]:p-0!\" aria-controls=\"_R_19dlalarlac5797l35_\" aria-expanded=\"false\" aria-haspopup=\"menu\" data-state=\"closed\" s"
+    },
+    {
+      "i": 86,
+      "text": "",
+      "aria": "20260621_cycle87_explicit_separator_context(2).zip",
+      "title": "",
+      "html": "<button type=\"button\" class=\"interactive-bg-secondary border-token-interactive-border-secondary-default corner-superellipse/1.1 keyboard-focused:focus-ring grid rounded-xl border\" aria-label=\"20260621_cycle87_explicit_separator_context(2).zip\"></button>"
+    },
+    {
+      "i": 88,
+      "text": "",
+      "aria": "Copy message",
+      "title": "",
+      "html": "<button type=\"button\" class=\"text-token-text-secondary hover:bg-token-surface-hover rounded-lg\" aria-label=\"Copy message\" data-testid=\"copy-turn-action-button\" data-state=\"closed\"><span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></span></button>"
+    },
+    {
+      "i": 91,
+      "text": "Generic separator replay script",
+      "aria": "",
+      "title": "",
+      "html": "<button class=\"behavior-btn hover:entity-accent focus-visible:focus-ring entity-underline inline cursor-pointer appearance-none border-0 bg-transparent p-0 text-start align-baseline text-inherit\" type=\"button\">Generic separator replay script</button>"
+    },
+    {
+      "i": 93,
+      "text": "",
+      "aria": "Copy response",
+      "title": "",
+      "html": "<button type=\"button\" class=\"text-token-text-secondary hover:bg-token-surface-hover rounded-lg\" aria-label=\"Copy response\" data-testid=\"copy-turn-action-button\" data-state=\"closed\"><span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#ce3544\" fill=\"currentColor\"></use></svg></span></button>"
+    },
+    {
+      "i": 101,
+      "text": "",
+      "aria": "Add files and more",
+      "title": "",
+      "html": "<button type=\"button\" class=\"composer-btn\" data-testid=\"composer-plus-btn\" aria-label=\"Add files and more\" id=\"composer-plus-btn\" aria-haspopup=\"menu\" aria-expanded=\"false\" data-state=\"closed\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-1a29ccf4.svg#decc1a\" fill=\"currentColor\"></use></svg></button>"
+    }
+  ],
+  "bodyTail": "code, single-line 464-point GRS packet with NP distinct slopes.\nNot proved: μ\nproj\n\t​\n\n(U)≤8, coordinates of any good y, an ordered-domain digest, or a completed public projective census.\n\nThe result is official-prize-relevant mathematically: it gives an existential official-rate MCA fail row. It is not yet a public replay artifact and is not the full proximity-prize theorem.\n\nThe first possible failure in the generic proof is the hypothesis that the P packet objects are distinct supports, hence distinct monic locators. Duplicate tuple encodings would give identical locators and permanent collisions. For the explicit target, the first unproved line is:\n\nthe serialized candidate y satisfies μ\nproj\n\t​\n\n(y)≤8.\n\nThe root count uses\n\nq\n0\n\t​\n\n=17\n16\n,∣L∣=17\n48\n,\n\nand compares bad elements against ∣L∖F\n0\n\t​\n\n∣. For the 464 construction,\n\nq\ngen\n\t​\n\n=q\ncode\n\t​\n\n=q\nline\n\t​\n\n=17\n48\n.\n\nThe challenge field may be declared\n\nq\nchal\n\t​\n\n=17\n48\n,\n\nbut it does not enter the MCA threshold. The 2\n−128\n comparison correctly uses only q\nline\n\t​\n\n.\n\nProjective quotient loss is exactly charged by μ\nproj\n\t​\n\n. Periodic or duplicate support encodings must be eliminated before applying the theorem. The twelve same-ρ fibers are removed by choosing one representative per Ω-value. Contained incidences are excluded by Vandermonde rank. Reciprocal and any common affine normalization are injective, so they do not reduce the numerator.\n\nThis is not a PLAN. The exact remaining construction is:\n\nV-CYCLE87-DETERMINISTIC-SEPARATOR-MATERIALIZER-464.\n\nIt should test U first, then deterministic full-field candidates, and output the first y with μ\nproj\n\t​\n\n(y)≤8, together with its 48 base-17 coefficients, projective-census shard hashes, 464-point domain digest, GRS fingerprint, common-line data, and threshold calculation. The theorem above guarantees that this search has a successful endpoint.\n\nGeneric separator replay script\n\nReplay result JSON\n\nPro Extended\nChatGPT can make mistakes. Check important info."
+}

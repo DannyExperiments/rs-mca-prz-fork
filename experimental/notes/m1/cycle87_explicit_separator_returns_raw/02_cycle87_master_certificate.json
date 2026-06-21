@@ -1,0 +1,111 @@
+{
+  "artifacts_sha256": {
+    "20260621_cycle87_explicit_separator_context(1).zip": "34c118fc7a9de35c24ef7aa0365bc097f3dca0119075d5bc030b51a68e71dc3d",
+    "CYCLE87_U_SEPARATOR_PROOF.md": "03bbe05f3ea9356b62be98decc5d22c8909aa8cce040e0d1a208e853eed7f092",
+    "README_CYCLE87_REPLAY.md": "ae55449efd4bc34752b03d2ac280496c206e51aff5069fe322b9ad38d60ee91b",
+    "REPLAY_CYCLE87_U_SEPARATOR.sh": "0032593b09d721d991651c0a518645c0f8b6078a4d97bb19eb53b9b1319f6cdf",
+    "cycle87_464_artifact_certificate.json": "fe2c8c4555d44e65b33eb576736c250236bf37f56ea4923626d01557cafd22a6",
+    "cycle87_464_materializer": "b55cb13e4b4b0e579423a220342b5c5d6a03a28552b8ffbf8191c61ef0eb1487",
+    "cycle87_464_materializer.cpp": "14373fbe8ede35bce462c4e2eac99bbff3fe2158277dc66df475e25f1e851875",
+    "cycle87_certificate_schema.json": "cd8acd1c15facd6315ed73fe877e19e38a4fbd951790712c8291457f36ada103",
+    "cycle87_domain464.bin": "2bda8227b5090cb4f9b30e96c2f3442c487a64349ff61fa48dd803e6d1c23abd",
+    "cycle87_grs_H_232x464.bin": "e0e6c4519490b2256d3df81c483f1c6697cbe2433852cf07c53c7f1f1726e281",
+    "cycle87_line_464.bin": "dce95315fed38dee0286888a252a16536888f9032d662cdd471cbb2b028a4eb7",
+    "cycle87_setup_certificate.json": "2b83b632a9153d5359fb99ab1e308181c86301317e4034171b1d0e5aa1a5ea7f",
+    "cycle87_setup_verifier.py": "b064037406f85740cd6e52eaf83d49d1036da549997fb1cb43c29657d4b2deed",
+    "cycle87_u_separator_pass.json": "523c8dc3e00e7f3011838ff00e62f7bb27dbbac90888edd9d6af2781d4a2829f",
+    "cycle87_u_slot_factors.bin": "e64ab0c0e51c9f0487557916486a5fcb8360b8fb97de1000a6931afe5945851c",
+    "cycle87_u_smooth_census": "b4023790fe01b746400491f7886cc78fcfee2db508eeb8cd57e0046b2d44e3d9",
+    "cycle87_u_smooth_census.cpp": "7a9e53f8e35c16f4f88c51fc8a402bcdbed2d1d8de79fae4bc69181c85b6b9c1",
+    "cycle87_u_smooth_census_result.json": "0f96afef0d54e7f930ef65446df4e834fab1b7ea9326bfa9e3c324df48d44249",
+    "cycle87_u_smooth_census_run.log": "2280fb2b0250cfea5f05ef52c8aa4b9709bed5c82b1b9e08335e2656f004fbbc",
+    "cycle87_u_smooth_sort_audit": "18b1f76cd949929c5cfb54ba4483730819ce748dbb5195fc920d0fd0db007d4d",
+    "cycle87_u_smooth_sort_audit.cpp": "92dd8cbd0b11c805bafc817d7f243420ec78908166210f1245a7fd7f5d55c644",
+    "cycle87_u_smooth_sort_audit_result.json": "40eee0ffd30e5743df6e327877e7dd2f6478375198cfb83c98c79d64c30a1d91",
+    "cycle87_u_smooth_sort_audit_run.log": "2d48cee41f2480343e75f1afe24d31e134c3daa042283be85e4c34590d328641",
+    "cycle87_u_smooth_sort_audit_shard0_result.json": "4e3188b5e31c2bb5d210c0aae6736f627518ebbca228512c8892938fcba53491",
+    "cycle87_u_smooth_sort_audit_shard0_run.log": "565d8033b0a5900efb49460ecad08d16c71b90f941777438812010951b64974d",
+    "cycle87_verify_464_artifacts.py": "4695ca6f3441a78adb583bd326831ed0b492243a31a804081f449ad099a2cb0e",
+    "cycle87_verify_master.py": "022ffca3960b6c370880baa6a389a769b9c019de12a46513f272db4d06b83c28",
+    "make_cycle87_master_certificate.py": "402a2112c8bd62f86601c3fb1a7caa1f0d16fe1ab49e0eeb9e72105e2773c9e1"
+  },
+  "claim": "L-CYCLE86-EXPLICIT-TWO-COPY-SEPARATOR-CERTIFICATE",
+  "confidence": "high",
+  "decision": "CYCLE87_U_SEPARATOR_464_PROVED",
+  "dependencies": {
+    "banked_cycle84": {
+      "D": 24,
+      "N": "52747567092",
+      "P": "52747567104",
+      "m_max_beta": 2
+    },
+    "banked_cycle85": [
+      "support_size_113",
+      "fixed_jet_J_T_eq_1_minus_t_mod_t6",
+      "rho_beta_transfer"
+    ],
+    "input_context_zip_sha256": "34c118fc7a9de35c24ef7aa0365bc097f3dca0119075d5bc030b51a68e71dc3d"
+  },
+  "execution": {
+    "census_elapsed_seconds": 940.485555567,
+    "census_exit_status": 0,
+    "census_max_rss_kib": 2299780,
+    "census_shards": 1536,
+    "census_threads": 4,
+    "census_wall_wrapper": "15:40.50",
+    "platform": "Linux-4.4.0-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "field": {
+    "F0": "F_17[X]/(X^16+X^8+3)",
+    "L": "F0[U]/(U^3-(X+2))",
+    "q0": "48661191875666868481",
+    "q_L": "115225400457255426923013053222916919834651165519677685328641",
+    "separator": "U"
+  },
+  "grs_counterpacket": {
+    "T_line": "338617018271848945628",
+    "certified_distinct_slopes": "1391152917379006070784",
+    "collision_divisor": 2,
+    "margin": "1052535899107157125156",
+    "one_affine_syndrome_line": true,
+    "one_grs_code": true,
+    "pair_numerator": "2782305834758012141568",
+    "profile": {
+      "j": 226,
+      "k": 232,
+      "n": 464,
+      "sigma": 6,
+      "t": 1
+    },
+    "q_chal": "115225400457255426923013053222916919834651165519677685328641",
+    "q_code": "115225400457255426923013053222916919834651165519677685328641",
+    "q_gen": "115225400457255426923013053222916919834651165519677685328641",
+    "q_line": "115225400457255426923013053222916919834651165519677685328641",
+    "slope_formula": "z = common_nonzero_scalar/(rho_beta(T1)*P_T2(U))",
+    "transverse": true
+  },
+  "projective_census": {
+    "deduced_mu_proj_U_upper_bound": 2,
+    "exact_equivalence": "[a]=[b] iff a^(q0-1)=b^(q0-1)",
+    "records": "52747567104",
+    "smooth_cofactor_R": "48661191868691111041",
+    "smooth_histogram": {
+      "multiplicity_1": "52747567020",
+      "multiplicity_2": 42,
+      "multiplicity_ge_3": 0
+    },
+    "smooth_max_multiplicity": 2,
+    "smooth_occupancy": "52747567062",
+    "smooth_order_M": "48661191882642625923",
+    "smooth_ordered_offdiagonal_energy": 84
+  },
+  "schema": "cycle87.explicit-u-separator-master.v1",
+  "scope": {
+    "finite_model_certificate": true,
+    "full_prize_theorem": false,
+    "official_two_copy_mca_counterpacket": true,
+    "one_copy_transfer": "banked_dependency",
+    "public_replay_artifact": true
+  }
+}

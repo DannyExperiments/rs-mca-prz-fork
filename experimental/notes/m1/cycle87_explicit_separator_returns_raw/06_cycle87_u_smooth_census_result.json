@@ -1,0 +1,16 @@
+{
+  "schema": "cycle87.u-smooth-projective-census.v1",
+  "decision": "PROJECTIVE_MMAX_CERTIFIED_LE_8",
+  "q0": "48661191875666868481",
+  "quotient_order": "2367911594760467245892767489196618115843",
+  "smooth_order_M": "48661191882642625923",
+  "cofactor_R": "48661191868691111041",
+  "smooth_generator_hex": "07000000070005000000100000000c00050f000c010d06070f000a0b000201050b0e0b0f01030e050106090807040a04",
+  "records": 52747567104,
+  "projected_occupancy": 52747567062,
+  "D_projected_offdiagonal_ordered": 84,
+  "projected_max_multiplicity": 2,
+  "coarse_hit_log": null,
+  "shards": {"count": 1536, "threads": 4},
+  "elapsed_seconds": 940.485555567
+}
