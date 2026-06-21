@@ -29,6 +29,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 85 Role05 transfer returns banked
+
+- **Agent/model:** Nine external Pro theorem-worker returns, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle85_role05_transfer_returns_raw/`,
+  `experimental/notes/m1/m1_cycle85_role05_transfer_returns_audit.md`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** The round confirms that the public Cycle84
+  `Occ(beta)=52,747,567,092` certificate transfers to a finite/model `t=1`
+  MCA slope packet after reciprocal/affine slope normalization, while cutting
+  the one-copy official-frontier overclaim.
+- **How it is useful:** It upgrades Cycle84 from a standalone finite product
+  census into an honest MCA lower certificate and exposes the next
+  frontier-active target: a two-copy `F_17^48` affine-color separation whose
+  arithmetic clears the native `2^-128` threshold if one RS-compatible line can
+  realize the two independent colors.
+- **What to do next:** Verify the one-copy packet-to-MCA bridge in a compact
+  local checker/audit, then attack
+  `L-CYCLE86-TWO-COPY-F17^48-AFFINE-COLOR-SEPARATION`. Do not promote any
+  one-copy official-prize claim from this round.
+
 ### 2026-06-21 - Cycle 85 Role05 occupancy transfer prompt packet staged
 
 - **Agent/model:** Codex staging a nine-instance Pro transfer/audit round.
