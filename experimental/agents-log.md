@@ -29,6 +29,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 99 aperiodic moment-curve incidence audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle99_b1_aperiodic_moment_curve_incidence_raw/`,
+  `experimental/notes/m1/m1_cycle99_b1_aperiodic_moment_curve_incidence_audit.md`,
+  `experimental/notes/m1/cycle100_subgroup_elemsym_character_sum_prompt.md`,
+  `experimental/scripts/cycle99_divisor_line_incidence_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** Cycle99 reformulates the B1 active external-root
+  wall as divisor/remainder, RS codeword, reciprocal affine-line, and exact
+  additive-character identities. It cuts the generic agreement-only route
+  below Johnson.
+- **How it is useful:** It isolates the first live failure line as an
+  elementary-symmetric subgroup character-sum cancellation bound, with
+  quotient-periodic resonances charged separately.
+- **What to do next:** Attack
+  `W-CYCLE100-SUBGROUP-ELEMSYM-MOMENT-CHARACTER-SUM`, proving cancellation or
+  producing a nonperiodic superpolynomial-error prefix.
+
 ### 2026-06-21 - Cycle 98 B1 active external-root audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
