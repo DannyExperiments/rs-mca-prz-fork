@@ -29,6 +29,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 96 arbitrary-word norm-sieve audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle96_arbitrary_word_norm_sieve_raw/`,
+  `experimental/notes/m1/m1_cycle96_arbitrary_word_norm_sieve_audit.md`,
+  `experimental/notes/m1/cycle97_fixed_prime_two_support_prompt.md`,
+  `experimental/scripts/cycle96_word_height_floor_toy.py`, and
+  `experimental/agents-log.md`.
+- **Status:** ROUTE_CUT / BANKABLE_LEMMA / EXACT_NEW_WALL.
+- **What is being added:** Cycle96 cuts the arbitrary-word norm-sieve route
+  and banks `L-CYCLE96-WORD-HEIGHT-FLOOR`, the height obstruction for arbitrary
+  word lifts.
+- **How it is useful:** It prevents trying to repair the monomial
+  Galois/norm sieve where it cannot work; the upper wall must now use a
+  fixed-prime local-limit or collision-count argument.
+- **What to do next:** Attack
+  `S1 / L-CYCLE97-FIXED-PRIME-TWO-SUPPORT-APERIODIC-COLLISION`, starting with
+  the first non-monomial bandwidth layer `deg U <= s+1`.
+
 ### 2026-06-21 - Cycle 95 anchored per-fiber t=1 audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
