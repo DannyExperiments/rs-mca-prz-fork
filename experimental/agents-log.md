@@ -29,6 +29,31 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 91 above-reserve power-of-two audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle91_above_reserve_power_two_raw/`,
+  `experimental/notes/m1/m1_cycle91_above_reserve_power_two_audit.md`,
+  `experimental/notes/m1/cycle92_extension_field_admissibility_prompt.md`,
+  `experimental/scripts/cycle91_extension_power_two_arithmetic.py`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / CONDITIONAL / EXACT_NEW_WALL /
+  HARNESS_PARTIAL.
+- **What is being added:** Cycle91 proposes an explicit above-reserve
+  power-of-two subgroup row over `F_{5^64}` at rate `1/16`, using the
+  monomial locator line and a sign-digit subset-sum injection. Codex corrected
+  the arithmetic: the lower bound is `binom(64,17)*2^17`, still far above
+  `floor(5^64/2^128)`.
+- **How it is useful:** It appears to satisfy the literal above-reserve
+  smooth-subgroup target, but moves the live question to whether extension
+  fields such as `F_{5^64}` are official-prize admissible or only research
+  certificates.
+- **What to do next:** Run Cycle92 on
+  `W-CYCLE92-EXTENSION-FIELD-PRIZE-ADMISSIBILITY`, completing the proof or
+  cutting it to a deployed-prime analogue.
+
 ### 2026-06-21 - Cycle 90 prize-family embedding audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
