@@ -64,6 +64,23 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Resume after the request guard clears, send Roles
   04-09, update the receipt with final URLs, then bank returns.
 
+### 2026-06-21 - Cycle 87 dispatch completed
+
+- **Agent/model:** Codex browser dispatch into nine ChatGPT Pro theorem-worker
+  lanes.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle87_explicit_separator_dispatch_receipt.md` and
+  `experimental/agents-log.md`.
+- **Status:** DISPATCH COMPLETE.
+- **What is being added:** Final URLs for all nine Cycle87 explicit-separator
+  roles. Chrome was cleaned down to exactly the nine current Cycle87 tabs before
+  the remaining roles were sent.
+- **How it is useful:** Gives the return heartbeat a clean source of truth for
+  the nine live conversations and avoids stale Cycle84-86 tab confusion.
+- **What to do next:** Check for completed answers, bank raw returns under
+  `experimental/notes/m1/cycle87_explicit_separator_returns_raw/`, audit them,
+  then commit and push.
+
 ### 2026-06-21 - Cycle 86 two-copy affine-color returns banked
 
 - **Agent/model:** Eight Cycle86 external Pro theorem-worker returns plus one
