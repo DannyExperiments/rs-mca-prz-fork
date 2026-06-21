@@ -29,6 +29,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 89 official MCA row identification audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle89_official_mca_row_raw/`,
+  `experimental/notes/m1/m1_cycle89_official_mca_row_audit.md`,
+  `experimental/notes/m1/cycle90_prize_family_embedding_prompt.md`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / CONDITIONAL / EXACT_NEW_WALL.
+- **What is being added:** Cycle89 proves the conditional official-definition
+  bridge: assuming the Cycle84/Cycle85/Cycle87 finite facts, the Cycle87
+  counted slopes are genuine support-wise line-MCA bad slopes under
+  `def:mca` / `def:residue` via the `(>=)` half of `thm:normalform`.
+- **How it is useful:** It closes the definition-matching gap left by Cycle88
+  and moves the live obstruction to
+  `W-CYCLE90-PRIZE-FAMILY-EMBEDDING`: whether the `n=464=2^4*29` finite
+  GRS/RS row is admissible for the actual smooth power-of-two subgroup prize
+  family or must be ported there.
+- **What to do next:** Run Cycle90 against prize-family admissibility or
+  embedding, while separately preserving the need for an independent replay of
+  the Cycle87 finite census chain.
+
 ### 2026-06-21 - Cycle 88 Cycle87 official MCA bridge audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by

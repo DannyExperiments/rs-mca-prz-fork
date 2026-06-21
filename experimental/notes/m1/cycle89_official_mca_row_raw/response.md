@@ -1,0 +1,122 @@
+The index is large. Let me locate the specific source files I need to read by searching the index.The index is enormous. Let me directly try the expected source paths since the user prompt gave relative paths.I need to find the actual paths. Let me grep the index for the key files.The repo snapshot is under `current_repo_snapshot/`. Let me read the key project state files and the tex source directly.I have the core definitions. Now let me read the residue definition, normal form theorem, and the RS_disproof bridge.Now let me read the RS_disproof bridge lines, readme, and the m1 cycle87/88 audit notes.Now the readme and the m1 audit notes. Let me read them in parallel.Now the cycle87/88 audit notes and the bridge response.Now the bridge raw response, which has the detailed construction.I have read the core source definitions (`def:sclose`, `def:mca`, `def:residue`, `lem:denom`, `thm:normalform`, `prop:floor`, `prop:qfloor`, `rem:aper`), the prize-conjecture scope (`conj:capacity`, `thm:main`, `rem:formulation`, `rem:status-scope`), the readme field ledger, and the Cycle87/Cycle88 audit + bridge response. I have enough to decide the cycle89 target.
+
+---
+
+# BANKABLE_LEMMA
+
+(with an embedded EXACT_NEW_WALL for prize relevance)
+
+## 1. Executive verdict and confidence
+
+The official-definition bridge `L-CYCLE89-OFFICIAL-MCA-ROW-IDENTIFICATION` is **provable, not killed**, on its own terms: granting the Cycle84/85/87 finite antecedents, the Cycle87/88 counted slope set is *exactly* a support-wise line-MCA bad-slope set in the sense of `def:mca` / `def:residue` of `tex/slackMCA_v3.tex`, realized through the `(\ge)` half of `thm:normalform`, with official datum profile `(t,n,k,\sigma,j)=(1,464,232,6,226)` at radius `δ = 1-(k+σ)/n = 1-238/464`, and the integer comparison against `floor(q_line/2^128)` is the correct `2^-128` MCA-failure test.
+
+Confidence on the definitional identification: high (~0.92). The residual ~0.08 is **not** in the definition match — it is in two things that cycle89 was told to treat as antecedents or that lie downstream: (a) the unreplayed 52.7B census, and (b) the decisive prize-scope wall I surface in §3.7 and Q9: the counted object is a **contrived GRS row on `n=464=2^4·29`, which is not the smooth power-of-two multiplicative-subgroup RS family that `conj:capacity` / `thm:main` quantify over.** So this is an official-*definition* MCA row, not yet an official-*prize* refutation.
+
+Verdict mapping: **PROVE the definitional bridge as a conditional BANKABLE_LEMMA; do not upgrade to COUNTERPACKET against the prize.** The first thing standing between this lemma and a prize counterpacket is a domain-family reduction, not a definition fix.
+
+## 2. Exact theorem proved
+
+> **Lemma (Cycle89 official-row identification, conditional).**
+> Assume the antecedents: (C84) `P = 52,747,567,104` distinct admissible supports with `β`-occupancy `N = Occ_β = 52,747,567,092`; (C85) the fixed six-jet transfer and support sizes; (C87) the smooth/projective census with maximum fibre `μ_proj(U) ≤ μ_M(U) ≤ 2`. Let `C` be the explicit `[464,232]` GRS code over `L=𝔽_{17^48}` of §9.2 (equivalently, by diagonal isometry, `RS[L,D,232]` on the same `D⊆L`, `|D|=464`). Then on the single residue-line datum `(E,B,w)` of degree `t=1` (with line `f=w/E`, `g=-B/E`), at radius `δ = 1-(k+σ)/n = 1-238/464`:
+> 1. each counted parameter `z_{v,T}=1/(v·P_T(U))` is **support-wise MCA-bad** in the exact sense of `def:mca` (i)+(ii) / `def:residue` (noncontained), with witness support `S` of size `|S| = k+σ = 238 = s_δ = ⌈(1-δ)n⌉`;
+> 2. the counted slopes are distinct elements of `L = q_line`, with no base-field `𝔽_{17^16}` denominator substituted for `q_line`;
+> 3. their number satisfies `#{z bad} ≥ Λ^{NC}_{1,δ}(D,k) ≥ N·P/2 = 1,391,152,917,379,006,070,784`;
+> 4. hence by the `(\ge)` direction of `thm:normalform`, `ε_mca(C,δ) = (1/q_line)·max_t Λ^{NC}_{t,δ} ≥ N·P/(2·q_line) > floor(q_line/2^128)/q_line`, so `ε_mca(C,δ) > 2^{-128}`.
+> The integer `j = n-k-σ = 226` is exactly the co-support size `|D\S| = δn` and carries no role in `def:mca`/`def:residue` beyond that.
+
+This is the cycle89 required statement, established conditionally on (C84)+(C85)+(C87).
+
+## 3. Proof / obstruction, line-by-line against the source
+
+**3.1 The official numerator (Q1).** `def:mca` (slackMCA L643–651) sets `ε_mca(C,δ)=max_{f,g}(1/|F|)·#{z : z support-wise MCA-bad}`, with `|F|` the field `z` ranges over. `RS_disproof_v3.tex` L110–113 (`def:mca`) is the identical no-slack support-wise line form. So the official numerator is literally `#bad z`, denominator `|F|=q_line`. The Cycle87 object `N·P/2` is offered as a lower bound on `#bad z`. Identification of the *numerator* is exact. ✔
+
+**3.2 Slopes live in `q_line`, no hidden denominator (Q2).** `z_{v,T}=1/(v·P_T(U))` with `v∈Ω⊂𝔽_{17^16}^×` but `P_T(U)∈L`, so `z∈L`. Decisive consistency check: `N·P/2 = 1.39×10^{21} > |𝔽_{17^16}| = 17^{16} ≈ 4.87×10^{19}`. A set of that cardinality **cannot** be confined to the base field; the slopes genuinely span a subset of `L`. This *positively confirms* the readme L208–210 ledger discipline: the honest denominator is `q_line=q_gen=q_code=q_chal=17^48`, not `q_gen` of a subfield. ✔
+
+**3.3 Radius and `j` (Q3).** `k+σ = 238`, `δ = 1-238/464 = 226/464`. `def:residue` (L1190) requires `|S_z| ≥ s_δ = ⌈(1-δ)n⌉ = 238`; the construction has `|S| = 238` exactly, at the boundary. `def:badset` (L685) confirms `σ` is the support-excess slack `T` setting `δ_T = 1-(k+T)/n`. `j = n-k-σ = 226 = δn = |D\S|` is the co-support size; neither `def:mca` nor `def:residue` references any `j`. So `j` has **no** official role beyond complement size. ✔
+
+**3.4 `t=1` fits `def:residue` (Q4).** `def:residue` (L1189) requires `1≤t≤r=n-k=232`. Here `t=1`, so `1≤1≤232`. The denominator `E` has degree `t=1` (linear, `E=X-e`, `e∉D` — always available since `|D|=464<q`), `B` has degree `<t=1` (a constant), `Q_z` has degree `<k+t=233`. `t` and `σ` are independent parameters: `σ=6` fixes the radius, `t=1` fixes the denominator degree; `thm:normalform` maximizes over `t` at fixed `δ`, so `Λ^{NC}_{1,δ}` is a legitimate term. ✔ (Contrast `rem:strata` L1209: the monomial stratum is the *other* extreme `t=r`; nothing forces `t=σ` or `t=r`.)
+
+**3.5 Noncontainment = `def:residue` noncontained = `def:mca` (ii) (Q5).** `def:residue`: noncontained iff no `A,G∈𝔽_{<k}` with `A=w/E`, `G=-B/E` on `S_z`. `thm:normalform` proof (L1205–1206) maps this *verbatim* to `def:mca` (ii): containment would give degree-`<k` explanations of both `f` and `g` on `S_z`. The Cycle87 transversality (a dependence among 226 distinct columns of a `231×226` Vandermonde, which has full column rank 226 — impossible) is exactly the failure of containment. So Cycle87 noncontainment ≡ `def:residue` noncontained ≡ `def:mca` (ii). ✔
+
+**3.6 `thm:normalform` needs none of the heavy hypotheses (Q6).** We use only the `(\ge)` direction of `thm:normalform` (L1206): "Given a datum and noncontained-witnessed slopes, the line `f=w/E,g=-B/E` has `P_z=(Q_z-zB)/E` of degree `<k`, `P_z=f+zg` on `S_z` (condition (i)); noncontainedness is verbatim (ii)." This direction needs only `E` (degree `t=1`) nonzero on `D`. It does **not** invoke:
+- multiplicative-subgroup domains (the `X^r`-nonzero hypothesis in the theorem header is for the `(\le)` direction via `lem:denom` at `t=r`; the `(\ge)` lower bound is free of it);
+- quotient separation / aperiodicity (`Λ^{aper}` of `rem:aper` is a *conjecture-side* refinement in `conj:B`, not part of the exact `ε_mca` equality);
+- asymptotic reserve (`η ≥ (1+ε)τ*` is `conj:B` machinery, irrelevant to a single finite `δ`);
+- `t=σ` (independent, see 3.4).
+
+So `thm:normalform` cleanly converts the noncontained residue-line witnesses into genuine `ε_mca` bad slopes: `ε_mca(C,δ) ≥ (1/q)·Λ^{NC}_{1,δ} ≥ N·P/(2q)`. ✔ This is the strongest favorable point — the bridge does not smuggle in any of the asymptotic/quotient apparatus.
+
+**RS↔GRS caveat (clean):** `def:residue`/`thm:normalform` are stated for `RS[F,D,k]`; the Cycle87 object is GRS. But `GRS = Δ_v·RS` for diagonal `Δ_v`, and support-wise agreement, the line structure, and `def:mca` (i)+(ii) are all invariant under coordinatewise scaling (`u|_S=c|_S ⟺ (Δ_{v^{-1}}u)|_S=(Δ_{v^{-1}}c)|_S`). Hence `ε_mca(GRS,δ)=ε_mca(RS[L,D,232],δ)` and `thm:normalform` applies to the un-scaled RS row with identical count. The GRS/RS distinction is immaterial to the numerator. ✔
+
+**3.7 No reduction collapses the numerator below `N·P/2` (Q7).** Against the official numerator:
+- *same-slope collisions*: paid exactly by `μ_proj(U)≤2` and the conservative `÷2` (C87);
+- *same-support / support duplication*: excluded by disjoint two-block structure plus banked support-circuit injectivity (C84);
+- *contained incidences*: excluded by the `231×226` full-column-rank Vandermonde (3.5) — so every counted `z` genuinely satisfies (ii);
+- *quotient periodicity*: `def:mca` numerator counts raw bad `z`; the smooth quotient is *coarser* than exact projective equality, and projection only **merges** classes, so `μ_proj ≤ μ_M ≤ 2` is a true upper bound on collisions — periodicity cannot inflate the fibre;
+- *affine-colour normalization*: the map `z=1/(v·P_T(U))` and the inversion are bijections, cardinality-preserving;
+- *projectivization*: handled through the coarser smooth quotient, already in the `÷2`.
+
+None reduces `#bad z` below `N·P/2`. Indeed the histogram (`m2=42`, `m≥3=0`) shows the true count is far above the conservative bound. ✔
+
+**3.8 Target comparison is the right one (Q8).** `ε_mca > 2^{-128} ⟺ #bad/q_line > 2^{-128} ⟺ #bad > q_line/2^128`. Since `#bad` is an integer, `#bad > q_line/2^128 ⟺ #bad ≥ floor(q_line/2^128)+1`, i.e. strictly exceeding `floor(q_line/2^128)=338,617,018,271,848,945,628`. We have `#bad ≥ N·P/2 = 1,391,152,917,379,006,070,784 > floor`, giving `ε_mca ≥ 1.21×10^{-38} > 2^{-128} ≈ 2.94×10^{-39}`. The `floor(q_line/2^128)` comparison is exactly the correct finite integer test for the `2^{-128}` MCA-failure target of `conj:capacity` L101. ✔
+
+## 4. Field ledger
+
+| symbol | value | role here | check |
+|---|---|---|---|
+| `q_gen` | `17^48` | field generated by domain/word data (`η` deg-16 → `𝔽_{17^16}`; `1,c+1` → `c,U` → `L`) | = `q_line` ✔ |
+| `q_code` | `17^48` | code alphabet `L` | = `q_line` ✔ |
+| `q_line` | `17^48` | field the slope `z` ranges over; **the only field in the target** | denominator of `ε_mca` ✔ |
+| `q_chal` | `17^48` | verifier challenge field | coincides with `q_line`, so no readme-L210 split ambiguity ✔ |
+| base `𝔽_{17^16}` | `≈4.87×10^{19}` | scalar field of `v∈Ω` | **not** a denominator; `N·P/2 > |𝔽_{17^16}|` proves slopes exit it ✔ |
+| `2^-128` target | `floor(q_line/2^128)=3.386×10^{20}` | integer failure threshold | `N·P/2 = 1.39×10^{21}` exceeds it (margin `1.0525×10^{21}`) ✔ |
+
+All four `q`'s equal `17^48`; the four roles are separately justified; only `q_line` enters the target. No ledger merge. ✔
+
+## 5. Verification requirements
+
+1. **Definitional checker (this lemma):** a `verify_official_mca_row` asserting, against `slackMCA_v3.tex` `def:mca`/`def:residue`/`thm:normalform`: (i) `|S|=k+σ=238=s_δ`; (ii) `1≤t=1≤r=232`, `deg E=1`, `deg B<1`, `deg Q_z<233`; (iii) noncontainment = Vandermonde full-rank = (ii); (iv) slopes counted in `L`, denominator `q_line`; (v) `#bad > floor(q_line/2^128)`. All five are discharged above; this is bankable now.
+2. **Census replay (antecedent, still open):** independent rerun of `cycle87_u_smooth_census` reproducing `records=52,747,567,104`, `occupancy=52,747,567,062`, `smooth_max=2`, plus C84 `(P,N,m_max(β)=2)`. Discharges (C84)+(C87). Not redone here (per cycle89 scope).
+3. **Prize-scope reduction (new wall, §3.7/Q9):** a proof that this `n=464=2^4·29` GRS/RS row implies an MCA failure for an actual `conj:capacity` smooth power-of-two-subgroup RS code — or a documented confirmation that the prize spec admits arbitrary finite RS/GRS rows. **Currently absent.**
+
+## 6. Self-audit
+
+**(1) Proved vs not proved.** Proved: the definitional identification — the Cycle87/88 counted set *is* the `def:mca`/`def:residue` support-wise bad-slope set for this RS/GRS row, profile `(t,n,k,σ,j)=(1,464,232,6,226)`, radius `1-238/464`, via the hypothesis-light `(\ge)` half of `thm:normalform`, with `q_line=17^48` and the `floor(q_line/2^128)` test correct. Not proved: (C84)/(C85)/(C87) themselves (antecedents); and **prize relevance**.
+
+**(2) Prize-relevant or model?** Official-**definition**-relevant and conditionally a finite **counterpacket-candidate** numerator, but **not** an official-**prize** refutation. `conj:capacity` (L98) and `thm:main` (L125–145) quantify over *smooth multiplicative-subgroup* RS codes (thm:main uses power-of-two `N|n`); `n=464=2^4·29` is not power-of-two and `D` is not exhibited as such a subgroup. The Cycle87 mechanism is a contrived MITM/projective-occupancy construction, not the locator/Dias-da-Silva–Hamidoune family of `thm:main`.
+
+**(3) First line where it could fail.** Inside the lemma: none found — 3.1–3.8 hold. The first failure point *outside* the granted antecedents is the prize-scope reduction (§5.3): there is currently no chain from a `464`-point GRS row to a prize-family smooth-domain RS code. Within the antecedents, the earliest is (C87) `μ_M(U)≤2` (a different census outcome breaks `÷2`).
+
+**(4) `q`'s and `2^-128` used correctly?** Yes — §4. All `=17^48`; only `q_line` in target; base field is not a denominator and is provably escaped (`N·P/2>17^{16}`); strict-exceed-floor ⟹ `ε_mca>2^{-128}`.
+
+**(5) Could structure reduce the numerator?** No — §3.7. Collisions paid by `μ_proj≤2`+`÷2`; containment excluded by Vandermonde; quotient projection only merges (one-sided); normalizations bijective. Histogram implies true count `≫ N·P/2`.
+
+**(6) PLAN→PROOF/COUNTERPACKET converters.** This is BANKABLE_LEMMA, not PLAN. To reach an unconditional **official MCA failure row**: discharge §5.2 (census replay). To reach a **prize COUNTERPACKET**: additionally discharge §5.3 (domain-family reduction) — the genuinely new object.
+
+## 7. Next exact lemma / construction
+
+Bank:
+
+```
+L-CYCLE89-OFFICIAL-MCA-ROW-IDENTIFICATION  :=  BANKABLE_LEMMA / CONDITIONAL(C84,C85,C87)
+  ε_mca( GRS[464,232]/17^48 , δ=1-238/464 )  ≥  N·P/(2·q_line)  >  floor(q_line/2^128)/q_line
+  with datum (E,B,w), deg E = t = 1, |S| = 238 = s_δ, j = 226 = |D\S|,
+  via the (≥) half of thm:normalform (slackMCA_v3.tex:1197-1207),
+  noncontainment ≡ def:residue ≡ def:mca(ii), denominator = q_line = 17^48.
+```
+
+The next exact construction is **not** another definition check — it is the prize-scope wall, which I name explicitly:
+
+```
+EXACT_NEW_WALL  W-CYCLE90-PRIZE-FAMILY-EMBEDDING:
+  Either (A) exhibit a smooth power-of-two multiplicative subgroup domain
+  D' ≤ 𝔽_q'^× (n'=2^a, ρ∈{1/2,1/4,1/8,1/16}) and a degree-t residue-line
+  datum over RS[𝔽_q',D',ρn'] whose noncontained packing Λ^{NC}_{t,δ'}
+  exceeds floor(q'/2^128) — i.e. port the 464 occupancy mechanism onto a
+  thm:main-family domain; OR
+  (B) prove the official prize spec (proximity_blueprint / ProximityPrize,
+  ABF26) admits an arbitrary finite RS/GRS row, not only smooth-subgroup RS,
+  in which case L-CYCLE89 + census replay already constitutes the counterpacket.
+```
+
+Until `W-CYCLE90` is settled, the route stands at: definitional bridge **proved (conditional)**; census replay **pending**; prize embedding **open**. The honest one-line status is that cycle89 closes the *definition* gap that Cycle88 left open (`response.md` §4.4, audit L120–127), and relocates the live obstruction from "does this match `def:mca`?" (yes) to "is `464=2^4·29` a prize-family row?" (not shown).
