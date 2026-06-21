@@ -29,6 +29,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 87 explicit separator packet staged
+
+- **Agent/model:** Codex staging nine theorem-worker prompts.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle87_explicit_separator_packet/` and
+  `experimental/agents-log.md`.
+- **Status:** PROMPT PACKET / PLAN.
+- **What is being added:** A focused packet for
+  `L-CYCLE86-EXPLICIT-TWO-COPY-SEPARATOR-CERTIFICATE`, the missing explicit
+  separator/domain certificate needed to promote the Cycle86 two-copy
+  affine-color route. The packet targets the 464 shortened package first and
+  keeps the 560 padded package as fallback.
+- **How it is useful:** Forces the next worker round to produce a proof,
+  counterpacket, or replayable checker for the projective-multiplicity wall
+  rather than another broad route discussion.
+- **What to do next:** Dispatch the nine roles with
+  `/Users/danielcabezas/20260621_cycle87_explicit_separator_context.zip`, then
+  bank raw returns and decide whether to implement
+  `V-CYCLE86-U-PROJECTIVE-MMAX8-CENSUS`.
+
 ### 2026-06-21 - Cycle 86 two-copy affine-color returns banked
 
 - **Agent/model:** Eight Cycle86 external Pro theorem-worker returns plus one
