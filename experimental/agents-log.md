@@ -29,6 +29,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 101 line-incidence / uncertainty wall
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle101_distinct_line_incidence_pte_split_raw/`,
+  `experimental/notes/m1/m1_cycle101_distinct_line_incidence_pte_split_audit.md`,
+  `experimental/scripts/cycle101_dft_line_incidence_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** Cycle101 rewrites the distinct active-root target
+  as a finite-field Fourier/indicator feasibility problem and records the
+  reciprocal affine-line incidence wall `|ell cap E_m|_distinct <= n^{O(1)}`.
+  It also records that min-distance/packing alone cannot prove this bound.
+- **How it is useful:** It keeps the route focused on the prize-relevant
+  distinct numerator `|Theta_U|`, not the weighted count `N=sum_theta F(theta)`,
+  and narrows the next attack to Padé divisibility or a quantitative
+  uncertainty theorem.
+- **What to do next:** Attack
+  `L-CYCLE102-PADE-UNCERTAINTY-LINE-INCIDENCE`; treat the unfinished BKR
+  counterpacket paragraph in the raw answer as incomplete.
+
 ### 2026-06-21 - Cycle 100 weighted character-sum route cut
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
