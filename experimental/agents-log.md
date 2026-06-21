@@ -29,6 +29,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 95 anchored per-fiber t=1 audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle95_anchored_perfiber_t1_raw/`,
+  `experimental/notes/m1/m1_cycle95_anchored_perfiber_t1_audit.md`,
+  `experimental/notes/m1/cycle96_arbitrary_word_norm_sieve_prompt.md`,
+  `experimental/scripts/cycle95_t1_eval_list_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** Cycle95 banks
+  `L-CYCLE95-ANCHORED-T1-EVAL-LIST`: in the `t=1`, `E=X-alpha`, `B=1`
+  stratum, bad slopes are exactly the `eval_alpha` image of the arbitrary-word
+  dimension-`k+1` RS list, and noncontainment is automatic.
+- **How it is useful:** It collapses the minimal anchored MCA wall onto the
+  arbitrary-word locator/list wall instead of leaving a separate `t=1` problem.
+- **What to do next:** Attack `L-CYCLE96-ARBITRARY-WORD-NORM-SIEVE`, the
+  arbitrary-word replacement for the monomial Galois/norm sieve.
+
 ### 2026-06-21 - Cycle 94 upper residue-cloud wall return audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
