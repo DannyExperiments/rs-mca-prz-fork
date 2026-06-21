@@ -29,6 +29,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 106 failed k-free incidence launch
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle106_kfree_aperiodic_moment_curve_incidence_raw/`,
+  `experimental/notes/m1/m1_cycle106_kfree_aperiodic_moment_curve_incidence_audit.md`,
+  and `experimental/agents-log.md`.
+- **Status:** AUDIT / HARNESS_FAILED.
+- **What is being added:** Cycle106 is preserved as a failed local staging
+  attempt. The run ended with `CLAUDE_CAPTURE_WARNING_FATAL`; the manifest says
+  the project source and file index were not mounted because copying a large
+  historical raw JSONL hit `ENOSPC`.
+- **How it is useful:** This prevents accidental promotion of a non-answer and
+  identifies the operational blocker before the next theorem launch.
+- **What to do next:** Build a compact source snapshot excluding raw historical
+  JSONL dumps, verify `projectSource.included=true` and `fileIndex.included=true`,
+  then relaunch `W-CYCLE106-KFREE-APERIODIC-MOMENT-CURVE-INCIDENCE`.
+
 ### 2026-06-21 - Cycle 105 k-free uniform bandwidth reduction
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by

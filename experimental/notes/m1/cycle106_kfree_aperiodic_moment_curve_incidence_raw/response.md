@@ -1,0 +1,1 @@
+I'll start by reading the project source files to understand the current state of the work.Bash is denied. Let me use the view tool to explore the filesystem instead.The `view` tool isn't available in this harness. Let me use Read to explore. I'll try the likely paths.

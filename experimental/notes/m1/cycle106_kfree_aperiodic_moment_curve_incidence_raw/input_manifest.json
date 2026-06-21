@@ -1,0 +1,46 @@
+{
+  "project": {
+    "id": "rs-mca-proximity-prize-research",
+    "name": "RS-MCA Proximity Prize Research",
+    "description": "Isolated RS-MCA / proximity prize research workspace. Keep separate from Erdos 361 and 346 theorem state.",
+    "sourceDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/source_files",
+    "startFiles": [
+      "README_FOR_FABLE.md",
+      "DIRECTOR_STATE.md",
+      "DIRECTOR_STATE.json",
+      "ROUTE_BOARD_CURRENT.md",
+      "ACTIVE_WALLS.md",
+      "BANKED_LEMMAS.md",
+      "CUTS_AND_FALSE_ROUTES.md",
+      "INSTANCE_REGISTRY.json",
+      "NEXT_PROMPT_QUEUE.md"
+    ],
+    "path": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research"
+  },
+  "runId": "2026-06-21T16-05-57-059Z-cycle106-kfree-aperiodic-moment-curve-incidence-55832618",
+  "runMode": "artifact_stream",
+  "runDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T16-05-57-059Z-cycle106-kfree-aperiodic-moment-curve-incidence-55832618",
+  "uploadDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T16-05-57-059Z-cycle106-kfree-aperiodic-moment-curve-incidence-55832618/input_attachments",
+  "projectCopyDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T16-05-57-059Z-cycle106-kfree-aperiodic-moment-curve-incidence-55832618/input_project",
+  "outputDir": "/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T16-05-57-059Z-cycle106-kfree-aperiodic-moment-curve-incidence-55832618/output_files",
+  "includeProjectSource": true,
+  "allowOutputFiles": false,
+  "allowedTools": [
+    "Read",
+    "Glob",
+    "Grep"
+  ],
+  "embeddedTextAttachments": [],
+  "stagedFiles": [],
+  "extractedArchives": [],
+  "archiveWarnings": [],
+  "projectSource": {
+    "included": false,
+    "reason": "ENOSPC: no space left on device, copyfile '/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/source_files/current_repo_snapshot/experimental/notes/m1/cycle66_sevenfold_product_occupancy_raw/raw_response.jsonl' -> '/Users/danielcabezas/packy-fable-ui/projects/rs-mca-proximity-prize-research/runs/2026-06-21T16-05-57-059Z-cycle106-kfree-aperiodic-moment-curve-incidence-55832618/input_project/current_repo_snapshot/experimental/notes/m1/cycle66_sevenfold_product_occupancy_raw/raw_response.jsonl'"
+  },
+  "fileIndex": {
+    "included": false,
+    "reason": "no_readable_files"
+  },
+  "promptChars": 3789
+}

@@ -1,0 +1,15 @@
+{
+  "format": "stream-json",
+  "answer": "I'll start by reading the project source files to understand the current state of the work.Bash is denied. Let me use the view tool to explore the filesystem instead.The `view` tool isn't available in this harness. Let me use Read to explore. I'll try the likely paths.",
+  "usage": null,
+  "modelUsage": null,
+  "stop_reason": null,
+  "terminal_reason": null,
+  "is_error": false,
+  "api_error_status": null,
+  "captureWarning": "Claude CLI stream-json ended without a final result event",
+  "parseErrors": [],
+  "eventCount": 194,
+  "stdoutBytes": 59959,
+  "raw_stderr": "\nTimed out after 5400000ms"
+}
