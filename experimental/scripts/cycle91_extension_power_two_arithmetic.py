@@ -50,6 +50,7 @@ def main() -> None:
         for w in range(ell + 1)
         if (w - ell) % 2 == 0
     )
+    quotient_profile_bits = log2(comb(127, 8))
     entropy = h2_num_den(rho_num, rho_den)
     tau_star_leading = entropy / log2(q)
     gap = 1 / n
@@ -75,6 +76,9 @@ def main() -> None:
         "exact_binomial_reserve_margin_bits": log2(q) - log2(support_count),
         "log2_single_weight_count": log2(single_weight_count),
         "log2_parity_sum_count": log2(parity_sum_count),
+        "mca_margin_bits_single_weight": log2(q) - log2(single_weight_count),
+        "mca_margin_bits_parity_sum": log2(q) - log2(parity_sum_count),
+        "quotient_profile_bits_M2": quotient_profile_bits,
         "h2_1_16": entropy,
         "tau_star_leading": tau_star_leading,
         "gap": gap,

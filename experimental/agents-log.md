@@ -29,6 +29,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 93 corrected reserve and Section 7 splice audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle93_corrected_reserve_section7_raw/`,
+  `experimental/notes/m1/m1_cycle93_corrected_reserve_section7_audit.md`,
+  `experimental/notes/m1/cycle94_upper_wall_return_prompt.md`,
+  `experimental/scripts/cycle91_extension_power_two_arithmetic.py`, and
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** Cycle93 banks the generated-extension cyclotomic
+  floor but cuts the claim that Cycle91 is above the full corrected reserve or
+  a Section 7 scalar-coset corollary.
+- **How it is useful:** Separates the entropy-scale lower certificate from
+  the quotient-profile corrected-reserve frontier, preventing another false
+  lower-side promotion.
+- **What to do next:** Return to the main upper-side wall
+  `W-OFFICIAL-MCA-MATCHING-UPPER-ARBITRARY-ANCHOR-RESIDUE-CLOUD`.
+
 ### 2026-06-21 - Cycle 92 extension-field admissibility audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
