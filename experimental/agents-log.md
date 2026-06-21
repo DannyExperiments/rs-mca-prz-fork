@@ -29,6 +29,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 104 fixed-bandwidth divisor incidence
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle104_bandwidth_k_divisor_incidence_raw/`,
+  `experimental/notes/m1/m1_cycle104_bandwidth_k_divisor_incidence_audit.md`,
+  `experimental/notes/m1/cycle105_uniform_bandwidth_divisor_incidence_prompt.md`,
+  `experimental/scripts/cycle104_fixed_k_divisor_incidence_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROOF / EXACT_NEW_WALL.
+- **What is being added:** Cycle104 proves the fixed-bandwidth bound
+  `|Theta_U| <= binom(n,k)(sigma+1)`, closing `k=2` and every fixed `k`, and
+  moves the live wall to uniform-in-`k` bandwidth.
+- **How it is useful:** It removes the first `k>=2` obstruction and isolates
+  the remaining upper-side problem as a growing-bandwidth bound rather than a
+  fixed-stratum issue.
+- **What to do next:** Attack
+  `W-CYCLE105-UNIFORM-BANDWIDTH-DIVISOR-INCIDENCE`, proving a `k`-independent
+  polynomial bound or finding a source-valid aperiodic counterpacket.
+
 ### 2026-06-21 - Cycle 103 B1 e1-image flat-variety bound
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
