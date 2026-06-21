@@ -29,6 +29,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-22 - Cycle 106 9-Pro wallbreaker packet
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle106_wallbreaker_9pro/`,
+  `experimental/notes/m1/cycle106_wallbreaker_9pro_packet.zip`, and
+  `experimental/agents-log.md`.
+- **Status:** PLAN / PROMPT_PACKET.
+- **What is being added:** A compact nine-role wallbreaker packet for
+  `W-CYCLE106-KFREE-APERIODIC-MOMENT-CURVE-INCIDENCE`, with a shared common
+  prompt, small context folder, role-specific prompts, and checksums.
+- **How it is useful:** It lets the next Pro round attack Cycle106 in parallel
+  without uploading large raw historical JSONL files or repeating the failed
+  Cycle106 Fable source-snapshot problem.
+- **What to do next:** Dispatch the nine role prompts, save all raw returns and
+  files, then audit conservatively under the literal labels `PROOF`,
+  `COUNTERPACKET`, `BANKABLE_LEMMA`, `ROUTE_CUT`, `EXACT_NEW_WALL`, `AUDIT`,
+  or `PLAN`.
+
 ### 2026-06-21 - Cycle 106 failed k-free incidence launch
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
