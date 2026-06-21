@@ -29,6 +29,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 94 upper residue-cloud wall return audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle94_upper_wall_return_raw/`,
+  `experimental/notes/m1/m1_cycle94_upper_wall_return_audit.md`,
+  `experimental/notes/m1/cycle95_anchored_perfiber_t1_prompt.md`,
+  `experimental/scripts/cycle94_anchored_secant_toy_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PLAN / BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** Cycle94 banks
+  `L-CYCLE94-ANCHORED-SECANT-INTERSECTION`: for one residue datum `(E,B,w)`,
+  distinct bad slopes have support intersection at most `k+t-1`.
+- **How it is useful:** This is an official upper-side structural lemma, but
+  it also cuts the pairwise/secant-only route because constant-weight families
+  satisfying this intersection bound can still be exponentially large.
+- **What to do next:** Attack the minimal arbitrary-anchor atom
+  `L-CYCLE95-ANCHORED-PERFIBER-COLLISION-T1` with `t=1`, `E=X-alpha`,
+  `B=1`, and arbitrary anchor `w`.
+
 ### 2026-06-21 - Cycle 93 corrected reserve and Section 7 splice audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
