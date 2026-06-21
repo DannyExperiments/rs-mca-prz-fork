@@ -29,6 +29,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 105 k-free uniform bandwidth reduction
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle105_uniform_bandwidth_divisor_incidence_raw/`,
+  `experimental/notes/m1/m1_cycle105_uniform_bandwidth_divisor_incidence_audit.md`,
+  `experimental/notes/m1/cycle106_kfree_aperiodic_moment_curve_incidence_prompt.md`,
+  `experimental/scripts/cycle105_kfree_collapse_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** Cycle105 banks the k-free collapse
+  `theta active <=> (g_1(theta),...,g_{sigma+1}(theta)) in M_s`, plus
+  complement duality `M_s ~= M_{n-s}`.
+- **How it is useful:** It removes the intrinsic `binom(n,k)` dependence from
+  the active-root formulation. The remaining wall is a single aperiodic
+  moment-curve/symmetric-prefix incidence bound.
+- **What to do next:** Attack
+  `W-CYCLE106-KFREE-APERIODIC-MOMENT-CURVE-INCIDENCE`, proving the distinct
+  support bound with aperiodicity or finding a source-valid aperiodic
+  counterpacket.
+
 ### 2026-06-21 - Cycle 104 fixed-bandwidth divisor incidence
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
