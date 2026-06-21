@@ -29,6 +29,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 90 prize-family embedding audit
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle90_prize_family_embedding_raw/`,
+  `experimental/notes/m1/m1_cycle90_prize_family_embedding_audit.md`,
+  `experimental/notes/m1/cycle91_above_reserve_power_two_prompt.md`, and
+  `experimental/agents-log.md`.
+- **Status:** ROUTE_CUT / BANKABLE_LEMMA / CONDITIONAL / EXACT_NEW_WALL.
+- **What is being added:** Cycle90 cuts the direct upgrade of the Cycle87
+  `n=464=2^4*29` row to the smooth power-of-two subgroup prize family and
+  cuts the literal 464-to-power-of-two port by the factor-29 obstruction. It
+  also banks a separate below-reserve power-of-two subgroup failure row over
+  `17^48` with `|H|=256`, `rho=1/2`, and `t=1`.
+- **How it is useful:** It prevents overclaiming the 464 row as a prize
+  counterpacket while preserving a real smooth-subgroup lower-branch MCA
+  certificate. The live wall is now
+  `W-CYCLE91-ABOVE-RESERVE-POWER-OF-TWO-OCCUPANCY`.
+- **What to do next:** Run Cycle91 against the above-reserve power-of-two
+  occupancy wall, seeking either a constructive packet, a quotient-floor reach
+  extension, or a precise route cut for the current Cycle84/Cycle87 mechanism.
+
 ### 2026-06-21 - Cycle 89 official MCA row identification audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
