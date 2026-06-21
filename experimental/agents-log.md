@@ -29,6 +29,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 100 weighted character-sum route cut
+
+- **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle100_subgroup_elemsym_character_sum_raw/`,
+  `experimental/notes/m1/m1_cycle100_subgroup_elemsym_character_sum_audit.md`,
+  `experimental/notes/m1/cycle101_distinct_line_incidence_pte_split_prompt.md`,
+  `experimental/scripts/cycle100_support_fiber_split_check.py`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being added:** Cycle100 separates the weighted character-sum count
+  `N=sum_theta F(theta)` from the prize-relevant distinct-root count
+  `|Theta_U|`, and records the auxiliary `F_max` multiplicity wall.
+- **How it is useful:** It prevents overfitting the route to a stronger
+  weighted theorem and redirects the upper-side attack to distinct affine-line
+  incidence plus a separate subgroup-PTE fiber bound.
+- **What to do next:** Attack
+  `L-CYCLE101-DISTINCT-LINE-INCIDENCE-OR-PTE-FIBER-SPLIT`, prioritizing the
+  distinct-root line-incidence bound.
+
 ### 2026-06-21 - Cycle 99 aperiodic moment-curve incidence audit
 
 - **Agent/model:** Claude Opus 4.8 through Fable artifact stream, audited by
