@@ -29,6 +29,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-21 - Cycle 84 GitHub replay passed
+
+- **Agent/model:** Codex plus GitHub Actions public replay.
+- **Files added or changed:**
+  `.github/workflows/cycle84-certificate-replay.yml`,
+  `experimental/notes/m1/cycle84_github_replay_receipt.md`,
+  `experimental/notes/m1/m1_cycle84_wallbreaker_returns_audit.md`, and
+  `experimental/agents-log.md`.
+- **Status:** PROOF / BANKABLE_LEMMA / AUDIT.
+- **What is being added:** GitHub Actions run `27889140962` passed both jobs:
+  `Light certificate chain` and `Full projected census and kernel lift`. The
+  public replay returned `CYCLE84_EXACT_MMAX2_CERTIFICATE_VERIFIED`,
+  `TAU_FOLDED_PROJECTED_MMAX_LE_12`, and `KERNEL_3_DUPLICATE_LIFT_COMPLETE`,
+  with `m_max(beta)=2`, `Occ(beta)=52,747,567,092`, and ordered off-diagonal
+  energy `D=24`.
+- **How it is useful:** Upgrades Cycle84 from a worker-provided full census plus
+  local lightweight verifier to a public GitHub full replay receipt. This
+  closes the finite model wall `W-CYCLE84-MITM-DUPLICATE-DETECTOR-EXECUTION`;
+  it still does not prove the full RS-MCA/prize theorem.
+- **What to do next:** Execute
+  `L-CYCLE85-EXACT-ROLE05-OCCUPANCY-TRANSFER`: splice the exact finite
+  occupancy `52,747,567,092 > 2^32` through the banked Cycle65-68
+  locator-evaluation reduction and record the finite frontier-ledger entry.
+
 ### 2026-06-21 - Cycle 84 GitHub replay workflow template staged
 
 - **Agent/model:** Codex.

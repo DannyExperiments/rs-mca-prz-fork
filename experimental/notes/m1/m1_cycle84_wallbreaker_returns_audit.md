@@ -6,10 +6,20 @@
 PROOF / BANKABLE_LEMMA
 ```
 
-Confidence: high that the Cycle84 finite wall is resolved, conditional on the
-worker-provided full census outputs being accepted as executed artifacts. Codex
-locally ran the lightweight verifier bundled with the strongest certificate and
-it returned:
+Confidence: high that the Cycle84 finite wall is resolved. The first audit was
+based on worker-provided full census outputs plus a local lightweight verifier.
+That has now been upgraded by a public GitHub Actions replay of the exact
+certificate chain, optimized projected census, and kernel-3 duplicate lift:
+
+```text
+run URL: https://github.com/DannyExperiments/rs-mca-prz-fork/actions/runs/27889140962
+run id: 27889140962
+status: completed
+conclusion: success
+```
+
+The light certificate job and the full replay job both concluded `success`.
+The local verifier and public replay agree on:
 
 ```json
 {
@@ -54,6 +64,12 @@ This directory includes:
 - proof/checker bundles;
 - `LOCAL_VERIFIER_RESULT.json`;
 - `SHA256SUMS.txt`.
+
+The public replay receipt is recorded in:
+
+```text
+experimental/notes/m1/cycle84_github_replay_receipt.md
+```
 
 ## Main Numerical Result
 
@@ -120,6 +136,25 @@ The local verifier directly checks the certificate chain, the 336 slot logs,
 the projected census output, the kernel-3 lift, and all 30 lifted pairs in the
 finite field. It does not itself regenerate the projected census.
 
+After the local audit, Codex installed and dispatched a public GitHub Actions
+workflow. GitHub Actions run `27889140962` recompiled and reran the optimized
+projected census and kernel-3 duplicate lift on the public PR branch. It
+returned:
+
+```text
+TAU_FOLDED_PROJECTED_MMAX_LE_12
+KERNEL_3_DUPLICATE_LIFT_COMPLETE
+Projected census replay verified
+Kernel lift replay verified
+```
+
+with the same exact true values:
+
+```text
+exact_true_m_max = 2
+exact_true_occupancy = 52,747,567,092
+```
+
 ## Route Consequence
 
 The finite wall:
@@ -155,4 +190,3 @@ Occ(beta)=52,747,567,092 > 2^32.
 
 This should be treated as a finite-model obstruction certificate, not as the
 full RS-MCA/prize theorem.
-
