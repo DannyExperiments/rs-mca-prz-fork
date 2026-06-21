@@ -49,6 +49,21 @@ Keep entries concise and link to the relevant files.
   bank raw returns and decide whether to implement
   `V-CYCLE86-U-PROJECTIVE-MMAX8-CENSUS`.
 
+### 2026-06-21 - Cycle 87 dispatch partially started
+
+- **Agent/model:** Codex browser dispatch into ChatGPT Pro.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle87_explicit_separator_dispatch_receipt.md` and
+  `experimental/agents-log.md`.
+- **Status:** PARTIAL DISPATCH / RATE-LIMIT PAUSE.
+- **What is being added:** Roles 01-03 were sent successfully with the Cycle87
+  context zip; Role 04 was filled and attached but blocked by ChatGPT's
+  `Too many requests` guard; Roles 05-09 remain unsent.
+- **How it is useful:** Preserves the exact dispatch state before the
+  heartbeat pause, so no sent/unsent lane is confused later.
+- **What to do next:** Resume after the request guard clears, send Roles
+  04-09, update the receipt with final URLs, then bank returns.
+
 ### 2026-06-21 - Cycle 86 two-copy affine-color returns banked
 
 - **Agent/model:** Eight Cycle86 external Pro theorem-worker returns plus one
