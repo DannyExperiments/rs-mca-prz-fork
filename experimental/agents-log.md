@@ -2434,3 +2434,31 @@ Keep entries concise and link to the relevant files.
   nine Pro instances with the common prompt and one role prompt each. Audit
   returns conservatively; do not promote finite/model evidence to a prize proof
   without an official transfer theorem and field ledger.
+
+### 2026-06-23 - Cycle115 Cycle84-to-RS-MCA transfer returns audited
+
+- **Agent/model:** Codex local audit of pasted 9-Pro returns.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle115_cycle84_to_mca_transfer_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle115_cycle84_to_mca_transfer_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** PROOF / BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL.
+- **What is being banked:** The round converged on an exact fixed-jet
+  locator-to-RS-MCA transfer. The Cycle84 finite product spectrum gives a
+  finite RS support-wise MCA / `LD_sw` lower bound with numerator
+  `52,747,567,092` for `RS[F_17^16,<eta>,137]` at `delta=113/256`. A smooth
+  agreement-padding lift gives `RS[F_17^32,<theta>,256]`, `|<theta>|=512`,
+  agreement `262`, `delta=125/256`, and the same numerator, exceeding the
+  native `floor(17^32/2^128)=6` target.
+- **How it is useful:** This appears to answer PRZ's transfer question at the
+  finite/paper-facing level: Cycle84 is no longer only a color-filtered model
+  computation; via the fixed-jet theorem it yields a concrete RS-MCA /
+  support-wise line-decoding obstruction row. The result remains carefully
+  bounded: it is not ordinary list decoding, not an asymptotic theorem, not a
+  protocol soundness failure, and not an official Proximity Prize solve.
+- **What to do next:** Build
+  `V-CYCLE116-STANDALONE-C84-TO-RS-MCA-LD-TRANSFER-CERTIFICATE`: a compact
+  theorem note and tiny verifier proving the fixed-jet transfer, native
+  Cycle84 row, smooth `[512,256]` lift, and q-ledger, with explicit
+  non-promotion language for prize/status boundaries.
