@@ -1,0 +1,25 @@
+{
+  "clean_response_chars": 19295,
+  "clean_response_start_line_1based": 155,
+  "contains_regenerate": false,
+  "contains_stop_generating": false,
+  "page_text_chars": 24551,
+  "response_best_effort_chars": 23225,
+  "role": "02_T1_COUNTERPACKET_HUNTER",
+  "sha256_clean_response": "2c9b9dd5079b687ed226b1b639e4eb6a1f096d9dd9df70839b4e0395744cff95",
+  "sha256_page_text": "41ab5295514013fdba899417c1a74052018a1dd1838a2ad413815f0edad3334e",
+  "sha256_response_best_effort": "a998bb6114126bddaa262f2892a080878964a100008910e5591df9f2d1b102d2",
+  "slug": "role02_t1_counterpacket_hunter",
+  "status_markers": {
+    "AUDIT": 2,
+    "BANKABLE_LEMMA": 1,
+    "COUNTERPACKET": 8,
+    "EXACT_NEW_WALL": 2,
+    "PLAN": 3,
+    "PROOF": 2,
+    "ROUTE_CUT": 2
+  },
+  "tab_index": 9,
+  "title": "Mathematical Proof Request",
+  "url": "https://chatgpt.com/c/6a38cf70-ce10-83ec-bf0f-d3f46baa0053"
+}

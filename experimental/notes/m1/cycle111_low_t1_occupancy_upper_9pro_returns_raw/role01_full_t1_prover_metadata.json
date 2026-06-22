@@ -1,0 +1,25 @@
+{
+  "clean_response_chars": 17421,
+  "clean_response_start_line_1based": 151,
+  "contains_regenerate": false,
+  "contains_stop_generating": false,
+  "page_text_chars": 22415,
+  "response_best_effort_chars": 21092,
+  "role": "01_FULL_T1_PROVER",
+  "sha256_clean_response": "f433e45ceac4391465045696f9cd2590acd45d1e7b01b0d15bda9dd1b699a05a",
+  "sha256_page_text": "ee207930109ee3911f5c6b1c0ad85d3204084c5def0587d0760fcca156bb35cb",
+  "sha256_response_best_effort": "c1c8e66a63df3aad0bab6d0a03c84c9d2cdd4e8d4caffe8317202fdd9d55594a",
+  "slug": "role01_full_t1_prover",
+  "status_markers": {
+    "AUDIT": 5,
+    "BANKABLE_LEMMA": 2,
+    "COUNTERPACKET": 7,
+    "EXACT_NEW_WALL": 3,
+    "PLAN": 4,
+    "PROOF": 2,
+    "ROUTE_CUT": 3
+  },
+  "tab_index": 1,
+  "title": "RS-MCA Proximity Prize",
+  "url": "https://chatgpt.com/c/6a38cf46-9020-83ec-9ab4-3d46e237c66d"
+}

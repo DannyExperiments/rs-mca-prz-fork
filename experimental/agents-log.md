@@ -29,6 +29,33 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-22 - Cycle111 LOW t=1 occupancy upper 9-Pro returns
+
+- **Agent/model:** Nine ChatGPT Pro theorem-worker roles, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle111_low_t1_occupancy_upper_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle111_low_t1_occupancy_upper_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`, and
+  `experimental/agents-log.md`.
+- **Status:** COUNTERPACKET / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** The round cuts the literal pure main-term LOW
+  `t=1` occupancy theorem
+  `|colors| <= C*binom(n,k+sigma)/q_gen^(sigma-1)` as stated. The banked
+  failure is the missing `q_gen^(sigma-1)` entropy loss for prefix /
+  elementary-symmetric constraints; several roles give same-field or
+  monic-anchor/block-prefix counterpacket mechanisms to the unqualified
+  theorem.
+- **How it is useful:** Retires `L-CYCLE111-LOW-T1-OCCUPANCY-UPPER` as a
+  viable unqualified route theorem and replaces it with the source-admissibility
+  or exact-charge decision. The result is source-route relevant, not a prize
+  proof and not yet an official source-valid counterpacket.
+- **What to do next:** Attack
+  `L-CYCLE112-SOURCE-APCORR-T1-BLOCK-PACKET-ADMISSIBILITY-OR-CHARGE`: freeze
+  the official source `AP_corr` and charge predicates, then either accept a
+  `SOURCE_VALID_LOW_T1_COUNTERPACKET` with all charges absent/paid and
+  free colors above `q_line/2^128`, or emit an exact source-visible charge /
+  local-limit theorem with integer q-ledger cap.
+
 ### 2026-06-22 - Cycle110 LOW calibrated occupancy no-internet 9-lane Fable 4.8 returns
 
 - **Agent/model:** Nine Fable 4.8 theorem-worker roles, audited by Codex.

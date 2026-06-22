@@ -1,0 +1,25 @@
+{
+  "clean_response_chars": 4014,
+  "clean_response_start_line_1based": 2584,
+  "contains_regenerate": false,
+  "contains_stop_generating": false,
+  "page_text_chars": 21912,
+  "response_best_effort_chars": 20585,
+  "role": "05_ALGEBRAIC_GEOMETRY_INCIDENCE",
+  "sha256_clean_response": "aff115364b60b963212506165031851db1b1ed705322d1ca4fbfac01f9a1421e",
+  "sha256_page_text": "41fd421518e86753e83e84f648cc0c3346998d1f2be89e7a98bc2c5f9f7ae29a",
+  "sha256_response_best_effort": "70f70388363eecdf76367b8330e1da4e5b4ef3eacb27ff55d96ebf35bf2b7ac8",
+  "slug": "role05_algebraic_geometry_incidence",
+  "status_markers": {
+    "AUDIT": 2,
+    "BANKABLE_LEMMA": 3,
+    "COUNTERPACKET": 9,
+    "EXACT_NEW_WALL": 2,
+    "PLAN": 3,
+    "PROOF": 3,
+    "ROUTE_CUT": 3
+  },
+  "tab_index": 6,
+  "title": "Mathematical Problem Analysis",
+  "url": "https://chatgpt.com/c/6a38cf91-eab0-83ec-995a-6d3ec423b615"
+}

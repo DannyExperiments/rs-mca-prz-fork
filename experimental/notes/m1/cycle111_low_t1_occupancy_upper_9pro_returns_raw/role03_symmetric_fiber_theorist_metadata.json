@@ -1,0 +1,25 @@
+{
+  "clean_response_chars": 16688,
+  "clean_response_start_line_1based": 163,
+  "contains_regenerate": false,
+  "contains_stop_generating": false,
+  "page_text_chars": 21746,
+  "response_best_effort_chars": 20420,
+  "role": "03_SYMMETRIC_FIBER_THEORIST",
+  "sha256_clean_response": "c813b3dd613e676b984366bd348085b1951313f425d961dc00808eef8972b144",
+  "sha256_page_text": "e5c950ea89357b9b60d1ed2bf3a4a8c28691728c1fed75ba8b561501c7efe844",
+  "sha256_response_best_effort": "ae0eb6e0c5cb844374fb8ec759fc1efacf8bb0a81bb706ea1742009cdac280ba",
+  "slug": "role03_symmetric_fiber_theorist",
+  "status_markers": {
+    "AUDIT": 2,
+    "BANKABLE_LEMMA": 2,
+    "COUNTERPACKET": 10,
+    "EXACT_NEW_WALL": 2,
+    "PLAN": 2,
+    "PROOF": 2,
+    "ROUTE_CUT": 1
+  },
+  "tab_index": 8,
+  "title": "Cycle111 Problem Analysis",
+  "url": "https://chatgpt.com/c/6a38cf7b-e734-83ec-992f-7efdf4597b69"
+}

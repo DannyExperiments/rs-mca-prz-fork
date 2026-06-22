@@ -1,0 +1,203 @@
+{
+  "captured_at": "2026-06-22T07:14:52Z",
+  "items": [
+    {
+      "contains_regenerate": false,
+      "contains_stop_generating": false,
+      "page_text_chars": 22415,
+      "response_best_effort_chars": 21092,
+      "role": "01_FULL_T1_PROVER",
+      "sha256_page_text": "ee207930109ee3911f5c6b1c0ad85d3204084c5def0587d0760fcca156bb35cb",
+      "sha256_response_best_effort": "c1c8e66a63df3aad0bab6d0a03c84c9d2cdd4e8d4caffe8317202fdd9d55594a",
+      "slug": "role01_full_t1_prover",
+      "status_markers": {
+        "AUDIT": 5,
+        "BANKABLE_LEMMA": 2,
+        "COUNTERPACKET": 7,
+        "EXACT_NEW_WALL": 3,
+        "PLAN": 4,
+        "PROOF": 2,
+        "ROUTE_CUT": 3
+      },
+      "tab_index": 1,
+      "title": "RS-MCA Proximity Prize",
+      "url": "https://chatgpt.com/c/6a38cf46-9020-83ec-9ab4-3d46e237c66d"
+    },
+    {
+      "contains_regenerate": false,
+      "contains_stop_generating": false,
+      "page_text_chars": 14,
+      "response_best_effort_chars": 12,
+      "role": "09_RUTHLESS_REFEREE_SYNTHESIS",
+      "sha256_page_text": "50190bd75cf138ac5532df7726b3221ed93e34c05e724ee98ebe07c481d5cda8",
+      "sha256_response_best_effort": "4aff15de2f313404d906c846b8f4872769984f6421729ab41db5b3779a67e501",
+      "slug": "role09_ruthless_referee_synthesis",
+      "status_markers": {
+        "AUDIT": 0,
+        "BANKABLE_LEMMA": 0,
+        "COUNTERPACKET": 0,
+        "EXACT_NEW_WALL": 0,
+        "PLAN": 0,
+        "PROOF": 0,
+        "ROUTE_CUT": 0
+      },
+      "tab_index": 2,
+      "title": "L-Cycle111 Theorem Discussion",
+      "url": "https://chatgpt.com/c/6a38cfbe-3d64-83ec-9857-407111bfd77d"
+    },
+    {
+      "contains_regenerate": false,
+      "contains_stop_generating": false,
+      "page_text_chars": 18861,
+      "response_best_effort_chars": 17535,
+      "role": "08_CERTIFICATE_ENGINEER",
+      "sha256_page_text": "06917a5327951dae5929ce96c6661e91e42a6997b49b6d44648fdb7d9a02e688",
+      "sha256_response_best_effort": "04bba17bf937ad2e62116bfe86ffecc1289b15b6f4f526d32ec3f1943095658f",
+      "slug": "role08_certificate_engineer",
+      "status_markers": {
+        "AUDIT": 2,
+        "BANKABLE_LEMMA": 2,
+        "COUNTERPACKET": 11,
+        "EXACT_NEW_WALL": 1,
+        "PLAN": 5,
+        "PROOF": 5,
+        "ROUTE_CUT": 7
+      },
+      "tab_index": 3,
+      "title": "Mathematical Theorem Approach",
+      "url": "https://chatgpt.com/c/6a38cfb2-fc5c-83ec-a803-16a0212e9073"
+    },
+    {
+      "contains_regenerate": false,
+      "contains_stop_generating": false,
+      "page_text_chars": 18378,
+      "response_best_effort_chars": 17053,
+      "role": "07_QLEDGER_FIELD_TRANSFER",
+      "sha256_page_text": "9ef1fd175cb64ec510052c1b5792a448b9119059299b61d21cd54ee487007021",
+      "sha256_response_best_effort": "31e9a1ec5da0a3e4c62d1e856083501b865dca22bb7367fbb10cc2bee37330eb",
+      "slug": "role07_qledger_field_transfer",
+      "status_markers": {
+        "AUDIT": 2,
+        "BANKABLE_LEMMA": 2,
+        "COUNTERPACKET": 11,
+        "EXACT_NEW_WALL": 2,
+        "PLAN": 2,
+        "PROOF": 4,
+        "ROUTE_CUT": 1
+      },
+      "tab_index": 4,
+      "title": "Mathematical Theorem Request",
+      "url": "https://chatgpt.com/c/6a38cfa9-6438-83ec-938e-15d1d06b9fe2"
+    },
+    {
+      "contains_regenerate": false,
+      "contains_stop_generating": false,
+      "page_text_chars": 26951,
+      "response_best_effort_chars": 25625,
+      "role": "06_APCORR_CHARGE_FORMALIZER",
+      "sha256_page_text": "2328b4e58945094e138a027efa0156f1c9a1a18978374065cc40296cc3a58b1e",
+      "sha256_response_best_effort": "abef854f144a06f3e14c30f9d737fd76ffbb058b4a8a5444e8fd2830aaf5a5d6",
+      "slug": "role06_apcorr_charge_formalizer",
+      "status_markers": {
+        "AUDIT": 1,
+        "BANKABLE_LEMMA": 4,
+        "COUNTERPACKET": 14,
+        "EXACT_NEW_WALL": 3,
+        "PLAN": 2,
+        "PROOF": 4,
+        "ROUTE_CUT": 2
+      },
+      "tab_index": 5,
+      "title": "Mathematical Theorem Analysis",
+      "url": "https://chatgpt.com/c/6a38cf9d-0f38-83ec-93b9-04af14c6fbc1"
+    },
+    {
+      "contains_regenerate": false,
+      "contains_stop_generating": false,
+      "page_text_chars": 21912,
+      "response_best_effort_chars": 20585,
+      "role": "05_ALGEBRAIC_GEOMETRY_INCIDENCE",
+      "sha256_page_text": "41fd421518e86753e83e84f648cc0c3346998d1f2be89e7a98bc2c5f9f7ae29a",
+      "sha256_response_best_effort": "70f70388363eecdf76367b8330e1da4e5b4ef3eacb27ff55d96ebf35bf2b7ac8",
+      "slug": "role05_algebraic_geometry_incidence",
+      "status_markers": {
+        "AUDIT": 2,
+        "BANKABLE_LEMMA": 3,
+        "COUNTERPACKET": 9,
+        "EXACT_NEW_WALL": 2,
+        "PLAN": 3,
+        "PROOF": 3,
+        "ROUTE_CUT": 3
+      },
+      "tab_index": 6,
+      "title": "Mathematical Problem Analysis",
+      "url": "https://chatgpt.com/c/6a38cf91-eab0-83ec-995a-6d3ec423b615"
+    },
+    {
+      "contains_regenerate": false,
+      "contains_stop_generating": false,
+      "page_text_chars": 23494,
+      "response_best_effort_chars": 22168,
+      "role": "04_CHARACTER_SUM_FOURIER",
+      "sha256_page_text": "bed7de1120adcea4a77492d756c54d0daada19c04cdbec3d440d4f0923a132c4",
+      "sha256_response_best_effort": "4a4b29c99e23b00442a470ab4f3e0a77c913a65b01460c2ba80cd88cc139cc0a",
+      "slug": "role04_character_sum_fourier",
+      "status_markers": {
+        "AUDIT": 2,
+        "BANKABLE_LEMMA": 2,
+        "COUNTERPACKET": 11,
+        "EXACT_NEW_WALL": 2,
+        "PLAN": 3,
+        "PROOF": 4,
+        "ROUTE_CUT": 2
+      },
+      "tab_index": 7,
+      "title": "Cycle111 RS-MCA Problem",
+      "url": "https://chatgpt.com/c/6a38cf88-2268-83ec-8559-9b25b8f996c4"
+    },
+    {
+      "contains_regenerate": false,
+      "contains_stop_generating": false,
+      "page_text_chars": 21746,
+      "response_best_effort_chars": 20420,
+      "role": "03_SYMMETRIC_FIBER_THEORIST",
+      "sha256_page_text": "e5c950ea89357b9b60d1ed2bf3a4a8c28691728c1fed75ba8b561501c7efe844",
+      "sha256_response_best_effort": "ae0eb6e0c5cb844374fb8ec759fc1efacf8bb0a81bb706ea1742009cdac280ba",
+      "slug": "role03_symmetric_fiber_theorist",
+      "status_markers": {
+        "AUDIT": 2,
+        "BANKABLE_LEMMA": 2,
+        "COUNTERPACKET": 10,
+        "EXACT_NEW_WALL": 2,
+        "PLAN": 2,
+        "PROOF": 2,
+        "ROUTE_CUT": 1
+      },
+      "tab_index": 8,
+      "title": "Cycle111 Problem Analysis",
+      "url": "https://chatgpt.com/c/6a38cf7b-e734-83ec-992f-7efdf4597b69"
+    },
+    {
+      "contains_regenerate": false,
+      "contains_stop_generating": false,
+      "page_text_chars": 24551,
+      "response_best_effort_chars": 23225,
+      "role": "02_T1_COUNTERPACKET_HUNTER",
+      "sha256_page_text": "41ab5295514013fdba899417c1a74052018a1dd1838a2ad413815f0edad3334e",
+      "sha256_response_best_effort": "a998bb6114126bddaa262f2892a080878964a100008910e5591df9f2d1b102d2",
+      "slug": "role02_t1_counterpacket_hunter",
+      "status_markers": {
+        "AUDIT": 2,
+        "BANKABLE_LEMMA": 1,
+        "COUNTERPACKET": 8,
+        "EXACT_NEW_WALL": 2,
+        "PLAN": 3,
+        "PROOF": 2,
+        "ROUTE_CUT": 2
+      },
+      "tab_index": 9,
+      "title": "Mathematical Proof Request",
+      "url": "https://chatgpt.com/c/6a38cf70-ce10-83ec-bf0f-d3f46baa0053"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "clean_response_chars": 18375,
+  "clean_response_start_line_1based": 149,
+  "contains_regenerate": false,
+  "contains_stop_generating": false,
+  "page_text_chars": 23494,
+  "response_best_effort_chars": 22168,
+  "role": "04_CHARACTER_SUM_FOURIER",
+  "sha256_clean_response": "8aba26ebfb389e2d6c209b4792c3548efbaa844925e15135b4d9427bc3ff77b0",
+  "sha256_page_text": "bed7de1120adcea4a77492d756c54d0daada19c04cdbec3d440d4f0923a132c4",
+  "sha256_response_best_effort": "4a4b29c99e23b00442a470ab4f3e0a77c913a65b01460c2ba80cd88cc139cc0a",
+  "slug": "role04_character_sum_fourier",
+  "status_markers": {
+    "AUDIT": 2,
+    "BANKABLE_LEMMA": 2,
+    "COUNTERPACKET": 11,
+    "EXACT_NEW_WALL": 2,
+    "PLAN": 3,
+    "PROOF": 4,
+    "ROUTE_CUT": 2
+  },
+  "tab_index": 7,
+  "title": "Cycle111 RS-MCA Problem",
+  "url": "https://chatgpt.com/c/6a38cf88-2268-83ec-8559-9b25b8f996c4"
+}

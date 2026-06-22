@@ -1,0 +1,25 @@
+{
+  "clean_response_chars": 12240,
+  "clean_response_start_line_1based": 2018,
+  "contains_regenerate": false,
+  "contains_stop_generating": false,
+  "page_text_chars": 26951,
+  "response_best_effort_chars": 25625,
+  "role": "06_APCORR_CHARGE_FORMALIZER",
+  "sha256_clean_response": "566226471a0d00cf17eeb21f5fd37c8161242379530c777457b4369dc58f440c",
+  "sha256_page_text": "2328b4e58945094e138a027efa0156f1c9a1a18978374065cc40296cc3a58b1e",
+  "sha256_response_best_effort": "abef854f144a06f3e14c30f9d737fd76ffbb058b4a8a5444e8fd2830aaf5a5d6",
+  "slug": "role06_apcorr_charge_formalizer",
+  "status_markers": {
+    "AUDIT": 1,
+    "BANKABLE_LEMMA": 4,
+    "COUNTERPACKET": 14,
+    "EXACT_NEW_WALL": 3,
+    "PLAN": 2,
+    "PROOF": 4,
+    "ROUTE_CUT": 2
+  },
+  "tab_index": 5,
+  "title": "Mathematical Theorem Analysis",
+  "url": "https://chatgpt.com/c/6a38cf9d-0f38-83ec-93b9-04af14c6fbc1"
+}

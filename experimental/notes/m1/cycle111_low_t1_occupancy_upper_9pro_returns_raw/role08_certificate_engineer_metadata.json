@@ -1,0 +1,25 @@
+{
+  "clean_response_chars": 13726,
+  "clean_response_start_line_1based": 148,
+  "contains_regenerate": false,
+  "contains_stop_generating": false,
+  "page_text_chars": 18861,
+  "response_best_effort_chars": 17535,
+  "role": "08_CERTIFICATE_ENGINEER",
+  "sha256_clean_response": "4f7a8209be5f5f125aeacca303a19099c282878bb4b6de71fb90808585ef5253",
+  "sha256_page_text": "06917a5327951dae5929ce96c6661e91e42a6997b49b6d44648fdb7d9a02e688",
+  "sha256_response_best_effort": "04bba17bf937ad2e62116bfe86ffecc1289b15b6f4f526d32ec3f1943095658f",
+  "slug": "role08_certificate_engineer",
+  "status_markers": {
+    "AUDIT": 2,
+    "BANKABLE_LEMMA": 2,
+    "COUNTERPACKET": 11,
+    "EXACT_NEW_WALL": 1,
+    "PLAN": 5,
+    "PROOF": 5,
+    "ROUTE_CUT": 7
+  },
+  "tab_index": 3,
+  "title": "Mathematical Theorem Approach",
+  "url": "https://chatgpt.com/c/6a38cfb2-fc5c-83ec-a803-16a0212e9073"
+}

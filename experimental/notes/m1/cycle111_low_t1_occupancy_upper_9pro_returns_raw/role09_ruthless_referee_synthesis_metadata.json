@@ -1,0 +1,25 @@
+{
+  "clean_response_chars": 17912,
+  "clean_response_method": "OCR visible screenshot fallback; clipboard text capture failed due composer focus and Chrome extension pipe failure",
+  "contains_regenerate": false,
+  "contains_stop_generating": false,
+  "page_text_chars": 14,
+  "response_best_effort_chars": 12,
+  "role": "09_RUTHLESS_REFEREE_SYNTHESIS",
+  "sha256_clean_response": "d0fc4629c1f7c1a7912ee137932d8eb4eb8fccdbcdd39cbfa8bef85e2a0e2d9a",
+  "sha256_page_text": "50190bd75cf138ac5532df7726b3221ed93e34c05e724ee98ebe07c481d5cda8",
+  "sha256_response_best_effort": "4aff15de2f313404d906c846b8f4872769984f6421729ab41db5b3779a67e501",
+  "slug": "role09_ruthless_referee_synthesis",
+  "status_markers": {
+    "AUDIT": 0,
+    "BANKABLE_LEMMA": 0,
+    "COUNTERPACKET": 0,
+    "EXACT_NEW_WALL": 0,
+    "PLAN": 0,
+    "PROOF": 0,
+    "ROUTE_CUT": 0
+  },
+  "tab_index": 2,
+  "title": "L-Cycle111 Theorem Discussion",
+  "url": "https://chatgpt.com/c/6a38cfbe-3d64-83ec-9857-407111bfd77d"
+}

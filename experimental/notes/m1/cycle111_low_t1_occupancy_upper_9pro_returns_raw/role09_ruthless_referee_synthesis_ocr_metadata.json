@@ -1,0 +1,86 @@
+{
+  "method": "screencapture+tesseract visible OCR fallback; lower fidelity than clipboard DOM/text capture",
+  "items": [
+    {
+      "screen": 0,
+      "png": "role09_screen_00.png",
+      "txt": "role09_screen_00.txt",
+      "png_sha256": "a1e11498efb5c898417fc22e68506148b6de9532c6957175a45e2dc906098b8e",
+      "txt_sha256": "1a2a17a34c7f1f408dc79575c39bbd6cb9fbf9e751dc617b66c65511a0316026",
+      "txt_chars": 1757
+    },
+    {
+      "screen": 1,
+      "png": "role09_screen_01.png",
+      "txt": "role09_screen_01.txt",
+      "png_sha256": "1c6eff27b6685f683aa7ab01bd8f98b539bad6936a7455cc319eb32e205cf256",
+      "txt_sha256": "6994898442e929a0ddae3d59a09663407bf7ae64d0f6020c34dcf87a66e35844",
+      "txt_chars": 1763
+    },
+    {
+      "screen": 2,
+      "png": "role09_screen_02.png",
+      "txt": "role09_screen_02.txt",
+      "png_sha256": "12cb9ac567caa150158a9e51e59f3149c3b0870a061654ff089a02594623ec3d",
+      "txt_sha256": "6994898442e929a0ddae3d59a09663407bf7ae64d0f6020c34dcf87a66e35844",
+      "txt_chars": 1763
+    },
+    {
+      "screen": 3,
+      "png": "role09_screen_03.png",
+      "txt": "role09_screen_03.txt",
+      "png_sha256": "12cb9ac567caa150158a9e51e59f3149c3b0870a061654ff089a02594623ec3d",
+      "txt_sha256": "6994898442e929a0ddae3d59a09663407bf7ae64d0f6020c34dcf87a66e35844",
+      "txt_chars": 1763
+    },
+    {
+      "screen": 4,
+      "png": "role09_screen_04.png",
+      "txt": "role09_screen_04.txt",
+      "png_sha256": "eceb2efcf5d79d91df3e3ec6f2aef59753fceb5037e3234cd4d2134987a8e011",
+      "txt_sha256": "6994898442e929a0ddae3d59a09663407bf7ae64d0f6020c34dcf87a66e35844",
+      "txt_chars": 1763
+    },
+    {
+      "screen": 5,
+      "png": "role09_screen_05.png",
+      "txt": "role09_screen_05.txt",
+      "png_sha256": "3467b86ce53e2acbbfdad24f3b5062d6a84cbf6b466824b0c68f245b453822b1",
+      "txt_sha256": "6994898442e929a0ddae3d59a09663407bf7ae64d0f6020c34dcf87a66e35844",
+      "txt_chars": 1763
+    },
+    {
+      "screen": 6,
+      "png": "role09_screen_06.png",
+      "txt": "role09_screen_06.txt",
+      "png_sha256": "db4f4438bc36ffbc15e509834617c6ba18c33a3401089f8293ef971d4299ff02",
+      "txt_sha256": "6994898442e929a0ddae3d59a09663407bf7ae64d0f6020c34dcf87a66e35844",
+      "txt_chars": 1763
+    },
+    {
+      "screen": 7,
+      "png": "role09_screen_07.png",
+      "txt": "role09_screen_07.txt",
+      "png_sha256": "e3844025c8e90d67fc923e71bd0f18c17140040923c47523be91c024ea0f9b56",
+      "txt_sha256": "6994898442e929a0ddae3d59a09663407bf7ae64d0f6020c34dcf87a66e35844",
+      "txt_chars": 1763
+    },
+    {
+      "screen": 8,
+      "png": "role09_screen_08.png",
+      "txt": "role09_screen_08.txt",
+      "png_sha256": "61ad6f8310842e4314771207273ae39d4cdf2a7de8f2276aaf6d73819bb4a02f",
+      "txt_sha256": "6994898442e929a0ddae3d59a09663407bf7ae64d0f6020c34dcf87a66e35844",
+      "txt_chars": 1763
+    },
+    {
+      "screen": 9,
+      "png": "role09_screen_09.png",
+      "txt": "role09_screen_09.txt",
+      "png_sha256": "e3844025c8e90d67fc923e71bd0f18c17140040923c47523be91c024ea0f9b56",
+      "txt_sha256": "6994898442e929a0ddae3d59a09663407bf7ae64d0f6020c34dcf87a66e35844",
+      "txt_chars": 1763
+    }
+  ],
+  "combined_chars": 17912
+}

@@ -1,0 +1,25 @@
+{
+  "clean_response_chars": 13489,
+  "clean_response_start_line_1based": 140,
+  "contains_regenerate": false,
+  "contains_stop_generating": false,
+  "page_text_chars": 18378,
+  "response_best_effort_chars": 17053,
+  "role": "07_QLEDGER_FIELD_TRANSFER",
+  "sha256_clean_response": "73e52633c4c9e8eeb8f949f9391dbcd878c4448d85bc2efccb5c84c5fdb40aac",
+  "sha256_page_text": "9ef1fd175cb64ec510052c1b5792a448b9119059299b61d21cd54ee487007021",
+  "sha256_response_best_effort": "31e9a1ec5da0a3e4c62d1e856083501b865dca22bb7367fbb10cc2bee37330eb",
+  "slug": "role07_qledger_field_transfer",
+  "status_markers": {
+    "AUDIT": 2,
+    "BANKABLE_LEMMA": 2,
+    "COUNTERPACKET": 11,
+    "EXACT_NEW_WALL": 2,
+    "PLAN": 2,
+    "PROOF": 4,
+    "ROUTE_CUT": 1
+  },
+  "tab_index": 4,
+  "title": "Mathematical Theorem Request",
+  "url": "https://chatgpt.com/c/6a38cfa9-6438-83ec-938e-15d1d06b9fe2"
+}
