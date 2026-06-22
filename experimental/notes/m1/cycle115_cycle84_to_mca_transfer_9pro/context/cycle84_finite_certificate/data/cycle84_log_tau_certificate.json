@@ -1,0 +1,96 @@
+{
+  "decision": "EXACT_DISCRETE_LOG_AND_TAU_DATA_VERIFIED",
+  "field": {
+    "degree": 16,
+    "factorization": {
+      "184417": 1,
+      "18913": 1,
+      "2": 8,
+      "29": 1,
+      "3": 2,
+      "41761": 1,
+      "5": 1
+    },
+    "modulus_coefficients": [
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "multiplicative_order": 48661191875666868480,
+    "p": 17
+  },
+  "generator_coefficients": [
+    2,
+    1
+  ],
+  "primitive_prime_divisor_checks": {
+    "184417": true,
+    "18913": true,
+    "2": true,
+    "29": true,
+    "3": true,
+    "41761": true,
+    "5": true
+  },
+  "projection_kernel_order": 3,
+  "projection_modulus": 16220397291888956160,
+  "slot_logs_sha256": "d4379b3ed97c4ae2a43511796e3bcb15514d3f5f989f15b6fb1bc9fc85c779d8",
+  "slot_value_log_checks": 336,
+  "tau": {
+    "color_complement_mod_16": 8,
+    "fixed_roots_mod_M": [
+      7668598605862660454,
+      15778797251807138534
+    ],
+    "kappa_mod_M": 15337197211725320908,
+    "oriented_slot1_keys": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "slot_constants_mod_M": [
+      1943240386782207768,
+      3248602076539540923,
+      6121308274873042471,
+      2266345293280290559,
+      16014567971520478606,
+      9280262459212533013,
+      8903665333295139888
+    ]
+  }
+}

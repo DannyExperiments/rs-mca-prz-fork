@@ -2409,3 +2409,28 @@ Keep entries concise and link to the relevant files.
   The paper-facing question is now the explicit transfer theorem from the
   Cycle84 finite color-filtered model into an official MCA/list/line-decoding
   statement over the RS parameters.
+
+### 2026-06-23 - Cycle115 Cycle84-to-MCA transfer packet staged
+
+- **Agent/model:** Codex local packet builder.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle115_cycle84_to_mca_transfer_9pro/`,
+  `experimental/agents-log.md`.
+- **Status:** PLAN / EXACT_NEW_WALL / REVIEWABILITY.
+- **What is being added:** A compact no-internet 9-Pro packet asking for the
+  exact transfer theorem, route cut, or counterpacket mechanism that would turn
+  the standalone Cycle84 finite certificate into an MCA/list/line-decoding
+  statement over RS parameters. The packet includes the standalone Cycle84
+  finite certificate, canonical tracker, director report, core source TeX, the
+  Cycle85-114 audited route history, and the M2 line-decoding bridge note. It
+  excludes raw transcripts and large provenance archives.
+- **How it is useful:** This directly targets PRZ's second question: whether
+  Cycle84 is only a finite computation or a paper-facing route. The roles split
+  transfer proof, falsification, official RS-object identification,
+  product-to-slope preservation, MCA consequence, line-decoding bridge,
+  q-ledger arithmetic, prize-family embedding, and referee synthesis.
+- **What to do next:** Send the packet
+  `/Users/danielcabezas/cycle115_cycle84_to_mca_transfer_9pro_packet.zip` to
+  nine Pro instances with the common prompt and one role prompt each. Audit
+  returns conservatively; do not promote finite/model evidence to a prize proof
+  without an official transfer theorem and field ledger.
