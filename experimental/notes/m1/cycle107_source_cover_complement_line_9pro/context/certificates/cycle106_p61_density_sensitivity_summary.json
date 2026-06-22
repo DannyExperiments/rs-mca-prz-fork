@@ -1,0 +1,327 @@
+{
+  "cases": {
+    "p=61,n=10,sigma=2": {
+      "ambient_size": 226981,
+      "candidate_count_source": 0,
+      "n": 10,
+      "p": 61,
+      "passed_s_by_density_den": {
+        "100": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "20": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "200": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "50": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "500": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "quotient_index": 6,
+      "sigma": 2,
+      "stress_survivor_count_source": 0
+    },
+    "p=61,n=12,sigma=2": {
+      "ambient_size": 226981,
+      "candidate_count_source": 2076,
+      "n": 12,
+      "p": 61,
+      "passed_s_by_density_den": {
+        "100": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "20": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "200": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "50": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "500": [
+          3,
+          9,
+          10,
+          11
+        ]
+      },
+      "quotient_index": 5,
+      "sigma": 2,
+      "stress_survivor_count_source": 2076
+    },
+    "p=61,n=15,sigma=2": {
+      "ambient_size": 226981,
+      "candidate_count_source": 148545,
+      "n": 15,
+      "p": 61,
+      "passed_s_by_density_den": {
+        "100": [
+          3,
+          4,
+          11,
+          12,
+          13,
+          14
+        ],
+        "20": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "200": [
+          3,
+          12,
+          13,
+          14
+        ],
+        "50": [
+          3,
+          4,
+          5,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "500": [
+          13,
+          14
+        ]
+      },
+      "quotient_index": 4,
+      "sigma": 2,
+      "stress_survivor_count_source": 148545
+    },
+    "p=61,n=20,sigma=2": {
+      "ambient_size": 226981,
+      "candidate_count_source": 41350,
+      "n": 20,
+      "p": 61,
+      "passed_s_by_density_den": {
+        "100": [
+          3,
+          17,
+          18,
+          19
+        ],
+        "20": [
+          3,
+          4,
+          16,
+          17,
+          18,
+          19
+        ],
+        "200": [
+          18,
+          19
+        ],
+        "50": [
+          3,
+          17,
+          18,
+          19
+        ],
+        "500": [
+          18,
+          19
+        ]
+      },
+      "quotient_index": 3,
+      "sigma": 2,
+      "stress_survivor_count_source": 41350
+    }
+  },
+  "claim_boundary": "Derived finite toy stress bookkeeping only; not a theorem, not a source-valid counterpacket, and not prize-level evidence.",
+  "density_dens": [
+    20,
+    50,
+    100,
+    200,
+    500
+  ],
+  "density_num": 1,
+  "families": {
+    "distributed_dense_tail": {
+      "by_density_den": [
+        {
+          "by_case": {
+            "p=61,n=12,sigma=2": 456,
+            "p=61,n=15,sigma=2": 59160,
+            "p=61,n=20,sigma=2": 8080
+          },
+          "density_gate": "1/20",
+          "fraction_of_source_total": 1.0,
+          "total": 67696
+        },
+        {
+          "by_case": {
+            "p=61,n=12,sigma=2": 456,
+            "p=61,n=15,sigma=2": 5355,
+            "p=61,n=20,sigma=2": 20
+          },
+          "density_gate": "1/50",
+          "fraction_of_source_total": 0.08613507445048452,
+          "total": 5831
+        },
+        {
+          "by_case": {
+            "p=61,n=12,sigma=2": 456,
+            "p=61,n=15,sigma=2": 390,
+            "p=61,n=20,sigma=2": 20
+          },
+          "density_gate": "1/100",
+          "fraction_of_source_total": 0.012792484046324746,
+          "total": 866
+        },
+        {
+          "by_case": {
+            "p=61,n=12,sigma=2": 456
+          },
+          "density_gate": "1/200",
+          "fraction_of_source_total": 0.006735996218388088,
+          "total": 456
+        },
+        {
+          "by_case": {},
+          "density_gate": "1/500",
+          "fraction_of_source_total": 0.0,
+          "total": 0
+        }
+      ],
+      "source_total": 67696
+    },
+    "dominant_cluster": {
+      "by_density_den": [
+        {
+          "by_case": {
+            "p=61,n=12,sigma=2": 1608,
+            "p=61,n=15,sigma=2": 77730,
+            "p=61,n=20,sigma=2": 30240
+          },
+          "density_gate": "1/20",
+          "fraction_of_source_total": 1.0,
+          "total": 109578
+        },
+        {
+          "by_case": {
+            "p=61,n=12,sigma=2": 1608,
+            "p=61,n=15,sigma=2": 9390,
+            "p=61,n=20,sigma=2": 660
+          },
+          "density_gate": "1/50",
+          "fraction_of_source_total": 0.10638996878935553,
+          "total": 11658
+        },
+        {
+          "by_case": {
+            "p=61,n=12,sigma=2": 1608,
+            "p=61,n=15,sigma=2": 1005,
+            "p=61,n=20,sigma=2": 660
+          },
+          "density_gate": "1/100",
+          "fraction_of_source_total": 0.029869134315282264,
+          "total": 3273
+        },
+        {
+          "by_case": {
+            "p=61,n=12,sigma=2": 1608,
+            "p=61,n=15,sigma=2": 15
+          },
+          "density_gate": "1/200",
+          "fraction_of_source_total": 0.014811367245249958,
+          "total": 1623
+        },
+        {
+          "by_case": {
+            "p=61,n=12,sigma=2": 48
+          },
+          "density_gate": "1/500",
+          "fraction_of_source_total": 0.00043804413294639435,
+          "total": 48
+        }
+      ],
+      "source_total": 109578
+    }
+  },
+  "source_signature_status": "EXPERIMENTAL_SIGNATURE_SUMMARY",
+  "status": "EXPERIMENTAL_DENSITY_SENSITIVITY_SUMMARY"
+}

@@ -29,6 +29,57 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-22 - Cycle107 source-cover / complement-line 9-Pro returns
+
+- **Agent/model:** Nine ChatGPT Pro theorem-worker roles, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle107_source_cover_complement_line_9pro/`,
+  `experimental/notes/m1/cycle107_source_cover_complement_line_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle107_source_cover_complement_line_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** Raw preserved returns and a conservative audit for
+  the Cycle107 source-cover/complement-line Pro round. No role produced a
+  source-valid `PROOF` or `COUNTERPACKET`. The strongest banked repair is the
+  endpoint-corrected complement-line identity; the main route cut is that the
+  official source bridge cannot be a universal single-`Uhat` normalization.
+- **How it is useful:** It retargets M1 from raw Gate B escape to the source
+  adapter theorem
+  `L-CYCLE108-OFFICIAL-RESIDUAL-SLOPE-PARTITION-INJECTIVE-NORMALIZATION-AND-AP-DESCENT`.
+  This theorem must partition official residual bad slopes, tag and normalize
+  uncharged branches, account for endpoint and q-ledger factors, and prove
+  AP_corr descent before complement-line/rank-escape certificates can be
+  official-prize-relevant.
+- **What to do next:** Dispatch a more ambitious Cycle108 packet against the
+  official source adapter. Ask for either a proof of all source-partition/AP
+  descent clauses or a source-valid above-reserve counterpacket after
+  quotient/periodic/contained/tangent/affine-color charges are paid.
+
+### 2026-06-22 - RS-MCA full board audit and director findings report
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/reports/rs_mca_board_findings_for_codex_director_20260622.md`,
+  `experimental/scripts/field_ledger_vocabulary_audit.py`,
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / ROUTE_BOARD_REVIEW / DIRECTOR_HANDOFF.
+- **What is being added:** A full local route-board review against the current
+  worktree and the public `przchojecki/rs-mca` main baseline, plus a
+  forwardable findings report for the Codex director.
+- **How it is useful:** It updates stale board items: L1 is moved from object
+  repair to quantitative repaired-object local limits; F1 arbitrary anchors are
+  split into a balanced residue-cloud wall; L2 known quotient-core interleaving
+  is recorded as diagonal/sub-Cartesian; X1 tangent CA-MCA separation is added;
+  A3 field-ledger replay is restored by fixing the script repo-root path; and
+  local director-workbench state is separated from upstream public main.
+- **What to do next:** Use the report as the handoff. Do not claim a theorem
+  upgrade; the report's next exact prompts are source-cover/rank-escape for
+  M1, sparse-syndrome local limits for L1, arbitrary-anchor residue-cloud
+  control for F1, aperiodic codegree constants for L2, and primary-source A0
+  import audit.
+
 ### 2026-06-22 - Cycle106 9-Pro wallbreaker returns
 
 - **Agent/model:** Nine ChatGPT Pro theorem-worker roles, audited by Codex.
