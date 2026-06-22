@@ -29,6 +29,32 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-22 - Cycle110 LOW calibrated occupancy no-internet 9-Pro returns
+
+- **Agent/model:** Nine ChatGPT Pro theorem-worker roles, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle110_low_calibrated_occupancy_no_internet_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle110_low_calibrated_occupancy_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** Raw preserved pasted returns and a conservative audit
+  for the Cycle110 no-internet LOW round. No role produced a source-valid
+  `PROOF` or `COUNTERPACKET`. The strongest banked result is the reduction of
+  intrinsic LOW slope counting to a residue-image line intersection and,
+  after one witness is fixed, to a base correlated-agreement bad-slope count
+  for the rational direction `B/E` over `K_line`.
+- **How it is useful:** It cuts the broad shifted-list slack-`sigma-t` reading
+  and retargets the next attack to the charge-irreducible `t=1` LOW occupancy
+  upper bound, followed by a `t>=2` collinearity-nondegeneracy-or-charge
+  theorem. It also records typed q-ledger discipline: `q_gen` pays reserve,
+  `q_line` counts slopes and supplies the security denominator, and `q_chal`
+  is unusable without protocol transfer.
+- **What to do next:** Prove or refute
+  `L-CYCLE111-LOW-T1-OCCUPANCY-UPPER`. A source-valid counterpacket must pass
+  prize-strength corrected reserve, source `AP_corr`, and all LOW charges while
+  exceeding the calibrated `q_line` budget.
+
 ### 2026-06-22 - Cycle109 interior stratified cover 9-Pro returns
 
 - **Agent/model:** Nine ChatGPT Pro theorem-worker roles, audited by Codex.
