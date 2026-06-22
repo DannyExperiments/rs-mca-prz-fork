@@ -1,0 +1,74 @@
+# Cycle113 Frozen Source Contract Replay 9-Pro Packet Manifest
+
+Purpose:
+
+```text
+Prove/refute L-CYCLE113-OFFICIAL-APCORR-INTERVAL-PREFIX-REJECTION-OR-COUNTERPACKET
+via V-CYCLE113-FROZEN-SOURCE-CONTRACT-REPLAY.
+```
+
+Core context:
+
+```text
+CURRENT_CYCLE113_STATE.md
+context/RS_MCA_CANONICAL_TRACKER.md
+context/agents-log.md
+context/rs_mca_board_findings_for_codex_director_20260622.md
+context/m1_cycle110_low_calibrated_occupancy_returns_audit.md
+context/m1_cycle111_low_t1_occupancy_upper_returns_audit.md
+context/m1_cycle112_source_apcorr_t1_block_packet_returns_audit.md
+context/cycle112_key_returns/*_response.md
+```
+
+Prompts:
+
+```text
+prompts/COMMON_PROMPT.md
+prompts/SELF_AUDIT_ADDENDUM.md
+prompts/ROLE_01_01_OFFICIAL_SOURCE_CONTRACT_RECONSTRUCTOR.md
+prompts/ROLE_02_02_P190_COUNTERPACKET_REPLAYER.md
+prompts/ROLE_03_03_INTERVAL_PREFIX_REJECTION_PROVER.md
+prompts/ROLE_04_04_FINAL_RETAINED_COLOR_MAP_AUDITOR.md
+prompts/ROLE_05_05_CHARGE_REGISTRY_LEDGER_BUILDER.md
+prompts/ROLE_06_06_APCORR_TO_FOURIER_PROVER.md
+prompts/ROLE_07_07_FAIL_CLOSED_REPLAY_CHECKER_ENGINEER.md
+prompts/ROLE_08_08_COUNTERPACKET_FALSIFIER.md
+prompts/ROLE_09_09_RUTHLESS_SYNTHESIS_REFEREE.md
+```
+
+Combined one-box prompts:
+
+```text
+combined/COMBINED_01_01_OFFICIAL_SOURCE_CONTRACT_RECONSTRUCTOR.md
+combined/COMBINED_02_02_P190_COUNTERPACKET_REPLAYER.md
+combined/COMBINED_03_03_INTERVAL_PREFIX_REJECTION_PROVER.md
+combined/COMBINED_04_04_FINAL_RETAINED_COLOR_MAP_AUDITOR.md
+combined/COMBINED_05_05_CHARGE_REGISTRY_LEDGER_BUILDER.md
+combined/COMBINED_06_06_APCORR_TO_FOURIER_PROVER.md
+combined/COMBINED_07_07_FAIL_CLOSED_REPLAY_CHECKER_ENGINEER.md
+combined/COMBINED_08_08_COUNTERPACKET_FALSIFIER.md
+combined/COMBINED_09_09_RUTHLESS_SYNTHESIS_REFEREE.md
+```
+
+Expected output labels:
+
+```text
+PROOF
+COUNTERPACKET
+BANKABLE_LEMMA
+ROUTE_CUT
+EXACT_NEW_WALL
+AUDIT
+PLAN
+```
+
+Fail-closed terminal strings to prefer when possible:
+
+```text
+SOURCE_REJECTED
+COLOR_COMPRESSED_OR_CHARGED
+SOURCE_VALID_LOW_T1_COUNTERPACKET
+T1_APCORR_LOCAL_LIMIT
+SOURCE_RECEIPT_MISSING_NO_CLAIM
+```
+

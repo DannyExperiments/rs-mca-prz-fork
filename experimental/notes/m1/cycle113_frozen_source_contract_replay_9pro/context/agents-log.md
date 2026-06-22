@@ -2281,24 +2281,3 @@ Keep entries concise and link to the relevant files.
   with `V-CYCLE113-FROZEN-SOURCE-CONTRACT-REPLAY`. The replay must return the
   first official source/APcorr rejection, an exact final-color compression or
   charge receipt, or a source-valid low-`t=1` counterpacket.
-
-### 2026-06-22 - Cycle113 frozen source-contract replay 9-Pro dispatch
-
-- **Agent/model:** ChatGPT Pro 5.5 nine-role round, dispatched by Codex.
-- **Files added or changed:**
-  `experimental/notes/m1/cycle113_frozen_source_contract_replay_9pro/`,
-  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
-  `experimental/agents-log.md`.
-- **Status:** DISPATCHED / EXACT_NEW_WALL.
-- **What is being tested:** The active wall
-  `L-CYCLE113-OFFICIAL-APCORR-INTERVAL-PREFIX-REJECTION-OR-COUNTERPACKET`
-  through `V-CYCLE113-FROZEN-SOURCE-CONTRACT-REPLAY`.
-- **Dispatch packet:** `/Users/danielcabezas/cycle113_frozen_source_contract_replay_9pro_packet.zip`,
-  SHA256 `c362b723bff33c43976e60ac73f5d3f50cb1032bad7cceaa9b2daf86f5e60557`.
-- **Role URLs:** recorded in
-  `experimental/notes/m1/cycle113_frozen_source_contract_replay_9pro/DISPATCH_RECEIPT.md`.
-- **Collection rule:** Preserve all visible raw responses and generated files,
-  hash them, audit conservatively, then update the tracker. Terminal promotion
-  requires exact source rejection, exact final-color compression/charge ledger,
-  source-valid counterpacket, or official `AP_corr` to interpolation-defect
-  Fourier/local-limit theorem.

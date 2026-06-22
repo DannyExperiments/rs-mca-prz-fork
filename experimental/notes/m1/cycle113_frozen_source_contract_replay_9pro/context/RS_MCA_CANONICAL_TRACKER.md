@@ -18,12 +18,12 @@ file under literal labels such as `PROOF`, `COUNTERPACKET`, `BANKABLE_LEMMA`,
 
 | Field | Current value |
 |---|---|
-| Phase | Cycle113 frozen source-contract replay 9-Pro round dispatched; awaiting returns |
+| Phase | Cycle112 source-admissibility/charge 9-Pro return audit completed; preparing frozen source-contract replay |
 | Current exact wall | `L-CYCLE113-OFFICIAL-APCORR-INTERVAL-PREFIX-REJECTION-OR-COUNTERPACKET` |
 | Active theorem family | M1 upper-side arbitrary-anchor / residue-cloud route |
 | Latest banked math | Cycle105 `L-CYCLE105-KFREE-COLLAPSE-AND-COMPLEMENT-DUALITY`; Cycle106 complement-line/rank-one reductions; Cycle107 endpoint-corrected complement-line and tagged source-cover wall; Cycle108 official syndrome-pencil adapter and endpoint-first partition; Cycle109 LOW/BALANCED/HIGH/q-ledger branch sharpening; Cycle110 LOW residue-line/base-CA reduction and `t=1` charge-vacuity; Cycle111 cut of the literal pure main-term LOW `t=1` occupancy theorem; Cycle112 no-double-spend `q_line` ledger, disjoint-block charge cap, and interpolation-defect Fourier interface |
 | Latest failed/non-answer | Cycle112 9-Pro round: no official terminal among `SOURCE_VALID_LOW_T1_COUNTERPACKET`, `T1_BLOCK_PACKET_CHARGED`, or `T1_APCORR_LOCAL_LIMIT`; the first unresolved arrow is frozen official `AP_corr` plus final retained-color replay on the interval/P190-style packet |
-| Latest model packet and returns | `experimental/notes/m1/cycle113_frozen_source_contract_replay_9pro/` dispatched; latest audited returns remain `experimental/notes/m1/cycle112_source_apcorr_t1_block_packet_9pro_returns_raw/` and `experimental/notes/m1/m1_cycle112_source_apcorr_t1_block_packet_returns_audit.md` |
+| Latest model packet and returns | `experimental/notes/m1/cycle112_source_apcorr_t1_block_packet_9pro/`; `experimental/notes/m1/cycle112_source_apcorr_t1_block_packet_9pro_returns_raw/`; `experimental/notes/m1/m1_cycle112_source_apcorr_t1_block_packet_returns_audit.md` |
 | Public upstream baseline checked | `przchojecki/rs-mca` main `349b487d4d86843bb74ac59526736e7cb4211f04`; local branch `cycle58-5p5-audit` is a director-workbench superset, with exact head recorded by `git log` in each audit commit |
 | Latest director report | `experimental/reports/rs_mca_board_findings_for_codex_director_20260622.md` |
 | Promotion rule | Nothing here is paper-ready until source hypotheses, constants, field ledgers, and verifier receipts are checked |
