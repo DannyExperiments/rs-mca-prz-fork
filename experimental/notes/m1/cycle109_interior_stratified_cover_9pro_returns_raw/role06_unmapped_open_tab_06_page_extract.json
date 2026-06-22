@@ -1,0 +1,106 @@
+{
+  "assistantCount": 4,
+  "bodyLength": 24057,
+  "buttons": [
+    "Open sidebar",
+    "Search chats",
+    "Pinned",
+    "Close sidebar",
+    "Search chats",
+    "Pinned",
+    "Open project home",
+    "Open project options for 361",
+    "Open project home",
+    "Open project options for Erdos Problem 346",
+    "Projects",
+    "New project",
+    "Organize chats",
+    "Open project home",
+    "Open project options for $1 Mil Planner",
+    "Open project home",
+    "Open project options for $1,000,000 Math Prize",
+    "Open project home",
+    "Open project options for 346 Collab",
+    "Open project home",
+    "Open project options for 361 Collab",
+    "Open project home",
+    "Open project options for OPEN NON ERDOS PROBLEMS",
+    "Show more",
+    "Download apps",
+    "Share",
+    "Open conversation options",
+    "cycle109_interior_stratified_cover_9pro_packet.zip",
+    "Show more",
+    "Copy message",
+    "Edit message",
+    "Thought for 35m 32s",
+    "Copy response",
+    "Good response",
+    "Bad response",
+    "Pro feedback",
+    "Share",
+    "Switch model",
+    "More actions",
+    "Add files and more",
+    "Pro Extended",
+    "Start dictation",
+    "Start Voice"
+  ],
+  "fileishButtons": [
+    "Download apps",
+    "cycle109_interior_stratified_cover_9pro_packet.zip"
+  ],
+  "fileishLinks": [],
+  "labels": [
+    "PROOF",
+    "COUNTERPACKET",
+    "BANKABLE_LEMMA"
+  ],
+  "links": [
+    {
+      "href": "https://chatgpt.com/c/6a389738-597c-83ec-a29e-070931ad5b97#main",
+      "text": "Skip to content"
+    },
+    {
+      "href": "https://chatgpt.com/",
+      "text": "New chat"
+    },
+    {
+      "href": "https://chatgpt.com/",
+      "text": "ChatGPT"
+    },
+    {
+      "href": "https://chatgpt.com/",
+      "text": "New chat"
+    },
+    {
+      "href": "https://chatgpt.com/library",
+      "text": "Library"
+    },
+    {
+      "href": "https://chatgpt.com/scheduled",
+      "text": "Scheduled"
+    },
+    {
+      "href": "https://chatgpt.com/apps",
+      "text": "Apps"
+    }
+  ],
+  "maybeGenerating": false,
+  "messageCount": 5,
+  "title": "RS-MCA Problem Strategy",
+  "url": "https://chatgpt.com/c/6a389738-597c-83ec-a29e-070931ad5b97",
+  "userCount": 1,
+  "detectedRole": {
+    "num": "06",
+    "name": "unmapped_open_tab_06"
+  },
+  "openTabIndex": 5,
+  "sourceOpenTab": {
+    "id": "1047632390",
+    "title": "RS-MCA Problem Strategy",
+    "url": "https://chatgpt.com/c/6a389738-597c-83ec-a29e-070931ad5b97",
+    "lastOpened": "2026-06-22T02:52:34.788Z"
+  },
+  "capturedAt": "2026-06-22T02:56:34.268Z"
+}

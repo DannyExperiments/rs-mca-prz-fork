@@ -1,0 +1,167 @@
+{
+  "N_cap": 0,
+  "N_off_exact": 4,
+  "ap_failures": [],
+  "branch_distinct_slope_counts": {
+    "AFFINE_COLOR": 0,
+    "BALANCED": 0,
+    "CONTAINED_DELETE_ONE": 0,
+    "ENDPOINT": 0,
+    "FIELD_CONFINEMENT": 0,
+    "HIDDEN_ACTION_RANK": 0,
+    "HIGH": 4,
+    "INTERNAL_NORMALIZATION": 0,
+    "LOW": 0,
+    "QUOTIENT_PERIODIC": 0,
+    "TANGENT": 0
+  },
+  "chart_bound": {
+    "C": 1,
+    "numeric_ok": true,
+    "uniformity_verified": true
+  },
+  "chart_count": 1,
+  "charts": {
+    "H0": {
+      "assigned_slopes": [
+        1,
+        4,
+        13,
+        16
+      ],
+      "branch": "HIGH",
+      "cap_valid": false,
+      "cap_value": 1,
+      "gate_b": {
+        "rank_A": 1,
+        "rank_escape": true,
+        "rank_stacked": 2
+      },
+      "violations": [
+        "missing or invalid distinct-slope cap"
+      ]
+    }
+  },
+  "denominator_minimality_verified": true,
+  "exact_finite_security_verified": false,
+  "field_errors": [],
+  "field_ledger": {
+    "line_data_is_code_valued": true,
+    "line_degree": 1,
+    "p": 17,
+    "q_chal": null,
+    "q_code": 17,
+    "q_gen": 17,
+    "q_line": 17,
+    "security_floor": 0,
+    "target_bits": 128
+  },
+  "first_failure": {
+    "chart": "H0",
+    "violations": [
+      "missing or invalid distinct-slope cap"
+    ]
+  },
+  "paid_caps": {
+    "AFFINE_COLOR": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "CONTAINED_DELETE_ONE": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "ENDPOINT": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "FIELD_CONFINEMENT": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "HIDDEN_ACTION_RANK": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "INTERNAL_NORMALIZATION": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "QUOTIENT_PERIODIC": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "TANGENT": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    }
+  },
+  "same_slope_support_collision_count": 0,
+  "schema_version": "cycle109-cert-v1",
+  "scope": {
+    "kind": "FINITE_INSTANCE",
+    "official_source": true,
+    "truth_mode": "EXHAUSTIVE_SOURCE"
+  },
+  "security_bound_verified": true,
+  "security_floor": 0,
+  "source_completeness_verified": true,
+  "terminal_label": "UNPAID_HIGH_PLANE",
+  "truth": {
+    "N_off_exact": 4,
+    "distinct_bad_slopes": [
+      1,
+      4,
+      13,
+      16
+    ],
+    "k": 2,
+    "n": 4,
+    "q_line": 17,
+    "s": 3,
+    "same_slope_support_collision_count": 0,
+    "sigma": 1,
+    "support_witness_count": 4,
+    "supports_by_slope": {
+      "1": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "13": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "16": [
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      "4": [
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    },
+    "truth_hash": "cdc69396ad87ff7ba11b453cea647c574cfcf6c5d9cdd47cd85ba38df4acffd9"
+  },
+  "violations": [],
+  "warnings": []
+}

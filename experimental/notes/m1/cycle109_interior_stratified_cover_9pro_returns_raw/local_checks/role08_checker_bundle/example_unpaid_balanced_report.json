@@ -1,0 +1,191 @@
+{
+  "N_cap": 0,
+  "N_off_exact": 4,
+  "ap_failures": [],
+  "branch_distinct_slope_counts": {
+    "AFFINE_COLOR": 0,
+    "BALANCED": 4,
+    "CONTAINED_DELETE_ONE": 0,
+    "ENDPOINT": 0,
+    "FIELD_CONFINEMENT": 0,
+    "HIDDEN_ACTION_RANK": 0,
+    "HIGH": 0,
+    "INTERNAL_NORMALIZATION": 0,
+    "LOW": 0,
+    "QUOTIENT_PERIODIC": 0,
+    "TANGENT": 0
+  },
+  "chart_bound": {
+    "C": 2,
+    "numeric_ok": true,
+    "uniformity_verified": false
+  },
+  "chart_count": 0,
+  "charts": {},
+  "denominator_minimality_verified": false,
+  "exact_finite_security_verified": false,
+  "field_errors": [],
+  "field_ledger": {
+    "line_data_is_code_valued": true,
+    "line_degree": 1,
+    "p": 17,
+    "q_chal": null,
+    "q_code": 17,
+    "q_gen": 17,
+    "q_line": 17,
+    "security_floor": 0,
+    "target_bits": 128
+  },
+  "first_failure": {
+    "kind": "UNPAID_BALANCED_SLOPE",
+    "slope": 1
+  },
+  "paid_caps": {
+    "AFFINE_COLOR": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "CONTAINED_DELETE_ONE": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "ENDPOINT": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "FIELD_CONFINEMENT": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "HIDDEN_ACTION_RANK": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "INTERNAL_NORMALIZATION": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "QUOTIENT_PERIODIC": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    },
+    "TANGENT": {
+      "assigned": 0,
+      "cap": 0,
+      "valid": true
+    }
+  },
+  "same_slope_support_collision_count": 0,
+  "schema_version": "cycle109-cert-v1",
+  "scope": {
+    "kind": "FINITE_INSTANCE",
+    "official_source": true,
+    "source_commit": "3c7b6be01145dffe8dc887b5b88461c44f0d84f3",
+    "truth_mode": "EXHAUSTIVE_SOURCE"
+  },
+  "security_bound_verified": true,
+  "security_floor": 0,
+  "source_completeness_verified": true,
+  "terminal_label": "UNPAID_BALANCED_COVER",
+  "truth": {
+    "N_off_exact": 4,
+    "distinct_bad_slopes": [
+      1,
+      4,
+      13,
+      16
+    ],
+    "k": 2,
+    "n": 4,
+    "q_line": 17,
+    "s": 3,
+    "same_slope_support_collision_count": 0,
+    "sigma": 1,
+    "support_witness_count": 4,
+    "supports_by_slope": {
+      "1": [
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "13": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "16": [
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      "4": [
+        [
+          0,
+          2,
+          3
+        ]
+      ]
+    },
+    "truth_hash": "cdc69396ad87ff7ba11b453cea647c574cfcf6c5d9cdd47cd85ba38df4acffd9"
+  },
+  "violations": [
+    {
+      "items": [
+        {
+          "reason": "intrinsic denominator minimality unverified",
+          "slope": 1,
+          "t": 1
+        },
+        {
+          "reason": "intrinsic denominator minimality unverified",
+          "slope": 4,
+          "t": 1
+        },
+        {
+          "reason": "intrinsic denominator minimality unverified",
+          "slope": 13,
+          "t": 1
+        },
+        {
+          "reason": "intrinsic denominator minimality unverified",
+          "slope": 16,
+          "t": 1
+        }
+      ],
+      "kind": "UNVERIFIED_BRANCH_RECEIPTS"
+    },
+    {
+      "kind": "UNPAID_BALANCED_SLOPE",
+      "slope": 1
+    },
+    {
+      "kind": "UNPAID_BALANCED_SLOPE",
+      "slope": 4
+    },
+    {
+      "kind": "UNPAID_BALANCED_SLOPE",
+      "slope": 13
+    },
+    {
+      "kind": "UNPAID_BALANCED_SLOPE",
+      "slope": 16
+    }
+  ],
+  "warnings": [
+    "intrinsic denominator minimality is not proof-kernel verified",
+    "uniform chart exponent independent of k,sigma,t is not proof-kernel verified"
+  ]
+}

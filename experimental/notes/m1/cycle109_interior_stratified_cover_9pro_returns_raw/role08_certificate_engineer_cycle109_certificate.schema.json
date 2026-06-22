@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/rs-mca/cycle109-cert-v1.schema.json",
+  "title": "Cycle109 stratified-cover certificate",
+  "type": "object",
+  "required": ["schema_version", "scope", "field_ledger", "classifications", "charts", "paid_caps", "chart_bound"],
+  "properties": {
+    "schema_version": {"const": "cycle109-cert-v1"},
+    "scope": {
+      "type": "object",
+      "required": ["kind", "truth_mode", "official_source"],
+      "properties": {
+        "kind": {"enum": ["FINITE_INSTANCE", "FINITE_STRESS_FAMILY", "SYMBOLIC_FAMILY"]},
+        "truth_mode": {"enum": ["EXHAUSTIVE_SOURCE", "PROOF_CARRYING_SOURCE"]},
+        "official_source": {"type": "boolean"},
+        "source_commit": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "field_ledger": {
+      "type": "object",
+      "required": ["p", "line_modulus", "q_gen", "q_code", "q_line", "security_denominator", "target_bits"],
+      "properties": {
+        "p": {"type": "integer", "minimum": 2},
+        "line_modulus": {"type": "array", "items": {"type": "integer"}, "minItems": 2},
+        "gen_degree": {"type": "integer", "minimum": 1},
+        "code_degree": {"type": "integer", "minimum": 1},
+        "q_gen": {"type": "integer", "minimum": 2},
+        "q_code": {"type": "integer", "minimum": 2},
+        "q_line": {"type": "integer", "minimum": 2},
+        "q_chal": {"type": ["integer", "null"]},
+        "uses_q_chal": {"type": "boolean"},
+        "security_denominator": {"const": "q_line"},
+        "target_bits": {"const": 128},
+        "protocol_transfer_receipt": {"$ref": "#/$defs/receipt"}
+      },
+      "additionalProperties": true
+    },
+    "instance": {
+      "type": "object",
+      "required": ["D", "k", "sigma", "f", "g"],
+      "properties": {
+        "D": {"type": "array", "items": {"type": "integer"}},
+        "k": {"type": "integer", "minimum": 0},
+        "sigma": {"type": "integer", "minimum": 1},
+        "f": {"type": "array", "items": {"type": "integer"}},
+        "g": {"type": "array", "items": {"type": "integer"}}
+      },
+      "additionalProperties": true
+    },
+    "claimed_bad_slopes": {"type": "array", "items": {"type": "integer"}, "uniqueItems": true},
+    "denominator": {
+      "type": "object",
+      "properties": {
+        "intrinsic_t": {"type": "integer", "minimum": 1},
+        "minimality_receipt": {"$ref": "#/$defs/receipt"}
+      },
+      "additionalProperties": true
+    },
+    "classifications": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["primary_branch"],
+        "properties": {
+          "primary_branch": {
+            "enum": [
+              "ENDPOINT", "QUOTIENT_PERIODIC", "CONTAINED_DELETE_ONE", "TANGENT",
+              "FIELD_CONFINEMENT", "AFFINE_COLOR", "HIDDEN_ACTION_RANK",
+              "INTERNAL_NORMALIZATION", "LOW", "BALANCED", "HIGH"
+            ]
+          },
+          "intrinsic_t": {"type": "integer", "minimum": 1},
+          "chart_id": {"type": "string"},
+          "branch_receipt": {"$ref": "#/$defs/receipt"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "charts": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/chart"}
+    },
+    "paid_caps": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["value", "receipt"],
+        "properties": {
+          "value": {"type": "integer", "minimum": 0},
+          "receipt": {"$ref": "#/$defs/receipt"},
+          "builtin_subfield_degree": {"type": "integer", "minimum": 1}
+        },
+        "additionalProperties": true
+      }
+    },
+    "chart_bound": {
+      "type": "object",
+      "required": ["C", "uniformity_receipt"],
+      "properties": {
+        "C": {"type": "integer", "minimum": 0},
+        "uniformity_receipt": {"$ref": "#/$defs/receipt"}
+      }
+    },
+    "family_promotion": {
+      "type": "object",
+      "properties": {
+        "claims_counterpacket": {"type": "boolean"},
+        "official_source_family_receipt": {"$ref": "#/$defs/receipt"},
+        "unbounded_parameter_receipt": {"$ref": "#/$defs/receipt"},
+        "corrected_reserve_receipt": {"$ref": "#/$defs/receipt"},
+        "all_charges_paid_or_absent_receipt": {"$ref": "#/$defs/receipt"},
+        "growth_or_systematic_failure_receipt": {"$ref": "#/$defs/receipt"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "receipt": {
+      "type": "object",
+      "required": ["verifier", "verified"],
+      "properties": {
+        "verifier": {"type": "string"},
+        "verified": {"type": "boolean"},
+        "theorem": {"type": "string"},
+        "statement_sha256": {"type": "string"},
+        "artifact_sha256": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "chart": {
+      "type": "object",
+      "required": ["chart_id", "branch", "tag", "normalization", "gate_b", "ap_corr", "cap"],
+      "properties": {
+        "chart_id": {"type": "string"},
+        "branch": {"enum": ["LOW", "BALANCED", "HIGH"]},
+        "tag": {
+          "type": "object",
+          "required": ["source_object_id", "support_selector_id", "normalization_id", "field_embedding_id"],
+          "properties": {
+            "source_object_id": {"type": "string"},
+            "support_selector_id": {"type": "string"},
+            "normalization_id": {"type": "string"},
+            "field_embedding_id": {"type": "string"},
+            "anchor_id": {"type": "string"},
+            "denominator_gauge_id": {"type": "string"},
+            "action_rank_signature": {"type": "string"}
+          },
+          "additionalProperties": true
+        },
+        "normalization": {
+          "type": "object",
+          "required": ["source_field", "target_field", "values"],
+          "properties": {
+            "source_field": {"const": "K_line"},
+            "target_field": {"const": "K_line"},
+            "values": {"type": "object", "additionalProperties": {"type": "integer"}}
+          },
+          "additionalProperties": true
+        },
+        "gate_b": {
+          "type": "object",
+          "required": ["parameter_dimension", "evaluation_matrix", "restriction_matrix"],
+          "properties": {
+            "object_kind": {"enum": ["COMPLEMENT_LINE", "SYNDROME_PENCIL", "TRANSVERSE_AFFINE_PLANE"]},
+            "parameter_dimension": {"type": "integer", "minimum": 1},
+            "evaluation_matrix": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}},
+            "restriction_matrix": {"type": "array", "items": {"type": "array", "items": {"type": "integer"}}},
+            "rank_A": {"type": "integer", "minimum": 0},
+            "rank_stacked": {"type": "integer", "minimum": 0}
+          },
+          "additionalProperties": true
+        },
+        "ap_corr": {
+          "type": "object",
+          "required": ["predicate_id", "visibility", "source_receipt"],
+          "properties": {
+            "predicate_id": {"type": "string"},
+            "visibility": {"const": "SOURCE_VISIBLE"},
+            "source_receipt": {"$ref": "#/$defs/receipt"}
+          },
+          "additionalProperties": true
+        },
+        "failure_charge_id": {"type": "string"},
+        "cap": {
+          "type": "object",
+          "required": ["kind", "value"],
+          "properties": {
+            "kind": {"enum": ["FINITE_EXACT_IMAGE", "UNIVARIATE_SEPARATOR", "CURVE_BEZOUT", "TWO_SEPARATOR_BEZOUT", "SYMBOLIC_BOUND"]},
+            "value": {"type": "integer", "minimum": 0},
+            "degree_bound": {"type": "integer", "minimum": 0},
+            "separator_degree": {"type": "integer", "minimum": 0},
+            "curve_degree": {"type": "integer", "minimum": 0},
+            "degree_1": {"type": "integer", "minimum": 0},
+            "degree_2": {"type": "integer", "minimum": 0},
+            "no_common_component_receipt": {"$ref": "#/$defs/receipt"},
+            "zero_dimensional_receipt": {"$ref": "#/$defs/receipt"},
+            "bound_receipt": {"$ref": "#/$defs/receipt"}
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

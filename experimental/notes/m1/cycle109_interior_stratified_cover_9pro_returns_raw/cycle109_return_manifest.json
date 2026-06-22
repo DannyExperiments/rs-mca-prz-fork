@@ -1,0 +1,212 @@
+{
+  "capturedAt": "2026-06-22T02:56:35.162Z",
+  "rawDir": "/Users/danielcabezas/OpenClaw/rs-mca/experimental/notes/m1/cycle109_interior_stratified_cover_9pro_returns_raw",
+  "roles": [
+    {
+      "role": "01",
+      "name": "unmapped_open_tab_01",
+      "prefix": "role01_unmapped_open_tab_01",
+      "title": "RS-MCA Proximity Prize",
+      "url": "https://chatgpt.com/c/6a389707-eb54-83ec-9de7-d2d3b14ae3d8",
+      "labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA"
+      ],
+      "messageCount": 5,
+      "assistantCount": 4,
+      "userCount": 1,
+      "finalLength": 15115,
+      "maybeGenerating": false,
+      "fileishLinks": [],
+      "fileishButtons": [
+        "Download apps",
+        "cycle109_interior_stratified_cover_9pro_packet.zip"
+      ]
+    },
+    {
+      "role": "02",
+      "name": "unmapped_open_tab_02",
+      "prefix": "role02_unmapped_open_tab_02",
+      "title": "RS-MCA Problem Solving",
+      "url": "https://chatgpt.com/c/6a389776-0620-83ec-b0ca-48e112df0dc7",
+      "labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "EXACT_NEW_WALL",
+        "PLAN"
+      ],
+      "messageCount": 5,
+      "assistantCount": 4,
+      "userCount": 1,
+      "finalLength": 13669,
+      "maybeGenerating": false,
+      "fileishLinks": [],
+      "fileishButtons": [
+        "Download apps",
+        "cycle109_interior_stratified_cover_9pro_packet(1).zip"
+      ]
+    },
+    {
+      "role": "03",
+      "name": "unmapped_open_tab_03",
+      "prefix": "role03_unmapped_open_tab_03",
+      "title": "RS-MCA Proximity Prize",
+      "url": "https://chatgpt.com/c/6a389761-e3d8-83ec-bb24-6ccab388e0f3",
+      "labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA"
+      ],
+      "messageCount": 5,
+      "assistantCount": 4,
+      "userCount": 1,
+      "finalLength": 11700,
+      "maybeGenerating": false,
+      "fileishLinks": [],
+      "fileishButtons": [
+        "Download apps",
+        "cycle109_interior_stratified_cover_9pro_packet(1).zip",
+        "Download checker bundle",
+        "Read the certificate-engineering report"
+      ]
+    },
+    {
+      "role": "04",
+      "name": "unmapped_open_tab_04",
+      "prefix": "role04_unmapped_open_tab_04",
+      "title": "RS-MCA Problem Breakdown",
+      "url": "https://chatgpt.com/c/6a389754-6d24-83ec-80ee-d90725e5fc27",
+      "labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "PLAN"
+      ],
+      "messageCount": 5,
+      "assistantCount": 4,
+      "userCount": 1,
+      "finalLength": 15868,
+      "maybeGenerating": false,
+      "fileishLinks": [],
+      "fileishButtons": [
+        "Download apps",
+        "cycle109_interior_stratified_cover_9pro_packet(1).zip"
+      ]
+    },
+    {
+      "role": "05",
+      "name": "unmapped_open_tab_05",
+      "prefix": "role05_unmapped_open_tab_05",
+      "title": "RS-MCA Problem Solving",
+      "url": "https://chatgpt.com/c/6a38973d-f344-83ec-8460-eb9e450dfd10",
+      "labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "ROUTE_CUT",
+        "PLAN"
+      ],
+      "messageCount": 5,
+      "assistantCount": 4,
+      "userCount": 1,
+      "finalLength": 17467,
+      "maybeGenerating": false,
+      "fileishLinks": [],
+      "fileishButtons": [
+        "Download apps",
+        "cycle109_interior_stratified_cover_9pro_packet.zip"
+      ]
+    },
+    {
+      "role": "06",
+      "name": "unmapped_open_tab_06",
+      "prefix": "role06_unmapped_open_tab_06",
+      "title": "RS-MCA Problem Strategy",
+      "url": "https://chatgpt.com/c/6a389738-597c-83ec-a29e-070931ad5b97",
+      "labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA"
+      ],
+      "messageCount": 5,
+      "assistantCount": 4,
+      "userCount": 1,
+      "finalLength": 18698,
+      "maybeGenerating": false,
+      "fileishLinks": [],
+      "fileishButtons": [
+        "Download apps",
+        "cycle109_interior_stratified_cover_9pro_packet.zip"
+      ]
+    },
+    {
+      "role": "07",
+      "name": "unmapped_open_tab_07",
+      "prefix": "role07_unmapped_open_tab_07",
+      "title": "RS-MCA Problem Breakdown",
+      "url": "https://chatgpt.com/c/6a389730-f4d0-83ec-a082-444ae0b67500",
+      "labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "PLAN"
+      ],
+      "messageCount": 5,
+      "assistantCount": 4,
+      "userCount": 1,
+      "finalLength": 19703,
+      "maybeGenerating": false,
+      "fileishLinks": [],
+      "fileishButtons": [
+        "Download apps",
+        "cycle109_interior_stratified_cover_9pro_packet.zip"
+      ]
+    },
+    {
+      "role": "08",
+      "name": "unmapped_open_tab_08",
+      "prefix": "role08_unmapped_open_tab_08",
+      "title": "RS-MCA Problem Solving",
+      "url": "https://chatgpt.com/c/6a389715-c730-83ec-a706-b1dd2591a61c",
+      "labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA"
+      ],
+      "messageCount": 5,
+      "assistantCount": 4,
+      "userCount": 1,
+      "finalLength": 13972,
+      "maybeGenerating": true,
+      "fileishLinks": [],
+      "fileishButtons": [
+        "Download apps",
+        "cycle109_interior_stratified_cover_9pro_packet.zip"
+      ]
+    },
+    {
+      "role": "09",
+      "name": "unmapped_open_tab_09",
+      "prefix": "role09_unmapped_open_tab_09",
+      "title": "RS-MCA Proximity Prize",
+      "url": "https://chatgpt.com/c/6a38970c-ff28-83ec-b593-5b2a7b28ea27",
+      "labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "ROUTE_CUT",
+        "EXACT_NEW_WALL"
+      ],
+      "messageCount": 5,
+      "assistantCount": 4,
+      "userCount": 1,
+      "finalLength": 16045,
+      "maybeGenerating": false,
+      "fileishLinks": [],
+      "fileishButtons": [
+        "Download apps",
+        "cycle109_interior_stratified_cover_9pro_packet.zip"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "N_off_exact": 4,
+  "distinct_bad_slopes": [
+    1,
+    4,
+    13,
+    16
+  ],
+  "k": 2,
+  "n": 4,
+  "q_line": 17,
+  "s": 3,
+  "same_slope_support_collision_count": 0,
+  "sigma": 1,
+  "support_witness_count": 4,
+  "supports_by_slope": {
+    "1": [
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "13": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "16": [
+      [
+        0,
+        1,
+        3
+      ]
+    ],
+    "4": [
+      [
+        0,
+        2,
+        3
+      ]
+    ]
+  },
+  "truth_hash": "cdc69396ad87ff7ba11b453cea647c574cfcf6c5d9cdd47cd85ba38df4acffd9"
+}

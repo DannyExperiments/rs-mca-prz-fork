@@ -1,0 +1,116 @@
+{
+  "assistantCount": 4,
+  "bodyLength": 17253,
+  "buttons": [
+    "Open sidebar",
+    "Search chats",
+    "Pinned",
+    "Close sidebar",
+    "Search chats",
+    "Pinned",
+    "Open project home",
+    "Open project options for 361",
+    "Open project home",
+    "Open project options for Erdos Problem 346",
+    "Projects",
+    "New project",
+    "Organize chats",
+    "Open project home",
+    "Open project options for $1 Mil Planner",
+    "Open project home",
+    "Open project options for $1,000,000 Math Prize",
+    "Open project home",
+    "Open project options for 346 Collab",
+    "Open project home",
+    "Open project options for 361 Collab",
+    "Open project home",
+    "Open project options for OPEN NON ERDOS PROBLEMS",
+    "Show more",
+    "Download apps",
+    "Share",
+    "Open conversation options",
+    "cycle109_interior_stratified_cover_9pro_packet(1).zip",
+    "Show more",
+    "Copy message",
+    "Edit message",
+    "Read resource",
+    "Thought for 31m 18s",
+    "Copy",
+    "Copy",
+    "Download checker bundle",
+    "Read the certificate-engineering report",
+    "Open the executable checker",
+    "Open the JSON schema",
+    "Sources",
+    "Copy response",
+    "Good response",
+    "Bad response",
+    "Pro feedback",
+    "Share",
+    "Switch model",
+    "More actions",
+    "Add files and more",
+    "Pro Extended",
+    "Start dictation",
+    "Start Voice"
+  ],
+  "fileishButtons": [
+    "Download apps",
+    "cycle109_interior_stratified_cover_9pro_packet(1).zip",
+    "Download checker bundle",
+    "Read the certificate-engineering report"
+  ],
+  "fileishLinks": [],
+  "labels": [
+    "PROOF",
+    "COUNTERPACKET",
+    "BANKABLE_LEMMA"
+  ],
+  "links": [
+    {
+      "href": "https://chatgpt.com/c/6a389761-e3d8-83ec-bb24-6ccab388e0f3#main",
+      "text": "Skip to content"
+    },
+    {
+      "href": "https://chatgpt.com/",
+      "text": "New chat"
+    },
+    {
+      "href": "https://chatgpt.com/",
+      "text": "ChatGPT"
+    },
+    {
+      "href": "https://chatgpt.com/",
+      "text": "New chat"
+    },
+    {
+      "href": "https://chatgpt.com/library",
+      "text": "Library"
+    },
+    {
+      "href": "https://chatgpt.com/scheduled",
+      "text": "Scheduled"
+    },
+    {
+      "href": "https://chatgpt.com/apps",
+      "text": "Apps"
+    }
+  ],
+  "maybeGenerating": false,
+  "messageCount": 5,
+  "title": "RS-MCA Proximity Prize",
+  "url": "https://chatgpt.com/c/6a389761-e3d8-83ec-bb24-6ccab388e0f3",
+  "userCount": 1,
+  "detectedRole": {
+    "num": "03",
+    "name": "unmapped_open_tab_03"
+  },
+  "openTabIndex": 2,
+  "sourceOpenTab": {
+    "id": "1047632397",
+    "title": "RS-MCA Proximity Prize",
+    "url": "https://chatgpt.com/c/6a389761-e3d8-83ec-bb24-6ccab388e0f3",
+    "lastOpened": "2026-06-22T02:52:40.545Z"
+  },
+  "capturedAt": "2026-06-22T02:56:33.364Z"
+}
