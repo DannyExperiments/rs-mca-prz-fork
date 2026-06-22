@@ -2526,3 +2526,31 @@ Keep entries concise and link to the relevant files.
   `V-CYCLE116-EXTENSION-FIELD-QCHAL-SOURCE-CONTRACT`. If the official source
   rejects this extension-field row, move to
   `L-CYCLE117-ACCEPTED-FIELD-FIXED-JET-OCCUPANCY-COMPILER`.
+
+### 2026-06-23 - Cycle117 extension-field q-contract packet staged
+
+- **Agent/model:** Codex local packet builder.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle117_extension_field_qchal_source_contract_9pro/`,
+  `experimental/agents-log.md`.
+- **Status:** PLAN / EXACT_NEW_WALL / REVIEWABILITY.
+- **What is being added:** A nine-role no-internet Pro packet for
+  `V-CYCLE116-EXTENSION-FIELD-QCHAL-SOURCE-CONTRACT`. The packet asks workers
+  to prove source/admissibility promotion for the Cycle116 finite row, identify
+  the first exact source route cut, or produce a reusable adapter/checker. It
+  includes the current canonical tracker, Cycle113-116 audits, Cycle116 PRZ
+  note, source TeX files, M2 line-decoding bridge note, and the strongest
+  Cycle116 verifier package.
+- **Context zip:**
+  `/Users/danielcabezas/cycle117_extension_field_qchal_source_contract_9pro_packet.zip`
+  with SHA-256
+  `943938c43f453cce08c922b65f37689b2c3b4d1cc4eaf5c7c1da9d9b3d71eb78`.
+- **How it is useful:** This round is proof-first rather than computation-first.
+  It targets whether `RS[F_17^32,H,256]` is an admitted source row, whether
+  `q_line=17^32` is the right denominator, whether `q_chal` exists or remains
+  unset, whether support-wise events are retained, and whether `LD_sw` implies
+  any source line-decodability failure.
+- **What to do next:** Dispatch one common prompt, the self-audit addendum, and
+  one role prompt to each of nine Pro instances. Audit returns conservatively
+  under `PROOF`, `COUNTERPACKET`, `BANKABLE_LEMMA`, `ROUTE_CUT`,
+  `EXACT_NEW_WALL`, `AUDIT`, or `PLAN`.
