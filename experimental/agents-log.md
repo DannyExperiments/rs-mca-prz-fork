@@ -2252,3 +2252,32 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+
+### 2026-06-22 - Cycle112 source APcorr T1 block packet 9-Pro returns
+
+- **Agent/model:** ChatGPT Pro 5.5 nine-role round, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle112_source_apcorr_t1_block_packet_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle112_source_apcorr_t1_block_packet_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** Preserves and audits all nine Cycle112 visible
+  Pro returns. The round produced no official terminal among
+  `SOURCE_VALID_LOW_T1_COUNTERPACKET`, `T1_BLOCK_PACKET_CHARGED`, or
+  `T1_APCORR_LOCAL_LIMIT`. It banks three sharper facts: non-double-spent
+  `q_line` charge ledgers cannot pay an above-threshold final retained color
+  set; disjoint threshold-block packets have exact cap
+  `floor(n/(k+sigma))`; and interpolation-defect Fourier flatness gives the
+  desired `t=1` local-limit and integer `q_line` closure when official
+  `AP_corr` supplies the spectral bound.
+- **How it is useful:** Cuts the bad repair move of simply naming an
+  above-threshold packet "charged." It isolates the next official-source wall:
+  replay the interval/P190-style packet through the frozen official source
+  adapter, `AP_corr`, final retained color map, charge registry, and integer
+  `q_line` ledger.
+- **What to do next:** Attack
+  `L-CYCLE113-OFFICIAL-APCORR-INTERVAL-PREFIX-REJECTION-OR-COUNTERPACKET`
+  with `V-CYCLE113-FROZEN-SOURCE-CONTRACT-REPLAY`. The replay must return the
+  first official source/APcorr rejection, an exact final-color compression or
+  charge receipt, or a source-valid low-`t=1` counterpacket.
