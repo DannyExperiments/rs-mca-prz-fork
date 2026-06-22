@@ -1,0 +1,19 @@
+{
+  "decision": "TAU_FOLDED_PROJECTED_MMAX_LE_12",
+  "projection_modulus": 16220397291888956160,
+  "kernel_order": 3,
+  "kappa": 15337197211725320908,
+  "fixed_roots": [7668598605862660454, 15778797251807138534],
+  "fixed_selected_counts": [0, 0],
+  "tau_half_domain_expected": 26373783552,
+  "tau_half_domain_counted": 26373783552,
+  "canonical_shards": 4096,
+  "threads": 8,
+  "folded_ordered_energy": 60,
+  "max_canonical_projected_multiplicity": 2,
+  "max_canonical_key": 7565868754278347372,
+  "max_key_shard": 3821,
+  "full_projected_max_including_fixed": 2,
+  "thresholds": {"energy_pass_max": 154, "multiplicity_pass_max": 12},
+  "seconds": {"generate_base": 1.05701, "sort_and_check_base": 4.67593, "setup": 0.00310699, "shard_scan": 604.84, "total": 610.577}
+}

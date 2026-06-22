@@ -2462,3 +2462,27 @@ Keep entries concise and link to the relevant files.
   theorem note and tiny verifier proving the fixed-jet transfer, native
   Cycle84 row, smooth `[512,256]` lift, and q-ledger, with explicit
   non-promotion language for prize/status boundaries.
+
+### 2026-06-23 - Cycle116 standalone C84-to-RS-MCA/LD certificate packet staged
+
+- **Agent/model:** Codex local packet builder.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle116_standalone_c84_to_rs_mca_ld_certificate_9pro/`,
+  `experimental/agents-log.md`.
+- **Status:** PLAN / EXACT_NEW_WALL / REVIEWABILITY.
+- **What is being added:** A compact no-internet 9-Pro packet for
+  `V-CYCLE116-STANDALONE-C84-TO-RS-MCA-LD-TRANSFER-CERTIFICATE`. The packet
+  asks workers to turn the Cycle115 transfer convergence into a standalone,
+  PRZ-reviewable theorem note and verifier package: fixed-jet transfer,
+  Cycle84 native instantiation, smooth `[512,256]` lift over `F_17^32`,
+  `LD_sw`/support-wise MCA definitions, exact `2^-128` q-ledger, and explicit
+  non-promotion boundaries.
+- **How it is useful:** This directly targets PRZ's request to make Cycle84
+  paper-facing only if the exact transfer theorem is real, while keeping the
+  finite certificate separate from raw Pro/Fable provenance and avoiding any
+  claim that the current finite row solves the official prize problem.
+- **What to do next:** Send
+  `/Users/danielcabezas/cycle116_standalone_c84_to_rs_mca_ld_certificate_9pro_packet.zip`
+  to fresh Pro instances with either the combined role prompts or the common
+  prompt plus one role prompt. Audit returns conservatively and promote only a
+  reviewable certificate/checker or a precise route cut/counterpacket.
