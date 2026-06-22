@@ -29,6 +29,32 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-22 - Cycle108 official source-adapter 9-Pro returns
+
+- **Agent/model:** Nine ChatGPT Pro theorem-worker roles, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle108_official_source_adapter_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle108_official_source_adapter_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** Raw preserved returns and a conservative audit for
+  the Cycle108 official source-adapter Pro round. No role produced a
+  source-valid `PROOF` or `COUNTERPACKET`. The strongest banked progress is
+  the same-field official syndrome-pencil adapter, endpoint-first interior
+  source partition, high-denominator transverse affine-plane inverse, balanced
+  complement-locator normalization, and conditional q-ledger transfer.
+- **How it is useful:** It moves the active M1 wall from generic source
+  normalization to
+  `L-CYCLE109-INTERIOR-STRATIFIED-CHARGE-OR-DECORATED-COVER`: the complete
+  low/balanced/high interior cover with explicit official charges, injective
+  same-field slope normalizations, source-decorated AP descent, q-line field
+  transfer, and final numerator inequality.
+- **What to do next:** Dispatch Cycle109 against the stratified cover theorem.
+  Require either a full branch-by-branch proof with `N_off <= floor(q_line /
+  2^128)`, or a source-valid above-reserve counterpacket after all known
+  charges are paid.
+
 ### 2026-06-22 - Cycle107 source-cover / complement-line 9-Pro returns
 
 - **Agent/model:** Nine ChatGPT Pro theorem-worker roles, audited by Codex.

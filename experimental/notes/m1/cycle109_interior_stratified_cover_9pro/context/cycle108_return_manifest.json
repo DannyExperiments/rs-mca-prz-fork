@@ -1,0 +1,254 @@
+{
+  "captured_at": "2026-06-22T01:38:18.598Z",
+  "source": "Chrome Main 1 ChatGPT tabs ordered by browser.user.openTabs()",
+  "captures": [
+    {
+      "role": "01",
+      "slug": "full_adapter_prover",
+      "prefix": "role01_full_adapter_prover",
+      "title": "RS-MCA Proof Strategy",
+      "url": "https://chatgpt.com/c/6a388657-995c-83ec-98eb-47e37363acf5",
+      "final_length": 17077,
+      "message_count": 5,
+      "assistant_message_count": 4,
+      "detected_labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "ROUTE_CUT",
+        "EXACT_NEW_WALL",
+        "AUDIT",
+        "PLAN"
+      ],
+      "flags": {
+        "continue_generating": false,
+        "error": true,
+        "regenerate": false,
+        "stop_generating": false
+      },
+      "fileish_link_count": 0,
+      "fileish_button_count": 3,
+      "first_line": "EXACT_NEW_WALL"
+    },
+    {
+      "role": "02",
+      "slug": "source_counterpacket_hunter",
+      "prefix": "role02_source_counterpacket_hunter",
+      "title": "Theorem Validation and Progress",
+      "url": "https://chatgpt.com/c/6a388646-9414-83ec-8117-19490fd5c152",
+      "final_length": 17395,
+      "message_count": 5,
+      "assistant_message_count": 4,
+      "detected_labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "ROUTE_CUT",
+        "EXACT_NEW_WALL",
+        "AUDIT",
+        "PLAN"
+      ],
+      "flags": {
+        "continue_generating": false,
+        "error": false,
+        "regenerate": false,
+        "stop_generating": false
+      },
+      "fileish_link_count": 0,
+      "fileish_button_count": 3,
+      "first_line": "EXACT_NEW_WALL"
+    },
+    {
+      "role": "03",
+      "slug": "balanced_anchor_normalization",
+      "prefix": "role03_balanced_anchor_normalization",
+      "title": "RS-MCA Proof Strategy",
+      "url": "https://chatgpt.com/c/6a388643-8558-83ec-b3ce-d5d8bc802e91",
+      "final_length": 12455,
+      "message_count": 5,
+      "assistant_message_count": 4,
+      "detected_labels": [
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "ROUTE_CUT",
+        "EXACT_NEW_WALL",
+        "AUDIT",
+        "PLAN"
+      ],
+      "flags": {
+        "continue_generating": false,
+        "error": false,
+        "regenerate": false,
+        "stop_generating": false
+      },
+      "fileish_link_count": 0,
+      "fileish_button_count": 3,
+      "first_line": "ROUTE_CUT"
+    },
+    {
+      "role": "04",
+      "slug": "high_denominator_affine_plane",
+      "prefix": "role04_high_denominator_affine_plane",
+      "title": "RS-MCA Problem Solving",
+      "url": "https://chatgpt.com/c/6a38863b-7c6c-83ec-8413-1a6c32731ef6",
+      "final_length": 15213,
+      "message_count": 5,
+      "assistant_message_count": 4,
+      "detected_labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "ROUTE_CUT",
+        "EXACT_NEW_WALL",
+        "AUDIT",
+        "PLAN"
+      ],
+      "flags": {
+        "continue_generating": false,
+        "error": false,
+        "regenerate": false,
+        "stop_generating": false
+      },
+      "fileish_link_count": 0,
+      "fileish_button_count": 3,
+      "first_line": "EXACT_NEW_WALL"
+    },
+    {
+      "role": "05",
+      "slug": "endpoint_interior_formalizer",
+      "prefix": "role05_endpoint_interior_formalizer",
+      "title": "RS-MCA Proof Challenge",
+      "url": "https://chatgpt.com/c/6a388696-c13c-83ec-a8af-37198a939a2c",
+      "final_length": 11068,
+      "message_count": 5,
+      "assistant_message_count": 4,
+      "detected_labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "ROUTE_CUT",
+        "PLAN"
+      ],
+      "flags": {
+        "continue_generating": false,
+        "error": false,
+        "regenerate": false,
+        "stop_generating": false
+      },
+      "fileish_link_count": 0,
+      "fileish_button_count": 3,
+      "first_line": "ROUTE_CUT"
+    },
+    {
+      "role": "06",
+      "slug": "ap_corr_descent",
+      "prefix": "role06_ap_corr_descent",
+      "title": "RS-MCA Problem Analysis",
+      "url": "https://chatgpt.com/c/6a38868d-9854-83ec-9319-22435d392b25",
+      "final_length": 12453,
+      "message_count": 5,
+      "assistant_message_count": 4,
+      "detected_labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "ROUTE_CUT",
+        "EXACT_NEW_WALL",
+        "AUDIT",
+        "PLAN"
+      ],
+      "flags": {
+        "continue_generating": false,
+        "error": false,
+        "regenerate": false,
+        "stop_generating": false
+      },
+      "fileish_link_count": 0,
+      "fileish_button_count": 3,
+      "first_line": "BANKABLE_LEMMA"
+    },
+    {
+      "role": "07",
+      "slug": "gate_b_ap_visible_separator",
+      "prefix": "role07_gate_b_ap_visible_separator",
+      "title": "RS-MCA Problem Solving",
+      "url": "https://chatgpt.com/c/6a388687-8740-83ec-86dc-739254d13429",
+      "final_length": 11642,
+      "message_count": 5,
+      "assistant_message_count": 4,
+      "detected_labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "ROUTE_CUT",
+        "EXACT_NEW_WALL",
+        "AUDIT",
+        "PLAN"
+      ],
+      "flags": {
+        "continue_generating": false,
+        "error": false,
+        "regenerate": false,
+        "stop_generating": false
+      },
+      "fileish_link_count": 0,
+      "fileish_button_count": 3,
+      "first_line": "EXACT_NEW_WALL"
+    },
+    {
+      "role": "08",
+      "slug": "q_ledger_numerator_transfer",
+      "prefix": "role08_q_ledger_numerator_transfer",
+      "title": "L-CYCLE108-Aperiodicity Descent",
+      "url": "https://chatgpt.com/c/6a388684-3a4c-83ec-8caf-e6347f8d9e1c",
+      "final_length": 18760,
+      "message_count": 5,
+      "assistant_message_count": 4,
+      "detected_labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "ROUTE_CUT",
+        "EXACT_NEW_WALL",
+        "AUDIT",
+        "PLAN"
+      ],
+      "flags": {
+        "continue_generating": false,
+        "error": false,
+        "regenerate": false,
+        "stop_generating": false
+      },
+      "fileish_link_count": 0,
+      "fileish_button_count": 3,
+      "first_line": "EXACT_NEW_WALL"
+    },
+    {
+      "role": "09",
+      "slug": "ruthless_referee_synthesis",
+      "prefix": "role09_ruthless_referee_synthesis",
+      "title": "RS-MCA Theorem Assistance",
+      "url": "https://chatgpt.com/c/6a38865b-d8b4-83ec-89ce-6d19f8c4c0af",
+      "final_length": 18671,
+      "message_count": 5,
+      "assistant_message_count": 4,
+      "detected_labels": [
+        "PROOF",
+        "COUNTERPACKET",
+        "BANKABLE_LEMMA",
+        "ROUTE_CUT",
+        "EXACT_NEW_WALL",
+        "AUDIT",
+        "PLAN"
+      ],
+      "flags": {
+        "continue_generating": false,
+        "error": false,
+        "regenerate": false,
+        "stop_generating": false
+      },
+      "fileish_link_count": 0,
+      "fileish_button_count": 3,
+      "first_line": "EXACT_NEW_WALL"
+    }
+  ]
+}
