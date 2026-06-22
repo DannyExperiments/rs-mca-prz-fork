@@ -1,0 +1,121 @@
+L_LIMIT is the boxed official APcorr-to-defect-energy implication above, together with the exact retained-witness map.
+
+The first artifact capable of converting P190 or C284 into COUNTERPACKET must take as inputs:
+
+an authority-pinned source-root identifier;
+
+a total source adapter;
+
+an ordered, total official AP_corr evaluator;
+
+the endpoint and final retained-color maps;
+
+an exhaustive charge registry with disjoint ownership, exact caps, and integer q
+line
+
+ allocations;
+
+the serialized P190 or C284 datum.
+
+It must output exactly one of:
+
+the first failed source/APcorr clause and witness;
+
+the exact compressed final color set or funded charge partition closing the ledger;
+
+acceptance with at least 131 final free events and a failed integer ledger;
+
+missing receipt.
+
+Such a checker has no false positive because acceptance, final-event membership, charge ownership, and all inequalities are recomputed exactly before a positive terminal. Relative to a complete frozen contract, it has no false negative because the ordered adapter/APcorr chain either first rejects or accepts, and an accepted exhaustive final ledger satisfies the integer dichotomy
+
+2
+128
+N
+total
+
+≤q
+line
+
+or2
+128
+N
+total
+
+>q
+line
+
+.
+
+The current packet cannot instantiate this checker because its defining official receipts are missing.
+
+Self-audit
+
+Exact implication proved: retained-witness surjection plus the explicit Fourier or defect-energy inequality implies N
+free
+
+≤⌊R
+free
+
+/2
+128
+⌋, hence the correctly typed line-field ledger.
+
+Exact implication not proved: official AP_corr plus absence of official named charges implies the required Fourier or energy inequality. Official acceptance or rejection of P190/C284 is also not proved.
+
+Prize relevance: the source audit and converter theorem are route-relevant, but they are not a prize theorem or source-valid counterpacket. The numerical stress results remain finite/model/source-replay certificates.
+
+First failure line: globally, the first failure is
+
+d⟼Adapt
+off
+
+(d).
+
+Conditional on an adapter, the next failure is that
+
+AP
+corr
+off
+
+(d)∧NoNamedCharge
+off
+(d)
+
+is undefined. Conditional on both predicates, the first analytic failure is descent to the boxed energy inequality.
+
+Ledger use: q
+line
+
+ is the sole final denominator; q
+gen
+
+ is usable only inside a proved defect/entropy theorem; q
+code
+
+ supplies no reserve; q
+chal
+
+ is unused; the target is exactly 2
+128
+N
+free
+
+≤q
+line
+
+.
+
+Possible numerator reductions: quotient-periodicity, contained incidences, same-slope collisions, endpoint effects, affine normalization, retained tags, and final exclusions could reduce the model numerator, but no official maps or quantitative receipts applying them to P190/C284 are present.
+
+Confidence: high.
+
+Pro Extended
+ChatGPT can make mistakes. Check important info.
+Too many requests
+
+You’re making requests too quickly. We’ve temporarily limited access to your conversations to protect your data.
+
+Please wait a few minutes before trying again.
+
+Got it

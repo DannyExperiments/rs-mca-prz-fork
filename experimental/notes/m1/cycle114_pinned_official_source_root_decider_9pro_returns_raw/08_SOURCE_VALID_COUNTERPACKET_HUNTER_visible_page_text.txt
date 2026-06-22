@@ -1,0 +1,51 @@
+oof object;
+4. canonical P190 and C284 field/domain/witness data;
+5. endpoint evaluator;
+6. total final retained-event map, including retained tags and equivalence;
+7. exhaustive charge registry;
+8. for each charge: exact owned subset, cap, q_line allocation, overlap priority;
+9. optional universal AP_corr-to-local-limit proof receipt;
+10. deterministic computational resource bound.
+
+It must output exactly one of the six preferred terminals. In particular:
+
+SOURCE_REJECTED only at the first false hash-bound official clause, with exact witness.
+
+COLOR_COMPRESSED_OR_CHARGED only after computing the entire final image or a complete disjoint charge partition and verifying the integer allocation.
+
+SOURCE_VALID_LOW_T1_COUNTERPACKET only when all upstream clauses pass and the exact required allocation exceeds q
+line
+
+.
+
+T1_APCORR_LOCAL_LIMIT only after checking a universal, noncircular theorem bounding the complete free-event set.
+
+Missing, ambiguous, non-total, or unauthoritative semantics must return SOURCE_RECEIPT_MISSING_NO_CLAIM.
+
+A complete contract whose finite replay exceeds the certified limit returns RESOURCE_EXHAUSTED_NO_CLAIM.
+
+There are no false positives because every positive terminal requires exact recomputation and checked receipts. Relative to a total frozen contract and exhaustive registry, there are no false negatives: each ordered clause either passes or fails, the finite final image is exact, all registered ownership is disjointized, and the final integer inequality is decidable. Completeness is necessarily relative to the contract’s authoritative declaration that its registry is exhaustive.
+
+Self-audit
+
+Proved: the official predicate is absent from the packet; C284 gives 284 genuine arbitrary-domain MCA-bad slopes; full P190 gives 26,245; the ledger fails for any retained count above 130; a smooth low-reserve common-core repair exists and fails the corrected entropy clause.
+
+Not proved: official adapter acceptance, official AP_corr, the official endpoint action, final retained-event injectivity, exhaustive absence of source exclusions or charges, or a corrected-reserve source-valid counterpacket.
+
+Prize relevance: this is an official-route audit plus exact finite/manuscript-level MCA certificate, not an official-prize counterpacket or upper-side proof.
+
+First possible failure: official source instance to accepted residual datum.
+
+Field usage: q_line is the sole final denominator; q_gen has no security role without a proved entropy theorem; q_code supplies none; q_chal is unused.
+
+Route to a full decision: yes, but not from the present archive. The first converting artifact is the authority-pinned official contract root; the first converting checker is the total replay specified above.
+
+Pro Extended
+ChatGPT can make mistakes. Check important info.
+Too many requests
+
+You’re making requests too quickly. We’ve temporarily limited access to your conversations to protect your data.
+
+Please wait a few minutes before trying again.
+
+Got it

@@ -1,0 +1,61 @@
+ exact final image or disjoint charge ledger;
+
+SOURCE_VALID_LOW_T1_COUNTERPACKET if acceptance is total and the final effective count exceeds 130;
+
+T1_APCORR_LOCAL_LIMIT only with a checked analytic proof;
+
+SOURCE_RECEIPT_MISSING_NO_CLAIM whenever any evaluator, exhaustiveness declaration, map, cap, or allocation is absent.
+
+No false positives: every positive terminal requires exact recomputation, exact event ownership, checked caps, and the integer q
+line
+
+ inequality; missing data fail closed.
+
+No false negatives relative to a frozen total contract: every accepted witness traverses the deterministic endpoint, normalization, deduplication, charge-ownership, and allocation pipeline, and an exhaustive registry leaves no unnamed branch. A proof terminal additionally requires a kernel-checked theorem receipt.
+
+Self-audit
+
+Exact implication proved: the attached source documents do not define the total official source/APcorr/final-event/charge contract needed for Cycle114. Conditional on one endpoint color deletion and injective final normalization, P190 leaves 189 events and C284 leaves 283; neither can be paid by a non-double-spent additive q
+line
+
+ ledger. C284 retains an exact 142-event disjoint subpacket after any endpoint deletion.
+
+Exact implication not proved: official source acceptance, official source rejection, official AP_corr, the official endpoint identity, the final retained color image, absence of unnamed charges, and a prize-level proof or counterpacket.
+
+Prize relevance: this is an official-prize-route audit and finite source-replay certificate, not a Proximity Prize theorem or source-valid counterpacket.
+
+First possible failure line: local noncontained residue datum → authority-pinned source-adapter/APcorr acceptance. Under a separately specified identity adapter, both packets would instead fail the smooth-domain hypothesis, but that identity-adapter clause is not in the packet.
+
+Field discipline: q
+line
+
+=p is the sole final denominator. q
+gen
+
+=p supplies entropy credit only after a theorem proves the entropy loss. q
+code
+
+ is metadata and is not defined as a separate ledger in the source docs. q
+chal
+
+ is unused. The exact target is 2
+128
+N
+free
+
+≤q
+line
+
+.
+
+Potential numerator reductions checked: endpoint is unsupported; displayed same-slope collisions are absent; full natural P190 deduplicates exactly 735 supports but remains at 26245 colors; quotient-periodic and hidden-rank conditions are empty at t=1; contained incidence is absent; displayed events are not tangent; fixed affine normalization is bijective; retained-tag normalization has no quotient map; support matching leaves P190 at 189 and C284 at 142; prefix, energy, and Fourier labels overlap and cannot be separately funded.
+
+Pro Extended
+ChatGPT can make mistakes. Check important info.
+Too many requests
+
+You’re making requests too quickly. We’ve temporarily limited access to your conversations to protect your data.
+
+Please wait a few minutes before trying again.
+
+Got it

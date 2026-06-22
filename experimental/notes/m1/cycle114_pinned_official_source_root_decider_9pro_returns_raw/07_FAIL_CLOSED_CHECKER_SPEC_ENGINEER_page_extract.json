@@ -1,0 +1,606 @@
+{
+  "num": "07",
+  "role": "FAIL_CLOSED_CHECKER_SPEC_ENGINEER",
+  "expectedUrl": "https://chatgpt.com/c/6a3910ac-4e7c-83ec-8bdd-7490c485727d",
+  "title": "Cycle114 Problem Analysis",
+  "currentUrl": "https://chatgpt.com/c/6a3910ac-4e7c-83ec-8bdd-7490c485727d",
+  "data": {
+    "assistantCount": 4,
+    "assistantMessages": [
+      "[Circular]",
+      "[Circular]",
+      "[Circular]",
+      "[Circular]"
+    ],
+    "bodyLength": 32008,
+    "bodyTail": "one deletion is only a provisional convention; no official endpoint ID is supplied.\n\nFixed affine color normalization: z↦az+b, a\n\n=0, is bijective and cannot reduce cardinality.\n\nSupport-dependent normalization: cannot merge events while support/chart tags remain part of the retained event.\n\nFinal retained-tag normalization: absent.\n\nSmooth-domain source exclusion: would reject a direct identity adapter, but the identity-adapter clause is absent.\n\nSelf-audit\n\nExact implication proved\n\nThe attached packet does not contain a complete official source/AP_corr/final-event/charge contract. A deterministic fail-closed checker with the schema above is sound relative to an authority-pinned root and sound registered verifiers.\n\nSeparately, the raw P190/C284 objects are valid arbitrary-domain residue-line packets under def:residue, and an identity interpretation as an official smooth multiplicative domain fails the exact subgroup-order divisibility test.\n\nExact implication not proved\n\nNo official source acceptance or rejection, no official AP_corr result, no official endpoint action, no final retained count, no complete charge ledger, no T1_APCORR_LOCAL_LIMIT, and no prize-level proof or counterpacket are proved.\n\nPrize relevance\n\nThe checker specification and source-root audit are official-route relevant. The P190/C284 arithmetic and arbitrary-domain residue-line realization are finite/model/source-route certificates only.\n\nFirst failure line\n\npacket-integrity-pinned model datum\n    -> authority-pinned official source-adapter evaluation\n\nUnder a hypothetical identity adapter, the first mathematical failure is the smooth multiplicative-domain clause.\n\nField ledger\n\nq_line is the sole final denominator. q_gen can enter an entropy or defect theorem only after a source theorem establishes the relevant loss. q_code supplies no reserve. q_chal is unused. The exact target is the residual form\n\n2\n128\nN\nfree\n\n≤R\nfree\n\n≤q\nline\n\n.\n\nRoute to a full solution\n\nYes. The first converting artifact is an authority-pinned, closed-world source contract with a total source adapter and AP_corr evaluator.\n\nIf that adapter is identity and the source clause is the manuscript smooth-domain scope, the checker returns SOURCE_REJECTED immediately by the divisibility calculations above.\n\nIf a nontrivial adapter accepts P190 or C284, the first counterpacket checker is the exact endpoint/final-event/charge replay; at least 131 surviving free events yields SOURCE_VALID_LOW_T1_COUNTERPACKET.\n\nThe first theorem converting the positive route into PROOF is the official AP_corr + NoNamedCharge implication to the displayed defect-energy inequality, which yields T1_APCORR_LOCAL_LIMIT.\n\nThe current archive supplies none of those converting receipts.\n\nPro Extended\nChatGPT can make mistakes. Check important info.\nToo many requests\n\nYou’re making requests too quickly. We’ve temporarily limited access to your conversations to protect your data.\n\nPlease wait a few minutes before trying again.\n\nGot it",
+    "buttonsTail": [
+      {
+        "aria": "Open sidebar",
+        "idx": 0,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 1,
+        "testid": null,
+        "text": "Search chats",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 2,
+        "testid": null,
+        "text": "Pinned",
+        "title": null
+      },
+      {
+        "aria": "Close sidebar",
+        "idx": 3,
+        "testid": "close-sidebar-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 4,
+        "testid": null,
+        "text": "Search chats",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 5,
+        "testid": null,
+        "text": "Pinned",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 6,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for 361",
+        "idx": 7,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 8,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for Erdos Problem 346",
+        "idx": 9,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 10,
+        "testid": null,
+        "text": "Projects",
+        "title": null
+      },
+      {
+        "aria": "New project",
+        "idx": 11,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Organize chats",
+        "idx": 12,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 13,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for $1 Mil Planner",
+        "idx": 14,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 15,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for $1,000,000 Math Prize",
+        "idx": 16,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 17,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for 346 Collab",
+        "idx": 18,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 19,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for 361 Collab",
+        "idx": 20,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 21,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for OPEN NON ERDOS PROBLEMS",
+        "idx": 22,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 23,
+        "testid": null,
+        "text": "Show more",
+        "title": null
+      },
+      {
+        "aria": "Download apps",
+        "idx": 24,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Share",
+        "idx": 25,
+        "testid": "share-chat-button",
+        "text": "Share",
+        "title": null
+      },
+      {
+        "aria": "Open conversation options",
+        "idx": 26,
+        "testid": "conversation-options-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "cycle114_pinned_official_source_root_decider_9pro_packet(6).zip",
+        "idx": 27,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 28,
+        "testid": "collapsible-user-message-toggle",
+        "text": "Show more",
+        "title": null
+      },
+      {
+        "aria": "Copy message",
+        "idx": 29,
+        "testid": "copy-turn-action-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Edit message",
+        "idx": 30,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 31,
+        "testid": null,
+        "text": "Thought for 18m 0s",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 32,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 33,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 34,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 35,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 36,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 37,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 38,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 39,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 40,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 41,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 42,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 43,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Run code",
+        "idx": 44,
+        "testid": null,
+        "text": "Run",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 45,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 46,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 47,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 48,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 49,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 50,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Run code",
+        "idx": 51,
+        "testid": null,
+        "text": "Run",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 52,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy table",
+        "idx": 53,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 54,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 55,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 56,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy response",
+        "idx": 57,
+        "testid": "copy-turn-action-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Good response",
+        "idx": 58,
+        "testid": "good-response-turn-action-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Bad response",
+        "idx": 59,
+        "testid": "bad-response-turn-action-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Pro feedback",
+        "idx": 60,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Share",
+        "idx": 61,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Switch model",
+        "idx": 62,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "More actions",
+        "idx": 63,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Add files and more",
+        "idx": 65,
+        "testid": "composer-plus-btn",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 66,
+        "testid": null,
+        "text": "Pro Extended",
+        "title": null
+      },
+      {
+        "aria": "Start dictation",
+        "idx": 67,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Start Voice",
+        "idx": 68,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 69,
+        "testid": null,
+        "text": "Got it",
+        "title": null
+      }
+    ],
+    "capturedAt": "2026-06-22T11:08:23.495Z",
+    "fileishButtons": [
+      "[Circular]",
+      "[Circular]",
+      "[Circular]"
+    ],
+    "fileishLinks": [],
+    "lastAssistant": "AUDIT\n\nTerminal: SOURCE_RECEIPT_MISSING_NO_CLAIM\nConfidence: high.\n\nDecisive finding\n\nThe official Cycle114 source predicate, source adapter, AP_corr predicate, endpoint policy, final retained-event map, retained-tag equivalence, exhaustive charge registry, and q_line allocation rule are absent from the attached source files.\n\nThe packet integrity checks succeed: all 54 entries in SHA256SUMS.txt verify. The uploaded ZIP hash is\n\n1255aabb930864582c8bce924e6109a68feb1b4322aa62e9c0e4383e6f816e58\n\nThe seven source-document hashes are:\n\n681905d6de89697dafb8dccfc64d23cd6895050427d19f01ce504e13e0e799bd  RS_disproof_v3.tex\n99e2b292e88526a9ba8cf289bf8255c91d4bd49dde799cf1be10d98e18d63bbc  slackMCA_v3.tex\n0903c5b104ef3ecbc939d7cad8c33608dfddc946d795d696452befad9636909a  cs25_cap_v4.tex\n3c5efb6c8a1a2ff47adf226d1cae5f4f53cc52978f46cc5590ff6488ba75f131  snarks_v4.tex\n524767e9f3abc848adcb6b633b97f4efa5fc4bc9c13e7df39dea9b6e4bb4ac8a  proximity_blueprint_v3.tex\n8432596eccba285435411cf9c5b15bd2b387cf076f39cf4a7ec10569bc90d76a  readme.md\n58c5296d31a636a1a8dcc71b2c5ec29f0df7be3a5a18272ff392716e329fc53f  agents.md\n\nFor reference, hashing the lexicographically path-sorted seven SHA256SUMS.txt lines gives the locally derived content-set root\n\n5750833f6a2c20731a91d62b3c81e7e6f0314de7a7e4dd48a7543b4ec3fdc2d2\n\nThis proves content integrity under that stated derivation. It is not an authority binding and does not provide a semantic contract.\n\nExact fixed-string searches across context/source_docs/ give zero occurrences of:\n\nAP_corr\nAPcorr\nsource adapter\nofficial source\nfinal retained\nretained tag\ncharge registry\nP190\nC284\n\nThe absence is also semantic, not merely lexical:\n\nslackMCA_v3.tex:def:mca defines support-wise MCA.\n\nslackMCA_v3.tex:def:residue defines residue-line data.\n\nslackMCA_v3.tex:thm:normalform gives an exact same-domain residue-line normal form.\n\nslackMCA_v3.tex:thm:closure explicitly says it does not bound the packing number.\n\nslackMCA_v3.tex:prob:perfiber is open.\n\nslackMCA_v3.tex:conj:B and conj:final-mca are conjectures, not proof receipts.\n\nreadme.md, lines 149–166, calls the residue-line local limit open and the certificate scanner “to be implemented.”\n\nagents.md, lines 149–161, identifies the corrected MCA/residue-line local limit as the principal missing positive theorem.\n\nNo attached clause chooses a total Cycle114 source predicate from these mathematical objects.\n\nExact source ambiguity\n\nThe packet supports two incompatible interpretations, so neither official acceptance nor official rejection follows.\n\nInterpretation A: general residue-line semantics\n\nBoth P190 and C284 satisfy slackMCA_v3.tex:def:residue on their own arbitrary domains.\n\nFor either packet, take\n\nk = 1\nt = 1\nE = X\nB = 1\nw(x) = x^3\ndelta = 1 - 3/n\n\nEvery displayed support has three distinct nonzero points, and\n\nQ_i = X^3 - ∏_{x∈S_i}(X-x)\n\nhas degree at most one because the support sum is zero. Thus\n\ndeg(Q_i) < k+t = 2\nQ_i ≡ Q_i(0)·B mod E\nQ_i = w on S_i\n|S_i| = 3 = s_delta.\n\nThe witnesses are noncontained: for k=1, a contained witness would require a constant polynomial G satisfying\n\nG(x) = -1/x\n\nat three distinct nonzero points, which is impossible.\n\nConsequently thm:normalform gives, at the arbitrary-domain/model level,\n\nP190: epsilon_mca ≥ 190/p\nC284: epsilon_mca ≥ 284/p.\n\nThere is no endpoint deletion in def:mca or thm:normalform.\n\nInterpretation B: direct official smooth-domain semantics\n\nThe source manuscripts scope the prize problem to smooth multiplicative subgroup or coset domains, generally of power-of-two order: see RS_disproof_v3.tex:conj:capacity, slackMCA_v3.tex abstract lines 95–104, and readme.md lines 28–42.\n\nLet T=2\n128\n. Then\n\np−1=130T=5⋅13⋅2\n129\n.\n\nFor a subgroup or multiplicative coset of F\np\n×\n\n, its cardinality must divide p−1. But\n\nP190: |D| = 571,  (p-1) mod 571 = 90\nC284: |D| = 570,  (p-1) mod 570 = 520\n\nand neither cardinality is a power of two. The direct packets also have rate k/n=1/571 or 1/570, not one of the stated prize rates.\n\nTherefore an identity source adapter would be rejected at the smooth-domain clause.\n\nThis is not the current official SOURCE_REJECTED terminal because no attached receipt states that the adapter is identity, that raw D is the official code domain, or that no embedding, puncturing, extraction, or other source transformation is permitted.\n\nThe first unresolved implication remains\n\nraw P190/C284 model datum\n    -> authority-pinned official source-adapter output.\nFail-closed input schema\nPython\nRun\nTerminal = Literal[\n    \"SOURCE_REJECTED\",\n    \"COLOR_COMPRESSED_OR_CHARGED\",\n    \"SOURCE_VALID_LOW_T1_COUNTERPACKET\",\n    \"T1_APCORR_LOCAL_LIMIT\",\n    \"SOURCE_RECEIPT_MISSING_NO_CLAIM\",\n    \"RESOURCE_EXHAUSTED_NO_CLAIM\",\n]\n\nCoverage = Literal[\n    \"LOWER_BOUND_WITNESS_SET\",\n    \"EXHAUSTIVE_EVENT_UNIVERSE\",\n    \"SUCCINCT_EXHAUSTIVE_CAP\",\n]\n\nclass FileRef(TypedDict):\n    logical_path: str\n    sha256: str\n    byte_length: int\n\nclass Receipt(TypedDict):\n    receipt_id: str\n    stage: str\n    official_clause_id: str\n    subject_hash: str\n    verifier_id: str\n    verifier_sha256: str\n    dependency_hashes: list[str]\n    outcome: Literal[\"PASS\", \"FAIL\", \"VALUE\"]\n    output_hash: str\n    proof_object_hash: str\n\nclass EvaluatorRef(TypedDict):\n    evaluator_id: str\n    evaluator_sha256: str\n    input_schema_sha256: str\n    output_schema_sha256: str\n    ordered_clause_ids: list[str]\n    totality_receipt: Receipt\n\nclass OfficialContract(TypedDict):\n    contract_id: str\n    contract_version: str\n    closed_world: Literal[True]\n    canonicalization_version: str\n\n    source_adapter: EvaluatorRef\n    source_scope: EvaluatorRef\n    ap_corr: EvaluatorRef\n    final_admissibility: EvaluatorRef\n    endpoint_policy: EvaluatorRef\n    final_event_map: EvaluatorRef\n    retained_tag_equivalence: EvaluatorRef\n\n    exhaustive_charge_registry_root: str\n    charge_registry_exhaustiveness_receipt: Receipt\n\n    ledger_policy: dict   # denominator=q_line, bits=128,\n                          # composition=DISJOINT_SUM\n\n    local_limit_theorems: list[dict]\n\nclass OfficialRootBundle(TypedDict):\n    expected_root_sha256: str        # independently supplied\n    computed_root_sha256: str\n    authority_binding_receipt: Receipt\n    files: list[FileRef]\n    semantic_index_sha256: str\n    contract: OfficialContract\n\nclass Candidate(TypedDict):\n    candidate_id: Literal[\"P190\", \"C284\"]\n    candidate_sha256: str\n    coverage: Coverage\n\n    fields: dict  # q_gen, q_code, q_line, q_chal_or_null,\n                  # canonical field descriptions and certificates\n\n    parameters: dict  # n, k, sigma, t, beta\n    domain_D: list\n    word_w: object\n    denominator_E: object\n    numerator_B: object\n\n    witnesses: list[dict]  # witness_id, Q, support\n    claimed_counts: dict   # advisory only\n\nclass FinalEventReceipt(TypedDict):\n    raw_instance_ids: list[str]\n    endpoint_deleted_ids: list[str]\n    source_excluded_ids: list[str]\n    normalized_event_by_instance: dict\n    final_event_schema_sha256: str\n    exhaustive: bool\n\nclass ChargeEntry(TypedDict):\n    charge_id: str\n    official_predicate_receipt: Receipt\n\n    mode: Literal[\n        \"ADDITIVE\",\n        \"QUOTIENT_COMPRESSION\",\n        \"DELETION\",\n        \"SOURCE_EXCLUSION\",\n    ]\n\n    subject_stage: Literal[\"FINAL_TAGGED_EVENTS\"]\n    exact_owned_event_ids: list[str]\n\n    quotient_map: dict | None\n    cap_in_final_events: int\n    q_line_allocation: int\n    unique_allocation_id: str\n    theorem_receipt: Receipt\n\nclass ReplayInput(TypedDict):\n    schema_version: Literal[\"V-CYCLE114-1\"]\n    official_root_bundle: OfficialRootBundle\n    candidate: Candidate\n    receipts: dict\n    final_event_receipt: FinalEventReceipt\n    charge_entries: list[ChargeEntry]\n\n    resource_limits: dict\n    checker_binary_sha256: str\n    arithmetic_backend_sha256: str\n\nNo floating-point values are allowed. Field elements, polynomials, sets, maps, and tags must have canonical encodings. Counts supplied by the candidate are never trusted.\n\nRequired semantic labels\n\nA valid official root must bind exact byte ranges or verifier hashes for at least:\n\nOFFICIAL_SOURCE_SCOPE\nSOURCE_ADAPTER_TOTAL\nSOURCE_SCOPE_ORDERED_CLAUSES\nCORRECTED_RESERVE\nAP_CORR_TOTAL\nAP_CORR_ORDERED_CLAUSES\nENDPOINT_POLICY_TOTAL\nFINAL_ADMISSIBILITY\nFINAL_RETAINED_EVENT_MAP_TOTAL\nRETAINED_TAG_EQUIVALENCE\nCHARGE_REGISTRY_EXHAUSTIVE\nQ_LINE_LEDGER_DISJOINT_COMPOSITION\n\nOptional proof terminal:\n\nT1_APCORR_DEFECT_ENERGY_LOCAL_LIMIT\n\nThe manuscript labels def:residue and thm:normalform do not substitute for SOURCE_ADAPTER_TOTAL: they operate on one already-fixed domain and do not transport an arbitrary packet to an official smooth-domain code.\n\nLikewise conj:B and conj:final-mca cannot be registered as theorem receipts.\n\nValidation order\n\nCanonical syntax and hash validation. Reject malformed encodings fail-closed.\n\nAuthority binding. Recompute the contract root and compare it to an independently supplied expected root. A packet-local checksum cannot authenticate itself.\n\nClosed-world contract validation. Require all mandatory evaluator and registry labels. Unknown or partial evaluators are missing receipts, not negative evaluations.\n\nCandidate arithmetic. Recompute the field, domain, witnesses, supports, polynomial identities, raw colors, and distinctness. Candidate counts are advisory.\n\nField typing.\n\nq_line = sole final security denominator\nq_gen  = entropy/defect field only after a registered theorem\nq_code = code metadata; never an allocation\nq_chal = unused without a protocol transfer theorem\n\nSource adapter. Run the registered adapter and bind its output hash to the official datum.\n\nOrdered source clauses. The first verified false clause yields SOURCE_REJECTED. An exception, undefined result, absent clause, or unverified proof yields SOURCE_RECEIPT_MISSING_NO_CLAIM.\n\nCorrected-reserve and ordered AP_corr clauses. Apply only to the official adapter output. Again, a verified false clause is rejection; unknown is missing.\n\nFinal admissibility. Evaluate contained incidences, source exclusions, poles, domain restrictions, endpoint behavior, and any other official pre-normalization clauses.\n\nEndpoint and retained-event map. Map every retained raw instance to its complete final tagged security event. Deduplicate only complete events, not colors with discarded support/chart tags.\n\nNumerator-changing operations. Apply official source exclusions, deletions, and quotient maps before additive ownership.\n\nExhaustive charge registry. Every registered charge must be evaluated. Registry exhaustiveness itself requires a proof receipt.\n\nNo-double-spend ledger. For final transformed event set E\n⋆\n, additive charged sets C\ni\n\n must be pairwise disjoint. Put\n\nF=E\n⋆\n∖\ni\n⋃\n\nC\ni\n\n.\n\nFor charge caps A\ni\n\n and allocations R\ni\n\n, require\n\n∣C\ni\n\n∣≤A\ni\n\n,2\n128\nA\ni\n\n≤R\ni\n\n,\n\nwith unique allocation IDs, and\n\nR\nfree\n\n+\ni\n∑\n\nR\ni\n\n≤q\nline\n\n.\n\nUniversal local-limit branch. Verify any registered theorem before requiring exhaustive event enumeration.\n\nUpper/lower certificate branch.\n\nSafety requires an exhaustive upper cap U\nfree\n\n≥∣F∣.\n\nCounterpacket requires only an explicit surviving lower bound L\nfree\n\n≤∣F∣.\n\nReceipt consistency. A lower bound exceeding a verified upper cap, or inconsistent official maps, yields SOURCE_RECEIPT_MISSING_NO_CLAIM with reason INCONSISTENT_OFFICIAL_RECEIPTS.\n\nExact terminal conditions\n\nLet T=2\n128\n.\n\nSOURCE_REJECTED\n\nEmit only if:\n\nauthority root valid\nall earlier ordered clauses pass\nthe next official source/AP_corr/final-admissibility clause returns FAIL\nthe failure proof and exact witness verify.\n\nThe output must include the file hash, theorem/clause ID, clause order, subject hash, and exact calculation.\n\nCOLOR_COMPRESSED_OR_CHARGED\n\nEmit only if the entire official final-event universe is exhaustively bounded and\n\nTU\nfree\n\n≤R\nfree\n\n,TA\ni\n\n≤R\ni\n\n,R\nfree\n\n+\ni\n∑\n\nR\ni\n\n≤q\nline\n\n.\n\nThe output must give:\n\nraw distinct count\nendpoint deletions\nsource exclusions\nexact quotient/normalization map\nnumber merged or deleted\nfinal free cap\nevery exact charge set and cap\nevery q_line allocation\nunused q_line remainder\n\nA lower-bound witness list cannot produce this terminal.\n\nSOURCE_VALID_LOW_T1_COUNTERPACKET\n\nEmit only if source and AP_corr pass, the final map and charge registry are complete, and an explicit set of distinct surviving free events satisfies\n\nTL\nfree\n\n>R\nfree\n\n.\n\nThe output must list or hash the exact free event IDs and report the strict excess.\n\nT1_APCORR_LOCAL_LIMIT\n\nEmit only for a registered universal theorem applying to the whole official free event universe and closing the residual ledger. The first exact theorem identified by Cycle112–113 is:\n\nQ=∣G∣=q\ngen\nσ−1\n\n,B=∣Ω∣,E\nΦ\n\n=\ny∈G\n∑\n\nh(y)\n2\n,\nL\nfree\n\n=⌊\nT\nR\nfree\n\n⌋,H=Q(L\nfree\n\n+1)−B−1,\n\nand\n\nAP\ncorr\nofficial\n\n∧NoNamedCharge⟹(Q−1)(QE\nΦ\n\n−B\n2\n)≤H\n2\n.\n\nParseval and Cauchy–Schwarz then give\n\nΔ\n2\n≤(Q−1)(QE\nΦ\n\n−B\n2\n)≤H\n2\n\nand Fourier inversion gives\n\nN\nfree\n\n≤⌊\nQ\nB+Δ\n\n⌋≤L\nfree\n\n.\n\nHence\n\nTN\nfree\n\n≤R\nfree\n\n.\n\nThe attached packet proves the implication from the displayed defect-energy inequality to the ledger closure. It does not prove the official AP_corr descent into that inequality.\n\nSOURCE_RECEIPT_MISSING_NO_CLAIM\n\nEmit for any missing, unauthoritative, partial, malformed, inconsistent, or non-exhaustive semantic receipt. This includes a lower-bound set below threshold without an exhaustive upper cap.\n\nRESOURCE_EXHAUSTED_NO_CLAIM\n\nEmit only after the authority root and all semantically necessary receipts validate, when deterministic replay exceeds a certified limit. Include the stage, limit, checkpoint hash, and unprocessed range. Resource exhaustion must not mask an earlier missing receipt.\n\nExecutable decision skeleton\nPython\nRun\nT = 1 << 128\n\ndef decide(bundle, expected_root):\n    try:\n        contract = verify_authority_bound_closed_world_contract(\n            bundle.official_root_bundle,\n            expected_root,\n        )\n\n        candidate = canonicalize_and_recompute(bundle.candidate)\n        fields = verify_fields(candidate.fields)\n\n        q_line = fields.q_line\n        require(contract.ledger_policy.denominator == \"q_line\")\n        require(contract.ledger_policy.security_bits == 128)\n        forbid_denominator(\"q_code\")\n        forbid_denominator(\"q_chal\")\n\n        datum = run_verified_source_adapter(contract, candidate)\n\n        failed = first_verified_failure(contract.source_scope, datum)\n        if failed:\n            return emit(\"SOURCE_REJECTED\", failed)\n\n        verify_corrected_reserve(contract, datum, fields)\n\n        failed = first_verified_failure(contract.ap_corr, datum)\n        if failed:\n            return emit(\"SOURCE_REJECTED\", failed)\n\n        failed = first_verified_failure(contract.final_admissibility, datum)\n        if failed:\n            return emit(\"SOURCE_REJECTED\", failed)\n\n        lower_events = replay_candidate_witnesses_through_endpoint_and_final_map(\n            contract, datum, candidate\n        )\n\n        registry = verify_exhaustive_registry(contract, datum)\n        transformed_lower = apply_all_numerator_changing_maps(\n            lower_events, registry\n        )\n\n        ownership, allocations = verify_disjoint_charge_ledger(\n            transformed_lower,\n            registry,\n            q_line,\n        )\n\n        free_lower = transformed_lower - ownership.charged_union\n        R_free = q_line - sum(allocations.charge_allocations)\n\n        local_limit = verify_applicable_universal_local_limit(\n            contract, datum, registry, R_free\n        )\n\n        upper = derive_exhaustive_upper_cap_if_available(\n            contract, datum, candidate, registry\n        )\n\n        reject_inconsistent_receipts(\n            lower=len(free_lower),\n            upper=upper,\n            theorem_upper=local_limit.cap if local_limit else None,\n        )\n\n        # Deterministic terminal priority.\n        if local_limit and T * local_limit.cap <= R_free:\n            return emit(\"T1_APCORR_LOCAL_LIMIT\", local_limit)\n\n        if upper is not None and T * upper <= R_free:\n            return emit(\n                \"COLOR_COMPRESSED_OR_CHARGED\",\n                exact_maps=registry.maps,\n                upper_cap=upper,\n                allocations=allocations,\n            )\n\n        if T * len(free_lower) > R_free:\n            return emit(\n                \"SOURCE_VALID_LOW_T1_COUNTERPACKET\",\n                free_event_ids=sorted(free_lower),\n                residual_allocation=R_free,\n                strict_excess=T * len(free_lower) - R_free,\n            )\n\n        return emit(\n            \"SOURCE_RECEIPT_MISSING_NO_CLAIM\",\n            first_missing=\"EXHAUSTIVE_FINAL_EVENT_CAP_OR_LOCAL_LIMIT\",\n        )\n\n    except MissingOrInvalidReceipt as exc:\n        return emit(\n            \"SOURCE_RECEIPT_MISSING_NO_CLAIM\",\n            first_missing=exc.receipt_id,\n            stage=exc.stage,\n        )\n\n    except ResourceLimitExceeded as exc:\n        return emit(\n            \"RESOURCE_EXHAUSTED_NO_CLAIM\",\n            stage=exc.stage,\n            certified_limit=exc.limit,\n            checkpoint_hash=exc.checkpoint_hash,\n        )\nNo-false-positive proof\n\nConditional on the authenticity of the externally pinned root and soundness of its registered verifiers:\n\nSOURCE_REJECTED is sound because it is emitted only for the first verified false official clause after all earlier clauses passed.\n\nCOLOR_COMPRESSED_OR_CHARGED is sound because the final universe is exhaustive, every numerator-changing map is official and explicit, additive ownership is disjoint, and the complete integer allocation closes inside q_line.\n\nSOURCE_VALID_LOW_T1_COUNTERPACKET is sound because every displayed lower-bound event survives source, AP_corr, endpoint, normalization, all quotient/deletion operations, and all registered charges. Therefore the true free set has at least L\nfree\n\n events and exceeds its residual allocation.\n\nT1_APCORR_LOCAL_LIMIT is sound because the theorem applies universally rather than merely to the displayed witnesses and its full-set cap closes the residual integer ledger.\n\nThe two no-claim terminals assert no prize theorem or counterpacket.\n\nNo-false-negative statement\n\nAn unconditional no-false-negative theorem for substantive terminals is impossible with lower-bound-only coverage or missing receipts.\n\nA conditional completeness theorem does hold:\n\nIf the authority-bound contract is closed-world, every evaluator is total, the registry is exhaustive, all proof objects are supplied, resources suffice, and either an exhaustive final-event universe/full upper cap or a violating free-event lower bound is supplied, then the checker emits exactly one substantive terminal.\n\nIn exhaustive mode, the exact final free count is an integer, so it is either at most its allocation cap or strictly above it.\n\nIn lower-bound-only mode:\n\nlower bound > threshold  -> counterpacket can be complete\nlower bound <= threshold -> safety cannot be inferred\n\nThus a no-claim in the second case is necessary, not a false negative.\n\nMinimal replay tests\nTest\tExpected terminal\nCurrent packet\tSOURCE_RECEIPT_MISSING_NO_CLAIM, first missing OFFICIAL_CONTRACT_ROOT\nTreat attached source hashes as authority-pinned but supply no semantic adapter\tSOURCE_RECEIPT_MISSING_NO_CLAIM, first missing SOURCE_ADAPTER_TOTAL\nMock identity adapter plus smooth-subgroup source clause, P190\tSOURCE_REJECTED: 571 ∤ p-1\nMock identity adapter plus smooth-subgroup source clause, C284\tSOURCE_REJECTED: 570 ∤ p-1\nAccepted P190, one endpoint deleted, injective final map, no charges\tSOURCE_VALID_LOW_T1_COUNTERPACKET, lower bound 189, excess 59T−1\nAccepted C284, one endpoint deleted, injective final map, no charges\tSOURCE_VALID_LOW_T1_COUNTERPACKET, lower bound 283, excess 153T−1\nAccepted P190, exhaustive map compressing 189 displayed events to 130\tCOLOR_COMPRESSED_OR_CHARGED, at least 59 exact losses\nAccepted full natural P190 map, one deletion, otherwise injective\tCounterpacket with at least 26,244 events; closure requires 26,114 additional losses\nTwo charge entries spend the same events or reuse q_line allocation\tSOURCE_RECEIPT_MISSING_NO_CLAIM, inconsistent ledger\nRegistered universal defect-energy theorem proves free cap 130\tT1_APCORR_LOCAL_LIMIT\nComplete trusted semantics but certified enumeration limit exceeded\tRESOURCE_EXHAUSTED_NO_CLAIM\nExact stress ledger\nq\ngen\n\n=q\ncode\n\n=q\nline\n\n=p=130T+1,q\nchal\n\n unused.\n⌊\nT\nq\nline\n\n⌋=130,130T=q\nline\n\n−1,131T−q\nline\n\n=T−1.\n\nP190:\n\n190 displayed colors\n189 after one assumed endpoint\n189T - q_line = 59T - 1 > 0\n\n26,980 full natural zero-sum supports\n26,245 full natural raw colors\n26,244 after one deletion\n26,244 - 130 = 26,114 additional losses required\n\nC284:\n\n284 displayed colors\n283 after one assumed endpoint\n283T - q_line = 153T - 1 > 0\n\nafter any one deletion, a 141-color disjoint subpacket remains\n141T - q_line = 11T - 1 > 0\n\nOrdinary additive charges cannot rescue any of these counts. If final events are partitioned into free and disjoint charged sets, honest caps and allocations imply\n\nT∣E\n⋆\n∣≤R\nfree\n\n+\ni\n∑\n\nR\ni\n\n≤q\nline\n\n,\n\ncontradicting the displayed lower bounds. A successful positive terminal must genuinely reject events, merge them under an official quotient map, or prove a smaller exhaustive cap.\n\nStructural exclusions checked\n\nManuscript quotient-periodicity: slackMCA_v3.tex:rem:aper requires M∣gcd(n,k), M>1. Here k=1, so gcd(n,k)=1; this exact quotient-periodic denominator class is absent.\n\nBroader support periodicity: undefined officially; no conclusion.\n\nContained incidences: absent for displayed witnesses because a constant cannot equal −1/x on multiple distinct points.\n\nSame-slope collisions: absent on the displayed P190 and C284 sets.\n\nTangency: displayed locators have three distinct roots.\n\nEndpoint: one deletion is only a provisional convention; no official endpoint ID is supplied.\n\nFixed affine color normalization: z↦az+b, a\n\n=0, is bijective and cannot reduce cardinality.\n\nSupport-dependent normalization: cannot merge events while support/chart tags remain part of the retained event.\n\nFinal retained-tag normalization: absent.\n\nSmooth-domain source exclusion: would reject a direct identity adapter, but the identity-adapter clause is absent.\n\nSelf-audit\n\nExact implication proved\n\nThe attached packet does not contain a complete official source/AP_corr/final-event/charge contract. A deterministic fail-closed checker with the schema above is sound relative to an authority-pinned root and sound registered verifiers.\n\nSeparately, the raw P190/C284 objects are valid arbitrary-domain residue-line packets under def:residue, and an identity interpretation as an official smooth multiplicative domain fails the exact subgroup-order divisibility test.\n\nExact implication not proved\n\nNo official source acceptance or rejection, no official AP_corr result, no official endpoint action, no final retained count, no complete charge ledger, no T1_APCORR_LOCAL_LIMIT, and no prize-level proof or counterpacket are proved.\n\nPrize relevance\n\nThe checker specification and source-root audit are official-route relevant. The P190/C284 arithmetic and arbitrary-domain residue-line realization are finite/model/source-route certificates only.\n\nFirst failure line\n\npacket-integrity-pinned model datum\n    -> authority-pinned official source-adapter evaluation\n\nUnder a hypothetical identity adapter, the first mathematical failure is the smooth multiplicative-domain clause.\n\nField ledger\n\nq_line is the sole final denominator. q_gen can enter an entropy or defect theorem only after a source theorem establishes the relevant loss. q_code supplies no reserve. q_chal is unused. The exact target is the residual form\n\n2\n128\nN\nfree\n\n≤R\nfree\n\n≤q\nline\n\n.\n\nRoute to a full solution\n\nYes. The first converting artifact is an authority-pinned, closed-world source contract with a total source adapter and AP_corr evaluator.\n\nIf that adapter is identity and the source clause is the manuscript smooth-domain scope, the checker returns SOURCE_REJECTED immediately by the divisibility calculations above.\n\nIf a nontrivial adapter accepts P190 or C284, the first counterpacket checker is the exact endpoint/final-event/charge replay; at least 131 surviving free events yields SOURCE_VALID_LOW_T1_COUNTERPACKET.\n\nThe first theorem converting the positive route into PROOF is the official AP_corr + NoNamedCharge implication to the displayed defect-energy inequality, which yields T1_APCORR_LOCAL_LIMIT.\n\nThe current archive supplies none of those converting receipts.",
+    "linksTail": [
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/c/6a3910ac-4e7c-83ec-8bdd-7490c485727d#main",
+        "idx": 0,
+        "text": "Skip to content",
+        "title": null
+      },
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/",
+        "idx": 1,
+        "text": "New chat",
+        "title": null
+      },
+      {
+        "aria": "Home",
+        "download": null,
+        "href": "https://chatgpt.com/",
+        "idx": 2,
+        "text": "ChatGPT",
+        "title": null
+      },
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/",
+        "idx": 3,
+        "text": "New chat",
+        "title": null
+      },
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/library",
+        "idx": 4,
+        "text": "Library",
+        "title": null
+      },
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/scheduled",
+        "idx": 5,
+        "text": "Scheduled",
+        "title": null
+      },
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/apps",
+        "idx": 6,
+        "text": "Apps",
+        "title": null
+      }
+    ],
+    "location": "https://chatgpt.com/c/6a3910ac-4e7c-83ec-8bdd-7490c485727d",
+    "messageCount": 5,
+    "messages": [
+      {
+        "idx": 0,
+        "length": 6398,
+        "role": "user",
+        "text": "cycle114_pinned_official_source_root_decider_9pro_packet(6).zip\nZip Archive\n# Common Prompt - Cycle114 Pinned Official Source Root Decider\n\nNO INTERNET. Do not browse, search, cite online sources, or use external tools.\nUse only the attached packet and your own reasoning. Use maximum reasoning.\n\nYou are one of nine independent theorem workers on the RS-MCA / Proximity Prize\nM1 upper-side route. Try to fully solve the assigned problem. If you cannot\nfully solve it, progress as far as possible and isolate the exact next theorem,\nchecker, or counterpacket mechanism. Be ambitious, but do not overclaim.\n\nRead CURRENT_CYCLE114_STATE.md, MANIFEST.md, the canonical tracker, the\nCycle111-113 audits, the Cycle112-113 raw response summaries, and the attached\nsource files in context/source_docs/ before answering. The source docs include\nthe repo README/agents files and the TeX manuscripts. If the official source\npredicate is absent from those files, say so exactly. Do not invent it.\n\nThe active wall is:\n\ntext\nV-CYCLE114-PINNED-OFFICIAL-SOURCE-ROOT-P190-OR-C284-DECIDER\n\nCycle113's conservative terminal was:\n\ntext\nSOURCE_RECEIPT_MISSING_NO_CLAIM\n\nThe stress packets to replay are:\n\ntext\np = q_line = q_gen = q_code = 130 * 2^128 + 1\nfloor(q_line / 2^128) = 130\n\nP190 displayed colors = 190\nP190 after one endpoint = 189\nP190 full natural t=1 zero-sum supports = 26980\nP190 full natural raw colors = 26245\n\nC284 displayed colors = 284\nC284 after one endpoint = 283\n\nIf more than 130 official final free events remain, the final ledger fails:\n\ntext\n2^128 * N_free > q_line\n\nIf at most 130 official final free events remain, the answer must explain the\nexact source rejection, exact final-color compression, or exact charge ledger\nthat reduced the count. Labels are not receipts.\n\nReturn under one of these labels only:\n\ntext\nPROOF\nCOUNTERPACKET\nBANKABLE_LEMMA\nROUTE_CUT\nEXACT_NEW_WALL\nAUDIT\nPLAN\n\nPreferred terminal decisions, if you can justify one:\n\ntext\nSOURCE_REJECTED:\n  name the first official source/APcorr/final-normalization clause that fails,\n  with exact calculation and file/theorem/definition reference.\n\nCOLOR_COMPRESSED_OR_CHARGED:\n  give the exact final retained color map or official charge set, the number\n  of colors removed/merged, the cap, and the integer q_line allocation.\n\nSOURCE_VALID_LOW_T1_COUNTERPACKET:\n  prove official source adapter and AP_corr acceptance, all charges absent or\n  exactly paid, and final retained colors > floor(q_line / 2^128).\n\nT1_APCORR_LOCAL_LIMIT:\n  prove official AP_corr plus absence of frozen named charges implies bounded\n  interpolation-defect Fourier mass, hence the t=1 local-limit and q_line\n  closure.\n\nSOURCE_RECEIPT_MISSING_NO_CLAIM:\n  if the packet lacks a necessary official source/APcorr/final-color/charge\n  receipt, name exactly which receipt is missing and what would decide it.\n\nRESOURCE_EXHAUSTED_NO_CLAIM:\n  if you can specify a valid replay but cannot complete it in this answer.\n\nDo not answer with broad language like \"probably charged\", \"periodic\", \"seems\naperiodic\", \"source-like\", \"morally APcorr\", or \"should compress.\" A charge is\nvalid only if it names:\n\ntext\nofficial predicate\nexact final retained color subset or quotient map\nexact cap\nexact q_line allocation\nno double counting with free colors or other charges\n\nCorrect q-ledger discipline:\n\ntext\nq_line = sole final color/security denominator\nq_gen  = entropy denominator only after a source theorem proves the entropy loss\nq_code = code field size / metadata; not a denominator\nq_chal = unused absent a protocol transfer theorem\ntarget = 2^128 * N_free <= q_line\n\nExplicitly answer whether you see a route to a full solution. If yes, give the\nfirst theorem/checker that would convert your answer into PROOF or\nCOUNTERPACKET. If no, give the exact route cut and the first failure line.\n\nVerification bar:\n\n1. State the exact implication proved.\n2. State the exact implication not proved.\n3. Identify the first line in the reduction chain where the theorem could fail.\n4. Use q_gen, q_line, q_code, q_chal, and the 2^-128 target correctly.\n5. Check whether quotient/periodic structure, contained incidences,\n   same-slope collisions, endpoint effects, affine color normalization, final\n   retained normalization, or support/source exclusions reduce the numerator.\n6. If you propose a checker, specify its exact inputs, outputs, terminal\n   decisions, and no-false-positive/no-false-negative proof.\n\n---\n\n# Self-Audit Addendum\n\nBefore finalizing, do a self-audit.\n\nExplicitly answer:\n\n1. What exact implication did I prove, and what exact implication did I not\n   prove?\n2. Is the result official-prize-relevant, or only a finite/model/source-route\n   research certificate?\n3. What is the first line in the reduction chain where the theorem could fail?\n4. Are q_gen, q_line, q_code, q_chal, and the 2^-128 target being used\n   correctly?\n5. Could quotient/periodic structure, contained incidences, same-slope\n   collisions, endpoint effects, affine color normalization, retained-tag\n   normalization, or final source exclusions reduce the claimed numerator?\n6. If my answer is a PLAN, what exact theorem/checker/counterpacket would\n   convert it into PROOF or COUNTERPACKET?\n\nDo not hide behind broad language. Give the exact next lemma, exact missing\nhypothesis, exact official source clause, or exact counterexample mechanism.\n\n---\n\n# Role 07 - Fail-Closed Checker Spec Engineer\n\nYour task is to specify V-CYCLE114-PINNED-OFFICIAL-SOURCE-ROOT-P190-OR-C284-DECIDER\nas a fail-closed replay checker.\n\nThe checker must ingest:\n\ntext\nofficial source-root bundle\ncandidate packet: P190 or C284\nsource adapter receipts\nofficial AP_corr receipts\nendpoint and final retained color/event map\ncharge registry\nq_line ledger allocations\n\nIt must emit exactly one terminal:\n\ntext\nSOURCE_REJECTED\nCOLOR_COMPRESSED_OR_CHARGED\nSOURCE_VALID_LOW_T1_COUNTERPACKET\nT1_APCORR_LOCAL_LIMIT\nSOURCE_RECEIPT_MISSING_NO_CLAIM\nRESOURCE_EXHAUSTED_NO_CLAIM\n\nGive:\n\ntext\ninput schema\nrequired hashes / file roots / theorem labels\nvalidation order\nterminal decision conditions\nno-false-positive proof\nno-false-negative proof\nminimal replay tests\nwhat can be verified from the current packet\nwhat is missing\n\nIf possible, give executable pseudocode or Python-like schemas. Do not claim\nthe checker proves anything unless the current packet supplies every required\nofficial receipt.\n\nShow more"
+      },
+      {
+        "idx": 1,
+        "length": 202,
+        "role": "assistant",
+        "text": "I’ll inspect the packet materials, reconstruct the official reduction chain and predicates, trace all source/AP_corr/final-color/charge receipts, then specify and replay a fail-closed P190/C284 checker."
+      },
+      {
+        "idx": 2,
+        "length": 164,
+        "role": "assistant",
+        "text": "The bundle hashes check out, but the source texts appear not to define the needed Cycle114 adapter, AP_corr/retained-event machinery, or exhaustive charge registry."
+      },
+      {
+        "idx": 3,
+        "length": 254,
+        "role": "assistant",
+        "text": "Replay arithmetic now fixes the raw deficits—P190 by 59 after one deletion and C284 by 153—but they remain unofficial without the missing receipts. A direct-identity adapter would reject both raw domains by divisibility, yet that adapter is not official."
+      },
+      {
+        "idx": 4,
+        "length": 24477,
+        "role": "assistant",
+        "text": "AUDIT\n\nTerminal: SOURCE_RECEIPT_MISSING_NO_CLAIM\nConfidence: high.\n\nDecisive finding\n\nThe official Cycle114 source predicate, source adapter, AP_corr predicate, endpoint policy, final retained-event map, retained-tag equivalence, exhaustive charge registry, and q_line allocation rule are absent from the attached source files.\n\nThe packet integrity checks succeed: all 54 entries in SHA256SUMS.txt verify. The uploaded ZIP hash is\n\n1255aabb930864582c8bce924e6109a68feb1b4322aa62e9c0e4383e6f816e58\n\nThe seven source-document hashes are:\n\n681905d6de89697dafb8dccfc64d23cd6895050427d19f01ce504e13e0e799bd  RS_disproof_v3.tex\n99e2b292e88526a9ba8cf289bf8255c91d4bd49dde799cf1be10d98e18d63bbc  slackMCA_v3.tex\n0903c5b104ef3ecbc939d7cad8c33608dfddc946d795d696452befad9636909a  cs25_cap_v4.tex\n3c5efb6c8a1a2ff47adf226d1cae5f4f53cc52978f46cc5590ff6488ba75f131  snarks_v4.tex\n524767e9f3abc848adcb6b633b97f4efa5fc4bc9c13e7df39dea9b6e4bb4ac8a  proximity_blueprint_v3.tex\n8432596eccba285435411cf9c5b15bd2b387cf076f39cf4a7ec10569bc90d76a  readme.md\n58c5296d31a636a1a8dcc71b2c5ec29f0df7be3a5a18272ff392716e329fc53f  agents.md\n\nFor reference, hashing the lexicographically path-sorted seven SHA256SUMS.txt lines gives the locally derived content-set root\n\n5750833f6a2c20731a91d62b3c81e7e6f0314de7a7e4dd48a7543b4ec3fdc2d2\n\nThis proves content integrity under that stated derivation. It is not an authority binding and does not provide a semantic contract.\n\nExact fixed-string searches across context/source_docs/ give zero occurrences of:\n\nAP_corr\nAPcorr\nsource adapter\nofficial source\nfinal retained\nretained tag\ncharge registry\nP190\nC284\n\nThe absence is also semantic, not merely lexical:\n\nslackMCA_v3.tex:def:mca defines support-wise MCA.\n\nslackMCA_v3.tex:def:residue defines residue-line data.\n\nslackMCA_v3.tex:thm:normalform gives an exact same-domain residue-line normal form.\n\nslackMCA_v3.tex:thm:closure explicitly says it does not bound the packing number.\n\nslackMCA_v3.tex:prob:perfiber is open.\n\nslackMCA_v3.tex:conj:B and conj:final-mca are conjectures, not proof receipts.\n\nreadme.md, lines 149–166, calls the residue-line local limit open and the certificate scanner “to be implemented.”\n\nagents.md, lines 149–161, identifies the corrected MCA/residue-line local limit as the principal missing positive theorem.\n\nNo attached clause chooses a total Cycle114 source predicate from these mathematical objects.\n\nExact source ambiguity\n\nThe packet supports two incompatible interpretations, so neither official acceptance nor official rejection follows.\n\nInterpretation A: general residue-line semantics\n\nBoth P190 and C284 satisfy slackMCA_v3.tex:def:residue on their own arbitrary domains.\n\nFor either packet, take\n\nk = 1\nt = 1\nE = X\nB = 1\nw(x) = x^3\ndelta = 1 - 3/n\n\nEvery displayed support has three distinct nonzero points, and\n\nQ_i = X^3 - ∏_{x∈S_i}(X-x)\n\nhas degree at most one because the support sum is zero. Thus\n\ndeg(Q_i) < k+t = 2\nQ_i ≡ Q_i(0)·B mod E\nQ_i = w on S_i\n|S_i| = 3 = s_delta.\n\nThe witnesses are noncontained: for k=1, a contained witness would require a constant polynomial G satisfying\n\nG(x) = -1/x\n\nat three distinct nonzero points, which is impossible.\n\nConsequently thm:normalform gives, at the arbitrary-domain/model level,\n\nP190: epsilon_mca ≥ 190/p\nC284: epsilon_mca ≥ 284/p.\n\nThere is no endpoint deletion in def:mca or thm:normalform.\n\nInterpretation B: direct official smooth-domain semantics\n\nThe source manuscripts scope the prize problem to smooth multiplicative subgroup or coset domains, generally of power-of-two order: see RS_disproof_v3.tex:conj:capacity, slackMCA_v3.tex abstract lines 95–104, and readme.md lines 28–42.\n\nLet T=2\n128\n. Then\n\np−1=130T=5⋅13⋅2\n129\n.\n\nFor a subgroup or multiplicative coset of F\np\n×\n\n, its cardinality must divide p−1. But\n\nP190: |D| = 571,  (p-1) mod 571 = 90\nC284: |D| = 570,  (p-1) mod 570 = 520\n\nand neither cardinality is a power of two. The direct packets also have rate k/n=1/571 or 1/570, not one of the stated prize rates.\n\nTherefore an identity source adapter would be rejected at the smooth-domain clause.\n\nThis is not the current official SOURCE_REJECTED terminal because no attached receipt states that the adapter is identity, that raw D is the official code domain, or that no embedding, puncturing, extraction, or other source transformation is permitted.\n\nThe first unresolved implication remains\n\nraw P190/C284 model datum\n    -> authority-pinned official source-adapter output.\nFail-closed input schema\nPython\nRun\nTerminal = Literal[\n    \"SOURCE_REJECTED\",\n    \"COLOR_COMPRESSED_OR_CHARGED\",\n    \"SOURCE_VALID_LOW_T1_COUNTERPACKET\",\n    \"T1_APCORR_LOCAL_LIMIT\",\n    \"SOURCE_RECEIPT_MISSING_NO_CLAIM\",\n    \"RESOURCE_EXHAUSTED_NO_CLAIM\",\n]\n\nCoverage = Literal[\n    \"LOWER_BOUND_WITNESS_SET\",\n    \"EXHAUSTIVE_EVENT_UNIVERSE\",\n    \"SUCCINCT_EXHAUSTIVE_CAP\",\n]\n\nclass FileRef(TypedDict):\n    logical_path: str\n    sha256: str\n    byte_length: int\n\nclass Receipt(TypedDict):\n    receipt_id: str\n    stage: str\n    official_clause_id: str\n    subject_hash: str\n    verifier_id: str\n    verifier_sha256: str\n    dependency_hashes: list[str]\n    outcome: Literal[\"PASS\", \"FAIL\", \"VALUE\"]\n    output_hash: str\n    proof_object_hash: str\n\nclass EvaluatorRef(TypedDict):\n    evaluator_id: str\n    evaluator_sha256: str\n    input_schema_sha256: str\n    output_schema_sha256: str\n    ordered_clause_ids: list[str]\n    totality_receipt: Receipt\n\nclass OfficialContract(TypedDict):\n    contract_id: str\n    contract_version: str\n    closed_world: Literal[True]\n    canonicalization_version: str\n\n    source_adapter: EvaluatorRef\n    source_scope: EvaluatorRef\n    ap_corr: EvaluatorRef\n    final_admissibility: EvaluatorRef\n    endpoint_policy: EvaluatorRef\n    final_event_map: EvaluatorRef\n    retained_tag_equivalence: EvaluatorRef\n\n    exhaustive_charge_registry_root: str\n    charge_registry_exhaustiveness_receipt: Receipt\n\n    ledger_policy: dict   # denominator=q_line, bits=128,\n                          # composition=DISJOINT_SUM\n\n    local_limit_theorems: list[dict]\n\nclass OfficialRootBundle(TypedDict):\n    expected_root_sha256: str        # independently supplied\n    computed_root_sha256: str\n    authority_binding_receipt: Receipt\n    files: list[FileRef]\n    semantic_index_sha256: str\n    contract: OfficialContract\n\nclass Candidate(TypedDict):\n    candidate_id: Literal[\"P190\", \"C284\"]\n    candidate_sha256: str\n    coverage: Coverage\n\n    fields: dict  # q_gen, q_code, q_line, q_chal_or_null,\n                  # canonical field descriptions and certificates\n\n    parameters: dict  # n, k, sigma, t, beta\n    domain_D: list\n    word_w: object\n    denominator_E: object\n    numerator_B: object\n\n    witnesses: list[dict]  # witness_id, Q, support\n    claimed_counts: dict   # advisory only\n\nclass FinalEventReceipt(TypedDict):\n    raw_instance_ids: list[str]\n    endpoint_deleted_ids: list[str]\n    source_excluded_ids: list[str]\n    normalized_event_by_instance: dict\n    final_event_schema_sha256: str\n    exhaustive: bool\n\nclass ChargeEntry(TypedDict):\n    charge_id: str\n    official_predicate_receipt: Receipt\n\n    mode: Literal[\n        \"ADDITIVE\",\n        \"QUOTIENT_COMPRESSION\",\n        \"DELETION\",\n        \"SOURCE_EXCLUSION\",\n    ]\n\n    subject_stage: Literal[\"FINAL_TAGGED_EVENTS\"]\n    exact_owned_event_ids: list[str]\n\n    quotient_map: dict | None\n    cap_in_final_events: int\n    q_line_allocation: int\n    unique_allocation_id: str\n    theorem_receipt: Receipt\n\nclass ReplayInput(TypedDict):\n    schema_version: Literal[\"V-CYCLE114-1\"]\n    official_root_bundle: OfficialRootBundle\n    candidate: Candidate\n    receipts: dict\n    final_event_receipt: FinalEventReceipt\n    charge_entries: list[ChargeEntry]\n\n    resource_limits: dict\n    checker_binary_sha256: str\n    arithmetic_backend_sha256: str\n\nNo floating-point values are allowed. Field elements, polynomials, sets, maps, and tags must have canonical encodings. Counts supplied by the candidate are never trusted.\n\nRequired semantic labels\n\nA valid official root must bind exact byte ranges or verifier hashes for at least:\n\nOFFICIAL_SOURCE_SCOPE\nSOURCE_ADAPTER_TOTAL\nSOURCE_SCOPE_ORDERED_CLAUSES\nCORRECTED_RESERVE\nAP_CORR_TOTAL\nAP_CORR_ORDERED_CLAUSES\nENDPOINT_POLICY_TOTAL\nFINAL_ADMISSIBILITY\nFINAL_RETAINED_EVENT_MAP_TOTAL\nRETAINED_TAG_EQUIVALENCE\nCHARGE_REGISTRY_EXHAUSTIVE\nQ_LINE_LEDGER_DISJOINT_COMPOSITION\n\nOptional proof terminal:\n\nT1_APCORR_DEFECT_ENERGY_LOCAL_LIMIT\n\nThe manuscript labels def:residue and thm:normalform do not substitute for SOURCE_ADAPTER_TOTAL: they operate on one already-fixed domain and do not transport an arbitrary packet to an official smooth-domain code.\n\nLikewise conj:B and conj:final-mca cannot be registered as theorem receipts.\n\nValidation order\n\nCanonical syntax and hash validation. Reject malformed encodings fail-closed.\n\nAuthority binding. Recompute the contract root and compare it to an independently supplied expected root. A packet-local checksum cannot authenticate itself.\n\nClosed-world contract validation. Require all mandatory evaluator and registry labels. Unknown or partial evaluators are missing receipts, not negative evaluations.\n\nCandidate arithmetic. Recompute the field, domain, witnesses, supports, polynomial identities, raw colors, and distinctness. Candidate counts are advisory.\n\nField typing.\n\nq_line = sole final security denominator\nq_gen  = entropy/defect field only after a registered theorem\nq_code = code metadata; never an allocation\nq_chal = unused without a protocol transfer theorem\n\nSource adapter. Run the registered adapter and bind its output hash to the official datum.\n\nOrdered source clauses. The first verified false clause yields SOURCE_REJECTED. An exception, undefined result, absent clause, or unverified proof yields SOURCE_RECEIPT_MISSING_NO_CLAIM.\n\nCorrected-reserve and ordered AP_corr clauses. Apply only to the official adapter output. Again, a verified false clause is rejection; unknown is missing.\n\nFinal admissibility. Evaluate contained incidences, source exclusions, poles, domain restrictions, endpoint behavior, and any other official pre-normalization clauses.\n\nEndpoint and retained-event map. Map every retained raw instance to its complete final tagged security event. Deduplicate only complete events, not colors with discarded support/chart tags.\n\nNumerator-changing operations. Apply official source exclusions, deletions, and quotient maps before additive ownership.\n\nExhaustive charge registry. Every registered charge must be evaluated. Registry exhaustiveness itself requires a proof receipt.\n\nNo-double-spend ledger. For final transformed event set E\n⋆\n, additive charged sets C\ni\n\n must be pairwise disjoint. Put\n\nF=E\n⋆\n∖\ni\n⋃\n\nC\ni\n\n.\n\nFor charge caps A\ni\n\n and allocations R\ni\n\n, require\n\n∣C\ni\n\n∣≤A\ni\n\n,2\n128\nA\ni\n\n≤R\ni\n\n,\n\nwith unique allocation IDs, and\n\nR\nfree\n\n+\ni\n∑\n\nR\ni\n\n≤q\nline\n\n.\n\nUniversal local-limit branch. Verify any registered theorem before requiring exhaustive event enumeration.\n\nUpper/lower certificate branch.\n\nSafety requires an exhaustive upper cap U\nfree\n\n≥∣F∣.\n\nCounterpacket requires only an explicit surviving lower bound L\nfree\n\n≤∣F∣.\n\nReceipt consistency. A lower bound exceeding a verified upper cap, or inconsistent official maps, yields SOURCE_RECEIPT_MISSING_NO_CLAIM with reason INCONSISTENT_OFFICIAL_RECEIPTS.\n\nExact terminal conditions\n\nLet T=2\n128\n.\n\nSOURCE_REJECTED\n\nEmit only if:\n\nauthority root valid\nall earlier ordered clauses pass\nthe next official source/AP_corr/final-admissibility clause returns FAIL\nthe failure proof and exact witness verify.\n\nThe output must include the file hash, theorem/clause ID, clause order, subject hash, and exact calculation.\n\nCOLOR_COMPRESSED_OR_CHARGED\n\nEmit only if the entire official final-event universe is exhaustively bounded and\n\nTU\nfree\n\n≤R\nfree\n\n,TA\ni\n\n≤R\ni\n\n,R\nfree\n\n+\ni\n∑\n\nR\ni\n\n≤q\nline\n\n.\n\nThe output must give:\n\nraw distinct count\nendpoint deletions\nsource exclusions\nexact quotient/normalization map\nnumber merged or deleted\nfinal free cap\nevery exact charge set and cap\nevery q_line allocation\nunused q_line remainder\n\nA lower-bound witness list cannot produce this terminal.\n\nSOURCE_VALID_LOW_T1_COUNTERPACKET\n\nEmit only if source and AP_corr pass, the final map and charge registry are complete, and an explicit set of distinct surviving free events satisfies\n\nTL\nfree\n\n>R\nfree\n\n.\n\nThe output must list or hash the exact free event IDs and report the strict excess.\n\nT1_APCORR_LOCAL_LIMIT\n\nEmit only for a registered universal theorem applying to the whole official free event universe and closing the residual ledger. The first exact theorem identified by Cycle112–113 is:\n\nQ=∣G∣=q\ngen\nσ−1\n\n,B=∣Ω∣,E\nΦ\n\n=\ny∈G\n∑\n\nh(y)\n2\n,\nL\nfree\n\n=⌊\nT\nR\nfree\n\n⌋,H=Q(L\nfree\n\n+1)−B−1,\n\nand\n\nAP\ncorr\nofficial\n\n∧NoNamedCharge⟹(Q−1)(QE\nΦ\n\n−B\n2\n)≤H\n2\n.\n\nParseval and Cauchy–Schwarz then give\n\nΔ\n2\n≤(Q−1)(QE\nΦ\n\n−B\n2\n)≤H\n2\n\nand Fourier inversion gives\n\nN\nfree\n\n≤⌊\nQ\nB+Δ\n\n⌋≤L\nfree\n\n.\n\nHence\n\nTN\nfree\n\n≤R\nfree\n\n.\n\nThe attached packet proves the implication from the displayed defect-energy inequality to the ledger closure. It does not prove the official AP_corr descent into that inequality.\n\nSOURCE_RECEIPT_MISSING_NO_CLAIM\n\nEmit for any missing, unauthoritative, partial, malformed, inconsistent, or non-exhaustive semantic receipt. This includes a lower-bound set below threshold without an exhaustive upper cap.\n\nRESOURCE_EXHAUSTED_NO_CLAIM\n\nEmit only after the authority root and all semantically necessary receipts validate, when deterministic replay exceeds a certified limit. Include the stage, limit, checkpoint hash, and unprocessed range. Resource exhaustion must not mask an earlier missing receipt.\n\nExecutable decision skeleton\nPython\nRun\nT = 1 << 128\n\ndef decide(bundle, expected_root):\n    try:\n        contract = verify_authority_bound_closed_world_contract(\n            bundle.official_root_bundle,\n            expected_root,\n        )\n\n        candidate = canonicalize_and_recompute(bundle.candidate)\n        fields = verify_fields(candidate.fields)\n\n        q_line = fields.q_line\n        require(contract.ledger_policy.denominator == \"q_line\")\n        require(contract.ledger_policy.security_bits == 128)\n        forbid_denominator(\"q_code\")\n        forbid_denominator(\"q_chal\")\n\n        datum = run_verified_source_adapter(contract, candidate)\n\n        failed = first_verified_failure(contract.source_scope, datum)\n        if failed:\n            return emit(\"SOURCE_REJECTED\", failed)\n\n        verify_corrected_reserve(contract, datum, fields)\n\n        failed = first_verified_failure(contract.ap_corr, datum)\n        if failed:\n            return emit(\"SOURCE_REJECTED\", failed)\n\n        failed = first_verified_failure(contract.final_admissibility, datum)\n        if failed:\n            return emit(\"SOURCE_REJECTED\", failed)\n\n        lower_events = replay_candidate_witnesses_through_endpoint_and_final_map(\n            contract, datum, candidate\n        )\n\n        registry = verify_exhaustive_registry(contract, datum)\n        transformed_lower = apply_all_numerator_changing_maps(\n            lower_events, registry\n        )\n\n        ownership, allocations = verify_disjoint_charge_ledger(\n            transformed_lower,\n            registry,\n            q_line,\n        )\n\n        free_lower = transformed_lower - ownership.charged_union\n        R_free = q_line - sum(allocations.charge_allocations)\n\n        local_limit = verify_applicable_universal_local_limit(\n            contract, datum, registry, R_free\n        )\n\n        upper = derive_exhaustive_upper_cap_if_available(\n            contract, datum, candidate, registry\n        )\n\n        reject_inconsistent_receipts(\n            lower=len(free_lower),\n            upper=upper,\n            theorem_upper=local_limit.cap if local_limit else None,\n        )\n\n        # Deterministic terminal priority.\n        if local_limit and T * local_limit.cap <= R_free:\n            return emit(\"T1_APCORR_LOCAL_LIMIT\", local_limit)\n\n        if upper is not None and T * upper <= R_free:\n            return emit(\n                \"COLOR_COMPRESSED_OR_CHARGED\",\n                exact_maps=registry.maps,\n                upper_cap=upper,\n                allocations=allocations,\n            )\n\n        if T * len(free_lower) > R_free:\n            return emit(\n                \"SOURCE_VALID_LOW_T1_COUNTERPACKET\",\n                free_event_ids=sorted(free_lower),\n                residual_allocation=R_free,\n                strict_excess=T * len(free_lower) - R_free,\n            )\n\n        return emit(\n            \"SOURCE_RECEIPT_MISSING_NO_CLAIM\",\n            first_missing=\"EXHAUSTIVE_FINAL_EVENT_CAP_OR_LOCAL_LIMIT\",\n        )\n\n    except MissingOrInvalidReceipt as exc:\n        return emit(\n            \"SOURCE_RECEIPT_MISSING_NO_CLAIM\",\n            first_missing=exc.receipt_id,\n            stage=exc.stage,\n        )\n\n    except ResourceLimitExceeded as exc:\n        return emit(\n            \"RESOURCE_EXHAUSTED_NO_CLAIM\",\n            stage=exc.stage,\n            certified_limit=exc.limit,\n            checkpoint_hash=exc.checkpoint_hash,\n        )\nNo-false-positive proof\n\nConditional on the authenticity of the externally pinned root and soundness of its registered verifiers:\n\nSOURCE_REJECTED is sound because it is emitted only for the first verified false official clause after all earlier clauses passed.\n\nCOLOR_COMPRESSED_OR_CHARGED is sound because the final universe is exhaustive, every numerator-changing map is official and explicit, additive ownership is disjoint, and the complete integer allocation closes inside q_line.\n\nSOURCE_VALID_LOW_T1_COUNTERPACKET is sound because every displayed lower-bound event survives source, AP_corr, endpoint, normalization, all quotient/deletion operations, and all registered charges. Therefore the true free set has at least L\nfree\n\n events and exceeds its residual allocation.\n\nT1_APCORR_LOCAL_LIMIT is sound because the theorem applies universally rather than merely to the displayed witnesses and its full-set cap closes the residual integer ledger.\n\nThe two no-claim terminals assert no prize theorem or counterpacket.\n\nNo-false-negative statement\n\nAn unconditional no-false-negative theorem for substantive terminals is impossible with lower-bound-only coverage or missing receipts.\n\nA conditional completeness theorem does hold:\n\nIf the authority-bound contract is closed-world, every evaluator is total, the registry is exhaustive, all proof objects are supplied, resources suffice, and either an exhaustive final-event universe/full upper cap or a violating free-event lower bound is supplied, then the checker emits exactly one substantive terminal.\n\nIn exhaustive mode, the exact final free count is an integer, so it is either at most its allocation cap or strictly above it.\n\nIn lower-bound-only mode:\n\nlower bound > threshold  -> counterpacket can be complete\nlower bound <= threshold -> safety cannot be inferred\n\nThus a no-claim in the second case is necessary, not a false negative.\n\nMinimal replay tests\nTest\tExpected terminal\nCurrent packet\tSOURCE_RECEIPT_MISSING_NO_CLAIM, first missing OFFICIAL_CONTRACT_ROOT\nTreat attached source hashes as authority-pinned but supply no semantic adapter\tSOURCE_RECEIPT_MISSING_NO_CLAIM, first missing SOURCE_ADAPTER_TOTAL\nMock identity adapter plus smooth-subgroup source clause, P190\tSOURCE_REJECTED: 571 ∤ p-1\nMock identity adapter plus smooth-subgroup source clause, C284\tSOURCE_REJECTED: 570 ∤ p-1\nAccepted P190, one endpoint deleted, injective final map, no charges\tSOURCE_VALID_LOW_T1_COUNTERPACKET, lower bound 189, excess 59T−1\nAccepted C284, one endpoint deleted, injective final map, no charges\tSOURCE_VALID_LOW_T1_COUNTERPACKET, lower bound 283, excess 153T−1\nAccepted P190, exhaustive map compressing 189 displayed events to 130\tCOLOR_COMPRESSED_OR_CHARGED, at least 59 exact losses\nAccepted full natural P190 map, one deletion, otherwise injective\tCounterpacket with at least 26,244 events; closure requires 26,114 additional losses\nTwo charge entries spend the same events or reuse q_line allocation\tSOURCE_RECEIPT_MISSING_NO_CLAIM, inconsistent ledger\nRegistered universal defect-energy theorem proves free cap 130\tT1_APCORR_LOCAL_LIMIT\nComplete trusted semantics but certified enumeration limit exceeded\tRESOURCE_EXHAUSTED_NO_CLAIM\nExact stress ledger\nq\ngen\n\n=q\ncode\n\n=q\nline\n\n=p=130T+1,q\nchal\n\n unused.\n⌊\nT\nq\nline\n\n⌋=130,130T=q\nline\n\n−1,131T−q\nline\n\n=T−1.\n\nP190:\n\n190 displayed colors\n189 after one assumed endpoint\n189T - q_line = 59T - 1 > 0\n\n26,980 full natural zero-sum supports\n26,245 full natural raw colors\n26,244 after one deletion\n26,244 - 130 = 26,114 additional losses required\n\nC284:\n\n284 displayed colors\n283 after one assumed endpoint\n283T - q_line = 153T - 1 > 0\n\nafter any one deletion, a 141-color disjoint subpacket remains\n141T - q_line = 11T - 1 > 0\n\nOrdinary additive charges cannot rescue any of these counts. If final events are partitioned into free and disjoint charged sets, honest caps and allocations imply\n\nT∣E\n⋆\n∣≤R\nfree\n\n+\ni\n∑\n\nR\ni\n\n≤q\nline\n\n,\n\ncontradicting the displayed lower bounds. A successful positive terminal must genuinely reject events, merge them under an official quotient map, or prove a smaller exhaustive cap.\n\nStructural exclusions checked\n\nManuscript quotient-periodicity: slackMCA_v3.tex:rem:aper requires M∣gcd(n,k), M>1. Here k=1, so gcd(n,k)=1; this exact quotient-periodic denominator class is absent.\n\nBroader support periodicity: undefined officially; no conclusion.\n\nContained incidences: absent for displayed witnesses because a constant cannot equal −1/x on multiple distinct points.\n\nSame-slope collisions: absent on the displayed P190 and C284 sets.\n\nTangency: displayed locators have three distinct roots.\n\nEndpoint: one deletion is only a provisional convention; no official endpoint ID is supplied.\n\nFixed affine color normalization: z↦az+b, a\n\n=0, is bijective and cannot reduce cardinality.\n\nSupport-dependent normalization: cannot merge events while support/chart tags remain part of the retained event.\n\nFinal retained-tag normalization: absent.\n\nSmooth-domain source exclusion: would reject a direct identity adapter, but the identity-adapter clause is absent.\n\nSelf-audit\n\nExact implication proved\n\nThe attached packet does not contain a complete official source/AP_corr/final-event/charge contract. A deterministic fail-closed checker with the schema above is sound relative to an authority-pinned root and sound registered verifiers.\n\nSeparately, the raw P190/C284 objects are valid arbitrary-domain residue-line packets under def:residue, and an identity interpretation as an official smooth multiplicative domain fails the exact subgroup-order divisibility test.\n\nExact implication not proved\n\nNo official source acceptance or rejection, no official AP_corr result, no official endpoint action, no final retained count, no complete charge ledger, no T1_APCORR_LOCAL_LIMIT, and no prize-level proof or counterpacket are proved.\n\nPrize relevance\n\nThe checker specification and source-root audit are official-route relevant. The P190/C284 arithmetic and arbitrary-domain residue-line realization are finite/model/source-route certificates only.\n\nFirst failure line\n\npacket-integrity-pinned model datum\n    -> authority-pinned official source-adapter evaluation\n\nUnder a hypothetical identity adapter, the first mathematical failure is the smooth multiplicative-domain clause.\n\nField ledger\n\nq_line is the sole final denominator. q_gen can enter an entropy or defect theorem only after a source theorem establishes the relevant loss. q_code supplies no reserve. q_chal is unused. The exact target is the residual form\n\n2\n128\nN\nfree\n\n≤R\nfree\n\n≤q\nline\n\n.\n\nRoute to a full solution\n\nYes. The first converting artifact is an authority-pinned, closed-world source contract with a total source adapter and AP_corr evaluator.\n\nIf that adapter is identity and the source clause is the manuscript smooth-domain scope, the checker returns SOURCE_REJECTED immediately by the divisibility calculations above.\n\nIf a nontrivial adapter accepts P190 or C284, the first counterpacket checker is the exact endpoint/final-event/charge replay; at least 131 surviving free events yields SOURCE_VALID_LOW_T1_COUNTERPACKET.\n\nThe first theorem converting the positive route into PROOF is the official AP_corr + NoNamedCharge implication to the displayed defect-energy inequality, which yields T1_APCORR_LOCAL_LIMIT.\n\nThe current archive supplies none of those converting receipts."
+      }
+    ],
+    "readyState": "complete",
+    "stopButtons": [],
+    "title": "Cycle114 Problem Analysis"
+  }
+}

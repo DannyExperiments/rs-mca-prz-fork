@@ -1,0 +1,82 @@
+act owned subsets, caps,
+     overlap resolution, and q_line allocations;
+  8. any field/denominator transfer theorem;
+  9. any AP_corr-to-Fourier/local-limit theorem.
+
+Fail closed:
+  If any component, authority pin, or correspondence theorem is absent, return
+
+    AUDIT
+    SOURCE_RECEIPT_MISSING_NO_CLAIM
+
+  and name the first missing object. Do not continue to packet arithmetic.
+
+If the contract is complete:
+  A. Replay C284 first.
+  B. Replay P190 second as a diagnostic.
+  C. For each packet output:
+       - first rejected source/AP_corr clause, or
+       - exact endpoint action,
+       - exact final retained-color map,
+       - exact free/charged partition,
+       - exact charge caps and q_line allocations,
+       - no-double-counting verification,
+       - exact comparison against q_line = 130*2^128+1.
+  D. Emit only one of:
+       SOURCE_REJECTED
+       COLOR_COMPRESSED_OR_CHARGED
+       SOURCE_VALID_LOW_T1_COUNTERPACKET
+       T1_APCORR_LOCAL_LIMIT
+       SOURCE_RECEIPT_MISSING_NO_CLAIM
+
+Do not accept labels, prose descriptions, or guessed periodicity as receipts.
+Self-audit
+
+Exact implication proved:
+The attached canonical source files lack the official source-adapter/AP_corr/final-normalization/charge contract required to classify P190 or C284 for the active route. Therefore neither an official proof nor an official corrected-reserve counterpacket follows. Separately, P190 and C284 give exact finite k=1 MCA lower-bound certificates.
+
+Not proved: an official M1 source adapter, AP_corr acceptance, final retained count, official compression, official charge ledger, AP_corr-to-Fourier implication, or the M1 local limit.
+
+Prize relevance:
+The receipt audit is route-relevant. The direct MCA embedding is only a finite/model/source-route certificate, not an official-prize counterpacket.
+
+First possible failure line:
+The missing implication from an official corrected-reserve M1 source instance to an accepted LOW-t=1 datum with official color semantics.
+
+Denominators:
+q
+line
+
+, q
+gen
+
+, q
+code
+
+, and q
+chal
+
+ have not been pooled. Only q
+line
+
+ is used in the final 2
+−128
+ ledger.
+
+Possible numerator reductions:
+Quotients, source exclusions, endpoints, retained-tag normalization, or charges could reduce the numerator only if an exact official receipt is supplied. Containment, ordinary affine renaming, same-slope deduplication, and one endpoint do not by themselves reach 130 for the displayed packets.
+
+Route to a full decision:
+Yes, if the authority-pinned contract bundle exists. The first converter is the finite replay checker specified above. There is no route from the current archive alone to a full M1 theorem or active counterpacket.
+
+V-CYCLE115-AUTHORITY-PINNED-M1-LOW-T1-CONTRACT-REPLAY-C284-FIRST
+
+Pro Extended
+ChatGPT can make mistakes. Check important info.
+Too many requests
+
+You’re making requests too quickly. We’ve temporarily limited access to your conversations to protect your data.
+
+Please wait a few minutes before trying again.
+
+Got it

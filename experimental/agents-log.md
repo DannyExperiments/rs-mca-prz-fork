@@ -2356,3 +2356,32 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Collect Cycle114 returns into
   `experimental/notes/m1/cycle114_pinned_official_source_root_decider_9pro_returns_raw/`,
   audit conservatively, update tracker/log, then commit and push.
+
+### 2026-06-22 - Cycle114 pinned official source-root decider returns
+
+- **Agent/model:** ChatGPT Pro 5.5 nine-role round, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle114_pinned_official_source_root_decider_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle114_pinned_official_source_root_decider_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** Preserves and audits all nine Cycle114 visible Pro
+  returns. The conservative terminal is `SOURCE_RECEIPT_MISSING_NO_CLAIM`:
+  the supplied local/source archive lacks an authority-pinned official contract
+  root with total source adapter, official `AP_corr`, endpoint policy, final
+  retained-event map, retained-tag equivalence, exhaustive charge registry, and
+  `q_line` allocation receipts.
+- **How it is useful:** The round banks P190/C284 as exact arbitrary-domain
+  residue-line MCA stress certificates while preventing promotion to an
+  official counterpacket. If P190's `189` post-endpoint displayed colors or
+  C284's `283` post-endpoint displayed colors are official final free events,
+  they exceed the `floor(q_line/2^128)=130` threshold by `59` and `153`
+  events respectively. The exact C284 path-support matching obstruction still
+  leaves `142` disjoint events after any endpoint deletion.
+- **What to do next:** Do not run more low-`t=1` stress generation against the
+  same incomplete archive. Acquire or author
+  `context/official_contract/M1_LOW_T1_OFFICIAL_CONTRACT_v1/`, then run
+  `V-CYCLE115-AUTHORITY-PINNED-M1-LOW-T1-CONTRACT-REPLAY-C284-FIRST` through
+  total source adapter, official `AP_corr`, endpoint/final-event maps,
+  exhaustive charge registry, and exact `q_line` ledger.

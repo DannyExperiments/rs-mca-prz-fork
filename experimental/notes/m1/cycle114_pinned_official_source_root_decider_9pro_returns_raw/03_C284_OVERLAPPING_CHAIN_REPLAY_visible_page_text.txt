@@ -1,0 +1,120 @@
+q
+gen
+
+ receives no denominator credit and would be used for entropy only after a relevant source theorem.
+
+q
+code
+
+ is not a security denominator.
+
+q
+chal
+
+ is unused.
+
+Exact implications
+
+Proved:
+
+C284 as supplied⟹not an official smooth-domain M1 source datum⟹SOURCE_REJECTED.
+
+More strongly, its marked points cannot all lie in any smooth multiplicative coset in F
+p
+×
+
+.
+
+Not proved:
+
+Every overlapping-chain construction is source-invalid.
+
+No source-valid chain with more than 130 slopes exists.
+
+Any theorem involving official AP_corr.
+
+Any official final-color compression or Fourier charge theorem.
+
+The M1 upper bound or the Proximity Prize theorem.
+
+Route to a source-valid counterpacket
+
+The exact C284 packet cannot be converted unchanged into a counterpacket: its evaluation domain and its primitive padding point violate the first source hypothesis.
+
+The first theorem needed for a replacement is:
+
+SMOOTH-CHAIN-131 REALIZATION
+
+Construct, for an official domain L=αH with ∣H∣=2
+m
+, official k,σ, and a residue-line datum (E,B,w) over L, at least 131 pairwise distinct slopes having noncontained witnesses at the required radius. The construction must use supports contained in L, meet the corrected reserve, and survive the source-defined quotient-periodic separation.
+
+For q
+line
+
+=130⋅2
+128
++1, 131 such Paper-B slopes would satisfy
+
+131⋅2
+128
+>q
+line
+
+.
+
+By thm:normalform, that would give a direct source-valid MCA counterpacket. A mere modification of the padding or a model embedding is insufficient; all support and witness identities must be rebuilt on the smooth source domain.
+
+Self-audit
+
+Exact implication proved: C284 fails the explicit smooth multiplicative source-domain clause. Not proved: any global M1 theorem or source-valid counterpacket.
+
+Relevance: This is official-prize-relevant as a source-route rejection certificate for C284. It is not a prize theorem.
+
+First failure line:
+
+C284 datum⟶M1 datum over L=αH, ∣H∣=2
+m
+.
+
+It fails because ∣D∣=570∈
+/
+2
+N
+, and indeed D cannot even be contained in a smooth coset.
+
+Field discipline: q
+line
+
+ alone is the final denominator; q
+gen
+
+ is not credited absent an entropy theorem; q
+code
+
+ supplies no denominator; q
+chal
+
+ is unused; the target is 2
+128
+N
+free
+
+≤q
+line
+
+.
+
+Possible numerator reductions: Same-slope, contained, tangent, endpoint, affine, retained-tag, quotient, and Fourier mechanisms were checked. None supplies an official model compression. The exact source exclusion instead removes the whole packet before numerator formation.
+
+Full-solution status: The assigned C284 branch is fully decided by source rejection. A counterpacket requires the new SMOOTH-CHAIN-131 REALIZATION theorem; it cannot be obtained by relabeling the existing C284 packet.
+
+Pro Extended
+ChatGPT can make mistakes. Check important info.
+Too many requests
+
+You’re making requests too quickly. We’ve temporarily limited access to your conversations to protect your data.
+
+Please wait a few minutes before trying again.
+
+Got it

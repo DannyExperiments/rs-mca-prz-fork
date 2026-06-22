@@ -1,0 +1,73 @@
+one deletion is only a provisional convention; no official endpoint ID is supplied.
+
+Fixed affine color normalization: z↦az+b, a
+
+=0, is bijective and cannot reduce cardinality.
+
+Support-dependent normalization: cannot merge events while support/chart tags remain part of the retained event.
+
+Final retained-tag normalization: absent.
+
+Smooth-domain source exclusion: would reject a direct identity adapter, but the identity-adapter clause is absent.
+
+Self-audit
+
+Exact implication proved
+
+The attached packet does not contain a complete official source/AP_corr/final-event/charge contract. A deterministic fail-closed checker with the schema above is sound relative to an authority-pinned root and sound registered verifiers.
+
+Separately, the raw P190/C284 objects are valid arbitrary-domain residue-line packets under def:residue, and an identity interpretation as an official smooth multiplicative domain fails the exact subgroup-order divisibility test.
+
+Exact implication not proved
+
+No official source acceptance or rejection, no official AP_corr result, no official endpoint action, no final retained count, no complete charge ledger, no T1_APCORR_LOCAL_LIMIT, and no prize-level proof or counterpacket are proved.
+
+Prize relevance
+
+The checker specification and source-root audit are official-route relevant. The P190/C284 arithmetic and arbitrary-domain residue-line realization are finite/model/source-route certificates only.
+
+First failure line
+
+packet-integrity-pinned model datum
+    -> authority-pinned official source-adapter evaluation
+
+Under a hypothetical identity adapter, the first mathematical failure is the smooth multiplicative-domain clause.
+
+Field ledger
+
+q_line is the sole final denominator. q_gen can enter an entropy or defect theorem only after a source theorem establishes the relevant loss. q_code supplies no reserve. q_chal is unused. The exact target is the residual form
+
+2
+128
+N
+free
+
+≤R
+free
+
+≤q
+line
+
+.
+
+Route to a full solution
+
+Yes. The first converting artifact is an authority-pinned, closed-world source contract with a total source adapter and AP_corr evaluator.
+
+If that adapter is identity and the source clause is the manuscript smooth-domain scope, the checker returns SOURCE_REJECTED immediately by the divisibility calculations above.
+
+If a nontrivial adapter accepts P190 or C284, the first counterpacket checker is the exact endpoint/final-event/charge replay; at least 131 surviving free events yields SOURCE_VALID_LOW_T1_COUNTERPACKET.
+
+The first theorem converting the positive route into PROOF is the official AP_corr + NoNamedCharge implication to the displayed defect-energy inequality, which yields T1_APCORR_LOCAL_LIMIT.
+
+The current archive supplies none of those converting receipts.
+
+Pro Extended
+ChatGPT can make mistakes. Check important info.
+Too many requests
+
+You’re making requests too quickly. We’ve temporarily limited access to your conversations to protect your data.
+
+Please wait a few minutes before trying again.
+
+Got it

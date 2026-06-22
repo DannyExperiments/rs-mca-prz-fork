@@ -1,0 +1,94 @@
+retained tags: both are absent.
+
+Final source exclusions: the smooth multiplicative-domain exclusion is the first and decisive exclusion.
+
+Exact implications
+
+Proved:
+
+P190 as written∈
+/
+{official smooth multiplicative-domain M1 instances},
+C284 as written∈
+/
+{official smooth multiplicative-domain M1 instances}.
+
+Equivalently, the literal route
+
+stress datum⟶official smooth-domain RS source
+
+fails at the domain clause.
+
+Not proved:
+
+that no different, newly constructed adapter could encode analogous incidences in a power-of-two multiplicative domain;
+
+an official AP_corr rejection of either packet;
+
+any final-color compression or charge ledger;
+
+the M1 upper bound;
+
+a source-valid low-t=1 counterpacket;
+
+the finite-length local limit requested by prob:M1.
+
+This is an official-prize-relevant source-route rejection, not a proof of the Proximity Prize theorem. It eliminates these two literal packets from the M1 source class but does not establish the desired upper bound for valid smooth domains.
+
+Route to a full result
+
+There is a complete route to deciding the literal P190/C284 replay, and it terminates in the source rejection above.
+
+To convert this into a genuine counterpacket, the first required theorem or checker is a smooth-source adapter certificate with:
+
+Inputs: the exact stress packet; a proposed (F
+q
+
+,α,H,k); an explicit map from packet coordinates and witnesses to αH; official line data f,g; bad slopes and agreement sets.
+
+Required outputs:
+
+H=⟨h⟩≤F
+q
+×
+
+, ∣H∣=2
+m
+, and D
+off
+
+=αH;
+
+the official rate/dimension conditions;
+
+for every retained slope, exact MCA agreement and noncontainedness under Definition def:mca;
+
+preservation of at least 131 distinct final slopes after the official endpoint and retained-event map;
+
+exact charged subsets, caps, ownership, and a non-double-spent q
+line
+
+ allocation.
+
+The checker would have no false positive because every field identity, subgroup order, agreement equation, interpolation condition, retained image, and integer allocation is exactly checkable. It would have no false negative relative to a supplied finite contract because all displayed witnesses and every registry entry could be exhaustively evaluated. It cannot be complete relative to unspecified predicates or an absent charge registry.
+
+For a full upper-side PROOF, the first missing theorem is a finite-length proved version of slackMCA_v3.tex, Conjecture conj:final-mca, equivalently proximity_blueprint_v3.tex, Problem prob:M1, with explicit constants strong enough to give
+
+#{official MCA-bad slopes}≤130
+
+at the stated q
+line
+
+. The attached source explicitly marks that all-line practical-field theorem as open.
+
+Confidence: high for the literal source rejection and the missing-object inventory.
+
+Pro Extended
+ChatGPT can make mistakes. Check important info.
+Too many requests
+
+You’re making requests too quickly. We’ve temporarily limited access to your conversations to protect your data.
+
+Please wait a few minutes before trying again.
+
+Got it

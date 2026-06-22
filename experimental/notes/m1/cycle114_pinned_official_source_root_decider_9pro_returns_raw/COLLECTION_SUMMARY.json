@@ -1,0 +1,149 @@
+{
+  "capturedAt": "2026-06-22T11:08:23.680Z",
+  "roles": [
+    {
+      "num": "01",
+      "role": "OFFICIAL_SOURCE_ROOT_LOCATOR",
+      "expectedUrl": "https://chatgpt.com/c/6a390fb4-8ea8-83ec-8a37-b55fbc03e214",
+      "title": "Cycle114 Problem Analysis",
+      "currentUrl": "https://chatgpt.com/c/6a390fb4-8ea8-83ec-8a37-b55fbc03e214",
+      "assistantCount": 4,
+      "responseLength": 8509,
+      "stopButtons": [],
+      "fileishButtons": [
+        "[Circular]",
+        "[Circular]",
+        "[Circular]"
+      ],
+      "fileishLinks": []
+    },
+    {
+      "num": "02",
+      "role": "P190_SOURCE_REPLAY_PROSECUTOR",
+      "expectedUrl": "https://chatgpt.com/c/6a390ffe-bcd8-83ec-b0c0-f702c3b6a3d7",
+      "title": "Cycle114 Problem Solving",
+      "currentUrl": "https://chatgpt.com/c/6a390ffe-bcd8-83ec-b0c0-f702c3b6a3d7",
+      "assistantCount": 4,
+      "responseLength": 12281,
+      "stopButtons": [],
+      "fileishButtons": [
+        "[Circular]",
+        "[Circular]",
+        "[Circular]"
+      ],
+      "fileishLinks": []
+    },
+    {
+      "num": "03",
+      "role": "C284_OVERLAPPING_CHAIN_REPLAY",
+      "expectedUrl": "https://chatgpt.com/c/6a391029-43ac-83ec-97bb-8dae06875d39",
+      "title": "Cycle114 Source Decider",
+      "currentUrl": "https://chatgpt.com/c/6a391029-43ac-83ec-97bb-8dae06875d39",
+      "assistantCount": 4,
+      "responseLength": 8257,
+      "stopButtons": [],
+      "fileishButtons": [
+        "[Circular]",
+        "[Circular]",
+        "[Circular]"
+      ],
+      "fileishLinks": []
+    },
+    {
+      "num": "04",
+      "role": "FINAL_RETAINED_EVENT_MAP_FORMALIZER",
+      "expectedUrl": "https://chatgpt.com/c/6a39114a-5234-83ec-9668-4fe5690efe22",
+      "title": "Theorem Problem Cycle114",
+      "currentUrl": "https://chatgpt.com/c/6a39114a-5234-83ec-9668-4fe5690efe22",
+      "assistantCount": 4,
+      "responseLength": 11144,
+      "stopButtons": [],
+      "fileishButtons": [
+        "[Circular]",
+        "[Circular]",
+        "[Circular]"
+      ],
+      "fileishLinks": []
+    },
+    {
+      "num": "05",
+      "role": "CHARGE_LEDGER_NO_DOUBLE_SPEND_AUDITOR",
+      "expectedUrl": "https://chatgpt.com/c/6a39116c-926c-83ec-a5ba-a80a6ced104b",
+      "title": "Cycle114 Problem Solving",
+      "currentUrl": "https://chatgpt.com/c/6a39116c-926c-83ec-a5ba-a80a6ced104b",
+      "assistantCount": 4,
+      "responseLength": 16063,
+      "stopButtons": [],
+      "fileishButtons": [
+        "[Circular]",
+        "[Circular]",
+        "[Circular]"
+      ],
+      "fileishLinks": []
+    },
+    {
+      "num": "06",
+      "role": "APCORR_LOCAL_LIMIT_THEOREM_PROVER",
+      "expectedUrl": "https://chatgpt.com/c/6a39118f-457c-83ec-a5da-93465f5f7be6",
+      "title": "Cycle114 Problem Analysis",
+      "currentUrl": "https://chatgpt.com/c/6a39118f-457c-83ec-a5da-93465f5f7be6",
+      "assistantCount": 4,
+      "responseLength": 10924,
+      "stopButtons": [],
+      "fileishButtons": [
+        "[Circular]",
+        "[Circular]",
+        "[Circular]"
+      ],
+      "fileishLinks": []
+    },
+    {
+      "num": "07",
+      "role": "FAIL_CLOSED_CHECKER_SPEC_ENGINEER",
+      "expectedUrl": "https://chatgpt.com/c/6a3910ac-4e7c-83ec-8bdd-7490c485727d",
+      "title": "Cycle114 Problem Analysis",
+      "currentUrl": "https://chatgpt.com/c/6a3910ac-4e7c-83ec-8bdd-7490c485727d",
+      "assistantCount": 4,
+      "responseLength": 24477,
+      "stopButtons": [],
+      "fileishButtons": [
+        "[Circular]",
+        "[Circular]",
+        "[Circular]"
+      ],
+      "fileishLinks": []
+    },
+    {
+      "num": "08",
+      "role": "SOURCE_VALID_COUNTERPACKET_HUNTER",
+      "expectedUrl": "https://chatgpt.com/c/6a3911b2-a3e0-83ec-8284-dda9527c5c92",
+      "title": "RS-MCA Proximity Prize",
+      "currentUrl": "https://chatgpt.com/c/6a3911b2-a3e0-83ec-8284-dda9527c5c92",
+      "assistantCount": 4,
+      "responseLength": 10655,
+      "stopButtons": [],
+      "fileishButtons": [
+        "[Circular]",
+        "[Circular]",
+        "[Circular]"
+      ],
+      "fileishLinks": []
+    },
+    {
+      "num": "09",
+      "role": "RUTHLESS_DIRECTOR_REFEREE",
+      "expectedUrl": "https://chatgpt.com/c/6a3911d6-4ed0-83ec-828f-d1df467b444f",
+      "title": "Cycle114 Source Decider",
+      "currentUrl": "https://chatgpt.com/c/6a3911d6-4ed0-83ec-828f-d1df467b444f",
+      "assistantCount": 4,
+      "responseLength": 17110,
+      "stopButtons": [],
+      "fileishButtons": [
+        "[Circular]",
+        "[Circular]",
+        "[Circular]"
+      ],
+      "fileishLinks": []
+    }
+  ]
+}

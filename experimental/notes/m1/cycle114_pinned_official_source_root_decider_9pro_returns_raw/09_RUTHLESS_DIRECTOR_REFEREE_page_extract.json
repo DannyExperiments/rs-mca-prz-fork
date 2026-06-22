@@ -1,0 +1,459 @@
+{
+  "num": "09",
+  "role": "RUTHLESS_DIRECTOR_REFEREE",
+  "expectedUrl": "https://chatgpt.com/c/6a3911d6-4ed0-83ec-828f-d1df467b444f",
+  "title": "Cycle114 Source Decider",
+  "currentUrl": "https://chatgpt.com/c/6a3911d6-4ed0-83ec-828f-d1df467b444f",
+  "data": {
+    "assistantCount": 4,
+    "assistantMessages": [
+      "[Circular]",
+      "[Circular]",
+      "[Circular]",
+      "[Circular]"
+    ],
+    "bodyLength": 24719,
+    "bodyTail": "act owned subsets, caps,\n     overlap resolution, and q_line allocations;\n  8. any field/denominator transfer theorem;\n  9. any AP_corr-to-Fourier/local-limit theorem.\n\nFail closed:\n  If any component, authority pin, or correspondence theorem is absent, return\n\n    AUDIT\n    SOURCE_RECEIPT_MISSING_NO_CLAIM\n\n  and name the first missing object. Do not continue to packet arithmetic.\n\nIf the contract is complete:\n  A. Replay C284 first.\n  B. Replay P190 second as a diagnostic.\n  C. For each packet output:\n       - first rejected source/AP_corr clause, or\n       - exact endpoint action,\n       - exact final retained-color map,\n       - exact free/charged partition,\n       - exact charge caps and q_line allocations,\n       - no-double-counting verification,\n       - exact comparison against q_line = 130*2^128+1.\n  D. Emit only one of:\n       SOURCE_REJECTED\n       COLOR_COMPRESSED_OR_CHARGED\n       SOURCE_VALID_LOW_T1_COUNTERPACKET\n       T1_APCORR_LOCAL_LIMIT\n       SOURCE_RECEIPT_MISSING_NO_CLAIM\n\nDo not accept labels, prose descriptions, or guessed periodicity as receipts.\nSelf-audit\n\nExact implication proved:\nThe attached canonical source files lack the official source-adapter/AP_corr/final-normalization/charge contract required to classify P190 or C284 for the active route. Therefore neither an official proof nor an official corrected-reserve counterpacket follows. Separately, P190 and C284 give exact finite k=1 MCA lower-bound certificates.\n\nNot proved: an official M1 source adapter, AP_corr acceptance, final retained count, official compression, official charge ledger, AP_corr-to-Fourier implication, or the M1 local limit.\n\nPrize relevance:\nThe receipt audit is route-relevant. The direct MCA embedding is only a finite/model/source-route certificate, not an official-prize counterpacket.\n\nFirst possible failure line:\nThe missing implication from an official corrected-reserve M1 source instance to an accepted LOW-t=1 datum with official color semantics.\n\nDenominators:\nq\nline\n\n, q\ngen\n\n, q\ncode\n\n, and q\nchal\n\n have not been pooled. Only q\nline\n\n is used in the final 2\n−128\n ledger.\n\nPossible numerator reductions:\nQuotients, source exclusions, endpoints, retained-tag normalization, or charges could reduce the numerator only if an exact official receipt is supplied. Containment, ordinary affine renaming, same-slope deduplication, and one endpoint do not by themselves reach 130 for the displayed packets.\n\nRoute to a full decision:\nYes, if the authority-pinned contract bundle exists. The first converter is the finite replay checker specified above. There is no route from the current archive alone to a full M1 theorem or active counterpacket.\n\nV-CYCLE115-AUTHORITY-PINNED-M1-LOW-T1-CONTRACT-REPLAY-C284-FIRST\n\nPro Extended\nChatGPT can make mistakes. Check important info.\nToo many requests\n\nYou’re making requests too quickly. We’ve temporarily limited access to your conversations to protect your data.\n\nPlease wait a few minutes before trying again.\n\nGot it",
+    "buttonsTail": [
+      {
+        "aria": "Open sidebar",
+        "idx": 0,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 1,
+        "testid": null,
+        "text": "Search chats",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 2,
+        "testid": null,
+        "text": "Pinned",
+        "title": null
+      },
+      {
+        "aria": "Close sidebar",
+        "idx": 3,
+        "testid": "close-sidebar-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 4,
+        "testid": null,
+        "text": "Search chats",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 5,
+        "testid": null,
+        "text": "Pinned",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 6,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for 361",
+        "idx": 7,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 8,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for Erdos Problem 346",
+        "idx": 9,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 10,
+        "testid": null,
+        "text": "Projects",
+        "title": null
+      },
+      {
+        "aria": "New project",
+        "idx": 11,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Organize chats",
+        "idx": 12,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 13,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for $1 Mil Planner",
+        "idx": 14,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 15,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for $1,000,000 Math Prize",
+        "idx": 16,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 17,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for 346 Collab",
+        "idx": 18,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 19,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for 361 Collab",
+        "idx": 20,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project home",
+        "idx": 21,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Open project options for OPEN NON ERDOS PROBLEMS",
+        "idx": 22,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 23,
+        "testid": null,
+        "text": "Show more",
+        "title": null
+      },
+      {
+        "aria": "Download apps",
+        "idx": 24,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Share",
+        "idx": 25,
+        "testid": "share-chat-button",
+        "text": "Share",
+        "title": null
+      },
+      {
+        "aria": "Open conversation options",
+        "idx": 26,
+        "testid": "conversation-options-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "cycle114_pinned_official_source_root_decider_9pro_packet(8).zip",
+        "idx": 27,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 28,
+        "testid": "collapsible-user-message-toggle",
+        "text": "Show more",
+        "title": null
+      },
+      {
+        "aria": "Copy message",
+        "idx": 29,
+        "testid": "copy-turn-action-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Edit message",
+        "idx": 30,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 31,
+        "testid": null,
+        "text": "Thought for 16m 18s",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 32,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 33,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 34,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy",
+        "idx": 35,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Copy response",
+        "idx": 36,
+        "testid": "copy-turn-action-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Good response",
+        "idx": 37,
+        "testid": "good-response-turn-action-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Bad response",
+        "idx": 38,
+        "testid": "bad-response-turn-action-button",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Pro feedback",
+        "idx": 39,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Share",
+        "idx": 40,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Switch model",
+        "idx": 41,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "More actions",
+        "idx": 42,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Add files and more",
+        "idx": 44,
+        "testid": "composer-plus-btn",
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 45,
+        "testid": null,
+        "text": "Pro Extended",
+        "title": null
+      },
+      {
+        "aria": "Start dictation",
+        "idx": 46,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": "Start Voice",
+        "idx": 47,
+        "testid": null,
+        "text": "",
+        "title": null
+      },
+      {
+        "aria": null,
+        "idx": 48,
+        "testid": null,
+        "text": "Got it",
+        "title": null
+      }
+    ],
+    "capturedAt": "2026-06-22T11:08:23.668Z",
+    "fileishButtons": [
+      "[Circular]",
+      "[Circular]",
+      "[Circular]"
+    ],
+    "fileishLinks": [],
+    "lastAssistant": "AUDIT\n\nTerminal: SOURCE_RECEIPT_MISSING_NO_CLAIM\nConfidence: high.\n\nDirector’s decision\n\nSource-valid PROOF: No.\nThe attached official manuscripts do not prove the M1 upper-side local-limit theorem. In slackMCA_v3.tex, the relevant positive MCA statements remain conj:B and conj:final-mca; thm:integrated-package, item (g), explicitly classifies the full polynomial-field positive list/MCA result as conjectural. proximity_blueprint_v3.tex, prob:M1, likewise states the corrected MCA local limit as an open problem.\n\nSource-valid COUNTERPACKET: No, not for the active corrected-reserve/prize route.\nP190 and C284 can be embedded exactly into the canonical finite MCA definition at parameters k=1, residue degree t=1, and agreement excess σ=2. That is a finite/model/source-route certificate, not an official M1 counterpacket: the packet contains no theorem transporting a corrected-reserve M1 source at the prize parameters to this low-t, low-rate instance.\n\nPinned official source root: No.\nThe canonical mathematical MCA root is present in slackMCA_v3.tex through def:mca, def:residue, and thm:normalform. But the root needed by this wall is absent:\n\nno official source-adapter predicate;\n\nno definition of AP_corr or APcorr;\n\nno official endpoint rule;\n\nno final retained-color or retained-tag normalization;\n\nno exhaustive charge registry;\n\nno theorem connecting those objects to the canonical MCA definitions.\n\nThe literal strings AP_corr and APcorr do not occur in any file under context/source_docs/. Neither do definitions of a final retained-color map or official charge registry.\n\nP190 terminal: SOURCE_RECEIPT_MISSING_NO_CLAIM.\nIts displayed arithmetic is fatal if the 189 post-endpoint colors are official final free events:\n\n189⋅2\n128\n−q\nline\n\n=59⋅2\n128\n−1=20076659648335369344339101838474324475903>0.\n\nBut the packet does not prove that the displayed 190 colors pass an official adapter and AP_corr, that exactly one endpoint is removed, or that the remaining 189 are the official final retained colors.\n\nC284 terminal: SOURCE_RECEIPT_MISSING_NO_CLAIM.\nIf its 283 post-endpoint colors are official final free events,\n\n283⋅2\n128\n−q\nline\n\n=153⋅2\n128\n−1=52063202138903584909896314937060536352767>0.\n\nEven imposing support disjointness does not close the ledger: the support-intersection graph is P\n284\n\n, so the maximum disjoint family has size 142, and after deletion of any one vertex at least 141 disjoint supports remain. Hence\n\n141⋅2\n128\n−q\nline\n\n=11⋅2\n128\n−1>0.\n\nAgain, no official source acceptance or final normalization is supplied.\n\nExact final-color compression or charge ledger: No.\nThe packet contains only model-level reductions:\n\nP190 full natural supports: 26,980;\n\ndistinct raw colors: 26,245;\n\nexact multiplicity histogram:\n\n{1:25584, 2:595, 3:58, 4:8};\n\nexact same-color deduplication:\n\n26,980−26,245=735.\n\nA provisional one-color endpoint would leave 26,244, still requiring another\n\n26,244−130=26,114\n\nofficial removals or mergers. No source file supplies them.\n\nProved AP_corr-to-Fourier/local-limit theorem: No.\nCycle112 established a usable downstream Fourier implication, but not the missing upstream implication\n\n\\text{official `AP_corr` plus absence of named charges} \\Longrightarrow \\text{bounded nonzero interpolation-defect Fourier mass}.\n\nTherefore the local-limit closure cannot be invoked from an official hypothesis.\n\nFirst unsupported line:\n\nofficial corrected-reserve M1 source instance⟹accepted LOW t=1 datum with official color semantics\n\nNo theorem or definition in the attached source files establishes this implication. Everything involving AP_corr, endpoint deletion, retained colors, or charges lies downstream of this first failure.\n\nCycle115 action: stop generating more combinatorial stress packets until an authority-pinned contract bundle is supplied. The next run should acquire or reject that bundle and then replay C284 first.\n\nWhat the official manuscripts actually provide\n\nThe relevant source hierarchy is precise:\n\nslackMCA_v3.tex, def:mca: defines the support-wise MCA-bad parameter and eMCA.\n\nslackMCA_v3.tex, def:residue: defines residue-line data and the noncontained-witness condition.\n\nslackMCA_v3.tex, thm:normalform:\n\neMCA(C,δ)=q\n−1\nt\nmax\n\nΛ\nt,δ\nNC\n\n.\n\nThis is an exact normal form, not an upper bound.\n\nslackMCA_v3.tex, thm:closure: supplies coordinate normalization but explicitly does not bound the resulting packing.\n\nslackMCA_v3.tex, conj:B, conj:final-mca: state the required positive MCA/local-limit results conjecturally.\n\nproximity_blueprint_v3.tex, prob:M1: identifies the all-line/all-base corrected MCA local limit as open.\n\nsnarks_v4.tex, ass:mca: imports the line/MCA local limit as an assumption.\n\nsnarks_v4.tex, def:cert: requires a theorem or assumption instantiated for the actual line family and field.\n\nsnarks_v4.tex, rule:no-double-credit: separates q\ngen\n\n entropy accounting from q\nline\n\n line/security accounting.\n\nsnarks_v4.tex, thm:ledger: propagates supplied assumptions; it does not prove the missing MCA assumption.\n\nRS_disproof_v3.tex and cs25_cap_v4.tex: address lower-side/no-slack and cap phenomena, not the missing M1 upper-side adapter.\n\nThus the attached official source predicate is absent exactly in the required sense. The manuscripts define MCA, but they do not define the Cycle107–114 branch contract.\n\nBankable finite MCA certificate, but not an active counterpacket\n\nThere is one exact result beyond the prior receipt audit.\n\nLet D⊂F\np\n×\n\n, let S\ni\n\n={x\n1\n\n,x\n2\n\n,x\n3\n\n}⊂D be a displayed zero-sum triple, and let\n\nx\n1\n\n+x\n2\n\n+x\n3\n\n=0,z\ni\n\n=x\n1\n\nx\n2\n\nx\n3\n\n.\n\nThen\n\nx∈S\ni\n\n∏\n\n(X−x)=X\n3\n+b\ni\n\nX−z\ni\n\nfor some b\ni\n\n, so\n\nQ\ni\n\n(X):=X\n3\n−\nx∈S\ni\n\n∏\n\n(X−x)=a\ni\n\nX+z\ni\n\nwith a\ni\n\n=−b\ni\n\n.\n\nTake the dimension-one Reed–Solomon code of constant polynomials and the ambient affine line\n\nf(x)=x\n2\n,g(x)=−\nx\n1\n\n.\n\nFor every x∈S\ni\n\n,\n\nx\n3\n=a\ni\n\nx+z\ni\n\n,\n\nand hence\n\n(f+z\ni\n\ng)(x)=x\n2\n−\nx\nz\ni\n\n=a\ni\n\n.\n\nTherefore the line word f+z\ni\n\ng agrees with the constant codeword a\ni\n\n on all three points of S\ni\n\n.\n\nThe witness is noncontained: g(x)=−1/x cannot equal a constant on three distinct nonzero field elements. Thus every distinct displayed z\ni\n\n is an actual support-wise MCA-bad slope under slackMCA_v3.tex, def:mca and def:residue.\n\nConsequently:\n\nP190 yields\n\neMCA(RS[F\np\n\n,D,1],1−3/571)≥\np\n190\n\n>2\n−128\n.\n\nC284 yields\n\neMCA(RS[F\np\n\n,D,1],1−3/570)≥\np\n284\n\n>2\n−128\n.\n\nThis is an exact finite MCA lower-bound certificate. It is not official-prize-relevant because it has k=1, vanishing rate at the displayed length, and σ=2, whereas the active corrected-reserve route requires a theorem relating the prize parameter regime—particularly the prescribed reserve growth—to this datum. No such theorem appears in the packet.\n\nExact ledger obstruction\n\nWrite\n\nT=2\n128\n,q\nline\n\n=130T+1.\n\nHence\n\n⌊\nT\nq\nline\n\n⌋=130.\n\nSuppose an official final retained set Z\nret\n\n is partitioned without double counting as\n\nZ\nret\n\n=F⊔C\n1\n\n⊔⋯⊔C\nm\n\n,\n\nwhere F is the free set and C\nj\n\n is owned by charge j. Let A\nj\n\n≥∣C\nj\n\n∣ be the official charge cap, and let R\nF\n\n,R\n1\n\n,…,R\nm\n\n be the corresponding q\nline\n\n allocations. If\n\nT∣F∣≤R\nF\n\n,TA\nj\n\n≤R\nj\n\n,R\nF\n\n+\nj\n∑\n\nR\nj\n\n≤q\nline\n\n,\n\nthen\n\nT∣Z\nret\n\n∣=T∣F∣+\nj\n∑\n\nT∣C\nj\n\n∣≤R\nF\n\n+\nj\n∑\n\nR\nj\n\n≤q\nline\n\n.\n\nTherefore\n\n∣Z\nret\n\n∣≤130.\n\nSo an ordinary charge label cannot rescue 189 or 283 final distinct events. A valid rescue must instead supply at least one of:\n\na source exclusion proving that some displayed events never enter Z\nret\n\n;\n\nan exact quotient or final-color map producing at most 130 final classes;\n\na theorem assigning smaller-than-T probability cost to specified classes;\n\na separate entropy-loss theorem whose conclusion legitimately changes the numerator before the q\nline\n\n step.\n\nNo such receipt is present.\n\nDenominator audit\n\nThe equal numerical values do not permit ledger pooling.\n\nq\nline\n\n=130T+1 is the sole final color/security denominator.\n\nq\ngen\n\n=130T+1 may be used only inside an entropy or interpolation-defect theorem that proves an actual loss.\n\nq\ncode\n\n=130T+1 is field-size or metadata information, not an additional denominator.\n\nq\nchal\n\n is unused because the packet contains no protocol-transfer theorem.\n\nThe final security requirement is\n\nTN\nfree\n\n≤q\nline\n\n,\n\nwith any charge allocations also drawn from the same q\nline\n\n budget.\n\nMechanism-by-mechanism audit\n\nQuotient/periodic structure: potentially capable of reducing the numerator, but no official quotient map or period subgroup is specified.\n\nContained incidences: absent for the direct finite construction because g=−1/x is not constant on a three-point support. No theorem transfers this fact to the intended corrected-reserve source.\n\nSame-slope collisions: absent among the displayed P190 and C284 colors. For the full P190 natural map, the exact 735-collision deduplication is already accounted for.\n\nEndpoint effects: one deletion is only provisional. No attached source definition mandates it.\n\nAffine color normalization: an invertible affine map is injective and removes no colors. Any noninjective normalization requires an explicit quotient theorem.\n\nRetained-tag normalization: absent.\n\nFinal source exclusions: absent.\n\nCharges: absent as an exhaustive, non-double-spent registry with caps and q\nline\n\n allocations.\n\nDependency DAG\nCanonical MCA definitions\n  slackMCA_v3.tex: def:mca, def:residue, thm:normalform       [PRESENT]\n        |\n        +--> Direct k=1 finite embedding of P190/C284         [PROVED]\n        |       |\n        |       +--> finite MCA lower bounds > 2^-128        [PROVED]\n        |       +--> corrected-reserve/prize relevance       [NOT PROVED]\n        |\n        +--> Authority-pinned M1 LOW-t=1 contract root        [MISSING]\n                 |\n                 +--> total official source adapter           [BLOCKED]\n                 |\n                 +--> literal AP_corr predicate               [BLOCKED]\n                 |       |\n                 |       +--> AP_corr => Fourier mass bound   [UNPROVED]\n                 |                 |\n                 |                 +--> t=1 local limit        [BLOCKED]\n                 |\n                 +--> official endpoint rule                  [BLOCKED]\n                 |\n                 +--> final retained-color/tag map            [BLOCKED]\n                 |\n                 +--> exhaustive charge registry              [BLOCKED]\n                         |\n                         +--> disjoint ownership and caps      [BLOCKED]\n                         +--> exact q_line allocations         [BLOCKED]\n                                   |\n                                   +--> N_free <= 130          [DECIDABLE]\n                                   +--> N_free >= 131          [DECIDABLE]\n\nThe integer comparison at the bottom is settled. The semantic path feeding it is not.\n\nStop/go recommendation\n\nStop: further Pro rounds that merely generate larger LOW-t=1 packets, more collision statistics, or additional informal charge labels. They cannot resolve a missing official contract.\n\nGo: locate or author an authority-pinned local contract bundle deriving the branch semantics from the canonical MCA definitions. The required local object is:\n\ncontext/official_contract/M1_LOW_T1_OFFICIAL_CONTRACT_v1/\n\nIt must contain, with hashes and authority metadata:\n\nAUTHORITY.json\nSOURCE_ADAPTER.{tex,lean}\nAP_CORR_SPEC.json\nAP_CORR_EVALUATOR\nFINAL_COLOR_NORMALIZATION.json\nFINAL_COLOR_EVALUATOR\nCHARGE_REGISTRY.json\nQLINE_ALLOCATION.json\nCONTRACT_CORRECTNESS_PROOF\nREPLAY_CHECKER\n\nThe charge registry must declare itself exhaustive and specify ownership, caps, overlap resolution, and allocations. A model-generated interpretation without authority metadata is not an official receipt.\n\nExact checker contract\nInputs\n\nHash-pinned official-contract bundle.\n\nHash-pinned canonical source files.\n\nP190 and C284 packet bytes.\n\nTotal source-adapter evaluator.\n\nOrdered AP_corr clause evaluator.\n\nEndpoint and final-color normalization evaluator.\n\nExhaustive charge registry and exact q\nline\n\n allocation.\n\nOptional machine-checkable AP_corr-to-Fourier theorem.\n\nComputation\n\nVerify hashes and authority.\n\nApply the source adapter.\n\nEvaluate AP_corr clauses in their official order.\n\nOn failure, identify the first false clause and its witness.\n\nOn acceptance, compute the exact endpoint action.\n\nCompute the canonical retained-color quotient or map.\n\nApply official source exclusions.\n\nPartition retained events into free and charge-owned sets.\n\nVerify coverage, disjointness, caps, and absence of double counting.\n\nVerify\n\nR\nF\n\n+\nj\n∑\n\nR\nj\n\n≤q\nline\n\n.\n\nCompare the exact required allocation with q\nline\n\n.\n\nOutputs\n\nSOURCE_REJECTED, with first failed clause and witness;\n\nCOLOR_COMPRESSED_OR_CHARGED, with exact map, counts, caps, and allocation;\n\nSOURCE_VALID_LOW_T1_COUNTERPACKET, with accepted source, exact final events, and failed ledger inequality;\n\nT1_APCORR_LOCAL_LIMIT, only with a verified universal implication;\n\nSOURCE_RECEIPT_MISSING_NO_CLAIM, naming the missing component.\n\nSoundness and completeness\n\nThe checker has no false positive because no substantive terminal is emitted without a hash-valid authority root, total evaluators, exact final set, and verified arithmetic.\n\nIt has no false negative relative to the frozen finite contract and P190/C284 packets: every source clause is Boolean, every normalization is total, every retained set is finite, and the final integer inequality is decidable. It is not a complete decision procedure for a missing universal local-limit theorem; that theorem must enter as a separately verified proof receipt.\n\nExact Cycle115 prompt\n# Cycle115 — Authority-Pinned M1 LOW-t=1 Contract Acquisition and C284-First Replay\n\nNO INTERNET. Use only the attached repository and local files.\n\nDo not infer, reconstruct, or model-generate “official” semantics.\n\nRequired object:\n  context/official_contract/M1_LOW_T1_OFFICIAL_CONTRACT_v1/\n\nThe bundle must pin:\n  1. authority, version, source-file hashes, and theorem/definition references;\n  2. a total adapter from slackMCA_v3.tex def:mca/def:residue/thm:normalform\n     corrected-reserve source instances to the LOW t=1 packet schema;\n  3. the literal AP_corr predicate and ordered clauses;\n  4. the official endpoint rule;\n  5. the exact final retained-color/tag quotient map;\n  6. all source/support exclusions;\n  7. an exhaustive charge registry with exact owned subsets, caps,\n     overlap resolution, and q_line allocations;\n  8. any field/denominator transfer theorem;\n  9. any AP_corr-to-Fourier/local-limit theorem.\n\nFail closed:\n  If any component, authority pin, or correspondence theorem is absent, return\n\n    AUDIT\n    SOURCE_RECEIPT_MISSING_NO_CLAIM\n\n  and name the first missing object. Do not continue to packet arithmetic.\n\nIf the contract is complete:\n  A. Replay C284 first.\n  B. Replay P190 second as a diagnostic.\n  C. For each packet output:\n       - first rejected source/AP_corr clause, or\n       - exact endpoint action,\n       - exact final retained-color map,\n       - exact free/charged partition,\n       - exact charge caps and q_line allocations,\n       - no-double-counting verification,\n       - exact comparison against q_line = 130*2^128+1.\n  D. Emit only one of:\n       SOURCE_REJECTED\n       COLOR_COMPRESSED_OR_CHARGED\n       SOURCE_VALID_LOW_T1_COUNTERPACKET\n       T1_APCORR_LOCAL_LIMIT\n       SOURCE_RECEIPT_MISSING_NO_CLAIM\n\nDo not accept labels, prose descriptions, or guessed periodicity as receipts.\nSelf-audit\n\nExact implication proved:\nThe attached canonical source files lack the official source-adapter/AP_corr/final-normalization/charge contract required to classify P190 or C284 for the active route. Therefore neither an official proof nor an official corrected-reserve counterpacket follows. Separately, P190 and C284 give exact finite k=1 MCA lower-bound certificates.\n\nNot proved: an official M1 source adapter, AP_corr acceptance, final retained count, official compression, official charge ledger, AP_corr-to-Fourier implication, or the M1 local limit.\n\nPrize relevance:\nThe receipt audit is route-relevant. The direct MCA embedding is only a finite/model/source-route certificate, not an official-prize counterpacket.\n\nFirst possible failure line:\nThe missing implication from an official corrected-reserve M1 source instance to an accepted LOW-t=1 datum with official color semantics.\n\nDenominators:\nq\nline\n\n, q\ngen\n\n, q\ncode\n\n, and q\nchal\n\n have not been pooled. Only q\nline\n\n is used in the final 2\n−128\n ledger.\n\nPossible numerator reductions:\nQuotients, source exclusions, endpoints, retained-tag normalization, or charges could reduce the numerator only if an exact official receipt is supplied. Containment, ordinary affine renaming, same-slope deduplication, and one endpoint do not by themselves reach 130 for the displayed packets.\n\nRoute to a full decision:\nYes, if the authority-pinned contract bundle exists. The first converter is the finite replay checker specified above. There is no route from the current archive alone to a full M1 theorem or active counterpacket.\n\nV-CYCLE115-AUTHORITY-PINNED-M1-LOW-T1-CONTRACT-REPLAY-C284-FIRST",
+    "linksTail": [
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/c/6a3911d6-4ed0-83ec-828f-d1df467b444f#main",
+        "idx": 0,
+        "text": "Skip to content",
+        "title": null
+      },
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/",
+        "idx": 1,
+        "text": "New chat",
+        "title": null
+      },
+      {
+        "aria": "Home",
+        "download": null,
+        "href": "https://chatgpt.com/",
+        "idx": 2,
+        "text": "ChatGPT",
+        "title": null
+      },
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/",
+        "idx": 3,
+        "text": "New chat",
+        "title": null
+      },
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/library",
+        "idx": 4,
+        "text": "Library",
+        "title": null
+      },
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/scheduled",
+        "idx": 5,
+        "text": "Scheduled",
+        "title": null
+      },
+      {
+        "aria": null,
+        "download": null,
+        "href": "https://chatgpt.com/apps",
+        "idx": 6,
+        "text": "Apps",
+        "title": null
+      }
+    ],
+    "location": "https://chatgpt.com/c/6a3911d6-4ed0-83ec-828f-d1df467b444f",
+    "messageCount": 5,
+    "messages": [
+      {
+        "idx": 0,
+        "length": 6497,
+        "role": "user",
+        "text": "cycle114_pinned_official_source_root_decider_9pro_packet(8).zip\nZip Archive\n# Common Prompt - Cycle114 Pinned Official Source Root Decider\n\nNO INTERNET. Do not browse, search, cite online sources, or use external tools.\nUse only the attached packet and your own reasoning. Use maximum reasoning.\n\nYou are one of nine independent theorem workers on the RS-MCA / Proximity Prize\nM1 upper-side route. Try to fully solve the assigned problem. If you cannot\nfully solve it, progress as far as possible and isolate the exact next theorem,\nchecker, or counterpacket mechanism. Be ambitious, but do not overclaim.\n\nRead CURRENT_CYCLE114_STATE.md, MANIFEST.md, the canonical tracker, the\nCycle111-113 audits, the Cycle112-113 raw response summaries, and the attached\nsource files in context/source_docs/ before answering. The source docs include\nthe repo README/agents files and the TeX manuscripts. If the official source\npredicate is absent from those files, say so exactly. Do not invent it.\n\nThe active wall is:\n\ntext\nV-CYCLE114-PINNED-OFFICIAL-SOURCE-ROOT-P190-OR-C284-DECIDER\n\nCycle113's conservative terminal was:\n\ntext\nSOURCE_RECEIPT_MISSING_NO_CLAIM\n\nThe stress packets to replay are:\n\ntext\np = q_line = q_gen = q_code = 130 * 2^128 + 1\nfloor(q_line / 2^128) = 130\n\nP190 displayed colors = 190\nP190 after one endpoint = 189\nP190 full natural t=1 zero-sum supports = 26980\nP190 full natural raw colors = 26245\n\nC284 displayed colors = 284\nC284 after one endpoint = 283\n\nIf more than 130 official final free events remain, the final ledger fails:\n\ntext\n2^128 * N_free > q_line\n\nIf at most 130 official final free events remain, the answer must explain the\nexact source rejection, exact final-color compression, or exact charge ledger\nthat reduced the count. Labels are not receipts.\n\nReturn under one of these labels only:\n\ntext\nPROOF\nCOUNTERPACKET\nBANKABLE_LEMMA\nROUTE_CUT\nEXACT_NEW_WALL\nAUDIT\nPLAN\n\nPreferred terminal decisions, if you can justify one:\n\ntext\nSOURCE_REJECTED:\n  name the first official source/APcorr/final-normalization clause that fails,\n  with exact calculation and file/theorem/definition reference.\n\nCOLOR_COMPRESSED_OR_CHARGED:\n  give the exact final retained color map or official charge set, the number\n  of colors removed/merged, the cap, and the integer q_line allocation.\n\nSOURCE_VALID_LOW_T1_COUNTERPACKET:\n  prove official source adapter and AP_corr acceptance, all charges absent or\n  exactly paid, and final retained colors > floor(q_line / 2^128).\n\nT1_APCORR_LOCAL_LIMIT:\n  prove official AP_corr plus absence of frozen named charges implies bounded\n  interpolation-defect Fourier mass, hence the t=1 local-limit and q_line\n  closure.\n\nSOURCE_RECEIPT_MISSING_NO_CLAIM:\n  if the packet lacks a necessary official source/APcorr/final-color/charge\n  receipt, name exactly which receipt is missing and what would decide it.\n\nRESOURCE_EXHAUSTED_NO_CLAIM:\n  if you can specify a valid replay but cannot complete it in this answer.\n\nDo not answer with broad language like \"probably charged\", \"periodic\", \"seems\naperiodic\", \"source-like\", \"morally APcorr\", or \"should compress.\" A charge is\nvalid only if it names:\n\ntext\nofficial predicate\nexact final retained color subset or quotient map\nexact cap\nexact q_line allocation\nno double counting with free colors or other charges\n\nCorrect q-ledger discipline:\n\ntext\nq_line = sole final color/security denominator\nq_gen  = entropy denominator only after a source theorem proves the entropy loss\nq_code = code field size / metadata; not a denominator\nq_chal = unused absent a protocol transfer theorem\ntarget = 2^128 * N_free <= q_line\n\nExplicitly answer whether you see a route to a full solution. If yes, give the\nfirst theorem/checker that would convert your answer into PROOF or\nCOUNTERPACKET. If no, give the exact route cut and the first failure line.\n\nVerification bar:\n\n1. State the exact implication proved.\n2. State the exact implication not proved.\n3. Identify the first line in the reduction chain where the theorem could fail.\n4. Use q_gen, q_line, q_code, q_chal, and the 2^-128 target correctly.\n5. Check whether quotient/periodic structure, contained incidences,\n   same-slope collisions, endpoint effects, affine color normalization, final\n   retained normalization, or support/source exclusions reduce the numerator.\n6. If you propose a checker, specify its exact inputs, outputs, terminal\n   decisions, and no-false-positive/no-false-negative proof.\n\n---\n\n# Self-Audit Addendum\n\nBefore finalizing, do a self-audit.\n\nExplicitly answer:\n\n1. What exact implication did I prove, and what exact implication did I not\n   prove?\n2. Is the result official-prize-relevant, or only a finite/model/source-route\n   research certificate?\n3. What is the first line in the reduction chain where the theorem could fail?\n4. Are q_gen, q_line, q_code, q_chal, and the 2^-128 target being used\n   correctly?\n5. Could quotient/periodic structure, contained incidences, same-slope\n   collisions, endpoint effects, affine color normalization, retained-tag\n   normalization, or final source exclusions reduce the claimed numerator?\n6. If my answer is a PLAN, what exact theorem/checker/counterpacket would\n   convert it into PROOF or COUNTERPACKET?\n\nDo not hide behind broad language. Give the exact next lemma, exact missing\nhypothesis, exact official source clause, or exact counterexample mechanism.\n\n---\n\n# Role 09 - Ruthless Director Referee\n\nYour task is to referee Cycle114 as if you were deciding the next Codex action.\nDo not be optimistic. Do not smooth over missing source receipts.\n\nAnswer:\n\n1. Is there a source-valid PROOF in this packet?\n2. Is there a source-valid COUNTERPACKET in this packet?\n3. Is there a pinned official source root?\n4. If yes, what terminal does P190 get?\n5. If yes, what terminal does C284 get?\n6. Is there an exact final-color compression or charge ledger?\n7. Is there a proved APcorr-to-Fourier/local-limit theorem?\n8. What is the first unsupported line in the route?\n9. What exact Cycle115 prompt should Codex launch next?\n\nUse literal labels:\n\ntext\nPROOF\nCOUNTERPACKET\nBANKABLE_LEMMA\nROUTE_CUT\nEXACT_NEW_WALL\nAUDIT\nPLAN\n\nGive a dependency DAG and a stop/go recommendation. If the best answer is still\nSOURCE_RECEIPT_MISSING_NO_CLAIM, say what object must be generated or located\nlocally before more Pro rounds are useful. If a result is official-prize\nrelevant, explain exactly which source and ledger receipts make it so.\n\nEnd with one exact theorem/checker/counterpacket target.\n\nShow more"
+      },
+      {
+        "idx": 1,
+        "length": 218,
+        "role": "assistant",
+        "text": "I’ll inspect the packet files and trace the official-source, APcorr, and final color-ledger chain to the first unsupported reduction line, then issue a strict referee terminal with a dependency DAG and Cycle115 target."
+      },
+      {
+        "idx": 2,
+        "length": 197,
+        "role": "assistant",
+        "text": "The manuscripts show a syntactic gap: no literal AP_corr, source adapter, retained-color map, charge registry, P190, or C284 predicate. I’m checking for differently named authority-bearing clauses."
+      },
+      {
+        "idx": 3,
+        "length": 184,
+        "role": "assistant",
+        "text": "Conditionally, P190 would still need 59 more effective-color losses and C284 153 after endpoint deletion. The prior obstruction remains official source-instance status, not arithmetic."
+      },
+      {
+        "idx": 4,
+        "length": 17110,
+        "role": "assistant",
+        "text": "AUDIT\n\nTerminal: SOURCE_RECEIPT_MISSING_NO_CLAIM\nConfidence: high.\n\nDirector’s decision\n\nSource-valid PROOF: No.\nThe attached official manuscripts do not prove the M1 upper-side local-limit theorem. In slackMCA_v3.tex, the relevant positive MCA statements remain conj:B and conj:final-mca; thm:integrated-package, item (g), explicitly classifies the full polynomial-field positive list/MCA result as conjectural. proximity_blueprint_v3.tex, prob:M1, likewise states the corrected MCA local limit as an open problem.\n\nSource-valid COUNTERPACKET: No, not for the active corrected-reserve/prize route.\nP190 and C284 can be embedded exactly into the canonical finite MCA definition at parameters k=1, residue degree t=1, and agreement excess σ=2. That is a finite/model/source-route certificate, not an official M1 counterpacket: the packet contains no theorem transporting a corrected-reserve M1 source at the prize parameters to this low-t, low-rate instance.\n\nPinned official source root: No.\nThe canonical mathematical MCA root is present in slackMCA_v3.tex through def:mca, def:residue, and thm:normalform. But the root needed by this wall is absent:\n\nno official source-adapter predicate;\n\nno definition of AP_corr or APcorr;\n\nno official endpoint rule;\n\nno final retained-color or retained-tag normalization;\n\nno exhaustive charge registry;\n\nno theorem connecting those objects to the canonical MCA definitions.\n\nThe literal strings AP_corr and APcorr do not occur in any file under context/source_docs/. Neither do definitions of a final retained-color map or official charge registry.\n\nP190 terminal: SOURCE_RECEIPT_MISSING_NO_CLAIM.\nIts displayed arithmetic is fatal if the 189 post-endpoint colors are official final free events:\n\n189⋅2\n128\n−q\nline\n\n=59⋅2\n128\n−1=20076659648335369344339101838474324475903>0.\n\nBut the packet does not prove that the displayed 190 colors pass an official adapter and AP_corr, that exactly one endpoint is removed, or that the remaining 189 are the official final retained colors.\n\nC284 terminal: SOURCE_RECEIPT_MISSING_NO_CLAIM.\nIf its 283 post-endpoint colors are official final free events,\n\n283⋅2\n128\n−q\nline\n\n=153⋅2\n128\n−1=52063202138903584909896314937060536352767>0.\n\nEven imposing support disjointness does not close the ledger: the support-intersection graph is P\n284\n\n, so the maximum disjoint family has size 142, and after deletion of any one vertex at least 141 disjoint supports remain. Hence\n\n141⋅2\n128\n−q\nline\n\n=11⋅2\n128\n−1>0.\n\nAgain, no official source acceptance or final normalization is supplied.\n\nExact final-color compression or charge ledger: No.\nThe packet contains only model-level reductions:\n\nP190 full natural supports: 26,980;\n\ndistinct raw colors: 26,245;\n\nexact multiplicity histogram:\n\n{1:25584, 2:595, 3:58, 4:8};\n\nexact same-color deduplication:\n\n26,980−26,245=735.\n\nA provisional one-color endpoint would leave 26,244, still requiring another\n\n26,244−130=26,114\n\nofficial removals or mergers. No source file supplies them.\n\nProved AP_corr-to-Fourier/local-limit theorem: No.\nCycle112 established a usable downstream Fourier implication, but not the missing upstream implication\n\n\\text{official `AP_corr` plus absence of named charges} \\Longrightarrow \\text{bounded nonzero interpolation-defect Fourier mass}.\n\nTherefore the local-limit closure cannot be invoked from an official hypothesis.\n\nFirst unsupported line:\n\nofficial corrected-reserve M1 source instance⟹accepted LOW t=1 datum with official color semantics\n\nNo theorem or definition in the attached source files establishes this implication. Everything involving AP_corr, endpoint deletion, retained colors, or charges lies downstream of this first failure.\n\nCycle115 action: stop generating more combinatorial stress packets until an authority-pinned contract bundle is supplied. The next run should acquire or reject that bundle and then replay C284 first.\n\nWhat the official manuscripts actually provide\n\nThe relevant source hierarchy is precise:\n\nslackMCA_v3.tex, def:mca: defines the support-wise MCA-bad parameter and eMCA.\n\nslackMCA_v3.tex, def:residue: defines residue-line data and the noncontained-witness condition.\n\nslackMCA_v3.tex, thm:normalform:\n\neMCA(C,δ)=q\n−1\nt\nmax\n\nΛ\nt,δ\nNC\n\n.\n\nThis is an exact normal form, not an upper bound.\n\nslackMCA_v3.tex, thm:closure: supplies coordinate normalization but explicitly does not bound the resulting packing.\n\nslackMCA_v3.tex, conj:B, conj:final-mca: state the required positive MCA/local-limit results conjecturally.\n\nproximity_blueprint_v3.tex, prob:M1: identifies the all-line/all-base corrected MCA local limit as open.\n\nsnarks_v4.tex, ass:mca: imports the line/MCA local limit as an assumption.\n\nsnarks_v4.tex, def:cert: requires a theorem or assumption instantiated for the actual line family and field.\n\nsnarks_v4.tex, rule:no-double-credit: separates q\ngen\n\n entropy accounting from q\nline\n\n line/security accounting.\n\nsnarks_v4.tex, thm:ledger: propagates supplied assumptions; it does not prove the missing MCA assumption.\n\nRS_disproof_v3.tex and cs25_cap_v4.tex: address lower-side/no-slack and cap phenomena, not the missing M1 upper-side adapter.\n\nThus the attached official source predicate is absent exactly in the required sense. The manuscripts define MCA, but they do not define the Cycle107–114 branch contract.\n\nBankable finite MCA certificate, but not an active counterpacket\n\nThere is one exact result beyond the prior receipt audit.\n\nLet D⊂F\np\n×\n\n, let S\ni\n\n={x\n1\n\n,x\n2\n\n,x\n3\n\n}⊂D be a displayed zero-sum triple, and let\n\nx\n1\n\n+x\n2\n\n+x\n3\n\n=0,z\ni\n\n=x\n1\n\nx\n2\n\nx\n3\n\n.\n\nThen\n\nx∈S\ni\n\n∏\n\n(X−x)=X\n3\n+b\ni\n\nX−z\ni\n\nfor some b\ni\n\n, so\n\nQ\ni\n\n(X):=X\n3\n−\nx∈S\ni\n\n∏\n\n(X−x)=a\ni\n\nX+z\ni\n\nwith a\ni\n\n=−b\ni\n\n.\n\nTake the dimension-one Reed–Solomon code of constant polynomials and the ambient affine line\n\nf(x)=x\n2\n,g(x)=−\nx\n1\n\n.\n\nFor every x∈S\ni\n\n,\n\nx\n3\n=a\ni\n\nx+z\ni\n\n,\n\nand hence\n\n(f+z\ni\n\ng)(x)=x\n2\n−\nx\nz\ni\n\n=a\ni\n\n.\n\nTherefore the line word f+z\ni\n\ng agrees with the constant codeword a\ni\n\n on all three points of S\ni\n\n.\n\nThe witness is noncontained: g(x)=−1/x cannot equal a constant on three distinct nonzero field elements. Thus every distinct displayed z\ni\n\n is an actual support-wise MCA-bad slope under slackMCA_v3.tex, def:mca and def:residue.\n\nConsequently:\n\nP190 yields\n\neMCA(RS[F\np\n\n,D,1],1−3/571)≥\np\n190\n\n>2\n−128\n.\n\nC284 yields\n\neMCA(RS[F\np\n\n,D,1],1−3/570)≥\np\n284\n\n>2\n−128\n.\n\nThis is an exact finite MCA lower-bound certificate. It is not official-prize-relevant because it has k=1, vanishing rate at the displayed length, and σ=2, whereas the active corrected-reserve route requires a theorem relating the prize parameter regime—particularly the prescribed reserve growth—to this datum. No such theorem appears in the packet.\n\nExact ledger obstruction\n\nWrite\n\nT=2\n128\n,q\nline\n\n=130T+1.\n\nHence\n\n⌊\nT\nq\nline\n\n⌋=130.\n\nSuppose an official final retained set Z\nret\n\n is partitioned without double counting as\n\nZ\nret\n\n=F⊔C\n1\n\n⊔⋯⊔C\nm\n\n,\n\nwhere F is the free set and C\nj\n\n is owned by charge j. Let A\nj\n\n≥∣C\nj\n\n∣ be the official charge cap, and let R\nF\n\n,R\n1\n\n,…,R\nm\n\n be the corresponding q\nline\n\n allocations. If\n\nT∣F∣≤R\nF\n\n,TA\nj\n\n≤R\nj\n\n,R\nF\n\n+\nj\n∑\n\nR\nj\n\n≤q\nline\n\n,\n\nthen\n\nT∣Z\nret\n\n∣=T∣F∣+\nj\n∑\n\nT∣C\nj\n\n∣≤R\nF\n\n+\nj\n∑\n\nR\nj\n\n≤q\nline\n\n.\n\nTherefore\n\n∣Z\nret\n\n∣≤130.\n\nSo an ordinary charge label cannot rescue 189 or 283 final distinct events. A valid rescue must instead supply at least one of:\n\na source exclusion proving that some displayed events never enter Z\nret\n\n;\n\nan exact quotient or final-color map producing at most 130 final classes;\n\na theorem assigning smaller-than-T probability cost to specified classes;\n\na separate entropy-loss theorem whose conclusion legitimately changes the numerator before the q\nline\n\n step.\n\nNo such receipt is present.\n\nDenominator audit\n\nThe equal numerical values do not permit ledger pooling.\n\nq\nline\n\n=130T+1 is the sole final color/security denominator.\n\nq\ngen\n\n=130T+1 may be used only inside an entropy or interpolation-defect theorem that proves an actual loss.\n\nq\ncode\n\n=130T+1 is field-size or metadata information, not an additional denominator.\n\nq\nchal\n\n is unused because the packet contains no protocol-transfer theorem.\n\nThe final security requirement is\n\nTN\nfree\n\n≤q\nline\n\n,\n\nwith any charge allocations also drawn from the same q\nline\n\n budget.\n\nMechanism-by-mechanism audit\n\nQuotient/periodic structure: potentially capable of reducing the numerator, but no official quotient map or period subgroup is specified.\n\nContained incidences: absent for the direct finite construction because g=−1/x is not constant on a three-point support. No theorem transfers this fact to the intended corrected-reserve source.\n\nSame-slope collisions: absent among the displayed P190 and C284 colors. For the full P190 natural map, the exact 735-collision deduplication is already accounted for.\n\nEndpoint effects: one deletion is only provisional. No attached source definition mandates it.\n\nAffine color normalization: an invertible affine map is injective and removes no colors. Any noninjective normalization requires an explicit quotient theorem.\n\nRetained-tag normalization: absent.\n\nFinal source exclusions: absent.\n\nCharges: absent as an exhaustive, non-double-spent registry with caps and q\nline\n\n allocations.\n\nDependency DAG\nCanonical MCA definitions\n  slackMCA_v3.tex: def:mca, def:residue, thm:normalform       [PRESENT]\n        |\n        +--> Direct k=1 finite embedding of P190/C284         [PROVED]\n        |       |\n        |       +--> finite MCA lower bounds > 2^-128        [PROVED]\n        |       +--> corrected-reserve/prize relevance       [NOT PROVED]\n        |\n        +--> Authority-pinned M1 LOW-t=1 contract root        [MISSING]\n                 |\n                 +--> total official source adapter           [BLOCKED]\n                 |\n                 +--> literal AP_corr predicate               [BLOCKED]\n                 |       |\n                 |       +--> AP_corr => Fourier mass bound   [UNPROVED]\n                 |                 |\n                 |                 +--> t=1 local limit        [BLOCKED]\n                 |\n                 +--> official endpoint rule                  [BLOCKED]\n                 |\n                 +--> final retained-color/tag map            [BLOCKED]\n                 |\n                 +--> exhaustive charge registry              [BLOCKED]\n                         |\n                         +--> disjoint ownership and caps      [BLOCKED]\n                         +--> exact q_line allocations         [BLOCKED]\n                                   |\n                                   +--> N_free <= 130          [DECIDABLE]\n                                   +--> N_free >= 131          [DECIDABLE]\n\nThe integer comparison at the bottom is settled. The semantic path feeding it is not.\n\nStop/go recommendation\n\nStop: further Pro rounds that merely generate larger LOW-t=1 packets, more collision statistics, or additional informal charge labels. They cannot resolve a missing official contract.\n\nGo: locate or author an authority-pinned local contract bundle deriving the branch semantics from the canonical MCA definitions. The required local object is:\n\ncontext/official_contract/M1_LOW_T1_OFFICIAL_CONTRACT_v1/\n\nIt must contain, with hashes and authority metadata:\n\nAUTHORITY.json\nSOURCE_ADAPTER.{tex,lean}\nAP_CORR_SPEC.json\nAP_CORR_EVALUATOR\nFINAL_COLOR_NORMALIZATION.json\nFINAL_COLOR_EVALUATOR\nCHARGE_REGISTRY.json\nQLINE_ALLOCATION.json\nCONTRACT_CORRECTNESS_PROOF\nREPLAY_CHECKER\n\nThe charge registry must declare itself exhaustive and specify ownership, caps, overlap resolution, and allocations. A model-generated interpretation without authority metadata is not an official receipt.\n\nExact checker contract\nInputs\n\nHash-pinned official-contract bundle.\n\nHash-pinned canonical source files.\n\nP190 and C284 packet bytes.\n\nTotal source-adapter evaluator.\n\nOrdered AP_corr clause evaluator.\n\nEndpoint and final-color normalization evaluator.\n\nExhaustive charge registry and exact q\nline\n\n allocation.\n\nOptional machine-checkable AP_corr-to-Fourier theorem.\n\nComputation\n\nVerify hashes and authority.\n\nApply the source adapter.\n\nEvaluate AP_corr clauses in their official order.\n\nOn failure, identify the first false clause and its witness.\n\nOn acceptance, compute the exact endpoint action.\n\nCompute the canonical retained-color quotient or map.\n\nApply official source exclusions.\n\nPartition retained events into free and charge-owned sets.\n\nVerify coverage, disjointness, caps, and absence of double counting.\n\nVerify\n\nR\nF\n\n+\nj\n∑\n\nR\nj\n\n≤q\nline\n\n.\n\nCompare the exact required allocation with q\nline\n\n.\n\nOutputs\n\nSOURCE_REJECTED, with first failed clause and witness;\n\nCOLOR_COMPRESSED_OR_CHARGED, with exact map, counts, caps, and allocation;\n\nSOURCE_VALID_LOW_T1_COUNTERPACKET, with accepted source, exact final events, and failed ledger inequality;\n\nT1_APCORR_LOCAL_LIMIT, only with a verified universal implication;\n\nSOURCE_RECEIPT_MISSING_NO_CLAIM, naming the missing component.\n\nSoundness and completeness\n\nThe checker has no false positive because no substantive terminal is emitted without a hash-valid authority root, total evaluators, exact final set, and verified arithmetic.\n\nIt has no false negative relative to the frozen finite contract and P190/C284 packets: every source clause is Boolean, every normalization is total, every retained set is finite, and the final integer inequality is decidable. It is not a complete decision procedure for a missing universal local-limit theorem; that theorem must enter as a separately verified proof receipt.\n\nExact Cycle115 prompt\n# Cycle115 — Authority-Pinned M1 LOW-t=1 Contract Acquisition and C284-First Replay\n\nNO INTERNET. Use only the attached repository and local files.\n\nDo not infer, reconstruct, or model-generate “official” semantics.\n\nRequired object:\n  context/official_contract/M1_LOW_T1_OFFICIAL_CONTRACT_v1/\n\nThe bundle must pin:\n  1. authority, version, source-file hashes, and theorem/definition references;\n  2. a total adapter from slackMCA_v3.tex def:mca/def:residue/thm:normalform\n     corrected-reserve source instances to the LOW t=1 packet schema;\n  3. the literal AP_corr predicate and ordered clauses;\n  4. the official endpoint rule;\n  5. the exact final retained-color/tag quotient map;\n  6. all source/support exclusions;\n  7. an exhaustive charge registry with exact owned subsets, caps,\n     overlap resolution, and q_line allocations;\n  8. any field/denominator transfer theorem;\n  9. any AP_corr-to-Fourier/local-limit theorem.\n\nFail closed:\n  If any component, authority pin, or correspondence theorem is absent, return\n\n    AUDIT\n    SOURCE_RECEIPT_MISSING_NO_CLAIM\n\n  and name the first missing object. Do not continue to packet arithmetic.\n\nIf the contract is complete:\n  A. Replay C284 first.\n  B. Replay P190 second as a diagnostic.\n  C. For each packet output:\n       - first rejected source/AP_corr clause, or\n       - exact endpoint action,\n       - exact final retained-color map,\n       - exact free/charged partition,\n       - exact charge caps and q_line allocations,\n       - no-double-counting verification,\n       - exact comparison against q_line = 130*2^128+1.\n  D. Emit only one of:\n       SOURCE_REJECTED\n       COLOR_COMPRESSED_OR_CHARGED\n       SOURCE_VALID_LOW_T1_COUNTERPACKET\n       T1_APCORR_LOCAL_LIMIT\n       SOURCE_RECEIPT_MISSING_NO_CLAIM\n\nDo not accept labels, prose descriptions, or guessed periodicity as receipts.\nSelf-audit\n\nExact implication proved:\nThe attached canonical source files lack the official source-adapter/AP_corr/final-normalization/charge contract required to classify P190 or C284 for the active route. Therefore neither an official proof nor an official corrected-reserve counterpacket follows. Separately, P190 and C284 give exact finite k=1 MCA lower-bound certificates.\n\nNot proved: an official M1 source adapter, AP_corr acceptance, final retained count, official compression, official charge ledger, AP_corr-to-Fourier implication, or the M1 local limit.\n\nPrize relevance:\nThe receipt audit is route-relevant. The direct MCA embedding is only a finite/model/source-route certificate, not an official-prize counterpacket.\n\nFirst possible failure line:\nThe missing implication from an official corrected-reserve M1 source instance to an accepted LOW-t=1 datum with official color semantics.\n\nDenominators:\nq\nline\n\n, q\ngen\n\n, q\ncode\n\n, and q\nchal\n\n have not been pooled. Only q\nline\n\n is used in the final 2\n−128\n ledger.\n\nPossible numerator reductions:\nQuotients, source exclusions, endpoints, retained-tag normalization, or charges could reduce the numerator only if an exact official receipt is supplied. Containment, ordinary affine renaming, same-slope deduplication, and one endpoint do not by themselves reach 130 for the displayed packets.\n\nRoute to a full decision:\nYes, if the authority-pinned contract bundle exists. The first converter is the finite replay checker specified above. There is no route from the current archive alone to a full M1 theorem or active counterpacket.\n\nV-CYCLE115-AUTHORITY-PINNED-M1-LOW-T1-CONTRACT-REPLAY-C284-FIRST"
+      }
+    ],
+    "readyState": "complete",
+    "stopButtons": [],
+    "title": "Cycle114 Source Decider"
+  }
+}

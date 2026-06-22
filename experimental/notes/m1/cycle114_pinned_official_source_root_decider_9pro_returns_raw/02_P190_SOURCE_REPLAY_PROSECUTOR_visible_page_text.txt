@@ -1,0 +1,65 @@
+ failed source clause. In particular, it must decide whether the adapter preserves the original smooth domain. If it does, the calculation ∣D
+P190
+
+∣=571
+
+=2
+m
+ immediately rejects P190.
+
+A terminal replay checker must take:
+
+contract root/hash;
+ordered total source-adapter evaluator;
+ordered total AP_corr evaluator;
+official endpoint evaluator;
+canonical retained-tag and final-color map;
+closed-world charge registry;
+charge ownership/no-overlap rule;
+integer q_line allocations;
+any numerator-compression or field-transfer theorem;
+exact P190 field, domain, supports, witnesses, and colors.
+
+It must return exactly one terminal:
+
+SOURCE_REJECTED: first false frozen clause and arithmetic witness;
+
+COLOR_COMPRESSED_OR_CHARGED: exact final map, exact number merged/deleted, exact charge subsets, caps and allocations, proving total numerator at most 130;
+
+SOURCE_VALID_LOW_T1_COUNTERPACKET: source and AP_corr accepted, exhaustive charges handled, and at least 131 official final free events;
+
+T1_APCORR_LOCAL_LIMIT: a checked universal theorem giving an official cap at most 130;
+
+SOURCE_RECEIPT_MISSING_NO_CLAIM: any required function, registry, map, or proof is absent or non-total.
+
+There are no false positives because every positive terminal requires a hash-bound proof trace, exact finite-image computation, and exact integer inequality. There are no false negatives relative to a complete frozen contract because total source and AP_corr evaluators decide acceptance, the final map has a finite computable image, the registry is exhaustive, and the integer alternatives N≤130 and N≥131 are exhaustive. No completeness claim is possible relative to an unstated external contract.
+
+Self-audit
+
+Exact implication proved: P190 violates the q_line target if at least 131 of its model colors become official final free events; one endpoint alone leaves 189 and hence a 59-color deficit.
+Not proved: that any of those colors are official final events.
+
+Relevance: official-route-relevant audit and exact finite/model certificate, not a prize proof or official counterpacket.
+
+First failure line:
+
+P190∈Im(Adapt
+off
+
+).
+
+Field use: q_line alone pays final security; q_gen has no proved entropy credit here; q_code is metadata; q_chal is unused.
+
+Possible numerator reductions: same-slope and fixed affine normalization do not reduce the displayed model numerator; containedness and Paper B’s direct quotient-periodic predicate do not remove P190. Endpoint, broader periodicity, retained-tag normalization, final affine quotienting, and source exclusions remain undecidable because their official maps are missing.
+
+First converter: the authority-pinned total adapter-image theorem, followed by the total contract replay checker specified above.
+
+Pro Extended
+ChatGPT can make mistakes. Check important info.
+Too many requests
+
+You’re making requests too quickly. We’ve temporarily limited access to your conversations to protect your data.
+
+Please wait a few minutes before trying again.
+
+Got it
