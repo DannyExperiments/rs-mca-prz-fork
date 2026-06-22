@@ -1,0 +1,51 @@
+{
+  "audit_warning": {
+    "mixed_primitive_log_gauge_detected": true,
+    "required_action": "Correct or explicitly separate the X+1 and X+2 log gauges; do not use a numerical product log without naming its base.",
+    "same_field_product_verified": true,
+    "x_plus_1_product_log": 814364899710808391,
+    "x_plus_2_product_log": 10842140456386731719
+  },
+  "base_field": {
+    "beta_outside_D0": true,
+    "eta_16": 3,
+    "eta_nonsquare": true,
+    "eta_order": 256,
+    "generated_degree_by_eta": 16,
+    "q0": 48661191875666868481
+  },
+  "cycle84_bridge": {
+    "block_gap_checks": 336,
+    "block_value_checks": 336,
+    "distinct_state_sets": 48,
+    "fixed_locator_jet": "X^113-X^112+degree<=107",
+    "locator_value_scalar": "P_T(beta)=4(beta-1)Phi(T)"
+  },
+  "decision": "CYCLE116_TRANSFER_HYPOTHESES_VERIFIED",
+  "finite_receipt": {
+    "double_fibers": 12,
+    "m_max": 2,
+    "occupancy": 52747567092,
+    "ordered_offdiagonal_energy": 24
+  },
+  "packet_binding": {
+    "files_verified": 25,
+    "review_manifest": "REVIEW_MANIFEST.sha256"
+  },
+  "scope": "Verifies algebraic hypotheses only; the generic fixed-jet and padding implications are supplied by the accompanying proof, not by enumeration.",
+  "security_arithmetic": {
+    "floor_q_over_2^128": 6,
+    "numerator": 52747567092,
+    "strictly_above_2^-128": true
+  },
+  "smooth_lift": {
+    "A_size": 119,
+    "R_size": 137,
+    "agreement": 262,
+    "code_dimension": 256,
+    "domain_size": 512,
+    "field_size": 2367911594760467245844106297320951247361,
+    "radius": "125/256",
+    "theta_order": 512
+  }
+}

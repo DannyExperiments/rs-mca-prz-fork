@@ -1,0 +1,91 @@
+{
+  "cycle84_anchor": {
+    "double_fibers": 12,
+    "m_max": 2,
+    "occupancy": 52747567092,
+    "ordered_offdiagonal_energy": 24
+  },
+  "decision": "CYCLE116_C84_TO_RS_MCA_LD_TRANSFER_ANTECEDENTS_VERIFIED",
+  "field_checks": {
+    "base_modulus_irreducible": true,
+    "beta_primitive": true,
+    "eta_nonsquare": true,
+    "eta_order": 256,
+    "ord_256_of_17": 16,
+    "v2_17pow16_minus1": 8
+  },
+  "native_row": {
+    "U_coeff_degrees": [
+      138,
+      139,
+      140,
+      141,
+      142,
+      143
+    ],
+    "agreement": 143,
+    "alpha_coefficients": [
+      12,
+      6,
+      16,
+      8,
+      3,
+      11,
+      7,
+      10,
+      5,
+      14,
+      10,
+      5,
+      6,
+      13,
+      9,
+      7
+    ],
+    "delta": "113/256",
+    "field_size": 48661191875666868481,
+    "fixed_jet": "X^113-X^112+O(X^107)",
+    "k": 137,
+    "kappa_coefficients": [
+      4,
+      4
+    ],
+    "lambda_coefficients": [
+      2,
+      1,
+      16,
+      12,
+      2,
+      6,
+      3,
+      10,
+      0,
+      10,
+      7,
+      5,
+      13,
+      16,
+      11,
+      5
+    ],
+    "n": 256,
+    "slot_locator_identities_checked": 336
+  },
+  "semantic_note": "The checker verifies concrete antecedents and arithmetic. The proof note supplies the universal fixed-jet-to-LD_sw/MCA lemma and the divisibility proof of noncontainment after padding.",
+  "smooth_lift": {
+    "H_size": 512,
+    "agreement": 262,
+    "delta": "125/256",
+    "field_size": 2367911594760467245844106297320951247361,
+    "k": 256,
+    "n": 512,
+    "padding_points": 119,
+    "theta_order": 512,
+    "unused_odd_coset_points": 137
+  },
+  "target": {
+    "exact_cross_multiplication": true,
+    "floor_17pow32_over_2pow128": 6,
+    "occupancy_gt_floor": true
+  }
+}

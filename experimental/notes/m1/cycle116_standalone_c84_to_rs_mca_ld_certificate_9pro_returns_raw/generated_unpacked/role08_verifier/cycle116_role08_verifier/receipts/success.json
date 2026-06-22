@@ -1,0 +1,123 @@
+{
+  "decision": "CYCLE116_TRANSFER_CERTIFICATE_VERIFIED",
+  "field": {
+    "F0": "F_17[X]/(X^16+X^8+3)",
+    "beta_outside_D": true,
+    "eta_nonsquare": true,
+    "eta_order": 256,
+    "eta_power_16": 3,
+    "irreducible": true,
+    "q0": 48661191875666868481,
+    "slot_log_generator_is_beta_and_primitive": true
+  },
+  "field_parameter_ledger": {
+    "bad_slope_numerator": 52747567092,
+    "floor_q_line_over_2^128": 6,
+    "mca_denominator": "q_line",
+    "q_chal": null,
+    "q_code": 2367911594760467245844106297320951247361,
+    "q_gen": 2367911594760467245844106297320951247361,
+    "q_line": 2367911594760467245844106297320951247361,
+    "strict_integer_test": "2^128*52747567092 > 17^32"
+  },
+  "fixed_jet": {
+    "all_slot_locators": "X^16+O(X^10)",
+    "block_locator_multiset_sha256": "0b408f6fa7bea042aae16d2c0056d34f647cb0868ecd0279eca532134b0d18c4",
+    "family_locator": "P_T(X)=X^113-X^112+O(X^107)",
+    "kappa_coefficients_low_to_high": [
+      4,
+      4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "kappa_nonzero": true,
+    "product_scalar": "P_T(beta)=kappa*Phi(T)",
+    "reference_locator_sha256": "6dc7eaae821cc4cb794aaf1c0c3c7b1ce6f23cc22ac5cf9d7e6e98d055ec7f4c",
+    "slot_states_checked": 336
+  },
+  "imports": {
+    "cycle84_values_consumed_not_recensused": true,
+    "metadata_notice": {
+      "executable_slot_log_generator": [
+        2,
+        1
+      ],
+      "master_display_generator": [
+        1,
+        1
+      ],
+      "status": "NONFATAL_METADATA_MISMATCH"
+    },
+    "sha256": {
+      "light_receipt": "93177a6892e3aaf362d2414010f173eaa0dbc7e78c1f1f680bfbb5290dd2cb8a",
+      "master": "4abc98c8521856428c7c21b31ebfdb3380e32a9c1703202a50b3fcab85488088",
+      "slot_logs": "d4379b3ed97c4ae2a43511796e3bcb15514d3f5f989f15b6fb1bc9fc85c779d8",
+      "standalone_note": "14b3e668347e42af97440c5cf160c873cdb2f97d3b65e20f69b9ca3b6997e4cb"
+    }
+  },
+  "label": "PROOF",
+  "native_row": {
+    "LD_sw_lower_bound": 52747567092,
+    "agreement": 143,
+    "code": "RS[F_17^16,<eta>,137]",
+    "delta": "113/256",
+    "epsilon_mca_lower_bound": "52747567092/17^16",
+    "k": 137,
+    "n": 256
+  },
+  "one_affine_line_receipt": {
+    "construction": "f=e_J0-z0*g, g(x)=L_H(beta)/(beta-x)",
+    "f_word_sha256": "0183d3b2cca8e3dba0ea4f87234d73be0ca37ada9ba9a2c90e83659bbcb96453",
+    "g_word_sha256": "df5a691d01e6477d47268d9eedfcd3b2ff7eb3f8057c6be2020e1a76dade726a",
+    "noncontainment_clause": "251 distinct Vandermonde columns in dimension 256",
+    "reference_cosupport_sha256": "2634bec29cfcf5dd3b6fa33b6142ea9407d9febcc6da5d4ef04c341bc8e5bedc",
+    "reference_support_sha256": "6b0df487a6edc6c912430abca2bcbffe62019528648b1d22791988b6969818fd",
+    "reference_tuple": [
+      4,
+      26,
+      46,
+      12,
+      32,
+      22,
+      40
+    ],
+    "support_size": 262,
+    "z0_sha256": "c241b8b961c0bbea70147698a8acd43fde7b9cb554e92d1820c76ea637b05ed7"
+  },
+  "scope": {
+    "accepted_deployed_prime_field_theorem": false,
+    "asymptotic_theorem": false,
+    "official_proximity_prize_counterpacket": false,
+    "ordinary_list_decoding_lower_bound": false,
+    "protocol_soundness_failure": false
+  },
+  "smooth_lift": {
+    "A_size": 119,
+    "H_generates_K": true,
+    "H_order": 512,
+    "K": "F_17^32=F0(theta), theta^2=eta",
+    "LD_sw_lower_bound": 52747567092,
+    "R_size": 137,
+    "agreement": 262,
+    "code": "RS[F_17^32,H,256]",
+    "delta": "125/256",
+    "epsilon_mca_lower_bound": "52747567092/17^32",
+    "fixed_root_scalar_sha256": "49dde0c6dcd43618405920203cbc522211a4cdda8a922e44e9a692307aa79bf4",
+    "k": 256,
+    "n": 512,
+    "strictly_greater_than_2^-128": true,
+    "theta_order": 512
+  }
+}

@@ -2486,3 +2486,43 @@ Keep entries concise and link to the relevant files.
   to fresh Pro instances with either the combined role prompts or the common
   prompt plus one role prompt. Audit returns conservatively and promote only a
   reviewable certificate/checker or a precise route cut/counterpacket.
+
+### 2026-06-23 - Cycle116 standalone C84-to-RS-MCA/LD transfer returns audited
+
+- **Agent/model:** Codex local audit of pasted 9-Pro returns and downloaded
+  generated files.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle116_standalone_c84_to_rs_mca_ld_certificate_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle116_standalone_c84_to_rs_mca_ld_transfer_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** PROOF / BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being banked:** Cycle116 produced a standalone finite transfer
+  certificate for the Cycle84 finite wall. The banked theorem is the smooth row
+  `C = RS[F_17^32,H,256]`, `H=<theta>`, `|H|=512`, with
+  `LD_sw(C,262) >= 52,747,567,092` and
+  `epsilon_mca(C,125/256) >= 52,747,567,092 / 17^32 > 2^-128`. The native row is
+  still `RS[F_17^16,<eta>,137]` at agreement `143`, and the transfer uses
+  `P_T(X)=X^113-X^112+O(X^107)` plus
+  `P_T(beta)=4(beta-1)Phi(T)`.
+- **Local validation:** Downloaded/generated theorem notes, checkers, bundles,
+  receipts, unpacked verifier packages, and validation outputs were preserved
+  with `SHA256SUMS.txt`. Local generated-checker decisions include
+  `C84_TO_RS_MCA_LD_TRANSFER_FINITE_HYPOTHESES_VERIFIED`,
+  `CYCLE116_ROLE03_C84_LOCATOR_BRIDGE_VERIFIED`,
+  `CYCLE116_C84_TO_RS_MCA_LD_TRANSFER_ANTECEDENTS_VERIFIED`,
+  `CYCLE116_TRANSFER_HYPOTHESES_VERIFIED`,
+  `CYCLE116_TRANSFER_CERTIFICATE_VERIFIED`, and `SELF_TESTS_PASS`.
+- **What not to claim:** This is not ordinary list decoding, not a protocol
+  soundness failure, not an asymptotic theorem, not an official Proximity Prize
+  counterpacket, and not an accepted/deployed prime-field theorem. Role 08 also
+  flags a nonfatal primitive-log gauge mismatch (`X+1` display prose versus
+  executable `beta=X+2` slot logs), and its self-test mutates a tamper receipt
+  if run in place.
+- **What to do next:** Build `V-CYCLE116-PRZ-WRAPPER-REPLAY`: a corrected
+  compact theorem note, verifier, receipt, checksums, canonical `A/R` naming,
+  fixed or reindexed primitive-log gauge, and nonmutating self-test harness.
+  The next mathematical/source wall is
+  `V-CYCLE116-EXTENSION-FIELD-QCHAL-SOURCE-CONTRACT`. If the official source
+  rejects this extension-field row, move to
+  `L-CYCLE117-ACCEPTED-FIELD-FIXED-JET-OCCUPANCY-COMPILER`.

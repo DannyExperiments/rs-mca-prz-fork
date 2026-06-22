@@ -1,0 +1,40 @@
+{
+  "cycle84": {
+    "double_fibers": 12,
+    "m_max": 2,
+    "occupancy": 52747567092,
+    "ordered_offdiagonal_energy": 24
+  },
+  "decision": "CYCLE116_BRIDGE_AND_SMOOTH_LIFT_FINITE_CLAUSES_VERIFIED",
+  "ledger": {
+    "bad_numerator": 52747567092,
+    "floor_17pow32_over_2pow128": 6,
+    "q_chal": "not used by the finite MCA theorem",
+    "q_code": 2367911594760467245844106297320951247361,
+    "q_gen": 2367911594760467245844106297320951247361,
+    "q_line": 2367911594760467245844106297320951247361,
+    "strictly_above_2powminus128": true
+  },
+  "lift": {
+    "A_size": 119,
+    "H_size": 512,
+    "R_size": 137,
+    "agreement": 262,
+    "delta": "125/256",
+    "dimension": 256,
+    "field_size": 2367911594760467245844106297320951247361,
+    "theta_order": 512
+  },
+  "native": {
+    "beta_outside_D0": true,
+    "eta_nonsquare": true,
+    "eta_order": 256,
+    "field_size": 48661191875666868481,
+    "fixed_jet": "X^113-X^112+O(X^107)",
+    "kappa_coefficients": [
+      4,
+      4
+    ],
+    "slot_structural_checks": 336
+  }
+}
