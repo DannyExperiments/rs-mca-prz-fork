@@ -1,0 +1,273 @@
+{
+  "nn": "01",
+  "role": "OFFICIAL_SOURCE_CONTRACT_RECONSTRUCTOR",
+  "expected_url": "https://chatgpt.com/c/6a390206-db04-83ec-82ce-7486504befe2",
+  "current_url": "https://chatgpt.com/c/6a390206-db04-83ec-82ce-7486504befe2",
+  "title": "Cycle113 Problem Solving",
+  "assistant_count": 3,
+  "user_count": 1,
+  "stop": false,
+  "continueBtn": false,
+  "tooMany": true,
+  "text_length": 16833,
+  "response_length": 10252,
+  "links": [
+    {
+      "download": "",
+      "href": "https://chatgpt.com/c/6a390206-db04-83ec-82ce-7486504befe2#main",
+      "text": "Skip to content"
+    },
+    {
+      "download": "",
+      "href": "https://chatgpt.com/",
+      "text": "New chat"
+    },
+    {
+      "download": "",
+      "href": "https://chatgpt.com/",
+      "text": "ChatGPT"
+    },
+    {
+      "download": "",
+      "href": "https://chatgpt.com/",
+      "text": "New chat"
+    },
+    {
+      "download": "",
+      "href": "https://chatgpt.com/library",
+      "text": "Library"
+    },
+    {
+      "download": "",
+      "href": "https://chatgpt.com/scheduled",
+      "text": "Scheduled"
+    },
+    {
+      "download": "",
+      "href": "https://chatgpt.com/apps",
+      "text": "Apps"
+    }
+  ],
+  "buttons": [
+    {
+      "aria": "Open sidebar",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "",
+      "testid": "",
+      "text": "Search chats"
+    },
+    {
+      "aria": "",
+      "testid": "",
+      "text": "Pinned"
+    },
+    {
+      "aria": "Close sidebar",
+      "testid": "close-sidebar-button",
+      "text": ""
+    },
+    {
+      "aria": "",
+      "testid": "",
+      "text": "Search chats"
+    },
+    {
+      "aria": "",
+      "testid": "",
+      "text": "Pinned"
+    },
+    {
+      "aria": "Open project home",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project options for 361",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project home",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project options for Erdos Problem 346",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "",
+      "testid": "",
+      "text": "Projects"
+    },
+    {
+      "aria": "New project",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Organize chats",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project home",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project options for $1 Mil Planner",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project home",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project options for $1,000,000 Math Prize",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project home",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project options for 346 Collab",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project home",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project options for 361 Collab",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project home",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Open project options for OPEN NON ERDOS PROBLEMS",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "",
+      "testid": "",
+      "text": "Show more"
+    },
+    {
+      "aria": "Download apps",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Share",
+      "testid": "share-chat-button",
+      "text": "Share"
+    },
+    {
+      "aria": "Open conversation options",
+      "testid": "conversation-options-button",
+      "text": ""
+    },
+    {
+      "aria": "cycle113_frozen_source_contract_replay_9pro_packet.zip",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "",
+      "testid": "collapsible-user-message-toggle",
+      "text": "Show more"
+    },
+    {
+      "aria": "Copy message",
+      "testid": "copy-turn-action-button",
+      "text": ""
+    },
+    {
+      "aria": "Edit message",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "",
+      "testid": "",
+      "text": "Thought for 12m 15s"
+    },
+    {
+      "aria": "Copy response",
+      "testid": "copy-turn-action-button",
+      "text": ""
+    },
+    {
+      "aria": "Good response",
+      "testid": "good-response-turn-action-button",
+      "text": ""
+    },
+    {
+      "aria": "Bad response",
+      "testid": "bad-response-turn-action-button",
+      "text": ""
+    },
+    {
+      "aria": "Pro feedback",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Share",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Switch model",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "More actions",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Add files and more",
+      "testid": "composer-plus-btn",
+      "text": ""
+    },
+    {
+      "aria": "",
+      "testid": "",
+      "text": "Pro Extended"
+    },
+    {
+      "aria": "Start dictation",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "Start Voice",
+      "testid": "",
+      "text": ""
+    },
+    {
+      "aria": "",
+      "testid": "",
+      "text": "Got it"
+    }
+  ]
+}

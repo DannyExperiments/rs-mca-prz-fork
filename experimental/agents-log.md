@@ -2302,3 +2302,33 @@ Keep entries concise and link to the relevant files.
   requires exact source rejection, exact final-color compression/charge ledger,
   source-valid counterpacket, or official `AP_corr` to interpolation-defect
   Fourier/local-limit theorem.
+
+### 2026-06-22 - Cycle113 frozen source-contract replay 9-Pro returns
+
+- **Agent/model:** ChatGPT Pro 5.5 nine-role round, audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle113_frozen_source_contract_replay_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle113_frozen_source_contract_replay_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** Preserves and audits all nine Cycle113 visible Pro
+  returns. The round produced no official terminal among `SOURCE_REJECTED`,
+  `COLOR_COMPRESSED_OR_CHARGED`, `SOURCE_VALID_LOW_T1_COUNTERPACKET`, or
+  `T1_APCORR_LOCAL_LIMIT`; all roles converge on
+  `SOURCE_RECEIPT_MISSING_NO_CLAIM` for the supplied archive. Banked model
+  arithmetic includes P190's 190 displayed colors, 189 after one endpoint,
+  threshold 130; the full natural P190 `t=1` zero-sum map with 26,980 supports
+  and 26,245 raw colors; and the C284 overlapping-chain packet with 284
+  displayed colors and 283 after one endpoint.
+- **How it is useful:** The round prevents overclaiming while sharpening the
+  next gate. It shows that ordinary non-double-spent additive `q_line` charges
+  cannot pay P190/C284 if their displayed colors survive as final events, but
+  it also proves that no official promotion is possible without a pinned source
+  contract: source adapter, official `AP_corr`, endpoint policy, final
+  retained-color map, charge registry, and integer ledger receipts.
+- **What to do next:** Run
+  `V-CYCLE114-PINNED-OFFICIAL-SOURCE-ROOT-P190-OR-C284-DECIDER`. The next
+  packet should first find or fail-closed on the authority-pinned official
+  source root; only then replay P190 and C284 through official source/APcorr,
+  final colors, charges, and `q_line` allocations.
