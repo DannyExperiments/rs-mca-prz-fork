@@ -2385,3 +2385,27 @@ Keep entries concise and link to the relevant files.
   `V-CYCLE115-AUTHORITY-PINNED-M1-LOW-T1-CONTRACT-REPLAY-C284-FIRST` through
   total source adapter, official `AP_corr`, endpoint/final-event maps,
   exhaustive charge registry, and exact `q_line` ledger.
+
+### 2026-06-23 - Cycle84 standalone finite certificate extracted
+
+- **Agent/model:** Codex local extraction and audit.
+- **Files added or changed:**
+  `experimental/certificates/cycle84_finite_certificate/`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** PROOF / BANKABLE_LEMMA / REVIEWABILITY.
+- **What is being added:** A compact, reviewer-facing finite certificate for
+  the Cycle84 color-filtered seven-slot model, centered on
+  `STANDALONE_FINITE_CERTIFICATE.md`. The directory contains checker sources,
+  compact data tables, recorded outputs, and a manifest. It intentionally
+  excludes raw Packy/Fable transcripts, broad workflow provenance, and giant
+  cycle archives.
+- **How it is useful:** This answers PRZ's reviewability request. The finite
+  theorem remains exactly `m_max(beta)=2`, `Occ(beta)=52,747,567,092`,
+  `D=24`, `12` double fibers, and no fibers of size at least `3`. Local replay
+  from the extracted directory verified `REVIEW_MANIFEST.sha256` and returned
+  `CYCLE84_EXACT_MMAX2_CERTIFICATE_VERIFIED`.
+- **What to do next:** Treat this as the standalone finite certificate only.
+  The paper-facing question is now the explicit transfer theorem from the
+  Cycle84 finite color-filtered model into an official MCA/list/line-decoding
+  statement over the RS parameters.
