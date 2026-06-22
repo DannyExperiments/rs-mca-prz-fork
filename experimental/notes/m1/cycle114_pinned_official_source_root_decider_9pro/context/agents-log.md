@@ -2332,27 +2332,3 @@ Keep entries concise and link to the relevant files.
   packet should first find or fail-closed on the authority-pinned official
   source root; only then replay P190 and C284 through official source/APcorr,
   final colors, charges, and `q_line` allocations.
-
-### 2026-06-22 - Cycle114 pinned official source-root decider dispatch
-
-- **Agent/model:** ChatGPT Pro 5.5 nine-role round, dispatched by Codex.
-- **Files added or changed:**
-  `experimental/notes/m1/cycle114_pinned_official_source_root_decider_9pro/`,
-  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
-  `experimental/agents-log.md`.
-- **Status:** DISPATCHED / AWAITING RETURNS.
-- **What is being launched:** A fail-closed official source-root replay round
-  for `V-CYCLE114-PINNED-OFFICIAL-SOURCE-ROOT-P190-OR-C284-DECIDER`. The
-  packet includes source docs, TeX manuscripts, tracker/log, Cycle111-113
-  audits, and Cycle112-113 role returns. Each role is instructed to use no
-  internet, avoid invented official predicates, and emit one of the explicit
-  terminals: `SOURCE_REJECTED`, `COLOR_COMPRESSED_OR_CHARGED`,
-  `SOURCE_VALID_LOW_T1_COUNTERPACKET`, `T1_APCORR_LOCAL_LIMIT`,
-  `SOURCE_RECEIPT_MISSING_NO_CLAIM`, or `RESOURCE_EXHAUSTED_NO_CLAIM`.
-- **Dispatch note:** All nine tabs accepted the shared zip and combined role
-  prompt. Later roles showed ChatGPT's `Too many requests` banner after prompt
-  acceptance, but each had a fresh conversation URL and visible stop button at
-  dispatch time. Treat as active unless the return heartbeat proves otherwise.
-- **What to do next:** Collect Cycle114 returns into
-  `experimental/notes/m1/cycle114_pinned_official_source_root_decider_9pro_returns_raw/`,
-  audit conservatively, update tracker/log, then commit and push.

@@ -1,0 +1,109 @@
+[
+  {
+    "index": 1,
+    "roleFile": "COMBINED_01_OFFICIAL_SOURCE_ROOT_LOCATOR.md",
+    "sent": true,
+    "uploaded": true,
+    "url": "https://chatgpt.com/c/6a390fb4-8ea8-83ec-8a37-b55fbc03e214",
+    "title": "Cycle114 Problem Analysis",
+    "stop": true,
+    "tooMany": false,
+    "error": null
+  },
+  {
+    "index": 2,
+    "roleFile": "COMBINED_02_P190_SOURCE_REPLAY_PROSECUTOR.md",
+    "sent": true,
+    "uploaded": true,
+    "urlBefore": "https://chatgpt.com/c/6a39035a-1e4c-83ec-a4b8-bec1febc76c2",
+    "error": null,
+    "title": "Cycle114 Problem Solving",
+    "url": "https://chatgpt.com/c/6a390ffe-bcd8-83ec-b0c0-f702c3b6a3d7",
+    "stop": true,
+    "tooMany": false
+  },
+  {
+    "index": 3,
+    "roleFile": "COMBINED_03_C284_OVERLAPPING_CHAIN_REPLAY.md",
+    "sent": true,
+    "uploaded": true,
+    "urlBefore": "https://chatgpt.com/c/6a39037c-fb1c-83ec-8876-942dfa72056b",
+    "error": null,
+    "title": "Cycle114 Source Decider",
+    "url": "https://chatgpt.com/c/6a391029-43ac-83ec-97bb-8dae06875d39",
+    "stop": true,
+    "tooMany": false
+  },
+  {
+    "index": 4,
+    "roleFile": "COMBINED_04_FINAL_RETAINED_EVENT_MAP_FORMALIZER.md",
+    "sent": true,
+    "uploaded": true,
+    "urlBefore": "https://chatgpt.com/",
+    "error": null,
+    "title": "Theorem Problem Cycle114",
+    "url": "https://chatgpt.com/c/6a39114a-5234-83ec-9668-4fe5690efe22",
+    "stop": true,
+    "tooMany": true
+  },
+  {
+    "index": 5,
+    "roleFile": "COMBINED_05_CHARGE_LEDGER_NO_DOUBLE_SPEND_AUDITOR.md",
+    "sent": true,
+    "uploaded": true,
+    "urlBefore": "https://chatgpt.com/",
+    "error": null,
+    "title": "Cycle114 Problem Solving",
+    "url": "https://chatgpt.com/c/6a39116c-926c-83ec-a5ba-a80a6ced104b",
+    "stop": true,
+    "tooMany": true
+  },
+  {
+    "index": 6,
+    "roleFile": "COMBINED_06_APCORR_LOCAL_LIMIT_THEOREM_PROVER.md",
+    "sent": true,
+    "uploaded": true,
+    "urlBefore": "https://chatgpt.com/",
+    "error": null,
+    "title": "Cycle114 Problem Analysis",
+    "url": "https://chatgpt.com/c/6a39118f-457c-83ec-a5da-93465f5f7be6",
+    "stop": true,
+    "tooMany": true
+  },
+  {
+    "index": 7,
+    "roleFile": "COMBINED_07_FAIL_CLOSED_CHECKER_SPEC_ENGINEER.md",
+    "sent": true,
+    "uploaded": true,
+    "urlBefore": "https://chatgpt.com/c/6a39040b-d89c-83ec-aa8e-a9e0c7596bbc",
+    "error": null,
+    "title": "Cycle114 Problem Analysis",
+    "url": "https://chatgpt.com/c/6a3910ac-4e7c-83ec-8bdd-7490c485727d",
+    "stop": true,
+    "tooMany": false
+  },
+  {
+    "index": 8,
+    "roleFile": "COMBINED_08_SOURCE_VALID_COUNTERPACKET_HUNTER.md",
+    "sent": true,
+    "uploaded": true,
+    "urlBefore": "https://chatgpt.com/",
+    "error": null,
+    "title": "RS-MCA Proximity Prize",
+    "url": "https://chatgpt.com/c/6a3911b2-a3e0-83ec-8284-dda9527c5c92",
+    "stop": true,
+    "tooMany": true
+  },
+  {
+    "index": 9,
+    "roleFile": "COMBINED_09_RUTHLESS_DIRECTOR_REFEREE.md",
+    "sent": true,
+    "uploaded": true,
+    "urlBefore": "https://chatgpt.com/",
+    "error": null,
+    "title": "Cycle114 Source Decider",
+    "url": "https://chatgpt.com/c/6a3911d6-4ed0-83ec-828f-d1df467b444f",
+    "stop": true,
+    "tooMany": true
+  }
+]

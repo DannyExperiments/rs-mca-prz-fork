@@ -1,0 +1,764 @@
+EXACT_NEW_WALL
+
+Terminal decision: SOURCE_RECEIPT_MISSING_NO_CLAIM
+Confidence: high.
+
+Strongest contract reconstructible from the packet
+
+Source adapter — missing.
+The tracker records prior “same-field syndrome-pencil adapter” progress, but this packet contains neither its formal statement nor a total official map
+
+Adapt
+off
+	​
+
+(P)∈{REJECT(j,ω)}∪Datum
+t=1
+	​
+
+.
+
+Consequently, the first unavailable implication is
+
+P190 packet bytes⟹official intrinsic LOW t=1 datum.
+
+A tracker summary is not an executable or theorem-bearing source receipt.
+
+Official AP
+corr
+	​
+
+ — absent.
+No file defines it by an equality, quantified predicate, executable evaluator, equivalence, threshold, or hash-pinned theorem.
+
+The strongest nonofficial substitutes in the packet are:
+
+the structural checklist SC
+A
+	​
+
+: same prime field, intrinsic E=X−β, full residue rank 1, no proper subfield/additive subgroup, simple agreement roots, contained/delete-one vacuity, exact color deduplication, fixed injective normalization, and one endpoint deletion;
+
+the spectral predicate
+
+Φ
+w
+	​
+
+(S)=([X
+k+1
+]I
+S
+	​
+
+,…,[X
+k+σ−1
+]I
+S
+	​
+
+),
+ν
+w
+	​
+
+(λ)=
+S∈(
+k+σ
+D
+	​
+
+)
+∑
+	​
+
+ψ(λ⋅Φ
+w
+	​
+
+(S)),
+AP
+corr
+spec
+	​
+
+(A):
+λ
+
+=0
+∑
+	​
+
+∣ν
+w
+	​
+
+(λ)∣≤A(
+k+σ
+n
+	​
+
+).
+
+This spectral condition proves
+
+∣Z
+β
+	​
+
+(w)∣≤
+q
+gen
+σ−1
+	​
+
+(A+1)(
+k+σ
+n
+	​
+
+)
+	​
+
+
+in the same-field setting.
+
+But SC
+A
+	​
+
+ does not imply AP
+corr
+spec
+	​
+
+(A); the interval/prefix constructions separate them. No official descent theorem selects either substitute.
+
+Endpoint convention — missing officially.
+The strongest explicit model convention permits deletion of one color. The packet does not define which source event is an endpoint, whether deletion is mandatory or optional, or whether more than one color can be removed.
+
+Final retained K
+line
+	​
+
+-color map — missing officially.
+The model map is
+
+κ
+raw
+	​
+
+(Q)=Q(β).
+
+No packet clause defines the official post-adapter, post-chart, post-endpoint map
+
+κ
+off
+	​
+
+:{official witnesses}⟶K
+line
+	​
+
+or{tagged K
+line
+	​
+
+-colors}.
+
+Retained-tag normalization — only conditional mathematics is available.
+A fixed affine map z↦az+b, a
+
+=0, is bijective. More generally,
+
+z⟼(τ(z),a
+τ(z)
+	​
+
+z+b
+τ(z)
+	​
+
+)
+
+is injective when the chart/support tag τ is retained. Thus neither operation compresses colors.
+
+Compression requires an official rule that drops tags, introduces poles, or proves an exact transition-fiber bound. No such rule is supplied.
+
+Charge registry — not frozen officially.
+The packet proves the following mathematical charge facts:
+
+residue quotient and residue hidden-action-rank charges are vacuous at intrinsic t=1;
+
+contained/delete-j branches are absent for j≤σ−1 under the stated degree argument;
+
+pairwise-disjoint agreement supports of size a=k+σ satisfy
+
+m≤⌊
+k+σ
+n
+	​
+
+⌋;
+
+an affine pencil Q
+c
+	​
+
+=R+cH has evaluation image of size 1 if H(β)=0, and the full parameter count otherwise;
+
+fixed and genuinely tagged affine normalizations preserve cardinality;
+
+same-slope collisions are removed only by exact field-element deduplication.
+
+The packet supplies no exhaustive official predicates for endpoint, affine-color, support-periodic, tangent, field, retained-normalization, or Fourier/prefix charges. It also supplies no official charged color subsets, overlap rule, integer caps, or allocated q
+line
+	​
+
+ reserves.
+
+Field transfer.
+For P190,
+
+q
+gen
+	​
+
+=q
+code
+	​
+
+=q
+line
+	​
+
+=p,
+
+so no mixed-field transfer is needed. Here q
+gen
+	​
+
+ appears only in the corrected-reserve calculation; q
+code
+	​
+
+ is metadata and q
+chal
+	​
+
+ is unused.
+
+In general, a certified embedding K
+gen
+	​
+
+↪K
+line
+	​
+
+ only gives q
+gen
+	​
+
+≤q
+line
+	​
+
+. It transfers an already-proved entropy/color cap; it does not prove the required entropy loss.
+
+Integer q
+line
+	​
+
+ ledger — available and exact.
+For a disjoint ownership decomposition
+
+Z
+ret
+	​
+
+=F
+∪
+˙
+C
+1
+	​
+
+∪
+˙
+⋯
+∪
+˙
+C
+r
+	​
+
+,
+
+valid caps and allocations must satisfy
+
+∣C
+i
+	​
+
+∣≤A
+i
+	​
+
+,2
+128
+∣F∣≤R
+F
+	​
+
+,2
+128
+A
+i
+	​
+
+≤R
+i
+	​
+
+,
+R
+F
+	​
+
++
+i
+∑
+	​
+
+R
+i
+	​
+
+≤q
+line
+	​
+
+.
+
+Therefore
+
+2
+128
+∣Z
+ret
+	​
+
+∣≤q
+line
+	​
+
+.
+
+Overlapping charge labels cannot evade this: disjointification only decreases owned class sizes.
+
+Exact P190 replay obtainable without the missing official clauses
+
+Let T=2
+128
+ and
+
+p=130T+1=44236707699722000250238698966129867489281.
+
+The packet’s arithmetic certificate gives p prime. Set
+
+K
+gen
+	​
+
+=K
+code
+	​
+
+=K
+line
+	​
+
+=F
+p
+	​
+
+,k=1,σ=2,β=0,E=X,B=1,
+m=190,S
+i
+	​
+
+={i,m+i,−(m+2i)}.
+
+The S
+i
+	​
+
+ are pairwise-disjoint three-point supports. With M=X
+3
+ and
+w=M∣
+D
+	​
+
+, define
+
+Q
+i
+	​
+
+(X)=M(X)−
+x∈S
+i
+	​
+
+∏
+	​
+
+(X−x)=A
+i
+	​
+
+X−g
+i
+	​
+
+,
+
+where
+
+g
+i
+	​
+
+=i(m+i)(m+2i).
+
+Then
+
+degQ
+i
+	​
+
+≤1,agr
+D
+	​
+
+(Q
+i
+	​
+
+,w)=3=k+σ,
+
+and
+
+Q
+i
+	​
+
+(0)=−g
+i
+	​
+
+.
+
+The integers g
+i
+	​
+
+ are strictly increasing and g
+190
+	​
+
+=41,154,000<p, so the 190 raw K
+line
+	​
+
+-colors are pairwise distinct.
+
+After granting one endpoint deletion,
+
+N
+model
+	​
+
+=189.
+
+Meanwhile,
+
+⌊
+2
+128
+q
+line
+	​
+
+	​
+
+⌋=⌊
+T
+130T+1
+	​
+
+⌋=130,
+
+and
+
+189T−p=59T−1>0.
+
+Thus avoiding a counterpacket requires at least
+
+189−130=59
+
+additional official deletions or identifications. Equivalently, retaining at least 131 colors already gives
+
+131T−p=T−1>0.
+
+The disjoint-support matching theorem does not pay this packet. Its packet-specific cap after the endpoint is at least 189, requiring allocation
+
+R
+match
+	​
+
+≥189T>130T+1=q
+line
+	​
+
+.
+
+Using the universal cap ⌊571/3⌋=190 is still worse. Splitting 189 colors between “free” and multiple charged classes also fails by the no-double-spend theorem.
+
+The stronger corrected reserve checked in the packet,
+
+p
+2
+>2
+236
+⋅571(
+3
+571
+	​
+
+),
+
+does not alter this conclusion: it is a q
+gen
+	​
+
+-side premise, while the sole final denominator is q
+line
+	​
+
+=p.
+
+Exact logical obstruction
+
+Two source-contract completions are compatible with every supplied file:
+
+AP
+corr
+weak
+	​
+
+:=SC
+A
+	​
+
+,
+
+with the identity final color map and no additional exclusion. This completion accepts the packet and leaves 189 colors, producing a counterpacket.
+
+Alternatively,
+
+AP
+corr
+flat
+	​
+
+:=SC
+A
+	​
+
+∧AP
+corr
+spec
+	​
+
+(A
+0
+	​
+
+),
+
+or an official block/prefix/restricted-sum exclusion, rejects the same packet.
+
+The packet contains no axiom, theorem, or evaluator choosing between these completions. Hence neither
+
+AP
+corr
+off
+	​
+
+(P190)
+
+nor its negation is derivable. This is genuine formal underdetermination, not merely a missing calculation.
+
+Minimum receipt and fail-closed replay checker
+
+The first required object is a hash-pinned total source-adapter receipt:
+
+Adapt
+off
+	​
+
+(P190)=REJECT(j,ω)ord
+off
+	​
+
+,
+
+where d
+off
+	​
+
+ includes the exact fields, D,w,β,k,σ,E,B, source decorations, witness identifiers, endpoint class, and normalization tags.
+
+A branch-complete manifest must additionally contain total definitions of AP
+corr
+off
+	​
+
+, the endpoint map, final color map, tag rule, exhaustive charge registry, field transfers, and integer allocations.
+
+The checker’s exact outputs are:
+
+SOURCE_REJECTED only when the adapter or AP
+corr
+	​
+
+ evaluator returns the first failed official clause with a verified witness.
+
+COLOR_COMPRESSED_OR_CHARGED only when the recomputed final image has at most 130 colors, or an exact charge ownership/cap/allocation closes the integer ledger. For P190, it must exhibit at least 59 additional merges/deletions.
+
+SOURCE_VALID_LOW_T1_COUNTERPACKET only when the source adapter and AP
+corr
+	​
+
+ accept, every official charge is absent or exactly paid, and the recomputed final free image has at least 131 colors.
+
+T1_APCORR_LOCAL_LIMIT only when a pinned universal theorem proves official AP
+corr
+	​
+
+ implies the stated defect-spectrum/local-limit bound and the resulting integer ledger closes.
+
+SOURCE_RECEIPT_MISSING_NO_CLAIM for any missing, unpinned, ambiguous, inconsistent, or merely asserted receipt.
+
+No false positives: every positive terminal requires a checked official evaluator/theorem plus exact finite-field and integer arithmetic; unsupported assertions fail closed.
+
+No false negatives relative to a frozen complete contract: if the manifest is total and exhaustive, the adapter either rejects or accepts; an accepted datum has a unique final normalized color set and exhaustive charge ownership; its final integer numerator is either at most 130 or at least 131. Those cases are covered by the listed terminals. This completeness claim is relative to the frozen contract, not to the presently unspecified official source.
+
+Route to a full solution
+
+There is a precise route, but it cannot begin from the current packet alone.
+
+The first converter is
+
+V-CYCLE113-FROZEN-SOURCE-CONTRACT-REPLAY
+	​
+
+.
+
+For a COUNTERPACKET, it must certify official acceptance and at least 131 final free colors.
+
+For a PROOF, the first missing theorem is
+
+AP
+corr
+off
+	​
+
+(d)∧NoFrozenCharge(d)⟹Δ(Ω,Φ
+w
+	​
+
+)≤A
+∗
+	​
+
+∣Ω∣
+
+with explicit A
+∗
+	​
+
+, field receipts, final-color coverage, and integer q
+line
+	​
+
+ allocation—or an exact official source-rejection/color-compression alternative.
+
+Self-audit
+
+Proved: the attached packet lacks a replayable official contract; P190 has 189 endpoint-paid model colors versus capacity 130; no non-double-spent additive q
+line
+	​
+
+ charge can pay them.
+Not proved: official source acceptance, official AP
+corr
+	​
+
+, or the official final retained numerator.
+
+The result is official-route-relevant but is an audit/route theorem, not an official prize proof or source-valid counterpacket.
+
+The first failure line is
+
+P190⟶Adapt
+off
+	​
+
+(P190),
+
+followed immediately by evaluation of AP
+corr
+off
+	​
+
+.
+
+q
+gen
+	​
+
+ is used only for the reserve; q
+line
+	​
+
+=p is the sole final denominator; q
+code
+	​
+
+ is not a denominator; q
+chal
+	​
+
+ is unused; the exact target is 2
+128
+N
+free
+	​
+
+≤q
+line
+	​
+
+.
+
+Residue quotient/action rank and contained incidences do not reduce this model numerator; same-slope collisions are absent; one endpoint is already paid; fixed or properly tagged affine normalization is injective. Support periodicity, broader affine-color treatment, and final retained normalization remain undecidable because their official predicates are absent.
+
+The exact next receipt is the hash-pinned official source-adapter/AP
+corr
+	​
+
+ root and complete final-color/charge manifest required by the replay checker.
