@@ -1,4 +1,4 @@
-# Cycle110 LOW Calibrated Occupancy Returns Audit
+# Cycle110 LOW Calibrated Occupancy Fable 4.8 Returns Audit
 
 Status: BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
 
@@ -10,6 +10,10 @@ Raw returns:
 Prompt packet:
 
 - `experimental/notes/m1/cycle110_low_calibrated_occupancy_no_internet_9pro/`
+
+Provenance note: the packet and raw-return directory names retain the earlier
+`9pro` naming convention, but the nine pasted outputs audited here were Fable
+4.8 theorem-worker returns.
 
 ## Verdict
 
@@ -232,4 +236,3 @@ shasum -a 256 -c SHA256SUMS.txt
 
 No generated executable checker files were supplied in this pasted round, so no
 code compilation or finite replay was run.
-

@@ -1,9 +1,11 @@
-# Cycle110 LOW Calibrated Occupancy No-Internet 9-Pro Returns Manifest
+# Cycle110 LOW Calibrated Occupancy No-Internet 9-Lane Fable 4.8 Returns Manifest
 
 Status: RAW_RETURNS / AUDIT_INPUT.
 
-These files preserve the nine pasted ChatGPT Pro returns supplied to Codex on
-2026-06-22 for the Cycle110 no-internet LOW calibrated occupancy round.
+These files preserve the nine pasted Fable 4.8 returns supplied to Codex on
+2026-06-22 for the Cycle110 no-internet LOW calibrated occupancy round. The
+directory path retains the earlier `9pro` packet naming convention, but the
+model provenance for this round is Fable 4.8.
 
 Prompt packet:
 
@@ -31,4 +33,3 @@ Checksum verification:
 cd experimental/notes/m1/cycle110_low_calibrated_occupancy_no_internet_9pro_returns_raw
 shasum -a 256 -c SHA256SUMS.txt
 ```
-
