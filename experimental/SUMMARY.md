@@ -35,7 +35,7 @@ main MCA/list questions into explicit ledgers:
 - extension-line and residue-line ledgers for F1;
 - line-decoding conversion and separation ledgers for M2;
 - full-agreement support intersection ledgers for L2;
-- audit/citation/certificate ledgers for Paper D and Paper C style protocol
+- audit/citation/proof-record ledgers for Paper D and Paper C style protocol
   accounting.
 
 The direction is constructive: after Paper A rules out no-slack MCA, the recent
@@ -51,7 +51,7 @@ script-checkable walls.
 The 2026-06-22 PR round adds three useful but deliberately scoped items:
 
 - `notes/m1/m1_cycle84_public_replay_audit.md` records the public Cycle84
-  replay receipt. The banked finite-model certificate is
+  replay result. The finite-model computation is
   `m_max(beta)=2`, `Occ(beta)=52,747,567,092`, `D=24`, twelve double fibers, and
   no fibers of size at least three. This is important evidence for the finite
   M1 wall, but it is not a prize-level theorem and was integrated without the
@@ -69,6 +69,32 @@ No PR code was run locally during this triage pass. The new scripts were
 inspected as text for dangerous side effects and kept as experimental
 reproducibility tools pending explicit reviewer execution.
 
+### Latest 2026-06-23 review
+
+The only changed open PR was Danny's #96 branch, now extended through Cycle120.
+It remains non-mergeable as a branch: the new delta adds 678 files and about
+201k lines of raw/generated material, including zips, prompt packets, generated
+checkers, copied PDF extracts, and new generated proof-record directories.
+
+The useful part is summarized in
+`notes/m1/m1_cycle119_strict263_admissibility_review.md`. Cycle119 claims a
+two-ended locator transfer
+
+```text
+LD_sw(RS[F_17^32,H,256],263) >= 52,747,567,092,
+|H|=512.
+```
+
+If the proof and the Cycle84 finite computation it depends on are correct, the
+row appears admissible under the ABF grand MCA formulation: smooth
+power-of-two multiplicative subgroup, rate `1/2`, same-support MCA predicate,
+and uniform `gamma` from the code field. The exact ABF PDF should still be
+independently checked before any public claim. The right external framing is:
+under the printed ABF formulation, this is a prize-facing negative
+counterexample candidate for that row, not an accepted prize solution. The
+project should ask for a standalone human-readable proof, not
+another generated archive.
+
 ### Latest 2026-06-19 integration
 
 The 2026-06-19 PR round adds five durable experimental bundles:
@@ -81,7 +107,7 @@ The 2026-06-19 PR round adds five durable experimental bundles:
   `notes/l1/l1_syndrome_catalecticant_shells.md`,
   `notes/l1/l1_periodic_support_multisequence_reduction.md`, and
   `notes/l1/l1_quotient_defect_closure.md` turn raw locator fibers into a repaired,
-  quotient-defect-aware certificate program.
+  quotient-defect-aware proof program.
 - `notes/m1/m1_residue_line_roadmap.md`,
   `notes/m1/m1_depth_two_lift_window_theorem.md`, and the new depth-two Kummer notes
   update the M1 low-slack ledger. They narrow the remaining wall to explicit
@@ -91,8 +117,8 @@ The 2026-06-19 PR round adds five durable experimental bundles:
   aligned quotient-core counts `Quot_mu`, extension-coordinate checks, and
   small arity scans. This is the current best orientation for avoiding the
   trivial Cartesian interleaved-list exponent.
-- `data/certificates/nfb-frontier-20260619/` adds a compact
-  extension-valued deep-hole `F\B` certificate packet related to Paper D's
+- The NFB frontier JSON data folder adds a compact
+  extension-valued deep-hole `F\B` proof-record packet related to Paper D's
   `cor:Fvalued`, while `notes/f1/fable-loop/PRZ_REVIEW_INDEX.md` records the
   selected Cycle 49--57 upper-side MCA route map from PR #95.
 
@@ -117,7 +143,7 @@ The locator-fiber work now has three layers:
 
 This helps the MCA program because the corrected conjecture needs polynomial
 control of generated-field locator fibers after quotient obstructions are
-removed. The new material gives exact toy certificates, catches overstrong
+removed. The new material gives exact toy computations, catches overstrong
 proof routes, and provides a path for separating quotient-periodic fibers from
 aperiodic collisions.
 
@@ -202,7 +228,7 @@ an intersection-profile problem:
   full-agreement support formula.
 - `l2_exact_support_diagonalization.md` handles the exact-support case.
 - `interleaved_list_enum.py`, `interleaved_budget.py`, and
-  `quotient_core_interleaving.py` provide small enumerators and certificates.
+  `quotient_core_interleaving.py` provide small enumerators and proof records.
 
 This is directly useful for protocol parameters. It says that interleaving does
 not automatically multiply the list exponent by the row arity if the rows share
@@ -211,7 +237,7 @@ the same agreement columns and the full-support intersection profile is small.
 What is still missing: sharp constants near capacity for the concrete arities
 and radii used in protocols.
 
-### A0/A1 audits, certificate tooling, and formalization
+### A0/A1 audits, proof-record tooling, and formalization
 
 The support material is also important:
 
@@ -219,9 +245,9 @@ The support material is also important:
   `cs25_import_audit.md` track the imported Crites-Stewart/ABF dependency for
   Paper D.
 - `a1_paperA_finite_verification_crosswalk.md` maps Paper A finite claims to
-  scripts and certificates.
-- `certificate_emit.py`, `reserve_certificate_schema.json`, and
-  `protocol_ledger_template.md` move toward Paper C style reserve certificates.
+  scripts and proof records.
+- The reserve-emitter script, reserve JSON schema, and
+  `protocol_ledger_template.md` move toward Paper C style reserve records.
 - `theorem_label_map.md` and the TeX audit/inventory scripts support citation
   hygiene before promotion.
 - `lean_formalization/` is an initial Lean scaffold, not a completed
@@ -295,7 +321,7 @@ as settled.
    conversion being checked against primary sources and exact constants.
 
 7. Promotion discipline.
-   Several files contain local `PROVED` or `BANKABLE_LEMMA` claims, but the
+   Several files contain local `PROVED` or old proof-sketch claims, but the
    project should not promote them into the papers until a human review checks
    hypotheses, constants, notation compatibility, and field-ledger separation.
 
@@ -318,7 +344,7 @@ Recommended next work:
    point and expand it from tiny examples toward the `q=17`, `q=257`, and
    dyadic toy cases in `agents.md`.
 
-5. Convert the L2 full-support intersection formula into concrete certificates
+5. Convert the L2 full-support intersection formula into concrete proof records
    for `mu=2` and then for protocol-relevant arities.
 
 6. Finish the A0 Crites-Stewart/ABF import audit before relying on Paper D's
@@ -329,7 +355,8 @@ Recommended next work:
    lemma, and quotient-periodic overlap profile.
 
 8. Keep all new material in `experimental/` first, with an `agents-log.md`
-   entry and a reproducible command or certificate whenever possible.
+   entry and a reproducible command, proof record, or computation whenever
+   possible.
 
 ## Reading Order
 

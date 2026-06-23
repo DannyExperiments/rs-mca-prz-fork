@@ -19,7 +19,8 @@ Keep entries concise and link to the relevant files.
   or `scripts/`.
 - **Status:** PROVED / CONDITIONAL / CONJECTURAL / EXPERIMENTAL / AUDIT /
   COUNTEREXAMPLE.
-- **What is being added:** State the claim, note, scan, script, or certificate
+- **What is being added:** State the claim, note, scan, script, proof,
+  heuristic, or computation
   in one or two sentences.
 - **How it is useful:** Say which paper, theorem, problem, ledger, or toy case
   the material supports.
@@ -28,6 +29,29 @@ Keep entries concise and link to the relevant files.
 ```
 
 ## Entries
+
+### 2026-06-23 - Cycle119 admissibility review
+
+- **Agent/model:** DannyExperiments PR #96, reviewed by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/m1_cycle119_strict263_admissibility_review.md`,
+  `experimental/notes/triage/pr-triage-2026-06-23.md`,
+  `experimental/SUMMARY.md`, `experimental/agents-log.md`, plus wording cleanup
+  in the prior Cycle84 public replay audit.
+- **Status:** AUDIT / PROOF-CHECK-NEEDED / COMPUTATION-DEPENDENT.
+- **What is being added:** A compact review of the Cycle119 strict-263 claim:
+  `LD_sw(RS[F_17^32,H,256],263) >= 52,747,567,092`, with `|H|=512`, and an
+  admissibility check against the local ABF-aligned definitions and public
+  Proximity Prize page.
+- **How it is useful:** Separates the potentially important theorem claim from
+  Danny's raw/generated PR branch. The branch is not integrable as-is, but the
+  two-ended locator transfer is now the right object to demand as a clean proof.
+  If the proof and finite computation check out, the right public framing is a
+  prize-facing negative counterexample candidate under the printed ABF
+  formulation, not an accepted prize solution.
+- **What to do next:** Independently fetch and check the ABF PDF, then ask Danny
+  for a standalone human-readable proof of the two-ended locator transfer and a
+  separate minimal record of the Cycle84 finite computation it consumes.
 
 ### 2026-06-22 - PR #96-#98 experimental triage
 
@@ -45,12 +69,12 @@ Keep entries concise and link to the relevant files.
 - **Status:** AUDIT / FINITE_MODEL_PROOF / PROVED / CONDITIONAL /
   EXPERIMENTAL.
 - **What is being added:** A conservative triage of PRs #96--#98. PR #96's
-  useful Cycle84 public replay receipt is banked as an inert audit note:
+  useful Cycle84 public replay record is kept as an inert audit note:
   `m_max(beta)=2`, `Occ(beta)=52,747,567,092`, `D=24`, twelve double fibers,
   and no fibers of size at least three. PR #97 adds the F1 simple-pole
   deep-point list-to-CA/MCA conversion note and sanity script. PR #98 adds the
   L1 dual-dilation Fourier orbit-kernel reduction note and verifier.
-- **How it is useful:** Cycle84 now has a public replay receipt for the finite
+- **How it is useful:** Cycle84 now has a public replay record for the finite
   M1 wall without importing the live workflow or raw archive. The F1 note gives
   a direct special list-to-CA/MCA mechanism to audit against Paper D. The L1
   note moves prefix-local work from individual Fourier frequencies to orbit
@@ -72,13 +96,13 @@ Keep entries concise and link to the relevant files.
 - **Status:** AUDIT.
 - **What is being added:** Reorganized the experimental workspace into four
   durable buckets: notes, scripts, compact data, and Lean. Removed generated
-  Python caches and raw/prompt transcript dumps from dated AI-loop artifacts.
+  Python caches and raw/prompt transcript dumps from dated AI-loop outputs.
 - **How it is useful:** Future agents now have a small root surface and a clear
   placement policy. Audited summaries and reproducible scripts remain, while
   bulky model-run provenance that was not needed for review is gone.
 - **What to do next:** Keep new work inside the existing buckets, update
   `README.md` if a genuinely new bucket is needed, and avoid adding raw
-  transcript archives unless they are the only reproducibility artifact.
+  transcript archives unless they are the only reproducibility record.
 
 ### 2026-06-19 - PR #82/#84-#95 experimental integration
 
@@ -90,8 +114,7 @@ Keep entries concise and link to the relevant files.
   `experimental/notes/l1/l1_quotient_defect_closure.md`,
   `experimental/notes/l1/l1_repaired_locator_theorem_package.md`,
   `experimental/notes/l2/l2_interleaved_dilation_constants.md`,
-  `experimental/data/certificates/nfb-frontier-20260619/README.md`,
-  `experimental/data/certificates/nfb-frontier-20260619/nfb_deployed_certificate.json`,
+  the NFB frontier JSON data folder,
   `experimental/notes/m1/m1_residue_line_roadmap.md`, M1 depth-two Kummer notes and
   verifiers, L1/L2 verifier scripts, and the selected
   `experimental/notes/f1/fable-loop/PRZ_REVIEW_INDEX.md` Cycle 49--57 audit
@@ -101,16 +124,16 @@ Keep entries concise and link to the relevant files.
 - **What is being added:** Manual integration of the useful recent PRs:
   PR #93 supersedes #85--#91 as the Scott L1 consolidation; PR #84 adds the
   L1 prefix/divisor/Fourier split; PR #92 adds L2 interleaved dilation and
-  quotient-core constants; PR #94 adds a compact `F\B` deep-hole certificate
-  packet; PR #82 adds the M1 low-slack Kummer/depth-two packet; PR #95 is
+  quotient-core constants; PR #94 adds a compact `F\B` deep-hole proof
+  record; PR #82 adds the M1 low-slack Kummer/depth-two packet; PR #95 is
   integrated only as review index plus cycle audits, not as a raw 225k-line
   archive.
 - **How it is useful:** Gives future work clear entry points: L1 quotient
   floors versus aperiodic Fourier cancellation, M1 two-coordinate/conductor
   targets, L2 aligned interleaved constants, an F1/Paper D explicit-line
-  certificate target, and a compact Fable-loop upper-side route map.
+  proof target, and a compact Fable-loop upper-side route map.
 - **What to do next:** Run and review the integrated verifiers, add a
-  standalone verifier for the NFB JSON certificate, audit the M1 Kummer imports
+  standalone verifier for the NFB JSON record, audit the M1 Kummer imports
   before consuming constants, and continue the Fable-loop program from the
   high-`j` constant-rate prompt rather than the cut `t=2,j=2` toy regime.
 
@@ -252,7 +275,7 @@ Keep entries concise and link to the relevant files.
   `experimental/scripts/fable_loop/local_checks/20260618_cycle18_resonance_slope_symbolic.py`,
   `experimental/notes/f1/fable-loop/README.md`,
   `experimental/agents-log.md`.
-- **Status:** BANKABLE_LEMMA / EXACT_NEW_WALL / AUDIT.
+- **Status:** PROOF-SKETCH / EXACT_NEW_WALL / AUDIT.
 - **What is being added:** A local reconstruction of Danny's Cycle 18
   `t=2,j=3` resonance reduction: `Delta` becomes a monic quadratic in
   `tau3`, the alpha component is at most linear, and the non-coprime branch
@@ -322,7 +345,7 @@ Keep entries concise and link to the relevant files.
   `experimental/quotient_profile_dither.py` with matching `.md` note.
 - **Status:** AUDIT / EXPERIMENTAL.
 - **What is being added:** One-by-one triage of the open PR queue and local
-  integration of accepted experimental notes, scanners, certificates, and
+  integration of accepted experimental notes, scanners, proof records, and
   audit bundles.
 - **How it is useful:** Preserves useful agent contributions while enforcing
   the repository rule that new material starts in `experimental/` and Papers

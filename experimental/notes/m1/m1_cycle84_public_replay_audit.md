@@ -10,7 +10,7 @@ Public replay:
 
 ```text
 repository: DannyExperiments/rs-mca-prz-fork
-workflow: Cycle84 certificate replay
+workflow: Cycle84 replay
 run id: 27889140962
 run URL: https://github.com/DannyExperiments/rs-mca-prz-fork/actions/runs/27889140962
 head commit: 3914f4d08b6ca5b919c84fe2598e4e74685caec4
@@ -24,15 +24,15 @@ completed: 2026-06-21T01:09:37Z
 ## Verdict
 
 Cycle84 is interesting and worth banking, but only as a finite-model
-certificate. It does not prove the Proximity Prize statement, does not promote
+computation. It does not prove the Proximity Prize statement, does not promote
 Paper B's corrected MCA conjecture to a theorem, and does not justify edits to
 the main papers without a separate transfer theorem.
 
 The public GitHub Actions replay materially improves the provenance of the
-finite result: both the lightweight certificate chain and the full projected
+finite result: both the lightweight verification chain and the full projected
 census plus kernel-lift replay completed successfully on a public runner.
 
-The banked finite-model certificate is:
+The finite-model computation is:
 
 ```text
 compatible pairs        = 52,747,567,104
@@ -58,13 +58,13 @@ L-CYCLE84-EXACT-COLOR-FILTERED-MMAX: m_max(beta)=2.
 ## What Was Checked Here
 
 This repository-side audit used git/GitHub metadata and PR blobs as text only.
-No PR script was run locally, no artifact zip was unpacked locally, and the PR
+No PR script was run locally, no archive zip was unpacked locally, and the PR
 branch was not checked out as a worktree.
 
 The public run metadata reported two successful jobs:
 
 ```text
-Light certificate chain
+Light verification chain
 conclusion: success
 job id: 82529457638
 
@@ -73,10 +73,9 @@ conclusion: success
 job id: 82529457653
 ```
 
-The workflow file in PR #96 asserts, in the light job, the markers:
+The workflow file in PR #96 asserts, in the light job, the expected markers:
 
 ```text
-CYCLE84_EXACT_MMAX2_CERTIFICATE_VERIFIED
 "exact_true_m_max": 2
 "exact_true_occupancy": 52747567092
 ```
@@ -112,10 +111,10 @@ Reasons:
 Integration policy for this repository:
 
 ```text
-Bank the compact finite replay receipt and mathematical status.
-Do not bank the live workflow, raw zip bundles, generated transcript archive,
+Keep the compact finite replay result and mathematical status.
+Do not keep the live workflow, raw zip bundles, generated transcript archive,
 or executable replay machinery unless a human explicitly requests a full
-artifact-preservation branch.
+raw-archive preservation branch.
 ```
 
 ## Why It Matters
@@ -129,7 +128,7 @@ finite model is much cleaner than required:
 m_max(beta)=2 << 12.
 ```
 
-That is useful evidence and a reusable finite certificate for later transfer
+That is useful evidence and a reusable finite computation for later transfer
 work. It is not yet a theorem about all smooth Reed--Solomon MCA instances.
 
 ## Remaining Wall
