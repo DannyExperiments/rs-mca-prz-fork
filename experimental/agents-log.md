@@ -2721,3 +2721,23 @@ Keep entries concise and link to the relevant files.
   safer `V-CYCLE119-AUTHORITY-PINNED-STRICT264-2187-ROW-EVENT-QCHAL-CONTRACT`.
   If extension fields are rejected, pivot to
   `V-CYCLE119-AUTHORITY-PINNED-GOLDILOCKS-EXPLICIT64-ROW-EVENT-QCHAL-CONTRACT`.
+
+### 2026-06-23 - Cycle119 cold strict-263 packet prepared
+
+- **Agent/model:** Codex cold-packet synthesis after user asked whether this may
+  be prize-level.
+- **Files added:**
+  `experimental/notes/m1/cycle119_cold_strict263_prize_candidate_packet.md`,
+  `experimental/notes/m1/cycle119_cold_packet/`, and
+  `experimental/notes/m1/cycle119_cold_strict263_prize_candidate_packet.zip`.
+- **Zip SHA-256:**
+  `579eb73f6a76021e53e76ffedda2860f218b6e3f545628f7ef8020fc899d2efa`.
+- **Purpose:** Strip the Cycle119 result down to a theorem-facing packet:
+  executive theorem, two-ended locator theorem, proof, Cycle84 instantiation,
+  strict radius arithmetic, local checker receipt, exact non-claims, and the
+  admissibility question for PRZ/ABF.
+- **Claim discipline:** This packet states that the finite/source theorem is
+  proved and that the result becomes a prize-level counterexample candidate
+  only if the official grand MCA challenge admits the row
+  `RS[F_17^32,H,256]`, the support-wise predicate, and uniform line sampling
+  from `F_17^32` without an additional endpoint/quotient/charge/event filter.
