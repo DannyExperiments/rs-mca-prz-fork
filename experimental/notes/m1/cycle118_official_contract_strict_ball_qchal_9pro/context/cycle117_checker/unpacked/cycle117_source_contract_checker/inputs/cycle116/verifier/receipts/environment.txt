@@ -1,0 +1,3 @@
+Python 3.13.5
+command: ./run_verifier.sh
+network: not used

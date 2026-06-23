@@ -2592,3 +2592,28 @@ Keep entries concise and link to the relevant files.
   the official bad-event predicate to the manuscript `def:mca` or name the first
   difference, and exhaustively classify endpoint, periodic, quotient, tangent,
   contained-line, affine-color, retained-event, `AP_corr`, and charge rules.
+
+### 2026-06-23 - Cycle118 proof-first packet staged
+
+- **Agent/model:** Codex local packet builder.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle118_official_contract_strict_ball_qchal_9pro/`,
+  `experimental/agents-log.md`, and
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`.
+- **Status:** PLAN / EXACT_NEW_WALL.
+- **What is being staged:** A nine-role no-internet Pro packet that pushes past
+  Cycle117 rather than re-asking it. The three fronts are: official row/event
+  contract closure, strict-ball/agreement-263 and external line-decoding
+  robustness, and `q_chal` / field-thickening / accepted-field fallback.
+- **Primary target:**
+  `V-CYCLE118-AUTHORITY-PINNED-OFFICIAL-ROW-EVENT-CONTRACT`.
+- **Secondary targets:** `L-CYCLE118-STRICT-BALL-AGREEMENT-263-UPGRADE-OR-CUT`,
+  `L-CYCLE118-QCHAL-FIELD-THICKENING-OR-DENSITY-LOSS`,
+  `L-CYCLE117-ACCEPTED-FIELD-FIXED-JET-OCCUPANCY-COMPILER`, and
+  `V-CYCLE118-CLOSE-POINT-LD-ADAPTER-OR-SPIKE-CUT`.
+- **Context zip:**
+  `/Users/danielcabezas/cycle118_official_contract_strict_ball_qchal_9pro_packet.zip`.
+- **Claim discipline:** No PRZ-facing note is produced at staging time. Future
+  PRZ notes should be reserved for genuine prize-shaping movement such as
+  official-admissibility closure, strict-ball upgrade, no-loss `q_chal`
+  theorem, accepted-field compiler, or a source-valid counterpacket.

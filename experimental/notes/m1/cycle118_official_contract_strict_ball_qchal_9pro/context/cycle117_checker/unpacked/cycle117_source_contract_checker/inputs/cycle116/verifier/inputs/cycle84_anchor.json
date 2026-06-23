@@ -1,0 +1,30 @@
+{
+  "schema": "cycle116.cycle84_anchor.v1",
+  "imported_files": {
+    "master": {
+      "path": "../imports/cycle84_master_proof_certificate.json",
+      "sha256": "4abc98c8521856428c7c21b31ebfdb3380e32a9c1703202a50b3fcab85488088"
+    },
+    "slot_logs": {
+      "path": "../imports/slot_logs.json",
+      "sha256": "d4379b3ed97c4ae2a43511796e3bcb15514d3f5f989f15b6fb1bc9fc85c779d8"
+    },
+    "light_receipt": {
+      "path": "../imports/light_verification.out",
+      "sha256": "93177a6892e3aaf362d2414010f173eaa0dbc7e78c1f1f680bfbb5290dd2cb8a"
+    },
+    "standalone_note": {
+      "path": "../imports/STANDALONE_FINITE_CERTIFICATE.md",
+      "sha256": "14b3e668347e42af97440c5cf160c873cdb2f97d3b65e20f69b9ca3b6997e4cb"
+    }
+  },
+  "accepted_finite_values": {
+    "packet_supports": 52747567104,
+    "distinct_products": 52747567092,
+    "ordered_offdiagonal_energy": 24,
+    "m_max": 2,
+    "singleton_fibers": 52747567080,
+    "double_fibers": 12,
+    "fibers_ge_3": 0
+  }
+}

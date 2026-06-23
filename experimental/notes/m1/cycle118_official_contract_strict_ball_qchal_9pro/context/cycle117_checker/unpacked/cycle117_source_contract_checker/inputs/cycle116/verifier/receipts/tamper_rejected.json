@@ -1,0 +1,5 @@
+{
+  "decision": "CERTIFICATE_REJECTED",
+  "detail": "floor(q/2^128)=6",
+  "failure_clause": "INTEGER_THRESHOLD"
+}

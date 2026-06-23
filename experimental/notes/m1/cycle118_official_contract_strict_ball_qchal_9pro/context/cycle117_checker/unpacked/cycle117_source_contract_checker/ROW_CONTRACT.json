@@ -1,0 +1,55 @@
+{
+  "schema": "cycle117.cycle116_row_contract.v1",
+  "claim_scope": "FINITE_RAW_SUPPORTWISE_MCA_AND_LD_SW_ONLY",
+  "row": {
+    "field": "F_17^32",
+    "characteristic": 17,
+    "extension_degree": 32,
+    "domain": "H=<theta>",
+    "domain_order": 512,
+    "domain_generates_code_field": true,
+    "dimension": 256,
+    "rate": "1/2",
+    "agreement": 262,
+    "delta": "125/256"
+  },
+  "field_ledger": {
+    "q_gen": 2367911594760467245844106297320951247361,
+    "q_code": 2367911594760467245844106297320951247361,
+    "q_line": 2367911594760467245844106297320951247361,
+    "q_chal": null,
+    "mca_denominator": "q_line"
+  },
+  "numerator": {
+    "distinct_bad_slopes": 52747567092,
+    "packet_supports_before_same_slope_deduplication": 52747567104,
+    "double_fibers": 12,
+    "maximum_packet_fiber_size": 2
+  },
+  "canonical_odd_coset_partition": {
+    "A_padding_support_zero": {
+      "exponent_start": 0,
+      "exponent_end": 118,
+      "size": 119
+    },
+    "R_unused_fixed_cosupport": {
+      "exponent_start": 119,
+      "exponent_end": 255,
+      "size": 137
+    }
+  },
+  "primitive_log_gauge": {
+    "canonical_generator": "beta=X+2",
+    "canonical_coefficients_low_to_high": [2, 1],
+    "legacy_display_generator": "X+1",
+    "legacy_status": "QUARANTINED_NOT_CONSUMED",
+    "numeric_logs_accepted_only_in_canonical_gauge": true
+  },
+  "scope_exclusions": {
+    "ordinary_list_decoding": true,
+    "protocol_soundness_failure": true,
+    "asymptotic_theorem": true,
+    "official_prize_counterpacket": true,
+    "accepted_deployed_prime_field_theorem": true
+  }
+}

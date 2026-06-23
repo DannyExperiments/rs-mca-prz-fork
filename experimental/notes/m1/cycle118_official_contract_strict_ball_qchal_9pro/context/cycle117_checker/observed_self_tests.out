@@ -1,0 +1,18 @@
+{
+  "decision": "NONMUTATING_SELF_TESTS_PASS",
+  "package_tree_sha256": "82110dd68230aa7da413a33c6a4ef39d4e8696536bbc43d1091a32b72d49474c",
+  "tests": [
+    "baseline_expected_receipt",
+    "source_hash_tamper_rejected",
+    "canonical_A_R_swap_rejected",
+    "invented_q_chal_rejected",
+    "X_plus_1_canonical_gauge_rejected",
+    "untrusted_official_contract_rejected",
+    "official_accept_terminal_verified",
+    "official_reject_terminal_verified",
+    "official_charged_or_excluded_terminal_verified",
+    "defined_qchal_recorded_without_invented_terminal",
+    "undefined_qchal_challenge_filter_contradiction_rejected",
+    "package_tree_unchanged"
+  ]
+}
