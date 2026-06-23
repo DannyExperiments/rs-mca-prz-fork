@@ -17,7 +17,7 @@ The main PDF must:
 For this packet, the main PDF should state:
 
 ```text
-Assuming the Cycle84/Cycle116 finite proof chain, the ABF grand MCA definition
+Assuming the Cycle84/Cycle116 proof chain, the ABF grand MCA definition
 admits a smooth RS row C=RS[F_17^32,H,256] with epsilon_mca(C,125/256)>2^-128.
 ```
 

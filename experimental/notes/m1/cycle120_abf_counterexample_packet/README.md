@@ -5,7 +5,7 @@ Date: 2026-06-24
 Purpose:
 
 ```text
-Package the Cycle116/Cycle119 finite RS-MCA certificates against the printed
+Package the Cycle116/Cycle119 explicit-code RS-MCA theorems and supporting deterministic computations against the printed
 ABF grand MCA challenge definition.
 ```
 
@@ -44,7 +44,7 @@ Cycle119 agreement 263 is a strict-ball strengthening:
 Claim discipline:
 
 ```text
-This packet claims an ABF-admissible negative certificate at delta = 125/256,
+This packet claims an ABF-admissible negative result at delta = 125/256,
 conditional on the finite Cycle84/Cycle116 proof chain.
 
 It does not claim the exact value of delta*_C, ordinary list decoding,

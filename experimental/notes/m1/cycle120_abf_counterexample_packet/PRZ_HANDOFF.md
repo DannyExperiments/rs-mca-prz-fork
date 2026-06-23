@@ -22,7 +22,7 @@ Cycle116 theorem already gives:
 Cycle119 agreement-263 is now a strict-ball strengthening, not the ABF-critical
 dependency.
 
-Can you audit the finite proof chain and tell me the first fatal line, if any?
+Can you audit the proof chain and tell me the first fatal line, if any?
 ```
 
 Do not send:
@@ -34,5 +34,4 @@ Can you decide the semantic gates?
 ```
 
 The semantic gates now appear answered by the printed ABF text. The high-value
-human task is finite-proof audit and notation cleanup.
-
+human task is proof-chain audit and notation cleanup.

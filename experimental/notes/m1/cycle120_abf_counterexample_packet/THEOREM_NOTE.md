@@ -14,7 +14,7 @@ C = RS[K,H,256].
 ```
 
 Assuming the imported Cycle84 finite census and the Cycle116 fixed-jet
-transfer certificate, the row satisfies
+transfer theorem, the row satisfies
 
 ```text
 LD_sw(C,262) >= 52,747,567,092.
@@ -35,10 +35,10 @@ epsilon_mca(C,125/256)
   > 2^-128.
 ```
 
-Thus the certificate is an ABF-admissible negative certificate at
+Thus the theorem gives an ABF-admissible negative result at
 `delta=125/256`: for this row, any largest value `delta*_C` satisfying
 `epsilon_mca(C,delta*_C) <= 2^-128` must be strictly below `125/256`, provided
-the finite proof chain is correct.
+the proof chain is correct.
 
 Cycle119 strengthens the same row to agreement `263`, hence distance at most
 `249 < 250 = (125/256)512`. This strict-ball strengthening is not needed for
@@ -112,7 +112,7 @@ but f1 and f2 are not simultaneously explained by codewords of C.
 ```
 
 This is exactly the support-wise same-support noncontainment predicate used in
-the Cycle116 and Cycle119 finite certificates.
+the Cycle116 and Cycle119 theorems.
 
 ## 3. Imported Finite Theorem
 
@@ -150,7 +150,7 @@ there is a support `S_gamma subset H` satisfying:
 (f1,f2)|_{S_gamma} is not simultaneously code-explained by C^{==2}.
 ```
 
-Thus the finite certificate gives at least `N` ABF-bad line parameters.
+Thus the proof gives at least `N` ABF-bad line parameters.
 
 ## 4. Threshold Arithmetic
 
@@ -216,7 +216,7 @@ Therefore, for this row,
 delta*_C(2^-128) < 125/256
 ```
 
-provided the finite proof chain is correct. This is prize-facing partial
+provided the proof chain is correct. This is prize-facing partial
 progress and a candidate counterexample to any expectation that this row remains
 MCA-secure through radius `125/256`.
 

@@ -9,7 +9,7 @@ Ask for the first fatal line.
 No internet. Use only the attached Cycle120 packet and its cited local
 receipts.
 
-Your job is to falsify the finite proof chain:
+Your job is to falsify the proof chain:
 
 Cycle84 occupancy
   -> fixed-jet/product-scalar bridge

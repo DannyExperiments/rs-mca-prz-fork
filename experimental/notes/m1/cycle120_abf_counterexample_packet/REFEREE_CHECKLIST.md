@@ -69,7 +69,7 @@ Check:
 ```
 
 Cycle119 is not required for ABF closed-threshold Definition 4.3, so a fatal
-Cycle119 flaw does not automatically kill the Cycle116 ABF negative certificate.
+Cycle119 flaw does not automatically kill the Cycle116 ABF negative result.
 
 ## E. Claim Discipline
 
