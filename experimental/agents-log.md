@@ -2741,3 +2741,21 @@ Keep entries concise and link to the relevant files.
   only if the official grand MCA challenge admits the row
   `RS[F_17^32,H,256]`, the support-wise predicate, and uniform line sampling
   from `F_17^32` without an additional endpoint/quotient/charge/event filter.
+
+### 2026-06-23 - Cycle119 submission-prep packet assembled
+
+- **Agent/model:** Codex submission-prep pass after the user sent the
+  admissibility question to PRZ.
+- **Files added:**
+  `experimental/notes/m1/cycle119_submission_packet/` and
+  `experimental/notes/m1/cycle119_submission_prep_packet.zip`.
+- **Zip SHA-256:**
+  `d4d7673615f4e9a088ad114c8b5200fcf3b700941ba0578580285eda28d48767`.
+- **Contents:** `THEOREM_NOTE.md`, `OFFICIAL_ADMISSIBILITY_GATES.md`,
+  `REFEREE_CHECKLIST.md`, `ADVERSARIAL_AUDIT_PROMPTS.md`, `PROVENANCE.md`,
+  and `README.md`.
+- **Purpose:** Move from discovery/audit output to a submission-process packet:
+  clean theorem statement, proof skeleton, official gates, hostile audit prompts,
+  and provenance. The packet keeps the current status as
+  finite/source `PROOF` plus official-admissibility `ROUTE_CUT`, not a public
+  prize-solve claim.

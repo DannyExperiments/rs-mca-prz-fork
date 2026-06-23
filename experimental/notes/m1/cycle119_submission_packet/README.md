@@ -1,0 +1,53 @@
+# Cycle119 Submission-Prep Packet
+
+Date: 2026-06-23
+
+Purpose:
+
+```text
+Prepare the Cycle119 strict-263 finite/source theorem for expert review and,
+conditional on official admissibility, Proximity Prize counterexample submission.
+```
+
+Open in this order:
+
+```text
+1. THEOREM_NOTE.md
+2. OFFICIAL_ADMISSIBILITY_GATES.md
+3. REFEREE_CHECKLIST.md
+4. ADVERSARIAL_AUDIT_PROMPTS.md
+5. PROVENANCE.md
+```
+
+Core theorem:
+
+```text
+K = F_17^32
+H = <theta>, |H| = 512
+C = RS[K,H,256]
+
+LD_sw(C,263) >= 52,747,567,092.
+```
+
+Strict radius:
+
+```text
+512 - 263 = 249 < 250 = (125/256)*512.
+```
+
+Source-density consequence:
+
+```text
+epsilon_mca(C,125/256)
+  >= 52,747,567,092 / 17^32
+  > 2^-128.
+```
+
+Claim discipline:
+
+```text
+This is proved as a finite/source support-wise MCA and LD_sw theorem.
+It is a Proximity Prize counterexample candidate only if the official
+row/predicate/sampler/event contract matches the theorem.
+```
+
