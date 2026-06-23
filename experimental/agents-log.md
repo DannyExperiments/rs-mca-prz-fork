@@ -2617,3 +2617,44 @@ Keep entries concise and link to the relevant files.
   PRZ notes should be reserved for genuine prize-shaping movement such as
   official-admissibility closure, strict-ball upgrade, no-loss `q_chal`
   theorem, accepted-field compiler, or a source-valid counterpacket.
+
+### 2026-06-23 - Cycle118 official contract / strict ball / qchal returns audited
+
+- **Agent/model:** Codex local audit of nine pasted Pro returns.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle118_official_contract_strict_ball_qchal_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle118_official_contract_strict_ball_qchal_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`, and
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being banked:** Cycle118 is significant but not an official solve.
+  Roles 01-03 cut the existing v1 official-contract checker as semantically
+  underbound: it can accept a synthetic source contract without binding exact
+  official predicate, strict/closed distance convention, challenge
+  distribution, qchal density, or final numerator. Roles 04 and 09 give
+  strict-inside same-row finite/source constructions above the integer
+  threshold, including a locally spot-checked `2187`-slope agreement-264 packet.
+  Role 05 proposes a stronger two-ended locator theorem preserving the full
+  Cycle84 numerator at agreement 263, but this is marked pending local
+  fail-closed replay. Role 08 gives a Goldilocks prime-field fixed-jet compiler
+  candidate as accepted-field fallback.
+- **Local validation:** Raw pasted returns are preserved with
+  `SHA256SUMS.txt`. Role 06 and Role 07 are byte-identical and count as
+  duplicate evidence. Local spot checks verified the Role 09 `G^7` selected
+  packet has `2187` distinct product logs using bundled `slot_logs.json`;
+  Role 04's finite counts `|B0|=102`, `|G|=7`, `|P|=613`; and Role 08's
+  Goldilocks arithmetic: `q=2^64-2^32+1`, `theta^256=-1`, `theta^512=1`, and
+  `L(q)=73,674,899,375,228,060`. Generated `sandbox:/mnt/data` files mentioned
+  in the Pro prose were not downloadable from the pasted transcript.
+- **What not to claim:** No official Proximity Prize solve, no ordinary
+  fixed-word list-decoding lower bound, no `q_chal=q_line`, no lossless scalar
+  field-thickening theorem, and no fully replayed full-`N` agreement-263 theorem
+  yet. The first official wall remains authority/admissibility/challenge/event
+  retention.
+- **What to do next:** Build
+  `V-CYCLE118-TWO-ENDED-263-TRANSFER-CHECKER` for Role 05. Then pursue
+  `V-CYCLE119-AUTHORITY-PINNED-STRICT264-ROW-EVENT-QCHAL-CONTRACT`, requiring
+  an authenticated authority, row decision, strict/closed radius, line/challenge
+  distribution, and final retained numerator `>=7`. In parallel, build
+  `V-CYCLE119-GOLDILOCKS-FIXED-JET-COMPILER-CHECKER` as the accepted-prime-field
+  fallback if the extension-field row is rejected.
