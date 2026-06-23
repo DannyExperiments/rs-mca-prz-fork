@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cycle117.official_source_contract.v1",
+  "title": "Cycle117 authority-pinned official source contract",
+  "description": "Documentation schema. The standard-library checker implements these constraints directly. The contract is a semantic attestation and must be authenticated by an independently supplied SHA-256 trust pin.",
+  "type": "object",
+  "required": [
+    "schema",
+    "authority",
+    "source_document",
+    "row",
+    "line_parameter",
+    "q_chal",
+    "event_rules",
+    "exhaustive_event_registry"
+  ],
+  "properties": {
+    "schema": {"const": "cycle117.official_source_contract.v1"},
+    "authority": {
+      "type": "object",
+      "required": ["name", "version", "effective_date"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "effective_date": {"type": "string", "format": "date"}
+      },
+      "additionalProperties": false
+    },
+    "source_document": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "row": {
+      "type": "object",
+      "required": ["decision", "clause", "field", "domain_order", "dimension"],
+      "properties": {
+        "decision": {"enum": ["ACCEPT", "REJECT"]},
+        "field": {"const": "F_17^32"},
+        "domain_order": {"const": 512},
+        "dimension": {"const": 256},
+        "clause": {"$ref": "#/$defs/clause"}
+      },
+      "additionalProperties": false
+    },
+    "line_parameter": {
+      "type": "object",
+      "required": ["field_size", "clause"],
+      "properties": {
+        "field_size": {"const": 2367911594760467245844106297320951247361},
+        "clause": {"$ref": "#/$defs/clause"}
+      },
+      "additionalProperties": false
+    },
+    "q_chal": {
+      "description": "No q_chal terminal is invented when status is DEFINED; the receipt records the definition as data. Any effect on line events must be classified by the challenge_filter event rule.",
+      "type": "object",
+      "required": ["status", "field_size", "clause"],
+      "properties": {
+        "status": {"enum": ["UNDEFINED", "DEFINED"]},
+        "field_size": {"type": ["integer", "null"], "minimum": 2},
+        "clause": {"oneOf": [{"$ref": "#/$defs/clause"}, {"type": "null"}]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "UNDEFINED"}}},
+          "then": {"properties": {"field_size": {"type": "null"}, "clause": {"type": "null"}}}
+        },
+        {
+          "if": {"properties": {"status": {"const": "DEFINED"}}},
+          "then": {"properties": {"field_size": {"type": "integer", "minimum": 2}, "clause": {"$ref": "#/$defs/clause"}}}
+        }
+      ],
+      "additionalProperties": false
+    },
+    "event_rules": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "required": ["name", "action", "clause"],
+        "properties": {
+          "name": {
+            "enum": [
+              "endpoint",
+              "periodic",
+              "quotient",
+              "tangent",
+              "contained_line",
+              "affine_color",
+              "retained_event",
+              "charge_registry",
+              "challenge_filter"
+            ]
+          },
+          "action": {"enum": ["RETAIN", "EXCLUDE", "IDENTIFY", "CHARGE"]},
+          "surviving_numerator": {"type": ["integer", "null"], "minimum": 0, "maximum": 52747567092},
+          "clause": {"$ref": "#/$defs/clause"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "exhaustive_event_registry": {"const": true}
+  },
+  "$defs": {
+    "clause": {
+      "type": "object",
+      "required": ["id", "line_start", "line_end", "text_sha256"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "line_start": {"type": "integer", "minimum": 1},
+        "line_end": {"type": "integer", "minimum": 1},
+        "text_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

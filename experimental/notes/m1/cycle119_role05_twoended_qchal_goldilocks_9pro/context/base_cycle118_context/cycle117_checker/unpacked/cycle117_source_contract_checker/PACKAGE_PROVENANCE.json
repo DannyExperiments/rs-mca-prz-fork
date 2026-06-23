@@ -1,0 +1,18 @@
+{
+  "schema": "cycle117.package_provenance.v1",
+  "input_packet": {
+    "filename": "cycle117_extension_field_qchal_source_contract_9pro_packet(1).zip",
+    "sha256": "943938c43f453cce08c922b65f37689b2c3b4d1cc4eaf5c7c1da9d9b3d71eb78",
+    "internal_root": "cycle117_extension_field_qchal_source_contract_9pro/",
+    "internal_sha256s_sha256": "b0791717c8450fd02eeec047e31f0d66f551d18c4d4d89b387e3a35aad22aba7",
+    "internal_sha256s_verified": true
+  },
+  "selected_inputs": {
+    "RS_disproof_v3.tex": "context/source/RS_disproof_v3.tex",
+    "slackMCA_v3.tex": "context/source/slackMCA_v3.tex",
+    "m2_line_decoding_mca_bridge.md": "context/source/m2_line_decoding_mca_bridge.md",
+    "CYCLE116_CERTIFICATE.md": "context/cycle116_verifier/14_V-CYCLE116-STANDALONE-C84-TO-RS-MCA-LD-TRANSFER-CERTIFICATE.md",
+    "cycle116_verifier": "context/cycle116_verifier/cycle116_role08_verifier/"
+  },
+  "network_sources_used": false
+}

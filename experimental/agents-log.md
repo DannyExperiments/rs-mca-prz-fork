@@ -2665,3 +2665,23 @@ Keep entries concise and link to the relevant files.
   distribution, and final retained numerator `>=7`. In parallel, build
   `V-CYCLE119-GOLDILOCKS-FIXED-JET-COMPILER-CHECKER` as the accepted-prime-field
   fallback if the extension-field row is rejected.
+
+### 2026-06-23 - Cycle119 Role05/qchal/Goldilocks 9-Pro packet staged
+
+- **Agent/model:** Codex packet builder for a fresh nine-instance Pro round.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle119_role05_twoended_qchal_goldilocks_9pro/`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`, and `experimental/agents-log.md`.
+- **Zip for upload:**
+  `/Users/danielcabezas/cycle119_role05_twoended_qchal_goldilocks_9pro_packet.zip`
+  with SHA-256
+  `bb233db11e11d25b04c6c7429ff4818358e099686d7140ca010f45dad9655647`.
+- **Role split:** Roles 01-04 attack/prove Role05's
+  `L-CYCLE118-STRICT-BALL-AGREEMENT-263-UPGRADE`; Roles 05-06 are adversarial
+  falsifiers; Role 07 pins the qchal sampler-map contract; Role 08 checks the
+  Goldilocks prime-field fallback; Role 09 synthesizes the next exact route.
+- **Prompt discipline:** No Internet, max reasoning, proof-first. Role05 is
+  included verbatim as a target theorem candidate, not an authority. Workers are
+  instructed to return either a replayable proof/checker or the exact fatal
+  line. Direct scalar field thickening is explicitly route-cut by corrected
+  Role07 unless an official balanced challenge projection is supplied.
