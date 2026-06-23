@@ -2731,7 +2731,7 @@ Keep entries concise and link to the relevant files.
   `experimental/notes/m1/cycle119_cold_packet/`, and
   `experimental/notes/m1/cycle119_cold_strict263_prize_candidate_packet.zip`.
 - **Zip SHA-256:**
-  `579eb73f6a76021e53e76ffedda2860f218b6e3f545628f7ef8020fc899d2efa`.
+  `8fc5efd09dd220dd5aa5e0edbc57df5e00bca67d4e1c08c10bbf7ee777839326`.
 - **Purpose:** Strip the Cycle119 result down to a theorem-facing packet:
   executive theorem, two-ended locator theorem, proof, Cycle84 instantiation,
   strict radius arithmetic, local checker receipt, exact non-claims, and the
