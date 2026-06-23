@@ -2636,25 +2636,32 @@ Keep entries concise and link to the relevant files.
   threshold, including a locally spot-checked `2187`-slope agreement-264 packet.
   Role 05 proposes a stronger two-ended locator theorem preserving the full
   Cycle84 numerator at agreement 263, but this is marked pending local
-  fail-closed replay. Role 08 gives a Goldilocks prime-field fixed-jet compiler
-  candidate as accepted-field fallback.
+  fail-closed replay. Corrected Role 07 closes the qchal/scalar-extension branch
+  as a dichotomy: attached-source MCA has no independent `q_chal`; direct scalar
+  extension of the Cycle116 `K`-valued line to a larger line field preserves the
+  numerator but kills density; no-loss requires a balanced challenge projection
+  or a genuinely larger-field replacement line. Role 08 gives a Goldilocks
+  prime-field fixed-jet compiler candidate as accepted-field fallback.
 - **Local validation:** Raw pasted returns are preserved with
-  `SHA256SUMS.txt`. Role 06 and Role 07 are byte-identical and count as
-  duplicate evidence. Local spot checks verified the Role 09 `G^7` selected
-  packet has `2187` distinct product logs using bundled `slot_logs.json`;
+  `SHA256SUMS.txt`. After the missing Role 07 answer was supplied, the earlier
+  duplicate Role 07 text was replaced and hashes were regenerated. Local spot
+  checks verified the Role 09 `G^7` selected packet has `2187` distinct product
+  logs using bundled `slot_logs.json`;
   Role 04's finite counts `|B0|=102`, `|G|=7`, `|P|=613`; and Role 08's
   Goldilocks arithmetic: `q=2^64-2^32+1`, `theta^256=-1`, `theta^512=1`, and
   `L(q)=73,674,899,375,228,060`. Generated `sandbox:/mnt/data` files mentioned
   in the Pro prose were not downloadable from the pasted transcript.
 - **What not to claim:** No official Proximity Prize solve, no ordinary
-  fixed-word list-decoding lower bound, no `q_chal=q_line`, no lossless scalar
-  field-thickening theorem, and no fully replayed full-`N` agreement-263 theorem
-  yet. The first official wall remains authority/admissibility/challenge/event
-  retention.
+  fixed-word list-decoding lower bound, no `q_chal=q_line`, no direct scalar
+  field-thickening density retention, and no fully replayed full-`N`
+  agreement-263 theorem yet. The first official wall remains
+  authority/admissibility/challenge/event retention plus the exact
+  challenge-to-line sampler map.
 - **What to do next:** Build
   `V-CYCLE118-TWO-ENDED-263-TRANSFER-CHECKER` for Role 05. Then pursue
-  `V-CYCLE119-AUTHORITY-PINNED-STRICT264-ROW-EVENT-QCHAL-CONTRACT`, requiring
-  an authenticated authority, row decision, strict/closed radius, line/challenge
+  `V-CYCLE118-QCHAL-SAMPLER-MAP-RECEIPT` and
+  `V-CYCLE119-AUTHORITY-PINNED-STRICT264-ROW-EVENT-QCHAL-CONTRACT`, requiring an
+  authenticated authority, row decision, strict/closed radius, line/challenge
   distribution, and final retained numerator `>=7`. In parallel, build
   `V-CYCLE119-GOLDILOCKS-FIXED-JET-COMPILER-CHECKER` as the accepted-prime-field
   fallback if the extension-field row is rejected.

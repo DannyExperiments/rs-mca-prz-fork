@@ -1,572 +1,700 @@
 LABEL:
 
-**PROOF / BANKABLE_LEMMA / ROUTE_CUT**
+**BANKABLE_LEMMA / ROUTE_CUT / SOURCE-SCOPED PROOF**
 
-`V-CYCLE118-CLOSE-POINT-LD-ADAPTER-AND-SPIKE-CUT`
+**L-CYCLE118-QCHAL-FIELD-THICKENING-OR-DENSITY-LOSS — CLOSED AS A DICHOTOMY**
 
-`L-CYCLE118-FIXED-JET-EXACT-BOUNDARY-SHELL`
+Confidence: high.
 
 EXECUTIVE VERDICT:
 
-**Confidence: high.**
+The attached MCA definition has only one sampled variable, (z\in\mathbb F). Thus, within the attached-source experiment, the sample-field cardinality is necessarily (q_{\rm line}=|\mathbb F|); there is no independent (q_{\rm chal}).
 
-Cycle116 can be strengthened, from the attached packet alone, to an ordinary close-point line-decoding lower bound under the standard closed-ball predicate.
-
-There is a noncontained affine line in
+More strongly, let
 
 [
-C=\operatorname{RS}[\mathbb F_{17^{32}},H,256],\qquad |H|=512,
+K=\mathbb F_{17^{32}},\qquad
+C_K=\operatorname{RS}[K,H,256].
 ]
 
-with at least
+For every extension (E/K), scalar extension of a (K)-valued line produces **no new bad slopes**:
 
 [
-N=52{,}747{,}567{,}092
+\operatorname{Bad}_{E}(f,g;a)
+=============================
+
+\operatorname{Bad}_{K}(f,g;a)
+\subseteq K.
 ]
 
-distinct line points at **exact** Hamming distance (250) from (C). Its direction has maximum agreement exactly (256) with (C). Consequently:
+Therefore the Cycle116 numerator does not thicken. For every proper extension (E/K),
 
 [
-\operatorname{CP}^{\rm nc}_{\le}
-\left(C,\frac{125}{256}\right)\ge N,
+\frac{#\operatorname{Bad}_{E}(f,g;a)}{|E|}
+\le \frac{|K|}{|E|}
+\le \frac1{|K|}
+<2^{-128}.
 ]
 
-and the result remains true even after excluding lines admitting a common code-line explanation on (262) coordinates.
+So literal field thickening by replacing (z\in K) with (z\in E) decisively kills every (K)-valued Cycle116-type line, not merely the certified subset of (N) slopes.
 
-Thus any external closed-ball line-decodability statement, with only a contained-line or target-scale common-support exception and with cap (a_{\rm LD}<N), is refuted.
+There are exactly two possible no-loss escapes:
 
-For a strict-ball convention:
+1. A separate challenge field may map to (K) by a balanced surjection. Then challenge density is preserved exactly.
+2. The line must become genuinely (E)-valued. For fixed length (512), this is impossible for ([E:K]\ge5) by a universal support-count bound. Only extension degrees (2,3,4) remain mathematically open.
 
-[
-d_H(u_z,C)<\frac{125}{256}\cdot512=250
-]
-
-requires agreement (263). The direct fixed-jet line does not provide this. In fact, every nonzero parameter on that line has distance at least (250); hence the strict-ball count on this line is at most one. All (N) certified slopes lie exactly on the deleted boundary.
-
-There is, however, a no-loss one-coordinate parameter shift:
-
-[
-\operatorname{CP}^{\rm nc}_{<}
-\left(C,\frac{251}{512}\right)\ge N,
-]
-
-because (d_H=250<251). This radius is still below capacity (1/2).
+A source-valid replacement over (E=\mathbb F_{17^{32r}}) does exist if the row may change: for power-of-two (r), a generated power-of-two domain of length (512r) supports a line on which **every** (z\in E) is bad at agreement (256r+1). This is not a preservation of the Cycle116 radius (125/256).
 
 THEOREM / COUNTERPACKET / ROUTE CUT:
 
-### Theorem 1 — Fixed-jet exact-shell and deep-direction lemma
+### Theorem A — source MCA has no second challenge denominator
 
-Let (C=\operatorname{RS}[F,D,k]), (|D|=n), and put (r=n-k). Let (\beta\notin D). Suppose the fixed-jet hypotheses hold for a family (\mathcal J) of (j)-subsets of (D), with
+For a linear code (C\subseteq F^D), the attached definition is
 
 [
-r=j+\sigma,
+\epsilon_{\rm mca}(C,\delta)
+============================
+
+\max_{f,g\in F^D}
+\frac{
+#{z\in F:z\text{ is support-wise MCA-bad for }f+zg}
+}{|F|}.
+]
+
+Hence the unique source sample space is (F). In the Cycle116 row,
+
+[
+q_{\rm gen}=q_{\rm code}=q_{\rm line}=17^{32},
+\qquad q_{\rm chal}=\text{null}.
+]
+
+If one introduces a notation (q_{\rm sample}^{\rm MCA}) for the cardinality of the source experiment’s sampled parameter, then
+
+[
+q_{\rm sample}^{\rm MCA}=q_{\rm line}=17^{32}.
+]
+
+This does **not** define an official protocol (q_{\rm chal}).
+
+---
+
+### Theorem B — exact scalar-extension invariance
+
+Let (K\subseteq E) be finite fields, (D\subseteq K), and
+
+[
+C_K=\operatorname{RS}[K,D,k],
 \qquad
-\deg(P_J-P_{J'})\le j-\sigma
-\quad(J,J'\in\mathcal J),
+C_E=\operatorname{RS}[E,D,k].
 ]
 
-where (P_J(X)=\prod_{a\in J}(X-a)).
-
-Let (u_z=f+zg) be the canonical line supplied by the Cycle116 fixed-jet construction. Then:
-
-1. Its direction is
-
-   [
-   g(x)=\frac{V_D(\beta)}{\beta-x},
-   \qquad
-   V_D(X)=\prod_{a\in D}(X-a),
-   ]
-
-   and
-
-   [
-   \max_{c\in C}|{x:g(x)=c(x)}|=k.
-   ]
-
-2. For every nonzero (z\in F),
-
-   [
-   d_H(u_z,C)\ge j.
-   ]
-
-3. For each designated fixed-jet slope
-
-   [
-   z_J=-\frac1{P_J(\beta)},
-   ]
-
-   one has the exact equality
-
-   [
-   d_H(u_{z_J},C)=j.
-   ]
-
-4. At every agreement threshold (a>k), close-point and support-wise badness coincide on this line:
-
-   [
-   \begin{aligned}
-   &{z:\exists c\in C,\
-   |{x:u_z(x)=c(x)}|\ge a}\
-   &\hspace{25mm}=
-   {z:z\text{ is support-wise noncontained at agreement }a}.
-   \end{aligned}
-   ]
-
-Thus this canonical line has no spike/common-support discrepancy above dimension (k).
-
-### Cycle118 corollary
-
-Let (K=\mathbb F_{17^{32}}), (H=D_0\sqcup\theta D_0), and use the Cycle116 sets
-
-[
-A={\theta\eta^i:0\le i\le118},
-\qquad
-R={\theta\eta^i:119\le i\le255}.
-]
-
-For every native Cycle84 support (T\subset D_0), (|T|=113), define
-
-[
-J_T=R\cup T.
-]
+For (f,g\in K^D) and agreement threshold (a), let
+(\operatorname{Bad}_K(f,g;a)) and (\operatorname{Bad}_E(f,g;a)) denote their support-wise bad-slope sets over the respective codes.
 
 Then
 
 [
-|J_T|=137+113=250.
-]
-
-The locators satisfy
-
-[
-P_{J_T}=P_RP_T
-]
-
-and therefore
-
-[
-\deg(P_{J_T}-P_{J_{T'}})
-\le137+107
-=244
-=250-6.
-]
-
-Hence the fixed-jet theorem applies directly on (H) with
-
-[
-(n,k,j,\sigma)=(512,256,250,6).
-]
-
-Moreover,
-
-[
-P_{J_T}(\beta)=P_R(\beta)P_T(\beta),
-]
-
-and (P_R(\beta)\ne0). Multiplication by (P_R(\beta)), inversion, and negation preserve distinctness, so the Cycle84 occupancy gives (N) distinct slopes.
-
-There is consequently one affine line (L=f+Kg) and a set (Z\subset K^\times), (|Z|=N), such that
-
-[
-d_H(f+zg,C)=250
-\qquad(z\in Z).
-]
-
-Its direction satisfies
-
-[
-\operatorname{agr}(g,C)=256<262.
-]
-
-Therefore the line is not contained in (C), and no pair (c_f,c_g\in C) can explain (f,g) simultaneously on any support of size (262).
-
-Under the standard definition
-
-[
-\operatorname{CP}^{\rm nc}_{\le}(C,\delta)
-==========================================
-
-\max_{\substack{g\ne0\ f+Fg\not\subset C}}
-#{z:d_H(f+zg,C)\le\delta n},
-]
-
-we obtain
-
-[
 \boxed{
-\operatorname{CP}^{\rm nc}_{\le}
-\left(C,\frac{125}{256}\right)
-\ge N.
+\operatorname{Bad}_E(f,g;a)
+===========================
+
+\operatorname{Bad}_K(f,g;a)
+\subseteq K.
 }
 ]
 
-Under strict distance,
+This holds for every (a), equivalently at every radius.
+
+Consequently, scalar extension preserves the complete bad-slope numerator of a (K)-valued line exactly, but changes its density by
+
+[
+\frac{|K|}{|E|}.
+]
+
+For the Cycle116 line, its (N) certified slopes remain bad, but no new slopes outside (K) arise:
+
+[
+\frac{N}{|E|}
+\le
+\epsilon_{\text{that line over }E}
+\le
+\frac{|K|}{|E|}.
+]
+
+The exact full numerator of the Cycle116 line was not enumerated, so it need not equal (N); the theorem says whatever that numerator is, it is unchanged.
+
+---
+
+### Corollary B.1 — proper scalar extension destroys the (2^{-128}) violation
+
+Write (E=\mathbb F_{17^{32r}}), so (|E|=|K|^r). For (r\ge2),
+
+[
+\epsilon_{\text{any (K)-valued line over }E}
+\le |K|^{1-r}
+\le |K|^{-1}.
+]
+
+The packet verifies
+
+[
+\left\lfloor\frac{|K|}{2^{128}}\right\rfloor=6,
+]
+
+so (|K|>2^{128}), and therefore
 
 [
 \boxed{
-\operatorname{CP}^{\rm nc}_{<}
-\left(C,\frac{251}{512}\right)
-\ge N.
+\epsilon_{\text{any (K)-valued line over a proper }E/K}
+<2^{-128}.
 }
 ]
 
-If external notation ((\delta,a_{\rm LD},n+1))-line-decodable has precisely this close-point meaning, and the (n+1=513) slot adds no further filter, then
+Thus the direct implication
 
 [
-C\text{ is not }
-\left(\frac{125}{256},a_{\rm LD},513\right)
-\text{-line-decodable}
+\text{Cycle116 line over }K
+\Longrightarrow
+\text{same line over a larger line field }E
 ]
 
-for every integer (a_{\rm LD}<N) under the closed-ball convention. Under the strict convention, the corresponding certified refutation is at radius (251/512), not (125/256).
+fails at its first density step.
 
-### Strict-endpoint route cut
+---
 
-For the canonical direct line,
+### Theorem C — universal fixed-([512,256]) extension cut
+
+For every field (E) containing (K),
 
 [
-#{z:d_H(f+zg,C)<250}\le1.
+C_E=\operatorname{RS}[E,H,256]
 ]
 
-Therefore the implication
+satisfies
 
 [
-LD_{\rm sw}(C,262)\ge N
-\quad\Longrightarrow\quad
-#{z:d_H(f+zg,C)<250}\ge N
+\boxed{
+\operatorname{LD}_{\rm sw}(C_E,262)
+\le \binom{512}{262}.
+}
 ]
 
-fails at its first pointwise arrow. The strict-ball target at (125/256) requires agreement (263), and the (N) direct fixed-jet slopes contribute zero to it.
+Therefore, if (E=\mathbb F_{17^{32r}}) and (r\ge5),
 
-This does not prove that some entirely different line cannot witness a large (LD_{\rm sw}(C,263)). It proves that the canonical six-jet line cannot do so by reinterpreting its existing slopes.
+[
+\epsilon_{\rm mca}!\left(C_E,\frac{125}{256}\right)
+<
+2^{-128}.
+]
+
+This upper bound holds for **all** (E)-valued lines, not only scalar extensions of Cycle116.
+
+Hence:
+
+[
+\boxed{
+\text{At fixed }(n,k,a)=(512,256,262),
+\text{ only }[E:K]\in{2,3,4}
+\text{ can remain open.}
+}
+]
+
+---
+
+### Theorem D — exact balanced-challenge no-loss compiler
+
+Let (\Omega) be a finite official challenge space and let
+
+[
+\mu:\Omega\to K
+]
+
+be the official challenge-to-line-slope map. For a source bad-slope set (B\subseteq K), the challenge error is exactly
+
+[
+\Pr_{\omega\in\Omega}[\mu(\omega)\in B]
+=======================================
+
+\frac1{|\Omega|}
+\sum_{z\in B}|\mu^{-1}(z)|.
+]
+
+If (\mu) is balanced, meaning every fiber has size (|\Omega|/|K|), then
+
+[
+\boxed{
+\Pr[\mu(\omega)\in B]=\frac{|B|}{|K|}.
+}
+]
+
+For every extension (E/K), a (K)-linear coordinate projection
+
+[
+\pi:E\to K
+]
+
+is a balanced surjection, with fibers of size (|E|/|K|). Thus the challenge family
+
+[
+u_c=f+\pi(c)g,\qquad c\in E,
+]
+
+has exactly the original Cycle116 bad-event density.
+
+This is a conditional no-loss compiler. It applies only if the official contract explicitly permits a separate challenge field and explicitly defines the line parameter as such a balanced image. It is not the source affine line (f+cg) over (E).
+
+---
+
+### Theorem E — generated smooth replacement over power-of-two extensions
+
+Let (r=2^s) and
+
+[
+E_r=\mathbb F_{17^{32r}}.
+]
+
+Then (E_r^\times) has a subgroup (D_r) of order
+
+[
+n=512r
+]
+
+which generates (E_r) over (\mathbb F_{17}). Put
+
+[
+k=\frac n2=256r.
+]
+
+For the line on (D_r)
+
+[
+u_z(x)=x^{k+1}+z x^k,
+\qquad z\in E_r,
+]
+
+every parameter (z\in E_r) is support-wise MCA-bad at agreement (k+1). Therefore
+
+[
+\boxed{
+\epsilon_{\rm mca}
+\left(
+\operatorname{RS}[E_r,D_r,256r],
+\frac12-\frac1{512r}
+\right)
+=1.
+}
+]
+
+This gives a complete numerator thickening:
+
+[
+\operatorname{LD}_{\rm sw}
+\left(
+\operatorname{RS}[E_r,D_r,256r],
+256r+1
+\right)
+=|E_r|.
+]
+
+It is a replacement construction, not a scalar extension of the Cycle116 row. In particular,
+
+[
+\frac12-\frac1{512r}>\frac{125}{256},
+]
+
+so this theorem cannot be used to claim agreement (262r) or the Cycle116 radius.
+
+---
+
+### Route cut for non-power-of-two extension degrees
+
+Write
+
+[
+r=2^s u,\qquad u\text{ odd}.
+]
+
+Every power-of-two subgroup of
+(\mathbb F_{17^{32r}}^\times) lies in
+
+[
+\mathbb F_{17^{32\cdot2^s}}.
+]
+
+Therefore, when (u>1), no power-of-two multiplicative domain generates all of (E_r).
+
+Thus a generated-field, power-of-two smooth thickening exists precisely along the power-of-two extension tower. Odd extension factors require either a non-power-of-two domain or a genuinely different compiler.
 
 PROOF DETAILS:
 
-### 1. Direct smooth-domain locator construction
+### 1. Proof of exact scalar-extension invariance
 
-The native locators satisfy
+Choose a (K)-basis
 
 [
-P_T(X)=X^{113}-X^{112}+O(X^{107}),
+e_1=1,e_2,\ldots,e_r
 ]
 
-so for all (T,T'),
+of (E), and let (\pi_i:E\to K) be the corresponding coordinate projections. For every (P\in E[X]) and (x\in D\subseteq K),
 
 [
-\deg(P_T-P_{T'})\le107.
+\pi_i(P(x))=(\pi_iP)(x),
 ]
 
-Since (R) is fixed and (|R|=137),
+where (\pi_iP) means coefficientwise projection. Degrees do not increase.
+
+First let (z\notin K). Write
 
 [
-P_{J_T}-P_{J_{T'}}
-=P_R(P_T-P_{T'}),
+z=z_1e_1+\cdots+z_re_r
 ]
 
-giving
+and choose (i\ge2) with (z_i\ne0). Suppose that on some support (S),
 
 [
-\deg(P_{J_T}-P_{J_{T'}})\le244.
+P(x)=f(x)+zg(x)
 ]
 
-For (j=250) and (\sigma=6),
+for a polynomial (P\in E[X]_{<k}). Projecting to coordinate (i) gives
 
 [
-j-\sigma=244,
-\qquad
-j+\sigma=256=n-k.
+(\pi_iP)(x)=z_i g(x)
+\qquad(x\in S),
 ]
 
-These are exactly the fixed-jet hypotheses.
-
-Also (\beta\notin H): the packet gives (\beta\in F_0\setminus D_0), while
+so the degree-(<k) polynomial
 
 [
-H=D_0\sqcup\theta D_0
+G=z_i^{-1}\pi_iP
 ]
 
-and (\theta D_0\cap F_0=\varnothing). Hence all locator evaluations at (\beta) are nonzero.
-
-The packet certifies (N) distinct native values (P_T(\beta)). Therefore
+explains (g) on (S). The first coordinate gives
 
 [
--\frac1{P_R(\beta)P_T(\beta)}
+(\pi_1P)(x)=f(x)+z_1g(x),
 ]
 
-also takes exactly (N) distinct values.
-
-### 2. Exact-distance proof
-
-Let (H_C) be the Reed–Solomon parity-check matrix used in the fixed-jet construction. For (U\subset D), write
+so
 
 [
-W_U=\operatorname{span}{h_x:x\in U}.
+A=\pi_1P-z_1G
 ]
 
-Under the coefficient-polynomial pairing,
+explains (f) on the same (S). Thus every close witness for (z\notin K) is automatically contained, and (z) cannot be support-wise bad.
+
+Now let (z\in K). Any (K)-codeword witness is also an (E)-codeword witness. Conversely, any (E)-polynomial explaining the (K)-valued word (f+zg) projects via (\pi_1) to a (K)-polynomial explaining the same word. Likewise, an (E)-polynomial explaining (f) or (g) projects to a (K)-polynomial explaining it. Therefore closeness and simultaneous containment are equivalent over (K) and (E), proving exact equality of bad sets.
+
+This strengthens the packet’s subfield-confinement theorem from inclusion to complete base-change invariance.
+
+### 2. Proof of the fixed-row support cap
+
+At agreement (262\ge256+1), every bad witness can be reduced to an exact support of size (262).
+
+Indeed, if a word fails to be degree-(<256) polynomial data on a larger support, that failure is already visible on a (257)-subset: choose 256 points and interpolate; if every additional point were compatible, the interpolant would explain the full support. Extend such a (257)-subset to 262 points.
+
+For a fixed support (S), at most one slope is noncontained. If distinct (z,z') were both explained on (S) by codewords (P,P'), then
 
 [
-W_U^\perp=P_UF[X]_{<r-|U|}.
+g|_S=\left(\frac{P-P'}{z-z'}\right)\Big|_S
 ]
 
-The canonical syndrome line is
+and
 
 [
-s_z=y_0+zv(\beta),
+f|_S=(P-zg)|_S
 ]
 
-where
+would simultaneously be code-explained, contradicting badness.
+
+Assigning one exact witness support to each bad slope therefore gives an injection into the 262-subsets of (H):
 
 [
-\langle Q,y_0\rangle=\ell(Q),
-\qquad
-\langle Q,v(\beta)\rangle=Q(\beta).
+#\operatorname{Bad}\le\binom{512}{262}.
 ]
 
-The functional (\ell) depends only on the top (\sigma) coefficients in degrees
+For (r\ge5),
 
 [
-j,j+1,\ldots,j+\sigma-1.
-]
-
-Consequently,
-
-[
-\ell(Q)=0
-\qquad\text{whenever }\deg Q<j.
-]
-
-Suppose (z\ne0) and (d_H(u_z,C)\le j-1). Then the syndrome (s_z) has an error representation supported on some (U) with (|U|\le j-1), so
-
-[
-s_z\in W_U.
-]
-
-Since (P_U\in W_U^\perp),
-
-[
-0=\langle P_U,s_z\rangle
-=\ell(P_U)+zP_U(\beta).
-]
-
-But
-
-[
-\deg P_U=|U|<j
-\quad\Longrightarrow\quad
-\ell(P_U)=0,
+|E|=|K|^r>2^{128r}\ge2^{640},
 ]
 
 while
 
 [
-z\ne0,
+\binom{512}{262}<2^{512}.
+]
+
+Hence
+
+[
+\frac{\binom{512}{262}}{|E|}
+<
+2^{-128}.
+]
+
+### 3. Proof of the power-of-two domain classification
+
+Let (r=2^s u), (u) odd. By the 2-adic lifting formula,
+
+[
+\begin{aligned}
+\nu_2(17^{32r}-1)
+&=\nu_2(17-1)+\nu_2(17+1)+\nu_2(32r)-1\
+&=4+1+(5+s)-1\
+&=9+s.
+\end{aligned}
+]
+
+Thus the largest power-of-two subgroup in (E_r^\times) has order (2^{9+s}).
+
+For (t\ge5),
+
+[
+\operatorname{ord}_{2^t}(17)=2^{t-4},
+]
+
+because
+
+[
+\nu_2(17^{2^a}-1)=4+a
+]
+
+and (a=t-4) is minimal. An element of order (2^{9+s}) therefore has degree
+
+[
+2^{9+s-4}=2^{5+s}=32\cdot2^s
+]
+
+over (\mathbb F_{17}).
+
+Hence the maximal power-of-two subgroup generates exactly
+
+[
+\mathbb F_{17^{32\cdot2^s}},
+]
+
+which equals (E_r) precisely when (u=1).
+
+### 4. Proof of the smooth replacement construction
+
+Assume (r=2^s), put (d=32r), and let (\zeta) have order
+
+[
+16d=512r.
+]
+
+The order computation above gives
+
+[
+\operatorname{ord}_{512r}(17)=d,
+]
+
+so (1,\zeta,\ldots,\zeta^{d-1}) is an (\mathbb F_{17})-basis of (E_r). Let
+
+[
+H_0=\mathbb F_{17}^{\times},
+\qquad |H_0|=16.
+]
+
+Then
+
+[
+D_r=\bigsqcup_{i=0}^{d-1}\zeta^iH_0.
+]
+
+The restricted-sum bound in the packet gives
+
+[
+8^{\wedge}H_0=\mathbb F_{17},
 \qquad
-P_U(\beta)\ne0.
+9^{\wedge}H_0=\mathbb F_{17},
 ]
 
-This is a contradiction. Hence every nonzero parameter satisfies
+since
 
 [
-d_H(u_z,C)\ge j.
-]
-
-For a designated slope (z_J=-P_J(\beta)^{-1}), the fixed-jet construction provides a codeword agreeing on (D\setminus J), so
-
-[
-d_H(u_{z_J},C)\le|J|=j.
-]
-
-Combining both inequalities gives
-
-[
-d_H(u_{z_J},C)=j.
-]
-
-For the smooth row, (j=250).
-
-### 3. The direction is a deep hole
-
-The canonical direction is
-
-[
-g(x)=\frac{V_H(\beta)}{\beta-x}.
-]
-
-Suppose a degree-(<256) polynomial (Q) agrees with (g) on a set (S\subset H). Then
-
-[
-R_Q(X)=(\beta-X)Q(X)-V_H(\beta)
-]
-
-vanishes on (S). This polynomial has degree at most (256), and it is not zero because
-
-[
-R_Q(\beta)=-V_H(\beta)\ne0.
-]
-
-Therefore
-
-[
-|S|\le256.
-]
-
-Conversely, interpolation on any (256) coordinates produces a degree-(<256) polynomial agreeing with (g) there. Hence
-
-[
-\operatorname{agr}(g,C)=256
-]
-
-exactly.
-
-This immediately excludes:
-
-[
-f+Kg\subseteq C,
-]
-
-because that would require (g\in C), and it excludes any common-support/code-line exception requiring a support of size at least (262).
-
-### 4. Why the spike separation does not apply to this line
-
-The bridge note’s spike line has a direction that agrees with the zero codeword on (n-1) coordinates. Thus many close points can be explained on a support which already explains both line generators.
-
-Here,
-
-[
-\operatorname{agr}(g,C)=256<262.
-]
-
-If (u_z) agrees with a codeword on any support (S) of size at least (262), no codeword can explain (g) on that same support. Therefore the slope is automatically support-wise noncontained.
-
-Thus, on this line at agreement (262),
-
-[
-{\text{ordinary close slopes}}
-==============================
-
-{\text{support-wise bad slopes}}.
-]
-
-The spike example remains a valid global separation between the two notions, but it is irrelevant to this particular direct fixed-jet witness.
-
-### 5. Strict versus closed radius
-
-For integer Hamming distance (d):
-
-[
-d/n\le\delta
-\quad\Longleftrightarrow\quad
-d\le\lfloor\delta n\rfloor,
-]
-
-whereas
-
-[
-d/n<\delta
-\quad\Longleftrightarrow\quad
-d\le\lceil\delta n\rceil-1.
-]
-
-At
-
-[
-\delta_0=\frac{125}{256},
+8(16-8)+1=65\ge17,
 \qquad
-\delta_0n=250,
+9(16-9)+1=64\ge17.
 ]
 
-the closed ball permits (d=250), while the strict ball permits only (d\le249). Equivalently:
+Given any (y=\sum_{i=0}^{d-1}c_i\zeta^i\in E_r), choose a 9-subset (T_0\subseteq H_0) summing to (c_0), and for (i\ge1) choose an 8-subset (T_i\subseteq H_0) summing to (c_i). Then
 
 [
-a_{\le}(\delta_0)=262,
-\qquad
-a_{<}(\delta_0)=263.
+A=T_0\sqcup\zeta T_1\sqcup\cdots\sqcup\zeta^{d-1}T_{d-1}
 ]
 
-All (N) certified points have (d=250), so all survive the closed convention and all are deleted by the strict convention.
-
-At
+has
 
 [
-\delta_1=\frac{251}{512},
-\qquad
-\delta_1n=251,
+|A|=9+8(d-1)=8d+1=k+1
 ]
 
-strict distance means (d\le250). Hence all (N) points survive.
+and sum (y). Thus
+
+[
+(k+1)^{\wedge}D_r=E_r.
+]
+
+For a desired slope (z), choose (A) with sum (-z). Its locator is
+
+[
+L_A(X)
+======
+
+X^{k+1}+zX^k+R_A(X),
+\qquad \deg R_A<k.
+]
+
+On (A),
+
+[
+x^{k+1}+zx^k=-R_A(x),
+]
+
+giving a degree-(<k) explanation. But (x^k) cannot agree with a degree-(<k) polynomial on (k+1) points. Thus every (z) is support-wise bad.
+
+### 5. Unrestricted-domain fallback over every extension
+
+For completeness, every (E=\mathbb F_{17^{32r}}), including non-power-of-two (r), admits a source-valid full-density construction on
+
+[
+D=E^\times,\qquad n=|E|-1,\qquad k=n/2.
+]
+
+Since (|E|\equiv1\pmod4), write (|E|=4m+1). Every (y\in E) is a sum of (2m+1=k+1) distinct nonzero elements:
+
+* For (y\ne0), construct a set summing to (1) as ({1}) plus (m) disjoint pairs ({a,-a}), then multiply by (y).
+* For (y=0), use ({1,2,-3}) plus (m-1) disjoint pairs ({a,-a}).
+
+The same locator argument therefore gives
+
+[
+\epsilon_{\rm mca}
+\left(
+\operatorname{RS}[E,E^\times,(|E|-1)/2],
+\frac12-\frac1{|E|-1}
+\right)
+=1.
+]
+
+This is not an FFT-size or power-of-two-domain compiler.
 
 FIELD AND PARAMETER LEDGER:
 
-| Quantity                           | Cycle118 direct smooth line |
-| ---------------------------------- | --------------------------: |
-| Field (K)                          |       (\mathbb F_{17^{32}}) |
-| (q_{\rm gen})                      |                   (17^{32}) |
-| (q_{\rm code})                     |                   (17^{32}) |
-| (q_{\rm line})                     |                   (17^{32}) |
-| (q_{\rm chal})                     |                      `null` |
-| Domain                             |    (H=\langle\theta\rangle) |
-| Length (n)                         |                       (512) |
-| Dimension (k)                      |                       (256) |
-| Redundancy (r=n-k)                 |                       (256) |
-| Native locator size                |                       (113) |
-| Fixed (R)-padding size             |                       (137) |
-| Direct smooth locator size (j)     |                       (250) |
-| Fixed jet (\sigma)                 |                         (6) |
-| Agreement (n-j)                    |                       (262) |
-| Exact distance of certified slopes |                       (250) |
-| Closed radius                      |           (250/512=125/256) |
-| Strict no-loss shifted radius      |                   (251/512) |
-| Direction agreement with (C)       |                       (256) |
-| Certified numerator                |      (52{,}747{,}567{,}092) |
+| Branch                                | (q_{\rm gen}) | (q_{\rm code}) | (q_{\rm line}) |                  (q_{\rm chal}) | Result                                      |   |                                  |
+| ------------------------------------- | ------------: | -------------: | -------------: | ------------------------------: | ------------------------------------------- | - | -------------------------------- |
+| Cycle116 source row                   |   (K=17^{32}) |            (K) |            (K) |                            null | (N/K>2^{-128})                              |   |                                  |
+| Same (H), scalar extension to (E=K^r) |           (K) |            (E) |            (E) |                            null | Bad set unchanged and contained in (K)      |   |                                  |
+| Proper scalar extension, (r\ge2)      |           (K) |            (E) |            (E) |                            null | Every (K)-valued line has error (<2^{-128}) |   |                                  |
+| Separate balanced challenge compiler  |           (K) |            (K) |            (K) | (E), only if officially defined | Exact no-loss density                       |   |                                  |
+| Generated smooth replacement, (r=2^s) |           (E) |            (E) |            (E) |                            null | (n=512r,\ k=256r,\ a=k+1,\ \epsilon=1)      |   |                                  |
+| Full multiplicative replacement       |           (E) |            (E) |            (E) |                            null | (n=                                         | E | -1,\ k=n/2,\ a=k+1,\ \epsilon=1) |
 
-No challenge-field probability was introduced. If one separately samples the line parameter uniformly from (K), the corresponding density is (N/q_{\rm line}); that does not define or identify (q_{\rm chal}).
+For Cycle116 itself:
+
+[
+\begin{aligned}
+K&=\mathbb F_{17^{32}},\
+|K|&=2367911594760467245844106297320951247361,\
+n&=512,\quad k=256,\quad a=262,\quad \delta=125/256,\
+N&=52{,}747{,}567{,}092.
+\end{aligned}
+]
 
 SELF-AUDIT:
 
 1. **Exact statement and scope.**
-   I proved a finite packet-internal and attached-manuscript-source-valid theorem: the Cycle116 data yield a direct smooth-domain affine line with (N) distinct points at exact distance (250), with a deep-hole direction. This proves a standard closed close-point line-decoding lower bound and a strict lower bound after the exact shift to (251/512). It is not an official/prize-adopted theorem because the external predicate and authority contract remain unpinned.
+   I proved, under the attached finite/source support-wise MCA definitions, exact bad-set invariance under scalar extension, a fixed-row support cap, a conditional balanced-challenge no-loss theorem, and source-valid replacement constructions. No official/prize-adopted theorem was proved.
 
 2. **Field ledger.**
-   (q_{\rm gen}=q_{\rm code}=q_{\rm line}=17^{32}). The line, code, domain, locators, and slopes all lie in (K=\mathbb F_{17^{32}}). (q_{\rm chal}) remains `null`; it was not identified with (q_{\rm line}).
+   In the banked row, (q_{\rm gen}=q_{\rm code}=q_{\rm line}=17^{32}) and (q_{\rm chal}=\mathrm{null}). With the same domain (H) and scalar-extended code (E), (q_{\rm gen}=|K|) while (q_{\rm code}=q_{\rm line}=|E|). A non-null (q_{\rm chal}) was used only in the explicitly conditional challenge-map theorem.
 
 3. **Numerator losses.**
-   Under the closed metric predicate, there is no endpoint loss, quotient loss, periodic loss, tangent loss, contained-line loss, common-support loss at agreement (262), affine-color loss, or charge loss. Under a strict ball at the same radius, the endpoint rule removes all (N) designated slopes because they have exact distance (250). Undefined official tangent, affine-color, final-event, or charge filters could still alter an official count.
+   No endpoint, quotient, periodic, tangent, contained-line, affine-color, or charge rule was introduced. Under scalar extension, the source bad set is unchanged; the failure is purely denominator dilution. The replacement constructions exclude containment by the degree-(k) root argument. Official retention rules remain unpinned.
 
-4. **Object being proved.**
-   The result simultaneously concerns support-wise (LD_{\rm sw}) and ordinary close-point line decoding on one line, because the deep direction makes the two slope sets equal at agreement (262). It is not fixed-word list decoding: the (N) objects are (N) distinct received words (f+zg), not (N) codewords near one received word.
+4. **Decoding notion.**
+   Every result concerns support-wise (\operatorname{LD}_{\rm sw}) and support-wise MCA. It is not ordinary fixed-word list decoding or generic close-point line decoding.
 
-5. **First missing or rejected official clause.**
-   For a closed-ball external predicate with only contained-line or size-(262) common-support exceptions, the mathematical adapter is closed. Official promotion still lacks the authority-pinned definition of ((\delta,a_{\rm LD},n+1)), including the role of the (n+1) slot and any additional filters. If the official ball is strict at (125/256), the current certified numerator is affirmatively rejected by the endpoint rule, not merely unverified.
+5. **First missing official clause.**
+   The first q-field clause is now precise: the packet lacks the authority-pinned tuple
+
+   [
+   (\Omega_{\rm chal},\Pr_{\rm chal},
+   \mu:\Omega_{\rm chal}\to F_{\rm line},
+   \text{event pullback/filter rule}).
+   ]
+
+   Merely supplying (|\Omega_{\rm chal}|) is insufficient. Balanced projection gives no loss; direct scalar extension gives decisive loss.
 
 6. **Next worker target.**
-   The next exact target is an agreement-(263) construction, not another adapter argument.
+   The next checker must pin the challenge-to-line map. If it returns direct identity sampling over (E), the only fixed-([512,256]) unresolved extensions are degrees (2,3,4), and they require a genuinely (E)-valued line.
+
+No agreement-263 upgrade was claimed. The scalar-extension obstruction holds at every agreement threshold, but the Cycle116 certified numerator remains an agreement-262 result.
 
 NEXT EXACT STEP:
 
-Prove or refute the following explicit seventh-jet occupancy lemma:
+First produce:
+
+```text
+V-CYCLE118-QCHAL-SAMPLER-MAP-RECEIPT
+```
+
+with mandatory fields
+
+```text
+challenge_space
+challenge_distribution
+q_chal
+line_field
+challenge_to_line_parameter_map
+bad_event_pullback_or_filter
+duplicate/quotient/charge treatment
+```
+
+The checker should return exactly one of:
+
+```text
+DIRECT_K_SAMPLING_CYCLE116_DENSITY_RETAINED
+BALANCED_CHALLENGE_PROJECTION_NO_LOSS
+IDENTITY_E_SCALAR_EXTENSION_CYCLE116_LINE_KILLED
+UNDEFINED_MAP_NO_OFFICIAL_CLAIM
+```
+
+If the receipt selects identity scalar extension (E=K^r), the exact remaining mathematical target is
 
 [
 \boxed{
-\begin{gathered}
-\text{There exists }\mathcal J'\subseteq\binom H{249}
-\text{ such that}\
-\deg(P_J-P_{J'})\le242
-\quad\text{for all }J,J'\in\mathcal J',\
-#{P_J(\beta):J\in\mathcal J'}
-\ge52{,}747{,}567{,}092.
-\end{gathered}
+\operatorname{RL}_{\rm NC}^{=}
+(H,256,262;K^r)
+\ge
+\left\lfloor\frac{|K|^r}{2^{128}}\right\rfloor+1,
+\qquad r\in{2,3,4},
 }
 ]
 
-Here
+using a genuinely (K^r)-valued residue-line datum. For (r\ge5), the support-count theorem proves this target impossible.
+
+If row enlargement is permitted and the radius (125/256) must be preserved, the exact fixed-jet construction target is:
 
 [
-249-7=242,
-\qquad
-249+7=256=n-k.
+\mathcal J_r\subseteq\binom{D_r}{250r},
 ]
 
-The fixed-jet theorem would then give one line with (N) distinct slopes at exact distance (249), hence agreement (263), closing the strict-ball endpoint at (125/256).
+such that
 
-A logically distinct fallback is a cosupport-root theorem for the original padding line: prove that at least (N) designated explaining polynomials acquire one additional agreement coordinate in (R). No such root-incidence statement is present in the packet.
+[
+\deg(P_J-P_{J'})\le244r
+]
+
+for all (J,J'\in\mathcal J_r), and for some (\beta\in E_r\setminus D_r),
+
+[
+#{P_J(\beta):J\in\mathcal J_r}
+
+>
+
+\frac{|E_r|}{2^{128}}.
+]
+
+That is precisely the missing (j=250r,\ \sigma=6r,\ a=262r) thickened fixed-jet occupancy lemma.
