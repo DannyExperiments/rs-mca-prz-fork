@@ -29,6 +29,24 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-24 - Five-role transfer-note Pro audit packet prepared
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/fixed_jet_two_ended_5pro_audit_packet/` and
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / PLAN.
+- **What is being added:** A disciplined five-role hostile audit packet for
+  the cleaned fixed-jet and two-ended transfer note. The roles separately test
+  the transfer lemmas, the explicit-row instantiation, ABF-definition
+  consequence, Papers A-D reuse, and possible symbolic generalization.
+- **How it is useful:** Keeps the next Pro round narrow and proof-facing
+  rather than asking broad prize-status questions. The upload zip is
+  `/Users/danielcabezas/fixed_jet_two_ended_5pro_audit_context.zip`.
+- **What to do next:** Dispatch five Pro instances with `COMMON_PROMPT.md`
+  followed by exactly one role prompt; preserve raw returns before evaluating
+  significance.
+
 ### 2026-06-24 - Fixed-jet and two-ended transfer note extracted
 
 - **Agent/model:** Codex.
