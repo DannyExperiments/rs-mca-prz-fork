@@ -152,6 +152,7 @@ User phrase "all three problems" is tracked here as:
 | R-20260622-36 | Retire the literal Cycle111 pure main-term LOW `t=1` occupancy theorem. | Cycle111 9-Pro returns give same-field and monic-anchor/block-prefix counterpacket mechanisms to the unqualified bound `C*binom(n,k+sigma)/q_gen^(sigma-1)`. The live question is no longer whether that theorem is true; it is whether the dangerous packets are official-source admissible or exactly charged with a final `q_line/2^128` ledger. | Applied |
 | R-20260622-37 | Do not count an above-threshold retained-color packet as paid by relabeling it charged. | Cycle112 proves the exact no-double-spend `q_line` ledger: if final retained colors exceed `floor(q_line/2^128)`, an additive charge partition can close only by exact source rejection, color compression, or a separately proved numerator-changing theorem. Disjoint block packets have a real matching cap, but interval/P190-style packets require frozen source/APcorr replay. | Applied |
 | R-20260622-38 | Treat Cycle113 as a missing-receipt route cut plus stronger model stress, not as an official terminal. | Cycle113 shows P190 and C284 are sharp above-threshold stress packets under natural same-field `t=1` arithmetic, but all positive official terminals require a pinned official source root, official `AP_corr`, endpoint/final-color map, charge registry, and `q_line` allocation receipts. | Applied |
+| R-20260624-01 | Promote Cycle120 official-source gate audit as the live prize-facing bottleneck after Cycle119 strict-263. | The public Proximity Prize page makes the row/rate gate look green for `RS[F_17^32,H,256]` with rate `1/2`, and the local ABF-linked source slices identify `epsilon_mca` with support-wise same-support noncontainment and `gamma <- F`; direct ABF26 PDF extraction is still needed for Definition 4.3 and the exact "smooth domain" wording. | Active |
 
 ## New Promising Directions
 
@@ -214,6 +215,9 @@ CYCLE119_SUBMISSION_PREP_PACKET: THEOREM_NOTE_OFFICIAL_GATES_REFEREE_CHECKLIST_H
 CYCLE119_SUBMISSION_PREP_SHA256: FB3B29099F0B12F0A4D6328280880E4DA1536D6BFF7C9B883A5F83ABB04AEBD8
 CYCLE119_FINAL_NIGHT_AUDIT: ABSTRACT_TWO_ENDED_PROOF_CONFIRMED_PROMPT_MISSING_DISJOINTNESS_CLAUSES_PATCHED
 CYCLE119_DISJOINTNESS_PATCH: THETA2_ETA_D0_THETA2_H_EVEN_ODD_COSET_JT_SUBSET_D0_RSTAR_SUBSET_THETAD0_BETA_NOTIN_H
+CYCLE120_OFFICIAL_SOURCE_GATE_AUDIT: PUBLIC_PRIZE_SITE_ROW_RATE_GREEN_ABF_DEF43_DIRECT_EXTRACTION_PENDING
+CYCLE120_SOURCE_GATE_FILE: experimental/notes/m1/cycle119_official_source_audit/V_CYCLE120_OFFICIAL_SOURCE_GATE_AUDIT.md
+CYCLE120_PROXIMITYPRIZE_SNAPSHOT_SHA256: 82618A3F0E407BEF82E7E591CC316C89713C7FA2F48CDBC35BC2E6F589B7E5DE
 CYCLE117_IF_REJECTED: ACCEPTED_FIELD_FIXED_JET_OCCUPANCY_COMPILER
 L1_REPAIR: RAW_ARBITRARY_FIBER_FALSE_REPAIRED_OBJECTS_BANKED_SPARSE_SYNDROME_OPEN
 F1_GAP: ARBITRARY_ANCHOR_BALANCED_RESIDUE_CLOUD
