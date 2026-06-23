@@ -7,7 +7,7 @@ The ABF PDF was checked directly. Under the printed ABF grand MCA definition,
 the row/domain/predicate/sampler/filter gates below pass for
 RS[F_17^32,H,256]. See:
 
-experimental/notes/m1/cycle120_abf_counterexample_packet/
+experimental/notes/m1/cycle120_abf_negative_result_packet/
 experimental/notes/m1/cycle119_official_source_audit/V_CYCLE120_ABF_DIRECT_ADMISSIBILITY_AUDIT.md
 ```
 
@@ -110,7 +110,7 @@ and check:
 
 ```text
 All gates accepted:
-  Prepare official counterexample submission.
+  Prepare official negative-result submission.
 
 Extension field rejected:
   Activate Goldilocks prime-field fallback.

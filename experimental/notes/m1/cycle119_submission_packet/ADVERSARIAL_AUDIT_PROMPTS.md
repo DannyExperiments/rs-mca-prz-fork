@@ -72,7 +72,7 @@ Return PROOF if clean, or ROUTE_CUT with the first fatal clause.
 
 ```text
 You are auditing whether the finite theorem implies an official Proximity Prize
-counterexample.
+negative result.
 
 Finite theorem:
   C=RS[F_17^32,H,256], |H|=512
@@ -98,4 +98,3 @@ Return:
   OFFICIAL_REJECT with the first rejected clause;
   OFFICIAL_UNKNOWN with the missing source clause.
 ```
-

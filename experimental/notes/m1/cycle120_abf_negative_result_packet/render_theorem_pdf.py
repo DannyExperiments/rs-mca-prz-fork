@@ -99,7 +99,7 @@ def main() -> None:
         rightMargin=0.65 * inch,
         topMargin=0.6 * inch,
         bottomMargin=0.6 * inch,
-        title="Cycle120 ABF-Facing RS-MCA Counterexample Note",
+        title="Cycle120 ABF-Facing RS-MCA Negative Result Note",
     )
     doc.build(story)
     print(OUT)

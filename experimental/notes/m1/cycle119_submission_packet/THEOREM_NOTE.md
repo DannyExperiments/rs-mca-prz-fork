@@ -26,7 +26,7 @@ epsilon_mca(C,125/256)
 
 This note does not claim ordinary list decoding, protocol soundness, asymptotics, or official Proximity Prize status without row/predicate/sampler admissibility.
 
-## 1. Imported Finite Certificate
+## 1. Imported Finite Census
 
 We import the Cycle84 finite census:
 
@@ -43,7 +43,7 @@ no product fiber of size >= 3
 all 336 slot bridge identities
 ```
 
-The Cycle116 transfer certificate already gives a finite agreement-262 theorem. Cycle119 upgrades the same numerator to agreement 263 by replacing naive agreement padding with a two-ended locator theorem.
+The Cycle116 transfer theorem already gives an agreement-262 theorem. Cycle119 upgrades the same numerator to agreement 263 by replacing naive agreement padding with a two-ended locator theorem.
 
 ## 2. The Two-Ended Locator Theorem
 
@@ -431,4 +431,4 @@ support-wise same-support epsilon_mca,
 no extra endpoint/quotient/charge/event filter?
 ```
 
-If yes, this theorem appears to be a Proximity Prize counterexample candidate at `delta=125/256`.
+If yes, this theorem appears to be a Proximity Prize negative-result candidate at `delta=125/256`.

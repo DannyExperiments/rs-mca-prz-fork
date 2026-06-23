@@ -1,4 +1,4 @@
-# Cycle120 ABF Counterexample Packet
+# Cycle120 ABF Negative Result Packet
 
 Date: 2026-06-24
 

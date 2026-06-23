@@ -103,17 +103,17 @@ prize consideration.
 Packet directory:
 
 ```text
-experimental/notes/m1/cycle120_abf_counterexample_packet/
+experimental/notes/m1/cycle120_abf_negative_result_packet/
 ```
 
 Packet zip:
 
 ```text
-experimental/notes/m1/cycle120_abf_counterexample_packet.zip
+experimental/notes/m1/cycle120_abf_negative_result_packet.zip
 ```
 
 Packet zip SHA-256 file:
 
 ```text
-experimental/notes/m1/cycle120_abf_counterexample_packet.zip.sha256
+experimental/notes/m1/cycle120_abf_negative_result_packet.zip.sha256
 ```

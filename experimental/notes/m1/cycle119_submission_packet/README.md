@@ -8,7 +8,7 @@ For the ABF grand MCA challenge as printed in ePrint 2026/680, use the
 Cycle120 packet:
 
 ```text
-experimental/notes/m1/cycle120_abf_counterexample_packet/
+experimental/notes/m1/cycle120_abf_negative_result_packet/
 ```
 
 Cycle120 directly checks the ABF row/domain/predicate/sampler gates and records
@@ -20,7 +20,7 @@ Purpose:
 
 ```text
 Prepare the Cycle119 strict-263 finite/source theorem for expert review and,
-conditional on official admissibility, Proximity Prize counterexample submission.
+conditional on official admissibility, Proximity Prize negative-result submission.
 ```
 
 Open in this order:
@@ -61,6 +61,6 @@ Claim discipline:
 
 ```text
 This is proved as a finite/source support-wise MCA and LD_sw theorem.
-It is a Proximity Prize counterexample candidate only if the official
+It is a Proximity Prize negative-result candidate only if the official
 row/predicate/sampler/event contract matches the theorem.
 ```

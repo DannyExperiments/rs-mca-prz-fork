@@ -1,4 +1,4 @@
-# Cycle120 ABF-Facing RS-MCA Counterexample Note
+# Cycle120 ABF-Facing RS-MCA Negative Result Note
 
 Date: 2026-06-24
 
@@ -217,7 +217,7 @@ delta*_C(2^-128) < 125/256
 ```
 
 provided the proof chain is correct. This is prize-facing partial
-progress and a candidate counterexample to any expectation that this row remains
+progress and a negative result against any expectation that this row remains
 MCA-secure through radius `125/256`.
 
 ## 6. Cycle119 Strict Strengthening
