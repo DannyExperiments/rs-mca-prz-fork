@@ -29,6 +29,24 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-24 - Experimental-to-Papers A-D recalibration
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/notes/audits/experimental_to_papers_ad_recalibration_20260624.md`
+  and `experimental/agents-log.md`.
+- **Status:** AUDIT / RECALIBRATION.
+- **What is being added:** A compact map from the current `experimental/`
+  folder back to Papers A-D. It separates reusable proof mechanisms from
+  computations, examples, raw returns, and provenance material.
+- **How it is useful:** Responds to PRZ's request to reduce drift and make the
+  public repo reusable. The main judgment is that the Cycle116/119/120 line
+  should be presented as a concrete negative example plus reusable fixed-jet
+  and two-ended locator transfer lemmas, not as the front-door narrative.
+- **What to do next:** Draft
+  `experimental/notes/m1/fixed_jet_and_two_ended_transfer_note.md`, with the
+  Cycle84 product count treated as one computed input in an example.
+
 ### 2026-06-22 - Cycle111 LOW t=1 occupancy upper 9-Pro returns
 
 - **Agent/model:** Nine ChatGPT Pro theorem-worker roles, audited by Codex.
