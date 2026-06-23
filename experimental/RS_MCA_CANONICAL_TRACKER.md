@@ -153,6 +153,7 @@ User phrase "all three problems" is tracked here as:
 | R-20260622-37 | Do not count an above-threshold retained-color packet as paid by relabeling it charged. | Cycle112 proves the exact no-double-spend `q_line` ledger: if final retained colors exceed `floor(q_line/2^128)`, an additive charge partition can close only by exact source rejection, color compression, or a separately proved numerator-changing theorem. Disjoint block packets have a real matching cap, but interval/P190-style packets require frozen source/APcorr replay. | Applied |
 | R-20260622-38 | Treat Cycle113 as a missing-receipt route cut plus stronger model stress, not as an official terminal. | Cycle113 shows P190 and C284 are sharp above-threshold stress packets under natural same-field `t=1` arithmetic, but all positive official terminals require a pinned official source root, official `AP_corr`, endpoint/final-color map, charge registry, and `q_line` allocation receipts. | Applied |
 | R-20260624-01 | Promote Cycle120 official-source gate audit as the live prize-facing bottleneck after Cycle119 strict-263. | The public Proximity Prize page makes the row/rate gate look green for `RS[F_17^32,H,256]` with rate `1/2`, and the local ABF-linked source slices identify `epsilon_mca` with support-wise same-support noncontainment and `gamma <- F`; direct ABF26 PDF extraction is still needed for Definition 4.3 and the exact "smooth domain" wording. | Active |
+| R-20260624-02 | Upgrade Cycle120 from tentative source-gate audit to direct ABF admissibility pass for the grand MCA formulation. | The ABF PDF directly states: smooth domains are multiplicative cosets of subgroups of `F*` of power-of-two order; the grand MCA row is `RS[F,L,k]` with rate including `1/2`, mostly `k<=2^40` and `|F|<2^256`; Definition 4.3 samples `gamma<-F` uniformly and uses the support-wise same-support noncontainment event with `|S| >= (1-delta)n`. Thus the Cycle116 agreement-262 theorem already meets ABF at `delta=125/256`, while Cycle119 agreement-263 is stronger. | Active |
 
 ## New Promising Directions
 
@@ -218,6 +219,10 @@ CYCLE119_DISJOINTNESS_PATCH: THETA2_ETA_D0_THETA2_H_EVEN_ODD_COSET_JT_SUBSET_D0_
 CYCLE120_OFFICIAL_SOURCE_GATE_AUDIT: PUBLIC_PRIZE_SITE_ROW_RATE_GREEN_ABF_DEF43_DIRECT_EXTRACTION_PENDING
 CYCLE120_SOURCE_GATE_FILE: experimental/notes/m1/cycle119_official_source_audit/V_CYCLE120_OFFICIAL_SOURCE_GATE_AUDIT.md
 CYCLE120_PROXIMITYPRIZE_SNAPSHOT_SHA256: 82618A3F0E407BEF82E7E591CC316C89713C7FA2F48CDBC35BC2E6F589B7E5DE
+CYCLE120_ABF_DIRECT_ADMISSIBILITY: ROW_DOMAIN_PREDICATE_SAMPLER_FILTER_GATES_PASS_FOR_GRAND_MCA
+CYCLE120_ABF_DIRECT_AUDIT_FILE: experimental/notes/m1/cycle119_official_source_audit/V_CYCLE120_ABF_DIRECT_ADMISSIBILITY_AUDIT.md
+CYCLE120_ABF_PDF_SHA256: E543EC6A4F3312B4383000E72E5AA23862E79CC9770CE21DB2C48DB679581DE3
+CYCLE120_ABF_CLOSED_THRESHOLD: DELTA_125_256_N512_REQUIRES_AGREEMENT_262_CYCLE116_SUFFICES_CYCLE119_STRONGER
 CYCLE117_IF_REJECTED: ACCEPTED_FIELD_FIXED_JET_OCCUPANCY_COMPILER
 L1_REPAIR: RAW_ARBITRARY_FIBER_FALSE_REPAIRED_OBJECTS_BANKED_SPARSE_SYNDROME_OPEN
 F1_GAP: ARBITRARY_ANCHOR_BALANCED_RESIDUE_CLOUD
