@@ -1,0 +1,43 @@
+{
+  "claim_binding": {
+    "cycle116_manifest_path": "../base_cycle116/MANIFEST.sha256",
+    "cycle116_manifest_sha256": "f1d95792e563aed890070f234f8d9361c7df1afd319bb41ea562f184b81dc5c4",
+    "role05_response_path": "../imports/05_role05_response.md",
+    "role05_response_sha256": "fd0d93db5120277d356f7655226a7888c1ce886377ae8b3e90de0ea79c00214c"
+  },
+  "field_ledger": {
+    "q_chal": null,
+    "q_code": "17^32",
+    "q_gen": "17^32",
+    "q_line": "17^32"
+  },
+  "finite": {
+    "distinct_products": 52747567092,
+    "packet_supports": 52747567104
+  },
+  "parameters": {
+    "R_size": 136,
+    "agreement": 263,
+    "j": 249,
+    "k": 256,
+    "n": 512,
+    "native_j": 113,
+    "r": 256,
+    "sigma": 7,
+    "strict_distance_integer_cutoff": 250,
+    "strict_radius_denominator": 256,
+    "strict_radius_numerator": 125
+  },
+  "partition": {
+    "A_odd_coset_exponent_range_inclusive": [
+      0,
+      119
+    ],
+    "R_odd_coset_exponent_range_inclusive": [
+      120,
+      255
+    ]
+  },
+  "schema": "cycle118.two_ended_agreement_263.v1",
+  "terminal": "CYCLE118_TWO_ENDED_AGREEMENT_263_TRANSFER_VERIFIED"
+}

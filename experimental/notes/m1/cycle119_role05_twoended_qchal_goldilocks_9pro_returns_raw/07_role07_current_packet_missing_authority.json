@@ -1,0 +1,40 @@
+{
+  "authority_root": null,
+  "bad_event_pullback_or_filter": {
+    "reason": "OFFICIAL_EVENT_PULLBACK_OR_FILTER_MISSING",
+    "status": "UNDEFINED"
+  },
+  "challenge_distribution": {
+    "reason": "NO_AUTHORITY_PINNED_OFFICIAL_CONTRACT",
+    "status": "UNDEFINED"
+  },
+  "challenge_space": {
+    "reason": "NO_AUTHORITY_PINNED_OFFICIAL_CONTRACT",
+    "status": "UNDEFINED"
+  },
+  "challenge_to_line_parameter_map": {
+    "reason": "OFFICIAL_CHALLENGE_TO_LINE_MAP_MISSING",
+    "status": "UNDEFINED"
+  },
+  "duplicate_policy": {
+    "reason": "OFFICIAL_DUPLICATE_POLICY_MISSING",
+    "status": "UNDEFINED"
+  },
+  "final_retained_numerator": {
+    "numerator_scope": "CYCLE116_CERTIFIED_EVENT_PACKET",
+    "official_numerator": null,
+    "reason": "NO_AUTHORITY_PINNED_OFFICIAL_CONTRACT",
+    "source_certified_numerator": 52747567092,
+    "status": "UNDEFINED"
+  },
+  "line_field": {
+    "reason": "OFFICIAL_LINE_FIELD_UNPINNED",
+    "status": "UNDEFINED"
+  },
+  "q_chal": null,
+  "quotient_or_charge_policy": {
+    "reason": "OFFICIAL_QUOTIENT_OR_CHARGE_POLICY_MISSING",
+    "status": "UNDEFINED"
+  },
+  "source_definition_hash": "89ebe887c02064a52b840c5e96992ff4f328575280a8f6dbed86e2b7dd7e7327"
+}

@@ -1,0 +1,12 @@
+PASS current_packet_missing_authority.json -> UNDEFINED_MAP_NO_OFFICIAL_CLAIM
+PASS direct_k_valid.json -> DIRECT_K_SAMPLING_CYCLE116_DENSITY_RETAINED
+PASS balanced_projection_valid.json -> BALANCED_CHALLENGE_PROJECTION_NO_LOSS
+PASS identity_E_scalar_extension_valid.json -> IDENTITY_E_SCALAR_EXTENSION_CYCLE116_LINE_KILLED
+PASS official_filter_drops_below.json -> OFFICIAL_EVENT_FILTER_DROPS_BELOW_THRESHOLD
+PASS balanced_dedup_drops_below.json -> OFFICIAL_EVENT_FILTER_DROPS_BELOW_THRESHOLD
+PASS undefined_map_valid_root.json -> UNDEFINED_MAP_NO_OFFICIAL_CLAIM
+PASS lossy_but_still_above.json -> UNDEFINED_MAP_NO_OFFICIAL_CLAIM
+PASS tampered_source_hash.json -> UNDEFINED_MAP_NO_OFFICIAL_CLAIM
+PASS direct_k_valid.json -> UNDEFINED_MAP_NO_OFFICIAL_CLAIM
+PASS wrong external trust pin -> UNDEFINED_MAP_NO_OFFICIAL_CLAIM
+ALL_QCHAL_SAMPLER_MAP_SELF_TESTS_PASSED

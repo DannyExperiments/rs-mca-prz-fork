@@ -1,0 +1,59 @@
+{
+  "authority_root": "010bf4b107dcca1082a8a11b489bf44b7589e8c96a4e23fe8c91c5a85da15b24",
+  "bad_event_pullback_or_filter": {
+    "base_event": "CYCLE116_CERTIFIED_BAD_SLOPES_AGREEMENT_262",
+    "base_slope_numerator": 52747567092,
+    "event_scope": "CYCLE116_CERTIFIED_EVENT_PACKET",
+    "filter_action": "RETAIN",
+    "postfilter_numerator": 52747567092,
+    "prefilter_numerator": 52747567092,
+    "pullback": "EXACT_PREIMAGE",
+    "status": "DEFINED"
+  },
+  "challenge_distribution": {
+    "kind": "UNIFORM",
+    "status": "DEFINED"
+  },
+  "challenge_space": {
+    "cardinality": 2367911594760467245844106297320951247361,
+    "characteristic": 17,
+    "degree": 32,
+    "extension_over_K_degree": 1,
+    "kind": "FINITE_FIELD",
+    "status": "DEFINED"
+  },
+  "challenge_to_line_parameter_map": {
+    "codomain_cardinality": 2367911594760467245844106297320951247361,
+    "domain_cardinality": 2367911594760467245844106297320951247361,
+    "kind": "IDENTITY",
+    "status": "DEFINED"
+  },
+  "duplicate_policy": {
+    "action": "COUNT_CHALLENGE_OCCURRENCES",
+    "input_numerator": 52747567092,
+    "output_numerator": 52747567092,
+    "status": "DEFINED"
+  },
+  "final_retained_numerator": {
+    "all_bad_event_upper_bound": null,
+    "certified_event_numerator": 52747567092,
+    "numerator_scope": "CYCLE116_CERTIFIED_EVENT_PACKET",
+    "status": "DEFINED"
+  },
+  "line_field": {
+    "cardinality": 2367911594760467245844106297320951247361,
+    "characteristic": 17,
+    "degree": 32,
+    "extension_over_K_degree": 1,
+    "kind": "FINITE_FIELD",
+    "status": "DEFINED"
+  },
+  "q_chal": 2367911594760467245844106297320951247361,
+  "quotient_or_charge_policy": {
+    "action": "NONE",
+    "input_numerator": 52747567092,
+    "output_numerator": 52747567092,
+    "status": "DEFINED"
+  },
+  "source_definition_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+}

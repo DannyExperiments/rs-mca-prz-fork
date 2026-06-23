@@ -1,0 +1,55 @@
+{
+  "base_receipt": "CYCLE116_TRANSFER_CERTIFICATE_VERIFIED",
+  "block_constant_checks": 336,
+  "decision": "CYCLE118_TWO_ENDED_AGREEMENT_263_TRANSFER_VERIFIED",
+  "degree_ledger": {
+    "native_difference_max": 107,
+    "padded_difference_max": 243,
+    "padding_degree": 136,
+    "required_max": 243
+  },
+  "field_ledger": {
+    "q_chal": null,
+    "q_code": 2367911594760467245844106297320951247361,
+    "q_gen": 2367911594760467245844106297320951247361,
+    "q_line": 2367911594760467245844106297320951247361
+  },
+  "floor_q_over_2^128": 6,
+  "noncontainment": {
+    "ambient_dimension": 256,
+    "beta_outside_domain": true,
+    "vandermonde_columns": 250
+  },
+  "numerator": 52747567092,
+  "parameters": {
+    "agreement": 263,
+    "distance_at_most": 249,
+    "j": 249,
+    "k": 256,
+    "n": 512,
+    "r": 256,
+    "sigma": 7
+  },
+  "partition": {
+    "A_size": 120,
+    "R_size": 136,
+    "agreement": 263
+  },
+  "scope": "finite/source-scoped LD_sw theorem; no official contract claim",
+  "shell_constant": "P_T(0)=-1 for every color-shell tuple",
+  "strictly_above_2^-128": true,
+  "two_ended_evaluator": {
+    "basis_checks": 7,
+    "common_constant_nonzero": true,
+    "common_top_coefficients": 6,
+    "selected_coefficients": [
+      0,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255
+    ]
+  }
+}

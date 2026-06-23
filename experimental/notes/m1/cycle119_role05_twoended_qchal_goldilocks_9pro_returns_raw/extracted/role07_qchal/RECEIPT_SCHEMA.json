@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cycle119.qchal_sampler_map_receipt.v1",
+  "title": "Cycle119 fail-closed q_chal sampler-map receipt",
+  "type": "object",
+  "required": [
+    "authority_root",
+    "source_definition_hash",
+    "challenge_space",
+    "challenge_distribution",
+    "q_chal",
+    "line_field",
+    "challenge_to_line_parameter_map",
+    "bad_event_pullback_or_filter",
+    "duplicate_policy",
+    "quotient_or_charge_policy",
+    "final_retained_numerator"
+  ],
+  "properties": {
+    "authority_root": {
+      "description": "Payload hash; valid only when independently supplied as the checker trust pin.",
+      "type": ["string", "null"],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "source_definition_hash": {
+      "const": "89ebe887c02064a52b840c5e96992ff4f328575280a8f6dbed86e2b7dd7e7327"
+    },
+    "challenge_space": {"$ref": "#/$defs/fieldOrUndefined"},
+    "challenge_distribution": {"$ref": "#/$defs/distributionOrUndefined"},
+    "q_chal": {"type": ["integer", "null"], "minimum": 2},
+    "line_field": {"$ref": "#/$defs/fieldOrUndefined"},
+    "challenge_to_line_parameter_map": {"$ref": "#/$defs/mapOrUndefined"},
+    "bad_event_pullback_or_filter": {"$ref": "#/$defs/eventOrUndefined"},
+    "duplicate_policy": {"$ref": "#/$defs/duplicateOrUndefined"},
+    "quotient_or_charge_policy": {"$ref": "#/$defs/chargeOrUndefined"},
+    "final_retained_numerator": {"$ref": "#/$defs/finalOrUndefined"}
+  },
+  "$defs": {
+    "undefined": {
+      "type": "object",
+      "required": ["status", "reason"],
+      "properties": {
+        "status": {"const": "UNDEFINED"},
+        "reason": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "field": {
+      "type": "object",
+      "required": ["status", "kind", "characteristic", "degree", "cardinality", "extension_over_K_degree"],
+      "properties": {
+        "status": {"const": "DEFINED"},
+        "kind": {"const": "FINITE_FIELD"},
+        "characteristic": {"const": 17},
+        "degree": {"type": "integer", "minimum": 32},
+        "cardinality": {"type": "integer", "minimum": 2},
+        "extension_over_K_degree": {"type": "integer", "minimum": 1},
+        "K_coordinate_model": {
+          "type": "object",
+          "required": ["kind", "dimension", "basis_id"],
+          "properties": {
+            "kind": {"const": "ORDERED_K_BASIS_COORDINATES"},
+            "dimension": {"type": "integer", "minimum": 1},
+            "basis_id": {"type": "string", "minLength": 1}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "fieldOrUndefined": {"oneOf": [{"$ref": "#/$defs/field"}, {"$ref": "#/$defs/undefined"}]},
+    "distribution": {
+      "type": "object",
+      "required": ["status", "kind"],
+      "properties": {
+        "status": {"const": "DEFINED"},
+        "kind": {"const": "UNIFORM"}
+      },
+      "additionalProperties": false
+    },
+    "distributionOrUndefined": {"oneOf": [{"$ref": "#/$defs/distribution"}, {"$ref": "#/$defs/undefined"}]},
+    "identityMap": {
+      "type": "object",
+      "required": ["status", "kind", "domain_cardinality", "codomain_cardinality"],
+      "properties": {
+        "status": {"const": "DEFINED"},
+        "kind": {"const": "IDENTITY"},
+        "domain_cardinality": {"type": "integer", "minimum": 2},
+        "codomain_cardinality": {"type": "integer", "minimum": 2}
+      },
+      "additionalProperties": false
+    },
+    "projectionMap": {
+      "type": "object",
+      "required": ["status", "kind", "K_dimension", "coordinate_index", "coordinate_encoding", "basis_id", "fiber_size"],
+      "properties": {
+        "status": {"const": "DEFINED"},
+        "kind": {"const": "K_COORDINATE_PROJECTION"},
+        "K_dimension": {"type": "integer", "minimum": 2},
+        "coordinate_index": {"const": 0},
+        "coordinate_encoding": {"const": "ORDERED_K_TUPLE"},
+        "basis_id": {"type": "string", "minLength": 1},
+        "fiber_size": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "mapOrUndefined": {"oneOf": [{"$ref": "#/$defs/identityMap"}, {"$ref": "#/$defs/projectionMap"}, {"$ref": "#/$defs/undefined"}]},
+    "event": {
+      "type": "object",
+      "required": ["status", "base_event", "event_scope", "base_slope_numerator", "pullback", "prefilter_numerator", "filter_action", "postfilter_numerator"],
+      "properties": {
+        "status": {"const": "DEFINED"},
+        "base_event": {"const": "CYCLE116_CERTIFIED_BAD_SLOPES_AGREEMENT_262"},
+        "event_scope": {"const": "CYCLE116_CERTIFIED_EVENT_PACKET"},
+        "base_slope_numerator": {"const": 52747567092},
+        "pullback": {"const": "EXACT_PREIMAGE"},
+        "prefilter_numerator": {"type": "integer", "minimum": 0},
+        "filter_action": {"enum": ["RETAIN", "FILTER"]},
+        "postfilter_numerator": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "eventOrUndefined": {"oneOf": [{"$ref": "#/$defs/event"}, {"$ref": "#/$defs/undefined"}]},
+    "duplicate": {
+      "type": "object",
+      "required": ["status", "action", "input_numerator", "output_numerator"],
+      "properties": {
+        "status": {"const": "DEFINED"},
+        "action": {"enum": ["COUNT_CHALLENGE_OCCURRENCES", "DEDUPLICATE_OR_IDENTIFY"]},
+        "input_numerator": {"type": "integer", "minimum": 0},
+        "output_numerator": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "duplicateOrUndefined": {"oneOf": [{"$ref": "#/$defs/duplicate"}, {"$ref": "#/$defs/undefined"}]},
+    "charge": {
+      "type": "object",
+      "required": ["status", "action", "input_numerator", "output_numerator"],
+      "properties": {
+        "status": {"const": "DEFINED"},
+        "action": {"enum": ["NONE", "QUOTIENT_OR_CHARGE"]},
+        "input_numerator": {"type": "integer", "minimum": 0},
+        "output_numerator": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "chargeOrUndefined": {"oneOf": [{"$ref": "#/$defs/charge"}, {"$ref": "#/$defs/undefined"}]},
+    "final": {
+      "type": "object",
+      "required": ["status", "numerator_scope", "certified_event_numerator", "all_bad_event_upper_bound"],
+      "properties": {
+        "status": {"const": "DEFINED"},
+        "numerator_scope": {"const": "CYCLE116_CERTIFIED_EVENT_PACKET"},
+        "certified_event_numerator": {"type": "integer", "minimum": 0},
+        "all_bad_event_upper_bound": {"type": ["integer", "null"], "minimum": 0},
+        "all_bad_event_upper_bound_scope": {"const": "FULL_SCALAR_EXTENDED_CYCLE116_LINE"}
+      },
+      "additionalProperties": false
+    },
+    "finalOrUndefined": {"oneOf": [{"$ref": "#/$defs/final"}, {"$ref": "#/$defs/undefined"}]}
+  },
+  "additionalProperties": false
+}

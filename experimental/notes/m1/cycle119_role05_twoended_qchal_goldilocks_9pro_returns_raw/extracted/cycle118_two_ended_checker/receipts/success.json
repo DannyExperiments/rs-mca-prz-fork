@@ -1,0 +1,126 @@
+{
+  "decision": "CYCLE118_TWO_ENDED_AGREEMENT_263_TRANSFER_VERIFIED",
+  "field_parameter_ledger": {
+    "bad_slope_numerator": 52747567092,
+    "challenge_distribution": null,
+    "challenge_space": null,
+    "challenge_to_line_parameter_map": null,
+    "floor_q_line_over_2^128": 6,
+    "mca_denominator": "q_line",
+    "q_chal": null,
+    "q_code": 2367911594760467245844106297320951247361,
+    "q_gen": 2367911594760467245844106297320951247361,
+    "q_line": 2367911594760467245844106297320951247361,
+    "strict_integer_test": "2^128*52747567092 > 17^32"
+  },
+  "finite_checks": {
+    "A_star_size": 120,
+    "P_R_beta_nonzero": true,
+    "P_R_zero_nonzero": true,
+    "R_star_size": 136,
+    "block_product_scalar_identities_checked": 336,
+    "cycle84_distinct_occupancy": 52747567092,
+    "cycle84_packet_supports": 52747567104,
+    "dft_root_sum_checks": 256,
+    "reference_annihilator_basis_checks": 7,
+    "reference_distance_upper_bound": 249,
+    "reference_evaluator_basis_checks": 7,
+    "slot_constant_identities_checked": 336,
+    "slot_states_checked": 336
+  },
+  "imports": {
+    "base_manifest_files_verified": 18,
+    "cycle84_sha256": {
+      "light_receipt": "93177a6892e3aaf362d2414010f173eaa0dbc7e78c1f1f680bfbb5290dd2cb8a",
+      "master": "4abc98c8521856428c7c21b31ebfdb3380e32a9c1703202a50b3fcab85488088",
+      "slot_logs": "d4379b3ed97c4ae2a43511796e3bcb15514d3f5f989f15b6fb1bc9fc85c779d8",
+      "standalone_note": "14b3e668347e42af97440c5cf160c873cdb2f97d3b65e20f69b9ca3b6997e4cb"
+    },
+    "cycle84_values_consumed_not_recensused": true,
+    "metadata_notice": {
+      "executable_slot_log_generator": [
+        2,
+        1
+      ],
+      "master_display_generator": [
+        1,
+        1
+      ],
+      "status": "NONFATAL_METADATA_MISMATCH"
+    },
+    "role05_response_sha256": "fd0d93db5120277d356f7655226a7888c1ce886377ae8b3e90de0ea79c00214c"
+  },
+  "label": "PROOF",
+  "one_common_affine_line_receipt": {
+    "agreement_support_size": 263,
+    "all_explaining_errors": "for every shell tuple T, e_T is the unique J_T*-supported word with He_T=y0+z_T*y1; c_T=f+z_T*g-e_T",
+    "construction": "choose the unique D0-supported f,g with Hf=y0 and Hg=(1,beta,...,beta^255); z_T=-1/P_T*(beta)",
+    "deterministic_right_inverse": "for x in D0, w_y(x)=L_H'(x)*(1/256)*sum_{m=0}^{255} y_m*x^{-m}; zero on theta*D0",
+    "distance_upper_bound": 249,
+    "reference_agreement_support_sha256": "c7a608347a777e41e82e337fae148a1d2dd4610fcb971041230852e6557615ea",
+    "reference_cosupport_sha256": "695d34f7414de69b26274b59d2dbc6d8c8bf5b12d316049f473669ee68b520c7",
+    "reference_target_syndrome_sha256": "5c77daadde11bb4d099e1317dec5633f87a10ff5db299a7e41be01eef3a8edaf",
+    "reference_tuple": [
+      4,
+      26,
+      46,
+      12,
+      32,
+      22,
+      40
+    ],
+    "y0_sha256": "8072f142dd6cb5d5edaf79bcf1fb569a2c0fe888d10a91087f5d896f349b0357",
+    "y1_sha256": "7cc8d429e02577adf2765bf2bab5fdf13bcbe80e1da62634bf7eb25ffb72926d",
+    "z_ref_sha256": "3ee56c85daca0d5528471a08d4e34dd0d03f9a4569c2274d95582dacf7dc70df"
+  },
+  "row": {
+    "LD_sw_lower_bound": 52747567092,
+    "agreement": 263,
+    "code": "RS[F_17^32,H,256]",
+    "epsilon_mca_lower_bound": "52747567092/17^32",
+    "exact_source_radius": "249/512",
+    "j": 249,
+    "k": 256,
+    "n": 512,
+    "sigma": 7,
+    "strict_external_radius": "distance < (125/256)*512 = 250",
+    "strictly_greater_than_2^-128": true
+  },
+  "scope": {
+    "asymptotic_theorem": false,
+    "official_proximity_prize_counterpacket": false,
+    "ordinary_list_decoding_lower_bound": false,
+    "protocol_soundness_failure": false,
+    "theorem": "finite attached-packet/source-scoped support-wise LD_sw"
+  },
+  "symbolic_lemmas": {
+    "cycle84_shell_constant": "L_{t,i,a}(0)=3^(t+color); sum(t)+shell_color=28+4=32, so P_T(0)=-1",
+    "distinct_evaluations": 52747567092,
+    "native_common_jet": "P_T=X^113-X^112+degree<=107",
+    "noncontainment": "J union {beta} gives 250 distinct Vandermonde columns in dimension 256",
+    "padded_common_top_six": "deg(P_R*(P_T-P_T'))<=136+107=243=249-7+1",
+    "parity_check_kernel": "ker H=RS[K,H,256]",
+    "product_scalar": "P_T*(beta)=P_R*(beta)*4*(beta-1)*Phi(T)",
+    "two_ended_evaluator": "coordinates [X^0] and [X^250]..[X^255] recover a_0..a_6; determinant=P_T*(0)!=0"
+  },
+  "two_ended_data": {
+    "P_R_beta_sha256": "a8dbd15b1564b605a542c42395c225787aa56a4e69449766a57c9db0c755c7ab",
+    "P_R_polynomial_sha256": "33e2afdc19c1aa65f0145f3d96a1e395bcf6ac0280cebc8aacea1083fdf6a1f0",
+    "P_R_zero_sha256": "08a4249e1683a6c1e0fb2af13d8785a0f4d89c44f8df1323ce4b8a91acf7c5fb",
+    "common_constant_sha256": "16583907b45aea780fefaa1dd69422f514376043ca4e7f322ead5097e4a0fbf5",
+    "evaluator_determinant": "P_T*(0)",
+    "evaluator_matrix_sha256": "52dacb13c09ec942142bafd5ccffb569db762d4f27e4c0e4ccaf5534b9ab8348",
+    "evaluator_weights_sha256": "b28f694dcd4d829342de198b66a9eb4c5e3052a41aa9e6ece7079669de24de3a",
+    "fixed_scalar_sha256": "b6de0fe1b401d71583eaa3b3484de8d6456bade4cc7198ee7115110a2365fc9a",
+    "reference_P_T_star_sha256": "9b4d7c4b480122f9e36c616850c9e093a8d3b00fd8e261c51b48e32fbf5e3a0d",
+    "selected_degrees": [
+      0,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255
+    ]
+  }
+}

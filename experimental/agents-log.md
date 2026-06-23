@@ -2685,3 +2685,39 @@ Keep entries concise and link to the relevant files.
   instructed to return either a replayable proof/checker or the exact fatal
   line. Direct scalar field thickening is explicitly route-cut by corrected
   Role07 unless an official balanced challenge projection is supplied.
+
+### 2026-06-23 - Cycle119 Role05/qchal/Goldilocks returns audited
+
+- **Agent/model:** Codex local audit of pasted nine-Pro returns plus downloaded
+  generated files.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle119_role05_twoended_qchal_goldilocks_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle119_role05_twoended_qchal_goldilocks_returns_audit.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`, and `experimental/agents-log.md`.
+- **Status:** PROOF / BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being banked:** Role05's two-ended agreement-263 theorem is now
+  banked as a finite/source-scoped theorem:
+  `LD_sw(RS[F_17^32,H,256],263) >= 52,747,567,092`. The proof avoids the
+  degree-256 padding defect by constructing the final `[512,256]` line directly
+  in parity-check space from coefficient selectors `0,250..255`, using the
+  common top six locator coefficients plus the common nonzero constant.
+- **Local validation:** Downloaded Role01, Role03, Role07, and Role08 generated
+  files were preserved and hashed. `03_role03_cycle118_twoended_checker.py`
+  replayed against the local Cycle119 packet and emitted
+  `CYCLE118_TWO_ENDED_AGREEMENT_263_TRANSFER_VERIFIED`, with
+  `hidden_seventh_top_coefficient_used=false`, agreement `263`, distance upper
+  bound `249`, full numerator `52,747,567,092`, and `q_chal=null`. The qchal
+  sampler-map current receipt emitted `UNDEFINED_MAP_NO_OFFICIAL_CLAIM`, and
+  its self-tests passed after using a local `python3` shim. The Goldilocks
+  fallback checker emitted
+  `CYCLE119_GOLDILOCKS_FIXED_JET_COMPILER_VERIFIED_EXISTENTIAL_BETA` and
+  `SELF_TESTS_PASS`.
+- **What not to claim:** Still no official Proximity Prize solve, ordinary
+  fixed-word list decoding, protocol soundness failure, asymptotic theorem,
+  official `q_chal=q_line`, or accepted prime-field/deployed-row theorem. The
+  official row/event/challenge/sampler/retention contract remains missing.
+- **What to do next:** Stop enlarging the same-row numerator. Attack
+  `V-CYCLE119-AUTHORITY-PINNED-STRICT263-ROW-EVENT-QCHAL-MASS-RECEIPT` or the
+  safer `V-CYCLE119-AUTHORITY-PINNED-STRICT264-2187-ROW-EVENT-QCHAL-CONTRACT`.
+  If extension fields are rejected, pivot to
+  `V-CYCLE119-AUTHORITY-PINNED-GOLDILOCKS-EXPLICIT64-ROW-EVENT-QCHAL-CONTRACT`.

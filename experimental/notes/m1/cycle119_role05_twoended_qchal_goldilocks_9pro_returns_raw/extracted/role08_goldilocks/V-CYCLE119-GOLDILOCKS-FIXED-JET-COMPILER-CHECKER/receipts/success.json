@@ -1,0 +1,65 @@
+{
+  "domain": {
+    "H8_fiber_size": 8,
+    "H8_image_size": 64,
+    "order": 512,
+    "theta": 1803076106186727246,
+    "theta_256": 18446744069414584320,
+    "theta_512": 1
+  },
+  "explicit_subpacket": {
+    "agreement": 264,
+    "beta": 0,
+    "distinct_slopes": 64,
+    "line": "u_z(x)=x^263+z*x^(-1)",
+    "mode": "BETA_ZERO_CONSTRUCTIVE"
+  },
+  "field": {
+    "prime_proof": "PROTH_WITNESS_7",
+    "proth": {
+      "k": 4294967295,
+      "n": 32,
+      "residue": 18446744069414584320,
+      "witness": 7
+    },
+    "q": 18446744069414584321
+  },
+  "field_ledger": {
+    "denominator": "q_line",
+    "q_chal": null,
+    "q_code": 18446744069414584321,
+    "q_gen": 18446744069414584321,
+    "q_line": 18446744069414584321
+  },
+  "fixed_jet": {
+    "difference_degree": 240,
+    "family_size": 1777090076065542336,
+    "j": 248,
+    "sigma": 8
+  },
+  "main_numerator": {
+    "beta_is_explicit": false,
+    "collision_cap": 20543782425128147188,
+    "cycle116_numerator_preserved": true,
+    "distinct_slopes_lower_bound": 73674899375228060,
+    "mode": "EXISTENTIAL_BETA_BY_COLLISION_AVERAGING"
+  },
+  "official_status": "OFFICIAL_ROW_EVENT_CHALLENGE_CONTRACT_PENDING",
+  "row": {
+    "agreement": 264,
+    "distance_upper_bound": 248,
+    "k": 256,
+    "n": 512,
+    "strict_target_distance": 250
+  },
+  "schema": "cycle119.goldilocks_fixed_jet_compiler.v1",
+  "scope": "FINITE_SOURCE_SCOPED_LD_SW_AND_MCA_ONLY",
+  "status": "VERIFIED",
+  "terminal": "CYCLE119_GOLDILOCKS_FIXED_JET_COMPILER_VERIFIED_EXISTENTIAL_BETA",
+  "threshold": {
+    "251L_minus_q": 45655673767658739,
+    "L": 73674899375228060,
+    "greater_than_2^-128": true,
+    "two128L_minus_q": 25070269142064574672831227426443107351868667228890071039
+  }
+}

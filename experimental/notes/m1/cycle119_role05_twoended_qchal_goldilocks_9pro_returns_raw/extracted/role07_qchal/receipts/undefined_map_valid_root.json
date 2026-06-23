@@ -1,0 +1,57 @@
+{
+  "authority_root": "5d552de0d600c3a31baaaa88a22efcd00d51fa4fa09a7866429d89151667025e",
+  "bad_event_pullback_or_filter": {
+    "base_event": "CYCLE116_CERTIFIED_BAD_SLOPES_AGREEMENT_262",
+    "base_slope_numerator": 52747567092,
+    "event_scope": "CYCLE116_CERTIFIED_EVENT_PACKET",
+    "filter_action": "RETAIN",
+    "postfilter_numerator": 52747567092,
+    "prefilter_numerator": 52747567092,
+    "pullback": "EXACT_PREIMAGE",
+    "status": "DEFINED"
+  },
+  "challenge_distribution": {
+    "kind": "UNIFORM",
+    "status": "DEFINED"
+  },
+  "challenge_space": {
+    "cardinality": 2367911594760467245844106297320951247361,
+    "characteristic": 17,
+    "degree": 32,
+    "extension_over_K_degree": 1,
+    "kind": "FINITE_FIELD",
+    "status": "DEFINED"
+  },
+  "challenge_to_line_parameter_map": {
+    "reason": "MAP_NOT_SPECIFIED",
+    "status": "UNDEFINED"
+  },
+  "duplicate_policy": {
+    "action": "COUNT_CHALLENGE_OCCURRENCES",
+    "input_numerator": 52747567092,
+    "output_numerator": 52747567092,
+    "status": "DEFINED"
+  },
+  "final_retained_numerator": {
+    "all_bad_event_upper_bound": null,
+    "certified_event_numerator": 52747567092,
+    "numerator_scope": "CYCLE116_CERTIFIED_EVENT_PACKET",
+    "status": "DEFINED"
+  },
+  "line_field": {
+    "cardinality": 2367911594760467245844106297320951247361,
+    "characteristic": 17,
+    "degree": 32,
+    "extension_over_K_degree": 1,
+    "kind": "FINITE_FIELD",
+    "status": "DEFINED"
+  },
+  "q_chal": 2367911594760467245844106297320951247361,
+  "quotient_or_charge_policy": {
+    "action": "NONE",
+    "input_numerator": 52747567092,
+    "output_numerator": 52747567092,
+    "status": "DEFINED"
+  },
+  "source_definition_hash": "89ebe887c02064a52b840c5e96992ff4f328575280a8f6dbed86e2b7dd7e7327"
+}

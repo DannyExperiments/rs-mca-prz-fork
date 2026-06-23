@@ -1,0 +1,4 @@
+python=Python 3.13.5
+platform=Linux f82f5233d913 4.4.0 #1 SMP Sun Jan 10 15:06:54 PST 2016 x86_64 GNU/Linux
+command=./run_checker.sh
+self_tests=./run_self_tests.sh
