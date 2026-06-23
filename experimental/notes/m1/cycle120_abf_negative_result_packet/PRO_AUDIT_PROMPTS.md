@@ -91,7 +91,7 @@ Audit the Cycle120 theorem note as if for a coding theory referee.
 
 Does it use standard notation?
 Does it overclaim?
-Does it clearly distinguish finite theorem, ABF consequence, strict addendum,
+Does it clearly distinguish theorem, ABF consequence, strict addendum,
 and non-claims?
 Is it suitable to become the main PDF for an arXiv/ePrint timestamp after
 human editing?
@@ -104,7 +104,7 @@ Return ACCEPTABLE_DRAFT or REVISION_REQUIRED with exact edits.
 ```text
 Audit the exact implication:
 
-If ABF Definition 4.3 is the grand MCA challenge definition, and the finite
+If ABF Definition 4.3 is the grand MCA challenge definition, and the
 Cycle116 theorem is correct, does
   LD_sw(C,262) >= 52,747,567,092
 imply
@@ -115,4 +115,3 @@ Check all denominators, quantifiers, support thresholds, and monotonicity.
 
 Return IMPLICATION_VALID or ROUTE_CUT with the first fatal line.
 ```
-

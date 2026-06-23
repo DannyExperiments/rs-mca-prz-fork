@@ -13,7 +13,7 @@ H = <theta> subset K^*,
 C = RS[K,H,256].
 ```
 
-Assuming the imported Cycle84 finite census and the Cycle116 fixed-jet
+Assuming the computed Cycle84 product census and the Cycle116 fixed-jet
 transfer theorem, the row satisfies
 
 ```text
@@ -114,16 +114,16 @@ but f1 and f2 are not simultaneously explained by codewords of C.
 This is exactly the support-wise same-support noncontainment predicate used in
 the Cycle116 and Cycle119 theorems.
 
-## 3. Imported Finite Theorem
+## 3. Computed Input And Transfer Theorem
 
-The Cycle84 finite census supplies
+The computed Cycle84 product census supplies
 
 ```text
 N = 52,747,567,092
 ```
 
-distinct product values on the designated Cycle84 shell. The banked finite
-receipt includes:
+distinct product values on the designated Cycle84 shell. The checked computation
+records:
 
 ```text
 maximum product fiber size = 2,
@@ -132,7 +132,7 @@ no product fiber of size >= 3,
 all 336 slot bridge identities.
 ```
 
-The Cycle116 fixed-jet transfer proves a finite support-wise theorem for the
+The Cycle116 fixed-jet transfer proves a support-wise theorem for the
 smooth row
 
 ```text
@@ -222,7 +222,7 @@ MCA-secure through radius `125/256`.
 
 ## 6. Cycle119 Strict Strengthening
 
-Cycle119 proves a stronger finite/source theorem on the same row:
+Cycle119 proves a stronger theorem on the same row:
 
 ```text
 LD_sw(C,263) >= 52,747,567,092.
@@ -315,4 +315,3 @@ prize money may be split among multiple submissions.
 
 Accordingly, this packet should be turned into a short human-edited PDF note
 before any public timestamp or prize email.
-

@@ -11,7 +11,7 @@ experimental/notes/m1/cycle120_abf_negative_result_packet/
 experimental/notes/m1/cycle119_official_source_audit/V_CYCLE120_ABF_DIRECT_ADMISSIBILITY_AUDIT.md
 ```
 
-The finite/source theorem is not the same object as an official Proximity Prize claim until all gates below are accepted.
+The theorem is not the same object as an official Proximity Prize claim until all gates below are accepted.
 
 ## Gate 1: Row
 
@@ -116,7 +116,7 @@ Extension field rejected:
   Activate Goldilocks prime-field fallback.
 
 Predicate mismatch:
-  Build a predicate adapter or stop at finite/source theorem.
+  Build a predicate adapter or stop at the theorem.
 
 Sampler mismatch:
   Prove balanced projection or exact pushforward mass.

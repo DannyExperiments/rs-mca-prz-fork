@@ -45,10 +45,9 @@ Claim discipline:
 
 ```text
 This packet claims an ABF-admissible negative result at delta = 125/256,
-conditional on the finite Cycle84/Cycle116 proof chain.
+conditional on the Cycle84 computation and Cycle116 proof chain.
 
 It does not claim the exact value of delta*_C, ordinary list decoding,
 protocol soundness failure, an asymptotic theorem, or peer-reviewed prize
 acceptance.
 ```
-

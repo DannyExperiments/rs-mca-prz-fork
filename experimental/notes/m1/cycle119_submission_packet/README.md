@@ -19,7 +19,7 @@ and two-ended theorem packet.
 Purpose:
 
 ```text
-Prepare the Cycle119 strict-263 finite/source theorem for expert review and,
+Prepare the Cycle119 strict-263 theorem for expert review and,
 conditional on official admissibility, Proximity Prize negative-result submission.
 ```
 

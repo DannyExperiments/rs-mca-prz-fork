@@ -92,7 +92,7 @@ any award is shared equally among named authors unless otherwise specified.
 Immediate implication:
 
 ```text
-If the finite theorem survives review but does not determine exact delta*_C,
+If the theorem survives review but does not determine exact delta*_C,
 it can still be framed as prize-facing partial progress.
 Authorship and contribution statements should be decided before public upload.
 ```
@@ -106,4 +106,3 @@ proximityprize@ethereum.org
 ```
 
 Do not send the prize email before the PDF and supplementary packet are clean.
-

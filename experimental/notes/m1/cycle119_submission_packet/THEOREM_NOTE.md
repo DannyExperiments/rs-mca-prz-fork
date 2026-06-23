@@ -10,7 +10,7 @@ We prove a finite support-wise Reed-Solomon MCA lower bound for the smooth multi
 C = RS[F_17^32,H,256], |H|=512.
 ```
 
-Assuming the imported Cycle84 finite census, the Cycle119 two-ended locator transfer gives
+Assuming the computed Cycle84 product census, the Cycle119 two-ended locator transfer gives
 
 ```text
 LD_sw(C,263) >= 52,747,567,092.
@@ -26,9 +26,9 @@ epsilon_mca(C,125/256)
 
 This note does not claim ordinary list decoding, protocol soundness, asymptotics, or official Proximity Prize status without row/predicate/sampler admissibility.
 
-## 1. Imported Finite Census
+## 1. Computed Cycle84 Product Census
 
-We import the Cycle84 finite census:
+We import the computed Cycle84 product census:
 
 ```text
 N = 52,747,567,092

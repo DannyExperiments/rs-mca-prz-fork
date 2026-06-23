@@ -71,10 +71,10 @@ Return PROOF if clean, or ROUTE_CUT with the first fatal clause.
 ## Prompt 3: Kill Official Prize Admissibility
 
 ```text
-You are auditing whether the finite theorem implies an official Proximity Prize
+You are auditing whether the theorem implies an official Proximity Prize
 negative result.
 
-Finite theorem:
+Theorem:
   C=RS[F_17^32,H,256], |H|=512
   LD_sw(C,263)>=52,747,567,092
   distance <=249 < 250=(125/256)*512

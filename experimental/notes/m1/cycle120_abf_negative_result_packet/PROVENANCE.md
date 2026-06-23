@@ -49,7 +49,7 @@ page 9: Reed-Solomon and smooth-domain definitions
 page 17: Definition 4.3, MCA error
 ```
 
-## Cycle116 Finite Theorem
+## Cycle116 Theorem
 
 Cycle116 banked theorem:
 
