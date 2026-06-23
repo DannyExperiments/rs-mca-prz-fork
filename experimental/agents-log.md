@@ -29,6 +29,23 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-24 - Fixed-jet and two-ended transfer note extracted
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/fixed_jet_and_two_ended_transfer_note.md` and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** A standalone theorem note for the fixed-jet locator
+  transfer and the two-ended locator transfer, followed by the explicit
+  smooth-row example using the computed 84-state product input.
+- **How it is useful:** Turns the recent explicit-row work into reusable Paper
+  B mathematics. The note keeps the computed product count in the example
+  section and presents the transfer mechanisms as ordinary lemmas.
+- **What to do next:** Send this note, not the raw packets, to hostile
+  mathematical audit. The first useful question is: which line in either
+  transfer proof is false, if any?
+
 ### 2026-06-24 - Experimental-to-Papers A-D recalibration
 
 - **Agent/model:** Codex.
