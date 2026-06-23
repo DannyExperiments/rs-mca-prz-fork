@@ -2,6 +2,20 @@
 
 Date: 2026-06-23
 
+## Supersession Notice
+
+For the ABF grand MCA challenge as printed in ePrint 2026/680, use the
+Cycle120 packet:
+
+```text
+experimental/notes/m1/cycle120_abf_counterexample_packet/
+```
+
+Cycle120 directly checks the ABF row/domain/predicate/sampler gates and records
+that Cycle116 agreement `262` already meets the ABF closed threshold at
+`delta=125/256`. This Cycle119 packet remains the strict-ball strengthening
+and two-ended theorem packet.
+
 Purpose:
 
 ```text
@@ -50,4 +64,3 @@ This is proved as a finite/source support-wise MCA and LD_sw theorem.
 It is a Proximity Prize counterexample candidate only if the official
 row/predicate/sampler/event contract matches the theorem.
 ```
-
