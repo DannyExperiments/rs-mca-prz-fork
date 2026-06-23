@@ -2731,7 +2731,7 @@ Keep entries concise and link to the relevant files.
   `experimental/notes/m1/cycle119_cold_packet/`, and
   `experimental/notes/m1/cycle119_cold_strict263_prize_candidate_packet.zip`.
 - **Zip SHA-256:**
-  `8fc5efd09dd220dd5aa5e0edbc57df5e00bca67d4e1c08c10bbf7ee777839326`.
+  `4115c71b2b4bd70b083fbdfb9529cf6cdfbac9f96686dc77ef27b30e04f0f9a8`.
 - **Purpose:** Strip the Cycle119 result down to a theorem-facing packet:
   executive theorem, two-ended locator theorem, proof, Cycle84 instantiation,
   strict radius arithmetic, local checker receipt, exact non-claims, and the
@@ -2750,7 +2750,7 @@ Keep entries concise and link to the relevant files.
   `experimental/notes/m1/cycle119_submission_packet/` and
   `experimental/notes/m1/cycle119_submission_prep_packet.zip`.
 - **Zip SHA-256:**
-  `d4d7673615f4e9a088ad114c8b5200fcf3b700941ba0578580285eda28d48767`.
+  `fb3b29099f0b12f0a4d6328280880e4da1536d6bff7c9b883a5f83abb04aebd8`.
 - **Contents:** `THEOREM_NOTE.md`, `OFFICIAL_ADMISSIBILITY_GATES.md`,
   `REFEREE_CHECKLIST.md`, `ADVERSARIAL_AUDIT_PROMPTS.md`, `PROVENANCE.md`,
   and `README.md`.
@@ -2759,3 +2759,28 @@ Keep entries concise and link to the relevant files.
   and provenance. The packet keeps the current status as
   finite/source `PROOF` plus official-admissibility `ROUTE_CUT`, not a public
   prize-solve claim.
+
+### 2026-06-23 - Cycle119 final-night adversarial returns audited
+
+- **Agent/model:** Codex audit of final no-internet hostile Pro returns.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle119_final_night_adversarial_returns_raw/`,
+  `experimental/notes/m1/m1_cycle119_final_night_adversarial_audit.md`, and
+  patched cold/submission theorem notes.
+- **Status:** Net positive for finite/source theorem. Abstract two-ended theorem
+  received independent `PROOF` confirmations. The main `ROUTE_CUT` returns
+  identified missing hypotheses in the compressed prompt, not a contradiction in
+  the actual packet.
+- **Patch applied:** The theorem notes now explicitly state
+  `theta^2=eta`, `ord(eta)=256`, `D0=<eta>=<theta^2>`,
+  `H=D0 disjoint_union thetaD0`, `J_T subset D0`, `R* subset thetaD0`, and
+  `beta notin H`, so `J_T cap R*=empty` and `P_T*=P_R*P_T` is the square-free
+  locator of `J_T union R*`.
+- **Updated packet hashes:**
+  cold packet
+  `4115c71b2b4bd70b083fbdfb9529cf6cdfbac9f96686dc77ef27b30e04f0f9a8`;
+  submission-prep packet
+  `fb3b29099f0b12f0a4d6328280880e4da1536d6bff7c9b883a5f83abb04aebd8`.
+- **What not to claim:** Official status remains `OFFICIAL_UNKNOWN`. The
+  Goldilocks fallback was not supplied to the final hostile prompt, so its
+  `ROUTE_CUT` is not an audit of the existing Goldilocks checker.

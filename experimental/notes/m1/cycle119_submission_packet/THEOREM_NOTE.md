@@ -250,7 +250,10 @@ Work in
 
 ```text
 K = F_17^32,
-H = <theta>, |H|=512.
+theta^2 = eta,
+ord(theta)=512,
+D0 = <eta> = <theta^2>, |D0|=256,
+H = <theta> = D0 disjoint_union theta D0, |H|=512.
 ```
 
 The native Cycle84 supports `J_T subset D_0=<eta>` have size `113` and locators
@@ -279,12 +282,23 @@ J_T* = J_T union R*,
 P_T* = P_R* P_T.
 ```
 
+The union is disjoint. Indeed,
+
+```text
+J_T subset D0,
+R* subset theta D0,
+H = D0 disjoint_union theta D0.
+```
+
 Then
 
 ```text
 |J_T*| = 113 + 136 = 249,
 |H \ J_T*| = 512 - 249 = 263.
 ```
+
+Moreover, because the roots are disjoint, `P_T*` is the square-free locator of
+`J_T*`, not merely a product with possible repeated factors.
 
 Since `deg(P_T-P_T') <= 107` and `deg P_R*=136`,
 
@@ -319,7 +333,9 @@ The augmented evaluation is
 P_T*(beta) = P_R*(beta) 4(beta-1) Phi(T),
 ```
 
-with fixed nonzero prefactor. Therefore the number of distinct augmented locator evaluations equals the imported Cycle84 occupancy:
+with fixed nonzero prefactor. Here `beta notin H`; hence `P_R*(beta) != 0`,
+and also `beta-1 != 0` because `1 in H`. Therefore the number of distinct
+augmented locator evaluations equals the imported Cycle84 occupancy:
 
 ```text
 #{P_T*(beta)} = #{Phi(T)} = 52,747,567,092.
@@ -416,4 +432,3 @@ no extra endpoint/quotient/charge/event filter?
 ```
 
 If yes, this theorem appears to be a Proximity Prize counterexample candidate at `delta=125/256`.
-

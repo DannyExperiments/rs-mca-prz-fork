@@ -1,0 +1,293 @@
+ROUTE_CUT:
+
+The supplied material does not contain the Goldilocks packet, so the implication
+
+[
+\text{“explicit packet with 64 slopes”}
+\quad\Longrightarrow\quad
+LD_{\mathrm{sw}}(C,264)\ge 64
+]
+
+is presently unjustified. A packet description is not a witness.
+
+There is also a decisive incompatibility if the 64 slopes are claimed to come from the stated two-ended locator theorem. That theorem assumes (P_J(0)=c) independently of (J) and produces
+
+[
+z_J=-P_J(\beta)^{-1}.
+]
+
+At (\beta=0),
+
+[
+z_J=-P_J(0)^{-1}=-c^{-1}
+]
+
+for every (J). Hence
+
+[
+#{z_J}=1,
+]
+
+not (64). Therefore a valid (\beta=0), 64-slope construction must be a genuinely different direct construction; it cannot be obtained from the supplied locator transfer without dropping or replacing its constant-term hypothesis.
+
+## 1. Structural independence from Cycle84
+
+Independence is not established merely by changing fields and parameters.
+
+For the Goldilocks row,
+
+[
+n=512,\qquad k=256,\qquad r=n-k=256,
+]
+[
+t=264,\qquad j=n-t=248,\qquad \sigma=r-j=8.
+]
+
+This differs from the Cycle84 instantiation, but parameter difference does not prove proof-theoretic independence.
+
+A fully explicit packet would be structurally independent in the relevant verification sense if its checker used only:
+
+[
+q,\ H,\ f,\ g,\ {z_i,S_i,c_i}_{i=1}^{64},
+]
+
+and did not invoke Cycle84 locators, the map (\Phi), or the claimed (52{,}747{,}567{,}092) count. Such a direct finite witness could be independently checked even if Cycle84 and the two-ended transfer were discarded entirely.
+
+As supplied, however, neither the packet nor its derivation is present. The huge assertion
+
+[
+LD_{\mathrm{sw}}(C,264)
+\ge 73{,}674{,}899{,}375{,}228{,}060
+]
+
+is also unsupported: no common line, locator family, counting argument, injectivity argument, or finite certificate is given. It should not be used in the public fallback proof.
+
+## 2. Prime-field and subgroup validity
+
+Algebraically, the Goldilocks field is suitable.
+
+Let
+
+[
+q=2^{64}-2^{32}+1
+=18{,}446{,}744{,}069{,}414{,}584{,}321.
+]
+
+Its multiplicative-group order factors as
+
+[
+q-1
+=2^{32}(2^{32}-1)
+=2^{32}\cdot3\cdot5\cdot17\cdot257\cdot65537.
+]
+
+Thus (q-1) is (65537)-smooth and
+
+[
+512=2^9\mid q-1.
+]
+
+Once (q) is prime, (\mathbb F_q^\times) is cyclic and therefore contains a unique subgroup of order (512).
+
+The primality of (q) has a finite Lucas–Pocklington certificate. For example, (7^{q-1}\equiv1\pmod q), and for each prime
+
+[
+\ell\in{2,3,5,17,257,65537},
+]
+
+one has
+
+[
+\gcd!\left(7^{(q-1)/\ell}-1,q\right)=1.
+]
+
+The corresponding residues are:
+
+[
+\begin{array}{c|r}
+\ell & 7^{(q-1)/\ell}\bmod q\ \hline
+2 & 18{,}446{,}744{,}069{,}414{,}584{,}320\
+3 & 18{,}446{,}744{,}065{,}119{,}617{,}025\
+5 & 1{,}373{,}043{,}270{,}956{,}696{,}022\
+17 & 16{,}301{,}593{,}560{,}007{,}290\
+257 & 995{,}085{,}315{,}851{,}368{,}103\
+65537 & 8{,}478{,}886{,}009{,}681
+\end{array}
+]
+
+with each displayed residue minus (1) coprime to (q). The small prime factors can themselves be recursively certified from their power-of-two predecessor factorizations.
+
+Consequently (7) has order (q-1), and one explicit order-(512) generator is
+
+[
+\theta
+======
+
+# 7^{(q-1)/512}
+
+7^{36{,}028{,}797{,}010{,}575{,}360}
+\bmod q
+=======
+
+1{,}803{,}076{,}106{,}186{,}727{,}246.
+]
+
+It satisfies
+
+[
+\theta^{512}=1,\qquad
+\theta^{256}=-1,
+]
+
+so its order is exactly (512).
+
+Therefore (q) prime together with an exact-order-(512) element is enough to define a clean prime-field RS row
+
+[
+RS[\mathbb F_q,H,256].
+]
+
+It is not enough to prove the list-decoding assertion or official admissibility.
+
+## 3. The 64-slope probability calculation
+
+Conditional on the packet being a valid common-line support-wise witness with 64 pairwise distinct slopes, it vastly exceeds the claimed probability threshold.
+
+Uniform sampling from all of (\mathbb F_q) gives
+
+[
+\Pr[\gamma\text{ is one of the 64 bad slopes}]
+=\frac{64}{q}.
+]
+
+Since (q<2^{64}),
+
+[
+\frac{64}{q}
+
+>
+
+# \frac{64}{2^{64}}
+
+2^{-58}
+
+>
+
+2^{-128}.
+]
+
+The margin is greater than a factor of (2^{70}). In fact, even one verified bad slope would suffice:
+
+[
+\frac1q>2^{-64}>2^{-128}.
+]
+
+The support size also clears the distance endpoint:
+
+[
+512-264=248<250
+=\frac{125}{256}\cdot512.
+]
+
+Thus the huge existential lower bound is unnecessary for the (2^{-128}) target. A verified 64-slope packet is more than sufficient.
+
+However, the packet would prove only the support-wise statement actually encoded by it. It would not prove
+
+[
+LD_{\mathrm{sw}}(C,264)
+\ge 73{,}674{,}899{,}375{,}228{,}060,
+]
+
+and it would not prove an ordinary list-decoding list of size (64) around one received word. The 64 slopes correspond to 64 different words (f+z_i g) on one affine line, not necessarily 64 codewords near a single received word.
+
+## Exact missing finite certificate
+
+To infer (LD_{\mathrm{sw}}(C,264)\ge64), the packet must supply one common pair (f,g\in\mathbb F_q^{512}) and, for (i=1,\ldots,64):
+
+[
+z_i\in\mathbb F_q,\qquad
+S_i\subseteq H,\qquad
+p_i\in\mathbb F_q[X],
+]
+
+such that:
+
+[
+z_i\ne z_j\quad(i\ne j),
+]
+
+[
+|S_i|\ge264,
+]
+
+[
+\deg p_i<256,
+]
+
+and
+
+[
+p_i(a)=f(a)+z_i g(a)
+\qquad\text{for every }a\in S_i.
+]
+
+Equivalently, with (c_i=(p_i(a))_{a\in H}\in C),
+
+[
+\operatorname{supp}(f+z_i g-c_i)
+\subseteq H\setminus S_i,
+]
+
+so
+
+[
+d_H(f+z_i g,c_i)\le248.
+]
+
+Any noncontainment condition built into the source definition must also be checked. In parity-check notation, if (J_i=H\setminus S_i) and (W_{J_i}) is the span of the parity columns indexed by (J_i), the analogue of the abstract theorem’s condition is
+
+[
+Hg\notin W_{J_i}.
+]
+
+No such data or verification appears in the prompt.
+
+## 4. Remaining official gates
+
+Even after the finite packet is supplied and verified, the following governing clauses are still missing:
+
+1. **Allowed field row.** The rules must permit the exact prime field
+   (\mathbb F_{2^{64}-2^{32}+1}). Rejection of extension fields does not logically imply acceptance of every prime field.
+
+2. **Challenge sampler.** The rules must state that the challenge scalar is sampled uniformly from all of (\mathbb F_q). The denominator (q) cannot be substituted for an undefined (q_{\mathrm{chal}}).
+
+3. **Challenge-size restriction.** The rules must not impose (q_{\mathrm{chal}}\ge2^{128}), a fixed challenge field, or a separate 128-bit challenge domain. The fact that one atom of a 64-bit field already has probability above (2^{-128}) makes this clause decisive.
+
+4. **Predicate identity.** The official bad event must be the source support-wise MCA event: the support and nearby codeword may depend on (\gamma), while the affine line (f+\gamma g) remains fixed. A rule asking for ordinary list decoding would not be satisfied by the slope packet.
+
+5. **Protocol semantics.** A support-wise finite witness does not automatically prove soundness failure for an interactive protocol. The commitment order, dependence of witnesses on (\gamma), and verifier predicate must coincide with the source theorem.
+
+6. **Endpoint convention.** The rules must accept distance (248) for the strict (<250) target and must not require an exact distance or exact support size different from the supplied row.
+
+7. **(\beta=0) admissibility.** Algebraically (0\notin H), so (\beta=0) is valid for (H\subset\mathbb F_q^\times). The official format must nevertheless permit this auxiliary point if (\beta) is part of the submitted construction.
+
+The decisive missing official clause is:
+
+[
+\boxed{\gamma\leftarrow\operatorname{Unif}(\mathbb F_q)
+\text{ for this permitted Goldilocks row, with the official predicate equal to source }LD_{\mathrm{sw}}.}
+]
+
+Without it, (64/q) is not an official-prize probability calculation.
+
+## 5. Public-fallback assessment
+
+A fully verified direct 64-slope Goldilocks packet would be a substantially cleaner public fallback than the extension-field Cycle84 route:
+
+* it uses a prime field with a completely smooth multiplicative-group order;
+* the subgroup can be specified and checked by two exponentiations;
+* the probability margin is (>2^{70});
+* the claimed (7.36\times10^{16}) existential count can be omitted;
+* the proof can be reduced to 64 direct polynomial-agreement checks.
+
+But that is only the salvaged route. As supplied, the packet is absent, the huge existential bound is unproved, and the stated locator theorem would collapse all (\beta=0) slopes to one. Therefore the current fallback is not bankable.

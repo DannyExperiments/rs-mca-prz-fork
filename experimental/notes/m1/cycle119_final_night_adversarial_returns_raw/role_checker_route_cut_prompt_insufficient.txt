@@ -1,0 +1,313 @@
+ROUTE_CUT_FINITE_CHECKER
+
+The abstract locator-to-(LD_{\mathrm{sw}}) transfer is algebraically sound. The numerical Cycle84 instantiation is not established by the supplied material.
+
+The first unsupported line is
+
+[
+J_T^*=J_T\cup R^*
+\quad\Longrightarrow\quad
+|J_T^*|=249.
+]
+
+The supplied facts only give (|J_T|=113) and (|R^*|=136). In general,
+
+[
+|J_T\cup R^*|
+=249-|J_T\cap R^*|.
+]
+
+No clause states (J_T\cap R^*=\varnothing). More fundamentally, the prompt never states
+
+[
+J_T\subseteq A^*\subseteq H,\qquad R^*\subseteq H,
+]
+
+nor does it define (\eta) or give an order condition ensuring that the points
+(\theta\eta^0,\ldots,\theta\eta^{255}) are distinct elements of (H). Consequently, it is not established that (J_T^*) is a 249-subset of the Reed–Solomon evaluation set (D=H), or that
+
+[
+P_T^*(X)=P_{R^*}(X)P_T(X)
+=\prod_{a\in J_T^*}(X-a)
+]
+
+is the squarefree monic locator required by the abstract theorem. If (J_T\cap R^*\neq\varnothing), the product has repeated roots and its degree (249) is not the cardinality of its root set; then the identity
+
+[
+W_{J_T^*}^{\perp}
+=================
+
+P_T^*,K[X]_{<7}
+]
+
+used by the transfer is false.
+
+There are two further independent finite omissions.
+
+First, the implication
+
+[
+P_T^*(\beta)
+=\lambda\Phi(T),\qquad \lambda\ne0
+\quad\Longrightarrow\quad
+\text{there are }52{,}747{,}567{,}092\text{ slopes}
+]
+
+is not valid without
+
+[
+0\notin{\Phi(T)}.
+]
+
+Multiplication by a nonzero scalar preserves the number of polynomial values, but the slope
+
+[
+z_T=-P_T^*(\beta)^{-1}
+]
+
+exists only for nonzero values. The clean sufficient condition is the missing hypothesis
+
+[
+\beta\in K\setminus H,
+]
+
+which would imply (P_T^*(\beta)\neq0) once (J_T^*\subseteq H) is verified.
+
+Second, neither the indexing family (\mathcal T) nor the map (\Phi) is defined, and no replay certificate is supplied for
+
+[
+#{\Phi(T):T\in\mathcal T}
+=========================
+
+52{,}747{,}567{,}092.
+]
+
+Thus the central finite count cannot be independently checked from the prompt.
+
+## Conditional verification of the abstract transfer
+
+Let
+
+[
+V=F[X]_{<r},\qquad r=j+\sigma,
+]
+
+identified with (F^r) by coefficient vectors. Write
+
+[
+P_J(X)=\sum_{d=0}^{j}p_{J,d}X^d.
+]
+
+The degree assumption implies that the coefficients
+
+[
+p_{J,j},p_{J,j-1},\ldots,p_{J,j-\sigma+2}
+]
+
+are independent of (J). Put (b_s=p_{J,j-s}) for
+(0\le s\le \sigma-2); in particular (b_0=1).
+
+For
+
+[
+A(X)=\sum_{u=0}^{\sigma-1}a_uX^u,\qquad Q=P_JA,
+]
+
+let (q_d=[X^d]Q). Since (P_J(0)=c\neq0),
+
+[
+q_0=ca_0.
+]
+
+For (1\le t\le \sigma-1),
+
+[
+q_{j+t}
+=======
+
+\sum_{u=t}^{\sigma-1}
+a_u,p_{J,j+t-u}
+===============
+
+\sum_{u=t}^{\sigma-1}a_u b_{u-t}.
+]
+
+This is a descending triangular system with diagonal coefficient (b_0=1):
+
+[
+a_{\sigma-1}=q_{j+\sigma-1},
+]
+
+and recursively
+
+[
+a_t
+===
+
+q_{j+t}
+-\sum_{u=t+1}^{\sigma-1}a_u b_{u-t}.
+]
+
+Hence (a_1,\ldots,a_{\sigma-1}) are recovered from
+
+[
+q_{j+1},\ldots,q_{j+\sigma-1}
+]
+
+by a linear map independent of (J), while (a_0=c^{-1}q_0). Therefore there is a single linear functional (\ell:V\to F) satisfying
+
+[
+\ell(P_JA)=A(\beta)
+]
+
+for every admissible (J) and (A).
+
+Choose a standard weighted Vandermonde parity check for
+(C=\operatorname{RS}[F,D,n-r]):
+
+[
+H_{t,a}=\lambda_a a^t,
+\qquad
+0\le t<r,\ a\in D,
+]
+
+where every (\lambda_a\neq0). It has rank (r) and kernel (C).
+
+For (J), let (W_J) be the span of the columns indexed by (J). A vector (q=(q_0,\ldots,q_{r-1})), regarded as the polynomial
+(Q(X)=\sum q_tX^t), is orthogonal to the column at (a) exactly when (Q(a)=0). Thus
+
+[
+W_J^\perp
+=========
+
+# {Q\in F[X]_{<r}:Q(a)=0\text{ for all }a\in J}
+
+P_JF[X]_{<\sigma}.
+]
+
+Let (y_0) represent (\ell), and set
+
+[
+y_1=(1,\beta,\ldots,\beta^{r-1}).
+]
+
+For (Q=P_JA),
+
+[
+\langle y_0,Q\rangle=A(\beta),
+\qquad
+\langle y_1,Q\rangle=Q(\beta)=P_J(\beta)A(\beta).
+]
+
+For
+
+[
+z_J=-P_J(\beta)^{-1},
+]
+
+we obtain
+
+[
+\left\langle y_0+z_Jy_1,Q\right\rangle
+======================================
+
+A(\beta)-P_J(\beta)^{-1}P_J(\beta)A(\beta)
+=0.
+]
+
+Therefore
+
+[
+y_0+z_Jy_1\in(W_J^\perp)^\perp=W_J.
+]
+
+Since (H) is surjective, choose (f,g\in F^D) with
+
+[
+Hf=y_0,\qquad Hg=y_1.
+]
+
+For each (J), membership in (W_J) provides a vector (e_J), supported on (J), such that
+
+[
+He_J=y_0+z_Jy_1.
+]
+
+Then
+
+[
+c_J=f+z_Jg-e_J
+]
+
+satisfies (Hc_J=0), so (c_J\in C), and on (S_J=D\setminus J),
+
+[
+c_J|_{S_J}
+==========
+
+(f+z_Jg)|_{S_J}.
+]
+
+Thus every distinct nonzero value (P_J(\beta)) supplies a distinct bad slope. This proves the abstract theorem under its stated hypotheses and under the indicated definition of (LD_{\mathrm{sw}}).
+
+## Required finite replay clauses
+
+A fail-closed certificate must specify and verify:
+
+[
+\eta,\beta\in K,\qquad
+\theta,\eta\text{ arithmetic in a fixed representation of }K;
+]
+
+[
+H=\langle\theta\rangle,\quad |H|=512;
+]
+
+[
+\theta\eta^0,\ldots,\theta\eta^{255}
+\text{ are distinct elements of }H;
+]
+
+[
+J_T\subseteq A^*,\quad |J_T|=113
+\quad\text{for every enumerated }T;
+]
+
+[
+A^*\cap R^*=\varnothing,\qquad
+J_T^*=J_T\sqcup R^*;
+]
+
+[
+\beta\notin H;
+]
+
+and an exact enumeration of (\mathcal T) computing the distinct set
+({\Phi(T)}), with cardinality
+(52{,}747{,}567{,}092).
+
+Once those checks pass, the remaining numerical implication is immediate:
+
+[
+512-263=249<250=\frac{125}{256},512,
+]
+
+and
+
+[
+\frac{52{,}747{,}567{,}092}{17^{32}}>2^{-128}.
+]
+
+Indeed, the latter inequality would already hold with only seven distinct slopes, since
+
+[
+\frac{17^{32}}{2^{128}}\approx 6.9587.
+]
+
+No official prize rules are supplied. Even after repairing the finite certificate, official admissibility would remain unknown until an authoritative clause states that the accepted predicate is precisely the support-wise affine-line experiment with
+
+[
+\gamma\leftarrow U(K),
+]
+
+that each distinct field slope is a distinct challenge, and that the relevant (q_{\mathrm{chal}}) denominator is (|K|=17^{32}). The construction does not by itself establish ordinary list size for one fixed received word or the soundness error of an unspecified protocol.

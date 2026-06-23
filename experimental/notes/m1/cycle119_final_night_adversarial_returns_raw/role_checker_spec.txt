@@ -1,0 +1,773 @@
+CHECKER_SPEC:
+
+The checker certifies the finite/source support-wise statement only. It does not certify ordinary list decoding, protocol soundness, or official prize admissibility.
+
+### 1. Trust boundary
+
+The following are not evidence and are never trusted:
+
+* The terminal string.
+* Any receipt field.
+* `hidden_seventh_top_coefficient_used=false`.
+* The asserted number of distinct slopes.
+* A hash, log line, probabilistic identity test, or unverified executable output.
+
+The trusted core consists of exact integer arithmetic, exact arithmetic in a concretely represented field, exact polynomial arithmetic, and a proof-term kernel with no admitted axioms or probabilistic checks.
+
+The terminal is emitted only after every item below succeeds. Missing evidence is rejection, not “unknown.”
+
+### 2. Required input package
+
+The package must contain:
+
+1. A monic polynomial (m(U)\in\mathbf F_{17}[U]) of degree (32), defining
+   [
+   K=\mathbf F_{17}[U]/(m).
+   ]
+
+2. Canonically encoded elements
+   [
+   \theta,\eta,\beta\in K.
+   ]
+
+3. A formal finite type (\Omega) of Cycle84 parameters (T), together with executable symbolic definitions
+   [
+   T\mapsto J_T,\qquad T\mapsto \Phi(T).
+   ]
+
+4. Formal proof objects for all universal Cycle84 identities.
+
+5. A non-enumerative exact image-cardinality certificate for (\Phi).
+
+6. The source definition of (LD_{\mathrm{sw}}) and the source MCA sampler contract. After unfolding, they must match the support-cylinder and single-uniform-slope semantics specified below.
+
+7. The proposed receipt.
+
+The given terminal and receipt alone must be rejected as `MISSING_CERTIFICATE_PACKAGE`.
+
+### 3. Exact field and evaluation-domain checks
+
+The checker verifies irreducibility of (m) deterministically. For degree (32), it is sufficient to verify
+
+[
+U^{17^{32}}\equiv U\pmod m
+]
+
+and
+
+[
+\gcd!\left(m,U^{17^{16}}-U\right)=1.
+]
+
+It then recomputes
+
+[
+q=|K|=17^{32}
+=2,367,911,594,760,467,245,844,106,297,320,951,247,361.
+]
+
+For (\theta), require
+
+[
+\theta^{512}=1,\qquad \theta^{256}\ne1.
+]
+
+Since (512=2^9), this proves that (\theta) has exact order (512). Construct, rather than trust,
+
+[
+D=H={\theta^i:0\le i<512}.
+]
+
+Require (\beta\notin D).
+
+Construct
+
+[
+A^*={\theta\eta^i:0\le i<120},
+\qquad
+R^*={\theta\eta^i:120\le i<256}.
+]
+
+The checker explicitly verifies that all 256 displayed elements are distinct and belong to (D). It then requires
+
+[
+|A^*|=120,\qquad |R^*|=136,\qquad A^*\cap R^*=\varnothing.
+]
+
+No alternative partition, reordered boundary, or merely equal total size is accepted.
+
+### 4. Native Cycle84 proof obligations
+
+For every (T\in\Omega), the proof kernel must establish:
+
+[
+J_T\subseteq A^*,\qquad |J_T|=113,
+]
+
+with no duplicate roots, and
+
+[
+P_T(X)=\prod_{a\in J_T}(X-a).
+]
+
+It must prove the polynomial identity
+
+[
+P_T(X)=X^{113}-X^{112}+E_T(X),
+\qquad \deg E_T\le107.
+]
+
+This means, in particular, that the coefficients of degrees (111,110,109,108) are zero. Merely checking the two leading coefficients is insufficient.
+
+It must also prove
+
+[
+P_T(0)=-1
+]
+
+and
+
+[
+P_T(\beta)=4(\beta-1)\Phi(T).
+]
+
+All statements are universal in (T). Sampling parameters (T) is forbidden.
+
+### 5. Non-enumerative certification of (#\Phi(\Omega))
+
+The exact receipt field
+
+[
+\texttt{distinct_slopes}=52,747,567,092
+]
+
+cannot be accepted from an asserted count. It requires an image-normal-form certificate.
+
+The certificate supplies a compact finite type (U), maps
+
+[
+\operatorname{rep}:U\to\Omega,
+\qquad
+\operatorname{class}:\Omega\to U,
+]
+
+and formal proofs of:
+
+[
+|U|=52,747,567,092,
+]
+
+[
+\Phi(T)=\Phi(\operatorname{rep}(\operatorname{class}(T)))
+\quad\text{for every }T\in\Omega,
+]
+
+and
+
+[
+\Phi(\operatorname{rep}(u))
+=\Phi(\operatorname{rep}(v))
+\Longrightarrow u=v
+\quad\text{for every }u,v\in U.
+]
+
+The first universal identity proves that every value of (\Phi) occurs among the representatives. The representatives are valid elements of (\Omega), so the reverse inclusion holds. The second identity proves that their values are distinct. Consequently,
+
+[
+#{\Phi(T):T\in\Omega}=|U|
+=52,747,567,092.
+]
+
+The cardinality proof for (U) must use exact finite-type arithmetic, bijections, disjoint unions, products, binomial counts, or formally checked recurrences. It may not materialize (U).
+
+An injective representative map without the covering identity proves only a lower bound. That would suffice for the mathematical inequality, but it cannot validate an exact `distinct_slopes` receipt field. Such a package must instead use a field named `distinct_slopes_lower_bound`.
+
+This certificate eliminates any need to enumerate 52 billion values.
+
+### 6. Padding and exact degree ledger
+
+Construct
+
+[
+P_R(X)=\prod_{a\in R^*}(X-a)
+]
+
+inside the checker. Require that it is monic of degree (136).
+
+For each (T), construct
+
+[
+J_T^*=J_T\cup R^*,
+\qquad
+P_T^*(X)=P_R(X)P_T(X).
+]
+
+Because (J_T\subseteq A^*) and (A^*\cap R^*=\varnothing), verify
+
+[
+|J_T^*|=113+136=249.
+]
+
+For (T,T'),
+
+[
+P_T^*-P_{T'}^*
+=P_R(P_T-P_{T'}).
+]
+
+The native expansion gives
+
+[
+\deg(P_T-P_{T'})\le107,
+]
+
+and therefore
+
+[
+\deg(P_T^*-P_{T'}^*)\le136+107=243.
+]
+
+The checker independently recomputes
+
+[
+j=249,\qquad \sigma=7,\qquad
+j-\sigma+1=249-7+1=243,
+]
+
+[
+r=j+\sigma=256,\qquad
+n=512,\qquad
+k=n-r=256.
+]
+
+Every one of these equalities is checked. In particular, the checker rejects a native bound (108), a padded bound (244), or a selector dimension (257).
+
+### 7. Common constant check
+
+From the native constant identity,
+
+[
+P_T^*(0)=P_R(0)P_T(0)=-P_R(0)=:c.
+]
+
+The checker verifies:
+
+[
+c\ne0
+]
+
+and that the equality holds universally in (T).
+
+Checking only that each (P_T^*(0)) is nonzero is insufficient. The constant must be identical for all (T), because the common linear functional uses (c^{-1}).
+
+Failure produces `COMMON_CONSTANT_MISSING` or `COMMON_CONSTANT_ZERO`.
+
+### 8. Canonical two-ended selector and hidden-coefficient rejection
+
+Write
+
+[
+P_T^*(X)=\sum_{d=0}^{249}p_dX^d.
+]
+
+The degree-difference bound proves that
+
+[
+p_{249},p_{248},p_{247},p_{246},p_{245},p_{244}
+]
+
+are independent of (T). Here (p_{249}=1). It does not prove that (p_{243}) is common.
+
+For
+
+[
+A(X)=a_0+a_1X+\cdots+a_6X^6
+]
+
+and
+
+[
+Q=P_T^*A,
+]
+
+the checker derives, rather than accepts, the following equations:
+
+[
+[ X^{255}]Q=a_6,
+]
+
+[
+[ X^{254}]Q=a_5+p_{248}a_6,
+]
+
+[
+[ X^{253}]Q=a_4+p_{248}a_5+p_{247}a_6,
+]
+
+[
+[ X^{252}]Q=a_3+p_{248}a_4+p_{247}a_5+p_{246}a_6,
+]
+
+[
+[ X^{251}]Q
+=a_2+p_{248}a_3+p_{247}a_4+p_{246}a_5+p_{245}a_6,
+]
+
+[
+[ X^{250}]Q
+=a_1+p_{248}a_2+p_{247}a_3+p_{246}a_4
++p_{245}a_5+p_{244}a_6,
+]
+
+and
+
+[
+[ X^0]Q=ca_0.
+]
+
+Thus (a_6,a_5,\ldots,a_1) are recovered recursively from degrees (255,\ldots,250), and
+
+[
+a_0=c^{-1}[X^0]Q.
+]
+
+The exact selector is therefore
+
+[
+[0,250,251,252,253,254,255].
+]
+
+No equation contains (p_{243}). The checker constructs the recovery map itself and taint-checks its inputs. Any dependence on (p_{243}), any coefficient of (P_T^*) below degree (244) other than the common constant, or any (T)-dependent datum produces `HIDDEN_SEVENTH_TOP_COEFFICIENT`.
+
+The receipt Boolean is accepted only when it equals the checker-derived result. It has no evidentiary value.
+
+Define the common linear functional
+
+[
+\ell(Q)=a_0+\beta a_1+\cdots+\beta^6a_6.
+]
+
+The checker symbolically verifies
+
+[
+\ell(P_T^*A)=A(\beta)
+]
+
+for every (T) and every (A\in K[X]_{<7}).
+
+### 9. Exact Reed–Solomon parity check
+
+Let
+
+[
+L_D(X)=\prod_{b\in D}(X-b),
+\qquad
+\lambda_a=L_D'(a)^{-1}.
+]
+
+For (a\in D), define the weighted Vandermonde column
+
+[
+h_a=\lambda_a(1,a,a^2,\ldots,a^{255})^\mathsf T.
+]
+
+Let (M) be the (256\times512) matrix with columns (h_a).
+
+The checker proves, using the Lagrange leading-coefficient identity and Vandermonde rank, that
+
+[
+\ker M=\operatorname{RS}[K,D,256]=C.
+]
+
+For (J\subseteq D), set
+
+[
+W_J=\operatorname{span}{h_a:a\in J}.
+]
+
+Identifying coefficient vectors in (K^{256}) with polynomials of degree below (256),
+
+[
+W_J^\perp
+={Q:Q(a)=0\ \forall a\in J}.
+]
+
+For (|J|=249), this is exactly
+
+[
+W_J^\perp=P_JK[X]_{<7}.
+]
+
+The checker may hard-code this generic lemma only if the lemma itself is part of the verified checker source; it may not invoke it as an unverified theorem name.
+
+### 10. Transfer replay
+
+Let (y_0\in K^{256}) be the coefficient vector representing (\ell):
+
+[
+Q^\mathsf Ty_0=\ell(Q).
+]
+
+Let
+
+[
+y_1=(1,\beta,\beta^2,\ldots,\beta^{255})^\mathsf T.
+]
+
+For each (T), define
+
+[
+z_T=-P_T^*(\beta)^{-1}.
+]
+
+For (Q=P_T^*A\in W_{J_T^*}^{\perp}),
+
+[
+Q^\mathsf T(y_0+z_Ty_1)
+=A(\beta)+z_TP_T^*(\beta)A(\beta)=0.
+]
+
+Hence
+
+[
+y_0+z_Ty_1\in W_{J_T^*}.
+]
+
+Since (M) has rank (256), choose (f,g\in K^{512}) satisfying
+
+[
+Mf=y_0,\qquad Mg=y_1.
+]
+
+For deterministic replay, the checker selects a canonical set of 256 columns of (M), inverts that Vandermonde minor, and sets all other coordinates to zero.
+
+Membership in (W_{J_T^*}) gives an (e_T) supported on (J_T^*) with
+
+[
+Me_T=y_0+z_Ty_1.
+]
+
+Consequently,
+
+[
+c_T=f+z_Tg-e_T\in\ker M=C.
+]
+
+On
+
+[
+S_T=D\setminus J_T^*,
+]
+
+one has
+
+[
+c_T|*{S_T}=(f+z_Tg)|*{S_T},
+\qquad |S_T|=512-249=263.
+]
+
+The checker treats receipt field `agreement=263` as an agreement threshold or lower bound. The construction does not prove that agreement is exactly 263; extra agreements inside (J_T^*) may occur. If the receipt schema defines `agreement` as exact equality, it must be rejected.
+
+### 11. Noncontainment check
+
+Let
+
+[
+E_J={e\in K^{512}:\operatorname{supp}(e)\subseteq J}.
+]
+
+Then
+
+[
+C+E_J={v:Mv\in W_J}.
+]
+
+The affine line is not contained in this support cylinder exactly when
+
+[
+Mg=y_1\notin W_J.
+]
+
+For (J=J_T^*), the columns
+
+[
+{h_a:a\in J}\cup{y_1}
+]
+
+are scaled Vandermonde columns at the 250 distinct points
+
+[
+J\cup{\beta}.
+]
+
+Because
+
+[
+250=|J|+1\le256
+]
+
+and (\beta\notin D), their first 250 rows form a nonsingular square Vandermonde matrix, up to nonzero column scalings. Therefore
+
+[
+y_1\notin W_J.
+]
+
+This proves support-wise noncontainment and also proves uniqueness of the slope for a fixed support: if both (y_0+zy_1) and (y_0+z'y_1) belong to (W_J), then (z=z').
+
+Checking only (g\notin C) is insufficient for this support-wise theorem. The per-support statement above is mandatory.
+
+### 12. Scalar at (\beta) and slope collision accounting
+
+The checker computes
+
+[
+\kappa=4(\beta-1)P_R(\beta).
+]
+
+It verifies directly in (K) that
+
+[
+\kappa\ne0.
+]
+
+This also follows from:
+
+* (4\ne0) in characteristic (17);
+* (1\in D) and (\beta\notin D), so (\beta-1\ne0);
+* every root of (P_R) lies in (D), so (P_R(\beta)\ne0).
+
+Nevertheless, the direct field computation is required.
+
+The evaluation identity gives
+
+[
+P_T^*(\beta)
+=P_R(\beta)P_T(\beta)
+=\kappa\Phi(T).
+]
+
+Because (\beta\notin J_T), (P_T(\beta)\ne0); hence (\Phi(T)\ne0).
+
+Thus
+
+[
+z_T=-\frac{1}{\kappa\Phi(T)}.
+]
+
+The map
+
+[
+x\longmapsto-\frac1{\kappa x}
+]
+
+is injective on (K^*). Therefore
+
+[
+#{z_T:T\in\Omega}
+=#{\Phi(T):T\in\Omega}
+=52,747,567,092.
+]
+
+The checker counts the image of the slope map, never the number of parameters (T), locators, or supports. Repeated values are not counted twice. A sorted-output claim, Bloom filter, hash aggregate, or probabilistic collision test is rejected.
+
+### 13. The exact finite predicate certified
+
+For each (J), the support cylinder is (C+E_J). For a line (L=f+Kg), define the certified bad-slope set
+
+[
+B_L=
+\left{
+z\in K:
+\begin{array}{l}
+\exists J\subseteq D,\ |D\setminus J|=263,\
+g\notin C+E_J,\quad f+zg\in C+E_J
+\end{array}
+\right}.
+]
+
+The replay proves
+
+[
+|B_L|\ge52,747,567,092
+]
+
+for one common line (L).
+
+The source definition of (LD_{\mathrm{sw}}(C,263)) must unfold to the maximum of this support-wise bad-slope count, or the package must include a formally checked equivalence theorem. Only then may the checker emit
+
+[
+LD_{\mathrm{sw}}(C,263)
+\ge52,747,567,092.
+]
+
+It must not emit the ordinary list-decoding assertion
+
+[
+\max_y|{c\in C:d_H(c,y)\le249}|
+\ge52,747,567,092.
+]
+
+The received word here varies with (z); the construction does not supply 52 billion codewords around one fixed received word.
+
+### 14. Strict radius check
+
+From agreement on at least 263 coordinates,
+
+[
+d_H(f+z_Tg,c_T)\le512-263=249.
+]
+
+The target relative radius is strict:
+
+[
+\frac{125}{256}\cdot512=250.
+]
+
+Therefore the required check is
+
+[
+249<250.
+]
+
+Equivalent integral conditions are
+
+[
+d_H\le249
+]
+
+or
+
+[
+\operatorname{agreement}\ge263.
+]
+
+The checker rejects:
+
+* (d_H\le250);
+* agreement (262);
+* replacing (<125/256) by (\le125/256);
+* any floor or ceiling convention that admits distance (250).
+
+### 15. Source sampler and (q_{\mathrm{chal}})
+
+The accepted source sampler has exactly one random value
+
+[
+\gamma\mathrel{$}K.
+]
+
+The bad event is (\gamma\in B_L). Hence
+
+[
+\epsilon_{\mathrm{mca}}
+\ge\frac{|B_L|}{|K|}
+\ge\frac{52,747,567,092}{17^{32}}.
+]
+
+The checker requires
+
+[
+q_{\mathrm{gen}}
+=q_{\mathrm{code}}
+=q_{\mathrm{line}}
+=17^{32}.
+]
+
+It also requires
+
+[
+q_{\mathrm{chal}}=\texttt{null}.
+]
+
+`null` means that no challenge alphabet participates in this source probability. It is not converted to (1), (17^{32}), or any other integer.
+
+The probability-expression abstract syntax tree must have denominator exactly
+
+[
+q_{\mathrm{line}}=17^{32}.
+]
+
+The checker rejects any denominator containing:
+
+[
+q_{\mathrm{chal}},
+\quad q_{\mathrm{line}}q_{\mathrm{chal}},
+\quad q_{\mathrm{gen}}q_{\mathrm{chal}},
+\quad q_{\mathrm{code}}q_{\mathrm{chal}},
+]
+
+or any product of the three equal field-size metadata values. They describe the same alphabet here, not independent random choices.
+
+The final comparison is exact integer arithmetic:
+
+[
+52,747,567,092\cdot2^{128}>17^{32}.
+]
+
+Indeed,
+
+[
+52,747,567,092\cdot2^{128}
+==========================
+
+17,949,066,979,386,763,061,137,742,790,236,355,545,968,203,005,952,
+]
+
+which is strictly larger than
+
+[
+17^{32}
+=======
+
+2,367,911,594,760,467,245,844,106,297,320,951,247,361.
+]
+
+Thus
+
+[
+\frac{52,747,567,092}{17^{32}}>2^{-128}.
+]
+
+No floating-point comparison is allowed.
+
+### 16. Receipt reconciliation
+
+After completing the proof, the checker recomputes and requires:
+
+```text
+agreement_threshold=263
+distance_upper_bound=249
+distinct_slopes=52,747,567,092
+hidden_seventh_top_coefficient_used=false
+two_ended_selector_degrees=[0,250,251,252,253,254,255]
+q_gen=17^32
+q_code=17^32
+q_line=17^32
+q_chal=null
+```
+
+The receipt should use `agreement_threshold` or `agreement_lower_bound`, not an exact-agreement field.
+
+Any mismatch is rejection. Receipt values never override recomputed values.
+
+### 17. Mandatory rejection map
+
+| Defect                                                              | Required rejection               |
+| ------------------------------------------------------------------- | -------------------------------- |
+| Selector uses (p_{243}) or any unproved locator coefficient         | `HIDDEN_SEVENTH_TOP_COEFFICIENT` |
+| (P_T^*(0)) not universally equal to one (c\ne0)                     | `COMMON_CONSTANT_FAILURE`        |
+| Split not exactly (0!:!119) and (120!:!255), or sizes not (120/136) | `PAD_SPLIT_FAILURE`              |
+| Any ledger inconsistency with (136+107=243=249-7+1)                 | `DEGREE_LEDGER_FAILURE`          |
+| (4(\beta-1)P_R(\beta)=0)                                            | `ZERO_BETA_SCALAR`               |
+| Count based on parameters rather than exact slope image             | `UNPAID_SLOPE_COLLISIONS`        |
+| Failure to prove (y_1\notin W_{J_T^*}) for every support            | `NONCONTAINMENT_FAILURE`         |
+| Distance (250) admitted at strict radius (125/256)                  | `STRICT_RADIUS_FAILURE`          |
+| Non-null, inferred, or denominator-used (q_{\mathrm{chal}})         | `QCHAL_SEMANTICS_FAILURE`        |
+
+### 18. Reproducibility and terminal policy
+
+All field elements, polynomials, finite-type definitions, proof terms, and source definitions must have canonical serialization. The terminal is generated from the complete artifact digest and checker version; it is never supplied as an acceptance token.
+
+The context names the construction “Cycle84,” while the claimed terminal contains `CYCLE118`. The checker must treat `CYCLE118` as an opaque schema identifier or require an explicit versioned binding to the certified Cycle84 artifact. It must not infer that the two labels refer to the same construction.
+
+The checker is coherent and does not require a 52-billion-element enumeration. The indispensable replacement is the formally checked image-normal-form certificate in Section 5. Without that certificate, the claimed terminal and receipt are rejected.

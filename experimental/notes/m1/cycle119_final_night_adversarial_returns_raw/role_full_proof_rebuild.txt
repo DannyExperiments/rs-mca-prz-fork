@@ -1,0 +1,749 @@
+PROOF:
+
+The two-ended locator transfer is valid, conditional on the stated Cycle84 certificate facts and on the source definition of (\epsilon_{\mathrm{mca}}) using the indicated uniformly sampled field challenge. It proves a support-wise bad-slope statement, not ordinary list decoding.
+
+## 1. Formal theorem statement
+
+The phrase “let (J) range over (j)-subsets” should be formalized as a specified finite family, not necessarily all (j)-subsets.
+
+Let:
+
+* (\alpha) be a finite type of evaluation positions, with (|\alpha|=n);
+* (x:\alpha\hookrightarrow F) be injective, with (x(a)\ne0);
+* (I) be a finite locator-family index type;
+* (J_i\subseteq\alpha), (|J_i|=j), for (i\in I);
+* (\beta\notin x(\alpha));
+* (r=j+\sigma), (\sigma\ge2);
+* (k+r=n), rather than the Lean-dangerous expression (k=n-r).
+
+Define
+[
+P_i(X)=\prod_{a\in J_i}(X-x(a)).
+]
+
+Assume:
+
+[
+P_i(0)=c\ne0
+]
+for every (i), and
+[
+\deg(P_i-P_{i'})\le j-\sigma+1
+]
+for all (i,i').
+
+The definition-independent theorem to formalize is:
+
+> There exist words (f,g:\alpha\to F), with (g\notin C), and for every (i\in I) a codeword (c_i\in C), such that, writing
+> [
+> z_i=-P_i(\beta)^{-1},
+> ]
+> one has
+> [
+> c_i(a)=f(a)+z_i g(a)\qquad(a\notin J_i).
+> ]
+> Moreover,
+> [
+> #{z_i:i\in I}=#{P_i(\beta):i\in I},
+> ]
+> and the syndrome line associated with (f+zg) is not contained in the error-syndrome space for any (J_i).
+
+This witness theorem should precede any wrapper involving `LD_sw`. It avoids importing an unstated meaning of support-wise list decoding.
+
+## 2. The common two-ended functional
+
+Write
+[
+P_i(X)=\sum_{u=0}^{j}p_{i,u}X^u,\qquad
+A(X)=\sum_{s=0}^{\sigma-1}a_sX^s,
+]
+and let
+[
+Q=P_iA.
+]
+
+Select the (\sigma) coefficients
+[
+b_0=[X^0]Q,\qquad b_m=[X^{j+m}]Q
+\quad(1\le m\le \sigma-1).
+]
+
+The low coefficient is
+[
+b_0=p_{i,0}a_0=ca_0.
+]
+
+For (1\le m\le\sigma-1),
+[
+b_m
+=\sum_{s=m}^{\sigma-1}p_{i,j+m-s}a_s.
+]
+
+Every coefficient of (P_i) occurring here has index
+[
+j+m-s\ge j+m-(\sigma-1)\ge j-\sigma+2.
+]
+The degree assumption implies that all coefficients of the (P_i) in degrees
+[
+j-\sigma+2,\ldots,j
+]
+are independent of (i). Indeed, if (u>j-\sigma+1), then
+[
+[X^u](P_i-P_{i'})=0.
+]
+
+Consequently, the linear transformation
+[
+M:(a_0,\ldots,a_{\sigma-1})
+\longmapsto(b_0,\ldots,b_{\sigma-1})
+]
+is independent of (i). Its matrix is upper triangular:
+
+* its first diagonal entry is (c);
+* every remaining diagonal entry is (p_{i,j}=1), since (P_i) is monic.
+
+Hence
+[
+\det M=c\ne0,
+]
+so (M) is invertible.
+
+Let
+[
+\operatorname{sel}(Q)
+=\bigl([X^0]Q,[X^{j+1}]Q,\ldots,[X^{j+\sigma-1}]Q\bigr).
+]
+Define the linear functional
+[
+\ell(Q)
+=======
+
+\operatorname{ev}_{\beta}!\left(M^{-1}\operatorname{sel}(Q)\right).
+]
+Then, for every (i) and every (\deg A<\sigma),
+[
+\ell(P_iA)=A(\beta).
+]
+
+This is the entire new “two-ended” ingredient. There is no compatibility problem on intersections of the subspaces (P_iF[X]_{<\sigma}), because (\ell) has been defined globally from fixed coefficient projections.
+
+## 3. Reed–Solomon syndrome geometry
+
+Let
+[
+L_D(X)=\prod_{a\in\alpha}(X-x(a))
+]
+and define the nonzero barycentric weights
+[
+\lambda_a=L_D'(x(a))^{-1}.
+]
+
+Let
+[
+v_r(t)=(1,t,\ldots,t^{r-1})\in F^r
+]
+and define the weighted Vandermonde syndrome map
+[
+H:F^\alpha\longrightarrow F^r,\qquad
+H(w)=\sum_{a\in\alpha}w(a)\lambda_a v_r(x(a)).
+]
+
+### Kernel equals the Reed–Solomon code
+
+For every polynomial (R) with (\deg R\le n-2),
+[
+\sum_{a\in\alpha}\lambda_aR(x(a))=0.
+]
+This is the coefficient of (X^{n-1}) in the Lagrange interpolation formula for (R).
+
+If (\deg p<k) and (0\le m<r), then
+[
+\deg(X^mp)\le(r-1)+(k-1)=n-2,
+]
+so
+[
+\sum_a\lambda_ax(a)^mp(x(a))=0.
+]
+Thus every Reed–Solomon evaluation word lies in (\ker H).
+
+The weighted Vandermonde matrix has rank (r): any (r) columns are nonzero scalar multiples of a square Vandermonde matrix on distinct points. Therefore
+[
+\dim\ker H=n-r=k.
+]
+The Reed–Solomon code also has dimension (k), and hence
+[
+\ker H=\operatorname{RS}[F,D,k].
+]
+In particular, (H) is surjective.
+
+### Error-syndrome spaces
+
+For (i\in I), let
+[
+E_i={e\in F^\alpha:\operatorname{supp}(e)\subseteq J_i},
+\qquad
+W_i=H(E_i).
+]
+Equivalently,
+[
+W_i=\operatorname{span}{\lambda_a v_r(x(a)):a\in J_i}.
+]
+
+Identify (q=(q_0,\ldots,q_{r-1})\in F^r) with
+[
+Q_q(X)=\sum_{m=0}^{r-1}q_mX^m.
+]
+Then
+[
+\langle q,\lambda_av_r(x(a))\rangle
+=\lambda_aQ_q(x(a)).
+]
+Since (\lambda_a\ne0),
+[
+q\in W_i^\perp
+\iff Q_q(x(a))=0\quad\text{for all }a\in J_i.
+]
+The points are distinct, so this is equivalent to (P_i\mid Q_q). Since
+[
+\deg Q_q<r=j+\sigma,
+]
+one obtains
+[
+W_i^\perp
+=========
+
+{\operatorname{coeff}(P_iA):\deg A<\sigma}.
+]
+
+## 4. Construction of the common affine line
+
+Represent (\ell) by (y_0\in F^r):
+[
+\langle\operatorname{coeff}(Q),y_0\rangle=\ell(Q)
+\qquad(\deg Q<r).
+]
+For example, one may define
+[
+(y_0)_m=\ell(X^m).
+]
+
+Let
+[
+y_1=v_r(\beta).
+]
+Then
+[
+\langle\operatorname{coeff}(Q),y_1\rangle=Q(\beta).
+]
+
+Because (\beta\notin D),
+[
+P_i(\beta)\ne0.
+]
+Set
+[
+z_i=-P_i(\beta)^{-1}.
+]
+For every (A) of degree (<\sigma),
+[
+\begin{aligned}
+\left\langle
+\operatorname{coeff}(P_iA),y_0+z_iy_1
+\right\rangle
+&=\ell(P_iA)+z_i(P_iA)(\beta)\
+&=A(\beta)-P_i(\beta)^{-1}P_i(\beta)A(\beta)\
+&=0.
+\end{aligned}
+]
+Thus (y_0+z_iy_1) annihilates (W_i^\perp). Finite-dimensional double-annihilator duality gives
+[
+y_0+z_iy_1\in W_i.
+]
+
+Since (H) is surjective, choose (f,g\in F^\alpha) with
+[
+Hf=y_0,\qquad Hg=y_1.
+]
+Since (y_0+z_iy_1\in W_i=H(E_i)), choose (e_i\in E_i) satisfying
+[
+He_i=y_0+z_iy_1.
+]
+Then
+[
+c_i=f+z_ig-e_i
+]
+satisfies
+[
+Hc_i=y_0+z_iy_1-(y_0+z_iy_1)=0.
+]
+Therefore (c_i\in C).
+
+For (a\notin J_i), (e_i(a)=0), so
+[
+c_i(a)=f(a)+z_ig(a).
+]
+The agreement set contains (\alpha\setminus J_i), which has size (n-j).
+
+### Noncontainment
+
+A particularly short proof is available. The coefficient vector of (P_i) belongs to (W_i^\perp), but
+[
+\langle\operatorname{coeff}(P_i),y_1\rangle=P_i(\beta)\ne0.
+]
+Hence
+[
+y_1\notin W_i.
+]
+Therefore the affine syndrome line (y_0+zy_1) is not contained in (W_i). It intersects (W_i) at the unique parameter (z_i).
+
+Also (y_1\ne0), so (Hg\ne0) and consequently
+[
+g\notin C.
+]
+
+### Number of slopes
+
+On (F^\times), the map
+[
+u\longmapsto-u^{-1}
+]
+is injective. Since all (P_i(\beta)\ne0),
+[
+#{z_i:i\in I}
+=============
+
+#{P_i(\beta):i\in I}.
+]
+
+This proves the generic finite theorem.
+
+## 5. Cycle84 specialization
+
+The finite certificate must export the following facts, with no unstated use of the notation (O(X^{107})):
+
+1. (D=H\subset K^\times), (|H|=512).
+2. (\beta\notin H).
+3. (J_T\subseteq A^*\subseteq H), (|J_T|=113).
+4. (R^*\subseteq H), (|R^*|=136), and
+   [
+   J_T\cap R^*=\varnothing.
+   ]
+5. (P_T) is exactly the locator of (J_T).
+6. For every (T,T'),
+   [
+   \deg(P_T-P_{T'})\le107.
+   ]
+   Equivalently, the displayed expansion must mean
+   [
+   P_T=X^{113}-X^{112}+R_T,\qquad \deg R_T\le107.
+   ]
+7. (P_T(0)=-1).
+8. [
+   P_T(\beta)=4(\beta-1)\Phi(T).
+   ]
+9. [
+   #{\Phi(T)}=52,747,567,092.
+   ]
+
+Let
+[
+P_R(X)=\prod_{a\in R^*}(X-a),
+\qquad
+J_T^*=J_T\cup R^*,
+\qquad
+P_T^*=P_RP_T.
+]
+
+Disjointness gives
+[
+|J_T^*|=113+136=249
+]
+and proves that (P_T^*) is the locator of (J_T^*).
+
+For any (T,T'),
+[
+P_T^*-P_{T'}^*
+=P_R(P_T-P_{T'}).
+]
+Therefore
+[
+\deg(P_T^*-P_{T'}^*)
+\le136+107
+=243
+=249-7+1.
+]
+
+The constant coefficient is
+[
+P_T^*(0)=P_R(0)P_T(0)=-P_R(0).
+]
+Every root of (P_R) lies in (H\subset K^\times), so
+[
+P_R(0)\ne0.
+]
+Thus the common constant is nonzero.
+
+Evaluation at (\beta) gives
+[
+P_T^*(\beta)
+============
+
+P_R(\beta),4(\beta-1)\Phi(T).
+]
+The prefactor is nonzero:
+
+* (P_R(\beta)\ne0), since (\beta\notin H) and (R^*\subseteq H);
+* (\beta-1\ne0), since (1\in H) and (\beta\notin H);
+* (4\ne0) in characteristic (17).
+
+Multiplication by this fixed nonzero scalar preserves image cardinality, so
+[
+#{P_T^*(\beta)}
+===============
+
+52,747,567,092.
+]
+
+Now take
+[
+j=249,\qquad \sigma=7,\qquad r=256,\qquad n=512,\qquad k=256.
+]
+The generic theorem yields one affine line with at least
+[
+52,747,567,092
+]
+distinct bad slopes, each agreeing with some codeword on at least
+[
+512-249=263
+]
+positions. Hence, for the support-wise bad-slope quantity described in the prompt,
+[
+LD_{\mathrm{sw}}(C,263)
+\ge52,747,567,092.
+]
+
+## 6. Strict-radius arithmetic
+
+For each constructed slope, the difference from the corresponding codeword is supported inside (J_T^*). Hence
+[
+\operatorname{dist}(f+z_Tg,C)\le249.
+]
+
+The claimed radius is strictly larger:
+[
+\frac{249}{512}<\frac{125}{256},
+]
+because
+[
+249\cdot256=63,744
+<
+64,000=125\cdot512.
+]
+Equivalently,
+[
+\frac{125}{256}\cdot512=250
+]
+and
+[
+249<250.
+]
+
+No rounding convention is needed if the event is formalized as
+[
+\operatorname{dist}(w,C)<\rho n
+]
+in (\mathbb Q) or (\mathbb R).
+
+## 7. Source (\epsilon_{\mathrm{mca}}) bridge
+
+The source-facing wrapper must be proved by unfolding the actual source definition. The exact required lemma is:
+
+> For every source-admissible affine line (f+\gamma g),
+> [
+> \epsilon_{\mathrm{mca}}(C,\rho)
+> \ge
+> \Pr_{\gamma\leftarrow\operatorname{Unif}(K)}
+> \bigl[\operatorname{Bad}_{\mathrm{sw}}(C,\rho,f,g,\gamma)\bigr].
+> ]
+
+The construction supplies a bad subset (B\subseteq K) with
+[
+|B|\ge52,747,567,092.
+]
+Under uniform sampling from all of (K),
+[
+\Pr[\gamma\in B]=\frac{|B|}{|K|}.
+]
+Since
+[
+|K|=17^{32},
+]
+this gives
+[
+\epsilon_{\mathrm{mca}}(C,125/256)
+\ge
+\frac{52,747,567,092}{17^{32}}.
+]
+
+Finally,
+[
+\frac{52,747,567,092}{17^{32}}>2^{-128}
+]
+is equivalent, using positive denominators, to
+[
+52,747,567,092\cdot2^{128}>17^{32}.
+]
+The two integers are
+[
+52,747,567,092\cdot2^{128}
+==========================
+
+17,949,066,979,386,763,061,137,742,790,236,355,545,968,203,005,952,
+]
+and
+[
+17^{32}
+=======
+
+2,367,911,594,760,467,245,844,106,297,320,951,247,361.
+]
+The inequality is strict.
+
+This bridge does not establish ordinary list decoding, general protocol unsoundness, prize admissibility, or any interpretation of `q_chal` other than the explicitly stated uniform sampler over (K).
+
+# Lean dependency graph
+
+## 1. Generic finite-field and polynomial lemmas
+
+```text
+G1  locator_monic
+G2  locator_degree
+G3  locator_eval_ne_zero_of_not_mem
+G4  locator_constant_ne_zero_of_roots_ne_zero
+G5  coeff_eq_above_degree_difference
+G6  coeff_mul_selected_formula
+G7  selected_mul_map_independent
+G8  selected_mul_matrix_upperTriangular
+G9  selected_mul_matrix_det_eq_constant
+G10 selected_mul_linearEquiv
+G11 exists_common_eval_functional
+G12 neg_inv_image_card_eq
+```
+
+Dependencies:
+
+```text
+G1 + G2 + G5 + G6
+        ↓
+       G7
+        ↓
+G4 + G8 + G9
+        ↓
+       G10
+        ↓
+       G11
+
+G3 → G12
+```
+
+The generic degree hypothesis should avoid truncated natural subtraction. A robust Lean formulation introduces (b) with
+[
+j=b+(\sigma-1)
+]
+and assumes
+[
+\deg(P_i-P_{i'})\le b.
+]
+
+## 2. Reed–Solomon parity-check lemmas
+
+```text
+R1  barycentric_weight_ne_zero
+R2  lagrange_top_coefficient_identity
+R3  syndrome_annihilates_RS
+R4  weighted_vandermonde_rank
+R5  syndrome_surjective
+R6  kernel_syndrome_eq_RS
+R7  support_error_space_image_eq_column_span
+R8  annihilator_column_span_iff_vanishes
+R9  vanishes_on_J_iff_locator_dvd
+R10 W_orthogonal_eq_locator_multiples
+R11 finite_dimensional_double_annihilator
+R12 syndrome_mem_W_iff_annihilates_locator_multiples
+```
+
+Dependencies:
+
+```text
+R1 + R2 → R3
+R1 + R4 → R5
+R3 + R4 + dimension_RS → R6
+
+R1 + R7 → R8
+G1 + G2 + R8 → R9 → R10
+R10 + R11 → R12
+```
+
+## 3. Two-ended locator theorem
+
+```text
+T1  construct_y0_from_common_functional
+T2  evaluation_vector_pairing
+T3  locator_syndrome_incidence
+T4  lift_syndrome_to_supported_error
+T5  construct_nearby_codeword
+T6  direction_not_in_error_syndrome_space
+T7  direction_not_in_code
+T8  slope_image_cardinality
+T9  common_line_support_witness
+T10 LD_sw_lower_bound_wrapper
+```
+
+Dependencies:
+
+```text
+G11 → T1
+G3 → T2
+
+T1 + T2 + R12
+        ↓
+       T3
+
+R5 + R7 + T3
+        ↓
+       T4
+
+R6 + T4
+        ↓
+       T5
+
+G3 + R10 + T2 → T6
+R6 + R5 + T2  → T7
+G12           → T8
+
+T5 + T6 + T7 + T8
+        ↓
+       T9
+        ↓
+       T10
+```
+
+`T10` must only unfold the actual support-wise definition. It must not be reused as an ordinary list-decoding theorem.
+
+## 4. Cycle84 finite certificate import
+
+```text
+C1  field_model_card_eq_17_pow_32
+C2  H_card_eq_512_and_nonzero
+C3  beta_not_mem_H
+C4  Astar_Rstar_subsets_and_disjoint
+C5  native_J_card_eq_113
+C6  native_locator_identity
+C7  native_degree_difference_le_107
+C8  native_constant_eq_neg_one
+C9  native_beta_evaluation_formula
+C10 Phi_image_card_eq_52747567092
+C11 padded_locator_union_identity
+C12 padded_card_eq_249
+C13 padded_degree_difference_le_243
+C14 padded_constant_fixed_ne_zero
+C15 padded_evaluation_fixed_scalar
+C16 padded_evaluation_image_card
+C17 instantiate_two_ended_theorem
+```
+
+Dependencies:
+
+```text
+C4 + C5 + C6 → C11 + C12
+C7 + C11     → C13
+C2 + C4 + C8 → C14
+C3 + C4 + C9 → C15
+C10 + C15    → C16
+
+C1 + C2 + C3 + C12 + C13 + C14 + C16
+                         ↓
+                        C17
+```
+
+The certificate module must define (\eta,\theta,\beta,T,\Phi,J_T) or export the resulting finite sets and theorem package. The bare expression
+[
+\theta\eta^i
+]
+is not sufficient Lean data without a definition of (\eta) and proofs of the stated cardinalities and disjointness.
+
+## 5. Strict-radius arithmetic
+
+```text
+A1  complement_card_eq_512_sub_249
+A2  supported_error_hamming_distance_le_249
+A3  rational_radius_mul_length_eq_250
+A4  distance_249_strictly_below_radius
+A5  integer_probability_comparison
+```
+
+Dependencies:
+
+```text
+C12 → A1
+T5 + C12 → A2
+A3 + A2 → A4
+C1 + C10 → A5
+```
+
+`A5` can be discharged by `norm_num`.
+
+## 6. Source (\epsilon_{\mathrm{mca}}) bridge
+
+```text
+S1  imported_definition_of_source_bad_event
+S2  constructed_slopes_subset_source_bad_set
+S3  uniform_finset_probability
+S4  epsilon_mca_dominates_each_legal_line
+S5  source_line_admissibility
+S6  epsilon_mca_lower_bound
+S7  epsilon_mca_gt_two_pow_neg_128
+```
+
+Dependencies:
+
+```text
+T9 + A4 + S1 → S2
+C1 + S3 + S2 → probability lower bound
+T6 + T7 + actual source legality clauses → S5
+S4 + S5 + probability lower bound → S6
+A5 + S6 → S7
+```
+
+The bridge fails closed unless the imported source contract proves both:
+
+[
+\gamma\sim\operatorname{Unif}(K)
+]
+over all (17^{32}) elements, and
+[
+\epsilon_{\mathrm{mca}}
+]
+dominates the success probability of every line satisfying precisely the source admissibility predicate.
+
+## Smallest high-value formalization lemma
+
+The lemma that most reduces mathematical risk is:
+
+```lean
+lemma exists_common_eval_functional
+    (hconst : ∀ i, (P i).coeff 0 = c)
+    (hc : c ≠ 0)
+    (hmonic : ∀ i, (P i).Monic)
+    (hdeg : ∀ i i', degree (P i - P i') ≤ j - σ + 1) :
+  ∃ ℓ : PolyLT F (j + σ) →ₗ[F] F,
+    ∀ i (A : PolyLT F σ),
+      ℓ (P i * A) = Polynomial.eval β A
+```
+
+Internally, this should be proved through the fixed selected-coefficient matrix with diagonal
+[
+(c,1,\ldots,1).
+]
+
+That lemma isolates the only nonstandard algebraic claim. Once it is accepted, the remaining transfer is standard finite-dimensional duality, weighted Vandermonde parity checking, and support bookkeeping.

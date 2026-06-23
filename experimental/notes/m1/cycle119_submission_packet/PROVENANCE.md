@@ -33,7 +33,7 @@ experimental/notes/m1/cycle119_cold_strict263_prize_candidate_packet.zip
 SHA-256:
 
 ```text
-8fc5efd09dd220dd5aa5e0edbc57df5e00bca67d4e1c08c10bbf7ee777839326
+4115c71b2b4bd70b083fbdfb9529cf6cdfbac9f96686dc77ef27b30e04f0f9a8
 ```
 
 ## Local Replay

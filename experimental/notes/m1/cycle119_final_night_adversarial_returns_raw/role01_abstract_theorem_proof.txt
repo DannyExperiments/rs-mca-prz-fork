@@ -1,0 +1,324 @@
+PROOF:
+
+Assume the Reed–Solomon parameters are well formed, so (r=j+\sigma\le n) and (k=n-r).
+
+Let (V=F[X]_{<r}).
+
+### 1. The selected coefficients recover (A) by a (J)-independent map
+
+Write
+[
+P_J(X)=\sum_{s=0}^{j}p_s(J)X^{j-s},
+\qquad p_0(J)=1,
+]
+and set (p_s(J)=0) for (s>j).
+
+For every (0\le s\le \sigma-2), the coefficient (p_s(J)) is independent of (J). Indeed,
+[
+j-s\ge j-\sigma+2>j-\sigma+1,
+]
+so the coefficient of (X^{j-s}) in (P_J-P_{J'}) is zero. Denote the common value by (p_s).
+
+Now let
+[
+Q(X)=\sum_{i=0}^{r-1}q_iX^i\in V.
+]
+Define linear functionals (\alpha_t:V\to F) as follows:
+[
+\alpha_0(Q)=c^{-1}q_0,
+]
+and, descending from (t=\sigma-1) to (t=1),
+[
+\alpha_t(Q)
+===========
+
+## q_{j+t}
+
+\sum_{u=t+1}^{\sigma-1}p_{u-t}\alpha_u(Q).
+\tag{1}
+]
+
+These are defined on all of (V), not merely on the union of the spaces
+(P_JF[X]_{<\sigma}).
+
+Take
+[
+A(X)=\sum_{u=0}^{\sigma-1}a_uX^u
+]
+and (Q=P_JA). For (1\le t\le \sigma-1),
+[
+[X^{j+t}]Q
+==========
+
+# \sum_{u=t}^{\sigma-1}a_u[X^{j+t-u}]P_J
+
+a_t+\sum_{u=t+1}^{\sigma-1}p_{u-t}a_u.
+\tag{2}
+]
+Starting at (t=\sigma-1) and using descending induction in (1), equation (2) gives
+[
+\alpha_t(P_JA)=a_t
+\qquad(1\le t\le \sigma-1).
+]
+Also,
+[
+[X^0](P_JA)=P_J(0)a_0=ca_0,
+]
+so
+[
+\alpha_0(P_JA)=a_0.
+]
+
+Therefore the linear functional
+[
+\ell(Q)=\sum_{t=0}^{\sigma-1}\beta^t\alpha_t(Q)
+\tag{3}
+]
+is defined on all (V), is independent of (J), and satisfies
+[
+\ell(P_JA)=A(\beta)
+\tag{4}
+]
+for every (J) and every (A\in F[X]_{<\sigma}).
+
+Thus there is no gluing or extension defect in the construction of (\ell).
+
+### 2. A weighted Vandermonde parity check for (C)
+
+Let
+[
+L_D(X)=\prod_{a\in D}(X-a),
+\qquad
+\lambda_a=L_D'(a)^{-1}.
+]
+The (\lambda_a) are nonzero because the points of (D) are distinct.
+
+Put
+[
+v(x)=(1,x,\ldots,x^{r-1})^{\mathsf T}\in F^r
+]
+and define the (r\times n) matrix
+[
+\mathsf H=\bigl[\lambda_av(a)\bigr]_{a\in D}.
+]
+
+For every polynomial (u) of degree at most (n-2),
+[
+\sum_{a\in D}\lambda_au(a)=0.
+\tag{5}
+]
+This follows by taking the coefficient of (X^{n-1}) in the Lagrange interpolation identity
+[
+u(X)=
+\sum_{a\in D}
+u(a)\frac{L_D(X)}{(X-a)L_D'(a)}.
+]
+
+If (p\in F[X]*{<k}), then for (0\le t<r),
+[
+\deg(X^tp)\le (r-1)+(k-1)=n-2,
+]
+and hence (5) gives
+[
+\sum*{a\in D}\lambda_aa^tp(a)=0.
+]
+Thus
+[
+C\subseteq\ker\mathsf H.
+]
+
+The matrix (\mathsf H) has rank (r): any (r) columns are nonzero scalar multiples of a square Vandermonde matrix at (r) distinct points. Consequently
+[
+\dim\ker\mathsf H=n-r=k=\dim C,
+]
+and therefore
+[
+\ker\mathsf H=C.
+\tag{6}
+]
+In particular, (\mathsf H:F^D\to F^r) is surjective.
+
+### 3. Exact computation of (W_J^\perp)
+
+Identify (V) with (F^r) through the coefficient vector and use the standard nondegenerate pairing. For (J), let
+[
+W_J=\operatorname{span}{\lambda_av(a):a\in J}\subseteq F^r.
+]
+
+For (Q\in V),
+[
+\langle \lambda_av(a),Q\rangle
+==============================
+
+\lambda_aQ(a).
+]
+Since (\lambda_a\ne0),
+[
+Q\in W_J^\perp
+\iff
+Q(a)=0\quad\text{for every }a\in J.
+]
+The points in (J) are distinct, so this is equivalent to divisibility by (P_J). Since
+[
+\deg Q<r=j+\sigma,
+]
+the quotient has degree less than (\sigma). Hence
+[
+W_J^\perp=P_JF[X]_{<\sigma}.
+\tag{7}
+]
+
+There is no missing dual weight in (7); the nonzero column weight (\lambda_a) cancels from the vanishing condition.
+
+### 4. The claimed syndrome incidence
+
+Let (y_0\in F^r) represent (\ell):
+[
+\langle y_0,Q\rangle=\ell(Q)
+\qquad(Q\in V),
+]
+and let
+[
+y_1=v(\beta).
+]
+Then
+[
+\langle y_1,Q\rangle=Q(\beta).
+]
+
+Since (\beta\notin D), every (P_J(\beta)) is nonzero. Define
+[
+z_J=-P_J(\beta)^{-1}.
+]
+
+For every (Q=P_JA\in W_J^\perp), equations (4) and (7) give
+[
+\begin{aligned}
+\langle y_0+z_Jy_1,Q\rangle
+&=\ell(P_JA)+z_J(P_JA)(\beta)\
+&=A(\beta)-P_J(\beta)^{-1}P_J(\beta)A(\beta)\
+&=0.
+\end{aligned}
+]
+Therefore
+[
+y_0+z_Jy_1\in (W_J^\perp)^\perp=W_J.
+\tag{8}
+]
+
+This implication is valid over an arbitrary field because the coefficient pairing on (F^r) is nondegenerate.
+
+### 5. A single common affine line
+
+By surjectivity of (\mathsf H), choose (f,g\in F^D) satisfying
+[
+\mathsf Hf=y_0,
+\qquad
+\mathsf Hg=y_1.
+\tag{9}
+]
+These (f,g) are independent of (J).
+
+By (8), for each (J) there exists (e_J\in F^D), supported on (J), such that
+[
+\mathsf He_J=y_0+z_Jy_1.
+\tag{10}
+]
+Define
+[
+c_J=f+z_Jg-e_J.
+]
+Using (9) and (10),
+[
+\mathsf Hc_J
+============
+
+# y_0+z_Jy_1-(y_0+z_Jy_1)
+
+0.
+
+]
+By (6),
+[
+c_J\in C.
+\tag{11}
+]
+
+Let
+[
+S_J=D\setminus J.
+]
+Since (e_J) vanishes on (S_J),
+[
+(c_J)|_{S_J}
+============
+
+(f+z_Jg)|_{S_J}.
+\tag{12}
+]
+Moreover,
+[
+|S_J|=n-j.
+]
+
+Thus every (z_J) is a support-wise agreement slope for the same affine line (f+zg).
+
+### 6. Noncontainment is valid
+
+We claim
+[
+y_1\notin W_J.
+\tag{13}
+]
+Otherwise (v(\beta)) would lie in the span of
+({\lambda_av(a):a\in J}). Because all (\lambda_a\ne0), this would yield a linear dependence among the (j+1) vectors
+[
+{v(x):x\in J\cup{\beta}}.
+]
+The points in (J\cup{\beta}) are distinct, and
+[
+j+1\le j+\sigma=r.
+]
+Taking their first (j+1) coordinates produces a square Vandermonde matrix with nonzero determinant. Hence those vectors are independent, proving (13).
+
+Equivalently, (g|_{S_J}) is not a punctured codeword. Indeed, if some (c\in C) agreed with (g) on (S_J), then (g-c) would be supported on (J), and
+[
+y_1=\mathsf Hg=\mathsf H(g-c)\in W_J,
+]
+contradicting (13).
+
+It also follows that (z_J) is the unique intersection slope for this (J): if
+[
+y_0+zy_1\in W_J
+\quad\text{and}\quad
+y_0+z_Jy_1\in W_J,
+]
+then
+[
+(z-z_J)y_1\in W_J.
+]
+By (13), this forces (z=z_J).
+
+### 7. Counting slopes
+
+The map
+[
+u\longmapsto -u^{-1}
+]
+is injective on (F^\ast). Therefore
+[
+#{z_J:J}
+========
+
+#{P_J(\beta):J}.
+]
+Selecting one (J) for each distinct value (P_J(\beta)), equations (11)–(13) give that many distinct support-wise bad slopes on one common affine line, each witnessed on a support of size (n-j).
+
+Hence
+[
+\boxed{\operatorname{LD}_{\mathrm{sw}}(C,n-j)
+\ge
+#{P_J(\beta):J}.}
+]
+
+All seven audited steps are valid. This proves the support-wise affine-line statement only; it does not by itself assert an ordinary list-decoding lower bound for a single fixed received word.

@@ -274,6 +274,7 @@ Now work in
 K = F_17^32,
 H = <theta> = D_0 union theta D_0,
 theta^2 = eta,
+ord(eta)=256,
 ord(theta)=512.
 ```
 
@@ -290,6 +291,10 @@ Define
 J_T* = J_T union R*,
 P_T* = P_R* P_T.
 ```
+
+This union is disjoint: `J_T subset D_0`, while `R* subset theta D_0`, and
+`H = D_0 disjoint_union theta D_0`. Thus `P_T*` is the square-free locator of
+`J_T*`.
 
 Then
 
@@ -485,4 +490,3 @@ delta=125/256 with epsilon_mca > 2^-128.
 
 If no, what is the first rejected clause?
 ```
-
