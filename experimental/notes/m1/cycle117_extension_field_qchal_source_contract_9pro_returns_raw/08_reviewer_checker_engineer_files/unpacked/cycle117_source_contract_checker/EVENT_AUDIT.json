@@ -1,0 +1,99 @@
+{
+  "schema": "cycle117.event_audit.v1",
+  "scope": "ATTACHED_MANUSCRIPT_SUPPORTWISE_MCA_DEFINITION",
+  "items": [
+    {
+      "name": "endpoint deletion",
+      "status": "ABSENT_FROM_SOURCE",
+      "basis": [
+        "RS_SUPPORTWISE_MCA_DEFINITION",
+        "SLACK_SUPPORTWISE_MCA_DEFINITION"
+      ],
+      "note": "The source counts every distinct z satisfying the bad-parameter predicate; no endpoint-deletion map is part of that predicate. The Cycle116 radius is strictly below capacity."
+    },
+    {
+      "name": "periodic quotienting",
+      "status": "PRESENT_BUT_IRRELEVANT",
+      "basis": [
+        "SLACK_SUPPORTWISE_MCA_DEFINITION",
+        "SLACK_QUOTIENT_PERIODIC_ANALYTIC_ROLE",
+        "SLACK_QUOTIENT_PERIODIC_FLOOR_SEPARATION"
+      ],
+      "note": "Quotient-periodic classes occur in later analytic decompositions and conjectural upper bounds, not as an equivalence relation deleting raw bad parameters from def:mca."
+    },
+    {
+      "name": "quotient profile or quotient-core charge",
+      "status": "PRESENT_BUT_IRRELEVANT",
+      "basis": [
+        "SLACK_SUPPORTWISE_MCA_DEFINITION",
+        "SLACK_QUOTIENT_PERIODIC_ANALYTIC_ROLE",
+        "SLACK_QUOTIENT_PERIODIC_FLOOR_SEPARATION"
+      ],
+      "note": "The source has quotient mechanisms but no charge registry that subtracts them from the raw support-wise numerator."
+    },
+    {
+      "name": "tangent floor",
+      "status": "PRESENT_BUT_IRRELEVANT",
+      "basis": [
+        "SLACK_TANGENT_FLOOR"
+      ],
+      "note": "The tangent floor is an additional lower bound on MCA error, not an exclusion or charge."
+    },
+    {
+      "name": "contained-line or contained-incidence exclusion",
+      "status": "PRESENT_AND_PAID",
+      "basis": [
+        "RS_SUPPORTWISE_MCA_DEFINITION",
+        "SLACK_SUPPORTWISE_MCA_DEFINITION",
+        "C116_NONCONTAINMENT_PROOF"
+      ],
+      "note": "The source requires failure of simultaneous explanation on the same support; Cycle116 proves the direction word is not code-explainable on every designated witness support."
+    },
+    {
+      "name": "same-slope collision",
+      "status": "PRESENT_AND_PAID",
+      "basis": [
+        "C116_Q_LEDGER_AND_SCOPE"
+      ],
+      "note": "The numerator is the distinct occupancy 52,747,567,092 after 12 double fibers, not the raw support count."
+    },
+    {
+      "name": "affine-color normalization",
+      "status": "ABSENT_FROM_SOURCE",
+      "basis": [
+        "RS_SUPPORTWISE_MCA_DEFINITION",
+        "SLACK_SUPPORTWISE_MCA_DEFINITION"
+      ],
+      "note": "No affine-color event quotient appears in the attached MCA definitions."
+    },
+    {
+      "name": "retained-event map",
+      "status": "ABSENT_FROM_SOURCE",
+      "basis": [
+        "RS_SUPPORTWISE_MCA_DEFINITION",
+        "SLACK_SUPPORTWISE_MCA_DEFINITION"
+      ],
+      "note": "The attached manuscripts define the event directly as a field element z; they do not define a later retained-event map."
+    },
+    {
+      "name": "AP_corr or exhaustive charge registry",
+      "status": "ABSENT_FROM_SOURCE",
+      "basis": [
+        "RS_PROTOCOL_SCOPE_CUT"
+      ],
+      "note": "No AP_corr predicate or exhaustive charge registry is present in the attached source files."
+    },
+    {
+      "name": "protocol challenge-field filtering",
+      "status": "UNKNOWN_MISSING_CONTRACT",
+      "basis": [
+        "RS_CAPACITY_TRANSCRIPTION_SCOPE",
+        "RS_PROTOCOL_SCOPE_CUT",
+        "C116_OFFICIAL_CONTRACT_WALL"
+      ],
+      "note": "The manuscripts do not supply an authority-pinned protocol contract or q_chal rule."
+    }
+  ],
+  "attached_source_terminal": "EVENT_RETAINED",
+  "official_terminal": "SOURCE_CONTRACT_MISSING_NO_CLAIM"
+}

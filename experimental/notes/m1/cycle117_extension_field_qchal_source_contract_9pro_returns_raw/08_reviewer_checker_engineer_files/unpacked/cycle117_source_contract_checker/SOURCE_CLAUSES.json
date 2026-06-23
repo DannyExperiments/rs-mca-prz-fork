@@ -1,0 +1,194 @@
+{
+  "schema": "cycle117.source_clauses.v1",
+  "clauses": [
+    {
+      "id": "RS_GENERAL_SMOOTH_ROW",
+      "file": "inputs/source/RS_disproof_v3.tex",
+      "line_start": 91,
+      "line_end": 95,
+      "slice_sha256": "cb78d937dd5dd59e79119f3bf4e04ba9926a625a39bba8aed2940e89b1f8d37b",
+      "description": "General RS row over a field; smooth power-of-two subgroup domain.",
+      "text": "The Proximity Prize \\cite{ProximityPrize,ABF26,BonehKeynote} concerns Reed--Solomon codes\n\\[\n        \\RS[\\F,D,k]=\\{(P(x))_{x\\in D}:\\deg P<k\\},\\qquad n=|D|,\\ \\rho=k/n,\n\\]\nover \\emph{smooth} multiplicative domains.  In this paper all stated counterexamples use multiplicative subgroups $D\\le\\F^\\times$ of power-of-two order; the same locator calculation also applies to multiplicative cosets after the evident rescaling, but no coset generality is needed below.  Correlated-agreement theorems control, for a random $z$, whether closeness of $f+zg$ to the code forces closeness of $f$ and $g$ individually; the \\emph{mutual} (support-wise) version asks this on the same agreement set, which is what FRI/WHIR-style extractors consume \\cite{FRI,WHIR}.  Proximity gaps and (M)CA are known throughout the Johnson regime $\\delta<1-\\sqrt\\rho$ \\cite{BCIKS23}, and the prize challenge is the region between Johnson and capacity $1-\\rho$.  The optimistic endpoint --- conjectured in various forms since proximity gaps were introduced \\cite{BCIKS23}, and the natural reading of the grand challenge --- is:"
+    },
+    {
+      "id": "RS_CAPACITY_TRANSCRIPTION_SCOPE",
+      "file": "inputs/source/RS_disproof_v3.tex",
+      "line_start": 97,
+      "line_end": 107,
+      "slice_sha256": "2359254ed1a211638b59758f50cda02b50c506130c63ec5eb5df36f3a24e5956",
+      "description": "No-slack support-wise line form and explicit statement that it is a manuscript transcription of the challenge.",
+      "text": "\\begin{conjecture}[Up-to-capacity MCA; no-slack support-wise line form]\\label{conj:capacity}\nLet $C=\\RS[\\F,D,\\rho n]$ be a smooth-domain Reed--Solomon code, $\\rho\\in\\{1/2,1/4,1/8,1/16\\}$.  For every $\\delta<1-\\rho$,\n\\[\n        \\eps_{\\rm mca}(C,\\delta)\\ \\le\\ \\mathrm{negl}(q)\n        \\qquad\\big(\\text{concretely: }\\le2^{-128}\\text{ for the prize fields}\\big),\n\\]\nwhere $\\eps_{\\rm mca}$ is the support-wise line-MCA error of \\cref{def:mca} below.  List-decoding analogue: for every $\\delta<1-\\rho$, every received word has at most $\\mathrm{poly}(q)$ codewords within relative distance $\\delta$.\n\\end{conjecture}\n\n\\begin{remark}[What exactly is being refuted]\\label{rem:formulation}\nThe prize materials phrase the challenge as determining the largest $\\delta$ with negligible MCA/list error \\cite{ProximityPrize,ABF26}; \\cref{conj:capacity} is the assertion that this $\\delta$ reaches capacity, transcribed in the minimal no-slack, same-support, two-word (line) form.  Everything below refutes \\emph{this} form, quantitatively and with explicit witnesses.  If a formulation includes a slack parameter $\\tau$, a curve variant, or a different agreement notion, our results convert into necessary conditions on that formulation (\\cref{sec:scope}): in particular any slack $\\tau\\le2^{-18}$ is insufficient on BabyBear/KoalaBear domains with $2^{18}\\mid n$, and $\\tau\\le c_\\rho/\\log p$ is insufficient on infinitely many smooth prime fields.  We do not claim anything about slacked formulations above these floors."
+    },
+    {
+      "id": "RS_SUPPORTWISE_MCA_DEFINITION",
+      "file": "inputs/source/RS_disproof_v3.tex",
+      "line_start": 110,
+      "line_end": 115,
+      "slice_sha256": "e65dbc3b34be54e4e6c3a45c48da32a2adf519047ec7a006d60e6201e28572d9",
+      "description": "Bad-slope predicate and denominator |F|.",
+      "text": "\\begin{definition}[Support-wise line-MCA error]\\label{def:mca}\nFor a linear code $C\\subseteq\\F^D$ and a line $u_z=f+zg$, the parameter $z$ is \\emph{bad at radius $\\delta$} if there is $S\\subseteq D$, $|S|\\ge(1-\\delta)n$, and $c\\in C$ with $u_z|_S=c|_S$, while no pair $c_f,c_g\\in C$ has $f|_S=c_f|_S$ and $g|_S=c_g|_S$.  Then\n\\[\n        \\eps_{\\rm mca}(C,\\delta)=\\max_{f,g}\\ \\frac{\\#\\{z\\in\\F:\\ z\\ \\text{bad}\\}}{|\\F|}.\n\\]\n\\end{definition}"
+    },
+    {
+      "id": "RS_EXTENSION_FIELD_CONSTRUCTION",
+      "file": "inputs/source/RS_disproof_v3.tex",
+      "line_start": 369,
+      "line_end": 383,
+      "slice_sha256": "8c102986da07b6d90fa8935639c836aa95e0490817cc1c7e47e5b7711a38dcb3",
+      "description": "Generated extension-field subgroup construction.",
+      "text": "\\section{Extension-field towers and density variants}\\label{sec:extension-towers}\n\nThe prime-field quotient ladder already gives the deployed-field disproof.  The following scalar-coset construction gives generated extension-field examples with error one at one symbol below capacity and explains why borderline fields such as Goldilocks still have large bad-slope density even when full restricted-sum coverage fails.\n\n\\begin{lemma}[Scalar-coset subgroup]\\label{lem:ext-coset-subgroup}\nLet $p$ be an odd prime, let $m\\mid p-1$, put $n=md$, and assume\n\\[\n        \\ord_{md}(p)=d.\n\\]\nThen $\\F_{p^d}^{\\times}$ contains an element $\\zeta$ of order $n$.  If $H\\le\\F_p^\\times$ is the subgroup of order $m$ and $D=\\langle\\zeta\\rangle\\le\\F_{p^d}^{\\times}$, then\n\\[\n        D=\\bigsqcup_{i=0}^{d-1}\\zeta^iH,\n\\]\nand $1,\\zeta,\\ldots,\\zeta^{d-1}$ is an $\\F_p$-basis of $\\F_{p^d}$.  Conversely, an element of order $n$ and degree $d$ over $\\F_p$ has $\\ord_n(p)=d$.\n\\end{lemma}"
+    },
+    {
+      "id": "RS_EXTENSION_FIELD_THEOREM",
+      "file": "inputs/source/RS_disproof_v3.tex",
+      "line_start": 416,
+      "line_end": 426,
+      "slice_sha256": "599e4870896dc62efe427b0154ba84aab9888d5ba4c61237223e3d9f3abac139",
+      "description": "Smooth extension towers theorem over F_{p^d}.",
+      "text": "\\begin{theorem}[Smooth extension towers: full density]\\label{thm:ext-smooth-towers}\nLet $p\\equiv1\\pmod4$ be prime, let $m=2^{\\vtwo(p-1)}$, let $d$ be a power of two, and let $D\\le\\F_{p^d}^{\\times}$ be the subgroup of order $n=md$ supplied by \\cref{lem:ext-coset-subgroup,lem:ext-tower-criterion}.  Fix $0<\\rho\\le1/2$ with $r:=\\rho m\\in\\Z$, and assume\n\\[\n        \\rho(1-\\rho)m^2\\ge p.\n\\]\nThen, for $k=\\rho n$,\n\\[\n        \\eps_{\\rm mca}\\left(\\RS[\\F_{p^d},D,k],\\,1-\\rho-\\frac1n\\right)=1.\n\\]\nIn particular, if $m^2\\ge18p$, this holds simultaneously for all four prize rates.\n\\end{theorem}"
+    },
+    {
+      "id": "RS_PROTOCOL_SCOPE_CUT",
+      "file": "inputs/source/RS_disproof_v3.tex",
+      "line_start": 505,
+      "line_end": 511,
+      "slice_sha256": "1631cbc8c19d631c6790f12130bb633c5be03df2b5140ee71f4255be1b3bf556",
+      "description": "Protocol-specific constraints are absent; protocol soundness is untouched.",
+      "text": "\\section{Scope: what is refuted, what survives}\\label{sec:scope}\n\n\\paragraph{Refuted.}  \\Cref{conj:capacity} in its stated form, at every prize rate, for every target $\\eps^*<1$, on the deployed FFT fields (error one, on an interval), on linear-size Fermat fields (error $1-1/p$, verified), on generated extension-field smooth towers (error one at one symbol below capacity when the scalar-coset coverage condition holds), and even on borderline Goldilocks-type towers at non-negligible density.  In the negligibility sense, with non-negligible meaning inverse-polynomial in $\\lambda=\\log_2q$, the conjecture also fails on infinitely many smooth prime fields at radius $1-\\rho-O(1/\\log p)$.  The polynomial-list analogue fails unconditionally at the prize rates on every power-of-two subgroup domain with $n\\ge(\\log_2q)^{1+\\eps}$ for any fixed $\\eps>0$; the divisor-level version of \\cref{thm:main}(d) is valid for arbitrary rates whenever the chosen divisor $N$ satisfies $\\rho N\\in\\Z$.\n\n\\paragraph{Not refuted, and turned into floors.}  Any formulation with explicit slack $\\tau$: our results show such a formulation \\emph{must} take $\\tau>1/\\hat N\\asymp\\sqrt{\\rho(1-\\rho)/p}$ on fields where the $2$-part of $p-1$ reaches $\\hat N$ (including BabyBear, KoalaBear, and $3\\cdot2^{30}+1$), $\\tau>c_\\rho/\\log p$ on the sieve fields, and $\\tau>(\\log_2q)^{-1-\\eps}$ for the prize-rate list version whenever the domain has the corresponding dyadic divisors; above these floors the present no-slack arguments make no negative claim.  The restricted-sum mechanism itself cannot certify arbitrary depths: certifying error $\\eta$ at $1-\\rho-1/N$ through a quotient $Q$ needs $\\binom{N}{\\rho N+1}\\ge\\eta q$ (the construction's bad set has size at most $|(\\rho N{+}1)^{\\wedge}Q|\\le\\binom{N}{\\rho N+1}\\le2^{\\HH(\\rho)N(1+o(1))}$), i.e.\\ $N\\ge\\log_2(\\eta q)/\\HH(\\rho)\\,(1-o(1))$ --- a radius gap $O(\\HH(\\rho)/\\log_2(\\eta q))$ at best.  Curve-MCA and exact slacked threshold formulations require additional constraints and analysis beyond the no-slack model studied here; protocol-level soundness of FRI/WHIR-type systems is untouched, because deployed analyses operate in the Johnson regime with margins and include protocol-specific constraints absent from this minimal no-slack definition.\n\n\\paragraph{Companion manuscripts.}  The corrected slack/entropy theory and failure-ladder calculus built on these floors are developed in \\cite{SlackTheory}.  The divisor-level list bound of \\cref{thm:main}(d), sharpened to slack two and pigeonholed over the field of definition, composes with the Crites--Stewart list-to-agreement conversion \\cite{CS25} into a field-size-universal challenge cap in \\cite{UniversalCap}, which also places the list mass directly against the survey's $\\eps^*|\\F|$ budget."
+    },
+    {
+      "id": "SLACK_GENERAL_PRIME_POWER_NOTATION",
+      "file": "inputs/source/slackMCA_v3.tex",
+      "line_start": 153,
+      "line_end": 160,
+      "slice_sha256": "d4cec43b03dff8ea013aa7dbb5f554008b67294e73a0d3a9accb0e9a3632c279",
+      "description": "General prime-power notation and smooth subgroup RS code.",
+      "text": "\\paragraph{Setting and notation.}\n$p$ is prime ($q$ a general prime power where stated); $D$ or $H\\le\\F_q^\\times$ is a multiplicative subgroup of order $n$, \\emph{smooth} meaning $n$ is a power of two; $C=\\RS[\\F_q,D,k]=\\{(P(x))_{x\\in D}:\\deg P<k\\}$ with $k=\\rho n$, $\\rho\\in(0,1)$ fixed.  For a finite set $A$ in a field, $L_A(X)=\\prod_{a\\in A}(X-a)=X^{|A|}+\\sum_{j\\ge1}(-1)^je_j(A)X^{|A|-j}$ and $p_j(A)=\\sum_{a\\in A}a^j$; for $h\\ge0$, $h^{\\wedge}A$ is the set of sums of $h$ distinct elements of $A$.  $\\HH$ is binary entropy.  Divisibility hypotheses ($\\rho N\\in\\Z$, $t\\mid N$, $t\\mid\\rho N$, $\\sigma\\mid k$, and the like) are stated where they are used.\n\n\\part{List entropy, quotient cores, and Route 1}\n\n\\section{List decoding as a locator-fiber problem}\\label{sec:fiber}\n\nEvery received word $y:H\\to\\F_q$ has a unique interpolant $U\\in\\F_q[X]$ of degree $<n$ on $H$.  Write $\\List(y,\\delta)$ for the list of codewords within relative radius $\\delta$ of $y$, and $\\Lst(C,\\delta)=\\max_y|\\List(y,\\delta)|$ for the worst-case list size.  A codeword $P$ agrees with $y$ on a set $S\\subseteq H$ if and only if"
+    },
+    {
+      "id": "SLACK_SUBFIELD_CORRECTION",
+      "file": "inputs/source/slackMCA_v3.tex",
+      "line_start": 600,
+      "line_end": 602,
+      "slice_sha256": "4f5874dcd18643064fe140c266037776315a7f9e272650a2ddb7d7d3f777e4fd",
+      "description": "Generated-field or field-of-definition correction.",
+      "text": "\\begin{remark}[Subfield correction]\\label{rem:subfield}\nIf $H$ is contained in a proper subfield $\\F_{q_0}\\subsetneq\\F_q$, then the entropy scale is governed by the field of definition $q_0$, not the ambient alphabet size $q$.  Indeed, locator coefficients of subsets of $H$ lie in $\\F_{q_0}$, and the pigeonhole denominator in \\Cref{thm:pigeonhole} is $q_0^\\sigma$.  Thus any ambient-$q$ formulation over extension fields is false unless a generated-field hypothesis or a field-of-definition parameter is included.\n\\end{remark}"
+    },
+    {
+      "id": "SLACK_SUPPORTWISE_MCA_DEFINITION",
+      "file": "inputs/source/slackMCA_v3.tex",
+      "line_start": 639,
+      "line_end": 653,
+      "slice_sha256": "197663dd490be2970fc80a78116acf6a937f1922cf67de91adb6e146477bf046",
+      "description": "Support-wise line-MCA definition and |F| denominator.",
+      "text": "\\begin{definition}[Support-wise agreement]\\label{def:sclose}\nFor $C\\subseteq\\F^D$, $|D|=n$, $\\delta\\in[0,1]$: a word $u\\in\\F^D$ is \\emph{$S$-close} to $C$ at radius $\\delta$ if $S\\subseteq D$, $|S|\\ge(1-\\delta)n$, and $u|_S=c|_S$ for some $c\\in C$.\n\\end{definition}\n\n\\begin{definition}[Bad parameter and line-MCA error]\\label{def:mca}\nFor a line $u_z=f+zg$, $z\\in\\F$: the parameter $z$ is \\emph{support-wise MCA-bad} at radius $\\delta$ if there is $S\\subseteq D$ with (i) $u_z$ $S$-close to $C$ at radius $\\delta$, and (ii) no pair $c_f,c_g\\in C$ satisfying $f|_S=c_f|_S$ and $g|_S=c_g|_S$.  Then\n\\[\n        \\emca(C,\\delta)\\ =\\ \\max_{f,g\\in\\F^D}\\ \\frac1{|\\F|}\\,\\#\\{z:\\ z\\text{ support-wise MCA-bad for }f+zg\\},\n\\]\nand the threshold is\n\\[\n        \\delta^*_C(\\eps^*)=\\sup\\{\\delta:\\emca(C,\\delta)\\le\\eps^*\\}.\n\\]\nA witness at radius $\\delta$ is one at every larger radius (neither condition mentions $\\delta$ otherwise), so $\\emca(C,\\cdot)$ is nondecreasing and error one propagates upward; this is the monotonicity lemma of \\cite{NoSlack}.\n\\end{definition}"
+    },
+    {
+      "id": "SLACK_TANGENT_FLOOR",
+      "file": "inputs/source/slackMCA_v3.tex",
+      "line_start": 667,
+      "line_end": 674,
+      "slice_sha256": "4a10260c3ceba3115243f8989477eabe5ca432d22de1f4b8800158827be661bf",
+      "description": "Tangent floor is a lower bound, not an exclusion.",
+      "text": "\\begin{proposition}[Tangent floor]\\label{prop:floor}\nFor $C=\\RS[\\F,D,k]$ and $\\delta\\in(0,1-\\rho)$ with $m=\\lfloor\\delta n\\rfloor\\le q$:\n$\\emca(C,\\delta)\\ \\ge\\ m/q$.\n\\end{proposition}\n\n\\begin{proof}\nFix $E\\subseteq D$, $|E|=m$, codewords $P_1,P_2$, and $f=P_1+e_f$, $g=P_2+e_g$ with errors supported on $E$, $e_g\\equiv1$ there and $e_f$ injective there.  For $x\\in E$ put $z_x=-e_f(x)$ and $S_x=(D\\setminus E)\\cup\\{x\\}$: the error of $u_{z_x}$ against the codeword $P_1+z_xP_2$ vanishes at $x$ and off $E$, so condition (i) holds; a codeword explaining $g$ on $S_x$ would agree with $P_2$ on $n-m>k$ points, hence equal $P_2$, contradicting $g(x)\\ne P_2(x)$: condition (ii).  The $m$ slopes $z_x$ are distinct and bad.\n\\end{proof}"
+    },
+    {
+      "id": "SLACK_SUBFIELD_CONFINEMENT",
+      "file": "inputs/source/slackMCA_v3.tex",
+      "line_start": 1529,
+      "line_end": 1540,
+      "slice_sha256": "1a42660bdfe8982699c63707361967b245820aa6c1b062eb0956c00fb61ed6c3",
+      "description": "Subfield confinement condition D subset B and B-valued line.",
+      "text": "\\section{Subfield confinement over extension fields}\\label{sec:subfield}\n\nDeployed instantiations sample the slope from an extension field $\\F=B^{\\,d}$ of the base field $B$ containing the domain.  The following confinement theorem shows the entire prime-field witness theory deflates by a factor $|B|/|\\F|$ in that setting, while the list-side obstructions persist --- so the two grand challenges genuinely decouple over extensions.  A two-radius refinement of \\cref{thm:subfield}, covering the proximity-loss form of correlated agreement, is proved in \\cite[Lem.\\ ``subfield confinement'']{UniversalCap}.\n\n\\begin{theorem}[Subfield confinement]\\label{thm:subfield}\nLet $B\\le\\F$ be a subfield, $D\\subseteq B$, $C=\\RS[\\F,D,k]$, and let $f,g\\in B^D$ be $B$-valued words.  Then every support-wise MCA-bad parameter of the line $f+zg$, at every radius, lies in $B$.\n\\end{theorem}\n\n\\begin{proof}\nFix a $B$-basis $e_1=1,e_2,\\dots,e_d$ of $\\F$ and the $B$-linear coordinate projections $\\pi_i:\\F\\to B$.  For $P\\in\\F[X]_{<k}$ and $x\\in D\\subseteq B$ we have $\\pi_i(P(x))=(\\pi_iP)(x)$, where $\\pi_iP$ applies $\\pi_i$ to coefficients; each $\\pi_iP$ is a codeword.  Let $z\\notin B$, so $z=\\sum_iz_ie_i$ with $z_{i_0}\\ne0$ for some $i_0\\ge2$, and let $S$ be any set on which $f+zg$ agrees with a codeword $P$.  Comparing coordinates on $S$: the $i_0$-th coordinate of $(f+zg)(x)=f(x)+zg(x)$ is $z_{i_0}g(x)$, so $g|_S=(z_{i_0}^{-1}\\pi_{i_0}P)|_S$, and the first coordinate is $f(x)+z_1g(x)$, so $f|_S=(\\pi_1P-z_1z_{i_0}^{-1}\\pi_{i_0}P)|_S$.  Both explaining polynomials have degree $<k$, so $f$ and $g$ are simultaneously explained on $S$ itself, and $z$ fails condition (ii) of \\cref{def:mca} for every candidate $S$.\n\\end{proof}"
+    },
+    {
+      "id": "M2_LDSW_EXACT_BRIDGE",
+      "file": "inputs/source/m2_line_decoding_mca_bridge.md",
+      "line_start": 12,
+      "line_end": 68,
+      "slice_sha256": "28a631bd5a52c92f79df653f121f9d77153980968a433c8927c82d182e4e83f1",
+      "description": "Definition of LD_sw and exact equality with epsilon_mca.",
+      "text": "## Setup\n\nLet `C <= F^D` be a linear code over a finite field `F`, with `|D|=n`.\nFor `S subset D`, write `C|S` for the punctured code on `S`.  Let\n\n```text\na(delta) = ceil((1-delta)n).\n```\n\nFor a line `ell_z = f + z g`, with `f,g in F^D`, call a slope `z`\nsupport-wise noncontained at agreement size `a` if there is a support\n`S subset D` such that\n\n```text\n|S| >= a,\n(f + z g)|S in C|S,\nand there do not exist c_f,c_g in C with f|S=c_f|S and g|S=c_g|S.\n```\n\nDefine the support-wise line-decoding numerator\n\n```text\nLD_sw(C,a) =\n  max_{f,g in F^D} #{z in F : z is support-wise noncontained for f+z g\n                    at agreement size a}.\n```\n\nThis is the line-decoding numerator that the MCA ledger can consume directly.\n\n## Exact Bridge\n\nFor every linear code `C <= F^D` and every `delta in [0,1]`,\n\n```text\neps_mca(C,delta) = LD_sw(C,ceil((1-delta)n)) / |F|.\n```\n\nThis is an equality, not only an implication.  The support-wise MCA definition\nmaximizes over the same pairs `(f,g)` and counts the same slopes `z`: a large\nsupport explaining the line point but not simultaneously explaining `(f,g)`.\nThe only conversion is from radius to agreement size by\n`a=ceil((1-delta)n)`.\n\nConsequently, any theorem proving\n\n```text\nLD_sw(C,a(delta)) <= a_LD\n```\n\nimmediately gives\n\n```text\neps_mca(C,delta) <= a_LD / |F|.\n```\n\nThis is the precise finite-length content behind the manuscript phrase\n`(delta,a_LD,n+1) line-decodable => eps_mca <= a_LD/|F|`."
+    },
+    {
+      "id": "M2_CLOSE_POINT_LINE_DECODING_SUFFICIENT_ONLY",
+      "file": "inputs/source/m2_line_decoding_mca_bridge.md",
+      "line_start": 249,
+      "line_end": 266,
+      "slice_sha256": "f5defc6ca1906b90dfd4c8a4c4772b0db80899c0cea5714cc4b73efc1fe88dc2",
+      "description": "Close-point line decoding is a sufficient stronger predicate, not equivalent.",
+      "text": "## What an External Line-Decoding Theorem Must Prove\n\nA close-point line-decoding bound with a contained-line exception,\n\n```text\neither f+F g is contained in C, or #{z : dist(f+z g,C) <= delta} <= a_LD,\n```\n\nis sufficient, since support-wise noncontained slopes are a subset of close\nline points, and a line contained in `C` has no support-wise noncontained\nslopes.  This sufficient condition is usually stronger than necessary.\n\n## Close-Point Line-Decoding Is Strictly Stronger\n\nThe sufficient close-point predicate above is not equivalent to the\nsupport-wise numerator.  This matters when importing external line-decoding\ntheorems: a theorem that bounds all close line points with only a \"line\ncontained in the code\" exception may be much stronger than what MCA needs."
+    },
+    {
+      "id": "M2_EXTERNAL_DEFINITION_STILL_TO_MATCH",
+      "file": "inputs/source/m2_line_decoding_mca_bridge.md",
+      "line_start": 406,
+      "line_end": 414,
+      "slice_sha256": "5d9a59a8fd9698e1c6fe6e64e40c47e3a0f382afd79f78c42d0884b3873deb30",
+      "description": "External (delta,a_LD,n+1) definition remains an explicit follow-up check.",
+      "text": "## Follow-Up Checks\n\n- Match the external `(delta,a_LD,n+1)` line-decoding definition used in\n  protocol papers against `LD_sw(C,a)`.\n- Decide whether the `n+1` parameter is only a codeword-uniqueness threshold or\n  whether it hides an additional proximity-loss convention.\n- Check whether protocol line-decoding imports have a common-support or\n  code-line-proximity exception strong enough to avoid the spike-line\n  close-point separation."
+    },
+    {
+      "id": "C116_SMOOTH_ROW_AND_CANONICAL_AR",
+      "file": "inputs/cycle116/CYCLE116_CERTIFICATE.md",
+      "line_start": 276,
+      "line_end": 325,
+      "slice_sha256": "759154e4d984ab4e78f445da558f91480cf2dcdc77d631a7c60a3a0f1b3aa373",
+      "description": "F_17^32 lift, order-512 H, and canonical A/R partition.",
+      "text": "### 4. Smooth \\([512,256]\\) agreement-padding lift\n\nLet \\(q_0=17^{16}\\).  By the 2-adic lifting formula,\n\n\\[\nv_2(q_0-1)\n=v_2(17-1)+v_2(17+1)+v_2(16)-1\n=8.\n\\]\n\nThus the 2-Sylow subgroup of \\(F_0^\\times\\) has order \\(256\\).  Since \\(\\eta\\) has exact order \\(256\\), it is not a square in \\(F_0\\).  Therefore\n\n\\[\nK=F_0(\\theta),\n\\qquad \\theta^2=\\eta,\n\\]\n\nis a quadratic field extension, so\n\n\\[\nK\\cong\\mathbb F_{17^{32}}.\n\\]\n\nMoreover, \\(\\operatorname{ord}(\\theta)=512\\), because \\(\\theta^2\\) has order \\(256\\).  Put\n\n\\[\nH=\\langle\\theta\\rangle\n=D_0\\sqcup\\theta D_0,\n\\qquad |H|=512.\n\\]\n\nTake\n\n\\[\nA=\\{\\theta\\eta^i:0\\le i\\le118\\},\n\\qquad |A|=119,\n\\]\n\nand\n\n\\[\nR=\\{\\theta\\eta^i:119\\le i\\le255\\},\n\\qquad |R|=137.\n\\]\n\nThen \\(D_0,A,R\\) are pairwise disjoint and\n\n\\[\nH=D_0\\sqcup A\\sqcup R.\n\\]"
+    },
+    {
+      "id": "C116_PADDING_RETENTION_AND_THRESHOLD",
+      "file": "inputs/cycle116/CYCLE116_CERTIFICATE.md",
+      "line_start": 335,
+      "line_end": 419,
+      "slice_sha256": "78b87b9c3780ce24af03bbec8d0885ff01703df8933c2b12d9e8b545a6ba83ab",
+      "description": "Padding preserves noncontainment; LD_sw/MCA theorem and threshold arithmetic.",
+      "text": "For the native line \\(f+zg\\), define words on \\(H\\) by\n\n\\[\n\\widetilde f(x)=\n\\begin{cases}\nL_A(x)f(x),&x\\in D_0,\\\\\n0,&x\\in A\\cup R,\n\\end{cases}\n\\qquad\n\\widetilde g(x)=\n\\begin{cases}\nL_A(x)g(x),&x\\in D_0,\\\\\n0,&x\\in A\\cup R.\n\\end{cases}\n\\]\n\nFor a native bad slope \\(z\\), let \\(p_z\\in F_0[X]_{<137}\\) be the explaining polynomial on \\(S_z\\subseteq D_0\\), \\(|S_z|=143\\).  Then\n\n\\[\n\\widetilde p_z=L_Ap_z\n\\]\n\nhas degree \\(<256\\) and explains \\(\\widetilde f+z\\widetilde g\\) on\n\n\\[\nS'_z=S_z\\cup A,\n\\qquad |S'_z|=143+119=262.\n\\]\n\nIf degree-\\(<256\\) polynomials \\(F,G\\in K[X]\\) simultaneously explained \\(\\widetilde f,\\widetilde g\\) on \\(S'_z\\), both would vanish on all 119 points of \\(A\\).  Hence\n\n\\[\nF=L_AF_0,\n\\qquad G=L_AG_0,\n\\qquad \\deg F_0,\\deg G_0<137.\n\\]\n\nDividing on \\(S_z\\), where \\(L_A\\ne0\\), would give simultaneous native explanations over \\(K\\), hence over \\(F_0\\), contradicting native noncontainment.  Thus every native bad slope remains bad after the lift.\n\nConsequently, for\n\n\\[\nC=\\operatorname{RS}[\\mathbb F_{17^{32}},H,256],\n\\]\n\none has\n\n\\[\n\\boxed{\n\\operatorname{LD}_{\\rm sw}(C,262)\n\\ge52{,}747{,}567{,}092.\n}\n\\]\n\nSince\n\n\\[\n\\left\\lceil\n\\left(1-\\frac{125}{256}\\right)512\n\\right\\rceil=262,\n\\]\n\nthe exact MCA bridge gives\n\n\\[\n\\boxed{\n\\epsilon_{\\rm mca}\\!\\left(C,\\frac{125}{256}\\right)\n\\ge\n\\frac{52{,}747{,}567{,}092}{17^{32}}.\n}\n\\]\n\nFinally,\n\n\\[\n\\left\\lfloor\\frac{17^{32}}{2^{128}}\\right\\rfloor=6\n<52{,}747{,}567{,}092,\n\\]\n\nso\n\n\\[\n\\boxed{\n\\epsilon_{\\rm mca}\\!\\left(C,\\frac{125}{256}\\right)>2^{-128}.\n}"
+    },
+    {
+      "id": "C116_NONCONTAINMENT_PROOF",
+      "file": "inputs/cycle116/CYCLE116_CERTIFICATE.md",
+      "line_start": 478,
+      "line_end": 540,
+      "slice_sha256": "0d1cd82a4bbb3ae070511c84b84152dbef10805bf4bc8e5bb9fae8979a6795f0",
+      "description": "One affine line and support-wise noncontainment proof.",
+      "text": "The parity-check matrix has rank \\(r\\).  Choose \\(g\\) explicitly by\n\n\\[\ng(a)=\\frac{V_D(\\beta)}{\\beta-a};\n\\]\n\nLagrange interpolation gives \\(H_Cg=y_1\\).  Choose \\(f\\) with \\(H_Cf=y_0\\); for example, invert any weighted Vandermonde \\(r\\times r\\) column minor and take \\(f\\) supported on those \\(r\\) coordinates.\n\nSince \\(H_C(f+z_Jg)\\in W_J\\), there is an error word \\(e_J\\) supported on \\(J\\) with\n\n\\[\nH_Ce_J=H_C(f+z_Jg).\n\\]\n\nThus\n\n\\[\nc_J=f+z_Jg-e_J\\in C,\n\\]\n\nand \\(c_J=f+z_Jg\\) on \\(S_J=D\\setminus J\\).\n\n### B. Support-wise noncontainment\n\nIf \\(g|_{S_J}\\) were explained by a codeword \\(c_g\\in C\\), then \\(g-c_g\\) would be supported on \\(J\\), and therefore\n\n\\[\ny_1=H_Cg\\in W_J.\n\\]\n\nBut \\(W_J\\) has the same span as \\(\\{v(a):a\\in J\\}\\), while the \\(j+1\\) Vandermonde columns\n\n\\[\n\\{v(a):a\\in J\\}\\cup\\{v(\\beta)\\}\n\\]\n\nare linearly independent because \\(j+1\\le r\\) and \\(\\beta\\notin D\\).  Hence \\(y_1=v(\\beta)\\notin W_J\\), a contradiction.  Thus \\(g\\) is not code-explainable on \\(S_J\\), which is stronger than the required failure of simultaneous explanation.\n\n### C. Degree-one residue datum\n\nSet\n\n\\[\nE=X-\\beta,\n\\qquad B=V_D(\\beta),\n\\qquad w=E f\n\\]\n\nas words on \\(D\\).  Since \\(g=-B/E\\) on \\(D\\), if \\(C_J(X)\\) is the degree-\\(<k\\) polynomial representing \\(c_J\\), then\n\n\\[\nQ_J=EC_J+z_JB\n\\]\n\nsatisfies\n\n\\[\n\\deg Q_J<k+1,\n\\qquad Q_J\\equiv z_JB\\pmod E,\n\\qquad Q_J=w\\text{ on }S_J.\n\\]\n\nThe preceding Vandermonde argument proves the residue witness is noncontained.  Thus the theorem genuinely constructs one affine line, explaining codewords, witness supports, a common degree-one denominator, and noncontainment."
+    },
+    {
+      "id": "C116_Q_LEDGER_AND_SCOPE",
+      "file": "inputs/cycle116/CYCLE116_CERTIFICATE.md",
+      "line_start": 585,
+      "line_end": 608,
+      "slice_sha256": "0ed7a9580d9e1d76ab8d6c1ccef548076fef80b23bee289e30a922eac062e1fd",
+      "description": "q_gen/q_code/q_line/q_chal ledger and finite-only scope.",
+      "text": "|---|---:|---:|\n| Base/code field | \\(\\mathbb F_{17^{16}}\\) | \\(K=\\mathbb F_{17^{32}}\\) |\n| \\(q_{\\rm gen}\\) | \\(17^{16}\\) | \\(17^{32}\\) |\n| \\(q_{\\rm code}\\) | \\(17^{16}\\) | \\(17^{32}\\) |\n| \\(q_{\\rm line}\\) | \\(17^{16}\\) | \\(17^{32}\\) |\n| \\(q_{\\rm chal}\\) | uninstantiated | uninstantiated |\n| Domain | \\(D_0=\\langle\\eta\\rangle\\) | \\(H=\\langle\\theta\\rangle\\) |\n| Length \\(n\\) | 256 | 512 |\n| Dimension \\(k\\) | 137 | 256 |\n| Agreement | 143 | 262 |\n| Radius \\(\\delta\\) | \\(113/256\\) | \\(125/256\\) |\n| Certified numerator | \\(N\\) | \\(N\\) |\n\nFor the lifted row, \\(q_{\\rm gen}=17^{32}\\) because \\(H\\) contains \\(\\theta\\), \\(\\eta=\\theta^2\\) generates \\(F_0\\) over \\(\\mathbb F_{17}\\), and \\(F_0(\\theta)=K\\).  Only \\(q_{\\rm line}=|K|\\) appears in the MCA denominator.  No verifier challenge field is used.\n\n## SELF-AUDIT\n\n1. **Exact theorem proved.**  A finite smooth-domain \\([512,256]\\) Reed--Solomon code over \\(\\mathbb F_{17^{32}}\\) has a single affine line with at least \\(N\\) support-wise noncontained slopes at agreement 262.  Therefore the stated \\(\\operatorname{LD}_{\\rm sw}\\) and MCA lower bounds hold.\n2. **Not proved.**  No ordinary list-decoding lower bound of size \\(N\\); no protocol soundness failure; no asymptotic theorem; no official Proximity Prize admission; no accepted prime-field realization; no \\([464,232]\\) smooth lift.\n3. **Common-line issue.**  Closed by the parity-check/fixed-top-coefficient construction.  The line, direction, reciprocal slope gauge, explaining codewords, supports, and noncontainment are common or explicitly identified.\n4. **Cycle84 identities.**  Closed by the 336 block identities and the two zero subleading coefficients.  The exact statements are \\(P_T=X^{113}-X^{112}+\\deg\\le107\\) and \\(P_T(\\beta)=4(\\beta-1)\\Phi(T)\\).\n5. **Smooth lift.**  Agreement and noncontainment survive by the fixed vanishing factor \\(L_A\\); scalar extension is controlled by interpolation.\n6. **Loss audit.**  Reciprocal/scalar normalization is bijective; same-slope collisions are already reflected in occupancy; all slopes are finite because \\(P_T(\\beta)\\ne0\\); contained/tangent witnesses are excluded by the Vandermonde argument; no additional color division is allowed; quotient/periodic classifications do not alter the raw source definition.  Any official retained-event normalization would require a separate theorem.\n7. **Residue stratum after lifting.**  The native row is explicitly degree-one residue-line.  The padding proof certifies the lifted row directly through support-wise MCA; it does not claim that the lifted line remains in the same degree-one residue coordinate."
+    },
+    {
+      "id": "C116_OFFICIAL_CONTRACT_WALL",
+      "file": "inputs/cycle116/CYCLE116_CERTIFICATE.md",
+      "line_start": 610,
+      "line_end": 612,
+      "slice_sha256": "05e27dde42c84846a478e4f9ff936671f0b34a8171bcfaa30453e84d1952729d",
+      "description": "Authority-pinned admission/source/challenge-field contract remains the next step.",
+      "text": "## NEXT EXACT STEP\n\nPackage the theorem note and checker together and correct the stale prose generator line.  The checker already fail-closes on the 25-file `REVIEW_MANIFEST.sha256` root and explicitly verifies both based logarithms.  For official-prize promotion, the next lemma is not algebraic: it is an authority-pinned admission/source/challenge-field contract specifying whether this extension-field row is admitted and what, if any, endpoint, periodic, affine-color, or retained-event processing applies."
+    },
+    {
+      "id": "SLACK_QUOTIENT_PERIODIC_ANALYTIC_ROLE",
+      "file": "inputs/source/slackMCA_v3.tex",
+      "line_start": 1693,
+      "line_end": 1699,
+      "slice_sha256": "4aebef764b6cbfaa1480eb8416d220e305ba654f3321a30b2a67e79b66bd7edd",
+      "description": "Quotient-periodic structure appears in a corrected analytic positive-side ledger, not in the raw bad-parameter definition.",
+      "text": "On the MCA side, the same two-scale shape is now matched by proved statements in Part~II: the quotient-exact floor (\\cref{prop:qfloor}) shows the closed-form quotient count survives at every prime above the quotient norm threshold, the necessity theorem (\\cref{thm:qnecessity}) shows the quotient profile of \\cref{def:qprofile} is genuinely necessary for polynomial MCA slope bounds at large primes, and the deployed-rate challenge cap (\\cref{prop:prize}) translates the floor into concrete prime-field parameter statements.\n\nThe proved positive side currently reaches two important but not final regimes.  In characteristic zero, prefix fibers are exactly quotient-periodic and therefore polynomial at $\\sigma\\ge Cn/\\log n$.  In prime fields $p\\equiv1\\pmod n$, the Galois-amplified no-collision theorem transfers this to finite fields once\n\\[\n        p>\\exp\\!\\left(C\\frac{n\\log n}{\\sigma}\\right).\n\\]\nAt the corrected reserve $\\sigma\\asymp n/\\log n$, this is the quasi-polynomial split-prime range $p>\\exp(O((\\log n)^2))$."
+    },
+    {
+      "id": "SLACK_QUOTIENT_PERIODIC_FLOOR_SEPARATION",
+      "file": "inputs/source/slackMCA_v3.tex",
+      "line_start": 1724,
+      "line_end": 1730,
+      "slice_sha256": "0b900d0ec73235b091867709ec6fddeed76f5742b26af466d82e4061932b0867",
+      "description": "The later conjectural bound explicitly separates tangent and quotient-periodic floors on the bound side.",
+      "text": "and put $\\eta_n=\\sigma_n/n$ and $C_n=\\RS[\\F_{q_n},H_n,k_n]$.  Then, with the unavoidable tangent floor and the separated quotient-periodic floor included on the right,\n\\[\n        \\emca\\big(C_n,1-\\rho-\\eta_n\\big)\n        \\le\n        \\frac{n^{1+o(1)}+2^{(\\beta(\\rho)/\\HH(\\rho))\\mathcal Q_{H_n}(\\eta_n)(1+o(1))}}{q_n}.\n\\]\nIn packing form (\\cref{rem:aper}), the conjectural aperiodic noncontained residue-line packing has size $n^{1+o(1)}$, while the separated quotient-periodic contribution is bounded at the displayed quotient-profile scale.  In particular, if"
+    }
+  ]
+}

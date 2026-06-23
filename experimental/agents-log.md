@@ -2554,3 +2554,41 @@ Keep entries concise and link to the relevant files.
   one role prompt to each of nine Pro instances. Audit returns conservatively
   under `PROOF`, `COUNTERPACKET`, `BANKABLE_LEMMA`, `ROUTE_CUT`,
   `EXACT_NEW_WALL`, `AUDIT`, or `PLAN`.
+
+### 2026-06-23 - Cycle117 source-contract returns audited
+
+- **Agent/model:** Codex local audit of pasted Pro returns and downloaded Role
+  08 checker files.
+- **Files added or changed:**
+  `experimental/notes/m1/cycle117_extension_field_qchal_source_contract_9pro_returns_raw/`,
+  `experimental/notes/m1/m1_cycle117_extension_field_qchal_source_contract_returns_audit.md`,
+  `experimental/notes/m1/cycle117_prz_source_contract_note.md`,
+  `experimental/RS_MCA_CANONICAL_TRACKER.md`,
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / AUDIT.
+- **What is being banked:** The attached manuscript/source semantics accept the
+  Cycle116 extension-field row `RS[F_17^32,H,256]`, use
+  `q_line=17^32` as the MCA denominator, leave `q_chal=null`, and retain all
+  `52,747,567,092` Cycle116 designated support-wise bad slopes under the raw
+  support-wise MCA / `LD_sw` definition. This is a source-manuscript theorem,
+  not an official Proximity Prize counterpacket.
+- **Local validation:** Raw returns and Role 08 generated files are preserved
+  with `SHA256SUMS.txt`. Role 08 checker package SHA-256 is
+  `56d632b38bce0484b7d56fb66cd02abfcce5c9c65df988e526a32e06f71f7ffb`.
+  `verify_source_contract.py` emits `label=BANKABLE_LEMMA`,
+  `primary_terminal=SOURCE_CONTRACT_MISSING_NO_CLAIM`, and attached-source
+  terminals `SOURCE_ACCEPTED_CYCLE116_ROW`,
+  `QCHAL_UNDEFINED_FINITE_MCA_ONLY`, `EVENT_RETAINED`. `run_self_tests.sh`
+  returns `NONMUTATING_SELF_TESTS_PASS`.
+- **What not to claim:** No ordinary list-decoding lower bound, no protocol
+  soundness failure, no asymptotic theorem, no external
+  `(delta,a_LD,n+1)` line-decodability result, no accepted/deployed
+  prime-field theorem, and no official prize counterpacket. The `2^-128`
+  crossing is true but not the hard content because
+  `floor(17^32/2^128)=6`.
+- **What to do next:** Attack
+  `V-CYCLE118-AUTHORITY-PINNED-OFFICIAL-ROW-EVENT-CONTRACT`. The contract must
+  admit or reject the exact extension-field row, define or unset `q_chal`, bind
+  the official bad-event predicate to the manuscript `def:mca` or name the first
+  difference, and exhaustively classify endpoint, periodic, quotient, tangent,
+  contained-line, affine-color, retained-event, `AP_corr`, and charge rules.
