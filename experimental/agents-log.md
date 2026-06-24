@@ -29,6 +29,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-24 - Mobius C3 rational quotient audit
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/notes/l1/l1_mobius_c3_rational_quotient_audit.md` and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / ROUTE_CUT / AUDIT.
+- **What is being added:** A compact L1 note proving that the order-three
+  Mobius quotient has an exact quotient-defect and trace-multisequence
+  structure, but that its rational moments are not ordinary RS syndrome
+  moments at no reserve cost.
+- **How it is useful:** Keeps the Cycle127 work aligned with Paper B rather
+  than as another Paper-A-style no-slack example. The note identifies the first
+  false line in importing subgroup-power quotient reserves to rational
+  quotients.
+- **What to do next:** Either build a rational-syndrome quotient reserve
+  theorem with an explicit denominator cost, or formally classify the Mobius
+  C3 packet as not an ordinary L1 quotient residual.
+
 ### 2026-06-24 - Five-role transfer-note Pro audit packet prepared
 
 - **Agent/model:** Codex.
