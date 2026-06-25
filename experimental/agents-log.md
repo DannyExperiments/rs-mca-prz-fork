@@ -2856,3 +2856,27 @@ Keep entries concise and link to the relevant files.
 - **What not to claim:** Official status remains `OFFICIAL_UNKNOWN`. The
   Goldilocks fallback was not supplied to the final hostile prompt, so its
   `ROUTE_CUT` is not an audit of the existing Goldilocks checker.
+
+### 2026-06-25 - M1 primitive critical residue-syndrome repair compacted
+
+- **Agent/model:** Codex Paper-B residue-line audit after the
+  M1 missing-environmental-term and primitive-lowden Pro rounds.
+- **Files added:**
+  `experimental/notes/m1/m1_primitive_critical_residue_syndrome_repair.md` and
+  `experimental/notes/m1/m1_primitive_critical_residue_syndrome_verifier.py`.
+- **Status:** `PROVED / AUDIT / COUNTEREXAMPLE TO TOY CAP / EXPERIMENTAL`.
+- **Paper B labels:** `def:residue`, `lem:denom`, `thm:normalform`,
+  `thm:closure`, `prop:noanchor`, `conj:B`, and `rem:aper`.
+- **Useful content:** Records the primitive/minimal denominator repair,
+  fixed-support trichotomy, low-denominator list transfer, critical
+  residue-syndrome image, and the death of a separate environmental paid term.
+  The public verifier checks a primitive quadratic `85`-slope packet and a
+  shifted-cubic reverse-locator `83`-slope packet over `F_97`, both in the
+  hard primitive nonquotient layer.
+- **What not to claim:** This is not a prize solve, not a protocol soundness
+  failure, not a Paper-A no-slack example, not an asymptotic disproof of
+  `conj:B`, and not an ordinary list theorem except for the stated injection.
+- **Next step:** Attack `M1-CRITICAL-TAU-SIGMA-RESIDUE-IMAGE`: prove a positive
+  range upper bound for the hard primitive nonquotient residue image, or find a
+  positive-range family where it remains superlinear after quotient and
+  contained supports are removed.
