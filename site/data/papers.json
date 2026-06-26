@@ -20,16 +20,6 @@
     "summary": "Builds the corrected-reserve theory and names the main local-limit, quotient, extension, and MCA proof targets."
   },
   {
-    "id": "paper-d",
-    "letter": "D",
-    "title": "Paper D: Universal Field-Size Cap",
-    "file": "cs25_cap_v4.pdf",
-    "pdf": "papers/cs25_cap_v4.pdf",
-    "githubPdf": "https://github.com/przchojecki/rs-mca/blob/main/site/papers/cs25_cap_v4.pdf",
-    "tex": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v4.tex",
-    "summary": "Uses the Crites-Stewart list-to-agreement conversion to prove a universal MCA threshold cap in the relevant sub-capacity band."
-  },
-  {
     "id": "paper-c",
     "letter": "C",
     "title": "Paper C: SNARK and Protocol Ledger",
@@ -38,5 +28,15 @@
     "githubPdf": "https://github.com/przchojecki/rs-mca/blob/main/site/papers/snarks_v4.pdf",
     "tex": "https://github.com/przchojecki/rs-mca/blob/main/tex/snarks_v4.tex",
     "summary": "Separates protocol soundness accounting from list, CA, MCA, line-decoding, extension, and interleaving ledgers."
+  },
+  {
+    "id": "paper-d",
+    "letter": "D",
+    "title": "Paper D: Universal Field-Size Cap",
+    "file": "cs25_cap_v4.pdf",
+    "pdf": "papers/cs25_cap_v4.pdf",
+    "githubPdf": "https://github.com/przchojecki/rs-mca/blob/main/site/papers/cs25_cap_v4.pdf",
+    "tex": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v4.tex",
+    "summary": "Uses the Crites-Stewart list-to-agreement conversion to prove a universal MCA threshold cap in the relevant sub-capacity band."
   }
 ]

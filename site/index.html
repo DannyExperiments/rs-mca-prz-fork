@@ -103,6 +103,21 @@
     .brand-by{font-size:.78rem;color:var(--muted);letter-spacing:.01em;}
     .brand-ulam{font-weight:800;color:var(--ink-2);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
     .brand-ulam:hover{color:#111;}
+    .github-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:28px;
+      height:28px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      color:var(--ink-2);
+      flex:0 0 auto;
+      transition:.18s ease;
+    }
+    .github-link:hover{background:var(--soft);border-color:var(--line-strong);transform:translateY(-1px)}
+    .github-link svg{width:16px;height:16px;display:block;fill:currentColor}
     .main-navigation{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;}
     .main-navigation a,.chip,button.chip{
       border:1px solid var(--line);
@@ -264,6 +279,23 @@
     .program-card .paper-actions,.program-card .update-actions{display:flex;gap:.45rem;flex-wrap:wrap;margin-top:.75rem;}
     .program-card a.source-link{border:1px solid var(--line);border-radius:999px;padding:.35rem .58rem;font-size:.78rem;font-weight:800;background:#fff;color:var(--ink-2);}
     .program-card a.source-link:hover{background:var(--soft);}
+    .paper-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem;margin:1rem auto 0;text-align:left;}
+    .paper-card{display:flex;flex-direction:column;min-height:245px;}
+    .paper-letter{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      border:1px solid var(--line-strong);
+      display:grid;
+      place-items:center;
+      font-family:var(--serif);
+      font-size:1.35rem;
+      font-weight:800;
+      background:#fff;
+      color:var(--ink-2);
+      margin-bottom:.75rem;
+    }
+    .paper-card .paper-link-strip{margin-top:auto;padding-top:.85rem;}
     .results-toolbar{display:grid;grid-template-columns:minmax(180px,.35fr) 1fr;gap:.75rem;margin-bottom:1rem;}
     .result-dashboard{grid-template-columns:1fr .72fr;align-items:start;}
     .results-grid{grid-template-columns:1fr;margin-top:0;}
@@ -274,6 +306,25 @@
     .paper-link-strip{display:flex;gap:.42rem;flex-wrap:wrap;margin-top:.75rem;}
     .paper-link-strip a{border:1px solid var(--line);border-radius:999px;padding:.38rem .6rem;font-size:.78rem;font-weight:800;background:#fff;}
     .paper-link-strip a:hover{background:var(--soft);}
+    .repo-callout{
+      display:flex;
+      align-items:flex-start;
+      gap:.85rem;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.88);
+      padding:1rem;
+      box-shadow:var(--shadow-soft);
+      margin-bottom:1rem;
+    }
+    .repo-callout .github-link{width:38px;height:38px;margin-top:.1rem;}
+    .repo-callout .github-link svg{width:22px;height:22px;}
+    .repo-callout h3{margin:.05rem 0 .35rem;color:var(--ink-2);}
+    .repo-callout p{margin:0;color:var(--muted);line-height:1.5;}
+    .collab-list{display:grid;gap:.72rem;margin-top:.8rem;}
+    .collab-step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.85rem;}
+    .collab-step h4{margin:0 0 .28rem;color:var(--ink-2);}
+    .collab-step p{margin:0;color:var(--muted);line-height:1.48;font-size:.9rem;}
     .update-meta{font-family:var(--mono);font-size:.72rem;color:var(--quiet);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;}
     .stack-label{display:inline-block;margin-bottom:.55rem;font-size:.74rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--quiet);}
 
@@ -303,7 +354,7 @@
       .stats,.calc-grid,.calc-result,.gate-list{grid-template-columns:repeat(2,minmax(0,1fr));}
       .controls{grid-template-columns:1fr;}
       .results-toolbar{grid-template-columns:1fr;}
-      .program-grid{grid-template-columns:1fr;}
+      .program-grid,.paper-grid{grid-template-columns:1fr;}
       .section-title{display:block}.section-title p{margin-top:.8rem;}
     }
     @media (max-width:620px){
@@ -321,6 +372,9 @@
         <span class="head-mark">∴</span>
         <div class="brand-copy">
           <a class="brand-title" href="#top">RS-MCA frontier</a>
+          <a class="github-link" href="https://github.com/przchojecki/rs-mca" target="_blank" rel="noopener" aria-label="Open RS-MCA on GitHub">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.67 0 8.2c0 3.62 2.29 6.7 5.47 7.79.4.08.55-.18.55-.4 0-.2-.01-.87-.01-1.58-2.01.38-2.53-.5-2.69-.96-.09-.24-.48-.96-.82-1.15-.28-.16-.68-.56-.01-.57.63-.01 1.08.59 1.23.83.72 1.24 1.87.89 2.33.68.07-.53.28-.89.51-1.1-1.78-.21-3.64-.91-3.64-4.04 0-.89.31-1.62.82-2.19-.08-.21-.36-1.04.08-2.16 0 0 .67-.22 2.2.84A7.44 7.44 0 0 1 8 3.92c.68 0 1.36.09 2 .27 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.95.08 2.16.51.57.82 1.3.82 2.19 0 3.14-1.87 3.83-3.65 4.04.29.26.54.75.54 1.52 0 1.1-.01 1.98-.01 2.25 0 .22.15.48.55.4A8.12 8.12 0 0 0 16 8.2C16 3.67 12.42 0 8 0Z"/></svg>
+          </a>
           <span class="brand-by">by <a class="brand-ulam" href="https://ulam.ai/" target="_blank" rel="noopener">Ulam</a></span>
         </div>
       </div>
@@ -328,7 +382,7 @@
         <a href="#frontier">Frontier</a>
         <a href="#leaderboard">Leaderboard</a>
         <a href="#calculator">Calculator</a>
-        <a href="#updates">Updates</a>
+        <a href="#updates">Results</a>
         <a href="#papers">Papers</a>
         <a href="#gates">Gates</a>
       </nav>
@@ -547,29 +601,49 @@
       <div class="shell">
         <div class="section-title">
           <h2>Papers</h2>
-          <p>The main papers should be read as the authority for definitions and claims. New frontier material stays experimental until reviewed.</p>
+          <p>The main references behind the frontier. Paper A explains the obstruction, Paper B rebuilds the reserve theory, Paper C tracks protocol ledgers, and Paper D gives the universal field-size cap.</p>
         </div>
-        <div class="program-grid" id="papersGrid"></div>
+        <div class="paper-grid" id="papersGrid"></div>
       </div>
     </section>
 
     <section id="submit">
       <div class="shell">
         <div class="section-title">
-          <h2>Submit a certificate</h2>
-          <p>Use the checklist below to turn a model-run, theorem note, or script output into a board-ready artifact.</p>
+          <h2>Collaborate on GitHub</h2>
+          <p>Send pull requests with narrow, reviewable proof notes, audits, scripts, certificates, or site-data updates. Keep new research material experimental first.</p>
+        </div>
+        <div class="repo-callout">
+          <a class="github-link" href="https://github.com/przchojecki/rs-mca" target="_blank" rel="noopener" aria-label="Open RS-MCA repository on GitHub">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.67 0 8.2c0 3.62 2.29 6.7 5.47 7.79.4.08.55-.18.55-.4 0-.2-.01-.87-.01-1.58-2.01.38-2.53-.5-2.69-.96-.09-.24-.48-.96-.82-1.15-.28-.16-.68-.56-.01-.57.63-.01 1.08.59 1.23.83.72 1.24 1.87.89 2.33.68.07-.53.28-.89.51-1.1-1.78-.21-3.64-.91-3.64-4.04 0-.89.31-1.62.82-2.19-.08-.21-.36-1.04.08-2.16 0 0 .67-.22 2.2.84A7.44 7.44 0 0 1 8 3.92c.68 0 1.36.09 2 .27 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.95.08 2.16.51.57.82 1.3.82 2.19 0 3.14-1.87 3.83-3.65 4.04.29.26.54.75.54 1.52 0 1.1-.01 1.98-.01 2.25 0 .22.15.48.55.4A8.12 8.12 0 0 0 16 8.2C16 3.67 12.42 0 8 0Z"/></svg>
+          </a>
+          <div>
+            <h3>github.com/przchojecki/rs-mca</h3>
+            <p>Open an issue for discussion or send a PR with reproducible evidence. PRs should say exactly which theorem, target, or ledger they affect.</p>
+            <div class="paper-link-strip">
+              <a href="https://github.com/przchojecki/rs-mca" target="_blank" rel="noopener">Repository</a>
+              <a href="https://github.com/przchojecki/rs-mca/blob/main/agents.md" target="_blank" rel="noopener">AGENTS.md</a>
+              <a href="https://github.com/przchojecki/rs-mca/tree/main/experimental" target="_blank" rel="noopener">experimental/</a>
+              <a href="https://github.com/przchojecki/rs-mca/pulls" target="_blank" rel="noopener">Pull requests</a>
+            </div>
+          </div>
         </div>
         <div class="dashboard">
           <div class="card">
-            <h3>Required fields</h3>
-            <details open><summary>Row and field ledger</summary><p>Print \(F\), \(L\), \(k\), \(n\), \(q_{\rm gen}\), \(q_{\rm code}\), \(q_{\rm line}\), and any separate \(q_{\rm chal}\).</p></details>
-            <details><summary>Bad-slope certificate</summary><p>Print \(N_{\rm bad}\), duplicate policy, slope map, and the exact integer threshold \(2^{128}N_{\rm bad}>q_{\rm line}\).</p></details>
-            <details><summary>Radius and support convention</summary><p>Print agreement \(a\), distance \(n-a\), radius \(\delta=1-a/n\), and whether the target is closed or strict.</p></details>
-            <details><summary>Reproducibility</summary><p>Attach checker, hashes, environment notes, and the smallest independent rerun that validates the claim.</p></details>
+            <h3>Where to put work</h3>
+            <div class="collab-list">
+              <div class="collab-step"><h4>1. Read <span class="mono">AGENTS.md</span> first</h4><p>Follow the field-ledger, status-label, and no-main-paper-edit rules before proposing a result.</p></div>
+              <div class="collab-step"><h4>2. Add new research under <span class="mono">experimental/</span></h4><p>Use notes for theorem sketches and audits, scripts for reproducible checks, and data certificates for machine-readable outputs.</p></div>
+              <div class="collab-step"><h4>3. Update <span class="mono">experimental/agents-log.md</span></h4><p>Record date, contributor, files changed, status, usefulness, and the next step for anything materially changed in <span class="mono">experimental/</span>.</p></div>
+              <div class="collab-step"><h4>4. Touch <span class="mono">site/data/</span> only for public entries</h4><p>Add board rows after the source note exists and the status is explicit: proved, conditional, conjectural, experimental, audit, or counterexample.</p></div>
+            </div>
           </div>
           <div class="card">
-            <h3>Score history</h3>
-            <div class="timeline" id="timeline"></div>
+            <h3>What a PR should include</h3>
+            <details open><summary>Claim and status</summary><p>State the exact claim and label it PROVED, CONDITIONAL, CONJECTURAL, EXPERIMENTAL, AUDIT, or COUNTEREXAMPLE.</p></details>
+            <details><summary>Parameters and ledgers</summary><p>Print \(q_{\rm gen}\), \(q_{\rm line}\), \(q_{\rm chal}\), base/extension fields, \(n\), \(k\), \(\rho\), \(\delta\), \(\eta\), and the exact object being bounded.</p></details>
+            <details><summary>Reproducibility</summary><p>Attach a script, JSON certificate, symbolic proof note, seed, hash, or exact command that lets reviewers replay the result.</p></details>
+            <details><summary>Board impact</summary><p>Say whether the PR changes entropy, quotient, interleaved-list, MCA, line-decoding, field-transfer, or query-budget ledgers.</p></details>
           </div>
         </div>
       </div>
@@ -622,8 +696,8 @@
     const fallbackPapersRaw = [
       {letter:'A', title:'Paper A: No-Slack Obstruction', pdf:'papers/RS_disproof_v3.pdf', githubPdf:'https://github.com/przchojecki/rs-mca/blob/main/site/papers/RS_disproof_v3.pdf', tex:'https://github.com/przchojecki/rs-mca/blob/main/tex/RS_disproof_v3.tex', summary:'Refutes the old no-slack support-wise line-MCA statement.'},
       {letter:'B', title:'Paper B: Slack, Quotient, and Entropy Theory', pdf:'papers/slackMCA_v3.pdf', githubPdf:'https://github.com/przchojecki/rs-mca/blob/main/site/papers/slackMCA_v3.pdf', tex:'https://github.com/przchojecki/rs-mca/blob/main/tex/slackMCA_v3.tex', summary:'Builds the corrected-reserve theory and proof targets.'},
-      {letter:'D', title:'Paper D: Universal Field-Size Cap', pdf:'papers/cs25_cap_v4.pdf', githubPdf:'https://github.com/przchojecki/rs-mca/blob/main/site/papers/cs25_cap_v4.pdf', tex:'https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v4.tex', summary:'Proves the universal MCA threshold cap via CS25.'},
-      {letter:'C', title:'Paper C: SNARK and Protocol Ledger', pdf:'papers/snarks_v4.pdf', githubPdf:'https://github.com/przchojecki/rs-mca/blob/main/site/papers/snarks_v4.pdf', tex:'https://github.com/przchojecki/rs-mca/blob/main/tex/snarks_v4.tex', summary:'Separates protocol soundness accounting from MCA/list ledgers.'}
+      {letter:'C', title:'Paper C: SNARK and Protocol Ledger', pdf:'papers/snarks_v4.pdf', githubPdf:'https://github.com/przchojecki/rs-mca/blob/main/site/papers/snarks_v4.pdf', tex:'https://github.com/przchojecki/rs-mca/blob/main/tex/snarks_v4.tex', summary:'Separates protocol soundness accounting from MCA/list ledgers.'},
+      {letter:'D', title:'Paper D: Universal Field-Size Cap', pdf:'papers/cs25_cap_v4.pdf', githubPdf:'https://github.com/przchojecki/rs-mca/blob/main/site/papers/cs25_cap_v4.pdf', tex:'https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v4.tex', summary:'Proves the universal MCA threshold cap via CS25.'}
     ];
 
     function enrich(e){
@@ -856,7 +930,8 @@
       const grid = document.getElementById('papersGrid');
       if(!grid) return;
       grid.innerHTML = papersRaw.map(paper => `
-        <article class="program-card">
+        <article class="program-card paper-card">
+          <div class="paper-letter">${escapeHtml(paper.letter)}</div>
           <span class="stack-label">Paper ${escapeHtml(paper.letter)}</span>
           <h3>${escapeHtml(paper.title)}</h3>
           <p>${escapeHtml(paper.summary)}</p>
@@ -871,6 +946,7 @@
 
     function renderTimeline(){
       const t = document.getElementById('timeline');
+      if(!t) return;
       const rows = entries.slice(0,5);
       t.innerHTML = rows.map(e => `<div class="event"><strong>${e.title}</strong><p class="caption">${e.short} · radius ${fractionish(e)} · score ${e.marginBits>0?'+':''}${fmt(e.marginBits)} bits</p></div>`).join('');
     }
