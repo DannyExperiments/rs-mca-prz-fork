@@ -2928,3 +2928,33 @@ Keep entries concise and link to the relevant files.
   `M1-SCALAR-FAITHFUL-CENTRAL-LIFT-LOWBASE-AUDIT`: prove or route-cut whether
   more than `n^{1+epsilon}` scalar slopes force either a low-base proper
   completion or a profile-scale quotient completion.
+
+### 2026-06-27 - M1 active-fiber Plotkin and width repair compacted
+
+- **Agent/model:** Codex audit of shifted-local, two-fiber, and active-fiber
+  no-internet Pro rounds after recalibration against Paper B and the public
+  rsmca.xyz board.
+- **File added:**
+  `experimental/notes/m1/m1_active_fiber_plotkin_and_width_repair.md`.
+- **Status:** `PROVED / REPAIR / ROUTE_CUT / AUDIT`.
+- **Paper B labels:** `def:residue`, `lem:denom`, `thm:normalform`,
+  `thm:closure`, `prop:noanchor`, `conj:B`, and `conj:final-mca`.
+- **Useful content:** Records the fixed-base active-fiber packing theorem:
+  anchored packets supported in `r` M-fibers form constant-weight binary codes
+  of distance at least `2a`, giving the two-fiber bound `2a/(2a-M)` and
+  `n^{1+o(1)}` after summing over pairs in the reserve window.  It also records
+  the local one-pole packet-to-slope injection and the corrected high-width
+  lemma `w_M(N_tau) >= ceil(a/r)`.
+- **Route cut:** Fixed-base Plotkin packing is not by itself a global
+  Paper-B slope-ledger theorem.  The correct object is a fibered convolution
+  ledger; bounded active slices still need a primitive
+  no-tensor-amplification / support-cover theorem to prevent slope-rich
+  backgrounds from re-entering.
+- **What not to claim:** This is not a public leaderboard row, not a protocol
+  soundness claim, not an ordinary list theorem, not a Paper-A no-slack
+  example, and not a full proof of `conj:B`.
+- **Next step:** Attack
+  `M1-PRIMITIVE-NO-TENSOR-AMPLIFICATION-COLD-AUDIT`: prove the fibered
+  convolution no-tensor theorem, or equivalently prove coefficient-isospectral
+  divisor rigidity for monic divisors of
+  `prod_x (Z-(alpha-x)^(-1))` with fixed top coefficients.
