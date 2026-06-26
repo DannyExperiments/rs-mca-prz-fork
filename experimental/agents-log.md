@@ -29,6 +29,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-26 - Full quotient-profile lift repair
+
+- **Agent/model:** Codex with ChatGPT Pro theorem-worker audit inputs.
+- **Files added or changed:**
+  `experimental/notes/m1/m1_full_quotient_profile_lift_repair.md` and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / REPAIR / AUDIT.
+- **What is being added:** A compact theorem note for the repaired
+  quotient-profile lift.  The finite construction is valid after adding an
+  explicit separating external-fiber hypothesis for `c`; it produces
+  `binom(N-1,m)` noncontained slopes from a primitive minimal denominator that
+  is not syntactically a pullback but divides a quotient pullback.
+- **How it is useful:** It repairs Paper B's `rem:aper` quotient-periodic
+  normalization and identifies the quotient-algebra degree
+  `nu_M(E)=dim F[X^M mod E]` as the intrinsic branch needed before the
+  genuinely aperiodic residue-line packing problem can be attacked.
+- **What to do next:** Audit the asymptotic prime-field deployment separately,
+  then attack `M1-CENTRAL-LIFT-SPLIT-PENCIL-INVERSE`: if a split pencil
+  contains more than `n^{1+epsilon}` completely `H`-split monic members with
+  distinct slopes, prove that an active quotient-algebra completion must
+  occur, or construct the next obstruction.
+
 ### 2026-06-24 - Mobius C3 rational quotient audit
 
 - **Agent/model:** Codex.
