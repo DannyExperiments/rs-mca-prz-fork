@@ -30,6 +30,42 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-26 - Strict264 quotient-floor proof packet
+
+- **Agent/model:** Codex, with user-supplied strict264 packet.
+- **Files added or changed:** `experimental/data/strict264/`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** A strict264 quotient-core proof packet: generated
+  field entropy/list-floor notes, a deep-point list-to-MCA conversion section,
+  a calculator for entropy/MCA floors, and the concrete
+  `RS[F_17^32,H,256]`, `|H|=512`, agreement-264 quotient-floor obstruction.
+  The local audit fixed two TeX transcription errors and regenerated the saved
+  calculator output with the exact value `log2(17^32)`.
+- **How it is useful:** Gives a direct quotient-core route to
+  `epsilon_mca(C,31/64)>2^-128`: `binom(64,33)` augmented-code list points
+  imply at least nine support-wise bad slopes after the deep-point conversion,
+  while seven slopes already clear the `F_17^32` denominator.
+- **What to do next:** Promote the theorem package into the main experimental
+  note after review, and shift the finite-threshold target from finding seven
+  agreement-264 slopes to proving or refuting the agreement-265 upper bound.
+
+### 2026-06-26 - Towards-prize finite-threshold theorem section
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `experimental/experiments.tex`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / AUDIT.
+- **What is being added:** A new `Towards-Prize Finite-Threshold Theorems`
+  section for `experiments.tex`: certificate-to-`LD_sw`, fixed-locator
+  unique-slope, base-valued subfield confinement, the exact seven-slope
+  arithmetic gate over `F_17^32`, and the one-step staircase pinning criterion.
+- **How it is useful:** Converts the strict264 and 265 goals into theorem-level
+  proof obligations that agents can attack without claiming a new numerator or a
+  corrected-reserve MCA theorem.
+- **What to do next:** Use the fixed-locator principle to build
+  duplicate-aware strict264 and 265 search certificates.
+
 ### 2026-06-26 - One-by-one experiment run
 
 - **Agent/model:** Codex.
