@@ -10,23 +10,23 @@
       "johnsonApprox": 0.292893,
       "mcaUnsafe": "255/512",
       "listUnsafe": "255/512",
-      "unknownInterval": "[Johnson frontier, 255/512)",
+      "unknownInterval": "[Johnson frontier, 255/512) for MCA; [Johnson frontier, 255/512) for list",
       "safeFrontier": "Johnson-radius MCA upper-bound regime, with polynomial reserve.",
       "rows": [
         {
           "id": "mca-cap-rho-1-2",
-          "title": "Paper D universal MCA unsafe cap",
+          "title": "Paper D MCA δ* upper cap",
           "rho": "1/2",
           "track": "mca",
           "trackLabel": "MCA / CA",
-          "direction": "unsafe-lower-bound",
+          "direction": "threshold-cap",
           "n": "smooth dyadic envelope",
           "k": "rho n, k <= 2^40",
           "field": "|F| < 2^256",
           "fieldSizeLog2": 256,
           "domainKind": "multiplicative-subgroup",
           "smoothPowerOfTwo": true,
-          "agreementA": "n/2 + n/512",
+          "agreementA": "rho n + n/512",
           "sigma": "n/512",
           "deltaExact": "255/512",
           "deltaApprox": 0.498047,
@@ -46,7 +46,10 @@
             "denominatorAudited": true,
             "endpointConvention": true,
             "publicSource": true,
-            "conditionalImport": true
+            "conditionalImport": true,
+            "rhoNIntegral": true,
+            "powerOfTwoQuotient": true,
+            "quotientDivisor": "N=1024 divides n"
           },
           "status": "conditional-theorem",
           "statusLabel": "conditional theorem",
@@ -54,16 +57,16 @@
           "sourceHref": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v4.tex",
           "nonClaims": [
             "Conditional on the Crites-Stewart import audit.",
-            "This is an unsafe cap, not the exact threshold."
+            "This is a δ* upper cap from a failure lower bound, not an exact threshold."
           ]
         },
         {
           "id": "list-cap-rho-1-2",
-          "title": "Interleaved-list unsafe cap from base-list obstruction",
+          "title": "Interleaved-list δ* upper cap from base-list obstruction",
           "rho": "1/2",
           "track": "list",
           "trackLabel": "Interleaved-list",
-          "direction": "unsafe-lower-bound",
+          "direction": "threshold-cap",
           "n": "quotient scale N=512",
           "k": "rho n",
           "field": "|F| < 2^256",
@@ -77,9 +80,9 @@
           "etaExact": "1/512",
           "etaApprox": 0.001953,
           "qGen": "generated field of the smooth row",
-          "qLine": "|F|",
+          "denominator": "|F|",
           "qChal": "protocol-dependent",
-          "listLower": "binom(512, 257) / |F|",
+          "listLower": "binom(512,257)",
           "failureMarginBits": 123.17,
           "marginLabel": "+123.17 bits",
           "prizeBox": {
@@ -90,14 +93,18 @@
             "denominatorAudited": true,
             "endpointConvention": true,
             "publicSource": true,
-            "conditionalImport": false
+            "conditionalImport": false,
+            "rhoNIntegral": true,
+            "powerOfTwoQuotient": true,
+            "quotientDivisor": "N=512 divides n"
           },
           "status": "list-corollary",
           "statusLabel": "list corollary",
           "source": "experiments.tex interleaved-list table",
           "sourceHref": "https://github.com/przchojecki/rs-mca/blob/main/experimental/experiments.tex",
           "nonClaims": [
-            "List lower bound only; it is not by itself an MCA or protocol soundness theorem."
+            "List lower bound only; it is not by itself an MCA or protocol soundness theorem.",
+            "This is a δ*_list upper cap from a list-size lower bound, not an exact threshold."
           ]
         },
         {
@@ -345,7 +352,7 @@
           "qLine": "17^32",
           "qChal": "not protocol-bound",
           "nBad": "2187",
-          "failureMarginBits": 8.30,
+          "failureMarginBits": 8.3,
           "marginLabel": "+8.30 bits if proved",
           "prizeBox": {
             "rate": true,
@@ -365,7 +372,8 @@
             "Candidate shape only; requires an independent theorem and admissibility audit."
           ]
         }
-      ]
+      ],
+      "missingPiece": "L1 / M1 / F1"
     },
     {
       "rho": "1/4",
@@ -376,23 +384,23 @@
       "johnsonApprox": 0.5,
       "mcaUnsafe": "383/512",
       "listUnsafe": "383/512",
-      "unknownInterval": "[Johnson frontier, 383/512)",
+      "unknownInterval": "[Johnson frontier, 383/512) for MCA; [Johnson frontier, 383/512) for list",
       "safeFrontier": "Johnson-radius MCA upper-bound regime, with polynomial reserve.",
       "rows": [
         {
           "id": "mca-cap-rho-1-4",
-          "title": "Paper D universal MCA unsafe cap",
+          "title": "Paper D MCA δ* upper cap",
           "rho": "1/4",
           "track": "mca",
           "trackLabel": "MCA / CA",
-          "direction": "unsafe-lower-bound",
+          "direction": "threshold-cap",
           "n": "smooth dyadic envelope",
           "k": "rho n, k <= 2^40",
           "field": "|F| < 2^256",
           "fieldSizeLog2": 256,
           "domainKind": "multiplicative-subgroup",
           "smoothPowerOfTwo": true,
-          "agreementA": "n/4 + n/512",
+          "agreementA": "rho n + n/512",
           "sigma": "n/512",
           "deltaExact": "383/512",
           "deltaApprox": 0.748047,
@@ -412,7 +420,10 @@
             "denominatorAudited": true,
             "endpointConvention": true,
             "publicSource": true,
-            "conditionalImport": true
+            "conditionalImport": true,
+            "rhoNIntegral": true,
+            "powerOfTwoQuotient": true,
+            "quotientDivisor": "N=1024 divides n"
           },
           "status": "conditional-theorem",
           "statusLabel": "conditional theorem",
@@ -420,16 +431,16 @@
           "sourceHref": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v4.tex",
           "nonClaims": [
             "Conditional on the Crites-Stewart import audit.",
-            "This is an unsafe cap, not the exact threshold."
+            "This is a δ* upper cap from a failure lower bound, not an exact threshold."
           ]
         },
         {
           "id": "list-cap-rho-1-4",
-          "title": "Interleaved-list unsafe cap from base-list obstruction",
+          "title": "Interleaved-list δ* upper cap from base-list obstruction",
           "rho": "1/4",
           "track": "list",
           "trackLabel": "Interleaved-list",
-          "direction": "unsafe-lower-bound",
+          "direction": "threshold-cap",
           "n": "quotient scale N=512",
           "k": "rho n",
           "field": "|F| < 2^256",
@@ -443,9 +454,9 @@
           "etaExact": "1/512",
           "etaApprox": 0.001953,
           "qGen": "generated field of the smooth row",
-          "qLine": "|F|",
+          "denominator": "|F|",
           "qChal": "protocol-dependent",
-          "listLower": "binom(512, 129) / |F|",
+          "listLower": "binom(512,129)",
           "failureMarginBits": 28.33,
           "marginLabel": "+28.33 bits",
           "prizeBox": {
@@ -456,17 +467,22 @@
             "denominatorAudited": true,
             "endpointConvention": true,
             "publicSource": true,
-            "conditionalImport": false
+            "conditionalImport": false,
+            "rhoNIntegral": true,
+            "powerOfTwoQuotient": true,
+            "quotientDivisor": "N=512 divides n"
           },
           "status": "list-corollary",
           "statusLabel": "list corollary",
           "source": "experiments.tex interleaved-list table",
           "sourceHref": "https://github.com/przchojecki/rs-mca/blob/main/experimental/experiments.tex",
           "nonClaims": [
-            "List lower bound only; it is not by itself an MCA or protocol soundness theorem."
+            "List lower bound only; it is not by itself an MCA or protocol soundness theorem.",
+            "This is a δ*_list upper cap from a list-size lower bound, not an exact threshold."
           ]
         }
-      ]
+      ],
+      "missingPiece": "L1 / M1 / F1"
     },
     {
       "rho": "1/8",
@@ -482,18 +498,18 @@
       "rows": [
         {
           "id": "mca-cap-rho-1-8",
-          "title": "Paper D universal MCA unsafe cap",
+          "title": "Paper D MCA δ* upper cap",
           "rho": "1/8",
           "track": "mca",
           "trackLabel": "MCA / CA",
-          "direction": "unsafe-lower-bound",
+          "direction": "threshold-cap",
           "n": "smooth dyadic envelope",
           "k": "rho n, k <= 2^40",
           "field": "|F| < 2^256",
           "fieldSizeLog2": 256,
           "domainKind": "multiplicative-subgroup",
           "smoothPowerOfTwo": true,
-          "agreementA": "n/8 + n/512",
+          "agreementA": "rho n + n/512",
           "sigma": "n/512",
           "deltaExact": "447/512",
           "deltaApprox": 0.873047,
@@ -513,7 +529,10 @@
             "denominatorAudited": true,
             "endpointConvention": true,
             "publicSource": true,
-            "conditionalImport": true
+            "conditionalImport": true,
+            "rhoNIntegral": true,
+            "powerOfTwoQuotient": true,
+            "quotientDivisor": "N=1024 divides n"
           },
           "status": "conditional-theorem",
           "statusLabel": "conditional theorem",
@@ -521,16 +540,16 @@
           "sourceHref": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v4.tex",
           "nonClaims": [
             "Conditional on the Crites-Stewart import audit.",
-            "This is an unsafe cap, not the exact threshold."
+            "This is a δ* upper cap from a failure lower bound, not an exact threshold."
           ]
         },
         {
           "id": "list-cap-rho-1-8",
-          "title": "Interleaved-list unsafe cap from base-list obstruction",
+          "title": "Interleaved-list δ* upper cap from base-list obstruction",
           "rho": "1/8",
           "track": "list",
           "trackLabel": "Interleaved-list",
-          "direction": "unsafe-lower-bound",
+          "direction": "threshold-cap",
           "n": "quotient scale N=1024",
           "k": "rho n",
           "field": "|F| < 2^256",
@@ -544,9 +563,9 @@
           "etaExact": "1/1024",
           "etaApprox": 0.000977,
           "qGen": "generated field of the smooth row",
-          "qLine": "|F|",
+          "denominator": "|F|",
           "qChal": "protocol-dependent",
-          "listLower": "binom(1024, 129) / |F|",
+          "listLower": "binom(1024,129)",
           "failureMarginBits": 170.68,
           "marginLabel": "+170.68 bits",
           "prizeBox": {
@@ -557,17 +576,22 @@
             "denominatorAudited": true,
             "endpointConvention": true,
             "publicSource": true,
-            "conditionalImport": false
+            "conditionalImport": false,
+            "rhoNIntegral": true,
+            "powerOfTwoQuotient": true,
+            "quotientDivisor": "N=1024 divides n"
           },
           "status": "list-corollary",
           "statusLabel": "list corollary",
           "source": "experiments.tex interleaved-list table",
           "sourceHref": "https://github.com/przchojecki/rs-mca/blob/main/experimental/experiments.tex",
           "nonClaims": [
-            "List lower bound only; it is not by itself an MCA or protocol soundness theorem."
+            "List lower bound only; it is not by itself an MCA or protocol soundness theorem.",
+            "This is a δ*_list upper cap from a list-size lower bound, not an exact threshold."
           ]
         }
-      ]
+      ],
+      "missingPiece": "L1 / M1 / F1"
     },
     {
       "rho": "1/16",
@@ -583,18 +607,18 @@
       "rows": [
         {
           "id": "mca-cap-rho-1-16",
-          "title": "Paper D universal MCA unsafe cap",
+          "title": "Paper D MCA δ* upper cap",
           "rho": "1/16",
           "track": "mca",
           "trackLabel": "MCA / CA",
-          "direction": "unsafe-lower-bound",
+          "direction": "threshold-cap",
           "n": "smooth dyadic envelope",
           "k": "rho n, k <= 2^40",
           "field": "|F| < 2^256",
           "fieldSizeLog2": 256,
           "domainKind": "multiplicative-subgroup",
           "smoothPowerOfTwo": true,
-          "agreementA": "n/16 + n/1024",
+          "agreementA": "rho n + n/1024",
           "sigma": "n/1024",
           "deltaExact": "959/1024",
           "deltaApprox": 0.936523,
@@ -614,7 +638,10 @@
             "denominatorAudited": true,
             "endpointConvention": true,
             "publicSource": true,
-            "conditionalImport": true
+            "conditionalImport": true,
+            "rhoNIntegral": true,
+            "powerOfTwoQuotient": true,
+            "quotientDivisor": "N=2048 divides n"
           },
           "status": "conditional-theorem",
           "statusLabel": "conditional theorem",
@@ -622,16 +649,16 @@
           "sourceHref": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v4.tex",
           "nonClaims": [
             "Conditional on the Crites-Stewart import audit.",
-            "This is an unsafe cap, not the exact threshold."
+            "This is a δ* upper cap from a failure lower bound, not an exact threshold."
           ]
         },
         {
           "id": "list-cap-rho-1-16",
-          "title": "Interleaved-list unsafe cap from base-list obstruction",
+          "title": "Interleaved-list δ* upper cap from base-list obstruction",
           "rho": "1/16",
           "track": "list",
           "trackLabel": "Interleaved-list",
-          "direction": "unsafe-lower-bound",
+          "direction": "threshold-cap",
           "n": "quotient scale N=2048",
           "k": "rho n",
           "field": "|F| < 2^256",
@@ -645,9 +672,9 @@
           "etaExact": "1/2048",
           "etaApprox": 0.000488,
           "qGen": "generated field of the smooth row",
-          "qLine": "|F|",
+          "denominator": "|F|",
           "qChal": "protocol-dependent",
-          "listLower": "binom(2048, 129) / |F|",
+          "listLower": "binom(2048,129)",
           "failureMarginBits": 305.89,
           "marginLabel": "+305.89 bits",
           "prizeBox": {
@@ -658,17 +685,22 @@
             "denominatorAudited": true,
             "endpointConvention": true,
             "publicSource": true,
-            "conditionalImport": false
+            "conditionalImport": false,
+            "rhoNIntegral": true,
+            "powerOfTwoQuotient": true,
+            "quotientDivisor": "N=2048 divides n"
           },
           "status": "list-corollary",
           "statusLabel": "list corollary",
           "source": "experiments.tex interleaved-list table",
           "sourceHref": "https://github.com/przchojecki/rs-mca/blob/main/experimental/experiments.tex",
           "nonClaims": [
-            "List lower bound only; it is not by itself an MCA or protocol soundness theorem."
+            "List lower bound only; it is not by itself an MCA or protocol soundness theorem.",
+            "This is a δ*_list upper cap from a list-size lower bound, not an exact threshold."
           ]
         }
-      ]
+      ],
+      "missingPiece": "L1 / M1 / F1"
     }
   ]
 }
