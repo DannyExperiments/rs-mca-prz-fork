@@ -653,7 +653,7 @@
         </div>
 
         <div class="card">
-          <h3>Four primary boards</h3>
+          <h3>Four primary boards and known thresholds</h3>
           <p class="caption">Rate is the top-level partition. The table opens each rate directly into its MCA or interleaved-list track.</p>
           <div class="rate-matrix-wrap">
             <table class="rate-matrix" aria-label="Proximity Prize rate matrix">
@@ -665,24 +665,6 @@
                 <th><span class="th-help">Interleaved-list track <span class="help-tip" tabindex="0" data-tip="Threshold rows for list size of the interleaved code C^{≡m}. The target is list size at most 2^-128 |F|, so the denominator is the ambient field size |F|.">?</span></span></th>
               </tr></thead>
               <tbody id="rateMatrixBody"></tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="card settlement-card">
-          <h3>Currently known threshold caps</h3>
-          <p class="caption">This is the conclusion view: known \(\delta^*\) caps by rate, separate from the detailed proof ledger below.</p>
-          <div class="rate-matrix-wrap">
-            <table class="rate-matrix" aria-label="Current known threshold caps">
-              <thead><tr>
-                <th>Rate</th>
-                <th>Capacity</th>
-                <th>Johnson</th>
-                <th>MCA cap</th>
-                <th>List cap</th>
-                <th>Main missing piece</th>
-              </tr></thead>
-              <tbody id="settlementBody"></tbody>
             </table>
           </div>
         </div>
@@ -2542,20 +2524,6 @@
         row.addEventListener('click', () => setRate(row.dataset.rateRow));
       });
     }
-    function renderSettlementTable(){
-      const tbody = document.getElementById('settlementBody');
-      if(!tbody) return;
-      tbody.innerHTML = rateBoards().map(board => `
-        <tr>
-          <td><strong class="mono">ρ=${escapeHtml(board.rho)}</strong></td>
-          <td class="mono">${escapeHtml(board.capacityExact || '—')}</td>
-          <td class="mono">${escapeHtml(board.johnsonExact || fmt(board.johnsonApprox,6) || '—')}</td>
-          <td class="mono">δ*<sub>MCA</sub> ≤ ${escapeHtml(board.mcaUnsafe || '—')}</td>
-          <td class="mono">δ*<sub>list</sub> ≤ ${escapeHtml(board.listUnsafe || '—')}</td>
-          <td>${escapeHtml(board.missingPiece || 'L1 / M1 / F1')}</td>
-        </tr>
-      `).join('');
-    }
     function renderRateSelector(){
       const target = document.getElementById('rateSelector');
       if(!target) return;
@@ -2698,7 +2666,6 @@
     }
     function renderLeaderboard(){
       renderRateMatrix();
-      renderSettlementTable();
       renderRateSelector();
       renderTrackTabs();
       renderRateBoardPanel();
