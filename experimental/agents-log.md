@@ -29,6 +29,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-27 - Central-lift slope/list duality
+
+- **Agent/model:** Codex with three ChatGPT Pro hostile-audit roles.
+- **Files added or changed:**
+  `experimental/notes/m1/m1_central_lift_slope_list_duality.md` and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / REPAIR / ROUTE_CUT / AUDIT.
+- **What is being added:** A compact proof that, for the central residue-line
+  datum `w=(E X^k)|_H`, the congruence `L_S == -zB mod E` for
+  `|S|=k+a` is equivalent to a unique degree-`<=k` polynomial agreeing with
+  the rational word `B/E` on `S`, with slope `z=1/[X^k]P`.
+- **How it is useful:** It converts the central-lift one-pole branch of Paper
+  B residue-line packing into a leading-coefficient rational-word local-list
+  problem.  The note also records the route cut that arbitrary anchors `w`
+  require the affine residue-extension code `E RS_<k + <B>`, not ordinary RS
+  list decoding of `B/E`.
+- **What to do next:** Prove or route-cut the leading-coefficient
+  rational-word local limit after quotient-periodic, fixed-pencil, low-rank,
+  complete-fiber, PGL2, and subfield branches are removed or budgeted.
+
 ### 2026-06-26 - Full quotient-profile lift repair
 
 - **Agent/model:** Codex with ChatGPT Pro theorem-worker audit inputs.
