@@ -2902,3 +2902,29 @@ Keep entries concise and link to the relevant files.
   range upper bound for the hard primitive nonquotient residue image, or find a
   positive-range family where it remains superlinear after quotient and
   contained supports are removed.
+
+### 2026-06-26 - M1 phase-aware quotient ledger repair compacted
+
+- **Agent/model:** Codex audit of nine no-internet Pro returns for
+  `M1-PHASE-AWARE-QUOTIENT-LEDGER-COLD-AUDIT`.
+- **File added:**
+  `experimental/notes/m1/m1_phase_aware_quotient_ledger_repair.md`.
+- **Status:** `PROVED / REPAIR / ROUTE_CUT / AUDIT`.
+- **Paper B labels:** `def:residue`, `lem:denom`, `thm:normalform`,
+  `thm:closure`, `def:qprofile`, `thm:qnecessity`, `rem:aper`, `conj:B`,
+  and `conj:final-mca`.
+- **Useful content:** Records the phase-shifted monomial lift for `D | n`,
+  the fixed-skeleton inverse bound
+  `D nu_D(E) <= n-k-a-1_{t>0}(D-t) < n-k`, and the finite
+  `q=8375183617`, `n=256`, `k=129`, `D=16`, `a=15` packet with
+  `binom(16,9)=11440` slopes and separator margin `320`.
+- **Route cut:** The new `D | n` but `D not | k` phase branch does not produce
+  a superlinear obstruction on exact dyadic rows `n=2^ell`, `k=rho n`; its
+  quotient order is bounded in terms of `rho`.
+- **What not to claim:** This is not a complete arbitrary-line quotient ledger,
+  not a Paper-A no-slack example, not a protocol soundness failure, and not a
+  final proof or disproof of `conj:B`.
+- **Next step:** Attack
+  `M1-SCALAR-FAITHFUL-CENTRAL-LIFT-LOWBASE-AUDIT`: prove or route-cut whether
+  more than `n^{1+epsilon}` scalar slopes force either a low-base proper
+  completion or a profile-scale quotient completion.
