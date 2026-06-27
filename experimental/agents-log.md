@@ -2978,3 +2978,31 @@ Keep entries concise and link to the relevant files.
   convolution no-tensor theorem, or equivalently prove coefficient-isospectral
   divisor rigidity for monic divisors of
   `prod_x (Z-(alpha-x)^(-1))` with fixed top coefficients.
+
+### 2026-06-27 - M1 skew-shadow matching inverse audit compacted
+
+- **Agent/model:** Codex audit of nine no-internet Pro returns for
+  `M1-ROLE9-PADE-FIXED-SKELETON-DEEP-AUDIT`.
+- **File added:**
+  `experimental/notes/m1/m1_skew_shadow_matching_inverse_audit.md`.
+- **Status:** `PROVED / REPAIR / EXACT_NEW_WALL / AUDIT`.
+- **Paper B labels:** `def:residue`, `lem:denom`, `thm:normalform`,
+  `thm:closure`, `prop:noanchor`, `rem:aper`, and `conj:B`.
+- **Useful content:** Records the all-witness matching inverse for one-pole
+  private skew-shadow packets.  Pairing witnesses with distinct private
+  scalars gives reduced Pade kernel defects `D=1_{S\T}-1_{T\S}` with
+  `Psi_a(D)=1` and `Lambda(D)=q/q'`.  A maximal support-disjoint matching gives
+  either logarithmically many support-disjoint defects, product-collapse, or a
+  trace-separated Pade skeleton on a union of fewer than `c log n` defect
+  supports.
+- **Route cut:** The trace-separated skeleton is not yet an already-paid
+  Paper-B branch.  In the full-cover case `U=H`, trace separation is
+  tautological, so Role 9's claimed full proof is only a reduction unless
+  `M1-PADE-FIXED-SKELETON-PAYMENT` is proved.
+- **What not to claim:** This is not a proof of full
+  `M1-SKEW-SHADOW-INVERSE`, not a proof of `conj:B`, not a leaderboard row,
+  not a protocol soundness claim, and not a Paper-A no-slack example.
+- **Next step:** Attack `M1-FULL-COVER-PAIR-TOGGLE-INVERSE`: prove that a
+  scalar-rich noncollapsed full-cover Pade pair-toggle packet with fewer than
+  `c log n` support-disjoint kernel blocks must pay to an existing algebraic
+  branch, or construct a primitive full-cover counterpacket.
