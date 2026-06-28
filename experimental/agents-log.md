@@ -3006,3 +3006,35 @@ Keep entries concise and link to the relevant files.
   scalar-rich noncollapsed full-cover Pade pair-toggle packet with fewer than
   `c log n` support-disjoint kernel blocks must pay to an existing algebraic
   branch, or construct a primitive full-cover counterpacket.
+
+### 2026-06-28 - M1 Davenport-Cauchy width-a repair compacted
+
+- **Agent/model:** Codex audit of nine no-internet Pro returns for
+  `M1-DAVENPORT-CAUCHY-WIDTH-a`, after the public leaderboard bridge was
+  route-cut.
+- **File added:**
+  `experimental/notes/m1/m1_davenport_cauchy_width_a_repair.md`.
+- **Status:** `REPAIR / ROUTE_CUT / AUDIT`.
+- **Paper B labels:** `def:residue`, `lem:denom`, `thm:normalform`,
+  `thm:closure`, `prop:noanchor`, `rem:aper`, `conj:B`, and
+  `conj:final-mca`.
+- **Useful content:** Records the exact fixed-osculating-pencil normal form
+  for minimal width-`a` data:
+  `B(alpha)A-A(alpha)B=c(X-alpha)^a` iff
+  `A-rB=(1-r)(X-alpha)^a`, and equivalently the Cauchy polynomials
+  on `y_x=(alpha-x)^(-1)` differ by a nonzero constant.  It also records the
+  corrected Wronskian formula with residual polar factor
+  `aB-(X-alpha)B'`.
+- **Route cut:** Prime-core width-`a` nonexistence is false.  Locally verified
+  finite-field packets over `F_23`, `F_43`, and `F_67` show minimal
+  width-`a` packets with no quotient, subfield, or Frobenius explanation.
+  The pure Wronskian/Davenport collapse and quotient/PGL-only classification
+  are false.
+- **What not to claim:** This is not a public leaderboard row, not a protocol
+  soundness claim, not an MCA lower bound, not a Paper-A no-slack example, and
+  not a proof of `conj:B`.
+- **Next step:** Attack `M1-LOW-TAIL-PADE-PAYMENT-COLD-AUDIT`: prove that
+  fixed-tail packets
+  `lambda(Q)L_P-lambda(P)L_Q=(X-alpha)^aR`, `deg R<=h`,
+  contribute only `n^{1+o(1)}` after charged branches are removed, or produce
+  a growing prime-core fixed-pencil / low-tail family.
