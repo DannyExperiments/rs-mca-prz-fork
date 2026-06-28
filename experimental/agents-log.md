@@ -29,6 +29,31 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-28 - Fixed-prefix low-tail Cauchy-locator packing
+
+- **Agent/model:** Codex with nine ChatGPT Pro hostile public-note audit roles.
+- **Files added or changed:**
+  `experimental/notes/m1/m1_low_tail_cauchy_locator_packing.md` and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / REPAIR / AUDIT.
+- **What is being added:** A compact local lemma: a fixed degree-`a+h`
+  Cauchy-locator prefix fiber has pairwise support intersection at most `h`,
+  hence size at most `binom(n,h+1)/binom(a+h,h+1)`.  The note includes the
+  exact one-pole Cauchy-Pade translation and the noncontained
+  one-support-one-slope observation needed to turn the fixed-fiber support
+  bound into a fixed-fiber slope bound.
+- **How it is useful:** It repairs the width-`a` / low-tail endpoint of the
+  Paper-B M1 residue-line route without claiming full `conj:B` or
+  `conj:final-mca`.  In the corrected reserve `a >= c n/log n`, fixed low-tail
+  fibers are polylogarithmic for fixed `h` and `n^{o(1)}` for
+  `h=o(log n/log log n)`.
+- **What to do next:** Attack
+  `M1-MOVING-PREFIX-NO-TENSOR-AMPLIFICATION`: prove that a primitive
+  noncontained residue-line packet cannot gain polynomial slope mass by moving
+  through many fixed low-tail prefix fibers, unless an existing charged branch
+  applies.  The companion wall is
+  `M1-MID-TAIL-TO-WIDE-PADE-GRAVER-RIGIDITY`.
+
 ### 2026-06-27 - Central-lift slope/list duality
 
 - **Agent/model:** Codex with three ChatGPT Pro hostile-audit roles.
