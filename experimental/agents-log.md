@@ -3063,3 +3063,33 @@ Keep entries concise and link to the relevant files.
   `lambda(Q)L_P-lambda(P)L_Q=(X-alpha)^aR`, `deg R<=h`,
   contribute only `n^{1+o(1)}` after charged branches are removed, or produce
   a growing prime-core fixed-pencil / low-tail family.
+
+### 2026-06-28 - Low-tail arbitrary-anchor skeleton payment compacted
+
+- **Agent/model:** Codex audit of nine no-internet Pro returns for
+  `M1-TRACE-SKELETON-BLOCKER-PAYMENT`.
+- **File added:**
+  `experimental/notes/m1/m1_low_tail_arbitrary_anchor_skeleton_payment.md`.
+- **Status:** `PROVED local lemma / ROUTE_CUT / AUDIT`.
+- **Paper B labels:** `def:residue`, `lem:denom`, `thm:normalform`,
+  `thm:closure`, `thm:onez`, `prop:noanchor`, `rem:aper`, `conj:B`, and
+  `conj:final-mca`.
+- **Useful content:** Records a balanced low-tail residue-cloud theorem.  If
+  `deg E=a`, `deg B<a`, `B!=0`, and each selected arbitrary-anchor witness has
+  `Q_z=zB+ER_z`, `deg R_z<h`, on a support of size `a+h`, then
+  `|Gamma| <= binom(n,h+1)/binom(a+h-1,h) <= n/(h+1)(n/a)^h`.  Thus in the
+  corrected reserve `a >= c n/log n`, `h=o(log n/log log n)`, this stratum is
+  `n^{1+o(1)}`.
+- **Route cut:** This does not prove full trace-skeleton blocker payment.  It
+  does not cover general Paper-B witnesses `deg A_z<k`, low-tail structure
+  that appears only in pair defects, marked/punctured trace descendants, or
+  medium/wide tails.
+- **What not to claim:** This is not a public leaderboard row, not a protocol
+  soundness claim, not an ordinary list theorem, not a Paper-A no-slack
+  example, and not a proof of `conj:B` or `conj:final-mca`.
+- **Next step:** Attack
+  `M1-PRIMITIVE-PACKET-TO-LOW-TAIL-CLOUD-OR-WIDE-GRAVER` and
+  `M1-LOG-MARKED-PUNCTURED-LOCAL-UNIT-HEREDITY`: show that a primitive
+  trace-skeleton packet either contains the balanced low-tail cloud paid here,
+  descends through a legitimate marked/punctured local-unit theorem, or
+  produces a medium/wide signed Cauchy-Pade Graver atom.
