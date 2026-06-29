@@ -1904,6 +1904,142 @@ convert the printed integer conditions into the two displayed error inequalities
 and \(1-265/512=247/512\), \(1-264/512=31/64\).
 \end{proof}
 
+\section{June 29 Finite-Slope and Interleaved-List PR Packets}
+\label{sec:jun29-pr-packets}
+
+This section records the mathematically useful parts of PRs \#131--\#135.  The
+branches were not merged wholesale, because they were stale relative to the
+current Paper D v6 and public-site state.  The integrated source files are the
+compact notes and verifiers listed in
+\path{experimental/notes/triage/pr-triage-2026-06-29.md}.
+
+\subsection{Boundary-off external-anchor normal form}
+
+PR \#131, due to AllenGrahamHart, contributes a local M1 proof-program normal
+form.  For a shadow \(S\subset D\) of size \(j-1\) and an external anchor
+\(\beta\notin D\), the one-outside locator satisfies
+\[
+  \ell_{S,\beta}=\ell_S^+-\beta\ell_S^0 .
+\]
+Therefore the Hankel landing matrix
+\[
+  M_S(\beta)=
+  \bigl[H(u)\ell_{S,\beta}\quad H(v)\ell_{S,\beta}\bigr]
+\]
+has columns affine-linear in \(\beta\), and the rank-one condition is cut out
+by quadratic minors in \(\beta\).  Thus, for fixed \(S\), either a nonzero
+quadratic minor gives at most two external anchors, or all minors vanish
+identically and the branch is a ruled rank-one pencil.  This is recorded as
+PROVED-LOCAL / PROOF-PROGRAM / AUDIT, not as a proof of M1.
+
+\subsection{\(a=507\) adjacent bridge route cut}
+
+PR \#132, due to Scott Hughes, records a useful non-promotion result for the
+\(\F_{17^{32}},n=512,k=256\) row.  The tangent-star theorem gives
+\[
+  \operatorname{LD}_{\rm sw}(C,a)=513-a
+  \qquad (a\ge427),
+\]
+so in particular
+\[
+  \operatorname{LD}_{\rm sw}(C,507)=6.
+\]
+Any bridge that converted an adjacent line-plus-interleaved-list
+``\(6+1=7\)'' ledger into one additional same-denominator finite-slope
+support-wise event would imply
+\(\operatorname{LD}_{\rm sw}(C,507)\ge7\), contradicting the exact
+tangent-star bound.  Hence the adjacent arithmetic remains a separate
+BRIDGE-NEEDED ledger and is not a new MCA row.
+
+\subsection{Interleaved-list lower row at agreement \(326\)}
+
+PR \#133, due to Scott Hughes, belongs to the interleaved-list track, not the
+MCA slope track.  It proves high-agreement uniqueness
+\[
+  \Lambda_\mu(C,a)=1\qquad (384\le a\le512)
+\]
+and a support-occupancy route cut excluding seven witnesses for
+\[
+  373\le a\le383.
+\]
+It also gives lower-bound constructions at agreements \(291\), \(292\), \(320\),
+and, most usefully for the board, a hybrid quotient-residual construction with
+\[
+  \Lambda_\mu(C,326)\ge7 .
+\]
+Since
+\[
+  6\cdot2^{128}<17^{32}<7\cdot2^{128},
+\]
+this clears the separate interleaved-list numerical gate over denominator
+\(|F|=17^{32}\).  The packet does not claim an MCA numerator, protocol
+soundness, ordinary list-decoding exactness, or an exact \(\delta_C^*\).
+
+\subsection{Random simple-pole finite-slope floors}
+
+PR \#134, due to Vadim Avdeev, proves a general random simple-pole lower bound.
+For \(C=\RS[\F,D,k]\), \(|F|=q\), \(|D|=n\), \(\beta\in F\setminus D\), and
+\(k<a\le n\), put
+\[
+  C_a=\binom{n}{a},\qquad s=a-k,\qquad
+  R_a=\sum_{v=0}^{a-k-1}
+        \binom{a}{v}\binom{n-a}{v}q^{-v}.
+\]
+Then there is a simple-pole line with at least
+\[
+  \left\lceil
+    \frac{qC_a}{C_a+R_aq^s}
+  \right\rceil
+\]
+finite bad slopes at agreement \(a\).  In the row
+\[
+  F=\F_{17}[z]/(z^{32}-3),\quad H=\langle z\rangle,\quad |H|=512,\quad k=256,
+\]
+the verified floors are
+\[
+\begin{array}{c|c}
+a & \text{finite bad-slope lower bound}\\
+\hline
+257 & 17^{32}\\
+258 & 17^{32}\\
+259 & 17^{32}-68{,}904\\
+260 & 33{,}439{,}260{,}151{,}101{,}646{,}297{,}506{,}087{,}371{,}119{,}470 .
+\end{array}
+\]
+The direction is a genuine simple-pole direction: it is not a degree-\(<256\)
+codeword on any support of size \(>256\).
+
+\subsection{Coset-packet finite-slope floors for \(a=261,\ldots,288\)}
+
+PR \#135, also due to Vadim Avdeev, continues the finite-slope floor beyond the
+range where the random simple-pole second-moment bound is useful.  The
+construction uses full dyadic cosets \(K_M\le H\), whose locators have the form
+\[
+  \prod_{x\in hK_M}(X-x)=X^M-h^M,
+\]
+so unions of full \(K_M\)-cosets share low elementary coefficients.  After
+fixing a small partial coset when needed, this produces common-prefix support
+families.  A separating deep anchor then turns the corresponding numerator
+polynomials into distinct finite bad slopes.
+
+For the same \(\F_{17^{32}},n=512,k=256\) row, the certified floors are
+\[
+\begin{array}{c|c}
+a & \text{finite bad-slope lower bound}\\
+\hline
+261\ldots263 & \binom{63}{32}\\
+264 & \binom{64}{33}\\
+265\ldots271 & \binom{31}{16}\\
+272 & \binom{32}{17}\\
+273\ldots287 & \binom{15}{8}\\
+288 & \binom{16}{9}.
+\end{array}
+\]
+Every displayed row beats the moving-root tangent floor \(513-a\), but these
+are still lower-bound rows only.  They do not prove a safe-side theorem, an
+ordinary list-decoding theorem, an interleaved-list statement, or protocol
+soundness.
+
 \section{Non-Claims}
 \label{sec:nonclaims}
 

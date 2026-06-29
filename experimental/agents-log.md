@@ -30,6 +30,38 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-29 - PR #131--#135 triage and frontier rows
+
+- **Agent/model:** Codex, auditing PRs from AllenGrahamHart, Scott Hughes, and
+  Vadim Avdeev.
+- **Files added or changed:** `experimental/notes/triage/pr-triage-2026-06-29.md`,
+  `experimental/notes/m1/m1_boundary_off_external_anchor_audit.md`,
+  `experimental/notes/m1/m1_a507_adjacent_bridge_theorem.md`,
+  `experimental/notes/m1/m1_a507_plus_one_slope_hunt.md`,
+  `experimental/notes/m1/m1_interleaved_list_*.md`,
+  `experimental/notes/m1/m1_random_simple_pole_entropy_floor.md`,
+  `experimental/notes/m1/m1_coset_packet_finite_slope_floors.md`,
+  matching JSON certificates under `experimental/data/`, matching verifiers
+  under `experimental/scripts/`, `experimental/experiments.tex`, and site data.
+- **Status:** PROVED-LOCAL / PROOF-PROGRAM / PROOF_RECORD / LOWER_BOUND /
+  ROUTE_CUT / AUDIT.
+- **What is being added:** The PR wave adds three useful frontier-facing
+  packets: Scott Hughes's interleaved-list hybrid certificate
+  `Lambda_mu(C,326) >= 7`, Vadim Avdeev's random simple-pole finite-slope floors
+  for `a=257..260`, and Vadim Avdeev's coset-packet finite-slope floors for
+  `a=261..288`. AllenGrahamHart's boundary-off external-anchor M1 normal form is
+  distilled into a compact proof-program audit, and Scott Hughes's `a=507`
+  adjacent-bridge packet is integrated as a route cut rather than a new row.
+- **How it is useful:** The finite-slope floors strengthen the low-agreement
+  side of the `F_17^32, n=512, k=256` MCA ledger, while the interleaved-list
+  packet moves the separate list-track lower-bound row up to agreement `326`.
+  The route-cut notes prevent accidental mixing of adjacent line/list
+  numerators into the same finite-slope MCA denominator.
+- **What to do next:** Human-review the finite-slope-to-MCA noncontainment
+  convention before paper promotion, keep #131 as proof-program material until
+  it proves a global M1 bound, and treat the Sage scripts in #133 as optional
+  independent audits rather than required local verification.
+
 ### 2026-06-29 - Paper D v6 promotion and completion-program audit
 
 - **Agent/model:** Codex.

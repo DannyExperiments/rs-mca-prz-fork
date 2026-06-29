@@ -1,6 +1,33 @@
 [
   {
     "date": "2026-06-29",
+    "status": "proof record / lower bound",
+    "author": "Vadim Avdeev / Codex audit",
+    "title": "Finite-slope floors now cover a=257..288 on the F_17^32 row",
+    "summary": "PRs #134 and #135 add random simple-pole and coset-packet finite-slope lower floors for RS[F_17^32,H,256]. The strongest near-capacity rows give all finite slopes at a=257 and a=258; coset packets continue with explicit binomial lower floors through a=288.",
+    "impact": "This strengthens the finite-slope MCA lower-bound ledger without changing the known delta* cap. The rows are lower-bound proof records only, not safe-side theorems or protocol claims.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_random_simple_pole_entropy_floor.md"
+  },
+  {
+    "date": "2026-06-29",
+    "status": "interleaved-list proof record",
+    "author": "Scott Hughes / Codex audit",
+    "title": "Hybrid quotient-residual packet clears the interleaved-list gate at a=326",
+    "summary": "PR #133 contributes a standard interleaved-list lower bound Lambda_mu(C,326) >= 7 for the F_17^32, n=512, k=256 row, plus high-agreement route cuts and supporting verifiers.",
+    "impact": "This is a separate list-track row over denominator |F|=17^32. It does not add an MCA N_bad numerator or a protocol soundness claim.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_interleaved_list_hybrid_quotient_residual.md"
+  },
+  {
+    "date": "2026-06-29",
+    "status": "audit / proof program",
+    "author": "AllenGrahamHart and Scott Hughes / Codex audit",
+    "title": "Boundary-off normal form and a=507 bridge route cut integrated conservatively",
+    "summary": "PR #131 is distilled to a local external-anchor Hankel normal form for the M1 proof program. PR #132 records that adjacent 6+1 line/list arithmetic cannot be counted as a seventh finite-slope support-wise event at a=507.",
+    "impact": "Both are useful guardrails, but neither is a new public leaderboard row.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/triage/pr-triage-2026-06-29.md"
+  },
+  {
+    "date": "2026-06-29",
     "status": "paper promotion / audit",
     "author": "Przemek Chojecki / Codex audit",
     "title": "Paper D v6 adds the prize-facing completion program",
