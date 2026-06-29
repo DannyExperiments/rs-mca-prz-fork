@@ -3093,3 +3093,28 @@ Keep entries concise and link to the relevant files.
   trace-skeleton packet either contains the balanced low-tail cloud paid here,
   descends through a legitimate marked/punctured local-unit theorem, or
   produces a medium/wide signed Cauchy-Pade Graver atom.
+
+### 2026-06-29 - Row-minimal absolute-cocycle normal form compacted
+
+- **Agent/model:** Codex audit of nine no-internet Pro returns for
+  `M1-ROW-MINIMAL-ABSOLUTE-COCYCLE-NORMAL-FORM`.
+- **File added:**
+  `experimental/notes/m1/m1_row_minimal_absolute_cocycle_normal_form.md`.
+- **Status:** `PROVED local lemma / AUDIT`.
+- **Paper B labels:** `def:residue`, `lem:denom`, `thm:normalform`,
+  `thm:closure`, `prop:noanchor`, `rem:aper`, and `conj:B`.
+- **Useful content:** Records the local normal form for row-minimal
+  absolute-offset obstructions.  Minimality with respect to nonzero anchor
+  defect still forces ordinary evaluation-matroid circuit minimality by a
+  cancellation argument.  Therefore every row-minimal obstruction for
+  `F[X]_<r` is either a repeated-point conflict with unequal anchor values, or
+  an `r+1` point Vandermonde circuit with barycentric weights and nonzero
+  `r`-th divided difference.
+- **Route cut / limitation:** This is a grammar reduction, not a packing
+  theorem.  It does not charge many Type-A or Type-B obstructions, does not
+  prove `conj:B`, and does not give a leaderboard row or protocol statement.
+- **Next step:** Attack `M1-TYPE-A-AND-MIXED-TYPE-B-PRUNING`: show that after
+  retaining only slopes with `O_i=empty`, Type-A point conflicts and
+  mixed-slope Type-B circuits are common-offset artifacts or point to a
+  same-slope Type-B divided-difference defect.  Then attack
+  `M1-SAME-SLOPE-VANDERMONDE-DIVIDED-DIFFERENCE-CHARGE`.
