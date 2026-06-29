@@ -29,6 +29,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-30 - Zero-holonomy reanchoring payment
+
+- **Agent/model:** Codex with nine ChatGPT Pro hostile-audit roles.
+- **Files added or changed:**
+  `experimental/notes/m1/m1_zero_holonomy_reanchoring_payment.md` and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / REPAIR / AUDIT.
+- **What is being added:** A compact repaired local lemma: complete pairwise
+  punctured zero holonomy plus post-puncture support reserve
+  `|T_i\W|>=a+h` lets the low-tail expressions `z_iB+ER_i` glue to a
+  synthetic arbitrary anchor, so the banked low-tail skeleton payment gives
+  `sum_i binom(|T_i\W|-1,h) <= binom(|H\W|,h+1)`.
+- **How it is useful:** This removes failed absolute absorption `Abs_W` as a
+  slope-packing obstruction in the complete zero-holonomy, support-reserving
+  branch of the Paper-B M1 residue-line route.  It replaces the previous
+  coupled-cocycle/sunflower wall for that branch with the already banked
+  low-tail arbitrary-anchor payment.
+- **What to do next:** Attack
+  `M1-NONZERO-LOW-TAIL-CECH-HOLONOMY-PADE-GRAVER-PAYMENT`: if the low-tail
+  Cech class is nonzero, extract a paid Pade/local-unit atom, a paid
+  Pade-Graver atom, or route the packet to an existing quotient, subfield,
+  fixed-pencil, tangent, contained, or support-degenerate branch.
+
 ### 2026-06-29 - Rainbow blocker and punctured low-tail bridge
 
 - **Agent/model:** Codex with nine ChatGPT Pro theorem-worker roles.
