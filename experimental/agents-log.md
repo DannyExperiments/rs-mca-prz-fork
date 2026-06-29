@@ -29,6 +29,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-06-29 - Rainbow blocker and punctured low-tail bridge
+
+- **Agent/model:** Codex with nine ChatGPT Pro theorem-worker roles.
+- **Files added or changed:**
+  `experimental/notes/m1/m1_rainbow_blocker_punctured_low_tail_bridge.md` and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / ROUTE_CUT / AUDIT.
+- **What is being added:** A compact local bridge replacing the false
+  fixed-rejecting-skeleton multiplicity route.  A maximal rainbow matching of
+  same-slope Type-B rejecting skeletons gives either many disjoint Type-B
+  cocycles or, after deleting fewer than `M` slopes, a small blocker `W` such
+  that literal puncturing gives `O_i^W != empty` for all retained slopes.
+- **How it is useful:** This keeps the Paper-B M1 route proof-facing: the
+  blocker branch can be paid by marked/punctured low-tail skeleton counting
+  once support reserve is checked, while the disjoint branch is isolated as a
+  genuine CRT/private-tail absorber wall rather than being confused with
+  quotient, subfield, fixed-skeleton, or low-tail branches.
+- **What to do next:** Attack
+  `M1-CRT-ABSORBER-HOLONOMY-OR-PRIVATE-BLOCK-PAYMENT`: classify the support
+  overlap graph for disjoint Type-B cocycle packets into private-block payment,
+  zero-holonomy low-tail integration, nonzero-holonomy Pade/Graver atoms, or
+  an existing quotient/PGL2/subfield/complete-jet branch.
+
 ### 2026-06-28 - Fixed-prefix low-tail Cauchy-locator packing
 
 - **Agent/model:** Codex with nine ChatGPT Pro hostile public-note audit roles.
