@@ -3164,3 +3164,26 @@ Keep entries concise and link to the relevant files.
   mixed-slope Type-B circuits are common-offset artifacts or point to a
   same-slope Type-B divided-difference defect.  Then attack
   `M1-SAME-SLOPE-VANDERMONDE-DIVIDED-DIFFERENCE-CHARGE`.
+
+### 2026-06-30 - Checked-edge trichotomy compacted
+
+- **Agent/model:** Codex audit of nine no-internet Pro returns for
+  `M1-REPAIRED-TRICHOTOMY-HOSTILE-AUDIT`.
+- **File added:**
+  `experimental/notes/m1/m1_checked_edge_trichotomy.md`.
+- **Status:** `PROVED local lemma / AUDIT`.
+- **Paper B labels:** `def:residue`, `lem:denom`, `thm:normalform`,
+  `thm:closure`, `prop:noanchor`, and `conj:B`.
+- **Useful content:** Records a local low-tail residue transition trichotomy.
+  Selected checked-edge equations either fiberwise-saturate and give complete
+  zero holonomy, expose a missing-edge denominator-determining local unit, or
+  make denominator-determining skeletons private across retained supports.  The
+  intrinsic reserve currency is
+  `D_h(S)=#{U subset S: |U|=h+1 and partial_U(B/E)!=0}`; raw
+  `|S|>=a+h` is only a post-puncture sufficient condition.
+- **Route cut / limitation:** The atom branch is not a slope-count payment.
+  The note does not pay nonzero Cech holonomy, repeated local-unit reuse,
+  moving contact shadows, support-deficient slopes, or primitive
+  transition-Graver atoms.
+- **Next step:** Attack `M1-VERTEX-BOUNDARY-SPLIT-UNIT-EXTRACTION`, then
+  `M1-PRIMITIVE-TRANSITION-GRAVER-ATOM-PAYMENT-OR-CONTACT-SHADOW-WALL`.
