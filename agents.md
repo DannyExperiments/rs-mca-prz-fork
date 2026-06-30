@@ -9,11 +9,36 @@ The four papers are:
 ```text
 RS_disproof_v3.tex      Paper A: no-slack obstruction
 slackMCA_v4.tex         Paper B: slack / quotient / entropy theory
-cs25_cap_v5.tex         Paper D: universal field-size cap
+cs25_cap_v9.tex         Paper D: universal cap and Hankel certificate atlas
 snarks_v5.tex           Paper C: SNARK / protocol ledger
 ```
 
 Use logical order **A → B → D → C** unless you are working specifically on protocol ledgers.
+
+## Current priority: Hankel certificates
+
+The current priority is making the aperiodic Hankel certificate program
+replayable.  Paper D v9 adds the chart atlas for this: regular
+overdetermined minors, finite affine noncontainment pivots `B_h != 0`,
+projective-infinity charts `B=0, A!=0`, finite-parameter curve coefficient
+pivots `(V_i)_h != 0`, and a named singular residual bucket.
+
+Use `scripts/aperiodic_eliminant_schema.json` for machine-readable
+certificates.  A certificate should:
+
+1. state the row, field, domain hash, agreement threshold, and sampler;
+2. remove already paid tangent/common-code-line and quotient-image ledgers;
+3. for each exact agreement `A`, set `j=n-A` and `t=A-k`;
+4. first try regular maximal Hankel minors when `t >= j+1`;
+5. otherwise build locator charts and split them by affine, projective, or
+   curve pivots;
+6. end every chart as `eliminant`, `empty`, `dimension_degree`, or
+   `residual_obstruction`;
+7. label residual obstructions as quotient, tangent, extension, candidate new
+   obstruction, or unknown.
+
+Do not call an unresolved singular bucket "aperiodic evidence."  Either supply
+the eliminant/empty certificate or name the residual obstruction.
 
 ## Ground rules
 
@@ -78,7 +103,7 @@ Treat Papers A-D as stable reference documents unless a maintainer explicitly as
 ```text
 tex/RS_disproof_v3.tex
 tex/slackMCA_v4.tex
-tex/cs25_cap_v5.tex
+tex/cs25_cap_v9.tex
 tex/snarks_v5.tex
 ```
 
@@ -92,7 +117,8 @@ Whenever you add or materially change something under `experimental/`, add an en
 
 1. Read the abstract and scope section of `RS_disproof_v3.tex`.
 2. Read the introduction and frontier/open-problems section of `slackMCA_v4.tex`.
-3. Read the main theorem and open problems of `cs25_cap_v5.tex`.
+3. Read the main theorem, aperiodic Hankel chart atlas, and open problems of
+   `cs25_cap_v9.tex`.
 4. Read the certificate ledgers and open problems of `snarks_v5.tex`.
 5. Return to Paper B for the exact theorem labels relevant to your task.
 
@@ -103,7 +129,7 @@ The current research picture is:
 ```text
 Paper A gives explicit no-slack lower bounds.
 Paper B builds the corrected reserve theory and states the main missing local limits.
-Paper D v5 gives a self-contained universal MCA cap.
+Paper D v9 gives a self-contained universal MCA cap and an aperiodic Hankel certificate atlas.
 Paper C says how a protocol must consume the theory without mixing ledgers.
 ```
 
@@ -255,7 +281,7 @@ Record which quotient scales remain active.
 
 **Goal.** Determine when a corrected-reserve list bound implies a corrected-reserve CA/MCA/line-decoding bound at essentially the same radius.
 
-**Why it matters.** Paper D v5 uses a self-contained deep-point conversion to cap the MCA challenge; older list-to-agreement routes remain relevant for CA/list comparison audits. A forward positive equivalence would be powerful, but may be false.
+**Why it matters.** Paper D v9 uses a self-contained deep-point conversion to cap the MCA challenge; older list-to-agreement routes remain relevant for CA/list comparison audits. A forward positive equivalence would be powerful, but may be false.
 
 **First attacks.**
 
@@ -282,7 +308,7 @@ Record which quotient scales remain active.
 
 ### A0. Audit older imported CA/list conversions
 
-Paper D v5's main MCA universal cap is self-contained. The older CS25/ABF
+Paper D v9's main MCA universal cap is self-contained. The older CS25/ABF
 list-to-agreement routes remain relevant for CA and list-comparison statements.
 Audit:
 

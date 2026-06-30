@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Aperiodic Hankel Eliminant Certificate",
+  "type": "object",
+  "required": ["schema_version", "row", "agreement_threshold", "removed_ledgers", "exact_agreements"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "aperiodic-hankel-eliminant-v1"},
+    "row": {
+      "type": "object",
+      "required": ["n", "k", "field", "domain_hash"],
+      "properties": {
+        "n": {"type": "integer", "minimum": 1},
+        "k": {"type": "integer", "minimum": 1},
+        "field": {"type": "string"},
+        "domain_hash": {"type": "string"},
+        "domain_description": {"type": "string"}
+      }
+    },
+    "agreement_threshold": {"type": "integer", "minimum": 0},
+    "sampler": {"type": "string", "enum": ["finite_affine_line", "projective_line", "finite_power_curve"]},
+    "curve_degree": {"type": "integer", "minimum": 1},
+    "removed_ledgers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "numerator", "certificate_ref"],
+        "properties": {
+          "name": {"type": "string"},
+          "numerator": {"type": "integer", "minimum": 0},
+          "certificate_ref": {"type": "string"}
+        }
+      }
+    },
+    "exact_agreements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["A", "j", "t", "status"],
+        "properties": {
+          "A": {"type": "integer"},
+          "j": {"type": "integer"},
+          "t": {"type": "integer"},
+          "status": {"type": "string", "enum": ["regular_minor", "pivot_atlas", "empty", "residual_obstruction"]},
+          "residual_label": {"type": "string", "enum": ["quotient", "tangent", "extension", "candidate_new_obstruction", "unknown"]},
+          "regular_minor": {
+            "type": "object",
+            "properties": {
+              "row_set": {"type": "array", "items": {"type": "integer"}},
+              "polynomial_ref": {"type": "string"},
+              "degree": {"type": "integer", "minimum": 0},
+              "root_hash": {"type": "string"}
+            }
+          },
+          "charts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["chart_id", "equations_ref", "inequations_ref", "pivot_records"],
+              "properties": {
+                "chart_id": {"type": "string"},
+                "equations_ref": {"type": "string"},
+                "inequations_ref": {"type": "string"},
+                "coverage_ref": {"type": "string"},
+                "pivot_records": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["pivot", "status"],
+                    "properties": {
+                      "pivot": {"type": "string"},
+                      "status": {"type": "string", "enum": ["eliminant", "empty", "dimension_degree", "residual_obstruction"]},
+                      "eliminant_ref": {"type": "string"},
+                      "degree": {"type": "integer", "minimum": 0},
+                      "dimension": {"type": "integer", "minimum": 0},
+                      "variety_degree": {"type": "integer", "minimum": 0},
+                      "residual_label": {"type": "string", "enum": ["quotient", "tangent", "extension", "candidate_new_obstruction", "unknown"]}
+                    },
+                    "allOf": [
+                      {
+                        "if": {"properties": {"status": {"const": "residual_obstruction"}}},
+                        "then": {"required": ["residual_label"]}
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {"properties": {"status": {"const": "residual_obstruction"}}},
+            "then": {"required": ["residual_label"]}
+          }
+        ]
+      }
+    },
+    "declared_aperiodic_numerator": {"type": "integer", "minimum": 0},
+    "root_union_table_ref": {"type": "string"}
+  }
+}

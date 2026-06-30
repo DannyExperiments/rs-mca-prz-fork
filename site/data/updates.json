@@ -1,6 +1,15 @@
 [
   {
     "date": "2026-06-30",
+    "status": "paper promotion / Hankel certificate atlas",
+    "author": "Przemek Chojecki / Codex audit",
+    "title": "Paper D v9 adds the aperiodic Hankel chart atlas",
+    "summary": "Paper D v9 preserves the v8 universal, first-grid, quotient-support, and quotient-image ledgers, then adds a certificate atlas for the aperiodic safe-side MCA task: regular Hankel minors, affine pivots, projective infinity, curve pivots, and named singular residual buckets.",
+    "impact": "This is proof-program infrastructure for building Hankel eliminant certificates. It is not a new numerical leaderboard row and does not close M1 by itself.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v9.tex"
+  },
+  {
+    "date": "2026-06-30",
     "status": "paper promotion / quotient ledger audit",
     "author": "Przemek Chojecki / Codex audit",
     "title": "Paper D v8 adds quotient support and image ledgers",
@@ -57,9 +66,9 @@
     "date": "2026-06-27",
     "status": "paper versions / leaderboard audit",
     "author": "Codex",
-    "title": "Papers B v4, C v5, and D v8 are now the public theory set",
-    "summary": "Paper B v4 promotes the high-agreement line/list/curve boundary layer, Paper C v5 adds the theorem-backed protocol ledger compiler, and Paper D v8 preserves the cap package while adding quotient support/image ledgers.",
-    "impact": "The leaderboard impact is source/status hygiene plus proof-program infrastructure: Paper D cap rows are now PROVED_PAPERD_V8_CAP, first-grid rows are PROVED_PAPERD_V8_FIRST_GRID, and list-cap rows cite Paper B v4.",
+    "title": "Papers B v4, C v5, and D v9 are now the public theory set",
+    "summary": "Paper B v4 promotes the high-agreement line/list/curve boundary layer, Paper C v5 adds the theorem-backed protocol ledger compiler, and Paper D v9 preserves the cap package while adding the aperiodic Hankel certificate atlas.",
+    "impact": "The leaderboard impact is source/status hygiene plus proof-program infrastructure: existing Paper D cap rows remain cap-row records, while new Hankel rows should cite the v9 atlas and schema.",
     "href": "https://github.com/przchojecki/rs-mca/blob/main/readme.md"
   },
   {

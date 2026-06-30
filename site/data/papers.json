@@ -32,11 +32,11 @@
   {
     "id": "paper-d",
     "letter": "D",
-    "title": "Paper D: Universal Field-Size Cap, First-Grid Cap, and Quotient Ledgers",
-    "file": "cs25_cap_v8.pdf",
-    "pdf": "papers/cs25_cap_v8.pdf",
-    "githubPdf": "https://github.com/przchojecki/rs-mca/blob/main/cs25_cap_v8.pdf",
-    "tex": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v8.tex",
-    "summary": "Preserves the universal and first-grid MCA caps and adds conservative quotient-support and distinct-parameter image ledgers for safe-side threshold accounting."
+    "title": "Paper D: Universal Field-Size Cap and Hankel Certificate Atlas",
+    "file": "cs25_cap_v9.pdf",
+    "pdf": "papers/cs25_cap_v9.pdf",
+    "githubPdf": "https://github.com/przchojecki/rs-mca/blob/main/cs25_cap_v9.pdf",
+    "tex": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v9.tex",
+    "summary": "Preserves the universal and first-grid MCA caps, keeps the quotient ledgers, and adds the aperiodic Hankel chart atlas for safe-side certificate work."
   }
 ]
