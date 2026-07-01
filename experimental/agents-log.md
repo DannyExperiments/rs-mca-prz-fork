@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-02 - Simple-pole projected locator wall
+
+- **Agent/model:** Codex, integrating theorem-worker audits.
+- **Files added or changed:**
+  `experimental/notes/m1/m1_simple_pole_projected_locator_wall.md`;
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT / ROUTE_CUT.
+- **What is being added:** A finite reduction showing that the `E=T-c`,
+  `B=1` simple-pole residue-line slope set is exactly the one-point projected
+  Reed--Solomon list-value set
+  `{Q(c): deg Q <= h, Q agrees with b=(T-c)a on at least s rows}`.  The note
+  records the divided-difference circuit-color form and separates Johnson,
+  fixed-pencil, quotient-core, subfield, and contained/tangent branches.
+- **How it is useful:** Identifies the exact `t=1` Paper-B M1 wall as a
+  projected locator local-limit problem, rather than another finite no-slack
+  packet or a pure hypergraph clique-counting problem.
+- **What to do next:** Attack `M1-ONE-POINT-PROJECTED-LOCATOR-LOCAL-LIMIT`,
+  or try to construct a generated-field aperiodic counterpacket with large
+  projected image after quotient-core, subfield, fixed-pencil, and
+  Johnson-paid branches are removed.
+
 ### 2026-07-01 - v10 guide and site metadata sync
 
 - **Agent/model:** Codex.
