@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-01 - Full-overlap low-tail completion and projection wall
+
+- **Agent/model:** Codex with nine ChatGPT Pro theorem-worker roles.
+- **Files added or changed:**
+  `experimental/notes/m1/m1_full_overlap_low_tail_completion_projection_wall.md`;
+  `experimental/agents-log.md`.
+- **Status:** PROVED / ROUTE_CUT / AUDIT.
+- **What is being added:** A compact M1 residue-line note proving that genuine
+  low-tail witnesses satisfy full-overlap completion
+  `tau_ij=(z_j-z_i)B/E=R_i-R_j`, so honest `P_h` dual coboundary cocycles
+  annihilate the transition.  The note also route-cuts the unqualified claim
+  that every nonzero projected holonomy yields a local `P_h` Pade--Graver
+  atom, using a small `F_5` projection-defect packet.
+- **How it is useful:** It separates the proved higher-tail completion identity
+  from the remaining projection-to-Graver saturation wall in Paper B's M1
+  residue-line route.  The remaining obstruction is a low-tail quotient /
+  vertex-boundary projection defect, not another finite leaderboard example.
+- **What to do next:** Attack
+  `M1-PROJECTION-TO-GRAVER-SATURATION-OR-VERTEX-BOUNDARY-DEFECT`: classify a
+  selected/projected functional with nonzero pairing into full-overlap
+  completion, slope-weighted Vandermonde/Pade--Graver atom, or explicit
+  projection-defect branch.
+
 ### 2026-06-30 - M2 Hankel smoke packet
 
 - **Agent/model:** Codex.
