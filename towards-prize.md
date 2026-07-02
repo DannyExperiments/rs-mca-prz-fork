@@ -168,6 +168,52 @@ Does it audit the exact prize object, denominator, or endpoint convention?
 
 If the answer is no, it is probably not on the shortest path.
 
+### 3.1 Post-v10 correction: the band is underdetermined
+
+The r2 roadmap audit in
+`experimental/notes/roadmaps/proximity_prize_execution_roadmap_post_v10_r2.md`
+adds an important correction.  The regular overdetermined Hankel branch exists
+only when
+\[
+        t\ge j+1
+        \quad\Longleftrightarrow\quad
+        \delta\lesssim \frac{1-\rho}{2}.
+\]
+For every official prize rate, the Johnson-to-capacity band lies above this
+range:
+\[
+        1-\sqrt{\rho}
+        -
+        \frac{1-\rho}{2}
+        =
+        \frac{(1-\sqrt{\rho})^2}{2}
+        >
+        0.
+\]
+Therefore the regular M3 window is a controlled proving ground for
+stratification, root accounting, and packet format.  It is not, by itself, the
+band-facing theorem needed for a full prize solution.
+
+The critical safe-side program is now:
+
+```text
+regular window      -> develop and test v10 packet mechanics;
+underdetermined M5  -> attack the actual prize band;
+M4 assembly         -> subtract tangent, quotient, and extension ledgers;
+M6 theorem          -> promote residual classification into a row theorem or
+                       uniform aperiodic bound.
+```
+
+For the pinned `F_17^32`, `n=512`, `k=256` row, the first underdetermined
+boundary is
+\[
+        A=384,\qquad t=j=128,
+\]
+where the Hankel matrix has shape \(128\times129\).  Kernel nonemptiness is
+then vacuous for every slope, so the first meaningful filter must come from
+Cramer-kernel locator validity, divisibility by \(X^{512}-1\), pivot charts, or
+a labelled residual obstruction.
+
 ## 4. The v10 Hankel Proof Packet
 
 Paper D v10 gives the contributor-facing atlas.  For a row and exact agreement
@@ -571,6 +617,17 @@ affine pivot eliminants;
 projective infinity charts;
 curve coefficient-pivot charts.
 ```
+
+Status after the post-v10 PR sweep: the first underdetermined boundary packet
+has been added at
+
+```text
+experimental/notes/m5/m5_underdetermined_a384_pivot_packet.md
+```
+
+It is deliberately `ACTIVE / EXPERIMENTAL`: it identifies the `A=384`
+deficiency-one bucket and the Cramer/divisibility route, but it does not claim
+a threshold bound.  This is now the first concrete M5 rung to refine.
 
 ### M6. M1 Theorem Candidate
 

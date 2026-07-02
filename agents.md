@@ -21,7 +21,13 @@ The current priority is no longer finding another lower-bound example.  It is
 using Paper D v10 to produce safe-side upper-bound packets for the aperiodic
 Hankel regime.
 
-### Next to do: M3/M4 packet for the `F_17^32` row
+Post-v10 correction: the official prize band is underdetermined for every
+official rate.  The regular overdetermined M3 window is still the best proving
+ground for packet mechanics, paid-root accounting, and stratification style,
+but it is not the direct band-facing theorem.  The M5 underdetermined chart
+program is now on the critical path.
+
+### Next to do: M3/M4 proving-ground packet and M5 underdetermined rung
 
 Work on the row
 
@@ -80,6 +86,18 @@ If a regular bucket does not close, build the v10 pivot charts instead of
 calling it evidence.  Every leftover chart must end as `eliminant`, `empty`,
 `dimension_degree`, or `residual_obstruction`, with residuals labelled
 `quotient`, `tangent`, `extension`, `candidate_new_obstruction`, or `unknown`.
+
+In parallel, refine the first underdetermined M5 rung:
+
+```text
+experimental/notes/m5/m5_underdetermined_a384_pivot_packet.md
+```
+
+At `A=384`, the Hankel matrix is `128 x 129`, so kernel nonemptiness is
+vacuous for every slope.  The next useful step is the deficiency-one
+Cramer-kernel locator chart: turn `L_Z(X) | X^512 - 1` into an eliminant, or
+label the residual obstruction precisely.  This is the first concrete rung in
+the program that actually faces the prize band.
 
 ### General v10 certificate format
 

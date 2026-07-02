@@ -30,6 +30,47 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-02 - Post-v10 PR sweep: M1 reductions, M3 synthetic packets, M5 underdetermined roadmap
+
+- **Agent/model:** Codex, integrating and auditing contributions from
+  AllenGrahamHart, DannyExperiments, and Gia.
+- **Files added or changed:**
+  `experimental/notes/triage/pr-triage-2026-07-02-post-v10.md`;
+  `experimental/notes/audits/m0_prize_mca_definition_freeze.md`;
+  `experimental/notes/m1/m1_simple_pole_projected_locator_wall.md`;
+  `experimental/notes/m1/m1_dyadic_shifted_prefix_value_bridge.md`;
+  `experimental/notes/m3/m3_low_rank_affine_spectral_reduction.md`;
+  `experimental/notes/m5/m5_underdetermined_a384_pivot_packet.md`;
+  selected `experimental/data/certificates/hankel-f17-32-m3-*` packets;
+  selected `experimental/scripts/verify_f17_32_m3_*` scripts;
+  `experimental/scripts/verify_f17_32_m5_underdetermined_a384_bucket.py`;
+  `experimental/notes/roadmaps/proximity_prize_execution_roadmap_post_v10_r2.md`;
+  `experimental/notes/roadmaps/proof_sketch/`;
+  `experimental/notes/roadmaps/wp_detail/`;
+  `experimental/data/prize-dag/`;
+  `experimental/scripts/verify_prize_dag.py`;
+  `experimental/scripts/verify_roadmap_r2_numbers.py`;
+  `experimental/scripts/plot_prize_dag.py`;
+  `scripts/check_aperiodic_eliminant_packet.py`;
+  `towards-prize.md`.
+- **Status:** AUDIT / PROVED-LOCAL / EXPERIMENTAL / ROADMAP.  No leaderboard
+  movement and no new prize-facing threshold claim.
+- **What is being added:** The batch integrates Danny/Gia's M1 simple-pole and
+  shifted-prefix reductions, Allen's synthetic low-rank M3/M4 packet material,
+  Allen's M5 `A=384` underdetermined-boundary packet, and Allen's post-v10 r2
+  roadmap/DAG as subordinate planning material.  From the large rank-witness
+  PR only the M0 definition-freeze note and packet-checker enhancement were
+  taken; the generated rank-6 sidecars remain held for split/replay.
+- **How it is useful:** The main new strategic point is that the official
+  prize band is entirely underdetermined, so regular M3 packets are a proving
+  ground while M5 underdetermined charts are the real band-facing program.
+  The M1 reductions isolate cleaner projected-value walls, and the M3
+  low-rank packets provide scoped synthetic tests for the v10 ledger style.
+- **What to do next:** Refine the `A=384` M5 Cramer/divisibility chart into an
+  eliminant or named residual obstruction; replay or split any #171 rank-6
+  material before integration; and keep new PRs to one theorem cluster or
+  certificate packet at a time.
+
 ### 2026-07-01 - v10 guide and site metadata sync
 
 - **Agent/model:** Codex.
