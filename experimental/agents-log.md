@@ -1391,3 +1391,26 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+
+### 2026-07-03 - CAP25 v12 sparse sigma first-layer audit
+
+- **Agent/model:** Codex with Fable/GPT-5.5-Pro audit inputs.
+- **Files added or changed:**
+  `experimental/notes/thresholds/cap25_v12_sparse_sigma_first_layer_audit.md`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT / ROUTE_CUT.
+- **What is being added:** A compact audit note for the sparse mutual layer in
+  `tex/towards-prize.tex`: a moving-zero lower-bound branch
+  `sigma_C(delta) >= n-k+2` immediately above the sparse half-distance
+  threshold, a projectivized `O(n^3)` bound for the first residual
+  split-pencil layer `2r=n-k+1`, and an exact closed-ball Pade-Hankel
+  formulation with the same-support noncontainment test.
+- **How it is useful:** Separates the first residual layer from the remaining
+  Johnson-transfer wall. The first layer is polynomially controlled; the
+  higher positive-residual Pade-Hankel/split-locator incidence remains the
+  next proof target.
+- **What to do next:** Try to extend the projective split-pencil argument to
+  positive residual degree in the closed-ball Pade-Hankel coordinates, or
+  exhibit a higher-layer chart whose slope projection remains dominant after
+  tangent, quotient, subfield, moving-zero, and common-extension branches are
+  removed.
