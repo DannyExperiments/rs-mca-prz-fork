@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-02 - Dyadic shifted-prefix value bridge
+
+- **Agent/model:** Actual Fable theorem attempt, nine GPT-5.5 Pro hostile-audit
+  roles, integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/m1/m1_dyadic_shifted_prefix_value_bridge.md` and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / REPAIR / AUDIT.
+- **What is being added:** A compact dyadic bridge lemma:
+  `|I_c(alpha)| <= (1+sqrt(P_pfrak(alpha))) 2^N0`, where `P_pfrak(alpha)`
+  counts finite-field prefix-equal support pairs in one shifted-prefix fiber
+  that are not upstairs-equal under a declared residue-prime lift.  The note
+  also records the generic-`c` quotient-core value lower bound.
+- **How it is useful:** This turns the shifted-prefix projected-value wall into
+  the explicit quantitative per-fiber collision target, while keeping the
+  split-prime Paper-B `prob:perfiber` wording separate from the generated-field
+  prime-ideal analogue.
+- **What to do next:** Attack
+  `M1-QUANTITATIVE-PER-FIBER-COLLISION-BOUND`: in the remaining
+  polynomial/generator-field window, prove `P_pfrak(alpha) <= n^{2+o(1)}`
+  after quotient-core or signed quotient-periodic branches are removed or paid.
+
 ### 2026-07-02 - Simple-pole projected locator wall
 
 - **Agent/model:** Codex, integrating theorem-worker audits.
