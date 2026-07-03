@@ -30,6 +30,40 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-03 - PR batch: DAG, threshold compilers, and A425/A426 finite gate
+
+- **Agent/model:** Codex integrating PRs from AllenGrahamHart, Vadim Avdeev,
+  DannyExperiments/Gia, and Lean certification contributors.
+- **Files added or changed:** `experimental/data/prize-dag/`;
+  `experimental/notes/roadmaps/`; `experimental/notes/thresholds/`;
+  `experimental/notes/certificate_scanner/`;
+  `experimental/notes/{m1,l1,f1,m5,x1,audits}/`;
+  `experimental/data/certificates/`; `experimental/scripts/`;
+  `experimental/lean/rs_mca_formalization/`; `scripts/aperiodic_eliminant_schema.json`;
+  `scripts/check_aperiodic_eliminant_packet.py`; `site/data/frontier.json`;
+  `site/data/rate-leaderboards.json`; `site/data/updates.json`; `site/index.html`.
+- **Status:** MIXED: PROVED local finite-slope threshold row / AUDIT /
+  EXPERIMENTAL evidence / ROADMAP infrastructure.
+- **What is being added:** Integrated the reviewed experimental payload from
+  PRs #178--#208, excluding stale README/site/towards-prize edits from older
+  branch bases.  The main new public row is the prime-field A425/A426 adjacent
+  finite-slope support-wise MCA gate: PR #204 gives the two-core upper bound
+  `LD_sw(RS[F,D,256],426)=87`, PR #208 gives the direct A=425 unsafe witness,
+  and the prime `p=22275*2^120+1` satisfies `87*2^128 < p < 88*2^128`.
+  The batch also adds the prize DAG maintenance packet, quotient-census and
+  dodge-selection compilers, CAP25 sparse-sigma audits, Lean tier-one
+  certification map updates, and many M1/L1/F1/M5 evidence/proof-program notes.
+- **How it is useful:** The A425/A426 row is a new exact finite-slope
+  threshold example for a smooth rate-1/2 prime-field row and is now visible on
+  the site.  The other packets fill the towards-prize execution DAG with
+  reproducible certificates, compiler arithmetic, red-team queues, and local
+  proof sublemmas without promoting them to final Paper D authority.
+- **What to do next:** Independently audit the two-core proof and Lucas prime
+  certificate before citing the A425/A426 row externally.  For the broader PR
+  batch, run only lightweight verifier syntax/JSON checks by default; execute
+  heavier scanners only when a contributor opts in with explicit resources.
+  Keep Paper D text unchanged unless explicitly requested.
+
 ### 2026-07-02 - Restore Paper D title and content
 
 - **Agent/model:** Codex.

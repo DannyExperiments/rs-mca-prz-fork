@@ -1,0 +1,883 @@
+{
+  "checks": [
+    {
+      "common_degree": 2,
+      "image_count": 364,
+      "j": 5,
+      "linearity_spot_checks": 25,
+      "n": 16,
+      "name": "common_gcd_reduction",
+      "source_count": 364,
+      "status": "PASS",
+      "target_count": 364
+    },
+    {
+      "M": 2,
+      "expected_count": 56,
+      "image_count": 56,
+      "j": 6,
+      "n": 16,
+      "name": "quotient_pullback_scale_recursion",
+      "periodic_count": 56,
+      "small_order": 8,
+      "status": "PASS"
+    },
+    {
+      "accepted_pencils": 500,
+      "attempts": 1153,
+      "j": 4,
+      "max_observed_divisor_points": 2,
+      "n": 16,
+      "name": "dimension_one_voting_bound",
+      "projective_bound": 4,
+      "status": "PASS"
+    },
+    {
+      "accepted_planes": 25,
+      "attempts": 25,
+      "j": 4,
+      "max_observed_concurrent_points": 1,
+      "n": 16,
+      "name": "hyperplane_concurrency_reformulation",
+      "plane_points_each": 9507,
+      "projective_dimension": 2,
+      "status": "PASS"
+    },
+    {
+      "j": 4,
+      "max_observed_slack": 4,
+      "n": 16,
+      "name": "vanishing_flat_dimension_bound",
+      "random_subspace_checks": 200,
+      "sharp_full_space_equalities": 5,
+      "status": "PASS"
+    },
+    {
+      "accepted_random_planes": 25,
+      "attempts": 25,
+      "forced_repeated_line_planes": 5,
+      "j": 4,
+      "max_cross_pair_sum": 120,
+      "max_observed_high_incidence_points": 2,
+      "max_observed_line_multiplicity": 2,
+      "n": 16,
+      "name": "projective_plane_pair_counting_bound",
+      "random_simple_planes": 25,
+      "repeated_line_planes_total": 5,
+      "simple_bound_floor": 20,
+      "simple_bound_rational": "120/6",
+      "status": "PASS",
+      "weighted_bound_floor": 40,
+      "weighted_bound_rational": "120/3"
+    },
+    {
+      "checked_planes": 18,
+      "forced_twin_planes": 1,
+      "max_reduced_projective_dimension": 1,
+      "max_residual_hits": 1,
+      "max_twin_classes_per_plane": 1,
+      "max_twin_group_hits": 1,
+      "name": "twin_line_decomposition",
+      "random_twin_planes": 0,
+      "simple_planes": 17,
+      "statement": "In a gcd-trivial projective plane, repeated evaluation-line classes are twin classes: hits meeting one contain the whole class and reduce by its common divisor to a projective line; hits avoiding all twin classes satisfy the sharp simple-line pair bound.",
+      "status": "PASS",
+      "twin_chart_records": [
+        {
+          "coarse_line_bound": 14,
+          "group_hits": 1,
+          "group_roots": [
+            1,
+            8
+          ],
+          "group_size": 2,
+          "reduced_j": 2,
+          "reduced_projective_dimension": 1,
+          "source": "forced_twin"
+        }
+      ]
+    },
+    {
+      "checked_relations": 9,
+      "closure_forced_hits": 393,
+      "max_depth_gain": 1,
+      "max_rank_defect": 1,
+      "name": "sparse_dependence_descent",
+      "records": [
+        {
+          "all_contained_hits": 91,
+          "depth_gain": 1,
+          "evaluation_rank": 1,
+          "hits": 102,
+          "projective_dimension": 3,
+          "reduced_j": 2,
+          "reduced_projective_dimension": 2,
+          "support_size": 2
+        },
+        {
+          "all_contained_hits": 13,
+          "depth_gain": 1,
+          "evaluation_rank": 2,
+          "hits": 32,
+          "projective_dimension": 3,
+          "reduced_j": 1,
+          "reduced_projective_dimension": 1,
+          "support_size": 3
+        },
+        {
+          "all_contained_hits": 1,
+          "depth_gain": 1,
+          "evaluation_rank": 3,
+          "hits": 16,
+          "projective_dimension": 3,
+          "reduced_j": 0,
+          "reduced_projective_dimension": 0,
+          "support_size": 4
+        },
+        {
+          "all_contained_hits": 13,
+          "depth_gain": 1,
+          "evaluation_rank": 2,
+          "hits": 28,
+          "projective_dimension": 3,
+          "reduced_j": 1,
+          "reduced_projective_dimension": 1,
+          "support_size": 3
+        },
+        {
+          "all_contained_hits": 91,
+          "depth_gain": 1,
+          "evaluation_rank": 1,
+          "hits": 99,
+          "projective_dimension": 3,
+          "reduced_j": 2,
+          "reduced_projective_dimension": 2,
+          "support_size": 2
+        },
+        {
+          "all_contained_hits": 91,
+          "depth_gain": 1,
+          "evaluation_rank": 1,
+          "hits": 100,
+          "projective_dimension": 3,
+          "reduced_j": 2,
+          "reduced_projective_dimension": 2,
+          "support_size": 2
+        }
+      ],
+      "residual_hits": 119,
+      "statement": "A full-support sparse dependence among evaluation functionals forces all-but-one root closure; the all-contained branch divides by the support locator and decreases j-d by at least one.",
+      "status": "PASS"
+    },
+    {
+      "common_root_dual_weight": 1,
+      "full_space_hit_count": 1820,
+      "full_space_no_dependency_up_to": 4,
+      "moment_rows": [
+        {
+          "bound": 1820,
+          "hit_count": 1820,
+          "max_containing_fixed_T": 1820,
+          "moment": 1820,
+          "r": 0
+        },
+        {
+          "bound": 7280,
+          "hit_count": 1820,
+          "max_containing_fixed_T": 455,
+          "moment": 7280,
+          "r": 1
+        },
+        {
+          "bound": 10920,
+          "hit_count": 1820,
+          "max_containing_fixed_T": 91,
+          "moment": 10920,
+          "r": 2
+        },
+        {
+          "bound": 7280,
+          "hit_count": 1820,
+          "max_containing_fixed_T": 13,
+          "moment": 7280,
+          "r": 3
+        },
+        {
+          "bound": 1820,
+          "hit_count": 1820,
+          "max_containing_fixed_T": 1,
+          "moment": 1820,
+          "r": 4
+        }
+      ],
+      "name": "dual_distance_moment_frame",
+      "ratio_rows": [
+        {
+          "coarse_log2_2_over_rho_bound": 16.0,
+          "d": 8,
+          "j": 256,
+          "log2_binomial_ratio": 8.080073147474963,
+          "n": 512,
+          "within_coarse_bound": true
+        },
+        {
+          "coarse_log2_2_over_rho_bound": 40.0,
+          "d": 20,
+          "j": 524288,
+          "log2_binomial_ratio": 20.000261418490823,
+          "n": 1048576,
+          "within_coarse_bound": true
+        },
+        {
+          "coarse_log2_2_over_rho_bound": 80.0,
+          "d": 40,
+          "j": 549755813888,
+          "log2_binomial_ratio": 40.00000000102341,
+          "n": 1099511627776,
+          "within_coarse_bound": true
+        }
+      ],
+      "sparse_dual_weight": 3,
+      "sparse_witness": [
+        1,
+        8,
+        64
+      ],
+      "statement": "Low-weight dual words are common-root/twin/sparse degeneracies; if no support <= r dual word exists, r-root containment moments obey #E*binom(j,r) <= binom(n,r)binom(n-r,d-r).",
+      "status": "PASS",
+      "twin_dual_weight": 2,
+      "twin_witness": [
+        1,
+        8
+      ]
+    },
+    {
+      "checked_random_subspaces": 191,
+      "j": 4,
+      "max_hits_by_projective_dimension": {
+        "0": 0,
+        "1": 0,
+        "2": 2,
+        "3": 28,
+        "4": 1820
+      },
+      "n": 16,
+      "name": "fixed_dimension_incidence_bound",
+      "sharp_full_space_bound": 1820,
+      "sharp_full_space_hits": 1820,
+      "status": "PASS",
+      "witness_checks": 953
+    },
+    {
+      "checked_forced_common_root_spaces": 171,
+      "j": 4,
+      "max_forced_common_roots": 2,
+      "max_hits": 455,
+      "n": 16,
+      "name": "common_root_fixed_dimension_bound",
+      "reduction_checks": 13792,
+      "status": "PASS"
+    },
+    {
+      "M": 2,
+      "checked_common_root_quotient_spaces": 98,
+      "checked_gcd_trivial_quotient_spaces": 114,
+      "j": 6,
+      "max_common_root_hits": 21,
+      "max_gcd_trivial_hits": 56,
+      "n": 16,
+      "name": "quotient_fixed_dimension_bound",
+      "pullback_equality_checks": 1706,
+      "small_j": 3,
+      "small_order": 8,
+      "status": "PASS"
+    },
+    {
+      "checked_random_spaces": 175,
+      "full_lifted_scale_checks": {
+        "2": {
+          "expected": 70,
+          "hits": 70,
+          "projective_dimension": 4
+        },
+        "4": {
+          "expected": 6,
+          "hits": 6,
+          "projective_dimension": 2
+        },
+        "8": {
+          "expected": 2,
+          "hits": 2,
+          "projective_dimension": 1
+        }
+      },
+      "j": 8,
+      "max_crude_union_bound": 183,
+      "max_random_union_hits": 0,
+      "n": 16,
+      "name": "quotient_union_fixed_dimension_bound",
+      "per_scale_max_random_hits": {
+        "2": 0,
+        "4": 0,
+        "8": 0
+      },
+      "proper_quotient_scales": [
+        2,
+        4,
+        8
+      ],
+      "quotient_union_size": 70,
+      "status": "PASS"
+    },
+    {
+      "checked_affine_spaces": 135,
+      "checked_quotient_affine_spaces": 90,
+      "j": 4,
+      "max_affine_Dj_hits": 1,
+      "max_affine_quotient_hits": 0,
+      "n": 16,
+      "name": "affine_slope_table_consumer",
+      "quotient_union_j": 8,
+      "status": "PASS"
+    },
+    {
+      "fixed_dimension_rows": [
+        {
+          "bound": 1,
+          "d": 0,
+          "integer_exponent_budget": 0,
+          "n_power_exponent": 0.0
+        },
+        {
+          "bound": 16,
+          "d": 1,
+          "integer_exponent_budget": 1,
+          "n_power_exponent": 1.0
+        },
+        {
+          "bound": 120,
+          "d": 2,
+          "integer_exponent_budget": 2,
+          "n_power_exponent": 1.7267226489021297
+        },
+        {
+          "bound": 560,
+          "d": 3,
+          "integer_exponent_budget": 3,
+          "n_power_exponent": 2.282320754236242
+        },
+        {
+          "bound": 1820,
+          "d": 4,
+          "integer_exponent_budget": 4,
+          "n_power_exponent": 2.707430683771515
+        }
+      ],
+      "max_fixed_dimension_exponent_slack": 1.292569316228485,
+      "n": 16,
+      "name": "exponent_budget_consumer",
+      "quotient_scales": [
+        2,
+        4,
+        8
+      ],
+      "quotient_union_j": 8,
+      "quotient_union_rows": [
+        {
+          "coarse_bound": 3,
+          "coarse_constant": 3,
+          "d": 0,
+          "exact_bound": 3,
+          "n_power_exponent": 0.3962406251802891,
+          "sufficient_exponent_budget": 0.3962406251802891
+        },
+        {
+          "coarse_bound": 96,
+          "coarse_constant": 6,
+          "d": 1,
+          "exact_bound": 17,
+          "n_power_exponent": 1.021865710312585,
+          "sufficient_exponent_budget": 1.646240625180289
+        },
+        {
+          "coarse_bound": 2304,
+          "coarse_constant": 9,
+          "d": 2,
+          "exact_bound": 52,
+          "n_power_exponent": 1.4251099295352732,
+          "sufficient_exponent_budget": 2.792481250360578
+        },
+        {
+          "coarse_bound": 49152,
+          "coarse_constant": 12,
+          "d": 3,
+          "exact_bound": 112,
+          "n_power_exponent": 1.701838730514401,
+          "sufficient_exponent_budget": 3.896240625180289
+        },
+        {
+          "coarse_bound": 983040,
+          "coarse_constant": 15,
+          "d": 4,
+          "exact_bound": 183,
+          "n_power_exponent": 1.878924959571011,
+          "sufficient_exponent_budget": 4.97672264890213
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "deployed_shape_rows": [
+        {
+          "atlas_count": 1806,
+          "max_projective_dimension": 6,
+          "n": 512,
+          "nonquotient_exponent_budget": 7.202064686386763,
+          "quotient_scale_count": 3,
+          "quotient_union_exponent_budget": 7.690099955584402
+        },
+        {
+          "atlas_count": 1024,
+          "max_projective_dimension": 6,
+          "n": 1048576,
+          "nonquotient_exponent_budget": 6.5,
+          "quotient_scale_count": 8,
+          "quotient_union_exponent_budget": 6.790367746102881
+        },
+        {
+          "atlas_count": 65536,
+          "max_projective_dimension": 8,
+          "n": 1099511627776,
+          "nonquotient_exponent_budget": 8.4,
+          "quotient_scale_count": 16,
+          "quotient_union_exponent_budget": 8.579248125036058
+        }
+      ],
+      "name": "chart_atlas_consumer",
+      "nonquotient_atlas": {
+        "chart_count": 14,
+        "chart_rows": [
+          {
+            "affine_dimension": 1,
+            "bound": 16,
+            "chart_index": 0,
+            "common_roots": 0,
+            "hits": 3,
+            "projective_dimension": 1
+          },
+          {
+            "affine_dimension": 2,
+            "bound": 120,
+            "chart_index": 1,
+            "common_roots": 0,
+            "hits": 3,
+            "projective_dimension": 2
+          },
+          {
+            "affine_dimension": 3,
+            "bound": 560,
+            "chart_index": 2,
+            "common_roots": 0,
+            "hits": 115,
+            "projective_dimension": 3
+          },
+          {
+            "affine_dimension": 1,
+            "bound": 16,
+            "chart_index": 3,
+            "common_roots": 0,
+            "hits": 2,
+            "projective_dimension": 1
+          },
+          {
+            "affine_dimension": 2,
+            "bound": 120,
+            "chart_index": 4,
+            "common_roots": 0,
+            "hits": 5,
+            "projective_dimension": 2
+          },
+          {
+            "affine_dimension": 3,
+            "bound": 560,
+            "chart_index": 5,
+            "common_roots": 0,
+            "hits": 115,
+            "projective_dimension": 3
+          },
+          {
+            "affine_dimension": 1,
+            "bound": 16,
+            "chart_index": 6,
+            "common_roots": 0,
+            "hits": 0,
+            "projective_dimension": 1
+          },
+          {
+            "affine_dimension": 2,
+            "bound": 120,
+            "chart_index": 7,
+            "common_roots": 0,
+            "hits": 0,
+            "projective_dimension": 2
+          },
+          {
+            "affine_dimension": 3,
+            "bound": 560,
+            "chart_index": 8,
+            "common_roots": 0,
+            "hits": 0,
+            "projective_dimension": 3
+          },
+          {
+            "affine_dimension": 1,
+            "bound": 16,
+            "chart_index": 9,
+            "common_roots": 0,
+            "hits": 0,
+            "projective_dimension": 1
+          },
+          {
+            "affine_dimension": 2,
+            "bound": 120,
+            "chart_index": 10,
+            "common_roots": 0,
+            "hits": 0,
+            "projective_dimension": 2
+          },
+          {
+            "affine_dimension": 3,
+            "bound": 560,
+            "chart_index": 11,
+            "common_roots": 0,
+            "hits": 0,
+            "projective_dimension": 3
+          },
+          {
+            "affine_dimension": 1,
+            "bound": 16,
+            "chart_index": 12,
+            "common_roots": 0,
+            "hits": 0,
+            "projective_dimension": 1
+          },
+          {
+            "affine_dimension": 2,
+            "bound": 120,
+            "chart_index": 13,
+            "common_roots": 0,
+            "hits": 0,
+            "projective_dimension": 2
+          }
+        ],
+        "coarse_bound": 57344,
+        "max_projective_dimension": 3,
+        "sum_chart_bounds": 2920,
+        "union_hits": 115
+      },
+      "quotient_atlas": {
+        "chart_count": 12,
+        "chart_rows": [
+          {
+            "affine_dimension": 1,
+            "bound": 17,
+            "chart_index": 0,
+            "hits": 2,
+            "projective_dimension": 1
+          },
+          {
+            "affine_dimension": 2,
+            "bound": 52,
+            "chart_index": 1,
+            "hits": 3,
+            "projective_dimension": 2
+          },
+          {
+            "affine_dimension": 3,
+            "bound": 112,
+            "chart_index": 2,
+            "hits": 0,
+            "projective_dimension": 3
+          },
+          {
+            "affine_dimension": 4,
+            "bound": 183,
+            "chart_index": 3,
+            "hits": 0,
+            "projective_dimension": 4
+          },
+          {
+            "affine_dimension": 1,
+            "bound": 17,
+            "chart_index": 4,
+            "hits": 2,
+            "projective_dimension": 1
+          },
+          {
+            "affine_dimension": 2,
+            "bound": 52,
+            "chart_index": 5,
+            "hits": 3,
+            "projective_dimension": 2
+          },
+          {
+            "affine_dimension": 3,
+            "bound": 112,
+            "chart_index": 6,
+            "hits": 0,
+            "projective_dimension": 3
+          },
+          {
+            "affine_dimension": 4,
+            "bound": 183,
+            "chart_index": 7,
+            "hits": 0,
+            "projective_dimension": 4
+          },
+          {
+            "affine_dimension": 1,
+            "bound": 17,
+            "chart_index": 8,
+            "hits": 0,
+            "projective_dimension": 1
+          },
+          {
+            "affine_dimension": 2,
+            "bound": 52,
+            "chart_index": 9,
+            "hits": 0,
+            "projective_dimension": 2
+          },
+          {
+            "affine_dimension": 3,
+            "bound": 112,
+            "chart_index": 10,
+            "hits": 0,
+            "projective_dimension": 3
+          },
+          {
+            "affine_dimension": 4,
+            "bound": 183,
+            "chart_index": 11,
+            "hits": 0,
+            "projective_dimension": 4
+          }
+        ],
+        "coarse_bound": 11796480,
+        "max_projective_dimension": 4,
+        "quotient_scales": [
+          2,
+          4,
+          8
+        ],
+        "sum_chart_bounds": 1092,
+        "union_hits": 10
+      },
+      "statement": "If a residual locator family is covered by A affine charts whose projective spans have dimension at most d, then the nonquotient part has budget A*n^d; the quotient-union part has budget A*tau(gcd(n,j))*(d+1)*n^d.",
+      "status": "PASS"
+    },
+    {
+      "deployed_shape_rows": [
+        {
+          "coarse_exponent_budget": 16,
+          "cover_bound_log2": 93.83017128234832,
+          "cover_n_power_exponent": 10.42557458692759,
+          "exact_ball_size_log2": 93.59267693629697,
+          "exact_le_cover": true,
+          "exact_n_power_exponent": 10.399186326255219,
+          "j": 127,
+          "n": 512,
+          "radius": 8
+        },
+        {
+          "coarse_exponent_budget": 16,
+          "cover_bound_log2": 97.4160111902117,
+          "cover_n_power_exponent": 10.824001243356856,
+          "exact_ball_size_log2": 97.06968221939695,
+          "exact_le_cover": true,
+          "exact_n_power_exponent": 10.785520246599662,
+          "j": 247,
+          "n": 512,
+          "radius": 8
+        },
+        {
+          "coarse_exponent_budget": 6,
+          "cover_bound_log2": 108.83008325367507,
+          "cover_n_power_exponent": 5.441504162683754,
+          "exact_ball_size_log2": 108.8300584882442,
+          "exact_le_cover": true,
+          "exact_n_power_exponent": 5.44150292441221,
+          "j": 524288,
+          "n": 1048576,
+          "radius": 3
+        }
+      ],
+      "name": "johnson_ball_common_core_cover",
+      "statement": "The radius-r Johnson ball around a degree-j locator is the union over its (j-r)-root cores of common-root charts; its exact size is sum_{d<=r} binom(j,d)binom(n-j,d), bounded by binom(j,r)binom(n-j+r,r).",
+      "status": "PASS",
+      "toy_exact_rows": [
+        {
+          "common_core_size": 4,
+          "core_chart_count": 1,
+          "cover_sum_bound": 1,
+          "cover_union_matches_ball": true,
+          "exact_ball_size": 1,
+          "formula_ball_size": 1,
+          "j": 4,
+          "max_chart_size": 1,
+          "n": 16,
+          "radius": 0
+        },
+        {
+          "common_core_size": 3,
+          "core_chart_count": 4,
+          "cover_sum_bound": 52,
+          "cover_union_matches_ball": true,
+          "exact_ball_size": 49,
+          "formula_ball_size": 49,
+          "j": 4,
+          "max_chart_size": 13,
+          "n": 16,
+          "radius": 1
+        },
+        {
+          "common_core_size": 2,
+          "core_chart_count": 6,
+          "cover_sum_bound": 546,
+          "cover_union_matches_ball": true,
+          "exact_ball_size": 445,
+          "formula_ball_size": 445,
+          "j": 4,
+          "max_chart_size": 91,
+          "n": 16,
+          "radius": 2
+        },
+        {
+          "common_core_size": 1,
+          "core_chart_count": 4,
+          "cover_sum_bound": 1820,
+          "cover_union_matches_ball": true,
+          "exact_ball_size": 1325,
+          "formula_ball_size": 1325,
+          "j": 4,
+          "max_chart_size": 455,
+          "n": 16,
+          "radius": 3
+        }
+      ]
+    },
+    {
+      "deployed_shape_rows": [
+        {
+          "j": 127,
+          "n": 512,
+          "ordered_cover_log2": 502.9966095308979,
+          "ordered_exact_log2": 502.75911518484656,
+          "per_center_coarse_exponent_budget": 16,
+          "per_center_cover_log2": 93.83017128234832,
+          "per_center_cover_n_power_exponent": 10.42557458692759,
+          "per_center_exact_log2": 93.59267693629697,
+          "radius": 8,
+          "t": 9
+        },
+        {
+          "j": 247,
+          "n": 512,
+          "ordered_cover_log2": 604.1338778263378,
+          "ordered_exact_log2": 603.787548855523,
+          "per_center_coarse_exponent_budget": 16,
+          "per_center_cover_log2": 97.4160111902117,
+          "per_center_cover_n_power_exponent": 10.824001243356856,
+          "per_center_exact_log2": 97.06968221939695,
+          "radius": 8,
+          "t": 9
+        },
+        {
+          "j": 524288,
+          "n": 1048576,
+          "ordered_cover_log2": 1048674.5043348449,
+          "ordered_exact_log2": 1048674.5043100796,
+          "per_center_coarse_exponent_budget": 6,
+          "per_center_cover_log2": 108.83008325367507,
+          "per_center_cover_n_power_exponent": 5.441504162683754,
+          "per_center_exact_log2": 108.8300584882442,
+          "radius": 3,
+          "t": 4
+        }
+      ],
+      "name": "fm1_high_overlap_common_core_budget",
+      "statement": "The ordered locator pairs supporting FM1 covariance, namely d(R,T)<t, have per-center size |B_{t-1}(R)| and are covered by common-core charts with per-center bound binom(j,t-1)binom(n-j+t-1,t-1) <= n^(2(t-1)).",
+      "status": "PASS",
+      "toy_exact_rows": [
+        {
+          "common_core_cover_ordered_bound": 1820,
+          "exact_ordered_pairs": 1820,
+          "formula_ordered_pairs": 1820,
+          "j": 4,
+          "n": 16,
+          "per_center_cover_bound": 1,
+          "radius": 0,
+          "t": 1
+        },
+        {
+          "common_core_cover_ordered_bound": 94640,
+          "exact_ordered_pairs": 89180,
+          "formula_ordered_pairs": 89180,
+          "j": 4,
+          "n": 16,
+          "per_center_cover_bound": 52,
+          "radius": 1,
+          "t": 2
+        },
+        {
+          "common_core_cover_ordered_bound": 993720,
+          "exact_ordered_pairs": 809900,
+          "formula_ordered_pairs": 809900,
+          "j": 4,
+          "n": 16,
+          "per_center_cover_bound": 546,
+          "radius": 2,
+          "t": 3
+        },
+        {
+          "common_core_cover_ordered_bound": 3312400,
+          "exact_ordered_pairs": 2411500,
+          "formula_ordered_pairs": 2411500,
+          "j": 4,
+          "n": 16,
+          "per_center_cover_bound": 1820,
+          "radius": 3,
+          "t": 4
+        }
+      ]
+    }
+  ],
+  "domain": {
+    "elements": [
+      1,
+      8,
+      64,
+      27,
+      22,
+      79,
+      50,
+      12,
+      96,
+      89,
+      33,
+      70,
+      75,
+      18,
+      47,
+      85
+    ],
+    "n": 16,
+    "type": "mu_n"
+  },
+  "field": {
+    "p": 97
+  },
+  "schema": "conjecture_f_reduction_toy_v1",
+  "script_sha256": "5817f576579cb232399d3c6030e319f62f331d685b64f11de84917ff3eb41946",
+  "status": "EXPERIMENTAL_VERIFICATION_OF_PROVED_LEMMAS"
+}

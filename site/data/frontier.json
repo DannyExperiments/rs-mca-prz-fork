@@ -169,6 +169,39 @@
     "authors": "tangent-star notes / Codex audit"
   },
   {
+    "id": "prime-a425-a426-adjacent-gate",
+    "title": "Prime-field A425/A426 adjacent threshold row",
+    "short": "Two-core coverage plus the tangent floor pins the finite-slope gate at A=425/426 for a smooth prime-field row.",
+    "row": "RS[F_p,H,256], p=22275*2^120+1",
+    "n": 512,
+    "k": 256,
+    "rho": 0.5,
+    "agreement": 425,
+    "badSlopes": "88",
+    "q": "29608553606109001068932302267744675430401",
+    "status": "proved",
+    "tag": "proved",
+    "label": "exact finite-slope gate",
+    "radiusLabel": "87/512",
+    "proof": "PR #204 proves the two-core upper bound LD_sw(RS[F,D,256],426) <= 87 for every 512-point domain, while the moving-root tangent witness gives LD_sw(C,426)=87 and LD_sw(C,425)>=88. For p=22275*2^120+1, p is 1 mod 512 and 87*2^128 < p < 88*2^128, so A=426 is safe and A=425 is the first unsafe closed-grid finite-slope point.",
+    "nonclaims": "Finite-slope support-wise MCA / LD_sw object only. This is not ordinary list decoding, not protocol soundness, and not a statement about the F_17^32 row.",
+    "links": [
+      {
+        "label": "A426 exact threshold note",
+        "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/certificate_scanner/a426_two_core_exact_threshold_v26.md"
+      },
+      {
+        "label": "A425 unsafe fallback",
+        "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/certificate_scanner/a425_second_pin_unsafe.md"
+      },
+      {
+        "label": "A426 certificate data",
+        "href": "https://github.com/przchojecki/rs-mca/tree/main/experimental/data/certificates/a426-two-core-exact-threshold-v26"
+      }
+    ],
+    "authors": "Vadim Avdeev / AllenGrahamHart / Codex audit"
+  },
+  {
     "id": "strict352-quotient-core",
     "title": "Strict352 quotient-core proof record",
     "short": "Dyadic quotient-core floors give at least seven bad slopes through agreement 352.",
