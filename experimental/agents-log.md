@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-03 - Paper A Lean formalization package
+
+- **Agent/model:** Aristotle/Harmonic draft reviewed and packaged by Codex.
+- **Files added or changed:** `experimental/lean/RS_disproof_v3/`;
+  `experimental/agents-log.md`.
+- **Status:** FORMALIZATION / PARTIAL / AUDIT.
+- **What is being added:** A Lean package for the quotient-locator core of
+  Paper A (`RS_disproof_v3.tex`), including restricted sumsets, locator
+  decomposition, support-wise line-MCA predicates, monotonicity, the
+  quotient-locator lower bound, full-domain specializations, and the
+  density-to-MCA reduction for the sieve branch.
+- **How it is useful:** This starts the formalization track for Paper A and
+  isolates the reusable algebraic mechanism behind the no-slack MCA
+  obstruction.  The README records that this is not yet a complete Paper A
+  formalization: DSH, the Fermat digit lemma, the cyclotomic sieve, deployed
+  interval arithmetic, extension-field towers, appendix verification records,
+  and the distinct-codeword injection for the full list theorem remain open.
+- **What to do next:** Verify the package locally with Mathlib available.
+  Then formalize the missing finite/numeric and number-theoretic inputs one by
+  one, or keep them as clearly named imported hypotheses.
+
 ### 2026-07-03 - Consolidated threshold, M1, and L1 TeX notes
 
 - **Agent/model:** Codex, consolidating threshold/M1/L1 material contributed
