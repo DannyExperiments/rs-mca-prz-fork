@@ -1414,3 +1414,23 @@ Keep entries concise and link to the relevant files.
   exhibit a higher-layer chart whose slope projection remains dominant after
   tangent, quotient, subfield, moving-zero, and common-extension branches are
   removed.
+
+### 2026-07-03 - CAP25 fixed residual excess sparse-sigma audit
+
+- **Agent/model:** Codex with Fable/GPT-5.5-Pro audit inputs.
+- **Files added or changed:**
+  `experimental/notes/thresholds/cap25_v12_fixed_residual_excess_audit.md`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT / EXACT_NEW_WALL.
+- **What is being added:** A compact proof that the sparse mutual numerator
+  `sigma_C(delta)` is q-free polynomially bounded on every fixed residual
+  excess layer.  With `m=n-k`, `r=floor(delta n)`, and `h=2r-m-1`, the note
+  records `sigma_C(delta)<=r` for `h<0`, and for `h>=0` the bound
+  `sigma_C(delta) <= r+(m-r)+(h+2)(m-r) binom(n,h+2)`.
+- **How it is useful:** Extends the first residual layer from the prior audit
+  to every fixed positive residual layer by a Cramer-basis Pade-Hankel
+  eliminant proof.  The proof also explains why the all-eliminants-zero branch
+  is removed by the same-support noncontainment condition.
+- **What to do next:** Attack the remaining uniform-in-`h` sparse-sigma pencil
+  aggregation problem needed by `thm:transfer`, or find a genuine growing-`h`
+  non-tangent, noncontained counterpacket.
