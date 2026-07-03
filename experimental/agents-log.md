@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-04 - CAP25 v13 SPI identically split repair
+
+- **Agent/model:** Codex, synthesizing a 9-role GPT-5.5 Pro hostile audit.
+- **Files added or changed:** `experimental/cap25_v13_experimental.tex`;
+  `experimental/notes/m1/cap25_v13_spi_identically_split_repair.md`;
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT / EXACT_NEW_WALL.
+- **What is being added:** The identically split full-rank top chart in
+  `thm:v13-spi` is repaired: after monic normalization its Cramer locator is
+  a fixed split divisor, the cofactor identity gives `M(Z)ell_T=0`, and the
+  exact line-image noncontainment gate fails.  The note also records the
+  hostile-audited fixed generic-kernel-dimension split-pencil bound
+  `rho + rho binom(n,s)`.
+- **How it is useful:** Removes an overconservative M1 residual branch from the
+  CAP25 v13 SPI ledger while keeping rank-drop roots charged separately.  It
+  pays fixed `s` split-pencil charts and isolates the true remaining wall as
+  growing-`s` determinant compression.
+- **What to do next:** Do not claim CAP25 closure from this note.  Attack
+  `CAP25-V13-M1-UNIFORM-SPLIT-LOCATOR-DETERMINANT-COMPRESSION`: either
+  compress `rho binom(n,s)` using the special Hankel/noncontainment structure,
+  or construct a primitive growing-`s` counterpacket.
+
 ### 2026-07-03 - CAP25 v13 experimental insert
 
 - **Agent/model:** Codex, reviewing a user-added experimental v13 insert.
