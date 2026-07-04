@@ -159,6 +159,61 @@ seven retained full-rank degree-128 split slopes at A=384
 imply CCL_149 or TDD257.
 ```
 
+## CCL_149 common-GCD repair
+
+Inside the `CCL_149` branch, the seven finite slopes also force a common
+error-locator factor.  Keep the notation above and define
+
+```text
+E_i = supp(a + gamma_i b),     W = supp(a) union supp(b),     w = |W|.
+```
+
+Let
+
+```text
+Z_i = W \ E_i = {x in W : a(x) + gamma_i b(x) = 0}.
+```
+
+For distinct finite slopes, the sets `Z_i` are pairwise disjoint: if the same
+`x in W` canceled for both `gamma_i` and `gamma_j`, then subtracting the two
+linear equations gives `b(x)=0`, and hence also `a(x)=0`, contradicting
+`x in W`.  Since `E_i subset W` and `|E_i|=128`,
+
+```text
+|Z_i| = w - 128.
+```
+
+Therefore
+
+```text
+|E_1 cap ... cap E_7|
+  = w - sum_i |Z_i|
+  = w - 7(w - 128)
+  = 896 - 6w.
+```
+
+In particular, the `CCL_149` inequality `w <= 149` gives
+
+```text
+|E_1 cap ... cap E_7| >= 2.
+```
+
+Equivalently, if
+
+```text
+L_i(X) = prod_{x in E_i}(X - x)
+```
+
+are the monic error-root locators, then
+
+```text
+deg gcd(L_1,...,L_7) >= 2.
+```
+
+This is a repair of the branch ledger, not a payment of `TDD257`.  It says that
+the common-code-line side is already charged once the ledger includes the
+all-seven common error-locator divisor `ALL7_COMMON_GCD_2`.
+
 ## Sharpness and reality of the two branches
 
 The bound `149` is sharp for this cancellation argument.  Choose a 149-point
@@ -166,6 +221,10 @@ set `W subset H`, partition 147 of its points into seven disjoint 21-point
 blocks `G_i`, and leave two points unused.  Taking a residual pair `(a,b)` with
 `b=1` on `W` and `a=-gamma_i` on `G_i` gives seven slopes whose residual
 supports have size `149 - 21 = 128`.
+
+The common-GCD bound is sharp for the same example: the two unused points in
+`W` are precisely the common intersection `E_1 cap ... cap E_7`, so the forced
+common error-locator divisor has degree exactly `2`.
 
 The `TDD257` branch is also real.  For any 257-point set `U subset H`, let
 `K in C` be a minimum-weight RS codeword supported on `U`; equivalently, take a
@@ -195,17 +254,25 @@ dichotomy.
 
 ## Remaining wall
 
-The next exact target is:
+After the common-GCD repair, the `CCL_149` side is no longer a primitive
+surviving branch once `ALL7_COMMON_GCD_2` is charged.  The next exact target is:
 
 ```text
 CAP25-v13 TDD257-PAYMENT-OR-EXCLUSION.
 ```
 
+Equivalently, the remaining wall is the nonzero triple-distance-defect side:
+
+```text
+TDD257.
+```
+
 One must prove that, after rank-drop, low-chart, strict-contained, quotient,
-subfield, common-GCD, identically-split, and `CCL_149` removals, every surviving
-seven-slope packet with a nonzero defect `Delta_ijk` is already paid by an
-existing branch, or else give a new explicit TDD257 support/image ledger with
-deduplicated contribution at most the deployed budget.
+subfield, common-GCD, identically-split, `CCL_149`, and `ALL7_COMMON_GCD_2`
+removals, every surviving seven-slope packet with a nonzero defect `Delta_ijk`
+is already paid by an existing branch, or else give a new explicit TDD257
+support/image ledger with deduplicated contribution at most the deployed
+budget.
 
 ## Non-claims
 

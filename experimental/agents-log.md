@@ -41,11 +41,15 @@ Keep entries concise and link to the relevant files.
   full-rank degree-128 split slopes at agreement `A=384` force either a common
   RS code-line residual with joint support at most `149`, or a nonzero triple
   affine-collinearity defect supported inside a triple error union, hence a
-  triple union of size at least `257` by RS minimum distance.
+  triple union of size at least `257` by RS minimum distance.  A follow-up
+  hostile audit also records the sharp common-GCD repair inside the `CCL_149`
+  branch: seven exact degree-128 finite split slopes force an all-seven common
+  error-locator divisor of degree at least `2`.
 - **How it is useful:** This sharpens the CAP25 v13 branch ledger by naming the
   exact first surviving wall after the seven-slope common-code-line split:
-  `TDD257-PAYMENT-OR-EXCLUSION`.  It also records that the existing v13
-  tangent/common-code-line cell does not pay this at `A=384`, since
+  `TDD257-PAYMENT-OR-EXCLUSION`.  The `CCL_149` side is no longer primitive
+  once the ledger charges `ALL7_COMMON_GCD_2`; the existing v13
+  tangent/common-code-line cell still does not pay this at `A=384`, since
   `3(n-A) = 384 > n-k = 256`.
 - **What to do next:** Prove that the TDD257 branch is paid by existing
   quotient/subfield/contained/rank-drop ledgers, add a new TDD257 support-image
