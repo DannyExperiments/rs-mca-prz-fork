@@ -30,6 +30,38 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-04 - Additive experimental evidence sweep
+
+- **Agent/model:** Codex integrating additive PR material from AllenGrahamHart
+  and LegaSage/Ken after the main PR 210-260 sweep.
+- **Files added or changed:** `experimental/notes/roadmaps/xr_pair_orbit_globalness.md`;
+  `experimental/notes/roadmaps/q3r2_link_leak_adjudication.md`;
+  `experimental/data/certificates/xr-pair-orbit-globalness/`;
+  `experimental/data/certificates/q3r2-link-leak-adjudication/`;
+  `experimental/notes/audits/cs25_v12_consolidated_audit_2026-07-02.md`;
+  `experimental/notes/audits/lean_build_verification.md`;
+  `experimental/notes/audits/independent_replay_2026-07-02.md`;
+  `experimental/notes/audits/independent_replay_2026-07-03.md`;
+  `experimental/data/audits/`; selected new roadmap notes from the clean-rate
+  DAG maintenance packet.
+- **Status:** EXPERIMENTAL / AUDIT / STATUS REPORT, as tagged in the
+  individual notes.
+- **What is being added:** The XR pair-orbit/globalness packet and Q3R2
+  link-leak adjudication are added as experimental falsifier/evidence
+  material.  Additional audit receipts record Paper D v12 audit coverage,
+  external Lean build verification, and independent verifier replay matrices.
+  The extra roadmap files are additive status/proof-program notes only; the
+  broad `prize_dag.json` rewrite and existing-note overwrites were not taken.
+- **How it is useful:** This keeps potentially useful evidence in-repo without
+  promoting it to theorem status.  In particular, the XR evidence warns that a
+  narrow fixed-core/fixed-hole taxonomy needs a delta-character/link-leak
+  branch, and the replay/Lean notes preserve external audit receipts for later
+  human review.
+- **What to do next:** Distill the XR evidence into the M1/XR proof-program
+  summary, decide whether the subprocess replay harness should remain as
+  tooling or be replaced by a lighter audit-only record, and only update the
+  central DAG after reconciling it with the already integrated roadmap notes.
+
 ### 2026-07-04 - PR 210-260 integration sweep
 
 - **Agent/model:** Codex integrating PR material from AllenGrahamHart, Holm
