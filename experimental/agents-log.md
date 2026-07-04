@@ -30,6 +30,55 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-04 - PR 262-269 audit, sigma_C, and L1 frontier packets
+
+- **Agent/model:** Codex integrating PR material from LegaSage/Ken Webster
+  and Holm Buar.
+- **Files added or changed:** `scripts/check_aperiodic_eliminant_packet.py`;
+  `experimental/notes/audits/aperiodic_not_emitted_sentinel.md`;
+  `experimental/notes/audits/cs25_v12_outstanding_corrections.md`;
+  `experimental/notes/audits/certificate_provenance_normalization.md`;
+  `experimental/scripts/verify_cluster_certificates.py`;
+  `experimental/scripts/verify_cyclotomic_root_difference_germ.py`;
+  `experimental/scripts/verify_exceptional_density.py`;
+  `experimental/scripts/verify_graded_collision_radius.py`;
+  `experimental/scripts/verify_height_only_impossibility.py`;
+  `experimental/scripts/verify_m1_johnson_anticode_toolkit.py`;
+  `experimental/scripts/verify_xr_e3_calculus.py`;
+  `experimental/data/certificates/exact-worstcase-eca-emca-staircase/`;
+  `experimental/notes/thresholds/exact_worstcase_eca_emca_staircase.md`;
+  `experimental/scripts/verify_exact_worstcase_eca_emca_staircase.py`;
+  `experimental/data/certificates/sigma-c-sparse-census/`;
+  `experimental/notes/m1/sigma_c_sparse_census.md`;
+  `experimental/scripts/verify_sigma_c_sparse_census.py`;
+  `experimental/lean/rs_mca_formalization/RsMca/SigmaCSparseLedger.lean`;
+  `experimental/lean/rs_mca_formalization/RsMca.lean`;
+  `experimental/lean/rs_mca_formalization/README.md`;
+  `experimental/lean/rs_mca_formalization/CERTIFICATION_MAP.md`;
+  `experimental/notes/l1/l1_prime_ell_frontier_corrected.md`;
+  `experimental/scripts/verify_l1_prime_ell_frontier_corrected.py`;
+  `experimental/notes/l1/l1_petal_growth_nlist_e16.md`;
+  `experimental/scripts/verify_l1_petal_growth_nlist_e16.py`.
+- **Status:** AUDIT / EXPERIMENTAL / PROVED-LOCAL / NUMERIC, as tagged in the
+  individual notes.
+- **What is being added:** This sweep accepts the guarded `not_emitted:`
+  packet-reference sentinel, the Paper D v12 outstanding-corrections addendum,
+  portable certificate provenance normalization, exact toy worst-case
+  eca/emca staircases, expanded `sigma_C` sparse-census rows and a Lean finite
+  anchor for the `(7,6,3,2)` row, Holm's corrected prime-`ell` listing frontier
+  note, and the `N_list(7,p)` petal-growth evidence packet.
+- **How it is useful:** The Paper D audit material keeps two concrete v12
+  cleanup findings visible without editing the paper.  The `sigma_C` and
+  exact-staircase packets provide finite anchors for the sparse mutual layer in
+  `towards-prize.tex`.  The L1 packets correct the earlier `ceil(2ell/3)`
+  frontier heuristic with explicit witnesses while keeping the lower vacancy
+  theorem conditional on its stated KEY LEMMA.
+- **What to do next:** Apply or reject the Paper D wording/rounding fixes in
+  `tex/cs25_cap_v12.tex` deliberately.  Do not promote the `sigma_C` or L1
+  packets to deployed leaderboard rows.  For the L1 frontier, separate the
+  unconditional explicit witness/refutation content from the conditional
+  vacancy law before any TeX promotion.
+
 ### 2026-07-04 - L1 coset-chart residue-line bridge normal form
 
 - **Agent/model:** Vadim Avdeev, integrated by Codex.
