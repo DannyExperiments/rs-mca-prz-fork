@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-05 - CAP25 v13 TDD257 minimum-splice audit
+
+- **Agent/model:** Codex integrating hostile-audited GPT-5.5 Pro returns.
+- **Files added or changed:**
+  `experimental/notes/thresholds/cap25_v13_tdd257_minimum_splice_audit.md`;
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT / EXACT_NEW_WALL.
+- **What is being added:** A repaired minimum-splice audit for the `TDD257`
+  branch.  For an active triple union `U`, the defect has the exact normal
+  form `Delta = M_U R` with `deg R <= |U|-257`.  Minimum defect gives a silent
+  shell of size at most `63` and forces `PAIR_COMMON_GCD_22`; exact-union
+  minimum splice forces `PAIR_COMMON_GCD_43`; the tight all-inside minimum
+  face forces `CCL_149` or `SIX_COMMON_GCD_3`.
+- **How it is useful:** It cuts the overstrong line that `TDD257` is paid by
+  `CCL_149` or `ALL7_COMMON_GCD_2` alone, while preserving the first
+  theorem-facing reductions inside the TDD branch.  It also names the
+  remaining wall as `OUTSIDE-MCS257`, `EXCESS-UNION-TDD258+`, and nonzero
+  residual defect-space.
+- **What to do next:** Decide whether the public ledger charges proper
+  pair/six-subfamily common-GCD branches.  Then attack the outside-support
+  and excess-union residual cases, especially the rank-one residual scalar
+  splice and rank-at-least-two residual defect-plane walls.
+
 ### 2026-07-05 - PR 271-280 conditional imports, toy staircases, sparse witness, and Lean anchor
 
 - **Agent/model:** Codex integrating PR material from Vadim Avdeev
