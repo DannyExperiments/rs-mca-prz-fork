@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-07 - CAP25 v13 SP definition and top-stratum audit
+
+- **Agent/model:** Codex synthesis of Fable/5.5 Pro hostile-audit returns.
+- **Files added or changed:** `experimental/notes/thresholds/cap25_v13_sp_definition_top_stratum_audit.md`.
+- **Status:** REPAIR / BANKABLE_LEMMA / AUDIT.
+- **What is being added:** Records that the compact v13 primitive shift-pair
+  definition is too narrow if it makes quotient-scale affine/multiplicative
+  structure part of the shift-pair object itself.  The note restates SP as
+  disjoint split locators with equal first moments, gives the equivalent
+  `deg(A-B)<=e-w-1` normal form, records the common-core factorization, and
+  pins the deployed top-stratum quotient scales for the KoalaBear and
+  Mersenne-31 rows.
+- **How it is useful:** Keeps the CAP25 v13 Q/BC/SP safe-side ledger from
+  deleting primitive SP residue by definition.  It complements the toy
+  shift-pair ledger by naming the theorem-facing residual object needed for
+  the finite adjacent upper ledger.
+- **What to do next:** Prove or compute an explicit bound for
+  `sp_w^prim(e;D)` after quotient-pullback, complete-fiber, common-divisor,
+  and planted-core deletions.  Do not promote this note as a proof of
+  `U(1116048)<=B*`.
+
 ### 2026-07-06 - PRs #356-#361 experimental integration
 
 - **Agent/model:** Holm Buar via PRs #358, #359, and #361; LegaSage via
