@@ -52,10 +52,10 @@ land on structurally analogous additive-combinatorics / cohomological cores.
 
 ## Routes found insufficient at toy scale (with evidence)
 
-- **Geometric / Katz-equidistribution via the pencil monodromy: BLIND (toy ℓ=11,13).** The pencil
-  `G = Gal(X^{ℓ-1}−t·γ / 𝔽_p(t))` is the *full symmetric group* for both extremal (`E₃=ℓ−2`) and random
-  (`E₃=0`) Γ: for the **extremal** cases a rigorous GAP transitive-subgroup filter leaves only `S_10`/`S_12`,
-  and the random cases are Chebotarev-consistent with the same — so monodromy does not distinguish the
+- **Geometric / Katz-equidistribution via the pencil monodromy: does not distinguish extremal from random
+  (toy ℓ=11,13).** For the pencil `G = Gal(X^{ℓ-1}−t·γ / 𝔽_p(t))`, the **extremal** (`E₃=ℓ−2`) cases are
+  GAP-certified `S_{ℓ-1}` (a rigorous transitive-subgroup filter leaves only `S_10`/`S_12`), and the random
+  (`E₃=0`) cases are Chebotarev-consistent with the same — so this tested monodromy does not distinguish the
   extremal structure (`b2_l1_pencil_monodromy_v2.sage`).
 - **Per-character / Cauchy–Schwarz bounds:** insufficient at scale (per-character `|S_b(c)|` and the L²
   diagonal both overshoot the target).
@@ -72,7 +72,8 @@ caught the regime error and is generally applicable to scaling/asymptotic claims
 
 ## Reproducibility (Codex-green scripts)
 `experimental/scripts/b2_regime_check.py` (the regime restriction), `b2_bound_mechanism.py` (the reduction
-mechanism), `b2_l1_pencil_monodromy_v2.sage` (monodromy-blind, GAP-certified), `b2_prong1_fixed_b.py`,
+mechanism), `b2_l1_pencil_monodromy_v2.sage` (monodromy indistinguishable extremal-vs-random; extremal
+GAP-certified `S_{ℓ-1}`, random Chebotarev-consistent), `b2_prong1_fixed_b.py`,
 `b2_charsum_crosscheck.py`, `b2_l1_saturator_structure.sage`. Detailed trail:
 `b2_modp_giant_extras_first_move.md`, `b2_step0_object_pinned.md`, `b2_l1_shared_core.md`,
 `b2_l1_lemma_draft.md`, `b2_verification_protocol.md`.
@@ -80,5 +81,6 @@ mechanism), `b2_l1_pencil_monodromy_v2.sage` (monodromy-blind, GAP-certified), `
 ## Honest scope
 No bound is proved. This is a **partial / complementary scoping contribution**: it pins the object and the
 deployed regime, shows the bound is open at every deployed depth (divisor equidistribution, `√p` barrier),
-identifies the b2≡L1 shared core, rules out three routes with evidence, and supplies a reusable
+identifies the shared `√p` barrier / inverse-theorem framing between b2 and L1, finds three routes
+insufficient at toy scale (with evidence), and supplies a reusable
 verification protocol.
