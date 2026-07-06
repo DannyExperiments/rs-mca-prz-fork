@@ -1,39 +1,89 @@
-# Proof strategies for the two missing inputs of CAP25 v13
+# Proof strategies for the active safe-side inputs of CAP25 v13
 
-**(A)** the aperiodic band / worst-case M1 local-limit upper theorem (`prob:band`, `rem:v13-moment-scope`, `rem:v13-conjf-open`), and
-**(Q)** the quotient-fiber / quotient-ledger equidistribution upper theorem (`prop:v13f1-closing`, second paragraph).
+This note was originally written in the older two-input language:
 
-All labels refer to `cs25_cap_v12.tex` (v12) and `cap25_v13_experimental.tex` (v13). Throughout, $C=\mathrm{RS}[\mathbb F,D,k]$, $n=|D|$, $\rho=k/n$, $D\subseteq\mathbb B^\times$ a multiplicative coset (or Chebyshev twin-coset image), $\beta=\log_2|\mathbb B|$, and for an exact agreement $a$:
+**(A)** the aperiodic band / worst-case M1 local-limit upper theorem, and
+**(Q)** the quotient-fiber / quotient-ledger equidistribution upper theorem.
+
+The active raw/compact CAP25 v13 formulation refines this into three final
+safe-side inputs:
+
+```text
+Q   prefix / quotient flatness
+BC  base-field-normalized split-pencil census
+SP  primitive shift-pair control
+```
+
+Read the old `(A)` umbrella below as the proof-program material feeding BC and
+SP, after tangent, quotient, common-GCD, extension, and bounded chart strata are
+paid separately.  Q remains Q.
+
+The active source files are `experimental/cap25_cap_v13_raw.tex` and its compact
+companion `experimental/cap25_cap_v13_raw_compact.tex`.  Older label names in
+this strategy document should be mapped to the raw/compact labels when used in
+a paper edit: Q is `prob:Q` / `prob:capg-active-Q`, BC is `prob:BC` /
+`prob:capg-active-BC`, and SP is `prob:SP` /
+`prob:capg-active-shiftpairs`.
+
+Throughout, $C=\mathrm{RS}[\mathbb F,D,k]$, $n=|D|$, $\rho=k/n$,
+$D\subseteq\mathbb B^\times$ a multiplicative coset (or Chebyshev twin-coset
+image), $\beta=\log_2|\mathbb B|$, and for an exact agreement $a$:
 
 $$j = n-a \quad(\text{co-support size}), \qquad t = a-k \quad(\text{syndrome window}), \qquad j+t = n-k.$$
 
-$g^*(\rho,\beta)$ is the entropy–subfield envelope of `rem:entropy-frontier`, i.e. the largest $g$ with $H_b(\rho+g)\ge\beta g$. At the deployed rate-$\tfrac12$ rows, $g^*\approx 0.0322$, and the identity-scale certificates of `prop:v13f1-identity-frontier` sit within $\sim10^{-6}$ of it.
+$g^*(\rho,\beta)$ is the entropy-subfield envelope, i.e. the largest $g$ with
+$H_b(\rho+g)\ge\beta g$. At the deployed rate-$\tfrac12$ rows,
+$g^*\approx 0.0322$, and the v13 raw/compact exact unsafe certificates sit
+within $\sim10^{-6}$ of it.
 
 ---
 
-## 0. What exactly must be proved, and one correction to make first
+## 0. What exactly must be proved, and one compatibility correction
 
-### 0.1 The two inputs, graded by strength
+### 0.1 The active inputs, graded by strength
 
-Both inputs come in two genuinely different strengths, and the strategy is different for each. Following `prop:v13f1-closing`:
+The active inputs Q, BC, and SP come in two genuinely different strengths, and
+the strategy is different for each.
 
 * **Asymptotic form (with reserve).** Upper bounds good to a factor $\mathrm{poly}(n)$ suffice for the frontier statement at agreements $a_0+R$ with $R\gg\log n$: a factor $n^{C}$ costs $21C$ bits at $n=2^{21}$, while the entropy ledger separates by $\Omega(R)$ bits along the reserve.
-* **Finite adjacent form (deployed pair).** To pin $a_*=a_0+1$ by the one-step compiler (`prop:onestep`, `thm:v13-staircase`), the complete upper ledger $U(a_0+1)$ must fit under the budget with only **5.5 / 22.0 / 20.9 / 3.1 bits** of room in the four identity rows. No unspecified polynomial factor survives; even a single factor of $n$ ($21$ bits) exceeds three of the four margins.
+* **Finite adjacent form (deployed pair).** To pin $a_*=a_0+1$ by the one-step compiler, the complete upper ledger $U(a_0+1)$ must fit under the budget with only **22.2 / 22.0 / 3.3 / 3.1 bits** of room in the four raw-v13 rows:
 
-The honest program is therefore: **prove the asymptotic forms by theorems, and reduce the finite adjacent forms to explicitly named extremality statements plus exact integer computations.** Section Q3 and the risk register make this split precise.
+  ```text
+  KoalaBear MCA    a0=1116047, a1=1116048
+  KoalaBear list   a0=1116046, a1=1116047
+  Mersenne-31 MCA  a0=1116023, a1=1116024
+  Mersenne-31 list a0=1116022, a1=1116023
+  ```
 
-### 0.2 Correction: the left edge of `prob:band` must move to the envelope
+  No unspecified polynomial factor survives; even a single factor of $n$ ($21$
+  bits) nearly consumes a KoalaBear margin and vastly exceeds both Mersenne
+  margins.
+
+The honest program is therefore: **prove the asymptotic forms by theorems, and
+reduce the finite adjacent forms to explicitly named extremality statements plus
+exact integer computations.** Section Q3 and the risk register make this split
+precise.
+
+### 0.2 Compatibility correction: old `(A)` becomes BC/SP above the envelope
 
 `prob:band` asks for a $q$-free polynomial bound on aperiodically-witnessed MCA-bad slopes throughout $k+\tfrac{2n}{N} < a < n-\lfloor\tfrac{n-k}{3}\rfloor$. As stated, this is now in tension with v13 itself:
 
-* `lem:v13f1-identity-prefix-floor` produces, at the identity scale $c=1$, a received word $U$ with $\ge \binom nm/|\mathbb B|^w$ listed codewords whose agreement supports are the $m$-subsets $M$ themselves — **generic subsets, hence aperiodic** ($c(S)=1$) for all but an exponentially small fraction. This is unlike every $c\ge2$ floor, whose witnesses are unions of complete fibers (`rem:quotient-borne`).
+* The identity-prefix floor produces, at the identity scale $c=1$, a received
+  word $U$ with $\ge \binom nm/|\mathbb B|^w$ listed codewords whose agreement
+  supports are the $m$-subsets $M$ themselves -- **generic subsets, hence
+  aperiodic** ($c(S)=1$) for all but an exponentially small fraction. This is
+  unlike every $c\ge2$ floor, whose witnesses are unions of complete fibers.
 * Pushing this list through the deep-point conversion (`thm:A`, admissible since $n-m\le n-k-1$) and `fact:chain` produces simple-pole lines $(f_\alpha,g_\alpha)$ with exponentially many MCA-bad slopes $z=P_i(\alpha)$ whose witness supports are exactly those aperiodic $m$-subsets, at agreements $a=m$ up to $\approx k+g^*n$ — squarely inside the stated band.
 
-Unless essentially all of these slopes accidentally acquire a second, periodic witness (no structural reason for that), `prob:band` is **refuted in the sub-band $k+\tfrac{2n}N < a \lesssim k+g^*n$**, exactly as `rem:entropy-frontier` anticipated when it said the left edge "moves." The first deliverable of (A) is therefore editorial but essential:
+Unless essentially all of these slopes accidentally acquire a second, periodic witness (no structural reason for that), the old broad band is **refuted in the sub-band $k+\tfrac{2n}N < a \lesssim k+g^*n$**, exactly as the entropy-frontier discussion anticipated when it said the left edge "moves." The first deliverable of the legacy `(A)` route is therefore editorial but essential:
 
 > **Task A0 (band normalization).** Restate `prob:band` with left edge $a \ge k + g^*(\rho,\beta)\,n + R(n)$ (target $R=O(\log n)$; any $R = n^{o(1)}$ is progress), and record the identity-scale refutation of the old sub-band as a proposition. Verify the witness-bucket assignment of the converted slopes (that their pole-line witnesses are aperiodic-only) by the small-field enumeration culture already used for `thm:v13-first-moment` ($\mathbb F_5$, $\mathbb F_7$).
 
-This matters strategically: it tells us the aperiodic conjecture is *only* plausible above the envelope, i.e. exactly where the prefix-fiber mechanism runs out of entropy. Every proof attempt below must use that.
+This matters strategically: it tells us the aperiodic conjecture is *only*
+plausible above the envelope, i.e. exactly where the prefix-fiber mechanism runs
+out of entropy. Every proof attempt below must use that.  In the raw/compact
+v13 language, the old `(A)` proof attempt should land as BC and SP certificates,
+not as a fourth final residual input.
 
 ### 0.3 The unifying object: split-locator flatness
 
@@ -53,7 +103,7 @@ The first term is the density heuristic ("linear conditions on split locators be
 
 ---
 
-## 1. Strategy for (A)
+## 1. Strategy for legacy `(A)`, now feeding BC and SP
 
 ### 1.1 Regime split, and what is already covered
 
@@ -93,7 +143,7 @@ Here $t<j$; per slope, $W_z$ has positive dimension $d\approx n+k-2a$ (growing),
 2. *Exact ensemble identity.*
  $$N_w(z) = |\mathbb B|^{-w}\sum_{\lambda\in\mathbb B^w}\psi(-\lambda\cdot z)\,[T^m]\prod_{x\in D}\big(1+T\,\psi(f_\lambda(x))\big),\qquad f_\lambda=\textstyle\sum_i\lambda_i X^i.$$
  Major arc $\lambda=0$ gives the density term. Minor arcs need a per-frequency saving governed by the *value-distribution defect* of $f_\lambda$ on $D$: an "Esseen/Halász for slice sums" lemma of the shape $\big|[T^m]\prod(1+T\psi)\big| \le \binom nm e^{-c\,m\,\delta_\lambda}$ with $\delta_\lambda$ the concentration defect of $\{f_\lambda(x)\}_{x\in D}$.
-3. *Where it is hard, precisely.* Weil/twisted complete sums control $\delta_\lambda$ only for $\deg f_\lambda \lesssim n/\sqrt p$ ($\approx 2^{5.5}$ at deployed sizes) — a vanishing sliver of the $w\approx2^{16}$ frequencies. Worse, the problem sits at *critical density*: the total entropy $\log_2\binom nm\approx m\cdot1.876$ bits barely exceeds $w\log_2 p$, so a lossless LLT is exactly as strong as the frontier conjecture itself. **Therefore Route α should target only the reserve form**: max-fiber $\le$ average $\cdot\,\mathrm{poly}(n)$, consumed at $a_0+R$, $R=\Theta(\log n)$, per `prop:v13f1-closing`. The model results to adapt are the inverse Littlewood–Offord theory (Halász over $\mathbb F_p^d$, Nguyen–Vu / Tao–Vu inverse theorems) pushed to growing $d=w$, with the structural conclusion ("the increments live in a small generalized progression") checked against the only structures the moment curve over a multiplicative coset admits — subgroup/quotient strata — via sum-product inputs (Bourgain–Glibichuk–Konyagin, Shkredov; note $n\approx p^{0.68}$, a *large* subgroup, the favorable regime).
+3. *Where it is hard, precisely.* Weil/twisted complete sums control $\delta_\lambda$ only for $\deg f_\lambda \lesssim n/\sqrt p$ ($\approx 2^{5.5}$ at deployed sizes) — a vanishing sliver of the $w\approx2^{16}$ frequencies. Worse, the problem sits at *critical density*: the total entropy $\log_2\binom nm\approx m\cdot1.876$ bits barely exceeds $w\log_2 p$, so a lossless LLT is exactly as strong as the frontier conjecture itself. **Therefore Route α should target only the reserve form**: max-fiber $\le$ average $\cdot\,\mathrm{poly}(n)$, consumed at $a_0+R$, $R=\Theta(\log n)$, as in the raw/compact conditional closure theorem. The model results to adapt are the inverse Littlewood–Offord theory (Halász over $\mathbb F_p^d$, Nguyen–Vu / Tao–Vu inverse theorems) pushed to growing $d=w$, with the structural conclusion ("the increments live in a small generalized progression") checked against the only structures the moment curve over a multiplicative coset admits — subgroup/quotient strata — via sum-product inputs (Bourgain–Glibichuk–Konyagin, Shkredov; note $n\approx p^{0.68}$, a *large* subgroup, the favorable regime).
 4. *Second moment for free.* The $L^2$ input of this route is exactly the collision ledger Q1 below — write it once.
 
 **Route β — inverse theorem via incidence geometry and compression ("exchange-rigidity").**
@@ -101,7 +151,7 @@ Here $t<j$; per slope, $W_z$ has positive dimension $d\approx n+k-2a$ (growing),
 By `lem:v13-concurrency`, split points of $\mathbb P(W)$ are the points lying on $\ge j$ hyperplanes of the arrangement $\{E_x\}_{x\in D}$ — and the normals $(1,x,\dots,x^j)$ make this the **moment-curve (osculating) arrangement**, the most generic one: any $\dim+1$ of the $E_x$ are independent (Vandermonde). The fixed-dimensional theorem `thm:v13-fixeddim` is the base camp: its drop-set injection $[L]\mapsto S_0$, $|S_0|=d$, is lossless but ignores that drop-sets of different rich points cannot pack freely. The program:
 
 * *Step β1 (packing upgrade).* After gcd-trivialization (`lem:v13-gcd`), two split points of $W$ with root sets $R\ne R'$ satisfy structured intersection constraints; feed the drop-set family into the anticode bound `prop:v13-anticode` and the Johnson-exchange spectral bound `prop:v13-johnson-exchange` to replace $\binom nd$ by $\binom nd/\binom{j-\text{overlap}}{\cdot}$-type ratios. This will not reach poly alone but quantifies how far the moment-curve rigidity carries.
-* *Step β2 (compression / extremality).* Define exchange operators on families of split locators (one root swapped along the Johnson graph) and attempt a rearrangement principle: **exchanges toward graded/periodic configurations do not decrease the number of split points compatible with a codimension-$s$ condition.** If true, the extremizers of the master flatness are exactly the prefix-affine and quotient-pulled-back spaces — i.e. the strata already charged to the reserve and to the quotient ledger — and the primitive remainder is poly (in fact the constant comes out sharp). This is the file's "exchange-rigidity input" made precise. Flag prominently: *the finite form of this extremality statement is essentially equivalent to the finite frontier conjecture* `prob:v13f1-frontier`; a counterexample to compression is a construction beating $g^*$, i.e. a refutation of the frontier — either outcome is decisive, so the search is not wasted in any world (see experiments, §3).
+* *Step β2 (compression / extremality).* Define exchange operators on families of split locators (one root swapped along the Johnson graph) and attempt a rearrangement principle: **exchanges toward graded/periodic configurations do not decrease the number of split points compatible with a codimension-$s$ condition.** If true, the extremizers of the master flatness are exactly the prefix-affine and quotient-pulled-back spaces — i.e. the strata already charged to the reserve and to the quotient ledger — and the primitive remainder is poly (in fact the constant comes out sharp). This is the file's "exchange-rigidity input" made precise. Flag prominently: *the finite form of this extremality statement is essentially equivalent to the finite frontier conjecture* of the raw/compact manuscript; a counterexample to compression is a construction beating $g^*$, i.e. a refutation of the frontier — either outcome is decisive, so the search is not wasted in any world (see experiments, §3).
 
 **Route γ — dyadic renormalization (deployed rows only, but poly-friendly).**
 
@@ -111,7 +161,7 @@ $$\left|\{\text{aperiodic bad slopes at }(n,k,a)\}\right|\ \le\ C\cdot\left|\{\t
 
 suffices for the asymptotic (A) on these rows, with `thm:fiber-descent` supplying the exact periodic part of the transfer and the planted machinery (`thm:v13-planted`, `prop:v13-dyadic-planted`) the small-defect strata. The obstruction is definitional — aperiodic supports do not descend — so the content is a *stability* step: witnesses that survive folding by $\mu_2$ ($x\mapsto x^2$ fibers $\{x,-x\}$) are near-periodic and chargeable; witnesses destroyed by folding must be shown to inject, with controlled multiplicity, into a rung-below problem via their folded multiset plus a defect certificate. Speculative, but it is the route most consonant with the paper's dyadic, exact-certificate culture, and the only one where "constant loss per step" is good enough.
 
-### 1.4 Deliverable ladder for (A)
+### 1.4 Deliverable ladder for legacy `(A)` / BC-SP
 
 1. **Now:** Task A0 (band normalization + identity-scale refutation write-up); Lemma A.1 (split-top-chart collapse); rung-margin audit (shared with Q0).
 2. **Short term:** Lemma A.2 (Kronecker/BM atlas, corank ledger); Task A.3 (annulus MCA-from-CA); the exact collision ledger (Q1).
@@ -126,12 +176,12 @@ suffices for the asymptotic (A) on these rows, with `thm:fiber-descent` supplyin
 
 **Target.** Let $\Phi_w$ be the graded-prefix (equivalently, moment) map on $m$-subsets of $D$, $\mathrm{avg}:=\binom Nm/|\mathbb B|^w$ per `prop:graded-prefix-floor` conventions (and its $c=1$, planted, and remainder variants). Define
 
-* **(Q-fin)** $\max_z |\Phi_w^{-1}(z)| \le \kappa\cdot\mathrm{avg}$ with $\kappa\le 2^{\text{fail margin}}$ ($\kappa\le 8.6$ for M31-list, $\le 45$ for KB-MCA, $\le \sim2^{20}$ for the other two), **plus** the same for the whole divisor-lattice/planted union at $a_0+1$;
+* **(Q-fin)** $\max_z |\Phi_w^{-1}(z)| \le \kappa\cdot\mathrm{avg}$ with $\kappa\le 2^{\text{fail margin}}$ (roughly $2^{22.2}$ for KoalaBear MCA, $2^{22.0}$ for KoalaBear list, $2^{3.3}$ for Mersenne-31 MCA, and $2^{3.1}$ for Mersenne-31 list), **plus** the same for the whole divisor-lattice/planted union at $a_0+1$;
 * **(Q-asy)** the same with $\kappa=\mathrm{poly}(n)$, consumed at reserve $R\gg\log n$.
 
-**Audit 1 (rung margins — pure exact arithmetic, do first).** The upper ledger at $a_0+1$ is a union over scales $c\mid n$ and slack profiles. Each rung's own floor/budget comparison lives at $\sim1/c$ of the identity row's bit scale, so rung fail margins can shrink toward sub-bit values. Compute, by the existing exact-integer scanner, every rung's comparison at $a_0+1$ for all four rows. If any rung is tight or inverted, the adjacent-pair conjecture is threatened from the *periodic* side — a cheap potential refutation that must be excluded before investing in the analytic work. (`rem:v13f1-closure` shows the $c=2$ and planted rows are dominated at $a_0$; the audit extends this one step up, over all $c$.)
+**Audit 1 (rung margins — pure exact arithmetic, do first).** The upper ledger at $a_0+1$ is a union over scales $c\mid n$ and slack profiles. Each rung's own floor/budget comparison lives at $\sim1/c$ of the identity row's bit scale, so rung fail margins can shrink toward sub-bit values. Compute, by the existing exact-integer scanner, every rung's comparison at $a_0+1$ for all four rows. If any rung is tight or inverted, the adjacent-pair conjecture is threatened from the *periodic* side — a cheap potential refutation that must be excluded before investing in the analytic work. The raw/compact exact certificates already show the proposed `c=2` and planted rows are dominated at the moved unsafe edge; the audit extends this one step up, over all $c$.
 
-**Audit 2 (support vs image).** The intrinsic periodic support count (`cor:periodic-support-count`) at $a_0+1$ is astronomically above budget ($\sim10^6$ bits against a $58$-bit MCA budget), so the quotient bucket **cannot** be paid at support level; it must be paid at image level by descent (`thm:fiber-descent` + the lcm ledgers), i.e. as a recursion down the divisor lattice whose per-rung losses *add in bits*. With $21$ rungs and a $5.5$-bit margin, the geometric-mean per-rung loss must stay below $\sim1.2$; with $22$-bit margins, below $2$. Conclusion to record: **(Q-fin) demands a near-lossless recursion**, which forces the hybrid design of §2.4: exact enumeration below a cut scale, theorems above it.
+**Audit 2 (support vs image).** The intrinsic periodic support count at $a_0+1$ is astronomically above budget ($\sim10^6$ bits against a $58$-bit MCA budget), so the quotient bucket **cannot** be paid at support level; it must be paid at image level by descent, i.e. as a recursion down the divisor lattice whose per-rung losses *add in bits*. With $21$ rungs and only $3.1$--$3.3$ bits on the Mersenne rows, finite quotient descent must be extremely close to lossless; with the $22$-bit KoalaBear margins it still cannot tolerate a hidden factor of $n$. Conclusion to record: **(Q-fin) demands a near-lossless recursion**, which forces the hybrid design of §2.4: exact enumeration below a cut scale, theorems above it.
 
 ### 2.2 (Q1) The exact collision ledger — provable now, shared with Route α
 
@@ -157,14 +207,14 @@ The output of Q2, if it goes through: **worst-case flatness reduces to flatness 
 
 Two honest facts frame the endgame:
 
-* Constant-factor flatness ($\kappa\le 8.6$–$45$) cannot come from moments (§2.3 barrier) nor from any soft LLT at critical density (§1.3, Route α, point 3). It requires an **exact extremality statement**.
+* Constant-factor flatness at the Mersenne margins ($\kappa<10$) cannot come from moments (§2.3 barrier) nor from any soft LLT at critical density (§1.3, Route α, point 3). Even the KoalaBear margins require printed constants, not an unspecified polynomial. The finite route therefore requires an **exact extremality statement** or a very tight certified partition.
 * The natural candidate is **mode-at-null**: $N_w(z)\le N_w(0)$ for all $z$, plus $N_w(0)\le\kappa\cdot\mathrm{avg}$. Heuristics in favor: $\mathbb E\,p_i(M)=0$ on the slice (since $\sum_{x\in\mu_n}x^i=0$ for $n\nmid i$), so the distribution is centered at $0$; and for the *symmetrized difference walk* the characteristic function $\big|\sum_x\psi(\lambda\cdot\gamma(x))\big|^2\ge0$ makes mode-at-0 automatic. The gap — and it is a real one — is that the slice sum itself is not difference-symmetric, so mode-at-null is a conjecture, not a lemma. It is, however, *finitely testable* (§3), and any proof of the compression principle of Route β delivers it.
 
-Recommended posture, matching `prop:v13f1-closing`'s own distinction:
+Recommended posture, matching the raw/compact asymptotic-versus-finite split:
 
-1. Prove (Q-asy) via Q1+Q2 (+Route α second moments) — this, with (A)-asymptotic, closes the **asymptotic frontier** unconditionally.
+1. Prove (Q-asy) via Q1+Q2 (+Route α second moments) — this, with the asymptotic BC/SP package, closes the **asymptotic frontier** with logarithmic reserve.
 2. Reduce (Q-fin) to: (i) mode-at-null (or the Route β compression statement), and (ii) an explicit bound $N_w(0)\le\kappa\cdot\mathrm{avg}$ — and state both as named conjectures with the printed margins as their acceptance thresholds, exactly in the paper's certificate grammar (`sec:v13-packet-schema`: named residuals, never point estimates).
-3. Prioritize the two $\sim21$-bit rows (KoalaBear list, $-22.0$; M31 MCA, $-20.9$): a $\kappa\le2^{20}$ theorem is a far softer target than $\kappa\le9$, and closing even one row's adjacent pair would be the program's first finite one-step theorem. The $3.1$-bit M31-list row should be assumed out of reach of anything but exact extremality.
+3. Prioritize the two KoalaBear rows first (`22.2` and `22.0` bits of next-step room), because they are the most forgiving finite constants. The Mersenne-31 rows (`3.3` and `3.1` bits) should be assumed out of reach of anything but exact extremality or a very tight certified partition.
 
 ---
 
@@ -179,7 +229,7 @@ Recommended posture, matching `prop:v13f1-closing`'s own distinction:
 3. *Rung-margin audit* at deployed sizes (Q0, Audit 1) — no new mathematics, potentially veto-level information.
 4. *Witness-bucket check* for Task A0 (aperiodicity of the converted pole-line witnesses) at small fields.
 
-**Integration map.** Lemma A.1 and A.2 discharge the residual clauses of checklist item 10 and sharpen input (ii) of `thm:conditional-mca` on the overdetermined half; Task A.3 upgrades `cor:band-reduction`; Route α/β/γ outputs enter as the upper staircase $U$ of `thm:v13-corridor` per `rem:v13-staircase-v12`; Q1/Q2 populate the quotient-profile ledger clause (i) of `thm:conditional-mca` at image level and the $L_Q$ term of `thm:conditional-list`; the finite-pair conjectures of Q3 replace the "unspecified polynomial factor" caveat in `prop:v13f1-closing` with named, margin-quantified inputs; propagate per `rem:v13f1-propagation`.
+**Integration map.** Lemma A.1 and A.2 discharge residual split-pencil branches and sharpen the overdetermined half of BC; Task A.3 upgrades the MCA-from-CA annulus; Route α/β/γ outputs enter as the upper staircase \(U\) used by the raw/compact finite adjacent compiler; Q1/Q2 populate the quotient/prefix ledger at image level; the finite-pair conjectures of Q3 replace any "unspecified polynomial factor" with named, margin-quantified inputs. The final raw/compact closure consumes Q, BC, and SP only.
 
 **Risk register.**
 

@@ -30,6 +30,40 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-06 - CAP25 v13 raw and compact frontier status
+
+- **Agent/model:** Maintainer-added v13 raw manuscripts summarized and aligned
+  by Codex.
+- **Files added or changed:** `experimental/cap25_cap_v13_raw.tex`;
+  `experimental/cap25_cap_v13_raw_compact.tex`;
+  `experimental/cap25_v13_missing_inputs_strategy.md`; `agents.md`;
+  `experimental/agents-log.md`.
+- **Status:** EXPERIMENTAL / CONDITIONAL / AUDIT.
+- **What is being added:** `cap25_cap_v13_raw.tex` is the extended
+  raw-working master; `cap25_cap_v13_raw_compact.tex` is its compact companion.
+  Their TLDR is: the unsafe side is exact and elementary via identity-prefix
+  floors plus flexible simple-pole conversion; the generic safe anchors are
+  deep-regime MCA, MCA-from-CA below half distance, and one isolated
+  half-distance CA import; the near-capacity safe side is reduced to exactly
+  three residual inputs Q, BC, and SP.
+- **How it is useful:** This records the current experimental final-resolution
+  target.  The moved finite adjacent predictions are KoalaBear MCA
+  `1116047 -> 1116048`, KoalaBear list `1116046 -> 1116047`,
+  Mersenne-31 MCA `1116023 -> 1116024`, and Mersenne-31 list
+  `1116022 -> 1116023`.  Polynomial or `e^{o(n)}` Q/BC/SP would settle the
+  asymptotic frontier with logarithmic reserve; exact constants fitting the
+  printed `22.2 / 22.0 / 3.3 / 3.1` bit margins are needed for the finite
+  adjacent pairs.
+- **What to do next:** Do not promote v13 raw/compact into Paper D until the
+  safe upper ledgers are proved, replayed, and audited.  Work should focus on
+  finite Q maximum-fiber certificates, finite BC split-pencil census
+  certificates, finite SP primitive shift-pair certificates, and the matching
+  certificate scanner rows.  The strategy note now maps the old `(A)` aperiodic
+  umbrella to the current BC/SP inputs and should be kept compatible with the
+  raw/compact source names.  This entry supersedes earlier log entries that
+  mention `experimental/cap25_v13_experimental.tex` or the older `1116043`
+  KoalaBear MCA experimental edge.
+
 ### 2026-07-06 - Experimental PR packet batch 281, 310, 322-351
 
 - **Agent/model:** DannyExperiments, Scott Hughes, LegaSage, Vadim Avdeev,
