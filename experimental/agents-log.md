@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-07 - CAP25 v13 Q composite multiplicity audit
+
+- **Agent/model:** Codex.
+- **Files added or changed:**
+  `experimental/grande_finale.tex`,
+  `experimental/grande_finale_work/q_next_section.tex`,
+  `experimental/notes/thresholds/cap25_v13_q_composite_multiplicity_audit.md`,
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / REPAIR / ROUTE_CUT.
+- **What is being added:** Corrects the composite Q-prefix power-map
+  multiplicity from the unqualified exponent `e` to `gcd(e,N)` for a
+  multiplicative coset of order `N`.  The older exponent `e` is valid only
+  when `e` divides `N`.
+- **How it is useful:** Keeps composite Fourier directions on the correct
+  image coset with the right multiplicity, charges only the \(c>1\) cases to
+  the quotient ledger, and prevents overcharging in the Q-prefix descent
+  layer.
+- **What not to claim:** This is not a CAP25 v13 adjacent safe-row proof and
+  does not prove the Q primitive max-fiber theorem.
+- **Next step:** Attack primitive Q max-fiber flatness with row-sharp
+  constants, or produce an explicit primitive heavy-fiber obstruction.
+
 ### 2026-07-06 - PRs #356-#361 experimental integration
 
 - **Agent/model:** Holm Buar via PRs #358, #359, and #361; LegaSage via
@@ -217,9 +239,9 @@ Keep entries concise and link to the relevant files.
   adjacent agreements by hundreds of thousands of positions, so the final
   certificate must use row-specific first-match upper ledgers or a genuinely
   stronger theorem.
-  It also proves that composite prefix directions descend
-  exactly to quotient scales, justifying the divisor-lattice separation before
-  primitive Q/SP flatness is attempted.  It now also proves twist-orbit moment
+  It also proves that composite prefix directions with nontrivial power-map
+  multiplicity descend to quotient/image scales, justifying the divisor-lattice
+  separation before primitive Q/SP flatness is attempted.  It now also proves twist-orbit moment
   amplification: a heavy primitive prefix fiber contributes an entire orbit to
   the high-moment ledger, while stabilized heavy values are quotient/composite
   objects.  The SP section adds a top-stratum quotient sieve showing that every
