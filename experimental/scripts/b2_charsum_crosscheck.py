@@ -9,11 +9,24 @@ Exact first-moment identity (additive-character orthogonality over F_q):
   where e_q(u) = exp(2 pi i u / q).  The c=0 term gives 2^n; the rest is the
   "error" the giant-regime bound must control.  N_t counts ALL blocks (incl. empty
   and the structured coset-unions); extras = N_t - (structured count).
+
+  The identity above is the theoretical handle for the giant regime.  `char_count`
+  below EVALUATES the same N_t by an EXACT integer DP over power-sum vectors in
+  F_q^t (state space <= q^t) -- the complex-float evaluation of the character sum
+  lost precision on large rows (e.g. (64,1,193) was off by 448), so it is not used.
 """
-import cmath, math
 from itertools import combinations
 
+def _isprime(m):
+    if m<2: return False
+    i=2
+    while i*i<=m:
+        if m%i==0: return False
+        i+=1
+    return True
+
 def primitive_root(q):
+    assert _isprime(q), f"q must be prime: {q}"
     order=q-1; f=set(); m=order; d=2
     while d*d<=m:
         while m%d==0: f.add(d); m//=d
@@ -24,32 +37,31 @@ def primitive_root(q):
     raise RuntimeError
 
 def mu_n(n,q):
+    assert (q-1)%n==0, f"need n|q-1 (so mu_n <= F_q): n={n} q={q}"
     g=primitive_root(q); zeta=pow(g,(q-1)//n,q)
-    return [pow(zeta,k,q) for k in range(n)]
+    xs=[pow(zeta,k,q) for k in range(n)]
+    assert len(set(xs))==n, "zeta must be a primitive n-th root"
+    return xs
 
 def char_count(n,t,q):
-    """Exact N_t via the t-fold additive-character sum (rounds to int)."""
+    """Exact N_t = #{B<=mu_n : sum_{x in B} x^r = 0 (F_q), r=1..t}, via an EXACT
+    integer DP over power-sum vectors in F_q^t (state <= q^t).  Same quantity as the
+    additive-character identity in the module docstring, evaluated with exact ints."""
+    from collections import defaultdict
     xs=mu_n(n,q)
-    w=[cmath.exp(2j*math.pi*u/q) for u in range(q)]   # e_q(u)
-    total=0.0+0j
-    # iterate c=(c_1..c_t) in F_q^t
-    def rec(idx, cvec):
-        nonlocal total
-        if idx==t:
-            prod=1.0+0j
-            for x in xs:
-                s=0
-                xr=x
-                for r in range(t):
-                    s=(s + cvec[r]*xr)%q
-                    xr=(xr*x)%q
-                prod*= (1.0 + w[s])
-            total+=prod
-            return
-        for c in range(q):
-            rec(idx+1, cvec+[c])
-    rec(0,[])
-    return round((total/ q**t).real)
+    dp={(0,)*t:1}
+    for x in xs:
+        pv=[]; xr=x
+        for r in range(t):
+            pv.append(xr); xr=(xr*x)%q
+        pv=tuple(pv)
+        ndp=defaultdict(int)
+        for v,c in dp.items():
+            ndp[v]+=c                                        # exclude x
+            nv=tuple((v[i]+pv[i])%q for i in range(t))       # include x
+            ndp[nv]+=c
+        dp=ndp
+    return dp.get((0,)*t,0)
 
 def enum_count(n,t,q):
     xs=mu_n(n,q)

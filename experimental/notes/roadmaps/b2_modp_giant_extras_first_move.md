@@ -64,20 +64,54 @@ is enormous near the prize balance (`t log2 q ≈ n`), and the content of b2 is 
 almost entirely **structured** (coset unions, per b1) with only `≤ n^3` genuine extras. Full enumeration
 lives in the wrong (small-t) regime to test this; the giant regime is analytic-only.
 
-## Step 2 (the actual b2 deliverable)
+## Phase 0 — structural go/no-go (2026-07-06): the coset-union dichotomy FAILS below balance
 
-Bound the **extras** `= N_t − (structured coset-union count)` by `n^3` in the giant regime, via a
-Hayes/Carlitz estimate of `N_t` sharp enough that the non-structured residue is `≤ n^3` (the node allows
-`2^100`-lossy). Concretely: (a) evaluate the structured/coset-union contribution to the character sum
-exactly (the `c` supported on `M·ℤ` frequencies — the b1 orbits); (b) bound the complementary character
-sum (the "extras" mass) by Weil/Hayes over `F_q[X]`, using that on each `μ_n`-coset `Γ` has controlled
-index (the same cyclotomic-index structure as the L1 cyclotomic-directions bridge). Tools: PARI/GP
-(char sums, `factormod`), python-flint/Arb (rigorous enclosures), Sage cross-check; escalate a clean
-sub-lemma to Aristotle if it isolates.
+Tested whether the extras confine to a coset scale (u2c's dichotomy conjecture: every t-null block is a
+union of μ_M-cosets with `M ≥ t`), by classifying every t-null block by its symmetry scale `M_sym` =
+largest power-of-2 `M | n` with `B` a union of μ_M-cosets (`../scripts/b2_phase0_dichotomy.py`;
+meet-in-the-middle enumeration; **Codex-reviewed to GREEN over 2 rounds** — one float-precision bug in the
+character count was fixed to an exact integer DP; MITM completeness, `M_sym`, Newton, and the char-0 `ℤ^8`
+arithmetic were all independently re-verified).
+
+**Result: the dichotomy FAILS below balance.** The extras are genuinely *unstructured* (`M_sym = 1`, not
+even closed under `x → −x`), and their appearance is governed by the balance point `cost = t·log2 q`
+vs `entropy ≈ log2 C(n, n/2)`:
+
+| n=32, q=97 (entropy ≈ 29.2) | t=2 | t=3 | t=4 | t=5 | t=6 |
+|---|---|---|---|---|---|
+| cost = t·log2 q | 13.2 | 19.8 | 26.4 | 33.0 | 39.6 |
+| extras | 455488 | 6336 | 160 | 0 | 0 |
+| dichotomy | FAILS | FAILS | FAILS | HOLDS | HOLDS |
+
+Codex-confirmed witness: at (16,2,17), block `{1,2,3,13,15}` (exponents `[0,1,4,6,14]`) has `Σx = Σx² = 0`
+yet is not closed under `x → −x` — a genuine unstructured 2-null block.
+
+**Consequence (route pruned).** The prize regime sits ~2% *below* balance, so unstructured extras
+genuinely exist there — **b2's `≤ n^3` bound CANNOT rest on a coset-union dichotomy** (that route, the u2c
+hope, is false below balance). This is *not* a refutation of u2c: their coset-only scans were at/above
+balance or a narrower construction. Encouragingly, near balance the extras are modest (160 at t=4,
+`≪ n^3`) and only balloon far below balance; the prize is *just* below balance.
+
+## Step 2 (revised after Phase 0): the analytic route, not a coset dichotomy
+
+Bound the count of the genuinely-unstructured extras directly — the node's own `attack_surface` calls this
+"most promising" (the Hayes/Carlitz divisor frame), and Phase 0 confirms it is the *only* viable route.
+Two prongs, both avoiding the cancellation floor (extras `≪ N_t`, so no subtracting two `~2^{4e10}` counts):
+1. **Hayes/Carlitz divisor count.** Bound `#{monic deg-b divisors of X^n−1 with a top-t coefficient gap
+   that are ∉ 𝔽_q[X^M]}` via the leading-coefficient (Hayes) character group over `𝔽_q[X]`: the
+   structured mass sits on characters trivial on the μ_M-substructure, the extras on the complementary
+   characters — bounded by Weil **directly, no subtraction**.
+2. **Pair-correlation of the defect.** Second moment of the *non-coset defect* (not the total count) —
+   genuinely `~n^3`-size because the obstruction rarely fires; uses the same cyclotomic-index structure
+   as the L1 directions bridge.
+Tools: PARI/GP (Hayes char sums, `factormod`), python-flint/Arb (rigorous enclosures), Sage cross-check,
+Oscar (monodromy of the coincidence variety for prong 2), Aristotle for an isolated rigidity sub-lemma;
+empirical extras-vs-n scaling near balance → the research CPU box (MITM to n≈48–56).
 
 ## Honest scope
 
-This is a first move: the reframing is **re-derived and numerically validated**, b1 is **confirmed**, the
-Frobenius-gap extras are **exhibited**, and the character-sum handle is **built and two-engine
-cross-checked**. **No bound on the extras is proved yet** — that is Step 2, and it is the open crux of the
-node. Nothing here is claimed as a prize threshold.
+First move + Phase 0: reframing **re-derived and numerically validated**, b1 **confirmed**, Frobenius-gap
+extras **exhibited**, character-sum handle **built and two-engine cross-checked**, and the coset-union
+dichotomy **tested and refuted below balance** — all scripts **Codex-green**. **No bound on the extras is
+proved yet** — that is Step 2 (the analytic route), the open crux of the node. Nothing here is a prize
+threshold.
