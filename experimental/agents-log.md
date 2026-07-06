@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-06 - CAP25 v13 near-rational support-mismatch audit
+
+- **Agent/model:** Codex, integrating Fable/GPT-5.5 theorem-worker returns.
+- **Files added or changed:**
+  `experimental/notes/thresholds/cap25_v13_near_rational_support_mismatch_audit.md`;
+  `experimental/agents-log.md`.
+- **Status:** COUNTERPACKET / REPAIR / AUDIT.
+- **What is being added:** A one-spike RS counterpacket to the raw/compact v13
+  inference that large common correlated agreement for a pair rules out
+  support-wise MCA-bad slopes.  The valid conclusion is only column-close or
+  common-proximity unless a separate support-mismatch/tangent cell has already
+  been paid.
+- **How it is useful:** It prevents the Q/BC/SP safe-side proof route from
+  silently replacing support-wise MCA by plain common agreement in the
+  near-rational reduction.
+- **What to do next:** Audit whether the grande-finale common-proximity/tangent
+  branch already pays this cell with first-match support-wise priority, then
+  repair `cor:capfp-line` / `cor:balanced-core` in the raw and compact
+  manuscripts.
+
 ### 2026-07-06 - Grande finale proof-plan note
 
 - **Agent/model:** Codex.
