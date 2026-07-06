@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-06 - CAP25 v13 Q-fin mode-at-null route cut
+
+- **Agent/model:** Claude Fable 5 and GPT-5.5 Pro theorem-worker returns,
+  integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/cap25_v13_qfin_mode_at_null_route_cut.md`;
+  `experimental/agents-log.md`.
+- **Status:** COUNTEREXAMPLE / ROUTE_CUT / AUDIT.
+- **What is being added:** A compact finite counterpacket to the CAP25 v13
+  Q-fin `mode-at-null` shortcut: for `D = F_17^*`, `m = 9`, and one prefix,
+  `N_9(0)=672` while every nonzero target has `N_9(s)=673`.  The note also
+  records the correct twist-orbit invariance and target-vector stabilizer
+  formula.
+- **How it is useful:** It cuts the null-fiber extremality route currently
+  named in the v13 missing-inputs strategy and replaces it with the correct
+  primitive max-over-twist-orbits Q-fin target.  It explicitly does not claim
+  the adjacent safe upper ledger `U(1116048) <= B*`.
+- **What to do next:** Attack
+  `CAP25-V13-QFIN-PRIMITIVE-MAX-ORBIT-FLATNESS-KB-MCA-1116048`, with
+  stabilized target vectors paid only by image-level quotient descent and not
+  by target stabilizer alone.
+
 ### 2026-07-05 - Proximity Prize status memo for v12/v13/v14 picture
 
 - **Agent/model:** Maintainer-added status memo reviewed and integrated by
