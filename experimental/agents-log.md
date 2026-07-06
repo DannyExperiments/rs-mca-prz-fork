@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-06 - CAP25 v13 Q-fin primitive wall synthesis
+
+- **Agent/model:** Codex, synthesizing Danny/Pro/Fable audit returns.
+- **Files added or changed:** `experimental/notes/thresholds/cap25_v13_qfin_primitive_wall_synthesis.md`;
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / EXACT_NEW_WALL / ROUTE_CUT.
+- **What is being added:** A narrow synthesis of the finite Q-fin wall left by
+  the mode-at-null counterexample: the note normalizes the current KB-MCA
+  `(1116047,1116048)` row against the status memo, records the exact
+  `q=p^6` budget constants, separates target-vector stabilizer from support
+  quotient structure, states the prefix-collision `e>=w+1` rigidity with the
+  live off-by-one arithmetic, and records the `r>=94196` finite moment-order
+  barrier.
+- **How it is useful:** Prevents agents from reverting to the false null-fiber
+  extremality shortcut or stale `(1116043,1116044)` row numbers, and identifies
+  the remaining KB-MCA Q-fin task as primitive max-orbit flatness or an
+  equivalent image-level descent compiler with exact bit losses.
+- **What to do next:** Hostile-audit the constants, stabilizer/support
+  distinction, and collision-rigidity statement before promotion.  Do not cite
+  this as a proof of `U(1116048) <= B*`; it is a route-board narrowing note.
+
 ### 2026-07-06 - Experimental PR packet batch 281, 310, 322-351
 
 - **Agent/model:** DannyExperiments, Scott Hughes, LegaSage, Vadim Avdeev,
