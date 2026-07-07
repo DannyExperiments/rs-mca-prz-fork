@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-08 - CAP25 v13 LQ top-seam hostile audit
+
+- **Agent/model:** Claude Fable 5 referee packet, GPT-5.5 Pro hostile-audit
+  returns, and Codex integration.
+- **Files added or changed:** `experimental/notes/thresholds/cap25_v13_lq_top_seam_hostile_audit.md`;
+  `experimental/agents-log.md`.
+- **Status:** REPAIR / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** Records the repaired theorem-facing pieces of the
+  proposed `L_Q` top-seam payment: fixed-mark split-translate normal form,
+  local split-translate cap `floor(n/e)-1=30`, dyadic characteristic-zero
+  rigidity, structural pullback descent, and small structured-prime warnings.
+  The note also names the false promotion lines: pair-level pullback descent is
+  not automatic rung payment, the KoalaBear `K_raw-charge` number does not by
+  itself fit the imported `K_rem` ledger, and the Mersenne-31 `K_raw=9` is an
+  ambient cap rather than a post-charge residual.
+- **How it is useful:** Prevents the LQ top seam from being over-promoted into
+  a deployed safe-row certificate while preserving the useful algebraic
+  reductions for future finite census work.
+- **What to do next:** Reconcile the KoalaBear `K_rem` bookkeeping and run or
+  prove the Mersenne-31 ordered top-seam census under the exact first-match
+  selector.  This entry does not prove any adjacent safe row.
+
 ### 2026-07-07 - Grande finale logarithmic-moment Q route
 
 - **Agent/model:** Maintainer-added Q/Tao notes integrated by Codex.
