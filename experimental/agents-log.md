@@ -30,6 +30,33 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-07 - Grande finale Q-attempt promotion and Lean cleanup
+
+- **Agent/model:** Maintainer-added `grande_finale_q_attempt` reviewed and
+  integrated by Codex.
+- **Files added or changed:** `experimental/grande_finale.tex`;
+  `experimental/grande_finale.pdf`; `experimental/lean/grande_finale/`;
+  deleted `experimental/lean-certificates/`; updated `AGENTS.md` and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / AUDIT.
+- **What is being added:** Promoted the Q-attempt version to the canonical
+  `experimental/grande_finale.tex`, preserving the composite-prefix
+  `gcd(e,N)` multiplicity repair.  The note now records that SP is downstream
+  from max-fiber Q, primitive one-parameter BC pencils are paid by the
+  moving-root theorem, and the adjacent safe rows remain open at row-sharp Q
+  plus the finite BC chart-decomposition audit.  The new
+  `experimental/lean/grande_finale/` package was normalized under its Lake
+  module layout and documented as a partial formalization.
+- **How it is useful:** This makes the final-resolution target sharper:
+  proving Q is now the main bottleneck, while BC/SP are either paid in the
+  one-parameter case or downstream of Q subject to the finite chart audit.  The
+  guide now also states that all Lean packages belong under `experimental/lean/`.
+- **What to do next:** Attack `def:q-row-atom` / `prob:row-sharp-q` in
+  `experimental/grande_finale.tex` and the corresponding v13 raw source
+  ledger.  Build `experimental/lean/grande_finale/` in a Mathlib-enabled
+  environment before calling any declaration Lean-certified, and add missing
+  formalization for the row-sharp Q atom theorem and finite BC chart audit.
+
 ### 2026-07-07 - Reviewed PR integration for v13 adjacent ledgers
 
 - **Agent/model:** Scott Hughes via PRs #362, #367, #377, #381, and #387;
@@ -42,8 +69,8 @@ Keep entries concise and link to the relevant files.
   `experimental/data/certificates/`, `experimental/notes/thresholds/`,
   `experimental/notes/l1/`, `experimental/notes/m1/`,
   `experimental/notes/certificate_scanner/`, `experimental/notes/roadmaps/`,
-  `experimental/lean/`, `experimental/lean-certificates/`, and
-  `experimental/scripts/`; repaired `experimental/grande_finale.tex` and
+  `experimental/lean/`, and `experimental/scripts/`; repaired
+  `experimental/grande_finale.tex` and
   `experimental/grande_finale_work/q_next_section.tex`; updated
   `experimental/scripts/README.md`; added #381 near-capacity cap examples to
   `site/data/rate-leaderboards.json` and the embedded site fallback.
@@ -56,7 +83,8 @@ Keep entries concise and link to the relevant files.
   min-`j`, W3 collapse-edge, ell=19, and dim-Syz refutation packets; M1/CAPG
   finite-testability, split-pencil, adjacent-pair, shift-pair, Q/R1, and
   nonconsecutive-window packets; multi-rate LD_sw adjacent pins and board cap
-  examples; and small Lean toy certificates.
+  examples; small standalone Lean toy certificates were reviewed later and
+  removed as redundant with stronger Lean tracks.
 - **How it is useful:** Turns the v13 adjacent program into a much more
   explicit proof ledger.  The unsafe/lower rows and arithmetic margins are
   better audited; several false or overstrong L1/Q routes are cut; and the

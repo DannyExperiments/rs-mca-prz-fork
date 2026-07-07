@@ -1,6 +1,7 @@
 \documentclass[a4paper,11pt]{amsart}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{aliascnt}
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
@@ -8,13 +9,25 @@
 \emergencystretch=3em
 
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{problem}[theorem]{Problem}
-\newtheorem{definition}[theorem]{Definition}
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+\newaliascnt{problem}{theorem}
+\newtheorem{problem}[problem]{Problem}
+\aliascntresetthe{problem}
+\newaliascnt{definition}{theorem}
+\newtheorem{definition}[definition]{Definition}
+\aliascntresetthe{definition}
 \theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
+\newaliascnt{remark}{theorem}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
 \crefname{theorem}{Theorem}{Theorems}
 \Crefname{theorem}{Theorem}{Theorems}
 \crefname{lemma}{Lemma}{Lemmas}
@@ -50,7 +63,7 @@
 \begin{document}
 
 \begin{abstract}
-This expanded proof-audited note separates genuine theorem-level material from the still-missing dense-frontier upper ledger for smooth-domain Reed--Solomon MCA.  The unsafe side is reduced to exact integer prefix floors and the simple-pole list-to-MCA conversion.  On the safe side the note keeps only statements proved under their displayed hypotheses: broad safe anchors, quotient descent, split-pencil reductions, second-moment identities, unconditional but weak prefix/split-pair ceilings, the exact saturation identity for MCA codeword rays, and the theorem that the shift-pair ledger is downstream from Q once Q is stated as a max-fiber bound.  This revision also fixes endpoint and notation issues found in the audit, expands the finite-arithmetic tables, adds line-ray saturation bookkeeping, and prints the remaining proof obligations explicitly.  It does not claim the adjacent deployed safe rows: the active quantitative tasks remain a row-sharp multilevel prefix max-fiber theorem and a saturated primitive split-pencil line-ray theorem.
+This expanded proof-audited note separates genuine theorem-level material from the still-missing dense-frontier upper ledger for smooth-domain Reed--Solomon MCA.  The unsafe side is reduced to exact integer prefix floors and the simple-pole list-to-MCA conversion.  On the safe side the note keeps only statements proved under their displayed hypotheses: broad safe anchors, quotient descent, split-pencil reductions, second-moment identities, unconditional but weak prefix/split-pair ceilings, the exact saturation identity for MCA codeword rays, and the theorem that the shift-pair ledger is downstream from Q once Q is stated as a max-fiber bound.  This revision also fixes endpoint and notation issues found in the audit, expands the finite-arithmetic tables, adds line-ray saturation bookkeeping, and prints the remaining proof obligations explicitly.  It does not claim the adjacent deployed safe rows: an attempted Q closure is added below and shows that the active quantitative task is still the row-sharp prefix atom theorem, together with the finite audit that every residual balanced-core split-pencil chart reduces to the one-parameter moving-root theorem proved here.
 \end{abstract}
 
 \maketitle
@@ -1344,7 +1357,7 @@ The propositions and theorems in this section, together with the safe anchors ab
 
 \section{Proper Theorems for the Former Q/BC/SP Cells}
 
-The labels Q, BC, and SP are retained only as names for residual safe-side mechanisms.  The section records actual theorems rather than certificate compilers.  The proved Q bound below is an unconditional packing ceiling, far weaker than the desired max-fiber theorem.  The proved BC statements distinguish raw support locators from the saturated codeword rays that MCA actually counts.  The proved SP statement has two forms: a crude all-pairs ceiling, and the sharper structural fact that SP is automatically controlled once Q is available as a max-fiber bound.  None of these statements is advertised as closing the dense frontier.
+The labels Q, BC, and SP are retained only as names for residual safe-side mechanisms.  The section records actual theorems rather than certificate compilers.  The proved Q bound below is an unconditional packing ceiling, far weaker than the desired max-fiber theorem.  The BC material now has two parts: first, raw support locators are separated from the saturated codeword rays that MCA actually counts; second, the one-parameter primitive split-pencil obstruction is settled by a moving-root incidence bound.  Thus a residual BC chart that has genuinely been reduced to a projective locator pencil has only a constant number of split parameters in the deployed rows.  What remains is a chart-decomposition audit: every residual balanced-core chart must either be tangent/common/quotient/extension, or must present such a one-parameter moving-root pencil.  The proved SP statement has two forms: a crude all-pairs ceiling, and the sharper structural fact that SP is automatically controlled once Q is available as a max-fiber bound.  None of these statements is advertised as closing the dense frontier without the corresponding finite row ledger.
 
 For the entropy calculations, let
 \[
@@ -1487,6 +1500,75 @@ with the convention that no nonzero polynomial is allowed when the degree bound 
 
 For the MCA assertion, \cref{prop:slope-elimination} says that a support that is not common to the two received words supports at most one finite slope.  The first-match convention assigns common-support branches before this split-pencil profile, so the remaining bad slopes are overcounted by the number of remaining locators.
 \end{proof}
+
+\begin{definition}[projective locator pencil and its common \(D\)-part]\label{def:projective-locator-pencil}
+Let \(D\subseteq\F\) be finite, put \(\Lambda_D=\prod_{x\in D}(X-x)\), and let \(A,B\in\F[X]\) be not both zero.  The projective locator pencil generated by \(A,B\) is
+\[
+        L_{[s:t]}(X)=sA(X)+tB(X),\qquad [s:t]\in\mathbb P^1(\F).
+\]
+Its fixed \(D\)-part is
+\[
+        G_D(A,B)=\gcd(A,B,\Lambda_D),
+        \qquad g_D(A,B)=\deg G_D(A,B).
+\]
+A root of \(G_D(A,B)\) is a common root of every member of the pencil; these are precisely the roots assigned to the common-GCD branch in the first-match ledger.
+\end{definition}
+
+\begin{theorem}[moving-root bound for one-parameter split pencils]\label{thm:bc-moving-root}
+Let \(D\subseteq\F\) have size \(n\), and let \(L_{[s:t]}=sA+tB\) be a projective locator pencil as in \cref{def:projective-locator-pencil}.  Put \(G=G_D(A,B)\) and \(g=\deg G\).  Let \(\mathcal Z\subseteq\mathbb P^1(\F)\), and suppose that for every \(\lambda=[s:t]\in\mathcal Z\), the polynomial \(L_\lambda/G\) has at least \(h\ge1\) distinct roots in \(D\setminus Z(G)\).  Then
+\[
+        |\mathcal Z|\le \left\lfloor\frac{n-g}{h}\right\rfloor .
+\]
+In particular, if every counted member has degree \(j\), has fixed \(D\)-part exactly \(G\), and is \(D\)-split, then
+\[
+        |\mathcal Z|\le
+        \left\lfloor\frac{n-g}{j-g}\right\rfloor,
+        \qquad j>g.
+\]
+The case \(j=g\) is not a moving split-pencil cell: all \(D\)-roots are fixed and the member belongs to the common-GCD branch.
+\end{theorem}
+
+\begin{proof}
+Count incidences
+\[
+        I=\{(\lambda,x):\lambda\in\mathcal Z,
+        \ x\in D\setminus Z(G),\ L_\lambda(x)=0\}.
+\]
+For a fixed moving root \(x\in D\setminus Z(G)\), the pair \((A(x),B(x))\) is not \((0,0)\).  Hence the homogeneous linear equation
+\[
+        sA(x)+tB(x)=0
+\]
+has exactly one solution \([s:t]\in\mathbb P^1(\F)\).  Thus each moving domain point contributes to at most one incidence, and \(|I|\le n-g\).  On the other hand, every \(\lambda\in\mathcal Z\) contributes at least \(h\) incidences by hypothesis, so \(|I|\ge h|\mathcal Z|\).  This proves the first bound.
+
+If a counted member is \(D\)-split of degree \(j\) and has fixed \(D\)-part exactly \(G\), then exactly \(j-g\) of its \(D\)-roots are moving roots in \(D\setminus Z(G)\).  Applying the first bound with \(h=j-g\) gives the displayed inequality.  If \(j=g\), no moving root remains; the split condition has already been paid by the common-GCD branch rather than by a primitive moving pencil.
+\end{proof}
+
+\begin{corollary}[BC is settled on primitive one-parameter locator pencils]\label{cor:bc-one-pencil}
+Consider an MCA split-pencil chart at agreement \(m\), and write \(\omega=n-m\).  Suppose that after the first-match tangent, common-support, quotient, extension, degree-drop, and common-GCD branches have been removed, the residual candidate error locators in this chart are represented by a projective locator pencil \(L_\lambda=sA+tB\), with the slope parameter injecting into \(\lambda\), and that every residual bad slope in the chart has at least one degree-\(\omega\) \(D\)-split locator in the pencil.  Then the number of residual bad finite slopes in this chart is at most
+\[
+        \left\lfloor\frac{n-g}{\omega-g}\right\rfloor,
+        \qquad g=g_D(A,B)<\omega .
+\]
+In the primitive case \(g=0\), this is \(\lfloor n/(n-m)\rfloor\).  For the two active MCA adjacent rows in \cref{rem:finite-artifacts},
+\[
+\begin{array}{c|c|c|c}
+\text{row} & m=a_+ & \omega=n-m & \lfloor n/\omega\rfloor\\ \hline
+\text{KoalaBear MCA} & 1116048 & 980104 & 2\\
+\text{Mersenne-31 MCA} & 1116024 & 980128 & 2
+\end{array}
+\]
+so every primitive one-parameter BC pencil contributes at most two finite bad slopes.
+\end{corollary}
+
+\begin{proof}
+The first-match removals ensure that the chart is counted only through moving roots of the displayed pencil.  A residual bad slope supplies at least one degree-\(\omega\) split locator, and the slope-to-pencil parameter is injective by hypothesis; hence the slope count is bounded by the number of split parameters.  Apply \cref{thm:bc-moving-root} with \(j=\omega\).  The displayed row values use \(n=2^{21}\), \(a_+=1116048\) for KoalaBear MCA, and \(a_+=1116024\) for Mersenne-31 MCA.
+\end{proof}
+
+\begin{remark}[what this does and does not settle for BC]\label{rem:bc-status-after-moving-root}
+\Cref{thm:bc-moving-root,cor:bc-one-pencil} settle the enumerative part of BC for the object named in the original program: a primitive one-parameter split-locator pencil.  The proof counts slopes, not raw supports, and it automatically incorporates the saturation correction because multiple size-\(m\) supports below one saturated codeword ray do not create new pencil parameters.  Therefore a BC chart that has been reduced to such a pencil is no longer a conjectural input.
+
+The remaining BC audit is structural rather than enumerative.  For a finite deployed row one must verify that each residual balanced-core chart produced by the interpolation-lattice reduction is one of the paid types, or else supplies a projective locator pencil to which \cref{cor:bc-one-pencil} applies.  A higher-dimensional coefficient family not reducible to one-parameter moving-root pencils is not covered by this theorem and must be split further or charged to a separate named cell.
+\end{remark}
 
 
 \begin{definition}[saturated codeword rays and support census]\label{def:saturated-rays}
@@ -1696,13 +1778,13 @@ Without any dense-frontier census assumption, the following theorem-level pieces
 \begin{enumerate}[label=\textup{(\roman*)}]
 \item Prefix witnesses and the simple-pole list-to-MCA conversion give the exact lower-side criteria of \cref{prop:prefix-witness,thm:simple-pole-list-floor,cor:identity-prefix-unsafe,thm:unsafe-envelope}.
 \item The broad safe side contains the deep-regime MCA theorem, the exact high-agreement tangent cell, MCA-from-CA below half distance, and subfield confinement, namely \cref{thm:gf-deep-mca,prop:exact-tangent-cell,thm:gf-mca-from-ca,thm:subfield-confinement}.
-\item The residual cells have unconditional theorem-level pieces: Q has the Johnson packing and anticode bounds of \cref{thm:q-proper}; raw split-pencil support counts have the dimension bound of \cref{thm:bc-proper}; MCA support multiplicities are exactly saturated by \cref{thm:saturation,cor:raw-bc-fails,prop:line-ray-saturation}; and SP is downstream from Q by \cref{thm:q-implies-sp}, with the all-pairs ceiling of \cref{thm:sp-proper} available as an audit bound.
-\item The stronger dense-frontier conclusion is not proved by these bounds.  In particular, \cref{prop:proper-q-gap} shows that the proved Q packing bound alone leaves overhead far beyond the active adjacent margins, and \cref{cor:raw-bc-fails} shows that the MCA split-pencil target must be saturated before it can be an MCA numerator.
+\item The residual cells have unconditional theorem-level pieces: Q has the Johnson packing and anticode bounds of \cref{thm:q-proper}; raw split-pencil support counts have the dimension bound of \cref{thm:bc-proper}; primitive one-parameter BC pencils are bounded by \cref{thm:bc-moving-root,cor:bc-one-pencil}; MCA support multiplicities are exactly saturated by \cref{thm:saturation,cor:raw-bc-fails,prop:line-ray-saturation}; and SP is downstream from Q by \cref{thm:q-implies-sp}, with the all-pairs ceiling of \cref{thm:sp-proper} available as an audit bound.
+\item The stronger dense-frontier conclusion is not proved by these bounds.  In particular, \cref{prop:proper-q-gap} shows that the proved Q packing bound alone leaves overhead far beyond the active adjacent margins.  On the BC side, \cref{cor:raw-bc-fails} explains why raw support counts are the wrong numerator, while \cref{thm:bc-moving-root,cor:bc-one-pencil} settles the primitive one-parameter pencil count once the finite chart decomposition has supplied such a pencil.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-Parts (i) and (ii) are the cited theorems.  Part (iii) is exactly \cref{thm:q-proper,thm:bc-proper,thm:saturation,cor:raw-bc-fails,prop:line-ray-saturation,thm:q-implies-sp,thm:sp-proper}.  Part (iv) follows from \cref{prop:proper-q-gap}: an upper estimate that permits more than \(2^{1.66\cdot10^6}\) normalized prefix overhead cannot imply a ledger with only \(2^{22.2}\) or less spare overhead.  The saturation identity also changes the MCA split-pencil target from raw supports to primitive line-rays.  Therefore the adjacent safe inequality requires stronger row-wise arguments than the unconditional replacement bounds proved here.
+Parts (i) and (ii) are the cited theorems.  Part (iii) is exactly \cref{thm:q-proper,thm:bc-proper,thm:bc-moving-root,cor:bc-one-pencil,thm:saturation,cor:raw-bc-fails,prop:line-ray-saturation,thm:q-implies-sp,thm:sp-proper}.  Part (iv) follows from \cref{prop:proper-q-gap}: an upper estimate that permits more than \(2^{1.66\cdot10^6}\) normalized prefix overhead cannot imply a ledger with only \(2^{22.2}\) or less spare overhead.  The saturation identity changes the MCA split-pencil target from raw supports to primitive line-rays, and the moving-root theorem then pays the one-parameter primitive pencil case.  Therefore the adjacent safe inequality now requires stronger Q and a finite verification that the residual BC charts have all reduced to the paid moving-root form.
 \end{proof}
 
 \begin{theorem}[deployed-row theorem-level status]\label{thm:deployed-row-status}
@@ -1711,12 +1793,12 @@ For the four deployed rows and budgets displayed in \cref{rem:finite-artifacts},
 \item The active agreements \(a_0\) in the row table are unsafe.
 \item The identity-prefix lower route stops at \(a_0+1\); this is not an upper bound.
 \item The broad safe anchors listed in \cref{prop:finite-safe-anchor-gap} start strictly above \(a_0+1\), so they do not prove the adjacent safe inequality.
-\item The unconditional Q packing bound, raw split-pencil dimension bound, saturation identity, and SP-from-Q theorem of \cref{thm:q-proper,thm:bc-proper,thm:saturation,thm:q-implies-sp} are proved, but they do not by themselves imply \(B(a_0+1)\le B^*\) for any of the four adjacent rows.
+\item The unconditional Q packing bound, raw split-pencil dimension bound, moving-root bound for one-parameter BC pencils, saturation identity, and SP-from-Q theorem of \cref{thm:q-proper,thm:bc-proper,thm:bc-moving-root,cor:bc-one-pencil,thm:saturation,thm:q-implies-sp} are proved.  They do not by themselves imply \(B(a_0+1)\le B^*\), because Q is still too weak and the finite BC chart-decomposition audit has not been supplied in this note.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-Part (i) and the lower-route stopping statement in part (ii) are \cref{prop:finite-packet-consequences}.  Part (iii) is \cref{prop:finite-safe-anchor-gap}.  Part (iv) follows because the first residual replacement bound already has the gap quantified in \cref{prop:proper-q-gap}; the saturation theorem changes the object to be counted but does not supply the needed saturated primitive line-ray bound; and \cref{thm:q-implies-sp} only discharges SP after a sufficiently sharp Q max-fiber theorem has been proved.  Hence none of the proved statements supplies the missing inequality \(B(a_0+1)\le B^*\).
+Part (i) and the lower-route stopping statement in part (ii) are \cref{prop:finite-packet-consequences}.  Part (iii) is \cref{prop:finite-safe-anchor-gap}.  Part (iv) follows because the first residual replacement bound already has the gap quantified in \cref{prop:proper-q-gap}; \cref{thm:bc-moving-root,cor:bc-one-pencil} pays only those BC charts that the finite reduction has already turned into one-parameter primitive locator pencils; and \cref{thm:q-implies-sp} only discharges SP after a sufficiently sharp Q max-fiber theorem has been proved.  Hence the note still does not supply the missing inequality \(B(a_0+1)\le B^*\).
 \end{proof}
 
 \begin{theorem}[adjacent criterion from an explicit upper bound]\label{thm:finite}
@@ -1735,6 +1817,127 @@ By the unsafe theorem, \(B(a_0)>B^*\), so \cref{lem:integer-budget} gives error 
 If \cref{thm:finite} is instantiated with a proved upper bound at \(a_0+1\), then the largest safe closed-grid radius is \((n-a_0-1)/n\).  The first proved unsafe grid radius is \((n-a_0)/n\), and monotonicity makes every larger closed-grid radius unsafe.  For MCA this is \cref{lem:basic-staircase}; for list rows it is the immediate fact that a codeword list at agreement \(a\) is still valid at every lower agreement threshold.  If one records \(\delta_C^*(\varepsilon^*)\) as a real supremum over closed integer balls, the threshold lies at the upper edge of this unit interval and the convention must be printed with the proof.
 \end{remark}
 
+
+\section{Attempted Q Closure: Exact Atom Target and Barrier}
+
+This section records the result of trying to close the remaining prefix-boundary cell.  The useful outcome is an exact finite target and several no-shortcut checks.  The outcome is not a proof of the adjacent safe rows: the atom bound in \cref{def:q-row-atom} is precisely the missing theorem.
+
+\begin{definition}[row-sharp Q atom bound]\label{def:q-row-atom}
+Fix a deployed adjacent row, let \(a_+\) be its adjacent agreement, let \(K\) be the list dimension used on that route, and put \(w=a_+-K\).  For a first-match residual prefix-boundary family \(\mathcal P_Q(z)\subseteq\Fib_w(z)\), define
+\[
+        R_Q^{\max}
+        =
+        |\B|^w\max_z\frac{|\mathcal P_Q(z)|}{\binom n{a_+}}.
+\]
+The row-sharp Q atom bound with bit margin \(\Delta_Q\) is
+\[
+        R_Q^{\max}\le 2^{\Delta_Q}.
+\]
+Equivalently, if the entire row budget is hypothetically assigned to Q, the sufficient integer form is
+\[
+        \max_z|\mathcal P_Q(z)|\le B^* .
+\]
+Any non-Q cell paid in the same first-match ledger only decreases the available \(\Delta_Q\).
+\end{definition}
+
+\begin{proposition}[exact finite Q atom target at the four adjacent rows]\label{prop:q-exact-target}
+At the active adjacent agreements, the full-budget Q atom target is as follows:
+\[
+\begin{array}{c|r|r|r|r}
+\text{row} & w & \left\lceil \binom n{a_+}|\B|^{-w}\right\rceil & B^* & B^*/\left\lceil \binom n{a_+}|\B|^{-w}\right\rceil\\
+\hline
+\text{KoalaBear MCA} & 67471 & 57198030366 & 274980728111395087 & 4807520.9295\\
+\text{KoalaBear list} & 67471 & 65065153468 & 274980728111395087 & 4226236.5253\\
+\text{Mersenne-31 MCA} & 67447 & 1752700 & 16777215 & 9.5722\\
+\text{Mersenne-31 list} & 67447 & 1993678 & 16777215 & 8.4152
+\end{array}
+\]
+In bits, these are exactly the spare margins already printed in the row table:
+\[
+        22.1969,
+        \quad 22.0109,
+        \quad 3.2589,
+        \quad 3.0730 .
+\]
+Thus the binding Q problem is the Mersenne-31 list row: after all first-match payments, the remaining primitive prefix-boundary atom must be at most about \(8.42\) times its average size, and less if any other cell consumes budget.
+\end{proposition}
+
+\begin{proof}
+For each row, substitute \(n=2^{21}\), \(k=2^{20}\), the displayed adjacent agreement \(a_+\), and \(K=k+1\) on the MCA route and \(K=k\) on the list route.  The average prefix fiber is \(\binom n{a_+}|\B|^{-w}\), and the integer lower-route replay uses its ceiling.  The budgets are
+\[
+        B^*_{\rm KB}=\left\lfloor\frac{(2^{31}-2^{24}+1)^6}{2^{128}}\right\rfloor,
+        \qquad
+        B^*_{\rm M31}=\left\lfloor\frac{(2^{31}-1)^4}{2^{100}}\right\rfloor .
+\]
+The displayed ratios are the exact integer quotients evaluated as decimals.  Taking base-two logarithms of \(B^*/(\binom n{a_+}|\B|^{-w})\) gives the four printed bit margins.
+\end{proof}
+
+\begin{proposition}[moment-order floor for a finite Q proof]\label{prop:q-moment-order-floor}
+Any proof that uses only the moment criterion of \cref{thm:moment-q} and a nontrivial bound on \(\Gamma_r\) must use moment order at least
+\[
+        r\ge\left\lceil\frac{w\log_2|\B|}{\Delta_Q}\right\rceil .
+\]
+For the active rows this lower floor is
+\[
+\begin{array}{c|r|r|r}
+\text{row} & w & \Delta_Q\text{ bits} & \text{minimum }r\\
+\hline
+\text{KoalaBear MCA} & 67471 & 22.1969 & 94196\\
+\text{KoalaBear list} & 67471 & 22.0109 & 94991\\
+\text{Mersenne-31 MCA} & 67447 & 3.2589 & 641593\\
+\text{Mersenne-31 list} & 67447 & 3.0730 & 680397
+\end{array}
+\]
+Consequently every fixed-moment Q argument, and every asymptotic argument that does not produce moment estimates at orders comparable with \(w/\Delta_Q\), is numerically incapable of proving the finite adjacent rows.
+\end{proposition}
+
+\begin{proof}
+For the normalized moments in \cref{prop:moment-sandwich}, Holder's inequality gives \(\Gamma_r\ge1\).  Indeed, the sum of the \(\mu(z)\)'s is one and there are at most \(|\B|^w\) possible prefix values, so the uniform distribution minimizes \(\sum_z\mu(z)^r\), giving \(\Gamma_r\ge1\).  The finite criterion in \cref{thm:moment-q} requires
+\[
+        \log_2\Gamma_r+w\log_2|\B|\le r\Delta_Q .
+\]
+Dropping the nonnegative term \(\log_2\Gamma_r\) gives the necessary inequality \(r\ge w\log_2|\B|/\Delta_Q\).  Here the table uses the exact row prime in \(\log_2|\B|\); for Mersenne-31 this differs from \(31\) only below the displayed precision, while for KoalaBear it is slightly below \(31\).
+\end{proof}
+
+\begin{proposition}[the BC moving-root theorem does not pay boundary Q]\label{prop:bc-not-q}
+In the boundary-Q profile of \cref{prop:boundary-q}, the unknown divisor is
+\[
+        Q_z+A,
+        \qquad
+        \deg A\le \omega-w-1,
+        \qquad
+        \omega=n-a_+ .
+\]
+Thus the coefficient parameter space has dimension \(\omega-w\).  At the active rows this dimension is
+\[
+\begin{array}{c|r|r|r}
+\text{row} & \omega=n-a_+ & w & \omega-w\\
+\hline
+\text{KoalaBear MCA} & 981104 & 67471 & 913633\\
+\text{KoalaBear list} & 981105 & 67471 & 913634\\
+\text{Mersenne-31 MCA} & 981128 & 67447 & 913681\\
+\text{Mersenne-31 list} & 981129 & 67447 & 913682
+\end{array}
+\]
+Therefore \cref{thm:bc-moving-root,cor:bc-one-pencil} cannot be applied directly to boundary Q: those theorems count split parameters on a projective one-parameter locator pencil, while Q is a high-dimensional affine divisor slice.  To route Q through BC one would need an additional theorem decomposing this affine slice into paid one-parameter pencils with a first-match bound on the number of relevant pencils.  No such theorem is present in this note.
+\end{proposition}
+
+\begin{proof}
+The boundary dictionary \cref{prop:boundary-q} states exactly that a prefix fiber is counted by the divisibility condition \(Q_z+A\mid X^n-\beta\) with \(\deg A\le\omega-w-1\).  A polynomial of degree at most \(\omega-w-1\) has \(\omega-w\) free coefficients.  Substituting the four values of \(a_+\), \(K\), and \(w=a_+-K\) gives the table.  Since \(\omega-w\) is larger than nine hundred thousand in all four cases, the family is not a one-parameter pencil.  The moving-root theorem is still valid for every line inside this affine space, but a line-by-line decomposition without a bound on the number of lines gives no row budget.
+\end{proof}
+
+\begin{proposition}[current Q ingredients do not close the adjacent ledger]\label{prop:q-not-closed}
+The theorem-level Q material currently proved in this note does not imply \(B(a_0+1)\le B^*\) for any deployed row.
+\end{proposition}
+
+\begin{proof}
+The only unconditional max-fiber upper bound presently proved for Q is the Johnson packing/anticode bound of \cref{thm:q-proper}.  By \cref{prop:proper-q-gap}, its normalized overhead at the active rows is between \(2^{1660926}\) and \(2^{1661553}\), whereas the available row margins are only \(2^{22.1969}\), \(2^{22.0109}\), \(2^{3.2589}\), and \(2^{3.0730}\).  Hence that theorem is many orders of magnitude too weak.
+
+\Cref{thm:moment-q} could in principle prove the desired atom bound, but \cref{prop:q-moment-order-floor} shows that the finite rows require moment orders from \(94196\) up to \(680397\) before the harmless term \(w\log_2|\B|\) alone fits in the margin.  No theorem in the note supplies such high-order moment estimates.
+
+Finally, \cref{thm:q-implies-sp} is one-way: it proves that a max-fiber Q theorem would discharge SP, not that SP proves Q.  And \cref{prop:bc-not-q} explains why the one-parameter BC moving-root theorem does not pay the high-dimensional boundary-Q slice.  Thus the adjacent upper ledger remains open precisely at the row-sharp Q atom bound of \cref{def:q-row-atom}.
+\end{proof}
+
 \section{Audit Corrections and Expanded Gap Ledger}
 
 The preceding sections now leave three kinds of statements, and the distinction is part of the proof.
@@ -1744,13 +1947,13 @@ In this expanded version:
 \begin{enumerate}[label=\textup{(\roman*)}]
 \item The lower-side identity-prefix and simple-pole implications are proved theorems under their stated field-size hypotheses.
 \item The broad safe anchors and the high-agreement tangent/common-line cells are proved only in their displayed agreement ranges.
-\item The Q, BC, and SP replacements in \cref{thm:q-proper,thm:bc-proper,thm:saturation,prop:line-ray-saturation,thm:q-implies-sp,thm:sp-proper} are unconditional statements, but their numerical strength is insufficient for the four active adjacent agreements.
+\item The Q, BC, and SP replacements in \cref{thm:q-proper,thm:bc-proper,thm:bc-moving-root,cor:bc-one-pencil,thm:saturation,prop:line-ray-saturation,thm:q-implies-sp,thm:sp-proper} are unconditional statements.  The one-parameter primitive BC pencil is now numerically strong, but the full adjacent row is still not closed because the row ledger must verify that all residual BC charts reduce to such pencils and because Q remains too weak.
 \item No statement in this note proves \(B(a_0+1)\le B^*\) for any deployed adjacent row.
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-Part (i) is \cref{prop:prefix-witness,thm:simple-pole-list-floor,cor:identity-prefix-unsafe,thm:unsafe-envelope}.  Part (ii) is \cref{thm:gf-deep-mca,prop:exact-tangent-cell,thm:gf-mca-from-ca,thm:subfield-confinement,prop:finite-safe-anchor-gap}.  Part (iii) follows from the cited residual-cell theorems and from \cref{prop:proper-q-gap}.  Part (iv) is then immediate from \cref{thm:deployed-row-status}: the only theorem in this note that would turn the banked unsafe edge into a closed adjacent threshold is \cref{thm:finite}, and its upper-bound hypothesis is not supplied by the proved replacement bounds.
+Part (i) is \cref{prop:prefix-witness,thm:simple-pole-list-floor,cor:identity-prefix-unsafe,thm:unsafe-envelope}.  Part (ii) is \cref{thm:gf-deep-mca,prop:exact-tangent-cell,thm:gf-mca-from-ca,thm:subfield-confinement,prop:finite-safe-anchor-gap}.  Part (iii) follows from the cited residual-cell theorems, from the moving-root count for one-parameter BC pencils, and from \cref{prop:proper-q-gap}.  Part (iv) is then immediate from \cref{thm:deployed-row-status}: the only theorem in this note that would turn the banked unsafe edge into a closed adjacent threshold is \cref{thm:finite}, and its upper-bound hypothesis is not supplied by the proved replacement bounds.
 \end{proof}
 
 \begin{problem}[row-sharp multilevel Q target]\label{prob:row-sharp-q}
@@ -1767,27 +1970,28 @@ with the exact row-specific normalized overhead \(R_Q^{\rm row}\) fitting the re
 with the actual allocated bit margin \(\Delta_Q\), not just an \(e^{o(n)}\) asymptotic loss.
 \end{problem}
 
-\begin{problem}[saturated primitive split-pencil line-ray target]\label{prob:saturated-bc}
-For each active MCA adjacent row, after quotient, boundary-Q, common-support, tangent, and extension branches have been paid by first match, bound the number of residual bad slopes through saturated primitive line rays:
-\[
-        |\{z:\exists c\ (z,c)\in\LineRay_E(u,v;a_+)\text{ and }z\text{ is residual-bad}\}|.
-\]
-By \cref{prop:line-ray-saturation}, a raw support-locator census is only an upper audit object,
+\begin{problem}[BC chart-decomposition target after moving-root]\label{prob:saturated-bc}
+For each active MCA adjacent row, after quotient, boundary-Q, common-support, tangent, extension, degree-drop, and common-GCD branches have been paid by first match, verify that every remaining balanced-core split-pencil chart is one of the following two types:
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item a projective one-parameter locator pencil covered by \cref{cor:bc-one-pencil}; or
+\item a higher-dimensional coefficient family that is explicitly split into such pencils, or else assigned to a separate named residual cell with its own slope, not raw-support, bound.
+\end{enumerate}
+By \cref{prop:line-ray-saturation}, a raw support-locator census remains only an audit object,
 \[
         \sum_{z\in E}\Cen(u+zv;a_+)
         =
         \sum_{(z,c)\in\LineRay_E(u,v;a_+)}\binom{s_{z,c}}{a_+},
 \]
-and can be exponentially larger than the slope numerator.  The required theorem must therefore control either the distinct slope set directly or the saturated line-ray set with a proved multiplicity loss small enough for the exact row margin.
+and can be exponentially larger than the slope numerator.  The enumerative obstruction for primitive one-parameter pencils is now removed by \cref{thm:bc-moving-root}; the finite row work is to certify that no residual high-dimensional BC family has escaped the pencil decomposition.
 \end{problem}
 
 \begin{remark}[finite arithmetic artifacts]\label{rem:finite-arithmetic-artifacts}
-The exact integer tables in this note can be checked independently from the displayed formulas using integer arithmetic only: \(B^*=\lfloor p^s2^{-\lambda}\rfloor\), \(L(a)=\lceil\binom na p^{-(a-K)}\rceil\), the simple-pole value \(M(a)=\lceil L(a)(q-n)/(q-n+k(L(a)-1))\rceil\), the extension headroom in \cref{prop:extension-cell-target}, and the logarithmic Q-packing estimate in \cref{prop:proper-q-gap}.  These checks are arithmetic audits; they do not replace the missing upper-ledger theorems in \cref{prob:row-sharp-q,prob:saturated-bc}.
+The exact integer tables in this note can be checked independently from the displayed formulas using integer arithmetic only: \(B^*=\lfloor p^s2^{-\lambda}\rfloor\), \(L(a)=\lceil\binom na p^{-(a-K)}\rceil\), the simple-pole value \(M(a)=\lceil L(a)(q-n)/(q-n+k(L(a)-1))\rceil\), the extension headroom in \cref{prop:extension-cell-target}, and the logarithmic Q-packing estimate in \cref{prop:proper-q-gap}, and the two-slope primitive one-pencil BC count in \cref{cor:bc-one-pencil}.  These checks are arithmetic audits; they do not replace the missing row-sharp Q theorem or the chart-decomposition verification in \cref{prob:row-sharp-q,prob:saturated-bc}.
 \end{remark}
 
 \section{Remaining Finite Upper-Ledger Target}
 
-The proper proofs above remove the fake certificate-theorem closure.  They prove real replacement statements, but they do not settle the dense frontier.  A finite adjacent proof must improve the upper bound \(U(a_0+1)\) in \cref{thm:finite} until it fits inside the exact margins \(22.1969,22.0109,3.2589,3.0730\) bits.  After \cref{thm:q-implies-sp}, the independent active MCA targets are multilevel Q and saturated primitive BC; SP remains an exact audit ledger and follows once Q is strong enough.
+The proper proofs above remove the fake certificate-theorem closure.  They prove real replacement statements, but they do not settle the dense frontier.  A finite adjacent proof must improve the upper bound \(U(a_0+1)\) in \cref{thm:finite} until it fits inside the exact margins \(22.1969,22.0109,3.2589,3.0730\) bits.  After \cref{thm:q-implies-sp} and \cref{thm:bc-moving-root}, the independent active MCA targets are row-sharp multilevel Q and the finite BC chart-decomposition audit.  SP remains an exact audit ledger and follows once Q is strong enough; a primitive one-parameter BC pencil is now paid by the moving-root theorem.
 
 \paragraph{Prefix-boundary ledger.}  The prefix-boundary row must bound the actual maximum fiber, not the raw null fiber.  \Cref{prop:mode-null-false} rules out the mode-at-null shortcut, and \cref{thm:moment-q} gives the exact moment inequality required for a finite proof:
 \[
@@ -1795,7 +1999,7 @@ The proper proofs above remove the fake certificate-theorem closure.  They prove
 \]
 The new unconditional packing theorem \cref{thm:q-proper} is valid but, by \cref{prop:proper-q-gap}, is far too weak at the deployed adjacent rows.
 
-\paragraph{Split-pencil interior ledger.}  The split-pencil proof must count saturated primitive line-rays, not raw support locators.  The exact saturation identity \cref{thm:saturation} explains the difference, and \cref{cor:raw-bc-fails} shows why the raw count can be exponentially larger than the MCA numerator.  The remaining proof must improve the dimension bound of \cref{thm:bc-proper} by using the actual split condition, quotient removal, base-field normalization, saturation, and row-specific chart equations.  The base-field floor in \cref{prop:base-field-floor} shows that challenge-field normalization alone is false.
+\paragraph{Split-pencil interior ledger.}  The split-pencil proof must count saturated primitive line-rays, not raw support locators.  The exact saturation identity \cref{thm:saturation} explains the difference, and \cref{cor:raw-bc-fails} shows why the raw count can be exponentially larger than the MCA numerator.  The actual one-parameter split condition is now used in \cref{thm:bc-moving-root}: after common-GCD roots are paid, each moving root chooses at most one pencil parameter, so a primitive deployed BC pencil contributes at most two slopes.  Thus BC is no longer an enumerative conjecture for one-parameter locator pencils.  The remaining finite work is structural: the row ledger must show that every residual balanced-core chart is reduced to these pencils, or must isolate a genuine higher-dimensional residual cell.  The base-field floor in \cref{prop:base-field-floor} still warns that a challenge-field-only raw support normalization is false.
 
 \paragraph{Primitive shift-pair ledger.}  The primitive pair ledger should remain in the paper as the exact \(L^2\) identity of \cref{prop:gamma2-ledger}.  It is no longer an independent active assumption in the MCA closure: \cref{thm:q-implies-sp} proves that a max-fiber Q theorem bounds the whole SP ledger.  The unconditional count in \cref{thm:sp-proper} is only an all-pairs audit ceiling.
 
@@ -1803,7 +2007,7 @@ The new unconditional packing theorem \cref{thm:q-proper} is valid but, by \cref
 
 \section{Conclusion}
 
-This version contains no Q, BC, or SP certificate theorem.  The unsafe side is exact and the broad safe anchors are unconditional in their stated ranges.  The former SP input is now a theorem downstream from Q; the raw BC support count is replaced by exact saturation and line-ray identities; and the unconditional Q/BC/SP ceilings that remain are explicitly proved but too weak for the deployed adjacent rows.  The full entropy--subfield equality and the adjacent safe inequalities are therefore not asserted.  A closed adjacent theorem still requires a row-sharp multilevel Q max-fiber bound and a saturated primitive split-pencil line-ray bound satisfying \cref{thm:finite}.
+This version contains no Q, BC, or SP certificate theorem.  The unsafe side is exact and the broad safe anchors are unconditional in their stated ranges.  The former SP input is now a theorem downstream from Q; the raw BC support count is replaced by exact saturation and line-ray identities; and primitive one-parameter BC pencils are paid by the moving-root theorem.  The full entropy--subfield equality and the adjacent safe inequalities are still not asserted.  The attempted Q closure in \cref{prop:q-exact-target,prop:q-moment-order-floor,prop:bc-not-q,prop:q-not-closed} identifies the exact missing atom theorem and rules out the current shortcuts: packing is far too weak, fixed moments cannot fit the finite rows, SP is downstream from Q rather than upstream, and the paid BC theorem applies to one-parameter pencils rather than the high-dimensional boundary-Q slice.  A closed adjacent theorem still requires a row-sharp Q atom bound together with the BC chart-decomposition audit required by \cref{prob:saturated-bc}.
 
 \begin{thebibliography}{BCHKS25}
 

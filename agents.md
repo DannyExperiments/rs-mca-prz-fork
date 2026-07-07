@@ -221,6 +221,35 @@ frontier, but do not treat its matching-safe-side language as paper
 authority until the corresponding claims are promoted into Paper D or
 `towards-prize` with replayable certificates.
 
+### Current bottleneck: prove row-sharp Q
+
+The latest `experimental/grande_finale.tex` reduces the former Q/BC/SP block
+substantially:
+
+```text
+SP follows from a max-fiber Q theorem.
+Primitive one-parameter BC pencils are paid by the moving-root theorem.
+The remaining finite safe-side obstruction is row-sharp Q, plus a finite
+BC chart-decomposition audit showing that residual BC charts reduce to the
+paid one-parameter pencil form.
+```
+
+For proof work, start with:
+
+```text
+experimental/grande_finale.tex              compact proof-audited target note
+experimental/cap25_cap_v13_raw.tex          long raw v13 source ledger
+experimental/cap25_v13_missing_inputs_strategy.md
+```
+
+In `experimental/grande_finale.tex`, the key labels are
+`def:q-row-atom`, `prop:q-exact-target`, `prop:q-moment-order-floor`,
+`prop:bc-not-q`, `prop:q-not-closed`, and `prob:row-sharp-q`.  A useful Q proof
+must bound the actual first-match residual prefix-boundary max fiber at the
+deployed adjacent rows, with constants fitting the printed bit margins.  A
+generic `poly(n)` loss is not enough for the finite adjacent rows unless all
+constants are explicit and fit inside the exact budget.
+
 ### Missing inputs strategy: Q, BC, SP, and legacy `(A)`
 
 The proof-program guide
@@ -810,6 +839,16 @@ Attach script, seed, exact command, or symbolic certificate.
 
 ### Lean formalization correspondence
 
+All Lean material for this repository belongs under:
+
+```text
+experimental/lean/
+```
+
+Keep package names, module paths, and Lake `globs` coherent; for example a
+package named `Foo` should have either a root `Foo.lean` or modules under
+`Foo/`.
+
 Use `experimental/lean/lean-blueprint.json` as the current formalization
 blueprint for `experimental/cap25_cap_v13_raw.tex`.  It is a dependency graph:
 each node records the TeX label, statement kind, module bucket, `depends_on`,
@@ -871,6 +910,14 @@ conversion.  Before citing any towards-prize result as Lean-certified, run the
 package in a Mathlib-enabled Lean 4.28 environment and add a theorem-by-theorem
 map; the deployed binomial-entropy cap rows remain outside this package unless
 explicitly formalized.
+
+For the final Q/BC/SP note, use `experimental/lean/grande_finale/`.  It is a
+partial formalization of `experimental/grande_finale.tex`: budget/staircase
+kernels, CA/MCA predicates, moment kernels, BC moving-root and saturation
+lemmas, and SP-from-Q are represented there.  It does **not** yet formalize the
+row-sharp Q atom theorem, the finite BC chart-decomposition audit, or the
+adjacent deployed safe rows.  Those are current proof and formalization targets,
+not completed Lean certificates.
 
 ## Success criteria
 
