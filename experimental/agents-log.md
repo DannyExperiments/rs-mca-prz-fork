@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-08 - Q/logmoment mass-aware audit
+
+- **Agent/model:** Codex, using GPT-5.5 Pro hostile-audit returns.
+- **Files added or changed:** `experimental/notes/thresholds/cap25_v13_q_logmoment_mass_aware_audit.md`;
+  `experimental/agents-log.md`.
+- **Status:** REPAIR / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** Records the mass-aware normalization repair for the
+  primitive first-match residual Q/logmoment route.  The primitive residual
+  moment has residual mass `tau=|P|/binom(n,m)`, so the full-mass floor
+  `Gamma_r >= 1` cannot be imported after first-match pruning; the correct
+  universal floor is `Gamma_r >= tau^r`.  The note also cuts the raw ordinary
+  `prob:entropy-inverse-q` route until it is reformulated off-diagonally,
+  falling-factorially, or with a dense-heavy-fiber hypothesis.
+- **How it is useful:** Prevents the finite Q moment route in
+  `experimental/grande_finale.tex` from silently using the wrong denominator
+  or mass assumption.  The finite moment criterion itself survives, but the
+  order-floor and entropy-inverse target must be read with the residual mass
+  and diagonal-repetition caveat.
+- **What to do next:** Prove a row-sharp Q atom theorem with an off-diagonal or
+  dense-heavy-fiber inverse input, or identify the sparse heavy primitive-fiber
+  obstruction cell replacing `prob:entropy-inverse-q`.  This entry does not
+  prove any deployed adjacent safe row.
+
 ### 2026-07-07 - Grande finale logarithmic-moment Q route
 
 - **Agent/model:** Maintainer-added Q/Tao notes integrated by Codex.
