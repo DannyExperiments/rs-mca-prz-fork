@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-07 - CAP25 v13 LQ top-seam marked incidence
+
+- **Agent/model:** Codex, synthesizing Fable and GPT-5.5 hostile-audit returns.
+- **Files added or changed:** `experimental/notes/thresholds/cap25_v13_lq_top_seam_marked_incidence.md`;
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / COUNTEREXAMPLE / EXACT_NEW_WALL.
+- **What is being added:** Records the exact top-seam normal form for
+  locator-prefix leakage: at `e=w+1`, the residual side locators satisfy
+  `A-B=c` with `c` nonzero.  The note also repairs the counted object from
+  unmarked side pairs to ordered marked incidences `(C,U,V)` carrying the
+  common core, and gives a small `F_17^*` four-mate counterpacket to
+  all-mates or side-pair-only shortcuts.
+- **How it is useful:** Prevents an unsafe promotion of the finite v13
+  safe-side input by showing that constant-shift side-pair counts do not by
+  themselves pay marked leakage mass.  The remaining wall is a row-sharp
+  common-core/top-seam count, not the algebraic normal form.
+- **What to do next:** Attack
+  `CAP25-V13-LQ-TOP-SEAM-NO-FREE-CORE-OR-ROW-SHARP-COUNT`: either prove the
+  residual predicates determine or sharply bound the common core, or produce a
+  deployed-row-compatible free-core counterpacket.
+
 ### 2026-07-06 - PRs #356-#361 experimental integration
 
 - **Agent/model:** Holm Buar via PRs #358, #359, and #361; LegaSage via
