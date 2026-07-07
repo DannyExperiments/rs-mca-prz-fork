@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-07 - CAP25 v13 Q first-match leakage compiler
+
+- **Agent/model:** Codex, synthesizing a nine-return hostile audit round.
+- **Files added or changed:** `experimental/notes/thresholds/cap25_v13_qfm_leakage_compiler.md`;
+  `experimental/agents-log.md`.
+- **Status:** COUNTEREXAMPLE / REPAIR / EXACT_NEW_WALL.
+- **What is being added:** Banks the support-level counterpacket to Q
+  target-label deletion: over `F_17^*`, a `mu_2` quotient-paid support and a
+  primitive support have the same first two power sums, so equality of the Q
+  target does not imply earlier support-cell membership.  The repaired object
+  is the explicit leakage branch
+  `L_Q = (Q cap tau^{-1}(tau(E_<Q))) \ E_<Q`.
+- **How it is useful:** Makes the PR #386 first-match interface sound by
+  replacing an invalid support-deletion shortcut with a verifier-facing
+  leakage compiler.  The note does not prove `U(1116048) <= B*`; it names the
+  row-sharp support-multiplicity theorem still required.
+- **What to do next:** Attack
+  `CAP25-V13-QFM-MARKED-LEAKAGE-ROW-SHARP-PAYMENT`: use a canonical earlier
+  target selector to inject leakage witnesses into marked collision data, then
+  either fit the exact KB/M31 row budgets or produce a scalable primitive
+  leakage counterpacket.
+
 ### 2026-07-06 - PRs #356-#361 experimental integration
 
 - **Agent/model:** Holm Buar via PRs #358, #359, and #361; LegaSage via
