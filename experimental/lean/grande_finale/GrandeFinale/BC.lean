@@ -1,5 +1,5 @@
 import Mathlib
-import RequestProject.GrandeFinale
+import GrandeFinale
 
 /-!
 # The BC program: base-field-normalized split-pencil census (`grande_finale.tex`, `\S`"Proved Prefix and Split-Pencil Reductions")

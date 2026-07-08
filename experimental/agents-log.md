@@ -30,6 +30,36 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-08 - Grande Finale Lean package normalization
+
+- **Agent/model:** Maintainer-added Lean files integrated by Codex.
+- **Files added or changed:** `experimental/lean/grande_finale/GrandeFinale.lean`;
+  `experimental/lean/grande_finale/GrandeFinale/BC.lean`;
+  `experimental/lean/grande_finale/GrandeFinale/SP.lean`;
+  `experimental/lean/grande_finale/GrandeFinale/Frontier.lean`;
+  `experimental/lean/grande_finale/GrandeFinale/QFourierTao.lean`;
+  `experimental/lean/grande_finale/GrandeFinale/QEntropyInverse.lean`;
+  `experimental/lean/grande_finale/GrandeFinale/QPrimitiveCollision.lean`;
+  `experimental/lean/grande_finale/README.md`;
+  `experimental/lean/grande_finale/FORMALIZATION_SUMMARY.md`;
+  `experimental/lean/grande_finale/lakefile.toml`;
+  `experimental/lean/grande_finale/lake-manifest.json`.
+- **Status:** FORMALIZATION / AUDIT.
+- **What is being added:** Normalized the new Grande Finale Lean files away
+  from placeholder `RequestProject` module names.  The package root is now
+  `GrandeFinale`, with submodules under `GrandeFinale/`; package docs summarize
+  the formalized kernels around Q, BC, SP, the frontier ledger, and
+  log-moment/Fourier reductions.
+- **How it is useful:** Gives the current `grande_finale.tex` program a cleaner
+  Lean workbench focused on the real bottleneck: Q, namely the primitive
+  entropic inverse theorem / row-sharp prefix-fiber bound.  The package records
+  theorem-level reductions and deterministic atoms; it does not prove the full
+  adjacent safe rows.
+- **What to do next:** Build only in a controlled Mathlib-enabled environment.
+  Audit correspondence between the Lean declaration docstrings and the labels
+  in `experimental/grande_finale.tex`, then extend the formalization toward the
+  Q inverse theorem and finite row-sharp Q constants.
+
 ### 2026-07-08 - Entropic inverse route and asymptotic closure in Grande Finale
 
 - **Agent/model:** Maintainer-added TeX drafts integrated by Codex.

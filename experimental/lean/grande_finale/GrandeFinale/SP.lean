@@ -1,5 +1,5 @@
 import Mathlib
-import RequestProject.GrandeFinale
+import GrandeFinale
 
 /-!
 # The SP program: primitive shift-pair control (`grande_finale.tex`, `\S`"Proved Prefix and Split-Pencil Reductions")
