@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-08 - Signed-e_m masked residual audit for row-sharp Q
+
+- **Agent/model:** Codex synthesizing six GPT-5.5 Pro hostile-audit returns.
+- **Files added or changed:** `experimental/notes/thresholds/cap25_v13_signed_em_masked_residual_audit.md`;
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / ROUTE_CUT / COUNTEREXAMPLE.
+- **What is being added:** A narrow audit note for the PR #412 row-sharp Q
+  route.  The p^(w/2) concentration-floor route cut is not refuted, but the
+  phrase "signed-e_m inverse" is repaired: the theorem-facing object after
+  first-match deletion is the masked residual character-phase coefficient
+  `E_Q(t)`, and raw signed-e_m L1 is a sufficient but overstrong route rather
+  than an equivalent row-sharp Q formulation.
+- **How it is useful:** Prevents promoting a false crux into the finite CAP25
+  v13 safe-side proof.  It records small F_17/F_23 counterpackets separating
+  max-fiber Q from raw primitive L1 certificates and names the next target as
+  `CAP25-V13-CHARACTER-PHASE-MASKED-SIGNED-EM-INVERSE`.
+- **What to do next:** If needed, replay the toy examples by script, then
+  formulate the first-match residual family `P_Q` and coefficients `E_Q(t)`
+  for the Mersenne-31 list row.  Do not claim row-sharp Q or any adjacent safe
+  row from this note.
+
 ### 2026-07-07 - Grande finale logarithmic-moment Q route
 
 - **Agent/model:** Maintainer-added Q/Tao notes integrated by Codex.
