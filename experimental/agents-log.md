@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-09 - M31 Chebyshev fixed-remainder floor audit
+
+- **Agent/model:** Codex synthesizing Fable trace recovery and nine
+  GPT-5.5 Pro hostile-audit returns.
+- **Files added or changed:**
+  `experimental/notes/thresholds/20260709_m31_chebyshev_fixed_remainder_floor/cap25_v13_m31_chebyshev_fixed_remainder_floor.md`;
+  `experimental/notes/thresholds/20260709_m31_chebyshev_fixed_remainder_floor/m31_chebyshev_fixed_remainder_floor.py`;
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** A narrow exact replay note for the Mersenne-31 list
+  row: the Chebyshev `c=2048` fixed-remainder floor is
+  `ceil(binomial(1023,544)/(2^31-1)^32)=6796405`, leaving `9980810` objects
+  of budget and only `2.3237244851910264` bits of residual overhead above the
+  identity average. The note also records the naive dyadic fixed-remainder sum
+  `16548620` as a nonclaim warning, not as a counterpacket.
+- **How it is useful:** Sharpens the finite M31-list row-sharp Q target after
+  the moment-floor route cut: the next theorem must control the
+  planted-conditioned primitive residual or prove a real dyadic-chain
+  co-location theorem.
+- **What to do next:** Attack
+  `CAP25-V13-CHEBYSHEV-CHAINED-TARGET-RESIDUAL-FLATNESS` for the M31-list row.
+  Do not claim adjacent safe-row closure or additive stacking of dyadic floors
+  from this audit alone.
+
 ### 2026-07-08 - Grande Finale Lean package normalization
 
 - **Agent/model:** Maintainer-added Lean files integrated by Codex.
