@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-09 - M31 m=67 square-root checker addendum
+
+- **Agent/model:** Codex synthesizing six GPT-5.5 Pro hostile-audit returns
+  against the M31 `m=67` even-defect divisor wall.
+- **Files added or changed:**
+  `experimental/notes/thresholds/20260709_m31_chebyshev_fixed_remainder_floor/cap25_v13_m31_c1024_paired_prefix_audit.md`;
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** A narrow addendum to the existing M31 `c=1024`
+  paired-prefix audit. The squarefree `m=67` odd-core branch is checked by
+  the oriented divisor data `D | T_1024(2Z - 1)`, `D = E^2 - lambda^2 Z`,
+  `deg(E)=34`, `lambda != 0`, and `E(eta^2) = lambda eta`. The addendum also
+  records that `D(eta^2)=0` alone is not orientation-complete and that
+  `H^2 == Z D'^2 mod D` is not a standalone full certificate.
+- **How it is useful:** Tightens the named
+  `CAP25-V13-M31-T2048-EVEN-DEFECT-DIVISOR-COUNT` wall into an oriented
+  square-root checker, while preserving the already-open 511-of-956
+  even-completion layer and the possible reserved-pair/double-root branch.
+- **What to do next:** Prove or refute the oriented `m=67` divisor checker;
+  then bound the 32-even-completion layer. Do not claim `U(1116023) <= B*`,
+  row-sharp Q, or any full M31-list adjacent safe row from this addendum.
+
 ### 2026-07-09 - Asymptotic RS MCA closed-ledger proof paper
 
 - **Agent/model:** Codex.
