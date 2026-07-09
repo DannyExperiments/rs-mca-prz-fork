@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-09 - M31 c=1024 paired-prefix small-core audit
+
+- **Agent/model:** Codex synthesizing a Fable packet and nine GPT-5.5 Pro
+  hostile-audit returns.
+- **Files added or changed:**
+  `experimental/notes/thresholds/20260709_m31_chebyshev_fixed_remainder_floor/cap25_v13_m31_c1024_paired_prefix_audit.md`;
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** A narrow repair note for the M31 `c=1024`
+  paired-prefix slice. Under the repaired paired-prefix conventions, defect
+  cores of size at most `65` collapse to the planted singleton and hence to the
+  factor-through `c=2048` floor. The first live non-factor-through obstruction
+  is the `m=67` odd-defect divisor normal form, plus the still-open even
+  completion layer.
+- **How it is useful:** Refines
+  `CAP25-V13-M31-C1024-PAIRED-PREFIX-PRIMITIVE-Q` into the named residual wall
+  `CAP25-V13-M31-T2048-EVEN-DEFECT-DIVISOR-COUNT`, instead of treating
+  `c=1024` as a solved row-sharp Q cell.
+- **What to do next:** Prove or refute admissibility of the `m=67` divisor wall,
+  then bound the 32-even-completion layer. Do not claim `U(1116023) <= B*`,
+  row-sharp Q, or additive dyadic stacking from this audit.
+
 ### 2026-07-09 - M31 Chebyshev fixed-remainder floor audit
 
 - **Agent/model:** Codex synthesizing Fable trace recovery and nine
