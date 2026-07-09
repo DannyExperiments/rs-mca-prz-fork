@@ -104,6 +104,74 @@ dyadic floors in one target fiber and no additivity/stacking theorem is being
 claimed here. It is only a sharp warning that the finite margin is extremely
 thin if a future chaining theorem exists.
 
+### Follow-up 3x3 residual-flatness audit
+
+A subsequent hostile audit of the chained-target residual made the warning
+more precise. Removing only the selected `c=2048` floor leaves
+
+```text
+B* - F_2048 = 9980810.
+```
+
+The remaining printed dyadic floors sum to
+
+```text
+sum_{j != 11} F_{2^j} = 9752215
+(B* - F_2048) - sum_{j != 11} F_{2^j} = 228595.
+```
+
+Thus the same `228595` gap remains after conditioning on the best floor. This
+still does not prove a counterpacket: lower floors are not upper-ledger
+payments, and the available Chebyshev tower structure points toward nested or
+absorbed dyadic subfamilies rather than disjoint additive stacking.
+
+The exact coarser tail above the best scale is tiny:
+
+```text
+sum_{c > 2048} F_c = 6880.
+```
+
+So the next live obstruction is not the coarser tower. It is the immediate
+finer scale `c=1024`, where
+
+```text
+c     = 1024
+N_c   = 2048
+f_c   = 1089
+r_c   = 887
+t_c   = 65
+F_c   = ceil(binomial(2047,1089) / p^65) = 1144150.
+```
+
+Inside the `c=1024` quotient, the already selected `c=2048` packet has the
+paired form
+
+```text
+Q_pair(Y) = (Y - eta) P(T_2(Y)),    deg P = 544,    deg Q_pair = 1089.
+```
+
+The next theorem-facing target is therefore narrower than the original
+chained-flatness slogan:
+
+```text
+CAP25-V13-M31-C1024-PAIRED-PREFIX-PRIMITIVE-Q.
+
+Fix the c=2048 planted target. In the c=1024 quotient, bound the number of
+degree-1089 split locators Q(Y) with the first 65 quotient-prefix coefficients
+equal to the paired prefix induced by Q_pair(Y), excluding factor-through forms;
+or exhibit a heavy non-factor-through paired-prefix fiber.
+```
+
+An equivalent incidence route is:
+
+```text
+M31-PLANTED-RESIDUAL-SHIFT-PAIR-INVERSE.
+
+If the residual exceeds 9980810, force many planted-residual shift-pair
+incidences in one distance stratum, then prove that the incidences enter a
+paid cell or build an explicit counterpacket.
+```
+
 ## Surviving lemma
 
 The bankable local lemma is:
@@ -145,3 +213,8 @@ is at most 9980810, or exhibit a co-located dyadic-chain counterpacket.
 Equivalently, the residual family must fit inside only
 `2.3237244851910264` bits above the identity average. This is now the sharper
 M31-list finite audit target.
+
+The 3x3 residual audit refines this broad target to the `c=1024`
+paired-prefix primitive Q problem above. Any future use of the dyadic floors
+must first prove co-location/additivity, or else work directly in that
+paired-prefix quotient slice.

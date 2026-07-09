@@ -54,6 +54,30 @@ Keep entries concise and link to the relevant files.
   Do not claim adjacent safe-row closure or additive stacking of dyadic floors
   from this audit alone.
 
+### 2026-07-09 - M31 Chebyshev dyadic-chain residual audit
+
+- **Agent/model:** Codex synthesizing a 3x3 GPT-5.5 Pro hostile-audit round.
+- **Files added or changed:**
+  `experimental/notes/thresholds/20260709_m31_chebyshev_fixed_remainder_floor/cap25_v13_m31_chebyshev_fixed_remainder_floor.md`;
+  `experimental/agents-log.md`.
+- **Status:** ROUTE_CUT / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** A follow-up addendum to the M31-list Chebyshev
+  fixed-remainder note. After selecting the `c=2048` floor, the remaining
+  printed dyadic floors sum to `9752215`, leaving the same `228595` gap inside
+  the residual budget `9980810`; coarser scales above `2048` contribute only
+  `6880`. The audit cuts the tempting additive-stacking interpretation: lower
+  floors are not upper-ledger payments, and no theorem currently co-locates the
+  dyadic floors in one target fiber.
+- **How it is useful:** Refines the broad chained-target residual wall to the
+  immediate `c=1024` paired-prefix primitive Q slice:
+  `CAP25-V13-M31-C1024-PAIRED-PREFIX-PRIMITIVE-Q`, with paired form
+  `Q_pair(Y)=(Y-eta)P(T_2(Y))`, `deg P=544`, `deg Q_pair=1089`, and the first
+  `65` quotient-prefix coefficients fixed.
+- **What to do next:** Prove the `c=1024` paired-prefix primitive Q bound,
+  exhibit a heavy non-factor-through paired-prefix fiber, or prove the
+  equivalent planted-residual shift-pair inverse. Do not treat the near miss as
+  a counterpacket or as a proof of `U(1116023) <= B*`.
+
 ### 2026-07-08 - Grande Finale Lean package normalization
 
 - **Agent/model:** Maintainer-added Lean files integrated by Codex.
