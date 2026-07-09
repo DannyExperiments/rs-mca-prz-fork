@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-09 - Row-sharp Q mass-sensitive moment floor
+
+- **Agent/model:** Codex synthesizing nine GPT-5.5 Pro hostile-audit returns.
+- **Files added or changed:** `experimental/notes/thresholds/20260709_q_moment_floor_route_cut/cap25_v13_q_moment_floor_note.md`;
+  `experimental/notes/thresholds/20260709_q_moment_floor_route_cut/q_moment_floor.py`;
+  `experimental/agents-log.md`.
+- **Status:** BANKABLE_LEMMA / ROUTE_CUT / AUDIT.
+- **What is being added:** A narrow finite-accounting note for
+  `def:q-row-atom` / `prob:row-sharp-q`.  It proves the orbit-amplified
+  moment lower bound with a residual mass parameter, replays the four active
+  CAP25 v13 row constants, and records that the Mersenne-31 list binding row
+  has no theorem-facing multiplicative orbit gain under the current
+  hypotheses.
+- **How it is useful:** It cuts a broad class of finite Q proof shortcuts:
+  fixed or moderate moment, falling-factorial moment, participation-ratio, and
+  orbit-amplification routes cannot certify the deployed Mersenne-31 list row
+  unless they also print enormous residual mass deletion or a direct max-fiber
+  certificate.  The included script reproduces the active-row moment floors,
+  including the Mersenne-31 list floor `680397`.
+- **What to do next:** Use this as a guardrail for future Q attacks.  The live
+  proof target remains a direct row-sharp Q atom certificate, likely in the
+  Chebyshev-primitive Mersenne-31 list setting, plus the parallel saturated-BC
+  audit.  Do not claim `U(a0+1) <= B*` for any deployed row from this note.
+
 ### 2026-07-08 - Grande Finale Lean package normalization
 
 - **Agent/model:** Maintainer-added Lean files integrated by Codex.
