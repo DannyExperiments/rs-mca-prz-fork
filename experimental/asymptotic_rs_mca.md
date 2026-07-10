@@ -18,6 +18,24 @@ preserved elsewhere, and next action.
 
 ## Entries
 
+### 2026-07-10 - Endpoint full-cube parametrization route cut
+
+- **Source:** Role 07 actual-row positive-rate counterpacket hostile-audit
+  survivor.
+- **Status:** PROVED / REUSABLE CONSTRUCTION-CLASS EXCLUSION / AUDIT.
+- **Paper impact:** The preserved note proves exact nonlinear
+  influence-incidence and local Walsh-span bounds for full-cube
+  parametrizations of fixed-weight endpoint common fibers.  It rules out
+  positive-rate bounded-overlap or low-local-rank parametrizations when
+  `D=Omega(N)`, but does not edit or promote the paper.
+- **Files preserved elsewhere:**
+  `experimental/notes/thresholds/asymptotic_c9_cube_parametrization_exclusion.md`
+  and
+  `experimental/scripts/verify_asymptotic_c9_cube_parametrization_exclusion.py`.
+- **Next action:** Keep arbitrary-fiber C9, ordered `C1--C8` emission,
+  add-back, `RC`, and finite rows open; the exact wall is extraction of a
+  low-complexity cube from an exponentially heavy exact residual fiber.
+
 ### 2026-07-10 - Promoted profile-envelope replacement draft
 
 - **Source:** Maintainer-added `experimental/asymptotic_rs_mca (1).tex`,

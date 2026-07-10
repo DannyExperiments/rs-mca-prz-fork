@@ -30,6 +30,24 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - Endpoint full-cube parametrization exclusion
+
+- **Agent/model:** GPT-5.6 Pro Ultra Role 07; hostile scope repair and replay
+  by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/asymptotic_c9_cube_parametrization_exclusion.md`,
+  `experimental/scripts/verify_asymptotic_c9_cube_parametrization_exclusion.py`,
+  `experimental/scripts/README.md`, `experimental/agents-log.md`, and
+  `experimental/asymptotic_rs_mca.md`.
+- **Status:** PROVED / REUSABLE CONSTRUCTION-CLASS EXCLUSION / AUDIT.
+- **What is being added:** Exact nonlinear cube influence-incidence and local
+  Walsh-span rank bounds for fixed-weight endpoint common-fiber
+  parametrizations, with finite endpoint and nonlinear-map replay checks.
+- **How it is useful:** Excludes positive-rate full-cube bounded-overlap and
+  low-local-rank constructions without claiming arbitrary-fiber C9.
+- **What to do next:** Prove or falsify the missing extraction theorem from an
+  exponentially heavy exact post-`C1--C8` residual fiber.
+
 ### 2026-07-10 - Promote profile-envelope Asymptotic RS MCA draft
 
 - **Agent/model:** Maintainer-added TeX reviewed and promoted by Codex.
