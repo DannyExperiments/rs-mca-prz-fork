@@ -30,6 +30,22 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - Repaired asymptotic C9 radial-shell route cut
+
+- **Agent/model:** Codex, repairing Role 06 from the nine-solution C9 return.
+- **Files added or changed:** Added the radial-shell note and stdlib verifier;
+  updated `experimental/scripts/README.md`, this log, and
+  `experimental/asymptotic_rs_mca.md`.
+- **Status:** PROVED / ROUTE CUT / AUDIT.
+- **What is being added:** The endpoint MDS code, exact coset floors, and an
+  asymptotic redundancy proof only for the printed `RM_j` plus support/caps
+  package, with positive-rate greedy Johnson packings.
+- **How it is useful:** It rules out that delimited cyclic augmentation as a
+  route to `exp(o(N))` while preserving nonradial, spectral, tuple, SDP, and
+  higher-moment lanes.
+- **What to do next:** Keep this outside the paper unless a later revision needs
+  the route cut; do not read it as a syndrome-coset counterexample or C9-LD.
+
 ### 2026-07-10 - Promote profile-envelope Asymptotic RS MCA draft
 
 - **Agent/model:** Maintainer-added TeX reviewed and promoted by Codex.

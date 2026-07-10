@@ -18,6 +18,29 @@ preserved elsewhere, and next action.
 
 ## Entries
 
+### 2026-07-10 - Repaired C9 radial-shell route cut held outside the paper
+
+- **Source:** Role 06 from
+  `RS_MCA_C9_LINEAR_DEFICIT_9SOL_20260710_returns_raw`, repaired against
+  repository authority `2acc7be`; PR `#483` is unrelated.
+- **Status:** PROVED / ROUTE CUT / AUDIT.
+- **Paper impact:** None in this packet.  The TeX and PDF remain unchanged.
+- **Verdict to preserve:** The endpoint code is `[N,N-D,D+1]_p`, its dual is
+  `[N,D,N-D+1]_p`, and positive-rate greedy Johnson packings asymptotically
+  satisfy only the explicitly printed `RM_j`, ambient positivity, MDS support,
+  and linear-code-enumerator cap package.  Adding that package and nonnegative
+  combinations to arbitrary valid Johnson constraints cannot prove
+  `exp(o(N))`.
+- **Files preserved elsewhere:** The repaired statement is in
+  `experimental/notes/thresholds/asymptotic_c9_radial_shell_route_cut.md`; its
+  explicit `-O`-stable replay is
+  `experimental/scripts/verify_asymptotic_c9_radial_shell_route_cut.py`.
+- **Nonclaims:** No syndrome-coset counterexample, C1--C8 survival, C9-LD,
+  deployed finite row, full Fourier projection, distance-graph spectrum,
+  nonradial, complete-weight, triple, Terwilliger, SDP, or higher-moment cut.
+- **Next action:** Cite this only when excluding the printed pairwise package;
+  retain the listed stronger cyclic and tuple lanes as open.
+
 ### 2026-07-10 - Promoted profile-envelope replacement draft
 
 - **Source:** Maintainer-added `experimental/asymptotic_rs_mca (1).tex`,
