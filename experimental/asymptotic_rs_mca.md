@@ -46,6 +46,36 @@ preserved elsewhere, and next action.
   that every claimed cell payment is cited at the right natural profile scale
   and that `RC` is not silently inferred from support-pair estimates.
 
+### 2026-07-10 - Coherent-phase C9 frequency block and route cut
+
+- **Source:** Role 03 of the nine-worker C9 linear-deficit round, repaired and
+  independently audited by Codex against `origin/main` at `2acc7be`.
+- **Status:** PROVED PARTIAL FOURIER-BLOCK PAYMENT /
+  LARGE-CHARACTERISTIC ROUTE CUT.
+- **Paper impact:** Do not edit the paper directly.  The endpoint `a=1`
+  coherent-phase block has at most `(2 floor(p/q)+1)^R` frequencies, is stable
+  under every fixed-weight mask, and for `q=12m` contributes only
+  `M((2 floor(p/q)+1)/p)^R`.  At fixed density and linear `R` this is
+  `exp(-Omega(N log N))` relative to the image-normalized mean.  Conversely,
+  simultaneous scalar dilation makes the block meet every projective
+  frequency line when `p>q^(N-1)`, cutting a small-value-set-only
+  classification of all large coefficients over unrestricted large split
+  primes.  In the promoted profile-envelope draft this refines the
+  still-conditional major-arc verification obligation: directly paid sparse
+  major-arc blocks may be removed before classifying the remainder.  It does
+  not pay the full Fourier/Sidon cell or change the conditional frontier
+  theorem.
+- **Files preserved elsewhere:**
+  `experimental/notes/thresholds/asymptotic_c9_coherent_phase_block.md` and
+  `experimental/scripts/verify_asymptotic_c9_coherent_phase_block.py`.
+- **Explicit nonclaim:** This does not falsify exact witness-side C1--C8
+  routing, pay the full Fourier/Sidon cell, prove C9-LD or residual emission,
+  establish add-back, or move any deployed finite adjacent row.
+- **Next action:** Prove a phase-separated inverse theorem for masked
+  coefficients outside the coherent-phase block, with literal paid C1--C8
+  destinations or additional blocks of total dual density
+  `exp(o(N))/L`.
+
 ### 2026-07-10 - Initial audit policy for paper-level PR changes
 
 - **Source:** Maintainer instruction during open-PR integration.

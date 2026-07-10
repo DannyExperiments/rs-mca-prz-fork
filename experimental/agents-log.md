@@ -53,6 +53,28 @@ Keep entries concise and link to the relevant files.
   paper revision should either prove the remaining profile/RC hypotheses in a
   named setting or keep them explicitly conditional.
 
+### 2026-07-10 - Coherent-phase C9 frequency block
+
+- **Agent/model:** GPT-5.6 Pro Ultra Role 03; hostile scope repair and replay
+  by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/asymptotic_c9_coherent_phase_block.md`,
+  `experimental/scripts/verify_asymptotic_c9_coherent_phase_block.py`,
+  `experimental/scripts/README.md`, and `experimental/asymptotic_rs_mca.md`.
+- **Status:** PROVED / ROUTE CUT / AUDIT.
+- **What is being added:** Proves an exact arbitrary-mask coherent-phase
+  frequency count and a superexponential image-normalized partial-block
+  payment, plus a simultaneous-dilation lemma showing why small-value-set data
+  alone cannot classify all large coefficients at unrestricted large split
+  primes.
+- **How it is useful:** Adds one directly paid analytic subblock to the open
+  primitive-C9 major-arc step and removes an overbroad value-set-only inverse
+  route without changing the paper TeX, paying the full Fourier/Sidon cell, or
+  claiming exact C1--C8 coverage.
+- **What to do next:** Classify theorem-scale masked coefficients after the
+  coherent-phase block is removed.  Keep C1--C8 emission, add-back, deployed
+  finite rows, and the full C9-LD statement explicitly open.
+
 ### 2026-07-10 - Remaining PR integration: asymptotic audits and threshold packets
 
 - **Agent/model:** holmbuar via PRs #431, #433, #437, #443, #446, #447,
