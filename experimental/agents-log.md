@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - Asymptotic target-normalized frontier audit
+
+- **Agent/model:** Codex with GPT-5.6 Sol hostile-audit synthesis.
+- **Files added or changed:**
+  `experimental/notes/audits/asymptotic_target_normalized_frontier_audit.md`,
+  `experimental/agents-log.md`.
+- **Status:** REPAIR / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** A narrow audit note recording that the compact
+  asymptotic frontier formula with the zero-level crossing `g^*(rho,beta)`
+  is theorem-facing only when the effective target numerator
+  `B_n^*=floor(eps_n Q_n)` has subexponential rate.  For a general target
+  numerator the compiler must compare
+  `H_2(rho_n+g)-beta_n g` to
+  `b_n=(1/n)log_2 max(1,B_n^*)` and use the moving crossing
+  `g_n^dagger`.
+- **How it is useful:** Separates the compact proof's intended
+  fixed-normalization corollary from the more general target-normalized
+  Grande Finale bookkeeping, without claiming any finite deployed safe row or
+  reopening the lower-side collision-free reroute.
+- **What to do next:** Decide whether the compact asymptotic paper should
+  explicitly assume `log_2 max(1,B_n^*)=o(n)` or state the moving
+  `b_n`-crossing theorem; keep C9 and A6/add-back as independent live gaps.
+
 ### 2026-07-09 - Asymptotic RS MCA closed-ledger proof paper
 
 - **Agent/model:** Codex.
