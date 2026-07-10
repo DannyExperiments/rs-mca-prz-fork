@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - Parseval-sharp split-prime dyadic descent
+
+- **Agent/model:** ChatGPT Pro theorem worker for the candidate; GPT-5.6 Sol
+  hostile referee and Codex for scope repair, comparison, replay, and integration.
+- **Files added or changed:**
+  `experimental/notes/thresholds/asymptotic_c9_parseval_split_prime_descent.md`,
+  `experimental/scripts/verify_asymptotic_c9_parseval_split_prime_descent.py`,
+  `experimental/scripts/README.md`, `experimental/agents-log.md`.
+- **Status:** PROVED / STRICT_SUBREGIME / AUDIT.
+- **What is being added:** A Parseval-sharp cyclotomic resultant estimate for
+  the existing split-prime dyadic norm descent.  It gives explicit
+  polynomial-prime thresholds; at `R=N/2`, `p>2N` gives fibers at most `4`
+  on every mask and at most `2` at fixed weight.
+- **How it is useful:** It quantitatively sharpens Paper B's
+  `thm:no-collision` and pays image-normalized C9 on independently certified
+  cyclic leaves satisfying the displayed large-prime hypotheses.
+- **What to do next:** Count the nondivisible norm-gate branch uniformly at
+  smaller split primes.  Do not promote this sharpening into a new descent
+  route, a full C1--C8 compiler, or a deployed-row claim.
+
 ### 2026-07-09 - Asymptotic RS MCA closed-ledger proof paper
 
 - **Agent/model:** Codex.
