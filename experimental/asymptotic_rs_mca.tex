@@ -48,7 +48,7 @@
 \begin{document}
 
 \begin{abstract}
-We give a conditional asymptotic Reed--Solomon mutual-correlated-agreement compiler from a first-match profile ledger.  After quotient, planted, and other algebraic profiles have been routed, Balog--Szemeredi--Gowers and quasicube growth eliminate the high-energy branch of the primitive prefix problem, provided its Sidon-heavy branch is paid separately.  We construct smooth rows with \(\log|\B_n|=O(\log n)=o(n)\) having an exponentially large Sidon-heavy square-quotient prefix fiber at the identity crossing and, after scalar extension, exponentially many distinct MCA-bad slopes.  The construction persists after stabilizer deletion, while its periodic form transfers to standard circle codes.  Consequently the frontier theorem must use the full profile envelope, a Sidon payment on the routed primitive residual, and a distinct-ray compiler; the identity formula is recovered only under explicit identity-dominance and target-reserve hypotheses.
+We give a conditional asymptotic Reed--Solomon mutual-correlated-agreement compiler from a first-match profile ledger.  After quotient, planted, and other algebraic profiles have been routed, Balog--Szemeredi--Gowers and quasicube growth eliminate the high-energy branch of the primitive prefix problem, provided its Sidon-heavy branch is paid separately.  We construct smooth rows with \(\log|\B_n|=O(\log n)=o(n)\) having an exponentially large Sidon-heavy square-quotient prefix fiber at the identity crossing and, after scalar extension, exponentially many distinct MCA-bad slopes.  The construction persists after stabilizer deletion, while its periodic form transfers to standard circle codes.  Consequently the frontier theorem must use the full profile envelope, a Sidon payment on the routed primitive residual, and a distinct-ray compiler; the identity formula is recovered only under explicit identity-dominance and target-adjusted crossing hypotheses.
 \end{abstract}
 
 \maketitle
@@ -199,9 +199,9 @@ incidence in slope space.
 \end{definition}
 
 \begin{theorem}[Cellwise ledger interface]\label{thm:closed-ledger-package}
-The results cited in \cite{Cho26CapV13,Cho26Grande} supply the cellwise
-constructions and estimates in \textup{(C1)--(C8)} and the Fourier-flat
-part of \textup{(C9)}.  For a given smooth or circle row they assemble to
+The results cited in \cite{Cho26CapV13,Cho26Grande} supply the proved
+cellwise constructions and estimates in \textup{(C1)--(C8)} and the
+Fourier-flat part of \textup{(C9)}.  For a given smooth or circle row they assemble to
 a closed profile ledger only when the atlas is exhaustive, every profile is
 charged at its natural scale in \eqref{eq:profile-envelope}, and the
 residual-to-full average comparison holds, and the Sidon-heavy part of the
@@ -235,7 +235,7 @@ For \textup{(C6)}, regular Hankel minors, canonical exact-agreement rank-drop le
 
 For \textup{(C7)}, the exact saturation identity and line-ray saturation identity are proved in \cite[saturation and line-ray saturation identities]{Cho26Grande}; exact arbitrary-residual image and closed-ball residual image ledgers appear in \cite[residual image ledgers]{Cho26CapV13}.  Thus raw support overcounts are replaced by actual image counts.
 
-For \textup{(C8)}, the interpolation-lattice split-pencil reduction, near-rational payment, deficiency-one split-test eliminant, split annihilator dictionary, tangent-borne split charts, boundary-profile identification with Q, base-field split-pencil floor, one-parameter moving-root theorem, and primitive one-pencil corollary are proved in \cite[split-pencil and BC sections]{Cho26Grande}, with the balanced-core and split-pencil reductions also developed in \cite[rank-one and split-pencil reductions]{Cho26CapV13}.
+For \textup{(C8)}, the interpolation-lattice split-pencil reduction, near-rational payment, deficiency-one split-test eliminant, split annihilator dictionary, tangent-borne split charts, boundary-profile identification with Q, base-field split-pencil floor, one-parameter moving-root theorem, and primitive one-pencil corollary are proved in \cite[split-pencil and BC sections]{Cho26Grande}.  The broader balanced-core and split-pencil reductions developed in \cite[rank-one and split-pencil reductions]{Cho26CapV13} are used here as reductions to explicit split-pencil charts; higher-dimensional residual charts are still covered only when their distinct-ray estimates are supplied by the closed-ledger and RC hypotheses.
 
 For \textup{(C9)}, Fourier-flat leaves satisfy asymptotic Q and
 large-characteristic Fourier examples are proved in
@@ -244,6 +244,12 @@ high-energy alternative are stated and proved below.  Fourier flatness pays
 the minor-arc branch after algebraic major arcs have been routed; it does
 not give a uniform identity-normalized payment before quotient, subfield,
 planted, and remainder profiles are removed.
+Recent C9 support packets prove several restricted payments and route cuts:
+block-profile Plotkin bounds, near-norm-gate remainder packing,
+coherent-phase Fourier subblock payment, and exclusions for radial-shell and
+low-complexity cube-parametrized routes \cite{DannyC9Packets}.  These packets
+clarify the residual target but do not by themselves exhaust \textup{(C9)} or
+replace the Sidon payment required in \cref{def:sidon-paid}.
 
 Finally, first-match disjointization is \cref{lem:first-match}.  These
 results give the asserted cellwise interface.  Exhaustion, comparison at
@@ -256,6 +262,21 @@ Thus the cited geometry identifies and estimates the declared cells but
 does not unconditionally close an identity-scale ledger.  The argument
 below proves the analytic primitive implication and the target compiler
 once the printed profile, Sidon, and ray conditions have been verified.
+
+\begin{remark}[Audit status]\label{rem:audit-status}
+A line-by-line audit of the profile-envelope draft reports no problem with
+the obstruction construction, the natural-profile payment scale, or the
+separation between support statistics and ray counting \cite{BuarProfileAudit}.
+It leaves as explicit proof obligations the imported window-uniformity input
+and the residual higher-dimensional split-pencil charts not reduced to the
+paid one-parameter, deficiency-one, or tangent-borne cases.  The deployed-row
+numerical spine has also been checked independently as arithmetic support for
+the displayed profile-envelope crossing \cite{LegaProfileNumerics}.  Separate
+finite threshold packets for the KoalaBear and Mersenne rows sharpen current
+finite walls, including the star3 point-count and signed-cancellation target,
+but they are not used as hypotheses in the asymptotic theorem
+\cite{BuarStar3Packets}.
+\end{remark}
 
 \begin{theorem}[Conditional profile-envelope frontier]\label{thm:frontier}
 Let \(C_n=\RS_{\F_n}(D_n,k_n)\) be a smooth or circle-type row as above,
@@ -810,6 +831,18 @@ A. Balog and E. Szemeredi,
 \newblock A statistical theorem of set addition,
 \newblock \emph{Combinatorica} 14 (1994), 263--268.
 
+\bibitem[Bua26a]{BuarProfileAudit}
+H. Buar,
+\newblock \emph{Asymptotic RS--MCA profile-envelope draft:
+line-by-line audit},
+\newblock experimental audit note, July 2026.
+
+\bibitem[Bua26b]{BuarStar3Packets}
+H. Buar,
+\newblock \emph{CAP25 v13 star3 point-count, second-moment, and
+threshold-wall packets},
+\newblock experimental threshold notes, July 2026.
+
 \bibitem[Cho26a]{Cho26CapV13}
 P. Chojecki,
 \newblock \emph{Universal Field-Size Caps and a Two-Sided Sandwich for
@@ -822,10 +855,23 @@ P. Chojecki,
 RS--MCA},
 \newblock manuscript, July 2026.
 
+\bibitem[Dan26]{DannyC9Packets}
+D. Experiments,
+\newblock \emph{C9 endpoint support packets: block-profile Plotkin bounds,
+near-norm-gate remainders, radial-shell route cut, cube parametrization
+exclusion, and coherent-phase Fourier block},
+\newblock experimental threshold notes, July 2026.
+
 \bibitem[GMRSZ20]{GMRSZ2020}
 B. Green, D. Matolcsi, I. Z. Ruzsa, G. Shakan, and D. Zhelezov,
 \newblock A weighted Prekopa--Leindler inequality and sumsets with quasicubes,
 \newblock arXiv:2003.04077, 2020.
+
+\bibitem[Leg26]{LegaProfileNumerics}
+LegaSage,
+\newblock \emph{Profile-envelope quantitative spine at the four deployed
+rows},
+\newblock experimental audit note, July 2026.
 
 \bibitem[Gow98]{Gowers1998}
 W. T. Gowers,

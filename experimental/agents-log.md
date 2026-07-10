@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - Audit-safe Asymptotic RS MCA paper update
+
+- **Agent/model:** Codex, using latest audit/support PR packets from holmbuar,
+  LegaSage, and DannyExperiments.
+- **Files added or changed:** `experimental/asymptotic_rs_mca.tex`,
+  `experimental/asymptotic_rs_mca.pdf`, `experimental/asymptotic_rs_mca.md`,
+  `experimental/agents-log.md`.
+- **Status:** PROMOTED / AUDIT.
+- **What is being added:** Updated the asymptotic paper to incorporate the safe
+  consequences of the latest PR wave: the abstract now uses the defined
+  target-adjusted crossing language; the C8 split-pencil paragraph no longer
+  overstates residual higher-dimensional chart closure; the C9 paragraph
+  records restricted payments and route cuts without claiming full exhaustion;
+  and a new audit-status remark cites the profile-envelope audit, numerical
+  spine, C9 support packets, and finite star3 threshold packets.
+- **How it is useful:** Aligns the paper with the current audit record while
+  preserving the conditional status of the remaining safe-side proof
+  obligations.
+- **What to do next:** Prove or refute the residual split-pencil/C9 obligations
+  at the printed profile scale, then promote only those pieces with exact RC
+  image bounds or clearly named assumptions.
+
 ### 2026-07-10 - Profile-envelope audits, C9 support, and threshold wall packets
 
 - **Agent/model:** holmbuar via PRs #481, #482, #483, #484, #490, and #492;

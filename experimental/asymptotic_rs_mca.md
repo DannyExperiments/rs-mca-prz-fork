@@ -18,6 +18,28 @@ preserved elsewhere, and next action.
 
 ## Entries
 
+### 2026-07-10 - Audit-safe paper update after PRs #481--#492
+
+- **Source:** Maintainer request to modify `asymptotic_rs_mca.tex` using the
+  strongest updates from the latest audit/support PR wave.
+- **Status:** PROMOTED / AUDIT.  This is a wording and status-alignment update,
+  not a new proof of the remaining safe-side theorem.
+- **Paper impact:** Updated `experimental/asymptotic_rs_mca.tex` and regenerated
+  `experimental/asymptotic_rs_mca.pdf`.  The abstract no longer refers to an
+  undefined "target-reserve" hypothesis; it now points to the target-adjusted
+  crossing condition.  The cellwise ledger theorem now explicitly says that
+  C8 higher-dimensional residual split-pencil charts remain covered only when
+  distinct-ray estimates are supplied by the closed-ledger and RC hypotheses.
+  The C9 paragraph now records the new restricted payments and route cuts
+  without treating them as full C9 exhaustion.
+- **Files preserved elsewhere:** The paper cites the integrated audit/support
+  packets rather than copying them: `asymptotic_profile_envelope_audit.md`,
+  `profile_envelope_numerics_audit.md`, the C9 threshold notes, and the star3
+  threshold packets.
+- **Next action:** Do not promote the remaining C9 or split-pencil residuals to
+  theorem status until the residual class is exhausted and the RC image bound is
+  proved at the printed profile scale.
+
 ### 2026-07-10 - Profile-envelope audit, C9 support, and threshold wall packets
 
 - **Source:** PRs `#481--#492`.
