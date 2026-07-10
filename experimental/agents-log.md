@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - KoalaBear star3 nonsplit-torus Kloosterman reduction
+
+- **Agent/model:** GPT-5.6 Sol Pro Ultra for the theorem packet; Codex and an
+  independent hostile-review agent for reconstruction, overlap audit, and
+  integration.
+- **Files added or changed:**
+  `experimental/notes/thresholds/cap25_v13_star3_nonsplit_torus_kloosterman.md`,
+  `experimental/scripts/verify_star3_nonsplit_torus_kloosterman.py`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED REDUCTION / SIGNED-ROUTE BRIDGE / EXPERIMENTAL.
+- **What is being added:** An exact norm-one-torus Fourier decomposition of
+  the finite `star3` incidence: all non-diagonal modes become signed classical
+  Kloosterman modes, with the diagonal block and the already-banked deployed
+  centered budget rewritten in the new coordinates.
+- **How it is useful:** Converts the post-second-moment wall into one explicit
+  product-sensitive signed correlation while preserving the fact that the
+  deployed inequality remains open.
+- **What to do next:** Prove the displayed centered correlation estimate for
+  the deployed multiplicative prefix without inserting absolute values.
+
 ### 2026-07-10 - RS--MCA Entropy Frontiers submission draft
 
 - **Agent/model:** Maintainer-added paper, read and logged by Codex.
