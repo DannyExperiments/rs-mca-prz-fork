@@ -30,6 +30,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - C9 weighted two-channel remainder compiler
+
+- **Agent/model:** GPT-5.6 Sol Pro Ultra for the theorem packet; Codex and an
+  independent hostile-review agent for reconstruction, audit, and integration.
+- **Files added or changed:**
+  `experimental/notes/thresholds/asymptotic_c9_weighted_two_channel_remainder.md`,
+  `experimental/scripts/verify_asymptotic_c9_weighted_two_channel_remainder.py`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / STRICT SUBREGIME / EXPERIMENTAL.
+- **What is being added:** A two-channel separation theorem bounds the complete
+  weighted sum over first-failure odd remainders by `2W` times one inherited
+  even-channel fiber.  It extends the worst-width polynomial strip from
+  `P_o>2h` to `P_o>=2h-e-1`.
+- **How it is useful:** Crosses a stated wall in the integrated near-norm-gate
+  packet while retaining all compatible lifts and the reducible-even-channel
+  warning.
+- **What to do next:** Prove the subexponential transversal theorem in the
+  remaining fixed-linear zone; pairwise distance alone cannot supply it.
+
 ### 2026-07-10 - RS--MCA Entropy Frontiers submission draft
 
 - **Agent/model:** Maintainer-added paper, read and logged by Codex.
