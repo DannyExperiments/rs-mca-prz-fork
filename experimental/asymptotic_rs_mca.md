@@ -18,6 +18,39 @@ preserved elsewhere, and next action.
 
 ## Entries
 
+### 2026-07-10 - Block-profile Plotkin extension held outside the paper
+
+- **Source:** Role 09 integrator/referee response from
+  `RS_MCA_C9_LINEAR_DEFICIT_9SOL_20260710_returns_raw`, audited against
+  authority `2acc7be` and the current PR #483 audit.
+- **Status:** PROVED / CONDITIONAL / AUDIT; standalone extension of the
+  integrated PR #463 packet, not an amendment to PR #463 or PR #483.
+- **Paper impact:** No TeX or PDF change.  The new note proves a field-free
+  binary constant-composition bound at the block threshold
+  `Q_P=sum_j m_j(n_j-m_j)/n_j`, including exact one-block shortening,
+  `|C|<=2 sum_active(n_j-1)` on equality, the adaptive
+  `|C|<=N 2^nu` estimate, and the PROFILE-LD converse.  The endpoint
+  corollary imports only PR #463's locator distance and the identity
+  `Q-Q_P=sum_j n_j(theta_j-theta)^2`.
+- **Audit correction:** The response's old line-116 diagnosis is stale.  In
+  the current promoted paper, C3's upper payment is explicitly part of the
+  closed-ledger hypothesis (`experimental/asymptotic_rs_mca.tex:223--228`).
+  The new packet preserves that status and makes no paper-error claim.
+- **Scope boundary:** A union is controlled only for a predeclared total
+  partition/profile label family of size `exp(o(N))`, with uniform errors.
+  The actual-image fact `M/L>=1` yields an image-normalized consequence for
+  the same nonempty cell; it does not supply the natural-profile budget or
+  residual-to-full comparison required by the paper.
+- **Explicit nonclaims:** No source-to-profile extraction, atlas exhaustion,
+  residual-to-full comparison, RC, Sidon/major-arc payment, add-back,
+  fixed-linear PROFILE-LD payment, full C9-LD, finite row, or external novelty.
+- **Files preserved elsewhere:**
+  `experimental/notes/thresholds/asymptotic_c9_block_profile_plotkin.md` and
+  `experimental/scripts/verify_asymptotic_c9_block_profile_plotkin.py`.
+- **Next action:** Review the standalone theorem/verifier.  Promotion into the
+  paper would require a separate compiler proving the omitted profile-ledger
+  and ray obligations; this entry does not recommend such promotion.
+
 ### 2026-07-10 - Promoted profile-envelope replacement draft
 
 - **Source:** Maintainer-added `experimental/asymptotic_rs_mca (1).tex`,

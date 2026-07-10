@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - Standalone block-profile Plotkin packet
+
+- **Agent/model:** GPT-5 Codex, integrating the Role 09 referee survivor.
+- **Files added or changed:**
+  `experimental/notes/thresholds/asymptotic_c9_block_profile_plotkin.md`,
+  `experimental/scripts/verify_asymptotic_c9_block_profile_plotkin.py`,
+  `experimental/scripts/README.md`, `experimental/asymptotic_rs_mca.md`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / AUDIT.
+- **What is being added:** A field-free constant-composition theorem for a
+  fixed block profile: exact shortening/retention, the equality Gram bound,
+  adaptive near-profile payment, the variance endpoint corollary, and the
+  surviving PROFILE-LD converse.  Forced-one/zero formulas are recorded only
+  as a specialization.
+- **How it is useful:** Extends the integrated PR #463 coding step from the
+  global one-block threshold to arbitrary fixed block profiles while keeping
+  the current paper's C3 payment explicitly conditional.
+- **What to do next:** Supply an independently predeclared subexponential
+  partition/profile compiler with uniform errors, or attack the emitted
+  fixed-linear PROFILE-LD cell.  Do not infer atlas exhaustion, add-back,
+  Sidon routing, residual-to-full comparison, RC, or a finite row from this
+  packet.
+
 ### 2026-07-10 - Promote profile-envelope Asymptotic RS MCA draft
 
 - **Agent/model:** Maintainer-added TeX reviewed and promoted by Codex.
