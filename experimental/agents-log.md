@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - C9 sparse-pair actual-syndrome profile compiler
+
+- **Agent/model:** GPT-5.6 Sol Pro Ultra for the theorem packet; Codex and an
+  independent hostile-review agent for reconstruction, audit, and integration.
+- **Files added or changed:**
+  `experimental/notes/thresholds/asymptotic_c9_sparse_pair_profile_compiler.md`,
+  `experimental/scripts/verify_asymptotic_c9_sparse_pair_profile_compiler.py`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / STRICT SUBREGIME / EXPERIMENTAL.
+- **What is being added:** Generalizing the previously banked adjacent-pair
+  case `b=2`, a fixed-dyadic locator-spacing identity compiles an infinite
+  family of positive-entropy sparse-pair endpoint profiles to shorter
+  consecutive Vandermonde fibers.  Above compressed distance density `1/4`,
+  every actual fiber is polynomial even though the original profile has
+  `Q_P-D=Theta(N)`.
+- **How it is useful:** Pays an explicit infinite fixed-linear `PROFILE-LD`
+  family left open by the block-profile Plotkin packet, without upgrading the
+  result to arbitrary profiles or full C9.
+- **What to do next:** Prove or refute subexponential constant-weight fibers
+  below the compressed quarter line, where the exact syndrome compiler still
+  applies but the Plotkin payment stops.
+
 ### 2026-07-10 - RS--MCA Entropy Frontiers submission draft
 
 - **Agent/model:** Maintainer-added paper, read and logged by Codex.
