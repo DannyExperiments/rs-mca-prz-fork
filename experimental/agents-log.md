@@ -30,6 +30,33 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - Identity-window and finite-prize theory packets
+
+- **Agent/model:** Codex integrating PR #542 by holmbuar and PR #543 by
+  AllenGrahamHart.
+- **Files added or changed:** `experimental/notes/thresholds/envelope_identity_window.md`,
+  `experimental/scripts/verify_envelope_window.py`,
+  `experimental/notes/thresholds/cap25_finite_census_necessary_hypotheses.md`,
+  `experimental/notes/thresholds/cap25_finite_signed_census_frame.md`,
+  `experimental/notes/thresholds/cap25_finite_deep_regime_exactness.md`,
+  `experimental/notes/roadmaps/finite_prize_kernel_basis.md`, and their
+  verifier scripts.
+- **Status:** PROVED / AUDIT / EXPERIMENTAL / ROADMAP, as stated in the
+  individual notes.
+- **What is being added:** A profile-envelope identity-dominance window note
+  that turns the comparison premise into a row-checkable two-window criterion,
+  plus finite-track packets recording necessary hypotheses for census
+  statements, signed census identities, deep-regime exactness, and a
+  three-kernel finite-prize roadmap.
+- **How it is useful:** #542 directly targets the complete profile-envelope
+  comparison hard input by separating no-field-drop rows from field-drop
+  failure bands. #543 parks finite-prize theory infrastructure without
+  changing the asymptotic submission draft.
+- **What to do next:** Audit the identity-window criterion against
+  `experimental/asymptotic_rs_mca_frontiers.tex` before promotion.  Keep the
+  finite-track packets parked until the project pivots from the asymptotic
+  proof to exact finite-prize threshold closure.
+
 ### 2026-07-10 - Frontiers hard-input PR integration
 
 - **Agent/model:** Codex integrating PRs #494--#541 from holmbuar,
