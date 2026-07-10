@@ -3,6 +3,7 @@
 Run scripts from the repository root, for example:
 
 ```sh
+python3 experimental/scripts/verify_asymptotic_c9_near_norm_gate_remainder_packing.py --check
 python3 experimental/scripts/verify_asymptotic_c9_parseval_split_prime_descent.py --check
 python3 experimental/scripts/verify_asymptotic_c9_endpoint_shortened_plotkin.py --check
 python3 experimental/scripts/verify_l1_prefix_divisor_count.py

@@ -18,6 +18,31 @@ preserved elsewhere, and next action.
 
 ## Entries
 
+### 2026-07-10 - Near-norm-gate first-failure packing support
+
+- **Source:** New supporting packet based on the hostile-audited Role 05
+  return; integrated PR `#464` is the banked descent input.  PR `#483` is
+  unrelated.
+- **Status:** PROVED / POINTWISE / STRICT PRIME SUBREGIME / AUDIT.
+- **Paper impact:** None in this PR.  Preserve the finite theorem and verifier
+  outside the paper.  The packet replaces `#464`'s impossible-failure gate
+  `P>4h` by a polynomial first-failure count at `P>(2+epsilon)h`, filling the
+  constant-factor band from roughly `(1+epsilon)N` to `2N` for pure cyclic
+  windows without changing the polynomial prime order.
+- **Verdict to preserve:** The same-remainder incidence is paid by a smaller
+  one-sided even-channel fiber (or the unconditional MDS ceiling), and the
+  first-failed-scale labels inject.  The half-window `4N+4` arbitrary-mask
+  bound is finite and outside `(LD)`; its fixed-weight C9 consequence overlaps
+  `#463`.
+- **Nonclaims / next action:** No RC, C1--C8 emission, arbitrary ternary-word
+  theorem, add-back, deployed row, paper-frontier move, or
+  `p=N^(1+o(1))` result.  Audit the weighted remainder count below `P=2h`
+  before considering any paper promotion.
+- **Files preserved elsewhere:**
+  `experimental/notes/thresholds/asymptotic_c9_near_norm_gate_remainder_packing.md`
+  and
+  `experimental/scripts/verify_asymptotic_c9_near_norm_gate_remainder_packing.py`.
+
 ### 2026-07-10 - Promoted profile-envelope replacement draft
 
 - **Source:** Maintainer-added `experimental/asymptotic_rs_mca (1).tex`,

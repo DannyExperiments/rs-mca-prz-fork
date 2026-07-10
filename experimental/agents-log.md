@@ -30,6 +30,24 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - Near-norm-gate C9 remainder packing
+
+- **Agent/model:** Codex, from the hostile-audited Role 05 return.
+- **Files added or changed:** Added the near-norm-gate note and stdlib
+  verifier; updated `experimental/scripts/README.md`, this log, and
+  `experimental/asymptotic_rs_mca.md`.
+- **Status:** PROVED / POINTWISE / STRICT PRIME SUBREGIME / AUDIT.
+- **What is being added:** Counts one-sided first failures by pairwise resultant
+  separation and Popoviciu packing, then pays same-remainder incidence through
+  a smaller even-channel fiber.  This improves integrated `#464`'s first-scale
+  constant from `P>4h` to polynomial counting at `P>(2+epsilon)h`.
+- **How it is useful:** Gives polynomial pure-window fibers when
+  `p^(2R/N)>=(1+epsilon)N` and a finite arbitrary-mask half-window bound
+  `4N+4`, without changing the prime order or the `p=N^(1+o(1))` wall.
+- **What to do next:** Audit the weighted remainder count below `P=2h`; do not
+  infer RC, C1--C8 emission, arbitrary-ternary coverage, add-back, or a
+  deployed-row result.
+
 ### 2026-07-10 - Promote profile-envelope Asymptotic RS MCA draft
 
 - **Agent/model:** Maintainer-added TeX reviewed and promoted by Codex.
