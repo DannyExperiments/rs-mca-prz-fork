@@ -30,6 +30,32 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - RS--MCA Entropy Frontiers submission draft
+
+- **Agent/model:** Maintainer-added paper, read and logged by Codex.
+- **Files added or changed:** `experimental/rs_mca_entropy_frontiers.tex`,
+  `experimental/rs_mca_entropy_frontiers.pdf`, `experimental/agents-log.md`.
+- **Status:** SUBMISSION DRAFT / CONDITIONAL / AUDIT.
+- **What is being added:** A long self-contained asymptotic RS MCA paper draft
+  intended to become the submission track once finished.  It consolidates the
+  RS/MCA definitions, exact finite-row syndrome geometry, locator-prefix and
+  collision-aware pole-line lower bounds, quotient/remainder profile
+  obstructions, the profile-envelope compiler, the primitive Sidon/BSG/Q
+  implication, smooth/circle domain interfaces, target-aware threshold
+  bookkeeping, row-by-row verification templates, and finite-source certificate
+  integration.
+- **How it is useful:** This is now the most complete single-paper presentation
+  of the asymptotic RS MCA program: it is designed to replace scattered notes by
+  a coherent submission manuscript with proofs, hypotheses, counterexamples,
+  and explicit remaining ledger obligations in one place.
+- **What to do next:** Audit it theorem by theorem against
+  `experimental/asymptotic_rs_mca.tex`, `experimental/cap25_cap_v13_raw.tex`,
+  `experimental/grande_finale.tex`, and the latest C9/profile-envelope audit
+  packets.  In particular, verify that every conditional compiler input,
+  Fourier/Sidon payment, major-arc aggregate, profile-envelope comparison, and
+  ray-compiler claim is either proved in the paper or clearly labeled as an
+  assumption before treating it as the final asymptotic submission.
+
 ### 2026-07-10 - Audit-safe Asymptotic RS MCA paper update
 
 - **Agent/model:** Codex, using latest audit/support PR packets from holmbuar,
