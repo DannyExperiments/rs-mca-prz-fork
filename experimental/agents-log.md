@@ -30,6 +30,33 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - M31 anchored two-shell Gram cut
+
+- **Agent/model:** GPT-5.6 Pro result, independently replayed and packaged by
+  Codex GPT-5.6 Sol.
+- **Files added or changed:**
+  `experimental/notes/thresholds/cap25_v13_m31_anchored_shell_gram_cut.md`,
+  `experimental/scripts/verify_m31_anchored_shell_gram_cut.py`,
+  `experimental/data/cap25_v13_m31_anchored_shell_gram_cut.json`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED (anchored local Gram/Turan obstruction and exact finite
+  cut) / OPEN (remaining two-shell grid, many-shell residual, and M31 row).
+- **What is being added:** A prefix-fiber one-shell clique cap plus Turan
+  forces an anchor with at least eight far-shell neighbors; an exact local
+  Gram sum-of-squares identity then imposes
+  `8*n*kappa^2*t <= (9*kappa+7)*m*(n-m)`.  It excludes exactly `97,162`
+  deployed integral-ratio pairs, `97,019` beyond open PR #495's exact
+  Johnson `j<=6` scan, changing that combined survivor count from `3,254,358`
+  to `3,157,339`.
+- **How it is useful:** This fires the local PSD/realizability lever left after
+  the global Johnson LP and modular-nullity routes.  It pays the named
+  two-shell parameter cells with an exact finite certificate and no
+  asymptotic loss.
+- **What to do next:** Build the anchored multishell Terwilliger system,
+  retaining every anchor-shell population and cross-shell triple block, and
+  couple it to the deployed modular nullity.  This packet does not sum shell
+  cells or prove row-sharp Q.
+
 ### 2026-07-10 - Asymptotic RS--MCA Frontiers replacement draft
 
 - **Agent/model:** Maintainer-added replacement paper, integrated by Codex.
