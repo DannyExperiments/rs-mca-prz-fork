@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - Endpoint shortened-Plotkin C9 strip
+
+- **Agent/model:** Nine ChatGPT Pro theorem workers for the candidate round;
+  Codex for hostile audit, theorem selection, exact replay, and integration.
+- **Files added or changed:**
+  `experimental/notes/thresholds/asymptotic_c9_endpoint_shortened_plotkin.md`,
+  `experimental/scripts/verify_asymptotic_c9_endpoint_shortened_plotkin.py`,
+  `experimental/scripts/README.md`, `experimental/agents-log.md`.
+- **Status:** PROVED / STRICT_SUBREGIME / AUDIT.
+- **What is being added:** An exact shortened constant-weight Plotkin bound,
+  the equality-line Gram bound, and their application to the four endpoint
+  monomial moment windows.  At fixed density this gives pointwise
+  `exp(o(N))` fibers whenever the endpoint locator distance is within `o(N)`
+  below the Plotkin threshold, including the half-density quarter-rank strip.
+- **How it is useful:** This is a prime-field dyadic C9 payment for a new
+  strict subregime.  It is uniform under arbitrary fixed-weight pruning and
+  does not use a second-moment-to-maximum conversion.
+- **What to do next:** Attack the fixed linear-deficit region with a
+  residual-specific split-locator container/emission theorem.  Do not promote
+  this note into a full C1--C8, add-back, compiler, or deployed-row claim.
+
 ### 2026-07-09 - Asymptotic RS MCA closed-ledger proof paper
 
 - **Agent/model:** Codex.
