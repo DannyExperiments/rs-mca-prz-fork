@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 42338)
+Total output lines: 2812
+
 # Agents Log
 
 This file is the working ledger for agent-created material in `experimental/`.
@@ -29,6 +32,26 @@ Keep entries concise and link to the relevant files.
 ```
 
 ## Entries
+
+### 2026-07-11 - Direction-distance large-kernel ray compiler
+
+- **Agent/model:** Codex, auditing a nine-role GPT-5.6 Pro Ultra return.
+- **Files added or changed:**
+  `experimental/notes/thresholds/direction_distance_large_kernel_ray_compiler.md`;
+  `experimental/scripts/verify_direction_distance_ray_compiler.py`;
+  `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL BRANCH / OPEN HARD INPUT.
+- **What is being added:** A fixed residual chart's transverse slopes inject
+  into one Hamming ball of the codimension-one extension code
+  `K_U+<b1>`.  Its exact direction distance gives a polynomial ray bound when
+  `d_U(y1)>2t-t^2/N`, including a direction-MDS regime with
+  `kappa=Theta(n)` beyond the existing deep and minor-count ranges.
+- **How it is useful:** This pays the residual ray compiler on a genuinely new
+  large-kernel branch without field-size loss or a conditional global
+  compiler.
+- **What to do next:** Classify or directly pay the complementary
+  low-direction-distance locus and prove witness-atlas coverage before using
+  the theorem as a full hard-input discharge.  It has no finite M31 effect.
 
 ### 2026-07-10 - Identity-window and finite-prize theory packets
 
@@ -1260,163 +1283,7 @@ Keep entries concise and link to the relevant files.
   for promotion, distill the clean-rate proof-spine into the next
   `towards-prize`/CAP25 planning note, decide whether broad DAG PRs should be
   merged separately, and avoid claiming official prize resolution until the
-  terminal post-strip `R_post <= 16 n^3` input is proved or replaced.
-
-### 2026-07-04 - Paper B Lean formalization package
-
-- **Agent/model:** Aristotle/Harmonic draft reviewed and packaged by Codex.
-- **Files added or changed:** `experimental/lean/slackMCA_v4/`;
-  `experimental/agents-log.md`.
-- **Status:** FORMALIZATION / AUDIT.
-- **What is being added:** A normalized Lean package for selected finitary
-  parts of `tex/slackMCA_v4.tex`, under the `slackMCA_v4.*` module namespace.
-  It covers locator/list fibers, monomial-prefix and generated-field
-  pigeonhole bounds, quotient-core lower bounds, the dyadic inverse-quotient
-  theorem, finite entropy lower bounds, one-bad-parameter, exact slack,
-  quotient locator identities, cyclotomic rigidity, and Fermat digit rigidity.
-- **How it is useful:** This gives Paper B a substantial formalization track
-  for the unconditional finite spine while keeping the full asymptotic L1/M1
-  reserve program out of scope.
-- **What to do next:** Build in a Mathlib-enabled Lean 4.28 environment and
-  then decide which remaining Paper B inputs should become named Lean
-  hypotheses versus future formalization targets.
-
-### 2026-07-04 - CAP25 v13 experimental Lean package
-
-- **Agent/model:** Aristotle/Harmonic draft reviewed and packaged by Codex.
-- **Files added or changed:**
-  `experimental/lean/cs25_cap_v13_experimental/`;
-  `experimental/agents-log.md`.
-- **Status:** FORMALIZATION / EXPERIMENTAL / AUDIT.
-- **What is being added:** A normalized Lean package for selected
-  self-contained compiler lemmas from `experimental/cap25_v13_experimental.tex`,
-  under the `cs25_cap_v13_experimental.*` module namespace.  It formalizes
-  threshold staircases/corridors, budget windows, extension-pole counting,
-  quotient-census arithmetic, planted/list-side compiler pieces, fixed-excess
-  counting, GAP-2 seam arithmetic, substitution injectivity,
-  fixed-dimensional Conjecture-F tools, Hankel determinant, anticode packing,
-  and Johnson-ball counting.
-- **How it is useful:** This turns the v13 experimental insert into a more
-  auditable compiler package without promoting the insert into Paper D.
-- **What to do next:** Build in a Mathlib-enabled Lean 4.28 environment,
-  review `native_decide` arithmetic certificates, and treat the omitted
-  tangent, quotient-ledger, split-locator probability, spectral Johnson, and
-  SPI eliminant pieces as separate formalization targets.
-
-### 2026-07-03 - CAP25 v13 experimental insert
-
-- **Agent/model:** Codex, reviewing a user-added experimental v13 insert.
-- **Files added or changed:** `experimental/cap25_v13_experimental.tex`;
-  `experimental/agents-log.md`.
-- **Status:** EXPERIMENTAL / AUDIT / CONDITIONAL.
-- **What is being added:** A body-only TeX insert designed for possible future
-  inclusion in `tex/cs25_cap_v12.tex` before the Discussion section.  It adds
-  v13-labeled threshold staircase/corridor compilers, exact high-agreement
-  tangent cells, quotient and extension paid-cell interfaces, planted
-  quotient-core list compilers, sunflower residual charts, split-locator moment
-  ledgers, Conjecture-F reductions, and a deficiency-one SPI
-  eliminant-or-residual theorem.
-- **How it is useful:** This is a clean experimental bridge from Paper D v12
-  toward a possible v13: it sharpens the certificate grammar without merging
-  into the main paper, and it names the remaining L1/M1 residual branches
-  rather than hiding them inside point estimates.
-- **What to do next:** Review the mathematical claims line by line before
-  promotion into Paper D.  Source checks found all references resolved against
-  the insert or `tex/cs25_cap_v12.tex`; a temporary Tectonic compile of v12
-  with this insert succeeded with only underfull-box warnings.
-
-### 2026-07-03 - Paper D CAP25 Lean skeleton package
-
-- **Agent/model:** Aristotle/Harmonic draft reviewed and packaged by Codex.
-- **Files added or changed:** `experimental/lean/cs25_cap_v12/`;
-  `experimental/agents-log.md`.
-- **Status:** FORMALIZATION / SKELETON / AUDIT.
-- **What is being added:** A Lean package for `cs25_cap_v12.tex`, normalized
-  under the `cs25_cap_v12.*` namespace.  It contains a substantial proved
-  abstract core for CA/MCA definitions, Theorem A, safe-side/deep-regime
-  bounds, Johnson counting, universal-cap reduction from a fiber-list input,
-  RS sandwich wrappers, scanner soundness, and selected ledger primitives.
-- **How it is useful:** This provides a formal roadmap for Paper D.  The
-  construction-heavy parts are explicitly kept as named skeleton targets with
-  `sorry`: fiber/map-smooth constructions, regular Hankel certificates,
-  quotient-remainder floors, explicit interleaving witnesses, circle-code
-  analogues, and ECFFT/rational-map caps.
-- **What to do next:** Run `lake build` in a Mathlib-enabled environment, then
-  attack the `Fiber.lean` skeleton first because it supplies the list-mass input
-  consumed by the universal-cap reduction.
-
-### 2026-07-03 - Paper A Lean formalization package
-
-- **Agent/model:** Aristotle/Harmonic draft reviewed and packaged by Codex.
-- **Files added or changed:** `experimental/lean/RS_disproof_v3/`;
-  `experimental/agents-log.md`.
-- **Status:** FORMALIZATION / SUBSTANTIAL / AUDIT.
-- **What is being added:** A Lean package for Paper A (`RS_disproof_v3.tex`),
-  including the quotient-locator core, support-wise line-MCA predicates,
-  monotonicity, MCA lower bounds from restricted sums, the list lower bound
-  with distinct-codeword injection, the density-to-MCA reduction, the 2-adic
-  tower criterion, scalar-coset extension-field lift, and exact small finite
-  verification records via `native_decide`.
-- **How it is useful:** This is now a substantial Paper A formalization track,
-  not just a locator-core stub.  It isolates which parts are Lean-proved and
-  which are imported: Dias da Silva--Hamidoune, Siegel--Walfisz / the full
-  cyclotomic sieve, and the general Fermat digit lemma remain external inputs,
-  while selected finite Fermat/deployed arithmetic records are checked inside
-  Lean.
-- **What to do next:** Verify the package locally with Mathlib available.
-  Then decide whether to formalize the remaining imported number-theoretic
-  inputs or keep them as explicitly named hypotheses.
-
-### 2026-07-03 - Consolidated threshold, M1, and L1 TeX notes
-
-- **Agent/model:** Codex, consolidating threshold/M1/L1 material contributed
-  primarily by AllenGrahamHart in the recent PR batch.
-- **Files added or changed:** `experimental/thresholds.tex`;
-  `experimental/thresholds.pdf`; `experimental/m1.tex`;
-  `experimental/m1.pdf`; `experimental/l1.tex`; `experimental/l1.pdf`;
-  `experimental/agents-log.md`.
-- **Status:** DOCUMENTATION / COMPILER-NOTES / COMPILED.
-- **What is being added:** Three self-contained experimental TeX notes:
-  threshold certificate compilers for CAP25, the M1 residue-line and
-  Conjecture-F proof program, and the L1 list-side compiler/petal program.
-  The notes integrate the markdown material into paper-shaped statements,
-  definitions, proof sketches, status warnings, and CAP25 integration
-  checklists.
-- **How it is useful:** This gives the project editable working-paper inputs
-  for the next CAP25/towards-prize pass without requiring readers to reconstruct
-  the story from many PR notes.  It also separates proved compiler arithmetic
-  and local lemmas from evidence, conjectural reductions, and open theorem
-  gaps.
-- **What to do next:** Audit each theorem/lemma statement against the source
-  PR notes before promoting it into Paper D or a submission-facing paper.
-  In particular, keep L1 sunflower evidence and M1 Conjecture-F evidence out
-  of the PROVED ledger until the corresponding residual bounds are complete.
-
-### 2026-07-03 - PR batch: DAG, threshold compilers, and A425/A426 finite gate
-
-- **Agent/model:** Codex integrating PRs from AllenGrahamHart, Vadim Avdeev,
-  DannyExperiments/Gia, and Lean certification contributors.  AllenGrahamHart
-  authored the majority of the batch; see
-  `experimental/notes/roadmaps/pr_batch_2026_07_03_attribution.md` for the
-  per-PR attribution ledger.
-- **Files added or changed:** `experimental/data/prize-dag/`;
-  `experimental/notes/roadmaps/`; `experimental/notes/thresholds/`;
-  `experimental/notes/certificate_scanner/`;
-  `experimental/notes/{m1,l1,f1,m5,x1,audits}/`;
-  `experimental/data/certificates/`; `experimental/scripts/`;
-  `experimental/lean/rs_mca_formalization/`; `scripts/aperiodic_eliminant_schema.json`;
-  `scripts/check_aperiodic_eliminant_packet.py`; `site/data/frontier.json`;
-  `site/data/rate-leaderboards.json`; `site/data/updates.json`; `site/index.html`.
-- **Status:** MIXED: PROVED local finite-slope threshold row / AUDIT /
-  EXPERIMENTAL evidence / ROADMAP infrastructure.
-- **What is being added:** Integrated the reviewed experimental payload from
-  PRs #178--#208, excluding stale README/site/towards-prize edits from older
-  branch bases.  The main new public row is the prime-field A425/A426 adjacent
-  finite-slope support-wise MCA gate: PR #204 gives the two-core upper bound
-  `LD_sw(RS[F,D,256],426)=87`, PR #208 gives the direct A=425 unsafe witness,
-  and the prime `p=22275*2^120+1` satisfies `87*2^128 < p < 88*2^128`.
-  The batch also adds Allen's prize DAG maintenance packet, quotient-census and
-  dodge-selection compilers, CAP25 sparse-sigma audits, Lean tier-one
+ …2338 tokens truncated…s, Lean tier-one
   certification map updates, and many M1/L1/F1/M5 evidence/proof-program notes.
 - **How it is useful:** The A425/A426 row is a new exact finite-slope
   threshold example for a smooth rate-1/2 prime-field row and is now visible on
