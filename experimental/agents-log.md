@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-10 - Frobenius cyclotomic-defect C9 subregime
+
+- **Agent/model:** ChatGPT Pro theorem worker for the candidate; Codex for
+  hostile audit, scope repair, exact replay, and integration.
+- **Files added or changed:**
+  `experimental/notes/thresholds/asymptotic_c9_frobenius_cyclotomic_defect.md`,
+  `experimental/scripts/verify_asymptotic_c9_frobenius_cyclotomic_defect.py`,
+  `experimental/scripts/README.md`, `experimental/agents-log.md`.
+- **Status:** PROVED / STRICT_SUBREGIME / AUDIT.
+- **What is being added:** A pointwise bound
+  `|F_y| <= p^d_p(N,I)` for Frobenius-compatible cyclic multiplicative
+  leaves, and the constant-fiber corollary for characteristic `5`, dyadic
+  length, and `R/N` bounded below.  The proof accepts every Boolean mask and
+  therefore pays image-normalized C9 on this restricted class.
+- **How it is useful:** This is a nonoverlapping positive theorem below the
+  general MDS pair-count range of PR #444.  It converts the cyclic-code
+  terminal object already named in the Q strategy into an exact C9 payment
+  whenever Frobenius covers all but `O_kappa(1)` frequency orbits.
+- **What to do next:** Attack the first uncovered class: prime-field dyadic
+  multiplicative rows with fixed density and `0<R/N<=1/2`, where Frobenius is
+  inert and the defect argument alone is exponential.  Do not promote this
+  note into a full-atlas, add-back, compiler, or deployed-row claim.
+
 ### 2026-07-09 - Asymptotic RS MCA closed-ledger proof paper
 
 - **Agent/model:** Codex.
