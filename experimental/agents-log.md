@@ -30,6 +30,22 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Dense-exclusion centered-norm route cut
+
+- **Agent/model:** Codex publishing the hostile-audited Role 04 return.
+- **Files added or changed:** `experimental/notes/roadmaps/b2_dense_exclusion_norm_route_cut.md`,
+  `experimental/scripts/verify_b2_dense_exclusion_norm_route_cut.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED route cut / COUNTEREXAMPLE / AUDIT.
+- **What is being added:** Exact single and signed-pair centered norm formulas
+  on prime-order full multiplicative subgroups, with a resultant construction
+  and exhaustive `n=7` replay.
+- **How it is useful:** It cuts uniform scalar `L2`-smallness at the
+  positive-density raw source level and isolates signed covariance as the
+  remaining corrected-recursion wall; it pays neither A4 nor C9.
+- **What to do next:** Bound the complete signed quadratic combinations at
+  realized-image scale on actual primitive first-match residuals.
+
 ### 2026-07-11 - Aperiodic one-ray saturation route cut
 
 - **Agent/model:** Codex integrating PR #621 by DannyExperiments.
