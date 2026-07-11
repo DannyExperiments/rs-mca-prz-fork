@@ -30,6 +30,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - Canonical-transversal VC compression for exponential ILO
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, hostile-audited and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/canonical_transversal_vc_compression.md`,
+  `experimental/scripts/verify_canonical_transversal_vc_compression.py`, and
+  this log.
+- **Status:** PROVED.
+- **What is being added:** For every subset-sum map into an abelian group, a
+  minimum-cost transversal has VC dimension at most the maximum
+  subset-dissociation dimension.  This gives the exact inequalities
+  `f <= 2^(b-d)`, `L <= sum_{j<=d} binom(b,j)`, and `fL <= 3^b`.
+- **How it is useful:** It supplies the image conclusion named `(ILO-moment)`
+  with `omega(eta)=H_2(eta)`, bypassing the still-open Bohr-to-GAP structural
+  step in PRs #661/#663 when only image size is consumed.
+- **What to do next:** Exhibit the literal post-atlas block/fiber typing and
+  effective-image/profile charge for every A4 leaf.  This packet does not
+  supply that source-specific compiler or close A4.
+
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
