@@ -64,7 +64,27 @@ Keep entries concise and link to the relevant files.
   Do not run the heavier reproducer scripts casually.  For proof progress,
   focus on the named `(ILO-moment)`/exponential inverse-LO input and the
   remaining M31 residual ledger rows.
+### 2026-07-12 - Projective syndrome descent and proper-field C5 coverage
 
+- **Agent/model:** Codex, extracting the audited Role 05 theorem payload.
+- **Files added or changed:**
+  `experimental/notes/thresholds/projective_syndrome_c5_first_match.md`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED proper-field C5 classification / fixed-fiber route cut.
+- **What is being added:** Proves exactly five claims: the intrinsic projective
+  syndrome field, its Galois-stabilizer formula, projective subline
+  confinement, canonical proper-field C5 coverage after C1--C4 first match,
+  and the impossibility of obtaining a nontrivial post-C5 fixed-fiber action
+  from coefficientwise Frobenius by codeword gauge and projective
+  reparametrization.
+- **How it is useful:** Supplies the theorem-facing A2 descent interface while
+  keeping field-full pairs and all payment claims outside the result. It
+  prevents between-pair Galois covariance from being reused as fixed-fiber
+  orbit divisibility after C5.
+- **What to do next:** Prove a direct first-match add-back for the remaining C5
+  projections and a direct projection bound or independent automorphism on
+  every literal field-full residual chart. No finite upper ledger, global
+  C1--C8 coverage theorem, or threshold result is supplied here.
 ### 2026-07-11 - Routing, saturation, and M31 ADE PR wave
 
 - **Agent/model:** Codex integrating PRs #622--#646 from holmbuar,
