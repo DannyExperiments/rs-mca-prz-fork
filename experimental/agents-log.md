@@ -30,6 +30,22 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - L2 sharp excess-codegree recursion
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `experimental/notes/l2/l2_sharp_excess_codegree_recursion.md`,
+  `experimental/scripts/verify_l2_sharp_excess_codegree_recursion.py`, and this log.
+- **Status:** PROVED exact reduction / AUDIT; no paper theorem is promoted.
+- **What is being added:** Sharpens the known L2 row peel to threshold
+  `2s-k+1` and excess coefficient `L_s-1`, then records the excess-codegree
+  sum, basis-free `P_s` dynamic, `B_r` recurrence, and exact threshold ladder.
+- **How it is useful:** Isolates the literal high-anchor excess that remains
+  after one baseline completion while treating row-span/effective-rank collapse
+  as an existing input.
+- **What to do next:** Prove or refute a quotient-removed excess-codegree bound
+  with canonical first-match charging, together with the unavoidable rank-one
+  one-row profile bound.
+
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
