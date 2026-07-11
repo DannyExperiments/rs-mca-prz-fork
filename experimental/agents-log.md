@@ -30,6 +30,22 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - Completed-Cramer payment for strict A6 strata
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, hostile-audited and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/completed_cramer_strict_strata.md`,
+  `experimental/scripts/verify_completed_cramer_strict_strata.py`, and this
+  log.
+- **Status:** PROVED.
+- **What is being added:** Complete zero masks of transverse witnesses are
+  rigid points with a nonzero completed-Cramer pivot.  A split pivot count
+  gives an explicit bound `B^Cr_e` on every strict exact-weight stratum.
+- **How it is useful:** It pays every strict `W1-/W2-` family satisfying
+  `sum_e B^Cr_e=exp(o(n))`, including all `e=o(n/log n)`.
+- **What to do next:** The linear-weight strict interior still requires actual
+  first-match, realized-image, or RC/boundary-equal incidence information.
+
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
