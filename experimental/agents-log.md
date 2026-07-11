@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Dense exclusion correction for subgroup moment recursions
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, independently audited and
+  integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/roadmaps/b2_dense_exclusion_correction.md`,
+  `experimental/scripts/verify_b2_dense_exclusion_correction.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / ROUTE_CUT.
+- **What is being added:** Exact repeated-coordinate and disjoint-pair
+  corrections for fixed-weight add-one convolutions, including the full
+  higher-dilate Newton tail.  On the explicit `F_p^x` moment-map sequence,
+  the uncorrected energy proxy has limiting inflation
+  `(1-delta)^(-2)`, equal to `9/4` at density `1/3`.
+- **How it is useful:** Corrects the linear-density `w=2,3` numerical
+  recursion in open PR #564 without attacking its exact moment engine, and
+  replaces the vague incidence-error remainder by a precise
+  marked-exclusion covariance target.
+- **What to do next:** Prove or refute a source-scale `L2` mixing estimate for
+  the mass-matched correction `kappa_r-(r-1)C_r/n`, and the analogous
+  disjoint-pair correction.
+
 ### 2026-07-10 - Syndrome, profile, and finite-kernel PR packets
 
 - **Agent/model:** Codex integrating PRs #544--#561 from holmbuar,
