@@ -30,6 +30,24 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Unsaturated orientation separating-pole route cut
+
+- **Agent/model:** Codex, hostile-auditing the Role 01 Pro return.
+- **Files added or changed:** `experimental/notes/thresholds/unsaturated_orientation_pole_obstruction.md`,
+  `experimental/scripts/verify_unsaturated_orientation_pole_obstruction.py`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED PRE-ATLAS ROUTE CUT; not a primitive counterexample.
+- **What is being added:** Every nonempty occupancy slice has a locator-prefix
+  subfiber that a separating scalar-extension pole line realizes bijectively as
+  actual diagonal joint-cell slopes; at depth zero its size is exactly
+  `H_phi(lambda)`.  For `D=B^x`, `phi=x^c`, the local orientation factor is
+  `exp((eta log(c)/c)n-o(n))` at logarithmic prefix depth.
+- **How it is useful:** It rules out deleting the proper-fiber orientation
+  coefficient before algebraic routing while preserving the challenge-cap,
+  C1--C8, primitive-residual, and finite-ledger nonclaims.
+- **What to do next:** Classify the constructed witnesses through C1--C8 and
+  prove the resulting earlier-cell payment or the exact residual-thinning bound.
+
 ### 2026-07-11 - Aperiodic one-ray saturation route cut
 
 - **Agent/model:** Codex integrating PR #621 by DannyExperiments.
