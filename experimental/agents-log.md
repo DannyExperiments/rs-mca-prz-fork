@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Minimal-phase multiplicity repair
+
+- **Agent/model:** GPT-5.6 Pro, hostile-audited and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/minimal_phase_supplement.md`,
+  `experimental/scripts/verify_minimal_phase_multiplicity_repair.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED correction / ROUTE CUT.
+- **What is being added:** Retracts the false inference that a character frame
+  controls unweighted energy on all of `A-A`, proves the exact weighted-trace
+  identity, and installs a multiplicity-thick spectral-energy interface that
+  does imply full image and ambient max-fiber control.
+- **How it is useful:** Repairs hard input B's frame interface without claiming
+  a primitive A4 leaf. An exact characteristic-two RS regression shows why
+  the old set-dodged condition can hold while the effective image collapses
+  exponentially.
+- **What to do next:** Prove the multiplicity-thick condition on actual
+  first-match weighted-Vandermonde leaves, or route image-collapse profiles
+  before the primitive full-image branch.
+
 ### 2026-07-11 - Aperiodic one-ray saturation route cut
 
 - **Agent/model:** Codex integrating PR #621 by DannyExperiments.
