@@ -30,6 +30,23 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Fractional realized-image compiler
+
+- **Agent/model:** Codex integrating and independently auditing a GPT-5.6 Pro
+  theorem return.
+- **Files added or changed:**
+  `experimental/notes/roadmaps/fractional_realized_image_compiler.md`,
+  `experimental/scripts/verify_fractional_realized_image_compiler.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED exact incidence compiler; OPEN for A4.
+- **What is being added:** A fractional-cover theorem combining support
+  participation capacity and pointwise boundary capacity into the exact charge
+  `|Z^circ|<=K M/L+sum_z omega(z)N(z)`.
+- **How it is useful:** Gives a normalization-safe interface for converting a
+  source-specific covariance/frame certificate into actual slope payment.
+- **What to do next:** Prove the fractional-cover hypothesis with
+  subexponential cost for one named post-atlas primitive class.
+
 ### 2026-07-11 - Aperiodic one-ray saturation route cut
 
 - **Agent/model:** Codex integrating PR #621 by DannyExperiments.
