@@ -2,7 +2,7 @@
 
 - **Status:** PROVED for the stated per-chart branch.
 - **Track:** asymptotic hard input C / condition A6.
-- **Base audited:** `origin/main` at `8264eae`.
+- **Base audited:** `origin/main` at `5c9aab7`.
 - **Verifier:**
   `experimental/scripts/verify_low_direction_hybrid_exact_weight.py`
   (zero arguments, Python standard library only).
@@ -41,7 +41,7 @@ M = N-d,
 Delta = R+1-d = M-kappa+1.                                (2)
 ```
 
-Assume `t<M`.  For every integer `0<=e<=t`, put
+For every integer `0<=e<=min(t,M)`, put
 
 ```text
 D_e = min(M,max(Delta,d+2e-2t)),                           (3)
@@ -49,18 +49,26 @@ J_e = M D_e - 2Me + e^2,                                  (4)
 h_e = max(1,d+e-t).                                        (5)
 ```
 
-If `J_e>0` for every `0<=e<=t`, then
+For each occupied exact-weight stratum with `J_e>0`,
 
 ```text
-|Z_lambda^o|
-  <= sum_(e=0)^t floor(d/h_e) floor(M(D_e-e)/J_e)          (6)
-  <= N^4.                                                  (7)
+|Z_(lambda,e)^o|
+  <= floor(d/h_e) floor(M(D_e-e)/J_e)
+  <= N^3.                                                   (6)
 ```
 
-Consequently, along any sequence with `N<=n`, this chart directly satisfies
+Moreover `J_M<=0`, so at most `M` strata have positive `J_e`.  Hence
 
 ```text
-|Z_lambda^o| <= exp(o(n))(1+barN_lambda).                  (8)
+|union_(e:J_e>0) Z_(lambda,e)^o| <= N^4.                  (7)
+```
+
+Consequently, along any sequence with `N<=n`, the positive-`J_e` part of
+the chart directly satisfies
+
+```text
+|union_(e:J_e>0) Z_(lambda,e)^o|
+  <= exp(o(n))(1+barN_lambda).                             (8)
 ```
 
 The result is not a bound for the whole low-weight list of every affine GRS
@@ -103,7 +111,7 @@ w_gamma = P_J(u_gamma)=P_J(c_gamma) in A.                  (11)
 ```
 
 The last equality uses that `v` vanishes outside `J`.  Therefore
-`e_gamma=wt(w_gamma)` lies in `[0,t]`.
+`e_gamma=wt(w_gamma)` lies in `[0,min(t,M)]`.
 
 ### 2. Exact slope multiplicity above one punctured word
 
@@ -244,17 +252,23 @@ M(D_e-e)-J_e=e(M-e)>=0.                                   (26)
 
 Thus (25) also covers that case.
 
-### 5. Sum, polynomial bound, and post-first-match compiler
+### 5. Positive-stratum sum, polynomial bound, and post-first-match compiler
 
-Multiplying (14) and (25), then summing the exact weights, proves (6).  Under
-`t<M`, there are at most `M` strata.  Each positive integer `J_e` is at
-least one, while
+Multiplying (14) and (25) proves (6) for each positive-`J_e` stratum.
+Each positive integer `J_e` is at least one, while
 
 ```text
 d<=N,  M(D_e-e)<=M^2<=N^2.
 ```
 
-This proves (7).  For a nonempty full profile slice,
+Thus each stratum costs at most `N^3`.  At the endpoint,
+
+```text
+J_M=M D_M-2M^2+M^2=M(D_M-M)<=0.
+```
+
+There are therefore at most `M` positive strata, proving (7).  For a
+nonempty full profile slice,
 `barN_lambda=|Omega_lambda^0|/L_lambda>=1`; with `N<=n`, one has
 `N^4=exp(O(log n))=exp(o(n))`, proving (8).  No ambient-image substitution,
 full-image hypothesis, or A4 estimate is used in this final A6 conversion.
@@ -441,37 +455,36 @@ Thus the two-slope construction attains the exact slope-cluster factor.
 
 ## Exact complementary wall
 
-The proof applies one exact-weight stratum at a time.  Therefore an unpaid
-chart with `t<M` must have an occupied exact punctured weight `e` for which
-`J_e<=0`.  The capped regime `D_e=M` cannot cause failure, because
+The proof applies one exact-weight stratum at a time.  Therefore every unpaid
+stratum has `J_e<=0`.  Put `q_e=d+2e-2t`.  The remaining wall is the
+disjoint exhaustive union
 
 ```text
-J_e=(M-e)^2>0  for e<=t<M.                                (47)
+W1+: q_e<=Delta,
+     e^2-2Me+MDelta<=0.                                  (47)
+
+W2+: Delta<q_e<M,
+     e^2<=M(2t-d).                                       (48)
+
+W3+: q_e>=M,
+     e=M.                                                 (49)
 ```
 
-Only the following two walls remain:
-
-```text
-Punctured-distance wall:
-  d+2e-2t<=Delta,
-  e^2-2Me+MDelta<=0.                                      (48)
-
-Mixed minimum-lift wall:
-  Delta<d+2e-2t<M,
-  e^2<=M(2t-d).                                           (49)
-```
-
-The separate full-support locus `t>=M` is outside this theorem.  A next
-attack should fix one occupied weight satisfying (48) or (49), then use
+Indeed the three alternatives are exactly the three branches of
+`D_e=min(M,max(Delta,q_e))`.  In the capped branch
+`J_e=(M-e)^2`, so nonpositivity is equivalent to `e=M`.  When `t<M`,
+`W3+` is impossible and `W1+`--`W2+` are the two walls printed in the
+previous version.  A next attack should fix one occupied weight satisfying
+(47), (48), or (49), then use
 higher-order GRS incidence/generalized-weight information or compile
 low-affine-rank concentration to an already named pencil, saturation, or
 rank-collapse profile.
 
 ## Ledger effect and nonclaims
 
-- **A6:** paid only for actual realized minimum-lift charts with `t<M` and
-  positive `J_e` on every occupied exact-weight stratum.  The stronger
-  all-weights hypothesis in the theorem is a convenient uniform certificate.
+- **A6:** every actual realized minimum-lift exact-weight stratum with
+  positive `J_e` is paid, including when `t>=M`.  Only the three
+  nonpositive branches (47)--(49) remain.
 - **A2:** not proved.  There is no witness-exhaustive atlas theorem, no proof
   of only `exp(o(n))` realized charts/supports/minimum lifts, and no global
   add-back statement.
@@ -485,8 +498,7 @@ rank-collapse profile.
   survivor census, adjacent safe/unsafe inequality, or deployed budget is
   changed.
 - The theorem does not bound the complete low-weight list of a general affine
-  GRS coset, does not cover an occupied `J_e<=0` stratum, and does not cover
-  `t>=M`.
+  GRS coset and does not cover an occupied `J_e<=0` stratum.
 - The explicit two-slope chart is a source-valid raw chart, but no claim is
   made that it survives every earlier quotient, planted, pencil, curve, or
   saturation deletion in a complete atlas.
@@ -509,8 +521,10 @@ The verifier uses exact integer and prime-field arithmetic only.  It:
    and the exact theorem sum;
 3. checks the breakpoint, endpoint, monotonicity, factorization, and interval
    certificates through `m=10,000`; and
-4. exhausts bounded integer chart parameters and verifies that every
-   nonpositive `J_e` with `t<M` lies in exactly one of (48)--(49); and
+4. exhausts bounded integer chart parameters, including `6,864`
+   full-support charts, and verifies that every nonpositive `J_e` lies in
+   exactly one of (47)--(49), while every positive stratum obeys the
+   `N^3` bound and their union obeys `N^4`; and
 5. constructs the actual `m=1` weighted realization over `F_97`, verifies the
    weighted kernel, both transverse witnesses, their common punctured word,
    the nontrivial affine coset, and (42)--(46).
