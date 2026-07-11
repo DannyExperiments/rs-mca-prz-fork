@@ -30,6 +30,24 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - Completed-zero-mask two-block A6 payment
+
+- **Agent/model:** Codex, implementing the hostile-audited R7 Role 03 theorem.
+- **Files added or changed:**
+  `experimental/notes/thresholds/completed_zero_mask_two_block.md`,
+  `experimental/scripts/verify_completed_zero_mask_two_block.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** An exact field-independent direct A6 payment for
+  actual completed-witness strata with
+  `Xi_e=d(M-e)^2+M max(1,d+e-t)^2-dM^2>=0`, including two explicit
+  positive-length linear-weight intervals and corrected equality-limit scope.
+- **How it is useful:** Pays a rank-unrestricted portion of the strict
+  `W1-/W2-` wall left by #659 and #671 without an ambient-image substitution.
+- **What to do next:** Attack the actual `Xi_e<0` central band using
+  higher-order complete-mask consistency, first-match routing, or a literal
+  boundary-equal `(RC)` incidence.
+
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
