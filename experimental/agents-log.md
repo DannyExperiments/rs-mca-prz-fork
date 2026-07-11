@@ -30,6 +30,22 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - Agreement-weighted transverse-secant payment
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, hostile-audited and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/agreement_weighted_transverse_secant.md`,
+  `experimental/scripts/verify_agreement_weighted_transverse_secant.py`, and
+  this log.
+- **Status:** PROVED.
+- **What is being added:** A full-spark affine-minor double count weights each
+  retained slope by `binom(|A_gamma|-1,kappa)`, strengthening the existing
+  one-minor residual-kernel bound.
+- **How it is useful:** It directly pays fixed rank-two, two-excess field-full
+  charts after C5 and any subexponential family of such charts.
+- **What to do next:** Prove a literal witness-exhaustive A2 atlas or a
+  subexponential low-excess shadow cover for the actual post-C7 residual.
+
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
