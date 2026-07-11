@@ -64,7 +64,23 @@ Keep entries concise and link to the relevant files.
   Do not run the heavier reproducer scripts casually.  For proof progress,
   focus on the named `(ILO-moment)`/exponential inverse-LO input and the
   remaining M31 residual ledger rows.
+### 2026-07-12 - L2-Sharp V0 repeated-row correction
 
+- **Agent/model:** Codex from the Role 09 R5 return, independently checked.
+- **Files added or changed:**
+  `experimental/notes/l2/l2_sharp_v0_repeated_rows_counterexample.md`,
+  `experimental/notes/l2/l2_sharp_target_conjecture.md`,
+  `experimental/scripts/verify_l2_sharp_v0_repeated_rows.py`, and
+  `experimental/agents-log.md`.
+- **Status:** COUNTEREXAMPLE / PROVED.
+- **What is being added:** A narrow refutation of L2-Sharp V0: random one-row
+  averaging produces an exponential list, repeated rows preserve it exactly,
+  while V0's independent-row term and all-remainder envelope are polynomial.
+- **How it is useful:** Corrects the L2 target's reserve ledger from
+  `mu sigma log q` to the rank-one requirement `sigma log q` for a uniform
+  theorem, without importing any Grand-threshold or finite-endpoint claim.
+- **What to do next:** Formulate a V1 target only after adding explicit
+  one-row worst-case control or a proved effective-row-rank stratification.
 ### 2026-07-11 - Routing, saturation, and M31 ADE PR wave
 
 - **Agent/model:** Codex integrating PRs #622--#646 from holmbuar,
