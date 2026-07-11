@@ -30,6 +30,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Affine-syndrome field confinement repair
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, hostile-audited and repaired by Codex.
+- **Files added or changed:** `experimental/notes/thresholds/affine_syndrome_field_confinement.md`,
+  `experimental/notes/thresholds/c7_collapse_image_degree.md`,
+  `experimental/notes/thresholds/fi_field_discharge.md`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED refinement / COUNTEREXAMPLE to raw-field exactness /
+  correctness amendment.
+- **What is being added:** Replaces the noncanonical raw received-line field
+  by the minimal field defining the syndrome flag and proves
+  `delta_lambda(r)<=|F_aff(r)|<=|F_r|`. It also repairs the missing
+  existence quantifier in the ambient-field converse.
+- **How it is useful:** Makes the C7 field payment invariant under codeword
+  gauge and affine slope changes without upgrading a sufficient field bound
+  into a necessary one.
+- **What to do next:** Construct one actual post-atlas primitive leaf and
+  prove its source-specific fractional/phase payment. No deployed row moves.
+
 ### 2026-07-11 - Routing, saturation, and M31 ADE PR wave
 
 - **Agent/model:** Codex integrating PRs #622--#646 from holmbuar,
