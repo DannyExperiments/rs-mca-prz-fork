@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - M31 kappa=2 common-height ADE cut
+
+- **Agent/model:** Codex integrating and independently auditing a GPT-5.6 Pro
+  theorem return.
+- **Files added or changed:**
+  `experimental/notes/thresholds/cap25_v13_m31_k2_common_height_ade_cut.md`,
+  `experimental/scripts/verify_m31_k2_common_height_ade_cut.py`,
+  `experimental/data/cap25_v13_m31_k2_common_height_ade_cut.json`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED for the stated finite theorem and exact certificate;
+  OPEN for the remaining deployed ledger.
+- **What is being added:** A coordinate-labeled common-height ADE root-lattice
+  argument excluding every M31 two-shell row with `kappa=2` and `t>=277868`,
+  plus a replayable `113,864`-row delta beyond PR #628.
+- **How it is useful:** Shrinks the binding M31 two-shell residual from
+  `3,101,276` to `2,987,412` rows while retaining the actual prefix-rank
+  compiler and exact source grid.
+- **What to do next:** Attack the first failed boundary
+  `(2,277867,277867,555734)`, the remaining `kappa!=2` rows, and the primary
+  signed elementary-symmetric participation-ratio wall. Do not infer a full
+  deployed upper-ledger closure from this classifier.
+
 ### 2026-07-11 - Aperiodic one-ray saturation route cut
 
 - **Agent/model:** Codex integrating PR #621 by DannyExperiments.
