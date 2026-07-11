@@ -30,6 +30,23 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - Challenge-restricted syndrome-secant lower bound
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, hostile-audited and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/syndrome_secant_challenge_lower.md`,
+  `experimental/scripts/verify_syndrome_secant_challenge_lower.py`, and this
+  log.
+- **Status:** PROVED.
+- **What is being added:** An exact second-moment lower bound for the union of
+  MDS syndrome secants, converted into a challenge-restricted MCA numerator.
+  At `a=k+1` the lower fraction tends to one when `log q=o(n)`.
+- **How it is useful:** It supplies the asymptotic LOWER/unsafe-side reserve
+  near capacity with the correct denominator `|Gamma|`, independently of A2,
+  A4, and A6.
+- **What to do next:** Prove the complete A7 safe envelope and target
+  comparison.  No safe row or deployed adjacent certificate is claimed here.
+
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
