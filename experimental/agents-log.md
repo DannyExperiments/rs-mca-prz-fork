@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Marked-exclusion cross-Gram reconstruction
+
+- **Agent/model:** Codex integrating and independently auditing a GPT-5.6 Pro
+  theorem return.
+- **Files added or changed:**
+  `experimental/notes/roadmaps/marked_exclusion_cross_gram.md`,
+  `experimental/scripts/verify_marked_exclusion_cross_gram.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED universal identity / exact finite replay; PRE-ATLAS.
+- **What is being added:** Exact single-support and signed-pair cross-Gram
+  formulas reconstructing the realized multiplicity diagonal, including at
+  the half-density point where covariance alone is singular, plus the sharp
+  positive-density obstruction to every separate Schatten-smallness route.
+- **How it is useful:** Replaces a failed scalar correction-norm interface by
+  the exact operator that retains multiplicity and sign information, while
+  stating explicitly that post-atlas participation remains open.
+- **What to do next:** Prove a signed-Gram participation or operator-norm
+  estimate for one named first-match primitive survivor, then perform profile
+  add-back and actual-slope compilation.
+
 ### 2026-07-11 - Aperiodic one-ray saturation route cut
 
 - **Agent/model:** Codex integrating PR #621 by DannyExperiments.
