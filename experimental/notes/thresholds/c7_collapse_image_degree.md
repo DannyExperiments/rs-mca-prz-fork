@@ -1,5 +1,13 @@
 # The C7 collapse cell's image-scale degree is the received-line field of definition
 
+> **2026-07-11 correction.** The raw coordinate field used below is not
+> invariant under codeword gauge or affine reparametrization of the received
+> line. The canonical confinement object is the affine-syndrome flag field
+> `F_aff(r)` defined and proved in
+> `affine_syndrome_field_confinement.md`. The valid individual-line bound is
+> `delta_lambda(r) <= |F_aff(r)| <= |F_r|`. Statements below calling
+> `|F_r|` exact, necessary, or equivalent are superseded.
+
 ## Status
 
 `CONSUMER PINNED (AUDIT) / T-PAY-RES REFORMULATED AS A FIELD-OF-DEFINITION LAW
