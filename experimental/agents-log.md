@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Self-contained Boolean-energy bound for primitive Q
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, hostile-audited and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/boolean_energy_cubed_direct.md`,
+  `experimental/scripts/verify_boolean_energy_cubed_direct.py`, and
+  `experimental/notes/audits/lean_frontiers_primitive_boolean.md`.
+- **Status:** PROVED mathematical theorem / VERIFIED exact certificate / Lean translation open.
+- **What is being added:** An elementary coordinate-splitting proof that every
+  duplicate-free Boolean family in `Z^T` satisfies `E(F)^3 <= |F|^8`, plus the
+  exact consequence `K E(F)>|F|^3 => |F|<K^3`. The proof supplies the rational
+  `hsharp` input used by the existing primitive-Boolean compiler without BSG
+  or quasicube growth.
+- **How it is useful:** It makes the high-energy branch self-contained at the
+  mathematical level and leaves the actual image-normalized low-energy/Sidon
+  payment A4 as the exact next wall. A stronger published exponent was already
+  cited; this packet claims self-containment, not exponent improvement.
+- **What to do next:** Translate the coordinate induction and scalar glue
+  identity into `PrimitiveBoolean.lean`, then prove A4 on an actual post-atlas
+  primitive residual. Do not treat this as A4 or a deployed-row closure.
+
 ### 2026-07-11 - Routing, saturation, and M31 ADE PR wave
 
 - **Agent/model:** Codex integrating PRs #622--#646 from holmbuar,
