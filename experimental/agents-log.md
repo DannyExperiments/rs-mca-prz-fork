@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Full-support positive-J exact-weight ray compiler
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, hostile-audited and amended by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/low_direction_hybrid_exact_weight.md`,
+  `experimental/scripts/verify_low_direction_hybrid_exact_weight.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED amendment / VERIFIED exact arithmetic / A6 partial payment.
+- **What is being added:** Removes the unnecessary `t<M` hypothesis from
+  the integrated #630 exact-weight theorem. Every occupied stratum with
+  `J_e>0` has at most `N^3` slopes, all positive strata cost at most
+  `N^4`, and the residual `J_e<=0` wall is the explicit disjoint union
+  `W1+`, `W2+`, and the full-support endpoint `W3+`.
+- **How it is useful:** Pays a genuine additional portion of the A6/RC
+  boundary-transversal wall while preserving actual first-match and
+  realized-image normalization.
+- **What to do next:** Attack one actual post-atlas exact-weight stratum on
+  `W1+`, `W2+`, or `W3+`. This does not close A6, a deployed row, or
+  either grand threshold.
+
 ### 2026-07-11 - Routing, saturation, and M31 ADE PR wave
 
 - **Agent/model:** Codex integrating PRs #622--#646 from holmbuar,
