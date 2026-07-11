@@ -30,6 +30,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Minimal-polynomial simple-pole saturation
+
+- **Agent/model:** Codex integrating and independently auditing a GPT-5.6 Pro
+  theorem return.
+- **Files added or changed:**
+  `experimental/notes/thresholds/minimal_polynomial_simple_pole_saturation.md`,
+  `experimental/scripts/verify_minimal_polynomial_simple_pole_saturation.py`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED exact finite theorem / ROUTE CUT.
+- **What is being added:** The complete simple-pole witness incidence and its
+  exact slope quotient by the pole minimal polynomial, an affine residue-rank
+  cap, sharp collision floors, and an order-stable one-slope continuation.
+- **How it is useful:** Supplies the converse obstruction to separating-pole
+  lower constructions: low complete-list residue rank forces too few actual
+  slopes regardless of support count or earlier first-match deletions.
+- **What to do next:** Construct and audit one high-residue-rank prefix-pole
+  sequence that survives the actual printed C1--C8 atlas; do not identify the
+  parameterized residue cells with canonical C7 without that replay.
+
 ### 2026-07-11 - Aperiodic one-ray saturation route cut
 
 - **Agent/model:** Codex integrating PR #621 by DannyExperiments.
