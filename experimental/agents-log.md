@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Canonical full-agreement occupancy atlas
+
+- **Agent/model:** GPT-5.6 Pro Role 05, hostile-audited and integrated by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/canonical_full_agreement_occupancy_atlas.md`,
+  `experimental/scripts/verify_canonical_full_agreement_occupancy_atlas.py`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED exact compiler / strong partial for asymptotic hard input
+  A.
+- **What is being added:** An injective full-agreement-set state space,
+  polynomial-size joint support/agreement occupancy atlas, exact weighted
+  vertex-cover compiler, and complete payment of the agreement-saturated
+  stratum.
+- **How it is useful:** Strictly refines the support-only atlas and open PR
+  #589.  It removes a factor `2^a` from the certified capacity of an explicit
+  two-fold profile even when witness supports occupy linearly many fibers
+  partially.
+- **What to do next:** Prove an actual-slope orientation-collapse theorem for
+  unsaturated full-agreement profiles with `p=Theta(n)`; no global hard-input-A
+  closure or deployed-row impact is claimed here.
+
 ### 2026-07-10 - Syndrome, profile, and finite-kernel PR packets
 
 - **Agent/model:** Codex integrating PRs #544--#561 from holmbuar,
