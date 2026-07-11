@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Aperiodic one-ray saturation wall
+
+- **Agent/model:** GPT-5.6 Pro Role 07, hostile-audited and integrated by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/aperiodic_one_ray_saturation.md`,
+  `experimental/scripts/verify_aperiodic_one_ray_saturation.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED route cut.
+- **What is being added:** A characteristic-two smooth family with an
+  exponentially large, fully aperiodic refined locator-prefix fiber whose
+  base-pole slope image is one point; at most `q-1=exp(o(n))` exact
+  constant-coefficient saturation cells route the complete pole-line
+  incidence.
+- **How it is useful:** It proves that positive profile entropy and
+  aperiodicity do not imply primitive lower reserve.  Distinct-ray control or
+  an exact overlap estimate with earlier first-match saturation cells remains
+  necessary.
+- **What to do next:** Bound the actual earlier-cell overlap for a concrete
+  unsafe row.  No hard-input-E closure or deployed-row change is claimed.
+
 ### 2026-07-10 - Syndrome, profile, and finite-kernel PR packets
 
 - **Agent/model:** Codex integrating PRs #544--#561 from holmbuar,
