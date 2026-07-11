@@ -1,5 +1,14 @@
 # (FI-field) reduces to the ambient-field hypothesis; discharged on the prize's poly-field class
 
+> **2026-07-11 quantifier correction.** The implication
+> `log|F_n|=o(n) => log|F_aff(r)|=o(n)` holds for every line. The converse
+> comparison with the ambient field holds only for an existing prize-relevant
+> line: `|Z_a(r)|>epsilon|F_n|` forces
+> `|F_aff(r)|>epsilon|F_n|`. If no prize-relevant line exists, the row is
+> already safe and no ambient-field conclusion follows. Unqualified
+> equivalence language below is superseded by
+> `affine_syndrome_field_confinement.md`.
+
 ## Status
 
 `RECEIVED-LINE CERTIFICATE REDUCED TO AMBIENT-FIELD HYPOTHESIS (PROVED,
