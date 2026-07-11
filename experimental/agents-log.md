@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - R=2 constant-Weil flatness with exact characteristic cycles
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, hostile-audited and integrated
+  by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/r2_constant_weil_cycle_flatness.md`,
+  `experimental/scripts/verify_r2_constant_weil_cycle_flatness.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED, conditional on the integrated classical weighted-Weil
+  proposition.
+- **What is being added:** Exponential full-image equidistribution for the
+  fixed-density unweighted `R=2` moment map on multiplicative cosets when
+  `N/p=O(1)` and the normalized Weil parameter is below `1/2`, with exact
+  payment of characteristic-divisible cycles.
+- **How it is useful:** Pays asymptotic hard input B on an explicit infinite
+  `F_(p^2)` class outside the existing `R sqrt(Q)=o(N)` shallow theorem, and
+  resolves the near-Sidon/max-fiber razor there without an energy split.
+- **What to do next:** Attack weighted rational and circle leaves, or the
+  complementary `Lambda/N>=1/2` and unbounded-`N/p` regimes; separately map
+  the finite predicate to any concrete deployed leaf before claiming finite
+  impact.
+
 ### 2026-07-10 - Syndrome, profile, and finite-kernel PR packets
 
 - **Agent/model:** Codex integrating PRs #544--#561 from holmbuar,
