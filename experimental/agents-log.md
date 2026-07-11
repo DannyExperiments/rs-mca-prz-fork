@@ -64,7 +64,26 @@ Keep entries concise and link to the relevant files.
   Do not run the heavier reproducer scripts casually.  For proof progress,
   focus on the named `(ILO-moment)`/exponential inverse-LO input and the
   remaining M31 residual ledger rows.
+### 2026-07-12 - A6 full-support and zero-boundary payment
 
+- **Agent/model:** Codex, compiling the Role 08 R5 theorem return.
+- **Files added or changed:**
+  `experimental/notes/thresholds/a6_full_support_zero_boundary.md`,
+  `experimental/scripts/verify_a6_full_support_zero_boundary.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / EXACT_NEW_WALL / AUDIT.
+- **What is being added:** A standalone completed-witness theorem proving the
+  generalized weights of the direction-extension code, fixed-zero-mask
+  dimension at most one, direct payment of the complete `W3+` branch, and all
+  `J_e=0` payments including the `kappa=1` endpoint.  It classifies the exact
+  remaining strict `J_e<0` locus as `W1-` union `W2-` without importing the
+  unlanded positive-`J_e` amendment or claiming `W1+`/`W2+` fully closed.
+- **How it is useful:** Removes the full-support and equality boundaries from
+  the A6 exact-weight attack surface and reduces every fixed full-zero-mask
+  component to a point or affine line.
+- **What to do next:** Audit the completed-tuple hypotheses against the live
+  first-match compiler, then attack strict `W1-`/`W2-` using actual boundary
+  coordinates or first-match mask aggregation.
 ### 2026-07-11 - Routing, saturation, and M31 ADE PR wave
 
 - **Agent/model:** Codex integrating PRs #622--#646 from holmbuar,
