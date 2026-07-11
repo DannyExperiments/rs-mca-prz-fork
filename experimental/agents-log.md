@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Low-direction minimum-lift puncture compiler
+
+- **Agent/model:** Independent GPT-5.6 Pro Roles 04 and 06, hostile-audited
+  and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/low_direction_minimum_lift_puncture.md`,
+  `experimental/scripts/verify_low_direction_minimum_lift_puncture.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED for the stated asymptotic hard-input-C branch.
+- **What is being added:** Puncturing a minimum lift of the syndrome
+  direction maps actual transverse slopes into one affine GRS ball with an
+  exact multiplicity bound.  A punctured Johnson count gives a
+  field-independent polynomial payment on a positive-rate part of the
+  previously unpaid low-direction locus.
+- **How it is useful:** Strictly extends the integrated high-direction
+  compiler; the explicit `N=9m,R=8m,kappa=m,t=4m,d=2m` family is outside
+  both that branch and the deep theorem but has `|Z|<=12m`.
+- **What to do next:** Prove a profile-scale beyond-Johnson affine-GRS list
+  bound in the exact double-failure region printed in the note, or construct
+  an actual primitive counterprofile there.
+
 ### 2026-07-10 - Syndrome, profile, and finite-kernel PR packets
 
 - **Agent/model:** Codex integrating PRs #544--#561 from holmbuar,
