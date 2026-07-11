@@ -30,6 +30,24 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Low-direction hybrid exact-weight compiler
+
+- **Agent/model:** GPT-5.6 Pro Role 05, hostile-audited and integrated by
+  Codex.
+- **Files added or changed:** `experimental/notes/thresholds/low_direction_hybrid_exact_weight.md`,
+  `experimental/scripts/verify_low_direction_hybrid_exact_weight.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT for the stated per-chart A6 branch.
+- **What is being added:** An actual post-first-match weighted-RS compiler with
+  `D_e=min(M,max(Delta,d+2e-2t))` and `J_e=MD_e-2Me+e^2`; positive `J_e` on
+  every occupied exact-weight stratum gives `|Z_lambda^o|<=N^4`.  The strict
+  family `(90m,86m,4m,31m,50m)` lies beyond both integrated Johnson tests and
+  the deep branch, yet satisfies `|Z_lambda^o|<=112m+2`.
+- **How it is useful:** Pays a new positive-rate part of asymptotic hard input
+  C / A6 without claiming A2, A4, A7, or any finite deployed-row effect.
+- **What to do next:** Attack one occupied exact-weight stratum on the remaining
+  punctured-distance or mixed minimum-lift wall where `J_e<=0`.
+
 ### 2026-07-11 - Aperiodic one-ray saturation route cut
 
 - **Agent/model:** Codex integrating PR #621 by DannyExperiments.
