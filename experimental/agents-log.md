@@ -30,6 +30,24 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - Common-core shortening and near-k cover obstruction
+
+- **Agent/model:** Codex integrating a hostile-audited GPT-5.6 Pro return.
+- **Files added or changed:** `experimental/notes/thresholds/common_core_cover_obstruction.md`,
+  `experimental/scripts/verify_common_core_cover_obstruction.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED route cut / pre-atlas realization.
+- **What is being added:** An exact slope-preserving RS shortening theorem and
+  first-match capacity bound showing that a positive-rate actual-slope
+  residual requires exponentially many realized cells if every cell regains a
+  `k-o(n/log n)` common agreement core.
+- **How it is useful:** Cuts the proposed A2 rescue of genuine large-kernel
+  balanced cores by subexponentially many near-k core cells, while keeping the
+  primitive-survivor and A4 image-payment obligations explicit.
+- **What to do next:** Prove survivor elimination or direct image-scale A4
+  payment for one named post-atlas high-kernel residual.  Do not treat the
+  pre-atlas aperiodic line as a primitive survivor without a complete census.
+
 ### 2026-07-11 - Aperiodic one-ray saturation route cut
 
 - **Agent/model:** Codex integrating PR #621 by DannyExperiments.
