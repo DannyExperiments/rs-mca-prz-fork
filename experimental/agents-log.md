@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - M31 star-determinant rank-gap cut
+
+- **Agent/model:** GPT-5.6 Pro, hostile-audited and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/cap25_v13_m31_star_determinant_rank_gap.md`,
+  `experimental/data/cap25_v13_m31_star_determinant_rank_gap.json`,
+  `experimental/scripts/verify_m31_star_determinant_rank_gap.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED finite certificate / exact four-row cut.
+- **What is being added:** A variable-real-rank cubic obstruction and a
+  full-rank principal-star determinant argument that combine the actual M31
+  prefix rank over `F_p` with real inertia. The exact predicate removes four
+  rows beyond the integrated rank-inertia union.
+- **How it is useful:** It reduces the deployed M31 two-shell residual from
+  `3,101,280` to `3,101,276` rows and isolates six further low-`kappa`
+  rank-gap rows for a sharper componentwise `p`-adic valuation attack.
+- **What to do next:** Prove `v_p(det(A_S-lambda I))<g` on the six remaining
+  rank-gap triples, while retaining the coordinate-labeled M31 prefix
+  constraints. This entry does not close the two-shell cell or any deployed
+  adjacent inequality.
+
 ### 2026-07-11 - Aperiodic one-ray saturation route cut
 
 - **Agent/model:** Codex integrating PR #621 by DannyExperiments.
