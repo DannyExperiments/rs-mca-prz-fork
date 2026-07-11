@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-11 - M31 defect-67 planted ternary-code compiler
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, hostile-audited and repaired by Codex.
+- **Files added or changed:**
+  experimental/notes/thresholds/20260709_m31_chebyshev_fixed_remainder_floor/cap25_v13_m31_defect67_ternary_code.md
+  and experimental/agents-log.md.
+- **Status:** PROVED exact equivalence / finite census open.
+- **What is being added:** Converts the repaired M31 c=1024 degree-34
+  defect-67 divisor wall exactly into a planted weight-68 ternary codeword
+  census in a [1024,991,34] MDS/GRS kernel with 33 odd-moment equations.
+- **How it is useful:** Replaces a nonlinear divisor-existence question by a
+  concrete coordinate-labeled emptiness-or-census target. No finite numerator
+  changes until that target is decided and the completion/first-match layers
+  are replayed.
+- **What to do next:** Decide H epsilon=0 for
+  epsilon in {-1,0,1}^1024, wt(epsilon)=68, epsilon_1=-1; then process every
+  survivor through the 511-of-956 even completion and exact first-match
+  incidence.
+
+
 ### 2026-07-11 - Routing, saturation, and M31 ADE PR wave
 
 - **Agent/model:** Codex integrating PRs #622--#646 from holmbuar,
