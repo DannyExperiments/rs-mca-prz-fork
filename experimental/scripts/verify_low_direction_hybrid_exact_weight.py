@@ -392,15 +392,20 @@ def check_family_interval_certificates(maximum_m=10_000):
 
 def check_complementary_wall_formulas(maximum_length=24):
     nonpositive_cases = 0
+    full_support_cases = 0
     for length in range(2, maximum_length + 1):
         for redundancy in range(1, length):
             for direction_distance in range(1, redundancy + 1):
                 punctured_length = length - direction_distance
                 punctured_distance = redundancy + 1 - direction_distance
                 for radius in range(redundancy):
+                    positive_count = 0
+                    positive_sum = 0
                     if radius >= punctured_length:
-                        continue
-                    for exact_weight in range(radius + 1):
+                        full_support_cases += 1
+                    for exact_weight in range(
+                        min(radius, punctured_length) + 1
+                    ):
                         term = hybrid_term(
                             length,
                             redundancy,
@@ -417,7 +422,13 @@ def check_complementary_wall_formulas(maximum_length=24):
                             assert term["J"] == (
                                 punctured_length - exact_weight
                             ) ** 2
-                            assert term["J"] > 0
+                            if term["J"] <= 0:
+                                nonpositive_cases += 1
+                                assert exact_weight == punctured_length
+                            else:
+                                positive_count += 1
+                                positive_sum += term["summand"]
+                                assert term["summand"] <= length**3
                             continue
 
                         if raw_distance <= punctured_distance:
@@ -448,8 +459,15 @@ def check_complementary_wall_formulas(maximum_length=24):
                                     punctured_length
                                     * (2 * radius - direction_distance)
                                 )
+                        else:
+                            positive_count += 1
+                            positive_sum += term["summand"]
+                            assert term["summand"] <= length**3
+                    assert positive_count <= punctured_length
+                    assert positive_sum <= length**4
     assert nonpositive_cases > 0
-    return nonpositive_cases
+    assert full_support_cases > 0
+    return nonpositive_cases, full_support_cases
 
 
 def polynomial_from_roots(roots, modulus):
@@ -613,7 +631,7 @@ def main():
 
     check_family_all_weights()
     check_family_interval_certificates()
-    wall_cases = check_complementary_wall_formulas()
+    wall_cases, full_support_cases = check_complementary_wall_formulas()
     realization = check_actual_weighted_rs_realization()
 
     print("object: low-direction hybrid exact-weight compiler")
@@ -629,8 +647,9 @@ def main():
     print("strict family all exact weights, m=1..200: PASS")
     print("strict family interval identities, m=1..10000: PASS")
     print(
-        "complementary wall partition, integer charts N<=24: "
-        f"PASS ({wall_cases} nonpositive cases)"
+        "three-wall partition and positive-J extension, integer charts N<=24: "
+        f"PASS ({wall_cases} nonpositive cases, "
+        f"{full_support_cases} full-support charts)"
     )
     print(f"actual weighted-RS realization: {realization}")
     print("status: PASS")
