@@ -37,7 +37,7 @@ For one exact punctured weight `e`, let `Z^circ_(lambda,e)` be the retained
 slopes whose selected witnesses satisfy
 
 ```text
-e=wt(P_J(c_gamma)),  0<e<M,                                (3)
+e=wt(P_J(c_gamma)),  0<=e<=M.                              (3)
 ```
 
 where `P_J` deletes the coordinates in `J`. Define
@@ -49,7 +49,7 @@ Xi_e=d(M-e)^2+M h_e^2-dM^2.                                (4)
 
 ## Theorem: two-block complete-mask payment
 
-Under (1)--(4),
+For `0<e<M`, under (1)--(4),
 
 ```text
 Xi_e>0  =>  |Z^circ_(lambda,e)|<=N-1,                      (5)
@@ -58,11 +58,18 @@ Xi_e=0  =>  |Z^circ_(lambda,e)|<=2(N-2).                   (6)
 ```
 
 Both bounds are field-independent and remain true after arbitrary preceding
-first-match deletion. Consequently, all exact weights in one profile for
-which `Xi_e>=0` contribute fewer than `2N^2` slopes. If `N<=n`, this is
+first-match deletion. The two endpoint strata obey
 
 ```text
-exp(O(log n))<=exp(o(n))(1+barN_lambda),                   (7)
+e=0                         => |Z^circ_(lambda,0)|<=floor(d/h_0),
+e=M and Xi_M>=0             => |Z^circ_(lambda,M)|<=2d-1.  (7)
+```
+
+Consequently, all exact weights in one profile for which `Xi_e>=0` contribute
+fewer than `2N^2` slopes. If `N<=n`, this is
+
+```text
+exp(O(log n))<=exp(o(n))(1+barN_lambda),                   (8)
 ```
 
 the direct alternative in `(RC)` at the actual realized-image scale.
@@ -116,7 +123,36 @@ masks is a zero of (11). The blocks are disjoint, hence
  +|Y_gamma intersect Y_gamma'|<=M.                         (12)
 ```
 
-### 3. Centered two-block vectors
+### 3. Endpoint strata
+
+If `e=0`, then every `X_gamma` is the whole `M`-coordinate block. The
+pairwise cap (12) therefore makes the sets `Y_gamma` pairwise disjoint. Since
+each has size at least `h_0`, at most `floor(d/h_0)` can occur.
+
+Now let `e=M` and suppose `Xi_M>=0`. Then `X_gamma` is empty and
+
+```text
+Xi_M=M(h_M^2-dM)>=0.                                      (12a)
+```
+
+For every `Y_gamma` other than the whole block `J`, center its indicator in
+`1_d^perp`. Distinct centered vectors have inner product at most
+
+```text
+M-|Y_gamma||Y_gamma'|/d <= M-h_M^2/d <= 0.                (12b)
+```
+
+The right-angle bound gives at most `2(d-1)` nonzero centered vectors. The
+zero centered vector corresponds to `Y_gamma=J` and occurs for at most one
+slope: two such witnesses would have support in `U\J`; their normalized
+difference would put `y_1` in the span of those support columns, and either
+witness would then put `y_0` there as well, contradicting (1). Thus the
+endpoint costs at most `2d-1`.
+
+Both endpoint arguments begin with the actual retained witnesses and hence
+survive arbitrary earlier first-match deletion.
+
+### 4. Centered two-block vectors
 
 Embed the masks in
 
@@ -152,12 +188,18 @@ If `Xi_e=0`, the pairwise inner products are nonpositive. The standard
 right-angle bound gives at most `2s` nonzero vectors in dimension `s`.
 Taking `s=N-2` proves (6).
 
-### 4. First-match and profile compilation
+### 5. First-match and profile compilation
 
 The proof begins with the actual retained set `Z^circ_(lambda,e)`. Earlier
 first-match cells remove slopes, so every later set is a subset and preserves
-all pairwise inequalities. There are at most `N+1` exact weights. Summing (5)
-and (6) over the exact weights with `Xi_e>=0` costs less than `2N^2`.
+all pairwise inequalities. There are at most `M-1<=N-2` interior exact
+weights. Their contribution is at most `2(N-2)^2`; the two endpoint bounds
+sum to at most `3d-1<=3N-4`. Hence the complete `Xi_e>=0` contribution is at
+most
+
+```text
+2(N-2)^2+3N-4=2N^2-5N+4<2N^2.                            (14a)
+```
 
 For a nonempty realized support slice,
 
@@ -166,7 +208,7 @@ barN_lambda
 =|Omega^0_lambda|/|Phi_lambda(Omega^0_lambda)|>=1.
 ```
 
-Thus (7) is the literal direct profile payment. The proof does not use the
+Thus (8) is the literal direct profile payment. The proof does not use the
 formal codomain size, a full-image hypothesis, primitive Q, or an unproved
 support-pair incidence.
 
