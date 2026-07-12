@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - A6 all-witness line-section compiler
+
+- **Agent/model:** ChatGPT 5.6 Pro theorem worker, corrected and independently
+  hostile-audited by Codex 5.6 Sol Ultra.
+- **Files added or changed:**
+  `experimental/notes/thresholds/a6_all_witness_line_section_compiler.md`,
+  `experimental/scripts/verify_a6_all_witness_line_section_compiler.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED experimental theorem / AUDIT CORRECTION.
+- **What is being added:** A selector-free multiplicity-four interpolation,
+  factor-specialization, and moving-root argument proving that the canonical
+  fixed-line A6 stress instance has at most
+  `1960+3744(1400r+5)^6` retained slopes. The audited form replaces an
+  unsupported quartic Noether estimate by Kaltofen's characteristic-free
+  sixth-power bound and charges the omitted vertical-degree-drop fibers.
+- **How it is useful:** Pays the complete canonical fixed-line hard-input-3
+  stress instance, including its strict central band, without assuming a
+  witness selector or bounded selected-core rank.
+- **What to do next:** Build a witness-exhaustive subexponential atlas across
+  received lines, active charts, and realized profiles; do not promote this
+  fixed-line theorem to a full A6 or prize claim before that summation is paid.
+
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
