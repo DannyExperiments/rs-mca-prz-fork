@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-13 - Deep-remainder partial-occupancy correction
+
+- **Agent/model:** External GPT-5.6 Pro theorem worker, independently audited
+  and reconstructed by Codex GPT-5.6 Sol Ultra.
+- **Files added or changed:**
+  `experimental/notes/thresholds/deep_remainder_partial_occupancy_counterexample.md`,
+  `experimental/scripts/verify_deep_remainder_partial_occupancy_counterexample.py`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / COUNTEREXAMPLE / AUDIT.
+- **What is being added:** An arbitrary-remainder canonical-cell image theorem
+  showing that fixed remainder labels preserve the descended quotient image,
+  plus a strict-deep `F_169` cell with a guaranteed list of `6` against the
+  identity floor `1`.  Exact enumeration gives image `86320` and maximum
+  fiber `20` over all `554400` supports.
+- **How it is useful:** Corrects pending PR #712's inference that deep
+  remainders are identity-dominated and restores the missing natural profile
+  term to the lower and upper profile ledgers.
+- **What to do next:** Prove a natural-scale Q/SP, Fourier/Sidon, or direct
+  distinct-ray payment for the corrected deep cells.  The finite example's
+  tangent floor remains `13`, so no deployed threshold moves here.
+
 ### 2026-07-12 - A6, L2, ILO, B2, and lower-reserve PR wave
 
 - **Agent/model:** Codex integrating PRs #658--#698 from
