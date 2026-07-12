@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - Higher-order completed-mask A6 rank envelope
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, hostile-audited and integrated
+  by Codex.
+- **Files added or changed:** Added
+  `experimental/notes/thresholds/a6_higher_order_completed_mask_rank_envelope.md`
+  and
+  `experimental/scripts/verify_a6_higher_order_completed_mask_rank_envelope.py`.
+- **Status:** PROVED under the printed completed-witness hypotheses.
+- **What is being added:** The forced common-zero overlap of `j+1` actual
+  completed witnesses is combined with the generalized weights of
+  `K+<v>` to exclude high selected-witness core rank. Its unconditional
+  three-mask branch directly pays every physical exact weight on the parameter
+  ray `(15r,9r,6r,3r,5r)` with at most two slopes, including a corrected
+  positive-length strict `W1-`/`W2-` interval.
+- **How it is useful:** This adds a source-valid high-rank exclusion after the
+  actual-core preflight in PR #681 and carves out a positive-length part of
+  the A6 central band not paid by #671 or #676.
+- **What to do next:** Attack the surviving linear-core canonical stress band,
+  where every fixed complete-mask overlap inequality retains linear slack,
+  using completed values, realized-image collisions, predecessor routing, or
+  a genuine all-witness pair-multiplicity theorem. No full A6, deployed-row,
+  or prize claim is made.
+
 ### 2026-07-12 - A6 hypothesis-audited preflight packets
 
 - **Agent/model:** Codex.
