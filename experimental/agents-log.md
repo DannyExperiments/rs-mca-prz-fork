@@ -41,7 +41,9 @@ Keep entries concise and link to the relevant files.
 - **What is being added:** An exact field-independent direct A6 payment for
   actual completed-witness strata with
   `Xi_e=d(M-e)^2+M max(1,d+e-t)^2-dM^2>=0`, including two explicit
-  positive-length linear-weight intervals and corrected equality-limit scope.
+  positive-length linear-weight intervals, corrected equality-limit scope,
+  and the endpoint bounds `e=0 <= floor(d/h_0)` and
+  `e=M <= 2d-1` needed by the all-weight `<2N^2` compilation.
 - **How it is useful:** Pays a rank-unrestricted portion of the strict
   `W1-/W2-` wall left by #659 and #671 without an ambient-image substitution.
 - **What to do next:** Attack the actual `Xi_e<0` central band using
