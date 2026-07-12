@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-13 - A6 transverse all-parameter section frontier
+
+- **Agent/model:** GPT-5.6 Pro theorem workers, independently audited and
+  repaired by Codex GPT-5.6 Sol Ultra.
+- **Files added or changed:**
+  `experimental/notes/thresholds/a6_all_witness_line_section_compiler.md`,
+  `experimental/scripts/verify_a6_all_witness_line_section_compiler.py`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** The fixed-line all-witness compiler now covers
+  every transverse parameter row admitting a uniform section interpolation
+  surplus.  Such a tuple exists exactly when
+  `(N-t)^2>N(kappa-1)`, and transversality supplies a moving-root floor even
+  when `d<=t`.
+- **How it is useful:** Gives an optimized integer compiler, sharpens the
+  canonical bound to `1165+3744D_r^6`, and identifies the exact capacity
+  frontier of this monomial route without claiming atlas globalization.
+- **What to do next:** Bound the number of source-valid line sections/charts,
+  or construct a different source compiler below the section frontier.
+
 ### 2026-07-12 - A6, L2, ILO, B2, and lower-reserve PR wave
 
 - **Agent/model:** Codex integrating PRs #658--#698 from
