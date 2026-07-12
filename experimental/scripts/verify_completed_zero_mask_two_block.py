@@ -78,6 +78,14 @@ def theorem_bound(m_length, direction_weight, xi):
     return None
 
 
+def endpoint_bound(m_length, direction_weight, exact_weight, height, xi):
+    if exact_weight == 0:
+        return direction_weight // height
+    if exact_weight == m_length and xi >= 0:
+        return 2 * direction_weight - 1
+    return None
+
+
 def maximum_clique_size(adjacency):
     """Exact bitset branch-and-bound with greedy coloring."""
 
@@ -187,6 +195,45 @@ def exhaustive_two_block_checks():
     return {
         "cases": cases,
         "Xi=0": equality_cases,
+        "attained": attained,
+        "max_vertices": maximum_vertices,
+    }
+
+
+def exhaustive_endpoint_checks():
+    cases = 0
+    attained = 0
+    maximum_vertices = 0
+    for m_length in range(1, 6):
+        for direction_weight in range(1, 6):
+            for exact_weight in (0, m_length):
+                for height in range(1, direction_weight + 1):
+                    xi = xi_value(
+                        m_length, direction_weight, exact_weight, height
+                    )
+                    bound = endpoint_bound(
+                        m_length,
+                        direction_weight,
+                        exact_weight,
+                        height,
+                        xi,
+                    )
+                    if bound is None:
+                        continue
+                    row = two_block_case(
+                        m_length, direction_weight, exact_weight, height
+                    )
+                    require(
+                        row["maximum"] <= bound,
+                        f"endpoint bound failed: {row}, endpoint={bound}",
+                    )
+                    cases += 1
+                    attained += row["maximum"] == bound
+                    maximum_vertices = max(maximum_vertices, row["vertices"])
+    require(cases > 0, "endpoint suite found no paid cases")
+    require(attained > 0, "endpoint suite found no sharp case")
+    return {
+        "cases": cases,
         "attained": attained,
         "max_vertices": maximum_vertices,
     }
@@ -527,7 +574,22 @@ def validate_record_group(chart, y_1, direction_lift, records, exact_weight):
             require(common <= m_length, "two-block common-zero cap failed")
 
     xi = xi_value(m_length, direction_weight, exact_weight, height)
-    bound = theorem_bound(m_length, direction_weight, xi)
+    if exact_weight in (0, m_length):
+        bound = endpoint_bound(
+            m_length, direction_weight, exact_weight, height, xi
+        )
+        if exact_weight == m_length:
+            full_inside = [
+                record
+                for record, _x_mask, y_mask in decorated
+                if y_mask == j_mask
+            ]
+            require(
+                len(full_inside) <= 1,
+                "two full-J endpoint masks violate transversality",
+            )
+    else:
+        bound = theorem_bound(m_length, direction_weight, xi)
     if bound is not None:
         require(len(records) <= bound, "completed-witness theorem bound failed")
     return xi, bound
@@ -545,13 +607,15 @@ def audit_line(chart, y_0, y_1):
     outside_mask = ((1 << chart["N"]) - 1) ^ j_mask
     for record in records:
         exact_weight = (record["support"] & outside_mask).bit_count()
-        if 0 < exact_weight < m_length:
+        if 0 <= exact_weight <= m_length:
             groups[exact_weight].append(record)
 
     stats = {
         "retained_slopes": len(records),
         "interior_strata": 0,
         "paid_strata": 0,
+        "endpoint_strata": 0,
+        "paid_endpoint_strata": 0,
         "Xi=0_strata": 0,
         "deletion_checks": 0,
     }
@@ -561,6 +625,10 @@ def audit_line(chart, y_0, y_1):
         )
         stats["interior_strata"] += 1
         stats["paid_strata"] += bound is not None
+        stats["endpoint_strata"] += exact_weight in (0, m_length)
+        stats["paid_endpoint_strata"] += (
+            exact_weight in (0, m_length) and bound is not None
+        )
         stats["Xi=0_strata"] += xi == 0
 
         for subset in (group[::2], group[1::2]):
@@ -584,6 +652,8 @@ def finite_geometry_checks():
         "retained_slopes": 0,
         "interior_strata": 0,
         "paid_strata": 0,
+        "endpoint_strata": 0,
+        "paid_endpoint_strata": 0,
         "Xi=0_strata": 0,
         "deletion_checks": 0,
     }
@@ -710,18 +780,33 @@ def tamper_selftest():
         )
     )
 
-    require(len(caught) == 6, "tamper suite size changed")
+    endpoint = two_block_case(2, 4, 0, 2)
+    endpoint_bound_value = endpoint_bound(2, 4, 0, 2, endpoint["Xi"])
+    require(endpoint["maximum"] == endpoint_bound_value, "endpoint witness drifted")
+    caught.append(
+        expect_failure(
+            "e=0 endpoint bound reduced by one",
+            lambda: require(
+                endpoint["maximum"] <= endpoint_bound_value - 1,
+                "mutated endpoint bound rejected",
+            ),
+        )
+    )
+
+    require(len(caught) == 7, "tamper suite size changed")
     print(f"tamper-selftest: PASS ({len(caught)}/{len(caught)} mutations rejected)")
     return 0
 
 
 def run_check():
     mask_stats = exhaustive_two_block_checks()
+    endpoint_stats = exhaustive_endpoint_checks()
     family_stats = explicit_family_checks()
     geometry_stats = finite_geometry_checks()
     falsifier_stats = boundary_falsifier_checks()
 
     print(f"two-block set-system exhaustive: PASS {mask_stats}")
+    print(f"endpoint set-system exhaustive: PASS {endpoint_stats}")
     print(f"strict linear family: PASS {family_stats}")
     print(f"weighted-RS completed geometry: PASS {geometry_stats}")
     print(f"deliberate falsifiers: REJECTED {falsifier_stats}")
