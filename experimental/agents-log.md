@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-13 - A6 global section-positive one-cell atlas
+
+- **Agent/model:** External GPT-5.6 Pro theorem worker, independently audited
+  and repaired by Codex GPT-5.6 Sol Ultra.
+- **Files added or changed:**
+  `experimental/notes/thresholds/a6_all_witness_line_section_compiler.md`,
+  `experimental/scripts/verify_a6_all_witness_line_section_compiler.py`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT, dependent on the all-parameter theorem already
+  carried by this PR.
+- **What is being added:** On `J=a^2-n(k-1)>0`, the original exact-witness
+  incidence is one compact global cell, support-wise nontriviality supplies
+  transversality automatically, and every received line has a uniform
+  `10000n^27` distinct-slope bound.  The integration corrects the worker's
+  displayed ratio to `mu=floor((k-1)(n-a)/J)+1` and proves the `a=n`
+  endpoint separately.
+- **How it is useful:** Closes coupled catalogue exhaustivity and
+  line-uniformity on the full strict section-positive locus, including
+  margins as small as `J=1`, without enumerating supports or realized
+  profiles.
+- **What to do next:** Build natural-scale, witness-exhaustive profile
+  payments in the residual `J<=0` region; no deployed crossing or prize
+  conclusion follows from this polynomial numerator bound alone.
+
 ### 2026-07-13 - A6 transverse all-parameter section frontier
 
 - **Agent/model:** GPT-5.6 Pro theorem workers, independently audited and
