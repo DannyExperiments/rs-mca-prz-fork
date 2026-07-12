@@ -41,14 +41,14 @@ Keep entries concise and link to the relevant files.
 - **Status:** PROVED, conditional on PR #669 until that dependency integrates.
 - **What is being added:** Below the official 256-bit line-field cap, the
   full-field first agreement is unsafe exactly when
-  `q_line < 2^128 binom(n,k+1)`, with equality on the safe side.  The proof
+  `q_line < 2^128 binom(n,k+1)`, with equality on the safe side. The proof
   closes the support-upper, syndrome-secant, and one-integer seam branches.
 - **How it is useful:** It removes the false goal of uniform capacity-adjacent
   unsafety and gives a literal top-two-row adjacent certificate whenever
   `binom(n,k+2)<=B*<binom(n,k+1)`.
 - **What to do next:** In the remaining unsafe branch, find the first deeper
   lower crossing and pair it with the complete first-match safe ledger one
-  agreement later.  No proper-challenge iff or prize closure is claimed.
+  agreement later. No proper-challenge iff or prize closure is claimed.
 
 ### 2026-07-12 - Challenge-restricted syndrome-secant lower bound
 
@@ -829,7 +829,1112 @@ Keep entries concise and link to the relevant files.
   census floors, and SP shift-pair to prefix-collision reductions.  The package
   was normalized away from placeholder `RequestProject` module names.
 - **How it is useful:** Gives the v13 program a concrete Lean workbench for the
-  unconditional unsafe side and structural residual-…17043 tokens truncated… promoting
+  unconditional unsafe side and structural residual-input machinery.
+- **What to do next:** Run `lake build` only when a contributor intentionally
+  audits this package locally.  The safe-side adjacent threshold certificates
+  remain open and still require exact upper-ledger work for `Q`, `BC`, and
+  `SP`; any TeX/Lean correspondence should be maintained by direct statement
+  audit, not bulk source scanning.
+
+### 2026-07-06 - CAP25 v13 raw Lean blueprint
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `experimental/lean/lean-blueprint.json`;
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / FORMALIZATION PLAN.
+- **What is being added:** A machine-readable Lean formalization blueprint for
+  `experimental/cap25_cap_v13_raw.tex`, organized as theorem, lemma,
+  proposition, corollary, definition, remark, computation, and final-target
+  nodes with dependency edges and reverse-support links.  The first pass keeps
+  all `lean_file` and `lean_name` slots blank by design.
+- **How it is useful:** Gives Lean agents a dependency graph for formalizing the
+  v13 raw program, with special targets for Q prefix flatness, BC split-pencil
+  census, SP primitive shift-pair control, finite adjacent deployed ledgers, and
+  full RS-MCA resolution.
+- **What to do next:** Assign nodes to concrete Lean files only after choosing
+  module boundaries.  Treat syntactic dependencies and computation-support
+  edges as an orientation map, then audit each proof dependency before
+  mechanization.
+
+### 2026-07-06 - Grande finale proof-plan note
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `experimental/grande_finale.tex`;
+  `experimental/grande_finale.pdf`; `experimental/agents-log.md`.
+- **Status:** PROVED REDUCTIONS / CONJECTURAL / PROOF STRATEGY / AUDIT.
+- **What is being added:** A standalone `amsart` note that isolates the final
+  RS-MCA proof obligations and proves the reusable reductions currently needed
+  for that attempt: identity-prefix witness exactness, prefix-collision
+  rigidity, the exact second-moment ledger, pole-line transport from prefix
+  fibers to support-wise MCA bad slopes, the fiber-to-slope averaging theorem
+  that produces many distinct MCA-bad slopes from a large prefix fiber,
+  quotient pullback for shift pairs, coefficient-scale quotient extraction for
+  shift pairs,
+  the primitive `L^2` ledger, twist-orbit symmetry, slope elimination, the
+  interpolation-lattice split-pencil reduction, the fact that Q is the boundary
+  split-pencil profile, and the base-field floor that any interior BC census
+  must include.  It also proves the head-depth prefix-flatness theorem in the
+  Weil range, including the solved KoalaBear head-depth part of Q.  It also
+  adds the exponential aperiodic-floor theorem below the entropy-subfield
+  envelope, ruling out the old unnormalized polynomial aperiodic-band target.
+  A Fourier-audit proposition now explains why individual square-root
+  character estimates cannot close Q by triangle inequality.  A rank-one
+  pole-line floor shows the same base-field normalization is forced in the
+  line/support census and is genuinely extension-valued.  The finite packet
+  audit now explicitly separates historical adjacent-pair fields from the
+  active moved MCA pairs and records the Mersenne-31 `c=2048` quiet watch item.
+  The latest update also integrates the near-rational lattice dichotomy:
+  small first shifted-degree words are exactly classified, and after the
+  common-proximity paid branch is removed, the BC residual starts only in the
+  balanced two-generator split-pencil core.  A deficiency-one split-test
+  eliminant theorem now pays bounded SPI charts unless the chart is
+  identically split or identically rank-deficient, in which case it is named
+  as a residual rather than hidden in the BC estimate.  The note now also
+  proves the two broad safe anchors directly: the self-contained deep-regime
+  MCA bound below one third of minimum distance, and the reduction of MCA to
+  CA plus explicit tangent slopes below half distance.  Subfield confinement
+  is now included as a theorem too: any bad slope of a \(\mathbb B\)-valued
+  pair over an extension row lies in \(\mathbb B\), so target-level extension
+  failures must be genuinely extension-valued after common scalar removal.
+  The BC floor has also been strengthened from a raw agreement-census lower
+  bound to an interior split-pencil theorem: under the printed degree
+  inequalities, the constructed \(\mathbb B\)-valued received word has
+  minimal shifted degree exactly \(d_1\), so the base-field-normalized floor
+  occurs in a genuine interior profile rather than only at the Q boundary.
+  The Q section now includes a quantitative moment criterion:
+  \(\log_2\Gamma_r+w\log_2|\mathbb B|\le r\Delta\) is the finite adjacent
+  high-moment gate for proving a max-fiber ratio \(2^\Delta\), explaining why
+  low fixed moments cannot settle the deployed one-step rows.  The lower-side
+  MCA route is now self-contained as well: a quantitative simple-pole
+  list-to-MCA theorem converts any \(L\)-word \(C^+\) list into at least
+  \(\lceil L(q-n)/(q-n+k(L-1))\rceil\) bad finite slopes, matching the moved
+  v13 raw MCA packet formula.
+  The finite-adjacent section now packages the row-packet consequences as
+  propositions: the four active rows have exact unsafe lower certificates at
+  their printed \(a_0\)'s, the same lower route stops at \(a_0+1\), and the
+  dyadic rung audit is only a lower-floor veto rather than a quotient-image
+  upper bound.  The note now also includes a first-match upper-ledger
+  definition and lemma, making the safe-side finite target precise: a
+  row-specific certificate must cover every bad slope by ordered paid/residual
+  cells and prove the sum of certified cell bounds is at most \(B^*\).  The
+  integer-budget convention is now also proved explicitly, so all finite safe
+  and unsafe statements reduce to comparisons with
+  \(B^*=\lfloor\varepsilon^*Q\rfloor\).
+  A finite safe-anchor gap proposition now records that the broad deep,
+  half-distance, half-Johnson, and conditional BCHKS anchors miss the active
+  adjacent agreements by hundreds of thousands of positions, so the final
+  certificate must use row-specific first-match upper ledgers or a genuinely
+  stronger theorem.
+  It also proves that composite prefix directions descend
+  exactly to quotient scales, justifying the divisor-lattice separation before
+  primitive Q/SP flatness is attempted.  It now also proves twist-orbit moment
+  amplification: a heavy primitive prefix fiber contributes an entire orbit to
+  the high-moment ledger, while stabilized heavy values are quotient/composite
+  objects.  The SP section adds a top-stratum quotient sieve showing that every
+  non-primitive top-stratum shift pair descends to a quotient constant-shift
+  cell, leaving only coefficient-primitive constant shifts in that residual.
+  The BC section adds a distinct-slope extension-valued rank-one floor, so the
+  base-field floor cannot be dismissed as a support-count artifact or a
+  purely \(\mathbb B\)-rational phenomenon.
+  The note now defines the closed-grid
+  support-wise CA/MCA events directly, proves the CA-to-MCA comparison, and
+  records the agreement-threshold monotonicity needed to interpret adjacent
+  certificates as radius-threshold statements.  The note also records the finite-adjacent artifact status:
+  active MCA lower-route values, the non-firing dyadic rung audit, and the
+  extension-cell degree ceilings, with explicit warnings that these are not
+  safe certificates.  The latest update turns the extension-cell ceilings into
+  a formal full-extension target proposition: in the active packet grammar,
+  any genuinely full-orbit extension chart fitting the adjacent margin must be
+  zero-dimensional, with degree at most `4807520`, `4226236`, `9`, and `8` in
+  the four deployed rows.  This is an exact arithmetic target for the missing
+  branch, not a payment of that branch.  The Q section now also includes the
+  exact `F_17^*`, `m=9`, `w=1` route cut showing raw mode-at-null is false
+  (`N_9(0)=672`, `N_9(s)=673` for `s != 0`), so the finite Q target is
+  primitive max-orbit flatness or exchange-compression after quotient routing.
+  The BC/SPI part now also proves that an identically split deficiency-one
+  chart is tangent-borne: the split-annihilator dictionary first turns a fixed
+  split locator into a codeword-plus-error decomposition, constant-divisor
+  rigidity makes the locator fixed, and the line contributes only tangent
+  ratios rather than a new aperiodic split-pencil cell.  The safe-anchor
+  section now records the exact high-agreement tangent paid cell as well:
+  when \(A=n-r\) and \(3r\le n-k\), the maximum CA/MCA bad-slope numerator is
+  exactly `r+1 = n-A+1`.  The finite adjacent closure theorem now uses a
+  row-object numerator \(B(a)\), separating MCA bad-slope numerators from list
+  numerators, so the four-row statement no longer silently treats list rows as
+  MCA rows.
+  The remaining inputs are Q prefix flatness, BC
+  base-field-normalized interior split-pencil census, SP primitive shift-pair
+  control, and the finite adjacent certificate program at the four deployed
+  v13 raw rows.
+- **How it is useful:** This gives agents a compact, publishable-style target
+  document for the final resolution attempt without copying the long v13 raw
+  manuscript.  It records which reductions are now theorem-level, what remains
+  conjectural, which part of Q is already solved by direct Weil bounds, and
+  what computations would pin the finite deployed thresholds.
+- **What to do next:** Fill in Q, BC, and SP proof packets one by one, starting
+  with exact rung audits and KoalaBear MCA at `a0+1 = 1116048`.  The next Q
+  work must attack frontier-depth maximum fibers directly, not by a uniform
+  per-character square-root bound.  Do not promote the conditional closure
+  theorem until the safe upper ledgers are replayed and audited.
+
+### 2026-07-06 - v13 raw final-form roadmap alignment
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `towards-prize.md`;
+  `experimental/cap25_v13_missing_inputs_strategy.md`;
+  `experimental/agents-log.md`.
+- **Status:** EXPERIMENTAL / CONJECTURAL / AUDIT.
+- **What is being added:** The roadmap now records the v13 raw final-form
+  update: the entropy-subfield envelope, the four exact deployed unsafe edges,
+  the Q/BC/SP safe-side input split, the adjacent finite target pairs, and the
+  explicit falsifier shape.  The missing-input strategy now separates proved
+  anchors from the still-conjectural finite adjacent safe certificates.
+- **How it is useful:** This aligns the human-facing roadmap with the v13 raw
+  package without promoting it into Paper D.  It tells agents
+  that the useful next work is exact safe-side certification at `a0+1`, or a
+  primitive prefix-fiber / split-pencil counterexample that becomes a new floor.
+- **What to do next:** Keep Paper D v12 as the paper authority until the v13 raw
+  material is promoted and audited.  Build exact Q, BC, and
+  SP certificates with constants fitting the `22.2 / 22.0 / 3.3 / 3.1` bit
+  adjacent margins.
+
+### 2026-07-06 - CAP25 v13 raw frontier status
+
+- **Agent/model:** Maintainer-added v13 raw manuscript summarized and aligned
+  by Codex.
+- **Files added or changed:** `experimental/cap25_cap_v13_raw.tex`;
+  `experimental/cap25_v13_missing_inputs_strategy.md`; `agents.md`;
+  `experimental/agents-log.md`.
+- **Status:** EXPERIMENTAL / CONDITIONAL / AUDIT.
+- **What is being added:** `cap25_cap_v13_raw.tex` is the extended
+  raw-working master.  Its TLDR is: the unsafe side is exact and elementary via identity-prefix
+  floors plus flexible simple-pole conversion; the generic safe anchors are
+  deep-regime MCA, MCA-from-CA below half distance, and one isolated
+  half-distance CA import; the near-capacity safe side is reduced to exactly
+  three residual inputs Q, BC, and SP.
+- **How it is useful:** This records the current experimental final-resolution
+  target.  The moved finite adjacent predictions are KoalaBear MCA
+  `1116047 -> 1116048`, KoalaBear list `1116046 -> 1116047`,
+  Mersenne-31 MCA `1116023 -> 1116024`, and Mersenne-31 list
+  `1116022 -> 1116023`.  Polynomial or `e^{o(n)}` Q/BC/SP would settle the
+  asymptotic frontier with logarithmic reserve; exact constants fitting the
+  printed `22.2 / 22.0 / 3.3 / 3.1` bit margins are needed for the finite
+  adjacent pairs.
+- **What to do next:** Do not promote v13 raw into Paper D until the
+  safe upper ledgers are proved, replayed, and audited.  Work should focus on
+  finite Q maximum-fiber certificates, finite BC split-pencil census
+  certificates, finite SP primitive shift-pair certificates, and the matching
+  certificate scanner rows.  The strategy note now maps the old `(A)` aperiodic
+  umbrella to the current BC/SP inputs and should be kept compatible with the
+  v13 raw source names.  This entry supersedes earlier log entries that
+  mention `experimental/cap25_v13_experimental.tex` or the older `1116043`
+  KoalaBear MCA experimental edge.
+
+### 2026-07-06 - Experimental PR packet batch 281, 310, 322-351
+
+- **Agent/model:** DannyExperiments, Scott Hughes, LegaSage, Vadim Avdeev,
+  holmbuar, and Latif Kasuli; integrated by Codex.
+- **Files added or changed:** Experimental notes, JSON packets, verifier
+  scripts, optional GPU/provenance scripts, and Lean scaffolds under
+  `experimental/data/`, `experimental/notes/`, `experimental/scripts/`, and
+  `experimental/lean/`.  The PR-local `experimental/agents-log.md` edits were
+  not merged directly; this entry is the combined project log.
+- **Status:** EXPERIMENTAL / AUDIT / CONDITIONAL / COUNTEREXAMPLE /
+  FORMALIZATION.
+- **What is being added:** A broad integration batch from PRs `#281`, `#310`,
+  and `#322`-`#351`: CAP25 v13 threshold route cuts, identity/frontier-adjacent
+  row packets, KoalaBear adjacent-ledger checks, M1 a=327 `mu_8` triage,
+  M1/M2/L1 local-limit packets, finite staircase rows, mode-at-null and
+  prefix-collision ledgers, optional GPU engines with provenance checks, and
+  Lean staircase/towards-prize arithmetic anchors.
+- **How it is useful:** The batch strengthens the experimental v13 raw
+  final-resolution spine without promoting it to Paper-D authority: it gives
+  more exact packet material for the unsafe/safe adjacent staircase program,
+  records several route cuts and counterexamples, and supplies verifier-facing
+  artifacts for future audits.
+- **What to do next:** Re-run individual verifier scripts before citing any
+  packet.  Do not run the optional GPU engines or Lean/Lake builds unless a
+  maintainer explicitly asks.  Keep the Scott `a=327, mu_8` packet as route-cut
+  evidence, not a board-ready MCA/list claim, and keep all v13 raw adjacent
+  rows experimental until the safe upper ledgers are printed and replayed.
+
+### 2026-07-05 - Proximity Prize status memo for v12/v13 raw picture
+
+- **Agent/model:** Maintainer-added status memo reviewed and integrated by
+  Codex.
+- **Files added or changed:** `experimental/rs_mca_proximity_prize_status.md`;
+  `readme.md`; `agents.md`; `experimental/agents-log.md`.
+- **Status:** EXPERIMENTAL / CONJECTURAL / AUDIT.
+- **What is being added:** A committee-facing status draft summarizing the
+  current CAP25 v12/v13 raw picture: the entropy-subfield-envelope thesis,
+  exact unsafe-side certificates near the deployed frontier, proved
+  high-agreement/safe-side components, and the remaining `(Q)` prefix-fiber /
+  split-pencil safe-side inputs.
+- **How it is useful:** It gives reviewers and future agents a compact map of
+  what is proved, what is exact-integer/auditable, and what remains
+  conjectural for turning the frontier into a full `delta^*` determination.
+- **What to do next:** Keep this memo experimental until its claims are promoted
+  into Paper D or `towards-prize`.  In particular, preserve the distinction
+  between lower-floor unsafe cutoffs and a complete adjacent safe upper ledger.
+
+### 2026-07-05 - AllenGrahamHart PR 282-321 packet integration
+
+- **Agent/model:** AllenGrahamHart, integrated by Codex.
+- **Files added or changed:** New packet notes, JSON certificates, and verifier
+  scripts under `experimental/notes/`, `experimental/data/certificates/`, and
+  `experimental/scripts/` from PRs `#282`-`#309` and `#311`-`#321`.  The PR-local
+  `experimental/agents-log.md` hunks were not merged directly; this entry is
+  the combined project log.
+- **Status:** EXPERIMENTAL / AUDIT / CONDITIONAL.
+- **What is being added:** A broad batch of experimental proof-program packets:
+  XR light-profile and eliminant nonvanishing, L1 petal squarefree-kernel
+  packets, F1 minimal-field descent, EF/E1/DLI/SOV/M720 soundness packets,
+  Hankel termination and support-lattice packets, threshold/crossing/census
+  ledgers, S0/rules/field-cap audits, qcore/deep-point/codegree packets, SPI
+  component control, FM1/VTDV first-moment material, counting-frame packets, and
+  E22 quotient-staircase/cofactor/tail-coset locator packets.
+- **How it is useful:** The batch expands the certificate and roadmap layer for
+  the v13 final-resolution spine, especially the `(A)` aperiodic M1 local-limit
+  route, the `(Q)` quotient-fiber/equivalence route, and the adjacent
+  threshold-ledger infrastructure.  It gives later agents many small,
+  independently checkable packet scripts instead of only prose roadmaps.
+- **What to do next:** Treat these as experimental packet inputs until the
+  accompanying papers or notes promote specific claims.  Re-run individual
+  verifier scripts before citing a packet, check whether any duplicated packet
+  has been superseded, and keep constants/status labels explicit when moving
+  material into Paper D or `towards-prize`.
+
+### 2026-07-05 - CAP25 v13 raw auxiliary script batch for missing inputs
+
+- **Agent/model:** Maintainer-added scripts reviewed by Codex.
+- **Files added or changed:** frontier-check helper scripts under
+  `experimental/scripts/towards v13/`;
+  `experimental/scripts/towards v13/collision_margins.py`;
+  `experimental/scripts/towards v13/gamma_census.py`;
+  `experimental/scripts/towards v13/lattice_check.py`;
+  `experimental/scripts/towards v13/lattice_check2.py`;
+  `experimental/scripts/towards v13/prize_packing.py`;
+  `experimental/scripts/towards v13/q_smooth_check.py`;
+  `experimental/scripts/towards v13/q_unify_check.py`;
+  `experimental/scripts/towards v13/r1_model.py`;
+  `experimental/agents-log.md`.
+- **Status:** EXPERIMENTAL / AUDIT.
+- **What is being added:** A small batch of auxiliary v13 raw scripts supporting
+  the missing-inputs strategy: group-algebra collision census calibration,
+  toy lattice dictionary checks, packing-bound negative calibration,
+  twisted-smooth identity checks, quotient-unification checks, rank-one
+  census model margins, moved-frontier integer checks, and collision-margin
+  head/frontier rung calibration.
+- **How it is useful:** These scripts help agents decide which proof routes are
+  plausible for the `(A)` aperiodic local-limit input and `(Q)` quotient-fiber
+  equidistribution input.  The cleanly running scripts show that naive packing
+  and triangle-inequality character expansion are far too weak, the rank-one
+  model is far below the adjacent deployed budget, and the proposed moved MCA
+  frontier checks reduce to exact integer comparisons for the deployed rows.
+- **What to do next:** Keep this batch experimental until an accompanying note
+  or paper section states the exact claims.  The `numpy`-dependent scripts need
+  either dependency documentation or pure-Python fallbacks.  `q_unify_check.py`
+  currently verifies one toy regime only partially (`m=6,w=3` reports `54/60`),
+  so its prescribed-prefix divisor identity should be repaired or restricted
+  before being cited as a verifier.  The moved-frontier checker confirms the
+  lower-floor cutoff, not a complete adjacent safe upper ledger.
+
+### 2026-07-05 - CAP25 v13 missing-inputs proof strategy
+
+- **Agent/model:** Maintainer-added strategy note reviewed and integrated by
+  Codex.
+- **Files added or changed:** `experimental/cap25_v13_missing_inputs_strategy.md`;
+  `agents.md`; `experimental/agents-log.md`.
+- **Status:** PROOF STRATEGY / CONJECTURAL / AUDIT.
+- **What is being added:** A route map for the two missing experimental v13
+  inputs: `(A)` the aperiodic band / worst-case M1 local-limit upper theorem,
+  and `(Q)` the quotient-fiber / quotient-ledger equidistribution upper
+  theorem.  The note separates asymptotic closure, where explicit polynomial
+  losses may be absorbable, from finite adjacent deployed closure, where the
+  constants must fit inside the printed bit margins.
+- **How it is useful:** It gives agents concrete proof tasks: normalize the
+  band edge against the entropy-subfield envelope, prove the split-top-chart
+  and Hankel/Kronecker residual lemmas, build the exact prefix-collision
+  ledger, audit divisor-rung margins, and test the mode-at-null /
+  exchange-compression extremality conjectures.
+- **What to do next:** Treat the note as strategy only.  Promote individual
+  lemmas or computations only after they are written as separate proof notes or
+  certificates, replayed where applicable, and linked back to the v13
+  one-step/corridor machinery.
+
+### 2026-07-05 - Towards-prize Lean formalization package
+
+- **Agent/model:** Maintainer-added Lean package reviewed and normalized by
+  Codex.
+- **Files added or changed:** `experimental/lean/towards_prize/`;
+  `experimental/lean/rs_mca_formalization/README.md`;
+  `experimental/lean/rs_mca_formalization/CERTIFICATION_MAP.md`;
+  `readme.md`; `agents.md`; `experimental/agents-log.md`.
+- **Status:** FORMALIZATION / AUDIT.
+- **What is being added:** A Mathlib-based Lean track for
+  `tex/towards-prize.tex`, normalized to package `towards_prize`, library
+  `TowardsPrize`, and entry point `TowardsPrize.lean`.  The integration removes
+  generated citation/tagging boilerplate, points markdown readers at the actual
+  Lean entry point, and keeps this track separate from the stdlib-only
+  `rs_mca_formalization` certificate layer.
+- **How it is useful:** The package formalizes the compact threshold note's
+  finite-radius CA/MCA definitions, sparse layer, comparison chain,
+  half-distance/deep-regime statements, identity-prefix floor, and deep-point
+  conversion, giving reviewers a direct Lean target for the prize-facing note.
+- **What to do next:** Build in a Mathlib-enabled Lean 4.28 environment, then
+  add a theorem-by-theorem certification map.  Do not treat the deployed
+  binomial-entropy cap rows as Lean-certified until they are explicitly
+  formalized and mapped.
+
+### 2026-07-05 - PR 271-280 conditional imports, toy staircases, sparse witness, and Lean anchor
+
+- **Agent/model:** Codex integrating PR material from Vadim Avdeev
+  (`#271`), latifkasuli / Claude Fable 5 (`#272`, `#273`, `#275`),
+  DannyExperiments (`#274`), and LegaSage / Ken Webster (`#276`-`#280`).
+- **Files added or changed:** `experimental/notes/audits/koalabear_bchks25_jmca_safe_edge_v1.md`;
+  `experimental/notes/audits/koalabear_bchks25_jmca_param_squeeze_v2.md`;
+  `experimental/notes/audits/koalabear_bchks25_parametric_list_mca_lemma_v1.md`;
+  `experimental/notes/audits/audit_bchks25_thm46_conditional_johnson_import.md`;
+  `experimental/notes/audits/audit_corridor_unconditional_safe_edges.md`;
+  `experimental/notes/audits/audit_mca_ca_sparse_layer_gap_structure.md`;
+  `experimental/notes/audits/paid_residual_ledger_source_drift.md`;
+  `experimental/notes/thresholds/cap25_v13_seven_slope_ccl_tdd_split.md`;
+  `experimental/notes/thresholds/m4_affine_eca_emca_staircase_q11.md`;
+  `experimental/notes/m1/deployed_row_sparse_witness_f17_32.md`;
+  `experimental/notes/m1/sigma_c_subcapacity_dichotomy_counterexample.md`;
+  `experimental/data/certificates/koalabear-bchks25-jmca-*`;
+  `experimental/data/certificates/corridor-unconditional-safe-edges/`;
+  `experimental/data/certificates/mca-ca-sparse-layer-census/`;
+  `experimental/data/certificates/deployed-sparse-witness-f17-32/`;
+  `experimental/data/certificates/exact-worstcase-eca-emca-staircase/exact_worstcase_eca_emca_staircase_m4_q11_rows.json`;
+  `experimental/data/certificates/sigma-c-sparse-census/`;
+  `experimental/scripts/certify_koalabear_bchks25_jmca_bounds_v1.py`;
+  `experimental/scripts/verify_corridor_unconditional_safe_edges.py`;
+  `experimental/scripts/verify_deployed_sparse_witness_f17_32.py`;
+  `experimental/scripts/verify_exact_worstcase_eca_emca_affine_quotient.py`;
+  `experimental/scripts/verify_f17_32_m3_low_rank2_12_*`;
+  `experimental/lean/rs_mca_formalization/RsMca/EmcaStaircaseLedger.lean`;
+  `experimental/lean/rs_mca_formalization/RsMca.lean`;
+  `experimental/lean/rs_mca_formalization/README.md`;
+  `experimental/lean/rs_mca_formalization/CERTIFICATION_MAP.md`;
+  `site/data/updates.json`; `experimental/agents-log.md`.
+- **Status:** CONDITIONAL / AUDIT / EXPERIMENTAL / PROVED-LOCAL, as tagged in
+  the individual notes.  The BCHKS25 linear-in-`n` safe edge remains
+  conditional; toy censuses and sparse witnesses are not leaderboard theorem
+  rows.
+- **What is being added:** The batch packages a conditional BCHKS25/Hab25
+  KoalaBear JMCA safe-edge audit, unconditional below-band corridor safe-edge
+  imports for clean-rate rows, MCA-vs-CA sparse-layer toy structure, a
+  seven-slope CCL/TDD branch split, low-rank ledger replay repairs, a `k=1`
+  sparse-census counterexample family, an exact `F_11,n=10,k=6` affine-shear
+  eca/emca staircase, a deployed-shaped `F_17^32` sparse moving-zero witness,
+  and a stdlib-only Lean finite anchor for the `(7,6,3)` EMCA staircase.
+- **How it is useful:** The imported safe-edge material narrows what would be
+  possible under audited external Johnson-regime MCA bounds while keeping
+  proof status explicit.  The toy/sparse packets refine the sparse mutual
+  layer and identify counterexample floors without changing the deployed
+  threshold.  The Lean and replay-repair packets strengthen certificate
+  hygiene for future adjacent-staircase work.
+- **What to do next:** Re-audit external BCHKS25/Hab25/GKL24 sources before
+  any Paper D promotion; do not add conditional safe edges as proved board rows.
+  Run the heavier verifiers only on a dedicated machine.  Use the sparse and
+  toy packets to guide the exact adjacent upper-ledger search, not as protocol
+  claims.
+
+### 2026-07-04 - CAP25 v13 identity-prefix frontier merge
+
+- **Agent/model:** Codex reviewing and integrating a user-added experimental
+  addendum and exact checker.
+- **Files added or changed:** `experimental/cap25_v13_experimental.tex`;
+  `experimental/scripts/towards v13/collision1b.py`;
+  `experimental/scripts/towards v13/collision2.py`;
+  `experimental/scripts/towards v13/frontier2.py`;
+  `experimental/scripts/towards v13/frontier3.py`;
+  `experimental/scripts/towards v13/cap25_v13_frontier_identity_exact_checks.py`;
+  `site/data/rate-leaderboards.json`; `site/data/updates.json`;
+  `site/index.html`; `experimental/agents-log.md`.  The standalone
+  `experimental/cap25_v13_frontier_addendum.tex` and temporary
+  `experimental/cap25_v13_body_merged_strict_plus_identity_frontier.tex` files
+  were removed so the v13 experimental source is single-file again.
+- **Status:** EXPERIMENTAL / CONDITIONAL / AUDIT.
+- **What is being added:** The v13 experimental source now includes the
+  identity-scale prefix floor, which supersedes the proposed `c=2` terminal
+  addendum unless the identity map is intentionally excluded.  The new
+  experimental KoalaBear MCA edge is
+  `delta = 981109/2097152 ~= 0.4678292`, improving both the `c=2` edge
+  `490557/1048576` and the older deployed edge `15331/32768`; the exact checker
+  verifies the c=1 rows, the c=2 rows, and the older c=16/32 rows by integer
+  inequalities.
+- **How it is useful:** This sharpens the deployed `delta^*` upper-side
+  frontier and identifies the next threshold task as an adjacent safe-side
+  certificate at agreement `1116044`.  It is now shown on the site as a
+  `rho=1/2` experimental MCA leaderboard row, while the active Paper D v12 draft
+  remains unchanged.
+- **What to do next:** Before promotion to Paper D, build the exact upper
+  ledger for the adjacent safe-side step, keep polynomial-loss quotient
+  equidistribution out of finite one-step claims unless constants fit inside
+  the printed bit margin, and audit the aperiodic-band input separately.
+
+### 2026-07-04 - PR 262-269 audit, sigma_C, and L1 frontier packets
+
+- **Agent/model:** Codex integrating PR material from LegaSage/Ken Webster
+  and Holm Buar.
+- **Files added or changed:** `scripts/check_aperiodic_eliminant_packet.py`;
+  `experimental/notes/audits/aperiodic_not_emitted_sentinel.md`;
+  `experimental/notes/audits/cs25_v12_outstanding_corrections.md`;
+  `experimental/notes/audits/certificate_provenance_normalization.md`;
+  `experimental/scripts/verify_cluster_certificates.py`;
+  `experimental/scripts/verify_cyclotomic_root_difference_germ.py`;
+  `experimental/scripts/verify_exceptional_density.py`;
+  `experimental/scripts/verify_graded_collision_radius.py`;
+  `experimental/scripts/verify_height_only_impossibility.py`;
+  `experimental/scripts/verify_m1_johnson_anticode_toolkit.py`;
+  `experimental/scripts/verify_xr_e3_calculus.py`;
+  `experimental/data/certificates/exact-worstcase-eca-emca-staircase/`;
+  `experimental/notes/thresholds/exact_worstcase_eca_emca_staircase.md`;
+  `experimental/scripts/verify_exact_worstcase_eca_emca_staircase.py`;
+  `experimental/data/certificates/sigma-c-sparse-census/`;
+  `experimental/notes/m1/sigma_c_sparse_census.md`;
+  `experimental/scripts/verify_sigma_c_sparse_census.py`;
+  `experimental/lean/rs_mca_formalization/RsMca/SigmaCSparseLedger.lean`;
+  `experimental/lean/rs_mca_formalization/RsMca.lean`;
+  `experimental/lean/rs_mca_formalization/README.md`;
+  `experimental/lean/rs_mca_formalization/CERTIFICATION_MAP.md`;
+  `experimental/notes/l1/l1_prime_ell_frontier_corrected.md`;
+  `experimental/scripts/verify_l1_prime_ell_frontier_corrected.py`;
+  `experimental/notes/l1/l1_petal_growth_nlist_e16.md`;
+  `experimental/scripts/verify_l1_petal_growth_nlist_e16.py`.
+- **Status:** AUDIT / EXPERIMENTAL / PROVED-LOCAL / NUMERIC, as tagged in the
+  individual notes.
+- **What is being added:** This sweep accepts the guarded `not_emitted:`
+  packet-reference sentinel, the Paper D v12 outstanding-corrections addendum,
+  portable certificate provenance normalization, exact toy worst-case
+  eca/emca staircases, expanded `sigma_C` sparse-census rows and a Lean finite
+  anchor for the `(7,6,3,2)` row, Holm's corrected prime-`ell` listing frontier
+  note, and the `N_list(7,p)` petal-growth evidence packet.
+- **How it is useful:** The Paper D audit material keeps two concrete v12
+  cleanup findings visible without editing the paper.  The `sigma_C` and
+  exact-staircase packets provide finite anchors for the sparse mutual layer in
+  `towards-prize.tex`.  The L1 packets correct the earlier `ceil(2ell/3)`
+  frontier heuristic with explicit witnesses while keeping the lower vacancy
+  theorem conditional on its stated KEY LEMMA.
+- **What to do next:** Apply or reject the Paper D wording/rounding fixes in
+  `tex/cs25_cap_v12.tex` deliberately.  Do not promote the `sigma_C` or L1
+  packets to deployed leaderboard rows.  For the L1 frontier, separate the
+  unconditional explicit witness/refutation content from the conditional
+  vacancy law before any TeX promotion.
+
+### 2026-07-04 - L1 coset-chart residue-line bridge normal form
+
+- **Agent/model:** Vadim Avdeev, integrated by Codex.
+- **Files added or changed:** `experimental/notes/l1/l1_coset_chart_residue_bridge_v1.md`;
+  `experimental/scripts/verify_l1_coset_chart_residue_bridge_v1.py`;
+  `experimental/scripts/README.md`;
+  `experimental/data/certificates/l1-coset-chart-residue-bridge-v1/`;
+  `experimental/notes/certificate_scanner/outputs/l1_coset_chart_residue_bridge_v1.report.md`;
+  `experimental/agents-log.md`.
+- **Status:** PROVED-LOCAL / NORMAL-FORM.
+- **What is being added:** A full-petal coset-chart bridge: every capped
+  coset-chart kernel set is either quotient-coset, or a nonzero residue block
+  emits a low-degree projective residue pair.  After simultaneous active
+  quotient-label basepoints are cancelled, the pair becomes ordinary
+  residue-line data on the surviving labels.
+- **How it is useful:** This classifies the non-quotient minimal-kernel
+  examples from the L1 reconstruction-collapse ledger without claiming they
+  are paid, absent, or globally negligible.  It is a useful interface between
+  the coset-petal L1 packets and the residue-line/M1 packing program.
+- **What to do next:** Use the bridge as input to residue-line packing and
+  globalness work.  Do not promote it to a primitive-vacancy theorem or a full
+  generated-field L1 local-limit theorem without a separate quantitative
+  ledger bound.
+
+### 2026-07-04 - Allowed DAG and roadmap overwrite pass
+
+- **Agent/model:** Codex integrating the explicitly allowed overwrite subset
+  from AllenGrahamHart's DAG-maintenance PR and LegaSage/Ken's replay PR.
+- **Files added or changed:** `experimental/data/prize-dag/prize_dag.json`;
+  `experimental/notes/roadmaps/a_closure_assembly.md`;
+  `experimental/notes/roadmaps/qx13_pair_rank_ledger.md`;
+  `experimental/notes/roadmaps/w4_direct_column_rewiring.md`;
+  `experimental/notes/roadmaps/x12_h3_parametrization.md`;
+  `experimental/notes/roadmaps/x24_char0_dyadic_descent.md`;
+  `experimental/notes/roadmaps/x32_h4_terminal_dichotomy.md`;
+  `experimental/notes/roadmaps/x81_minimal_trade_square_shift.md`;
+  `experimental/notes/roadmaps/x82_square_shift_certifier_keys.md`;
+  `experimental/notes/roadmaps/x83_uniform_square_shift_obstruction_gate.md`;
+  `experimental/notes/roadmaps/xr_budget_audit.md`;
+  `experimental/notes/roadmaps/xr_syzygy_flat_transport.md`;
+  `experimental/notes/roadmaps/xr_triangle_eliminant_form.md`;
+  `experimental/scripts/locator/locator_fiber_local_packet/run_locator_fiber_local_packet.py`.
+- **Status:** EXPERIMENTAL / AUDIT / ROADMAP, as tagged in the individual
+  files.
+- **What is being added:** This pass accepts the central DAG rewrite and the
+  existing roadmap-note rewrites that were intentionally skipped in the prior
+  additive-only sweep.  It also accepts the small locator packet runner path
+  fix from the replay tooling PR.
+- **How it is useful:** The prize-DAG and roadmap notes now reflect the
+  contributor-maintained dependency graph for the XR, square-shift, quotient,
+  and closure-assembly proof programs.  The runner fix keeps the local packet
+  path aligned with the current script layout without running the heavy replay.
+- **What to do next:** Treat the DAG as experimental coordination metadata:
+  reconcile it against `towards-prize.tex`, CAP25 v12/v13 notes, and the site
+  before using it as a proof-status authority.  If any roadmap note is promoted
+  into a paper, restate the claim in TeX and cite the exact certificate or
+  theorem dependency.
+
+### 2026-07-04 - Additive experimental evidence sweep
+
+- **Agent/model:** Codex integrating additive PR material from AllenGrahamHart
+  and LegaSage/Ken after the main PR 210-260 sweep.
+- **Files added or changed:** `experimental/notes/roadmaps/xr_pair_orbit_globalness.md`;
+  `experimental/notes/roadmaps/q3r2_link_leak_adjudication.md`;
+  `experimental/data/certificates/xr-pair-orbit-globalness/`;
+  `experimental/data/certificates/q3r2-link-leak-adjudication/`;
+  `experimental/notes/audits/cs25_v12_consolidated_audit_2026-07-02.md`;
+  `experimental/notes/audits/lean_build_verification.md`;
+  `experimental/notes/audits/independent_replay_2026-07-02.md`;
+  `experimental/notes/audits/independent_replay_2026-07-03.md`;
+  `experimental/data/audits/`; selected new roadmap notes from the clean-rate
+  DAG maintenance packet.
+- **Status:** EXPERIMENTAL / AUDIT / STATUS REPORT, as tagged in the
+  individual notes.
+- **What is being added:** The XR pair-orbit/globalness packet and Q3R2
+  link-leak adjudication are added as experimental falsifier/evidence
+  material.  Additional audit receipts record Paper D v12 audit coverage,
+  external Lean build verification, and independent verifier replay matrices.
+  The extra roadmap files are additive status/proof-program notes only; the
+  broad `prize_dag.json` rewrite and existing-note overwrites were not taken.
+- **How it is useful:** This keeps potentially useful evidence in-repo without
+  promoting it to theorem status.  In particular, the XR evidence warns that a
+  narrow fixed-core/fixed-hole taxonomy needs a delta-character/link-leak
+  branch, and the replay/Lean notes preserve external audit receipts for later
+  human review.
+- **What to do next:** Distill the XR evidence into the M1/XR proof-program
+  summary, decide whether the subprocess replay harness should remain as
+  tooling or be replaced by a lighter audit-only record, and only update the
+  central DAG after reconciling it with the already integrated roadmap notes.
+
+### 2026-07-04 - PR 210-260 integration sweep
+
+- **Agent/model:** Codex integrating PR material from AllenGrahamHart, Holm
+  Buar, Vadim Avdeev, DannyExperiments/Gia, LegaSage, and Latif Kasuli.
+- **Files added or changed:** `experimental/cap25_v13_experimental.tex`;
+  `experimental/notes/l1/`; `experimental/notes/m1/`;
+  `experimental/notes/roadmaps/`; `experimental/notes/thresholds/`;
+  `experimental/notes/audits/`; `experimental/data/certificates/`;
+  `experimental/scripts/`; `experimental/lean/l1_threshold_ledger/`;
+  `site/data/`.
+- **Status:** PROVED / CONDITIONAL / EXPERIMENTAL / AUDIT /
+  COUNTEREXAMPLE, as tagged in the individual notes.
+- **What is being added:** The sweep integrates the narrow CAP25 v13 SPI split
+  repair, Vadim's A407/A408 residual-design finite-slope threshold row and
+  site entry, the Holm Buar L1 reduction/refutation chain, a small L1 Lean
+  ledger, sigma_C and Hankel-kernel experimental censuses, and Allen's
+  clean-rate proof-spine packets for quotient/tangent budgeting, PTE and
+  square-shift trades, good-reduction/GCD certification, XR residual
+  decompositions, and the `16 n^3` clean-rate compiler target.
+- **How it is useful:** The new public leaderboard item is the prime-field
+  `A=406/A=407` finite-slope gate.  The rest is proof-program infrastructure:
+  it narrows the CAP25 v13/M1 route, corrects the PTE half-size window to
+  `h <= A`, records the primitive-vacancy L1 refutation, and makes the current
+  clean-rate path auditable without promoting conditional roadmap packets into
+  Paper D.
+- **What to do next:** Replay only the lightweight verifier scripts selected
+  for promotion, distill the clean-rate proof-spine into the next
+  `towards-prize`/CAP25 planning note, decide whether broad DAG PRs should be
+  merged separately, and avoid claiming official prize resolution until the
+  terminal post-strip `R_post <= 16 n^3` input is proved or replaced.
+
+### 2026-07-04 - Paper B Lean formalization package
+
+- **Agent/model:** Aristotle/Harmonic draft reviewed and packaged by Codex.
+- **Files added or changed:** `experimental/lean/slackMCA_v4/`;
+  `experimental/agents-log.md`.
+- **Status:** FORMALIZATION / AUDIT.
+- **What is being added:** A normalized Lean package for selected finitary
+  parts of `tex/slackMCA_v4.tex`, under the `slackMCA_v4.*` module namespace.
+  It covers locator/list fibers, monomial-prefix and generated-field
+  pigeonhole bounds, quotient-core lower bounds, the dyadic inverse-quotient
+  theorem, finite entropy lower bounds, one-bad-parameter, exact slack,
+  quotient locator identities, cyclotomic rigidity, and Fermat digit rigidity.
+- **How it is useful:** This gives Paper B a substantial formalization track
+  for the unconditional finite spine while keeping the full asymptotic L1/M1
+  reserve program out of scope.
+- **What to do next:** Build in a Mathlib-enabled Lean 4.28 environment and
+  then decide which remaining Paper B inputs should become named Lean
+  hypotheses versus future formalization targets.
+
+### 2026-07-04 - CAP25 v13 experimental Lean package
+
+- **Agent/model:** Aristotle/Harmonic draft reviewed and packaged by Codex.
+- **Files added or changed:**
+  `experimental/lean/cs25_cap_v13_experimental/`;
+  `experimental/agents-log.md`.
+- **Status:** FORMALIZATION / EXPERIMENTAL / AUDIT.
+- **What is being added:** A normalized Lean package for selected
+  self-contained compiler lemmas from `experimental/cap25_v13_experimental.tex`,
+  under the `cs25_cap_v13_experimental.*` module namespace.  It formalizes
+  threshold staircases/corridors, budget windows, extension-pole counting,
+  quotient-census arithmetic, planted/list-side compiler pieces, fixed-excess
+  counting, GAP-2 seam arithmetic, substitution injectivity,
+  fixed-dimensional Conjecture-F tools, Hankel determinant, anticode packing,
+  and Johnson-ball counting.
+- **How it is useful:** This turns the v13 experimental insert into a more
+  auditable compiler package without promoting the insert into Paper D.
+- **What to do next:** Build in a Mathlib-enabled Lean 4.28 environment,
+  review `native_decide` arithmetic certificates, and treat the omitted
+  tangent, quotient-ledger, split-locator probability, spectral Johnson, and
+  SPI eliminant pieces as separate formalization targets.
+
+### 2026-07-03 - CAP25 v13 experimental insert
+
+- **Agent/model:** Codex, reviewing a user-added experimental v13 insert.
+- **Files added or changed:** `experimental/cap25_v13_experimental.tex`;
+  `experimental/agents-log.md`.
+- **Status:** EXPERIMENTAL / AUDIT / CONDITIONAL.
+- **What is being added:** A body-only TeX insert designed for possible future
+  inclusion in `tex/cs25_cap_v12.tex` before the Discussion section.  It adds
+  v13-labeled threshold staircase/corridor compilers, exact high-agreement
+  tangent cells, quotient and extension paid-cell interfaces, planted
+  quotient-core list compilers, sunflower residual charts, split-locator moment
+  ledgers, Conjecture-F reductions, and a deficiency-one SPI
+  eliminant-or-residual theorem.
+- **How it is useful:** This is a clean experimental bridge from Paper D v12
+  toward a possible v13: it sharpens the certificate grammar without merging
+  into the main paper, and it names the remaining L1/M1 residual branches
+  rather than hiding them inside point estimates.
+- **What to do next:** Review the mathematical claims line by line before
+  promotion into Paper D.  Source checks found all references resolved against
+  the insert or `tex/cs25_cap_v12.tex`; a temporary Tectonic compile of v12
+  with this insert succeeded with only underfull-box warnings.
+
+### 2026-07-03 - Paper D CAP25 Lean skeleton package
+
+- **Agent/model:** Aristotle/Harmonic draft reviewed and packaged by Codex.
+- **Files added or changed:** `experimental/lean/cs25_cap_v12/`;
+  `experimental/agents-log.md`.
+- **Status:** FORMALIZATION / SKELETON / AUDIT.
+- **What is being added:** A Lean package for `cs25_cap_v12.tex`, normalized
+  under the `cs25_cap_v12.*` namespace.  It contains a substantial proved
+  abstract core for CA/MCA definitions, Theorem A, safe-side/deep-regime
+  bounds, Johnson counting, universal-cap reduction from a fiber-list input,
+  RS sandwich wrappers, scanner soundness, and selected ledger primitives.
+- **How it is useful:** This provides a formal roadmap for Paper D.  The
+  construction-heavy parts are explicitly kept as named skeleton targets with
+  `sorry`: fiber/map-smooth constructions, regular Hankel certificates,
+  quotient-remainder floors, explicit interleaving witnesses, circle-code
+  analogues, and ECFFT/rational-map caps.
+- **What to do next:** Run `lake build` in a Mathlib-enabled environment, then
+  attack the `Fiber.lean` skeleton first because it supplies the list-mass input
+  consumed by the universal-cap reduction.
+
+### 2026-07-03 - Paper A Lean formalization package
+
+- **Agent/model:** Aristotle/Harmonic draft reviewed and packaged by Codex.
+- **Files added or changed:** `experimental/lean/RS_disproof_v3/`;
+  `experimental/agents-log.md`.
+- **Status:** FORMALIZATION / SUBSTANTIAL / AUDIT.
+- **What is being added:** A Lean package for Paper A (`RS_disproof_v3.tex`),
+  including the quotient-locator core, support-wise line-MCA predicates,
+  monotonicity, MCA lower bounds from restricted sums, the list lower bound
+  with distinct-codeword injection, the density-to-MCA reduction, the 2-adic
+  tower criterion, scalar-coset extension-field lift, and exact small finite
+  verification records via `native_decide`.
+- **How it is useful:** This is now a substantial Paper A formalization track,
+  not just a locator-core stub.  It isolates which parts are Lean-proved and
+  which are imported: Dias da Silva--Hamidoune, Siegel--Walfisz / the full
+  cyclotomic sieve, and the general Fermat digit lemma remain external inputs,
+  while selected finite Fermat/deployed arithmetic records are checked inside
+  Lean.
+- **What to do next:** Verify the package locally with Mathlib available.
+  Then decide whether to formalize the remaining imported number-theoretic
+  inputs or keep them as explicitly named hypotheses.
+
+### 2026-07-03 - Consolidated threshold, M1, and L1 TeX notes
+
+- **Agent/model:** Codex, consolidating threshold/M1/L1 material contributed
+  primarily by AllenGrahamHart in the recent PR batch.
+- **Files added or changed:** `experimental/thresholds.tex`;
+  `experimental/thresholds.pdf`; `experimental/m1.tex`;
+  `experimental/m1.pdf`; `experimental/l1.tex`; `experimental/l1.pdf`;
+  `experimental/agents-log.md`.
+- **Status:** DOCUMENTATION / COMPILER-NOTES / COMPILED.
+- **What is being added:** Three self-contained experimental TeX notes:
+  threshold certificate compilers for CAP25, the M1 residue-line and
+  Conjecture-F proof program, and the L1 list-side compiler/petal program.
+  The notes integrate the markdown material into paper-shaped statements,
+  definitions, proof sketches, status warnings, and CAP25 integration
+  checklists.
+- **How it is useful:** This gives the project editable working-paper inputs
+  for the next CAP25/towards-prize pass without requiring readers to reconstruct
+  the story from many PR notes.  It also separates proved compiler arithmetic
+  and local lemmas from evidence, conjectural reductions, and open theorem
+  gaps.
+- **What to do next:** Audit each theorem/lemma statement against the source
+  PR notes before promoting it into Paper D or a submission-facing paper.
+  In particular, keep L1 sunflower evidence and M1 Conjecture-F evidence out
+  of the PROVED ledger until the corresponding residual bounds are complete.
+
+### 2026-07-03 - PR batch: DAG, threshold compilers, and A425/A426 finite gate
+
+- **Agent/model:** Codex integrating PRs from AllenGrahamHart, Vadim Avdeev,
+  DannyExperiments/Gia, and Lean certification contributors.  AllenGrahamHart
+  authored the majority of the batch; see
+  `experimental/notes/roadmaps/pr_batch_2026_07_03_attribution.md` for the
+  per-PR attribution ledger.
+- **Files added or changed:** `experimental/data/prize-dag/`;
+  `experimental/notes/roadmaps/`; `experimental/notes/thresholds/`;
+  `experimental/notes/certificate_scanner/`;
+  `experimental/notes/{m1,l1,f1,m5,x1,audits}/`;
+  `experimental/data/certificates/`; `experimental/scripts/`;
+  `experimental/lean/rs_mca_formalization/`; `scripts/aperiodic_eliminant_schema.json`;
+  `scripts/check_aperiodic_eliminant_packet.py`; `site/data/frontier.json`;
+  `site/data/rate-leaderboards.json`; `site/data/updates.json`; `site/index.html`.
+- **Status:** MIXED: PROVED local finite-slope threshold row / AUDIT /
+  EXPERIMENTAL evidence / ROADMAP infrastructure.
+- **What is being added:** Integrated the reviewed experimental payload from
+  PRs #178--#208, excluding stale README/site/towards-prize edits from older
+  branch bases.  The main new public row is the prime-field A425/A426 adjacent
+  finite-slope support-wise MCA gate: PR #204 gives the two-core upper bound
+  `LD_sw(RS[F,D,256],426)=87`, PR #208 gives the direct A=425 unsafe witness,
+  and the prime `p=22275*2^120+1` satisfies `87*2^128 < p < 88*2^128`.
+  The batch also adds Allen's prize DAG maintenance packet, quotient-census and
+  dodge-selection compilers, CAP25 sparse-sigma audits, Lean tier-one
+  certification map updates, and many M1/L1/F1/M5 evidence/proof-program notes.
+- **How it is useful:** The A425/A426 row is a new exact finite-slope
+  threshold example for a smooth rate-1/2 prime-field row and is now visible on
+  the site.  The other packets fill the towards-prize execution DAG with
+  reproducible certificates, compiler arithmetic, red-team queues, and local
+  proof sublemmas without promoting them to final Paper D authority.
+- **What to do next:** Independently audit the two-core proof and Lucas prime
+  certificate before citing the A425/A426 row externally.  For the broader PR
+  batch, run only lightweight verifier syntax/JSON checks by default; execute
+  heavier scanners only when a contributor opts in with explicit resources.
+  Keep Paper D text unchanged unless explicitly requested.
+
+### 2026-07-02 - Restore Paper D title and content
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `tex/cs25_cap_v12.tex`; `cs25_cap_v12.pdf`;
+  `site/papers/cs25_cap_v12.pdf`; `readme.md`; `towards-prize.md`;
+  `site/data/papers.json`; `site/data/updates.json`; `site/index.html`;
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / REVERT / DOCUMENTATION.
+- **What is being added:** Paper D itself is restored to the pre-framing
+  version, including its original title.  External docs and site metadata keep
+  the stronger role description, but display the Paper D title as
+  `Paper D: Two-Sided Cap and Certificate Grammar`.
+- **How it is useful:** This preserves Paper D as a stable mathematical source
+  while still telling contributors that it is the main submission reference for
+  cap hypotheses, endpoint conventions, denominators, and proof status.
+- **What to do next:** Do not edit Paper D wording for hierarchy/framing unless
+  explicitly requested; make such hierarchy changes in README, roadmap, site,
+  and logs only.
+
+### 2026-07-02 - Paper D external submission-reference framing
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `tex/towards-prize.tex`; `towards-prize.pdf`; `readme.md`;
+  `towards-prize.md`; `site/data/papers.json`; `site/data/updates.json`;
+  `site/index.html`; `site/papers/towards-prize.pdf`; `experimental/agents-log.md`.
+- **Status:** AUDIT / DOCUMENTATION / COMPILED.
+- **What is being added:** External docs were adjusted to present Paper D as
+  the main submission reference for the package, while preserving Paper D's
+  own title and text.  The `towards-prize` note states that it is a compact
+  companion, not a competing authority.
+- **How it is useful:** This removes ambiguity in the package hierarchy:
+  public rows, scanner outputs, and companion notes should cite Paper D v12 for
+  final hypotheses, endpoint conventions, denominators, and proof status.
+- **What to do next:** Keep hierarchy/framing edits outside Paper D unless
+  explicitly requested; audit Paper D itself through theorem statements and
+  certificate checks.
+
+### 2026-07-02 - Towards-prize sparse note documentation pass
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `readme.md`; `towards-prize.md`;
+  `site/data/papers.json`; `site/data/updates.json`; `site/index.html`;
+  `site/papers/towards-prize.pdf`; `experimental/agents-log.md`.
+- **Status:** AUDIT / DOCUMENTATION / SITE-REFERENCE.
+- **What is being added:** The promoted `tex/towards-prize.tex` note is now
+  referenced as the active compact prize-facing theorem note.  The README,
+  roadmap, public site paper list, and update feed now describe the sparse
+  residual layer and `delta^*` staircase role.
+- **How it is useful:** This makes the current execution target visible
+  without promoting the sparse note to a new numerical leaderboard record.  It
+  records that the note is roadmap/theorem packaging: the remaining work is to
+  audit the sparse reduction and produce CA/list or sparse-residual
+  certificates.
+- **What to do next:** Audit `emca=max(eca,sigma_C/q)`, endpoint conventions,
+  and the rider-bound constants against Paper D v12 before using the sparse
+  note as a proof authority.
+
+### 2026-07-02 - Towards-prize best promotion with sparse residual layer
+
+- **Agent/model:** Codex, reviewing maintainer-added
+  `tex/towards-prize_best.tex`.
+- **Files added or changed:** `tex/towards-prize.tex`; `towards-prize.pdf`;
+  `archived/towards-prize_v3.tex`; `archived/towards-prize_v3.pdf`;
+  `experimental/agents-log.md`.
+- **Status:** AUDIT / VERSION-PROMOTION-CANDIDATE / COMPILED.
+- **What is being added:** `towards-prize_best.tex` is promoted to the
+  canonical `tex/towards-prize.tex`.  Compared with v3, it keeps the deployed
+  staircase/certificate package and adds the sparse residual layer:
+  exact sparsification of MCA as `max(eca, sigma_C/q)`, a sparse support
+  threshold, Reed--Solomon pinning/normal form, match-rigidity, the sparse
+  value-set wall, and a rider bound reducing the sub-half plain-CA band to
+  deficient pair lists for doubly sparse far pairs.
+- **How it is useful:** This is strictly stronger for determining `delta^*`:
+  it replaces the older mutual-residual formulation by a sharper sparse
+  counting problem while retaining the legacy shortening/pair-list statement
+  for comparison.
+- **What to do next:** Audit the sparse reductions against the current Paper D
+  v12 notation, especially the `sigma_C` normalization, endpoint conventions,
+  and the rider-bound pair-list constant.
+
+### 2026-07-02 - PR sweep: G3 toy evidence, v12 audits, and M5 A384 atlas
+
+- **Agent/model:** Codex, integrating PRs from Latif Kasuli and Allen Graham
+  Hart.
+- **Files added or changed:** `experimental/notes/g3/g3_rank_boundary_toy_evidence.md`;
+  `experimental/data/certificates/g3-rank-boundary-toy/g3_rank_boundary_toy_evidence.json`;
+  `experimental/notes/audits/cs25_v12_*_audit.md`;
+  `experimental/notes/audits/towards_prize_v*_audit.md`;
+  `experimental/data/certificates/cs25-v12-deployed-certificates/`;
+  `experimental/data/certificates/towards-prize-v2-constant-audit/`;
+  `experimental/scripts/verify_cs25_v12_*.py`;
+  `experimental/scripts/verify_towards_prize_v*.py`;
+  `experimental/notes/m5/m5_underdetermined_a384_pivot_packet.md`;
+  `tex/cs25_cap_v12.tex`.
+- **Status:** EXPERIMENTAL / AUDIT / PROVED-LOCAL.
+- **What is being added:** PR #175 is integrated as a rehomed G3 toy evidence
+  packet: corrected `F_97,n=16,k=8,a=11` rank-boundary ledgers, a stable
+  aperiodic `mu4` monomial family, and an explicit tangent-convention question.
+  PR #177 is integrated as Paper D v12 and towards-prize audit notes, JSON
+  packets, and small exact verifier scripts.  Its explicit-pair audit found a
+  proof-writing rounding issue, now patched in `tex/cs25_cap_v12.tex` by adding
+  the missing integer-valued slope-count step.  PR #176 is not merged wholesale;
+  its reusable M5 deficiency-one Cramer-chart theorem is distilled into the
+  existing A384 pivot note.
+- **How it is useful:** #175 supplies budget-relevant toy evidence for the
+  middle-band non-tangent/non-quotient residual program. #177 strengthens the
+  current main audit focus around Paper D v12, including conversion radius,
+  BCIKS normalization, deployed certificates, transport scope, and profile
+  constants. #176 identifies the first underdetermined Hankel bucket atlas at
+  `A=384`, relevant to the `B_mca(a)` staircase but not yet a threshold bound.
+- **What to do next:** Answer the G3 tangent classifier convention question;
+  rerun or independently audit the new exact verifier scripts when desired;
+  request a smaller #176 follow-up if the large planted verifier/data packet
+  should be merged; audit the patched `cs25_cap_v12.tex` explicit-pair proof in
+  the next Paper D compile pass.
+
+### 2026-07-02 - Towards-prize v3 staircase tightening
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `tex/towards-prize.tex`;
+  `towards-prize.pdf`; `experimental/agents-log.md`.
+- **Status:** AUDIT / VERSION-TIGHTENING / COMPILED.
+- **What is being added:** The v3 cap-paper package now explicitly defines the
+  integer staircase numerator `B_mca(a)`, states the one-step threshold
+  certificate, records the KoalaBear unsafe handle
+  `(c,m,w,Delta)=(16,69748,4211,67392)`, and moves the circle row into a
+  secondary remark.  It also adds the deployed subfield warning that
+  base-valued KoalaBear lines have density at most `|B|/|F|<2^-154`, so
+  target-level obstructions must be genuinely extension-valued.
+- **How it is useful:** This makes `towards-prize.tex` sharper for determining
+  `delta^*`: it names the exact finite object to certify and separates the
+  prize-facing KoalaBear statement from contextual row examples.
+- **What to do next:** Audit the staircase definition and KoalaBear handle
+  against `tex/cs25_cap_v12.tex`, especially endpoint convention,
+  `q_line`, and the confinement lemma for subfield rows.
+
+### 2026-07-02 - Towards-prize v3 cap-paper package
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `tex/towards-prize.tex`;
+  `towards-prize.pdf`; `archived/towards-prize_v2.tex`;
+  `archived/towards-prize_v2.pdf`; `experimental/agents-log.md`.
+- **Status:** AUDIT / VERSION-PROMOTION-CANDIDATE / COMPILED.
+- **What is being added:** `towards-prize.tex` now includes a compact
+  cap-paper refinement theorem rather than copying Paper D v12's long scanner
+  and transport sections.  The new package records the self-contained
+  half-Johnson safe handle, finite staircase certificates for deployed
+  multiplicative and circle rows, map/rational-smooth transfer scope, and the
+  optimized failure profile.
+- **How it is useful:** This makes the prize-facing note strictly stronger for
+  determining `delta^*`: it improves the self-contained safe edge where the
+  half-Johnson certificate beats the one-third-distance theorem, states concrete
+  deployed two-sided intervals, and identifies which row-level claims are finite
+  certificate checks in Paper D v12.
+- **What to do next:** Audit the imported cap-paper package against
+  `tex/cs25_cap_v12.tex`: half-Johnson constants, deployed interval endpoints,
+  circle/genus-one transport hypotheses, and profile constants.
+
+### 2026-07-02 - Towards-prize v2 promotion
+
+- **Agent/model:** Codex, reviewing maintainer-added draft.
+- **Files added or changed:** `tex/towards-prize.tex`;
+  `towards-prize.pdf`; `archived/towards-prize_v1.tex`;
+  `archived/towards-prize_v1.pdf`; `experimental/agents-log.md`.
+- **Status:** AUDIT / VERSION-PROMOTION-CANDIDATE / COMPILED.
+- **What is being added:** The maintainer-added `towards-prize_v2.tex` is
+  promoted to the canonical `tex/towards-prize.tex`.  Compared with v1, it
+  sharpens the unsafe edge using the ordinary locator cap, explicitly marks the
+  top of the old plain-CA band as unsafe, and adds residual shortening-image and
+  doubled-radius pair-list reductions for the mutual layer above half distance.
+- **How it is useful:** This is strictly stronger as a prize-facing note: it
+  narrows the remaining CA interval and replaces the broad "mutual layer"
+  question with concrete finite objects, while preserving the v12 audit framing.
+- **What to do next:** Audit the new numerical constants
+  `alpha_rho`, the ordinary-locator entropy table, and the two residual
+  reductions.  The promoted PDF was compiled with Tectonic; only minor box
+  warnings were reported.
+
+### 2026-07-02 - Paper D v12 reference sweep
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `readme.md`; `agents.md`;
+  `towards-prize.md`; `site/index.html`; `site/data/papers.json`;
+  `site/data/rate-leaderboards.json`; `site/data/updates.json`;
+  `site/papers/cs25_cap_v12.pdf`; selected `experimental/notes/`,
+  `experimental/scripts/`, and `experimental/data/certificates/` references.
+- **Status:** AUDIT / DOCUMENTATION / VERSION-PROMOTION.
+- **What is being added:** Active Paper D references were moved to
+  `tex/cs25_cap_v12.tex`, and contributor-facing text now says that v12 is the
+  final-submission cap paper to audit.  The public site metadata and local PDF
+  mirror were updated to point at the v12 package.
+- **How it is useful:** Prevents new agents from following the superseded v10
+  Hankel-ledger draft as the current cap-paper source, while preserving older
+  v6--v10 audit/log entries as historical provenance.
+- **What to do next:** Audit v12 directly: direct conversion/radius
+  conventions, half-distance import scope, integer certificate replay, and the
+  printed certificate grammar.
+
+### 2026-07-02 - Paper D v12 and towards-prize audit focus
+
+- **Agent/model:** Codex, reviewing maintainer-added drafts.
+- **Files added or changed:** `tex/cs25_cap_v11.tex`;
+  `tex/cs25_cap_v12.tex`; `tex/towards-prize.tex`;
+  `cs25_cap_v11.pdf`; `cs25_cap_v12.pdf`; `towards-prize.pdf`;
+  `AGENTS.md`; `experimental/agents-log.md`.
+- **Status:** AUDIT / VERSION-PROMOTION-CANDIDATE.
+- **What is being added:** Paper D v12 is now the main cap-paper candidate:
+  it supersedes v10/v11 as the most complete draft, adding the safe-side
+  pincer, half-distance MCA-from-CA reduction, map/rational smooth extensions,
+  circle/genus-one transports, explicit witness machinery, optimized profile,
+  and certificate grammar v2.  `tex/towards-prize.tex` is the compact
+  prize-facing theorem note aligned with the v12 package.
+- **How it is useful:** The project focus moves from collecting more frontier
+  examples to auditing the cap package itself.  The main task is checking the
+  CS25/Paper-D conversion pipeline, the optional BCIKS half-distance import,
+  the integer certificates behind every deployed-row inequality, and the exact
+  scope of the circle/genus-one model transfers.
+- **What to do next:** Treat CS25/Paper-D auditing as the main focus.  Before
+  promoting v12 as the stable Paper D, produce a short audit note covering:
+  direct conversion/radius conventions, ABF/CA/MCA normalization, BCIKS import
+  compatibility, exact-integer certificate replay paths, and whether
+  `towards-prize.tex` states only the claims actually proved by v12.
+
+### 2026-07-02 - Post-v10 PR sweep: M1 reductions, M3 synthetic packets, M5 underdetermined roadmap
+
+- **Agent/model:** Codex, integrating and auditing contributions from
+  AllenGrahamHart, DannyExperiments, and Gia.
+- **Files added or changed:**
+  `experimental/notes/triage/pr-triage-2026-07-02-post-v10.md`;
+  `experimental/notes/audits/m0_prize_mca_definition_freeze.md`;
+  `experimental/notes/m1/m1_simple_pole_projected_locator_wall.md`;
+  `experimental/notes/m1/m1_dyadic_shifted_prefix_value_bridge.md`;
+  `experimental/notes/m3/m3_low_rank_affine_spectral_reduction.md`;
+  `experimental/notes/m5/m5_underdetermined_a384_pivot_packet.md`;
+  selected `experimental/data/certificates/hankel-f17-32-m3-*` packets;
+  selected `experimental/scripts/verify_f17_32_m3_*` scripts;
+  `experimental/scripts/verify_f17_32_m5_underdetermined_a384_bucket.py`;
+  `experimental/notes/roadmaps/proximity_prize_execution_roadmap_post_v10_r2.md`;
+  `experimental/notes/roadmaps/proof_sketch/`;
+  `experimental/notes/roadmaps/wp_detail/`;
+  `experimental/data/prize-dag/`;
+  `experimental/scripts/verify_prize_dag.py`;
+  `experimental/scripts/verify_roadmap_r2_numbers.py`;
+  `experimental/scripts/plot_prize_dag.py`;
+  `scripts/check_aperiodic_eliminant_packet.py`;
+  `towards-prize.md`.
+- **Status:** AUDIT / PROVED-LOCAL / EXPERIMENTAL / ROADMAP.  No leaderboard
+  movement and no new prize-facing threshold claim.
+- **What is being added:** The batch integrates Danny/Gia's M1 simple-pole and
+  shifted-prefix reductions, Allen's synthetic low-rank M3/M4 packet material,
+  Allen's M5 `A=384` underdetermined-boundary packet, and Allen's post-v10 r2
+  roadmap/DAG as subordinate planning material.  From the large rank-witness
+  PR only the M0 definition-freeze note and packet-checker enhancement were
+  taken; the generated rank-6 sidecars remain held for split/replay.
+- **How it is useful:** The main new strategic point is that the official
+  prize band is entirely underdetermined, so regular M3 packets are a proving
+  ground while M5 underdetermined charts are the real band-facing program.
+  The M1 reductions isolate cleaner projected-value walls, and the M3
+  low-rank packets provide scoped synthetic tests for the then-current v10
+  ledger style, now superseded by Paper D v12.
+- **What to do next:** Refine the `A=384` M5 Cramer/divisibility chart into an
+  eliminant or named residual obstruction; replay or split any #171 rank-6
+  material before integration; and keep new PRs to one theorem cluster or
+  certificate packet at a time.
+
+### 2026-07-01 - v10 guide and site metadata sync
+
+- **Agent/model:** Codex.
+- **Files added or changed:** `AGENTS.md`; `README.md`/`readme.md`;
+  `site/index.html`; `site/papers/cs25_cap_v10.pdf`;
+  `towards-prize.md`; `experimental/agents-log.md`.
+- **Status:** AUDIT / DOCUMENTATION.
+- **What is being added:** The agent guide, repo overview, prize roadmap, and
+  site paper metadata were then pointed at Paper D v10 as the cap/Hankel-ledger
+  package.  Paper D v12 now supersedes this entry.  `AGENTS.md` also named the
+  next concrete prize task: an M3/M4
+  root-table and paid-root-subtraction packet for the `F_17^32`, `n=512`,
+  `k=256` row over agreements `385 <= A <= 426`.
+- **How it is useful:** Historical provenance for the v10 transition away from
+  v9, strict264, and strict352 as the active frontier.  The current successor
+  route is Paper D v12's safe-side pincer and certificate grammar.
+- **What to do next:** Build the first M3/M4 table for selected agreements in
+  `385 <= A <= 426`, including regular roots, tangent/quotient/extension
+  subtraction, and residual chart labels.
+
+### 2026-07-01 - PR 161--169 frontier integration
+
+- **Agent/model:** Codex, integrating contributions from holmbuar,
+  AllenGrahamHart, DannyExperiments, and Gia.
+- **Files added or changed:** `tex/slackMCA_v3.tex`;
+  `tex/slackMCA_v4.tex`; `tex/snarks_v4.tex`; `tex/snarks_v5.tex`;
+  `experimental/notes/audits/pr161_169_integration_audit.md`;
+  `experimental/notes/l1/l1_full_petal_growing_defect_witnesses.md`;
+  `experimental/notes/l1/l1_monomial_dyadic_descent_survivors.md`;
+  `experimental/data/certificates/l1-monomial-dyadic-descent/`;
+  `experimental/notes/m1/m1_full_overlap_low_tail_completion_projection_wall.md`;
+  `experimental/notes/m1/m1_beta2_conditional_close.md`;
+  `experimental/notes/m1/m1_beta2_obstruction_floor.md`;
+  `experimental/notes/m1/hankel_regular_window_plan.md`;
+  `experimental/notes/m1/f17_32_m3_generic_regular_minor.md`;
+  `experimental/notes/m1/f17_32_hankel_row_descriptor.md`;
+  `experimental/notes/m1/f17_32_m3_rank_witness_packet.md`;
+  `experimental/notes/thresholds/f17_32_high_agreement_tangent_table.md`;
+  `experimental/lean/rs_mca_formalization/RsMca.lean`;
+  `experimental/lean/rs_mca_formalization/RsMca/F1ExtensionLedger.lean`;
+  `experimental/lean/rs_mca_formalization/RsMca/BetaTwoReductionLedger.lean`;
+  selected verifier scripts and Hankel/L1 data packets.
+- **Status:** AUDIT / PROVED-SUBPACKETS / CONDITIONAL / EXPERIMENTAL.
+- **What is being added:** The L1 target in Papers B/C is repaired from raw
+  support fibers to image fibers; full-petal L1 witnesses and a monomial
+  dyadic replay packet are banked; M1 full-overlap and BETA_2 route-cut notes
+  are integrated; F1/BETA Lean ledgers are wired; and selected M3 regular
+  Hankel row-descriptor/window/minor artifacts are added from the large
+  regular-minor PR.
+- **How it is useful:** This turns the current PR wave into usable proof
+  infrastructure for the v10 prize plan: L1 is now stated against the right
+  object, M1 route cuts are named, F1/BETA algebra cores are formalized, and
+  the `F_17^32` non-tangent regular window has compact row and generic-minor
+  artifacts.
+- **What to do next:** Use the M3 row descriptor and regular-minor extractor
+  to compute actual root tables in `385 <= A <= 426`; compress any remaining
+  generated PR #161 material into small audited proof packets before adding it;
+  and seek a genuine BETA_2 monodromy/conductor theorem rather than promoting
   finite local data.
 
 ### 2026-07-01 - Paper D v10 milestone integration
