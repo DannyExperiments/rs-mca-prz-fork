@@ -383,6 +383,177 @@ universal polynomial theorem over the entire `J_sec<=0` transverse class.
 It is not asserted here that those examples survive every earlier owner cell
 or occupy the final unpaid balanced-core residual.
 
+## Global section-positive one-cell atlas
+
+The all-parameter theorem globalizes on the strict section-positive locus.
+Let
+
+```text
+C=RS_F(D,k),  |D|=n,  1<=k<a<=n,
+t=n-a,  w=k-1,  J=a^2-nw.
+```
+
+Assume `J>0`.  For every received pair `r=(r_0,r_1)`, the complete exact
+support-wise bad-witness incidence at agreement `a` is one algebraic profile
+cell.  It is witness-exhaustive, its one-cell first-match order is automatic,
+and its distinct-slope image has a field- and line-uniform polynomial bound.
+
+When `k>=2` and `a<n`, define
+
+```text
+mu=floor(wt/J)+1,
+D_0=mu*a-1,
+q=floor(D_0/w),
+Sigma=sum_{c=0}^q c(mu*a-cw),
+L=max(q,mu-1,Sigma),
+U_glob=L+qL(12D_0^6+1)+q+q(L+1)(t+1).                (27)
+```
+
+Then the tuple `(mu,L,q,D_0)` is section-admissible and
+
+```text
+|Z_a(r)| <= U_glob < 10000 n^27.                       (28)
+```
+
+The orientation of the ratio in (27) is load-bearing: it is `wt/J`, not
+`J/(wt)`.  The latter already gives a nonpositive surplus coefficient at
+`(n,k,a)=(7,2,3)`.
+
+If `a=n`, then
+
+```text
+|Z_n(r)| <= 1.                                         (29)
+```
+
+If `k=1`, then `|Z_a(r)|<=binom(n,2)`.  If in addition `a^2>=nk`, the
+construction in (27) satisfies the sharper bound
+
+```text
+U_glob < 10000 n^17.                                   (30)
+```
+
+### Compact global cell
+
+Let `P_D(X)=prod_{x in D}(X-x)`, and let `R_0,R_1` interpolate the received
+words.  A support and explaining polynomial are represented by auxiliary
+coordinates
+
+```text
+Q B=P_D,
+R_0+gamma R_1-h=Q A,
+deg Q=a, deg B=t, deg h<k, deg A<t,                    (31)
+```
+
+with `Q,B` monic.  Because `P_D` is squarefree and split, the rational points
+of the first equation are exactly the `a`-subsets of `D`.  The second equation
+is exactly agreement with `h` on the roots of `Q`.  Simultaneous explanation
+of the two received words on the same support is another pair of systems of
+the form (31), so support-wise nontriviality is a constructible complement.
+Thus (31) is one polynomial-complexity algebraic profile cell.  The locator
+and quotient polynomials are witness coordinates, not frozen profile
+parameters; the profile count is one, not `binom(n,a)`.
+
+### Automatic transversality
+
+Let `H` be a weighted Vandermonde parity check for `C`, put
+`y_i=H r_i^T`, and let a witness at slope `gamma` have error vector
+`c_gamma` with support `E`, where `|E|<=t` and its agreement support is
+contained in `D\E`.  If both `y_0` and `y_1` lay in the span of the parity
+columns indexed by `E`, choose lifts `e_i` supported on `E`.  Then
+`r_i-e_i` is a codeword agreeing with `r_i` on the witness support for both
+`i=0,1`, contradicting support-wise nontriviality.  Every literal bad witness
+therefore satisfies condition (T) on the global chart.
+
+If `y_1=0`, then `r_1` is a codeword.  Subtracting `gamma r_1` from any
+putative explanation of `r_0+gamma r_1` explains `r_0` on the same support,
+so no support-wise bad slope exists.  Otherwise the all-parameter theorem
+applies.
+
+### Explicit section surplus
+
+For (27), `q>=1`, `qw<=D_0<mu*a`, and `L>=max(q,mu-1)`.  Put
+
+```text
+A=sum_{c=0}^q (mu*a-cw),  M=mu(mu+1)/2,
+G=A-nM.
+```
+
+Writing `x=mu*a/w` and `q+1=x+delta`, with `0<=delta<1`, gives
+
+```text
+A=(w/2)(x^2+x+delta(1-delta))
+ >= mu^2 a^2/(2w)+mu*a/2,
+G >= (mu/(2w))(mu*J-wt) > 0.                           (32)
+```
+
+The last inequality follows from `mu=floor(wt/J)+1`.  Since `G` is an
+integer, (32) implies `G>=1`.  Since
+
+```text
+U_w(D_0,L,q)=A(L+1)-Sigma,
+C_mu(L)=M(L+1)-sum_{j=0}^{mu-1} j(mu-j),
+```
+
+equations (27) and (32) give
+
+```text
+U_w(D_0,L,q)-n C_mu(L)
+ >= G(L+1)-Sigma >= 1.                                 (33)
+```
+
+Thus the tuple is section-admissible.  Applying (18) and using
+`rho(t,d)<=t+1` gives (28).
+
+For the explicit exponent, `J>=1` implies
+
+```text
+mu<=n^2+1,  D_0+1<=n^3+n,  q<=(n^2+n),
+Sigma<=6n^7,  L<=6n^7.
+```
+
+Substitution in (27) gives `U_glob<10000n^27`.  If `J>=n`, the corresponding
+bounds are `mu<=n+1`, `D_0+1<=2n^2`, `q<=2n`, and `L<=6n^4`, proving (30).
+
+For the endpoint `a=n`, two distinct explaining slopes `gamma!=gamma'`
+would make their codeword difference `(gamma-gamma')r_1` a codeword.  Hence
+`r_1`, and then `r_0`, would both be codewords, contradicting support-wise
+nontriviality on the full support.  This proves (29) without dividing by
+`t=n-a`.
+
+For `k=1`, choose for each bad slope the first pair of coordinates in its
+witness support on which `(r_0(x),r_1(x))` differs.  Constancy of
+`r_0+gamma r_1` makes that pair determine `gamma` uniquely, giving the
+`binom(n,2)` injection.
+
+The global cell uses the source C7 projection
+
+```text
+(gamma,S,h) -> (gamma,h) -> gamma.
+```
+
+The final image is paid directly by (28), at profile scale one.  Hence this
+one cell proves coupled catalogue exhaustivity and line-uniformity on
+`J>0`.  It does not assert any such closure on `J<=0`.
+
+### Canonical line-uniform specialization
+
+For `n=500r`, `k=225r`, and `a=350r`, retain the optimized parameters from
+the preceding section:
+
+```text
+mu=4, L=52, q=6,
+D_r=floor((489950r-1372)/350)+1.
+```
+
+Replacing the line-dependent moving-root factor by `rho(t,d)<=t+1` gives
+
+```text
+|Z_a(r)| <= 3744D_r^6+47700r+688                       (34)
+```
+
+for every received line.  This is the global counterpart of the
+direction-specific bound `1165+3744D_r^6`.
+
 ## Why this moves the board
 
 Earlier A6 charges use a fixed witness selector, a nonnegative exponent
@@ -393,10 +564,9 @@ turn that universal containment into a polynomial distinct-slope bound.
 
 This closes the canonical fixed-line hard-input-3 stress instance and proves
 the exact all-parameter section-capacity frontier for the displayed monomial
-family. It does
-not sum the result over an unbounded collection of received lines, active
-charts, or realized profiles; that still requires a witness-exhaustive
-subexponential atlas.
+family.  On `J_sec>0`, the global-cell argument also removes the line, chart,
+and profile sums entirely.  The witness-exhaustive subexponential atlas is
+still open on `J_sec<=0`, where natural profile scales can be exponential.
 
 ## Audit correction record
 
@@ -411,8 +581,7 @@ This note does not prove:
 
 - the worker's quartic `O(r^4)` bound or its general `N^24` estimate;
 - a multiplicity bound for witnesses sharing one slope;
-- a witness-exhaustive atlas or a bound across different received lines,
-  active charts, or realized profiles;
+- a witness-exhaustive atlas or a uniform line bound on `J_sec<=0`;
 - a polynomial theorem for the entire `J_sec<=0` region or a theorem that its
   source obstruction survives every earlier first-match cell;
 - hard input 2, the unsafe/lower reserve, a deployed finite-row crossing,
