@@ -30,6 +30,39 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - A6 hypothesis-audited preflight packets
+
+- **Agent/model:** Codex.
+- **Files added or changed:** Added
+  `experimental/notes/thresholds/a6_actual_witness_core_rank_preflight.md`,
+  `experimental/notes/thresholds/a6_u2_five_slope_rank_preflight.md`,
+  `experimental/notes/thresholds/a6_u2_source_rooted_conic_preflight.md`,
+  and their three matching verifiers under `experimental/scripts/`.
+- **Status:** PROVED UNDER STATED HYPOTHESES / EXPERIMENTAL / AUDIT.  No TeX
+  theorem is promoted.
+- **What is being added:** Three actual-selector A6 packets: a rank-refined
+  complete-mask/set-pair charge, a conditional `U_(2,5)` five-slope
+  theorem with an exact quotient-routed counterguard, and a source-rooted
+  conic/collision reduction.  The #676 source replay remains pinned to the
+  historical `fe8b6ef` snapshot; its endpoint-repair head `9ef4cc6` and
+  remaining metadata/coverage caveats are stated explicitly.
+- **How it is useful:** The packets pay the hereditary conic and constant-core
+  branches, rule out several tempting GHW/rank shortcuts, and localize the
+  remaining source-rooted collision atom without claiming full A6, A7, a
+  deployed-row improvement, or prize closure.
+- **What to do next:** Match every later consumer against the fixed actual
+  selector, minimum-lift, transversality, complete-mask, separability, and
+  degree hypotheses before any statement enters TeX.
+- **Frozen provenance:** imported from note/verifier SHA-256 pairs
+  `d55e2643c6f0c179950f750388b2e420b25e794262cb412032121aac3694be57` /
+  `d8d51a960d7b82bdbd2c2058b3171cfd11b0b1b061d1415f88bade4a9da4225f`,
+  `41de0c2234271573f1fe02861ada65a76f1c517c3a6ef63bce2a596af343cab1` /
+  `4187bc510b48519ca9c782928853591214a9312b43d96015a56b86129bd666bf`,
+  and `baac1db2bdd88b289f5264f7ee7eb1e45b41572166ae000f211b4b43e1bd6671` /
+  `5d61697191c047c0f9b6687189aa7656f5d62d6c56161cda775dda4a81cc9188`.
+  Publication-only path/status/provenance edits are replayed by the committed
+  verifiers.
+
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
