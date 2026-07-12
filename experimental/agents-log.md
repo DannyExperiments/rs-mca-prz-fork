@@ -70,7 +70,27 @@ Keep entries concise and link to the relevant files.
   viable signed or positive-band B2 target, keep the L2 doubly-high residual
   explicit, and audit the lower-reserve packets against the current
   `asymptotic_rs_mca_frontiers.tex`/`cap25` drafts.
+### 2026-07-13 - Affine interleaved shell compression
 
+- **Agent/model:** GPT-5.6 Pro theorem worker, independently audited and
+  repaired by Codex GPT-5.6 Sol Ultra.
+- **Files added or changed:**
+  `experimental/notes/l2/affine_interleaved_shell_compression.md`,
+  `experimental/scripts/verify_affine_interleaved_shell_compression.py`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** An exact singular-projection shell injection bounds
+  every common-column interleaved list by
+  `floor(b L_B^*(s)/(b-n+s))`, independently of arity.  Composed with the
+  existing extension-coordinate identity, the new shell bound reduces the
+  deployed sextic list to one base-field one-row maximum.
+- **How it is useful:** Removes the interleaving-specific exponent and reduces
+  the deployed Grand List safe candidate to the exact unsupported inequality
+  `L_p^*(1116047) <= 274854110496187592`, only `0.046046%` below the
+  repeated-row ceiling.
+- **What to do next:** Prove or refute that one-row inequality.  Do not claim a
+  deployed or Grand List solve until the literal challenge-field comparison
+  and adjacent unsafe certificate are both complete.
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
