@@ -70,7 +70,24 @@ Keep entries concise and link to the relevant files.
   viable signed or positive-band B2 target, keep the L2 doubly-high residual
   explicit, and audit the lower-reserve packets against the current
   `asymptotic_rs_mca_frontiers.tex`/`cap25` drafts.
+### 2026-07-13 - Affine-section reduction of the one-row wall
 
+- **Agent/model:** GPT-5.6 Pro theorem worker, independently audited and
+  repaired by Codex GPT-5.6 Sol Ultra.
+- **Files added or changed:**
+  `experimental/notes/l2/affine_section_one_row_rank_reduction.md`,
+  `experimental/scripts/verify_affine_section_one_row_rank.py`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** A stateful universal-root affine-section recurrence
+  bounds one-row RS lists inside every affine flat.  At the deployed
+  base-field target it excludes every list of affine dimension at most 14.
+- **How it is useful:** Any counterexample to the current one-row ceiling must
+  have affine dimension at least 15 and emits an explicit overdetermined
+  singular intersection matrix.  The dimension-15 recurrence gap remains
+  `9523821364536900`.
+- **What to do next:** Attack the complete high-affine-rank sector `d>=15`;
+  do not infer a whole-list bound from bounded 15-flat sections alone.
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
