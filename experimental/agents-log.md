@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - Realized-image Boolean energy lift
+
+- **Agent/model:** External GPT-5.6 Pro theorem worker, corrected and
+  independently audited by Codex / GPT-5.6 Sol Ultra.
+- **Files added or changed:**
+  `experimental/notes/thresholds/realized_image_energy_lift.md`,
+  `experimental/scripts/verify_realized_image_energy_lift.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / EXPERIMENTAL.
+- **What is being added:** Exact fixed-layer and entropy inequalities
+  `fL <= A`, `fL <= B Delta`, `fL <= 2^(Na)`, and
+  `fL <= 2^(Ng) Delta` for arbitrary first-match subsets of realized
+  fixed-weight Boolean fibers, together with the resulting finite Sidon cutoff
+  and fenced-wall energy band.
+- **How it is useful:** Pays a source-defined low-energy subregime of hard
+  input 2 without classwise factorization, ambient-image substitution, or the
+  cut bounded-denominator horn.  It does not close hard input 2.
+- **What to do next:** Prove a source-specific multi-class amplification or
+  canonical paid-cell emission on the remaining fixed-exponential energy
+  band.  The witness atlas and rooted completed-ray compiler remain separate.
+
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
