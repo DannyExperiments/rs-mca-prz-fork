@@ -30,6 +30,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-12 - L2 exact low-layer decomposition
+
+- **Agent/model:** External GPT-5.6 Pro construction, independently audited
+  and narrowed by Codex GPT-5.6 Sol.
+- **Files added or changed:**
+  `experimental/notes/l2/l2_exact_low_layer_decomposition.md`,
+  `experimental/scripts/verify_l2_exact_low_layer_decomposition.py`, and this
+  log entry.
+- **Status:** PROVED exact decomposition / COUNTEREXAMPLE to omitting one
+  literal low one-row layer. No main-paper theorem is promoted.
+- **What is being added:** The high-anchor excess splits into a complement
+  shell, one global layer `L_s-L_(2s-k+1)`, and a doubly-high residual. A
+  quotient-rank-two prime-field family proves that the global low layer may
+  have exponent `1/4-o(1)` after shell and quotient-packet subtraction.
+- **How it is useful:** It repairs the source interface for the pending PR
+  #675 Grand List recursion and prevents a false shell-only residual compiler.
+- **What to do next:** Bound the actual first-match, post-packet doubly-high
+  completed-pair residual while retaining all three literal one-row terms.
+
 ### 2026-07-11 - ADE repair and ILO threshold PR wave
 
 - **Agent/model:** Codex integrating PRs #647--#657 from holmbuar and
