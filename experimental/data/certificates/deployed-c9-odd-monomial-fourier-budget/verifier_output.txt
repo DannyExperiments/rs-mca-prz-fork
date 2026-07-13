@@ -10,7 +10,7 @@ D3: odd_budget/M < 2^-438163 (maximal strict exponent) PASS
 D4: M/p^w < 2^-33865 (maximal strict exponent) PASS
 D5: 16!*(M+odd_budget)/p^w < 2^-33820 (maximal strict exponent) PASS
 QUADRATIC_METHOD_FLOOR: lambda2=92320 majorant/zero floor bits=16937,8701 PASS
-OVERLAP_GATE: checked through PR #738; decision=PRZ_CANDIDATE_NARROW_SCOPE_ONLY
+OVERLAP_GATE: checked through PR #739; decision=PRZ_CANDIDATE_NARROW_SCOPE_ONLY
 NOVELTY: exact q=2^17 fixed-composition 16-block instantiation only
 NONCLAIMS: no C9 or hard-input-2 payment; no first-match Fourier factorization or survival; no arbitrary weighted circle; no even-mode or multimonomial payment; no global max-fiber bound; no Q-to-RC implication; no image-scale add-back; no official score movement; odd axes are paid only in the complete full-slice absolute Fourier ledger
 RESULT: PASS

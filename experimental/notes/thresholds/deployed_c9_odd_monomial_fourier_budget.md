@@ -304,13 +304,14 @@ The following inputs are used only as prior machinery.
    \(q=2^{17}\), \((t_-,t_+)=(60,000,51,566)\), 8+8 block budget and its
    exact D2--D5 margins.
 
-## Overlap audit through PR #738
+## Overlap audit through PR #739
 
 The overlap check was refreshed on 2026-07-13 against
 `origin/main@fe93bb59dff3d022f66a097208e17c27e1e0deb4` and the live PR set
-through #738.  PR #736 and PR #738 are pay-per-bit ledger audits, while PR #737
-is an all-LineRay affine-core statement package; none has theorem or file
-overlap with this certificate.
+through #739.  PR #736 and PR #738 are pay-per-bit ledger audits, PR #737 is an
+all-LineRay affine-core statement package, and PR #739 is a Sidon-paired
+staircase-concentration route cut; none has theorem or file overlap with this
+certificate.
 
 - The integrated signed local-minority note contains the underlying signed
   and Plotkin machinery, but not this odd-mode certificate.
@@ -326,6 +327,8 @@ overlap with this certificate.
   deployed-row arithmetic in common with this packet.
 - #738 audits the conditional 86-bit branch row by row and contains neither
   the fixed-composition Fourier object nor the D2--D5 certificate.
+- #739 concerns depth-one Sidon-paired fiber concentration and does not contain
+  this deployed fixed-composition Fourier calculation.
 
 The result remains true if any of those open PRs merge because its claim is
 the fixed finite full-slice arithmetic only.

@@ -56,7 +56,7 @@ Keep entries concise and link to the relevant files.
   full-slice analytic ledger and gives a replayable boundary for the next C9
   attack without claiming first-match survival, weighted circles, a global
   max fiber, or official score movement. Overlap was refreshed through open
-  PR #738; novelty is only this exact fixed finite instantiation.
+  PR #739; novelty is only this exact fixed finite instantiation.
 - **What to do next:** Pay the even and multimonomial complement by a signed
   aggregate estimate, then separately supply first-match ownership,
   RC/direct rays, and image-scale add-back. Refuse promotion if the packet is

@@ -80,7 +80,7 @@ PINNED_PUBLICATION_GATE = {
         "narrow, source-valid, nonduplicative, theorem-facing, replayable, "
         "and explicit about the remaining wall"
     ),
-    "overlap_checked_through_pr": 738,
+    "overlap_checked_through_pr": 739,
     "newer_pr_seen": True,
     "decision": "PRZ_CANDIDATE_NARROW_SCOPE_ONLY",
     "refuse_if": [
