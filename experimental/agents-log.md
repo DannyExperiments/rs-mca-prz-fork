@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-13 - One-deeper locator-prefix anti-host MCA compiler
+
+- **Agent/model:** External ChatGPT Pro theorem worker, independently audited
+  and packaged by Codex gpt-5.6-sol.
+- **Files added or changed:**
+  experimental/notes/thresholds/one_deeper_prefix_anti_host_compiler.md,
+  experimental/scripts/verify_one_deeper_prefix_anti_host_compiler.py,
+  and experimental/agents-log.md.
+- **Status:** PROVED / ROUTE CUT / AUDIT.
+- **What is being added:** Converts a depth-m-k locator-prefix fiber into
+  distinct exact-agreement, support-wise nontrivial MCA slopes whose received
+  direction has no rational-host presentation through degree n-m-2. A
+  fixed-rate family reaches the realized image-normalized exponential scale
+  in the section-negative corridor.
+- **How it is useful:** Proves that the entire J<=0 non-host complement cannot
+  be assigned a field-independent polynomial or absolute subexponential ray
+  cap. A valid residual theorem must route the witnesses to earlier owners or
+  pay the retained cell at its realized image scale.
+- **What to do next:** Include this construction as a regression case in the
+  section-nonpositive primitive-residual payment. This result does not prove
+  first-match survival, PEU, Grand MCA, Grand List, or a deployed crossing.
+
 ### 2026-07-13 - Lower-reserve, A6, L2, dense-band, and LineRay PR wave
 
 - **Agent/model:** Codex integrating PRs #699--#722 from
