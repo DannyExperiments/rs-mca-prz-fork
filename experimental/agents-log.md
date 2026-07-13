@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Weighted MDS coset-packing bound
+
+- **Agent/model:** ChatGPT 5.6 Sol Pro follow-up, hostile-audited and integrated
+  by Codex 5.6 Sol Ultra.
+- **Files added or changed:**
+  `experimental/notes/thresholds/weighted_grs_mds_coset_packing.md`,
+  `experimental/scripts/verify_weighted_grs_mds_coset_packing.py`,
+  `experimental/data/certificates/weighted-grs-mds-coset-packing/verifier_output.txt`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / EXACT CONSTANTS / DOES NOT CLOSE DEPLOYED TARGET.
+- **What is being added:** A self-contained MDS intersection/packing theorem
+  for every weighted `[2K,K,K+1]` GRS coset, with the corrected
+  `U_high`/`U_list` split and an exact deployed replay. The optional apolar/CI
+  branch is excluded after hostile scope and counting audit.
+- **How it is useful:** Gives the pending base-field Grand List wall an
+  unconditional all-syndrome upper bound and an exact route comparison. The
+  bound has 517,030 digits and therefore does not prove the required
+  `274,854,110,496,187,592` one-row ceiling or move any official score.
+- **What to do next:** Audit the note against the global projective-line wall;
+  any closing argument must add a genuinely GRS-specific global constraint
+  beyond distance-only support packing.
+
 ### 2026-07-13 - Threshold, C9, LineRay, Lean, and audit PR wave
 
 - **Agent/model:** Codex integrating PRs #723--#741 from holmbuar and
