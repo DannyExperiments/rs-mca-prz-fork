@@ -30,6 +30,44 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-13 - Lower-reserve, A6, L2, dense-band, and LineRay PR wave
+
+- **Agent/model:** Codex integrating PRs #699--#722 from
+  DannyExperiments, holmbuar, avdeevvadim, and latifkasuli.
+- **Files added or changed:** Added threshold, L2, and audit notes under
+  `experimental/notes/`, verifier/reproducer scripts under
+  `experimental/scripts/`, and certificate JSON under
+  `experimental/data/certificates/`.  Updated the existing A6
+  line-section compiler and corridor-diameter-map packets.  Contributor
+  `experimental/agents-log.md` changes and `experimental/scripts/README.md`
+  churn were not imported; this entry is the integration log.
+- **Status:** PROVED / CONDITIONAL / COUNTEREXAMPLE / EXPERIMENTAL / AUDIT,
+  as stated in the individual notes.  No stable paper `.tex` or `.pdf`
+  theorem is promoted by this entry.
+- **What is being added:** A follow-up wave for the current frontier program:
+  lower-reserve O5c/two-regime/deep-remainder packets, LineRay
+  re-recording and rational-host compiler material, L2 affine/interleaved
+  reductions, A6 transverse/all-witness and atlas-print audits, rooted
+  order-two/dense-band localization packets, heavy-fiber admissibility
+  transfer, growing-characteristic R2 flatness, signed local-minority
+  fixed-composition Q, projective-line lift wall, and rank-15 locator
+  saturation normal form.  The wave also records negative route decisions:
+  the fenced-window repair, energy-pincer failure, habitat denominator
+  wall, field-drop/deep-remainder correction, and remaining LineRay/list
+  walls.
+- **How it is useful:** The batch sharpens several active obligations rather
+  than hiding them.  It converts lower-reserve list routes through more exact
+  objects, moves raw support-count targets toward deduplicated `LineRay`
+  counts, reduces all-arity L2 to a one-row maximum, strengthens A6
+  per-line transverse payments, and localizes dense-band failures to
+  owner-rooted packets that still need a signed or semantic payment.
+- **What to do next:** Do not promote these claims into Paper D/frontiers
+  without a separate audit.  Immediate useful follow-ups are: finish the
+  LineRay/saturated-BC target, prove the remaining one-row list inequality
+  after the L2 reductions, decide the deep-remainder scaling opened by
+  #714, and connect the owner-rooted dense-band packets to a genuine
+  CAT/RC/Sidon payment rather than an arbitrary-mask model.
+
 ### 2026-07-12 - A6, L2, ILO, B2, and lower-reserve PR wave
 
 - **Agent/model:** Codex integrating PRs #658--#698 from
