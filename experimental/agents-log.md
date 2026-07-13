@@ -30,6 +30,33 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Rank-16 left-kernel / Forney route cut
+
+- **Agent/model:** Codex, repairing the hostile-audited R16 Role 05 return.
+- **Files added or changed:** Added
+  `experimental/notes/l2/rank16_left_kernel_forney_route_cut.md`,
+  `experimental/scripts/verify_rank16_left_kernel_forney_route_cut.py`, the
+  explicit `F_31` fixture and pinned transcript under
+  `experimental/data/certificates/rank16-left-kernel-forney/`, and the
+  scaffold-contract module
+  `experimental/lean/grande_finale/GrandeFinale/Rank16LeftKernelForney.lean`;
+  added its matching import to `GrandeFinale.lean`.
+- **Status:** PROVED ROUTE CUT / SHARP FINITE EXAMPLE / LEAN SCAFFOLD
+  CONTRACTS ONLY. Official score `0/2`.
+- **What is being added:** The two exact kernel/shortened-dual isomorphisms,
+  exact rank/nullity formulas in the defect `h`, the Forney-index refinement,
+  and a literal `F_31` Reed--Solomon list attaining `h=1`. The note explicitly
+  credits the existing matrix, common-syndrome, and locator-syzygy sources and
+  proves both directions of the exact zero-sum-support/list compiler.
+- **How it is useful:** It separates the deployed `30,961` left-kernel floor
+  into `30,960` row-surplus dimensions plus one common-syndrome dimension and
+  rules out any field-uniform attempt to force `h>=2` from affine independence
+  and the selected-support matrix alone. It pays no affine-rank interval.
+- **What to do next:** Treat `h=1` as the sharp dangerous stratum; seek a
+  global source-aware multiplicity/classification theorem rather than another
+  unconditional local-nullity unit. Do not promote the Lean scaffold contracts
+  as proofs or the finite fixture as a deployed counterexample.
+
 ### 2026-07-13 - Threshold, C9, LineRay, Lean, and audit PR wave
 
 - **Agent/model:** Codex integrating PRs #723--#741 from holmbuar and
