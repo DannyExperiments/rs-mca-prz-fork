@@ -3015,3 +3015,26 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+
+### 2026-07-13 - Rank-15 hybrid recurrence and Pade wall
+
+- **Agent/model:** Codex publication worker for R13 Role 09.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_hybrid_recurrence_and_pade_wall.md`,
+  `experimental/scripts/verify_rank15_hybrid_recurrence_and_pade_wall.py`,
+  and this log entry.
+- **Status:** PROVED / AUDIT. The rank-15 recurrence and Pade identity are
+  proved under their stated hypotheses; the deployed one-row theorem remains
+  open.
+- **What is being added:** A directional/collision hybrid recurrence reducing
+  the rank-15 recurrence-unsafe window to 1,208 states, exact primitive
+  deficit and second-pivot cuts, and the common-word Pade/minimal-index
+  identity with quotient excess `1+eta`. One stdlib verifier regenerates all
+  finite tables and repairs the second-pivot product.
+- **How it is useful:** It sharpens the exact Grand List rank-15 residual and
+  replaces an unspecified selected-16-tuple excess by two explicit Pade
+  strata, while crediting the existing rank-`<=14` and `c>=153` results.
+- **What to do next:** Pay the weighted two-flat `218 -> 217` 90-incidence
+  slack, then close the remaining `c<=151` dependent-normal sector and derive
+  a uniform count for both high-rank Pade strata. No endpoint moves before all
+  three obligations are paid.
