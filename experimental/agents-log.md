@@ -30,6 +30,33 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-13 - Signed local-minority fixed-composition fibers
+
+- **Agent/model:** External ChatGPT Pro Role 08 theorem, hostile-audited and
+  implemented by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/signed_local_minority_fixed_composition.md`,
+  `experimental/scripts/verify_signed_local_minority_fixed_composition.py`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / EXACT ARITHMETIC CERTIFICATE / EXPERIMENTAL.  No stable
+  paper TeX is changed.
+- **What is being added:** A signed local-complementation reduction from an
+  exact labeled occupancy fiber to a fixed-composition product-Johnson code,
+  with product-shadow and block-centered Plotkin caps, hereditary
+  realized-image Q/SP, split-sign and cyclic zero exclusions, and an exact
+  profile compiler.  The strict cap is
+  `floor(delta*q/(delta*q-B_r))`; the deployed nine-partial profile has fiber
+  at most `153`, while `441080640` is only a permutation-union upper bound.
+- **How it is useful:** Pays a nontrivial family of corrected `#714` exact
+  deep-remainder profiles, proves the displayed neighboring profile injective
+  and zero-empty, and records the source-supported coarse multiplicity `1716`
+  without claiming all-profile Q, global `nu(0)<=n^3`, RC/rays, CAT/UNIF, or
+  a threshold/prize solve.
+- **What to do next:** Attack a nonempty primitive first-match residual in the
+  balanced `8 x (71072,51566)` mixed-sign profile, where both sign masses
+  exceed `w`, block Plotkin fails at every displayed dyadic scale, and every
+  admissible product-shadow cap is exponential.
+
 ### 2026-07-12 - A6, L2, ILO, B2, and lower-reserve PR wave
 
 - **Agent/model:** Codex integrating PRs #658--#698 from
