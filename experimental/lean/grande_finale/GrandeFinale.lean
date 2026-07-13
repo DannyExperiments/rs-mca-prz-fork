@@ -1,4 +1,5 @@
 import Mathlib
+import GrandeFinale.DeployedC9OddMonomialFourierBudget
 
 /-!
 # Self-contained core of "Final Inputs for RS-MCA" (`grande_finale.tex`)

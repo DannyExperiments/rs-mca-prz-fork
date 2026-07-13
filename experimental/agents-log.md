@@ -30,6 +30,38 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-13 - R14 Role 08 deployed odd-monomial Fourier budget
+
+- **Agent/model:** External ChatGPT Pro theorem worker; native GPT-5.6 Sol
+  Ultra hostile audits; production packaging by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/deployed_c9_odd_monomial_fourier_budget.md`,
+  `experimental/scripts/verify_deployed_c9_odd_monomial_fourier_budget.py`,
+  `experimental/data/certificates/deployed-c9-odd-monomial-fourier-budget/deployed_c9_odd_monomial_fourier_budget.json`,
+  `experimental/data/certificates/deployed-c9-odd-monomial-fourier-budget/verifier_output.txt`,
+  `experimental/lean/grande_finale/GrandeFinale/DeployedC9OddMonomialFourierBudget.lean`,
+  `experimental/lean/grande_finale/GrandeFinale.lean`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED exact finite full-slice certificate / route cut / AUDIT;
+  matching Lean statement target remains unproved.
+- **What is being added:** On
+  `origin/main@fe93bb59dff3d022f66a097208e17c27e1e0deb4`, certifies the
+  complete odd single-monomial absolute Fourier budget for the deployed
+  `q=2^17`, 8+8 block, `(t_-,t_+)=(60000,51566)` full slice, including exact
+  D2--D5 margins. It also proves that the same absolute
+  Gauss-period/cycle-index method is already worse than the zero coefficient
+  at the quadratic mode. Product Fourier factorization, the pair cap 18, and
+  the monomial mechanism are cited only as known machinery.
+- **How it is useful:** Removes the odd coordinate axes from the complete
+  full-slice analytic ledger and gives a replayable boundary for the next C9
+  attack without claiming first-match survival, weighted circles, a global
+  max fiber, or official score movement. Overlap was refreshed through open
+  PR #738; novelty is only this exact fixed finite instantiation.
+- **What to do next:** Pay the even and multimonomial complement by a signed
+  aggregate estimate, then separately supply first-match ownership,
+  RC/direct rays, and image-scale add-back. Refuse promotion if the packet is
+  framed more broadly than its full-slice odd-mode statement.
+
 ### 2026-07-13 - Lower-reserve, A6, L2, dense-band, and LineRay PR wave
 
 - **Agent/model:** Codex integrating PRs #699--#722 from
