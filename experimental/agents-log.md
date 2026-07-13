@@ -30,6 +30,39 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Rank-15 plateau-suffix uniformizer
+
+- **Agent/model:** Codex, repairing and independently regenerating the R16
+  Role 04 packet after one hostile core replay and a separate projective-
+  bridge audit. A final prepublication audit accepted the core and held
+  publication for the scope and Lean-target corrections now applied.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_plateau_suffix_uniformizer.md`,
+  `experimental/scripts/verify_rank15_plateau_suffix_uniformizer.py`, the
+  frozen certificate directory
+  `experimental/data/certificates/rank15-plateau-suffix-uniformizer/`, and the
+  unproved statement target
+  `experimental/lean/grande_finale/GrandeFinale/Rank15PlateauSuffixUniformizer.lean`
+  with its aggregator import.
+- **Status:** PROVED under the imported locator-saturation normal form,
+  proper-section cap `q=15`, and pending PR #746 graph certificate; Lean
+  target UNPROVED. No stable-paper TeX is changed.
+- **What is being added:** A field-uniform ceiling `M<=217` for the 178 fixed-
+  `K` states `u=1,043,771..1,043,948`, covering both divisorial labels, plus a
+  standard-library verifier that derives all 397 capacities and replays the
+  exact recurrence through dimension 15.
+- **How it is useful:** The rank-15 endpoint drops from
+  `284377931860724492` to `283039300733528044`; the Grand List target remains
+  open with gap `8185190237340452`, and 219 `M=218` states remain. The theorem
+  is new on the fixed-`K`, `c=0` slice and is a regression certificate on 384
+  accepted lower-degree rows via
+  `F_p[X]_{<K-c} subset F_p[X]_{<K}`; it does not replace their existing
+  `c`-dependent proof.
+- **What to do next:** Audit the sole surviving boundary branch at
+  `u=1,043,770`, where `t=218`, `r=0`, `d=4,805`, and
+  `7delta+eta<=3,100`; retain the separate ownership and proof of the
+  `c=130..152` Grand Slam family.
+
 ### 2026-07-13 - Threshold, C9, LineRay, Lean, and audit PR wave
 
 - **Agent/model:** Codex integrating PRs #723--#741 from holmbuar and
