@@ -1,0 +1,2902 @@
+{
+  "ag24_below_cap_exception_witnesses": [
+    {
+      "degree_cap": 12,
+      "degree_deficiency": 1,
+      "equation_rows": 12,
+      "family": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          8,
+          12
+        ],
+        [
+          0,
+          5,
+          10,
+          15
+        ],
+        [
+          0,
+          6,
+          11,
+          13
+        ],
+        [
+          2,
+          5,
+          11,
+          12
+        ],
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "interpretation": "bounded_nonzero_finite_slope_below_cap_exception",
+      "j": 4,
+      "name": "six_line_linear_exception",
+      "nondegeneracy_certificate": {
+        "all_v_syndrome_restrictions_nonzero": true,
+        "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+        "nullity": 21,
+        "p_greater_than_locator_count": true,
+        "union_bound_certifies_nondegenerate_solution": true,
+        "zero_restriction_first_indices": [],
+        "zero_restriction_locator_count": 0
+      },
+      "pairwise_spread_stats": {
+        "all_pairs_below_fm1_dependency_threshold": true,
+        "all_support_intersections_lt_k": true,
+        "cosupport_intersection_histogram": {
+          "0": 1,
+          "1": 14
+        },
+        "fm1_dependency_threshold_c_ge": 2,
+        "k": 10,
+        "max_cosupport_intersection": 1,
+        "max_support_intersection": 9,
+        "support_intersection_histogram": {
+          "8": 1,
+          "9": 14
+        }
+      },
+      "rank": 11,
+      "row_dependency_certificate": {
+        "expected_left_nullity": 1,
+        "left_nullity": 1,
+        "rank": 11,
+        "relations": [
+          {
+            "entries": [
+              {
+                "coefficient": 1,
+                "line_index": 0,
+                "moment": 1,
+                "slope": 1
+              },
+              {
+                "coefficient": 46,
+                "line_index": 0,
+                "moment": 2,
+                "slope": 1
+              },
+              {
+                "coefficient": 96,
+                "line_index": 1,
+                "moment": 1,
+                "slope": 2
+              },
+              {
+                "coefficient": 120,
+                "line_index": 1,
+                "moment": 2,
+                "slope": 2
+              },
+              {
+                "coefficient": 145,
+                "line_index": 2,
+                "moment": 1,
+                "slope": 3
+              },
+              {
+                "coefficient": 112,
+                "line_index": 2,
+                "moment": 2,
+                "slope": 3
+              },
+              {
+                "coefficient": 156,
+                "line_index": 3,
+                "moment": 1,
+                "slope": 4
+              },
+              {
+                "coefficient": 28,
+                "line_index": 3,
+                "moment": 2,
+                "slope": 4
+              },
+              {
+                "coefficient": 137,
+                "line_index": 4,
+                "moment": 1,
+                "slope": 5
+              },
+              {
+                "coefficient": 56,
+                "line_index": 4,
+                "moment": 2,
+                "slope": 5
+              },
+              {
+                "coefficient": 169,
+                "line_index": 5,
+                "moment": 1,
+                "slope": 6
+              },
+              {
+                "coefficient": 24,
+                "line_index": 5,
+                "moment": 2,
+                "slope": 6
+              }
+            ],
+            "u_polynomial_coefficients": [],
+            "u_polynomial_zero": true,
+            "v_polynomial_coefficients": [],
+            "v_polynomial_zero": true
+          }
+        ],
+        "row_count": 12
+      },
+      "slope_mode": "distinct_linear",
+      "slopes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "t": 2
+    },
+    {
+      "degree_cap": 12,
+      "degree_deficiency": 1,
+      "equation_rows": 14,
+      "family": [
+        [
+          0,
+          4,
+          8,
+          12
+        ],
+        [
+          0,
+          5,
+          10,
+          15
+        ],
+        [
+          1,
+          4,
+          11,
+          14
+        ],
+        [
+          1,
+          5,
+          9,
+          13
+        ],
+        [
+          2,
+          6,
+          10,
+          14
+        ],
+        [
+          3,
+          6,
+          9,
+          12
+        ],
+        [
+          3,
+          7,
+          11,
+          15
+        ]
+      ],
+      "interpretation": "bounded_nonzero_finite_slope_below_cap_exception",
+      "j": 4,
+      "name": "seven_line_linear_exception",
+      "nondegeneracy_certificate": {
+        "all_v_syndrome_restrictions_nonzero": true,
+        "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+        "nullity": 21,
+        "p_greater_than_locator_count": true,
+        "union_bound_certifies_nondegenerate_solution": true,
+        "zero_restriction_first_indices": [],
+        "zero_restriction_locator_count": 0
+      },
+      "pairwise_spread_stats": {
+        "all_pairs_below_fm1_dependency_threshold": true,
+        "all_support_intersections_lt_k": true,
+        "cosupport_intersection_histogram": {
+          "0": 9,
+          "1": 12
+        },
+        "fm1_dependency_threshold_c_ge": 2,
+        "k": 10,
+        "max_cosupport_intersection": 1,
+        "max_support_intersection": 9,
+        "support_intersection_histogram": {
+          "8": 9,
+          "9": 12
+        }
+      },
+      "rank": 11,
+      "row_dependency_certificate": {
+        "expected_left_nullity": 3,
+        "left_nullity": 3,
+        "rank": 11,
+        "relations": [
+          {
+            "entries": [
+              {
+                "coefficient": 1,
+                "line_index": 0,
+                "moment": 1,
+                "slope": 1
+              },
+              {
+                "coefficient": 182,
+                "line_index": 0,
+                "moment": 2,
+                "slope": 1
+              },
+              {
+                "coefficient": 86,
+                "line_index": 1,
+                "moment": 1,
+                "slope": 2
+              },
+              {
+                "coefficient": 152,
+                "line_index": 1,
+                "moment": 2,
+                "slope": 2
+              },
+              {
+                "coefficient": 170,
+                "line_index": 2,
+                "moment": 1,
+                "slope": 3
+              },
+              {
+                "coefficient": 165,
+                "line_index": 2,
+                "moment": 2,
+                "slope": 3
+              },
+              {
+                "coefficient": 128,
+                "line_index": 3,
+                "moment": 1,
+                "slope": 4
+              },
+              {
+                "coefficient": 19,
+                "line_index": 3,
+                "moment": 2,
+                "slope": 4
+              },
+              {
+                "coefficient": 147,
+                "line_index": 4,
+                "moment": 1,
+                "slope": 5
+              },
+              {
+                "coefficient": 72,
+                "line_index": 4,
+                "moment": 2,
+                "slope": 5
+              },
+              {
+                "coefficient": 34,
+                "line_index": 5,
+                "moment": 1,
+                "slope": 6
+              },
+              {
+                "coefficient": 182,
+                "line_index": 5,
+                "moment": 2,
+                "slope": 6
+              },
+              {
+                "coefficient": 0,
+                "line_index": 6,
+                "moment": 1,
+                "slope": 7
+              },
+              {
+                "coefficient": 0,
+                "line_index": 6,
+                "moment": 2,
+                "slope": 7
+              }
+            ],
+            "u_polynomial_coefficients": [],
+            "u_polynomial_zero": true,
+            "v_polynomial_coefficients": [],
+            "v_polynomial_zero": true
+          },
+          {
+            "entries": [
+              {
+                "coefficient": 1,
+                "line_index": 0,
+                "moment": 1,
+                "slope": 1
+              },
+              {
+                "coefficient": 0,
+                "line_index": 0,
+                "moment": 2,
+                "slope": 1
+              },
+              {
+                "coefficient": 0,
+                "line_index": 1,
+                "moment": 1,
+                "slope": 2
+              },
+              {
+                "coefficient": 0,
+                "line_index": 1,
+                "moment": 2,
+                "slope": 2
+              },
+              {
+                "coefficient": 0,
+                "line_index": 2,
+                "moment": 1,
+                "slope": 3
+              },
+              {
+                "coefficient": 0,
+                "line_index": 2,
+                "moment": 2,
+                "slope": 3
+              },
+              {
+                "coefficient": 29,
+                "line_index": 3,
+                "moment": 1,
+                "slope": 4
+              },
+              {
+                "coefficient": 0,
+                "line_index": 3,
+                "moment": 2,
+                "slope": 4
+              },
+              {
+                "coefficient": 50,
+                "line_index": 4,
+                "moment": 1,
+                "slope": 5
+              },
+              {
+                "coefficient": 0,
+                "line_index": 4,
+                "moment": 2,
+                "slope": 5
+              },
+              {
+                "coefficient": 0,
+                "line_index": 5,
+                "moment": 1,
+                "slope": 6
+              },
+              {
+                "coefficient": 0,
+                "line_index": 5,
+                "moment": 2,
+                "slope": 6
+              },
+              {
+                "coefficient": 113,
+                "line_index": 6,
+                "moment": 1,
+                "slope": 7
+              },
+              {
+                "coefficient": 0,
+                "line_index": 6,
+                "moment": 2,
+                "slope": 7
+              }
+            ],
+            "u_polynomial_coefficients": [],
+            "u_polynomial_zero": true,
+            "v_polynomial_coefficients": [],
+            "v_polynomial_zero": true
+          },
+          {
+            "entries": [
+              {
+                "coefficient": 0,
+                "line_index": 0,
+                "moment": 1,
+                "slope": 1
+              },
+              {
+                "coefficient": 1,
+                "line_index": 0,
+                "moment": 2,
+                "slope": 1
+              },
+              {
+                "coefficient": 0,
+                "line_index": 1,
+                "moment": 1,
+                "slope": 2
+              },
+              {
+                "coefficient": 0,
+                "line_index": 1,
+                "moment": 2,
+                "slope": 2
+              },
+              {
+                "coefficient": 0,
+                "line_index": 2,
+                "moment": 1,
+                "slope": 3
+              },
+              {
+                "coefficient": 0,
+                "line_index": 2,
+                "moment": 2,
+                "slope": 3
+              },
+              {
+                "coefficient": 0,
+                "line_index": 3,
+                "moment": 1,
+                "slope": 4
+              },
+              {
+                "coefficient": 29,
+                "line_index": 3,
+                "moment": 2,
+                "slope": 4
+              },
+              {
+                "coefficient": 0,
+                "line_index": 4,
+                "moment": 1,
+                "slope": 5
+              },
+              {
+                "coefficient": 50,
+                "line_index": 4,
+                "moment": 2,
+                "slope": 5
+              },
+              {
+                "coefficient": 0,
+                "line_index": 5,
+                "moment": 1,
+                "slope": 6
+              },
+              {
+                "coefficient": 0,
+                "line_index": 5,
+                "moment": 2,
+                "slope": 6
+              },
+              {
+                "coefficient": 0,
+                "line_index": 6,
+                "moment": 1,
+                "slope": 7
+              },
+              {
+                "coefficient": 113,
+                "line_index": 6,
+                "moment": 2,
+                "slope": 7
+              }
+            ],
+            "u_polynomial_coefficients": [],
+            "u_polynomial_zero": true,
+            "v_polynomial_coefficients": [],
+            "v_polynomial_zero": true
+          }
+        ],
+        "row_count": 14
+      },
+      "slope_mode": "distinct_linear",
+      "slopes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "t": 2
+    }
+  ],
+  "cases": [
+    {
+      "A": 12,
+      "construction": "all 20 lines of AG(2,4), pairwise intersections 0 or 1",
+      "family_size": 20,
+      "field": "F_193",
+      "interpretation": "NO_NONDEGENERATE_DISTINCT_SPREAD_COUNTEREXAMPLE",
+      "j": 4,
+      "k": 10,
+      "n": 16,
+      "name": "ag2_4_lines",
+      "pairwise_spread_stats": {
+        "all_pairs_below_fm1_dependency_threshold": true,
+        "all_support_intersections_lt_k": true,
+        "cosupport_intersection_histogram": {
+          "0": 30,
+          "1": 160
+        },
+        "fm1_dependency_threshold_c_ge": 2,
+        "k": 10,
+        "max_cosupport_intersection": 1,
+        "max_support_intersection": 9,
+        "support_intersection_histogram": {
+          "8": 30,
+          "9": 160
+        }
+      },
+      "slope_mode_results": [
+        {
+          "all_prefix_rows_sha256": "5ff8d8d7b19f9b386899f618de7339f877a55888b2d6dbf790fc604d80de8fa6",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": false,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 20,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": false,
+            "zero_restriction_first_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "zero_restriction_locator_count": 15
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 15,
+          "cap_saturation_degeneracy_certificate": {
+            "cap_saturation_forces_v_zero_on_full_tested_family": true,
+            "degree_cap": 12,
+            "full_family_size": 20,
+            "full_family_v_zero_restriction_count": 20,
+            "logic": "For distinct slopes, degree-cap saturation means the rowspace is the full W_u plus W_v moment quotient. The nullspace therefore annihilates W_v, so every tested locator syndrome S_T(v) is zero.",
+            "nullity": 20,
+            "prefix_size": 7,
+            "prefix_v_zero_restriction_count": 7,
+            "rank": 12,
+            "saturates_degree_cap": true
+          },
+          "classification": "design_specific_rank_loss_detected_but_degenerate_v_kernel",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 1,
+            "first": {
+              "deficiency": 1,
+              "prefix": 6
+            },
+            "last": {
+              "deficiency": 1,
+              "prefix": 6
+            },
+            "max_deficiency": 1,
+            "records_sha256": "f2ec78e591ee682098164025c5971e51aa2dd7ea8a73bc8d697037864314ebf0"
+          },
+          "degree_moment_rank_cap": 12,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 12,
+            "basis_rows": 12,
+            "joined_rank": 12,
+            "matrix_rank": 12,
+            "max_degree": 6,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 7,
+          "first_prefix_with_full_ambient_rank": 21,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 11,
+            "first": {
+              "deficiency": 1,
+              "prefix": 6
+            },
+            "last": {
+              "deficiency": 20,
+              "prefix": 16
+            },
+            "max_deficiency": 20,
+            "records_sha256": "b975bdf91e5323b3ffb0ec80738ca58ace0dd015dba982ae63f48e7896eb1322"
+          },
+          "largest_nondegenerate_prefix_certified": 4,
+          "largest_nondegenerate_prefix_nullity": 24,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 2,
+              "expected_ambient_rank": 2,
+              "expected_degree_cap_rank": 2,
+              "nullity": 30,
+              "prefix_locators": 1,
+              "rank": 2
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 4,
+              "expected_ambient_rank": 4,
+              "expected_degree_cap_rank": 4,
+              "nullity": 28,
+              "prefix_locators": 2,
+              "rank": 4
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 6,
+              "expected_ambient_rank": 6,
+              "expected_degree_cap_rank": 6,
+              "nullity": 26,
+              "prefix_locators": 3,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 8,
+              "expected_ambient_rank": 8,
+              "expected_degree_cap_rank": 8,
+              "nullity": 24,
+              "prefix_locators": 4,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 2,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 14,
+              "expected_ambient_rank": 14,
+              "expected_degree_cap_rank": 12,
+              "nullity": 20,
+              "prefix_locators": 7,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 4,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 16,
+              "expected_ambient_rank": 16,
+              "expected_degree_cap_rank": 12,
+              "nullity": 20,
+              "prefix_locators": 8,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 18,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 30,
+              "expected_ambient_rank": 30,
+              "expected_degree_cap_rank": 12,
+              "nullity": 20,
+              "prefix_locators": 15,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 20,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 32,
+              "expected_ambient_rank": 32,
+              "expected_degree_cap_rank": 12,
+              "nullity": 20,
+              "prefix_locators": 16,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 20,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 40,
+              "expected_ambient_rank": 32,
+              "expected_degree_cap_rank": 12,
+              "nullity": 20,
+              "prefix_locators": 20,
+              "rank": 12
+            }
+          ],
+          "slope_mode": "distinct_linear"
+        },
+        {
+          "all_prefix_rows_sha256": "5ff8d8d7b19f9b386899f618de7339f877a55888b2d6dbf790fc604d80de8fa6",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": false,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 20,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": false,
+            "zero_restriction_first_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "zero_restriction_locator_count": 15
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 15,
+          "cap_saturation_degeneracy_certificate": {
+            "cap_saturation_forces_v_zero_on_full_tested_family": true,
+            "degree_cap": 12,
+            "full_family_size": 20,
+            "full_family_v_zero_restriction_count": 20,
+            "logic": "For distinct slopes, degree-cap saturation means the rowspace is the full W_u plus W_v moment quotient. The nullspace therefore annihilates W_v, so every tested locator syndrome S_T(v) is zero.",
+            "nullity": 20,
+            "prefix_size": 7,
+            "prefix_v_zero_restriction_count": 7,
+            "rank": 12,
+            "saturates_degree_cap": true
+          },
+          "classification": "design_specific_rank_loss_detected_but_degenerate_v_kernel",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 1,
+            "first": {
+              "deficiency": 1,
+              "prefix": 6
+            },
+            "last": {
+              "deficiency": 1,
+              "prefix": 6
+            },
+            "max_deficiency": 1,
+            "records_sha256": "f2ec78e591ee682098164025c5971e51aa2dd7ea8a73bc8d697037864314ebf0"
+          },
+          "degree_moment_rank_cap": 12,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 12,
+            "basis_rows": 12,
+            "joined_rank": 12,
+            "matrix_rank": 12,
+            "max_degree": 6,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 7,
+          "first_prefix_with_full_ambient_rank": 21,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 11,
+            "first": {
+              "deficiency": 1,
+              "prefix": 6
+            },
+            "last": {
+              "deficiency": 20,
+              "prefix": 16
+            },
+            "max_deficiency": 20,
+            "records_sha256": "b975bdf91e5323b3ffb0ec80738ca58ace0dd015dba982ae63f48e7896eb1322"
+          },
+          "largest_nondegenerate_prefix_certified": 4,
+          "largest_nondegenerate_prefix_nullity": 24,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 2,
+              "expected_ambient_rank": 2,
+              "expected_degree_cap_rank": 2,
+              "nullity": 30,
+              "prefix_locators": 1,
+              "rank": 2
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 4,
+              "expected_ambient_rank": 4,
+              "expected_degree_cap_rank": 4,
+              "nullity": 28,
+              "prefix_locators": 2,
+              "rank": 4
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 6,
+              "expected_ambient_rank": 6,
+              "expected_degree_cap_rank": 6,
+              "nullity": 26,
+              "prefix_locators": 3,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 8,
+              "expected_ambient_rank": 8,
+              "expected_degree_cap_rank": 8,
+              "nullity": 24,
+              "prefix_locators": 4,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 2,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 14,
+              "expected_ambient_rank": 14,
+              "expected_degree_cap_rank": 12,
+              "nullity": 20,
+              "prefix_locators": 7,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 4,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 16,
+              "expected_ambient_rank": 16,
+              "expected_degree_cap_rank": 12,
+              "nullity": 20,
+              "prefix_locators": 8,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 18,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 30,
+              "expected_ambient_rank": 30,
+              "expected_degree_cap_rank": 12,
+              "nullity": 20,
+              "prefix_locators": 15,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 20,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 32,
+              "expected_ambient_rank": 32,
+              "expected_degree_cap_rank": 12,
+              "nullity": 20,
+              "prefix_locators": 16,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 20,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 40,
+              "expected_ambient_rank": 32,
+              "expected_degree_cap_rank": 12,
+              "nullity": 20,
+              "prefix_locators": 20,
+              "rank": 12
+            }
+          ],
+          "slope_mode": "distinct_geometric"
+        },
+        {
+          "all_prefix_rows_sha256": "ed806a41d732db341933404b0b87d90a33a2b3423b05dcae94f027025223ddf4",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": true,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 26,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": true,
+            "zero_restriction_first_indices": [],
+            "zero_restriction_locator_count": 0
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 15,
+          "cap_saturation_degeneracy_certificate": null,
+          "classification": "same_slope_design_specific_degree_loss",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 1,
+            "first": {
+              "deficiency": 1,
+              "nullity": 27,
+              "prefix": 3
+            },
+            "last": {
+              "deficiency": 1,
+              "nullity": 27,
+              "prefix": 3
+            },
+            "max_deficiency": 1,
+            "records_sha256": "684495508b978dc7b2fbbd465b4045e17bce2a1d275ca3b2270e11abc5ad7ce1"
+          },
+          "degree_cap_losses": {
+            "count": 1,
+            "first": {
+              "deficiency": 1,
+              "prefix": 3
+            },
+            "last": {
+              "deficiency": 1,
+              "prefix": 3
+            },
+            "max_deficiency": 1,
+            "records_sha256": "8734cf06950f0b0c9855e904b26c203b9e0a4745f68e02fe0a29c35b514d046f"
+          },
+          "degree_moment_rank_cap": 6,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 6,
+            "basis_rows": 6,
+            "joined_rank": 6,
+            "matrix_rank": 6,
+            "max_degree": 6,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 6,
+          "first_prefix_with_full_ambient_rank": 21,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 14,
+            "first": {
+              "deficiency": 1,
+              "nullity": 27,
+              "prefix": 3
+            },
+            "last": {
+              "deficiency": 26,
+              "nullity": 26,
+              "prefix": 16
+            },
+            "max_deficiency": 26,
+            "records_sha256": "d929f68c7c236b0da13a22dbaf3e8c02a8940558784fcda2d10ccf733d5147a0"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 14,
+            "first": {
+              "deficiency": 1,
+              "prefix": 3
+            },
+            "last": {
+              "deficiency": 26,
+              "prefix": 16
+            },
+            "max_deficiency": 26,
+            "records_sha256": "c532b10bfb220ae1143d8c53a671d03d19cdc326e06867bab53e8a8eda054b4f"
+          },
+          "largest_nondegenerate_prefix_certified": 20,
+          "largest_nondegenerate_prefix_nullity": 26,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 2,
+              "expected_ambient_rank": 2,
+              "expected_degree_cap_rank": 2,
+              "nullity": 30,
+              "prefix_locators": 1,
+              "rank": 2
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 4,
+              "expected_ambient_rank": 4,
+              "expected_degree_cap_rank": 4,
+              "nullity": 28,
+              "prefix_locators": 2,
+              "rank": 4
+            },
+            {
+              "deficiency_vs_ambient": 1,
+              "deficiency_vs_degree_cap": 1,
+              "equation_rows": 6,
+              "expected_ambient_rank": 6,
+              "expected_degree_cap_rank": 6,
+              "nullity": 27,
+              "prefix_locators": 3,
+              "rank": 5
+            },
+            {
+              "deficiency_vs_ambient": 3,
+              "deficiency_vs_degree_cap": 1,
+              "equation_rows": 8,
+              "expected_ambient_rank": 8,
+              "expected_degree_cap_rank": 6,
+              "nullity": 27,
+              "prefix_locators": 4,
+              "rank": 5
+            },
+            {
+              "deficiency_vs_ambient": 6,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 12,
+              "expected_ambient_rank": 12,
+              "expected_degree_cap_rank": 6,
+              "nullity": 26,
+              "prefix_locators": 6,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 10,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 16,
+              "expected_ambient_rank": 16,
+              "expected_degree_cap_rank": 6,
+              "nullity": 26,
+              "prefix_locators": 8,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 24,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 30,
+              "expected_ambient_rank": 30,
+              "expected_degree_cap_rank": 6,
+              "nullity": 26,
+              "prefix_locators": 15,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 26,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 32,
+              "expected_ambient_rank": 32,
+              "expected_degree_cap_rank": 6,
+              "nullity": 26,
+              "prefix_locators": 16,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 26,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 40,
+              "expected_ambient_rank": 32,
+              "expected_degree_cap_rank": 6,
+              "nullity": 26,
+              "prefix_locators": 20,
+              "rank": 6
+            }
+          ],
+          "slope_mode": "constant_one"
+        }
+      ],
+      "t": 2
+    },
+    {
+      "A": 27,
+      "construction": "deterministic random-greedy 5-subset packing, pairwise intersections <= 1",
+      "family_size": 33,
+      "field": "F_193",
+      "interpretation": "NO_NONDEGENERATE_DISTINCT_SPREAD_COUNTEREXAMPLE",
+      "j": 5,
+      "k": 24,
+      "n": 32,
+      "name": "greedy_32_j5_lambda1",
+      "pairwise_spread_stats": {
+        "all_pairs_below_fm1_dependency_threshold": true,
+        "all_support_intersections_lt_k": true,
+        "cosupport_intersection_histogram": {
+          "0": 177,
+          "1": 351
+        },
+        "fm1_dependency_threshold_c_ge": 2,
+        "k": 24,
+        "max_cosupport_intersection": 1,
+        "max_support_intersection": 23,
+        "support_intersection_histogram": {
+          "22": 177,
+          "23": 351
+        }
+      },
+      "slope_mode_results": [
+        {
+          "all_prefix_rows_sha256": "376c1bae068731de00222999c97b2f100c115083d0ad621c20f854fdb4d21e0c",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": false,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 48,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": false,
+            "zero_restriction_first_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "zero_restriction_locator_count": 21
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 21,
+          "cap_saturation_degeneracy_certificate": {
+            "cap_saturation_forces_v_zero_on_full_tested_family": true,
+            "degree_cap": 16,
+            "full_family_size": 33,
+            "full_family_v_zero_restriction_count": 33,
+            "logic": "For distinct slopes, degree-cap saturation means the rowspace is the full W_u plus W_v moment quotient. The nullspace therefore annihilates W_v, so every tested locator syndrome S_T(v) is zero.",
+            "nullity": 48,
+            "prefix_size": 6,
+            "prefix_v_zero_restriction_count": 6,
+            "rank": 16,
+            "saturates_degree_cap": true
+          },
+          "classification": "moment_quotient_cap_limited_no_extra_dependency",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_moment_rank_cap": 16,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 16,
+            "basis_rows": 16,
+            "joined_rank": 16,
+            "matrix_rank": 16,
+            "max_degree": 8,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 6,
+          "first_prefix_with_full_ambient_rank": 34,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 16,
+            "first": {
+              "deficiency": 2,
+              "prefix": 6
+            },
+            "last": {
+              "deficiency": 47,
+              "prefix": 21
+            },
+            "max_deficiency": 47,
+            "records_sha256": "0555805b8e8e2092343a7e8e0d7715536d5151cef22f7522c376d22a1d2f3ec1"
+          },
+          "largest_nondegenerate_prefix_certified": 5,
+          "largest_nondegenerate_prefix_nullity": 49,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 3,
+              "expected_ambient_rank": 3,
+              "expected_degree_cap_rank": 3,
+              "nullity": 61,
+              "prefix_locators": 1,
+              "rank": 3
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 6,
+              "expected_ambient_rank": 6,
+              "expected_degree_cap_rank": 6,
+              "nullity": 58,
+              "prefix_locators": 2,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 9,
+              "expected_ambient_rank": 9,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 3,
+              "rank": 9
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 12,
+              "expected_ambient_rank": 12,
+              "expected_degree_cap_rank": 12,
+              "nullity": 52,
+              "prefix_locators": 4,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 2,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 18,
+              "expected_ambient_rank": 18,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 6,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 8,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 24,
+              "expected_ambient_rank": 24,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 8,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 32,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 48,
+              "expected_ambient_rank": 48,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 16,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 47,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 63,
+              "expected_ambient_rank": 63,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 21,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 48,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 96,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 32,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 48,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 99,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 33,
+              "rank": 16
+            }
+          ],
+          "slope_mode": "distinct_linear"
+        },
+        {
+          "all_prefix_rows_sha256": "376c1bae068731de00222999c97b2f100c115083d0ad621c20f854fdb4d21e0c",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": false,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 48,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": false,
+            "zero_restriction_first_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "zero_restriction_locator_count": 21
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 21,
+          "cap_saturation_degeneracy_certificate": {
+            "cap_saturation_forces_v_zero_on_full_tested_family": true,
+            "degree_cap": 16,
+            "full_family_size": 33,
+            "full_family_v_zero_restriction_count": 33,
+            "logic": "For distinct slopes, degree-cap saturation means the rowspace is the full W_u plus W_v moment quotient. The nullspace therefore annihilates W_v, so every tested locator syndrome S_T(v) is zero.",
+            "nullity": 48,
+            "prefix_size": 6,
+            "prefix_v_zero_restriction_count": 6,
+            "rank": 16,
+            "saturates_degree_cap": true
+          },
+          "classification": "moment_quotient_cap_limited_no_extra_dependency",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_moment_rank_cap": 16,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 16,
+            "basis_rows": 16,
+            "joined_rank": 16,
+            "matrix_rank": 16,
+            "max_degree": 8,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 6,
+          "first_prefix_with_full_ambient_rank": 34,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 16,
+            "first": {
+              "deficiency": 2,
+              "prefix": 6
+            },
+            "last": {
+              "deficiency": 47,
+              "prefix": 21
+            },
+            "max_deficiency": 47,
+            "records_sha256": "0555805b8e8e2092343a7e8e0d7715536d5151cef22f7522c376d22a1d2f3ec1"
+          },
+          "largest_nondegenerate_prefix_certified": 5,
+          "largest_nondegenerate_prefix_nullity": 49,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 3,
+              "expected_ambient_rank": 3,
+              "expected_degree_cap_rank": 3,
+              "nullity": 61,
+              "prefix_locators": 1,
+              "rank": 3
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 6,
+              "expected_ambient_rank": 6,
+              "expected_degree_cap_rank": 6,
+              "nullity": 58,
+              "prefix_locators": 2,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 9,
+              "expected_ambient_rank": 9,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 3,
+              "rank": 9
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 12,
+              "expected_ambient_rank": 12,
+              "expected_degree_cap_rank": 12,
+              "nullity": 52,
+              "prefix_locators": 4,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 2,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 18,
+              "expected_ambient_rank": 18,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 6,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 8,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 24,
+              "expected_ambient_rank": 24,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 8,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 32,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 48,
+              "expected_ambient_rank": 48,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 16,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 47,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 63,
+              "expected_ambient_rank": 63,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 21,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 48,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 96,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 32,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 48,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 99,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 16,
+              "nullity": 48,
+              "prefix_locators": 33,
+              "rank": 16
+            }
+          ],
+          "slope_mode": "distinct_geometric"
+        },
+        {
+          "all_prefix_rows_sha256": "8217cadc4f055f479df2a8b4bc4e3d15ffb27ba2cddaff965103a3b5dd66ccaa",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": true,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 56,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": true,
+            "zero_restriction_first_indices": [],
+            "zero_restriction_locator_count": 0
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 21,
+          "cap_saturation_degeneracy_certificate": null,
+          "classification": "same_slope_degree_cap_diagnostic_not_an_E3_distinct_slope_test",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_moment_rank_cap": 8,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 8,
+            "basis_rows": 8,
+            "joined_rank": 8,
+            "matrix_rank": 8,
+            "max_degree": 8,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 3,
+          "first_prefix_with_full_ambient_rank": 34,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 19,
+            "first": {
+              "deficiency": 1,
+              "nullity": 56,
+              "prefix": 3
+            },
+            "last": {
+              "deficiency": 55,
+              "nullity": 56,
+              "prefix": 21
+            },
+            "max_deficiency": 55,
+            "records_sha256": "f5e101d977d51c7d7a53c2d684f7ae4d92e0bb4fa64fa33e47e7a9893ec9b6bd"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 19,
+            "first": {
+              "deficiency": 1,
+              "prefix": 3
+            },
+            "last": {
+              "deficiency": 55,
+              "prefix": 21
+            },
+            "max_deficiency": 55,
+            "records_sha256": "0c41364015e0c30750a4e74d3580029f45fe89eb9a73d382390f9e1dc687a3cb"
+          },
+          "largest_nondegenerate_prefix_certified": 33,
+          "largest_nondegenerate_prefix_nullity": 56,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 3,
+              "expected_ambient_rank": 3,
+              "expected_degree_cap_rank": 3,
+              "nullity": 61,
+              "prefix_locators": 1,
+              "rank": 3
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 6,
+              "expected_ambient_rank": 6,
+              "expected_degree_cap_rank": 6,
+              "nullity": 58,
+              "prefix_locators": 2,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 1,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 9,
+              "expected_ambient_rank": 9,
+              "expected_degree_cap_rank": 8,
+              "nullity": 56,
+              "prefix_locators": 3,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 4,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 12,
+              "expected_ambient_rank": 12,
+              "expected_degree_cap_rank": 8,
+              "nullity": 56,
+              "prefix_locators": 4,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 16,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 24,
+              "expected_ambient_rank": 24,
+              "expected_degree_cap_rank": 8,
+              "nullity": 56,
+              "prefix_locators": 8,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 40,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 48,
+              "expected_ambient_rank": 48,
+              "expected_degree_cap_rank": 8,
+              "nullity": 56,
+              "prefix_locators": 16,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 55,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 63,
+              "expected_ambient_rank": 63,
+              "expected_degree_cap_rank": 8,
+              "nullity": 56,
+              "prefix_locators": 21,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 56,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 96,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 8,
+              "nullity": 56,
+              "prefix_locators": 32,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 56,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 99,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 8,
+              "nullity": 56,
+              "prefix_locators": 33,
+              "rank": 8
+            }
+          ],
+          "slope_mode": "constant_one"
+        }
+      ],
+      "t": 3
+    },
+    {
+      "A": 26,
+      "construction": "deterministic random-greedy 6-subset packing, pairwise intersections <= 2",
+      "family_size": 64,
+      "field": "F_193",
+      "interpretation": "NO_NONDEGENERATE_DISTINCT_SPREAD_COUNTEREXAMPLE",
+      "j": 6,
+      "k": 23,
+      "n": 32,
+      "name": "greedy_32_j6_lambda2",
+      "pairwise_spread_stats": {
+        "all_pairs_below_fm1_dependency_threshold": true,
+        "all_support_intersections_lt_k": true,
+        "cosupport_intersection_histogram": {
+          "0": 516,
+          "1": 874,
+          "2": 626
+        },
+        "fm1_dependency_threshold_c_ge": 3,
+        "k": 23,
+        "max_cosupport_intersection": 2,
+        "max_support_intersection": 22,
+        "support_intersection_histogram": {
+          "20": 516,
+          "21": 874,
+          "22": 626
+        }
+      },
+      "slope_mode_results": [
+        {
+          "all_prefix_rows_sha256": "fa0bc9382100be823f46b872c6fbbf5a6a479070364936f73d6bae069fb3020f",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": false,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 46,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": false,
+            "zero_restriction_first_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "zero_restriction_locator_count": 21
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 21,
+          "cap_saturation_degeneracy_certificate": {
+            "cap_saturation_forces_v_zero_on_full_tested_family": true,
+            "degree_cap": 18,
+            "full_family_size": 64,
+            "full_family_v_zero_restriction_count": 64,
+            "logic": "For distinct slopes, degree-cap saturation means the rowspace is the full W_u plus W_v moment quotient. The nullspace therefore annihilates W_v, so every tested locator syndrome S_T(v) is zero.",
+            "nullity": 46,
+            "prefix_size": 6,
+            "prefix_v_zero_restriction_count": 6,
+            "rank": 18,
+            "saturates_degree_cap": true
+          },
+          "classification": "moment_quotient_cap_limited_no_extra_dependency",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_moment_rank_cap": 18,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 18,
+            "basis_rows": 18,
+            "joined_rank": 18,
+            "matrix_rank": 18,
+            "max_degree": 9,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 6,
+          "first_prefix_with_full_ambient_rank": 65,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 15,
+            "first": {
+              "deficiency": 3,
+              "prefix": 7
+            },
+            "last": {
+              "deficiency": 45,
+              "prefix": 21
+            },
+            "max_deficiency": 45,
+            "records_sha256": "010f74d3d79cae697f826d3e904f047103d8b2de21f1f1bdeb9c7a8173cdda03"
+          },
+          "largest_nondegenerate_prefix_certified": 5,
+          "largest_nondegenerate_prefix_nullity": 49,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 3,
+              "expected_ambient_rank": 3,
+              "expected_degree_cap_rank": 3,
+              "nullity": 61,
+              "prefix_locators": 1,
+              "rank": 3
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 6,
+              "expected_ambient_rank": 6,
+              "expected_degree_cap_rank": 6,
+              "nullity": 58,
+              "prefix_locators": 2,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 9,
+              "expected_ambient_rank": 9,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 3,
+              "rank": 9
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 12,
+              "expected_ambient_rank": 12,
+              "expected_degree_cap_rank": 12,
+              "nullity": 52,
+              "prefix_locators": 4,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 18,
+              "expected_ambient_rank": 18,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 6,
+              "rank": 18
+            },
+            {
+              "deficiency_vs_ambient": 6,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 24,
+              "expected_ambient_rank": 24,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 8,
+              "rank": 18
+            },
+            {
+              "deficiency_vs_ambient": 30,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 48,
+              "expected_ambient_rank": 48,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 16,
+              "rank": 18
+            },
+            {
+              "deficiency_vs_ambient": 45,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 63,
+              "expected_ambient_rank": 63,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 21,
+              "rank": 18
+            },
+            {
+              "deficiency_vs_ambient": 46,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 96,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 32,
+              "rank": 18
+            },
+            {
+              "deficiency_vs_ambient": 46,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 192,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 64,
+              "rank": 18
+            }
+          ],
+          "slope_mode": "distinct_linear"
+        },
+        {
+          "all_prefix_rows_sha256": "fa0bc9382100be823f46b872c6fbbf5a6a479070364936f73d6bae069fb3020f",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": false,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 46,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": false,
+            "zero_restriction_first_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "zero_restriction_locator_count": 21
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 21,
+          "cap_saturation_degeneracy_certificate": {
+            "cap_saturation_forces_v_zero_on_full_tested_family": true,
+            "degree_cap": 18,
+            "full_family_size": 64,
+            "full_family_v_zero_restriction_count": 64,
+            "logic": "For distinct slopes, degree-cap saturation means the rowspace is the full W_u plus W_v moment quotient. The nullspace therefore annihilates W_v, so every tested locator syndrome S_T(v) is zero.",
+            "nullity": 46,
+            "prefix_size": 6,
+            "prefix_v_zero_restriction_count": 6,
+            "rank": 18,
+            "saturates_degree_cap": true
+          },
+          "classification": "moment_quotient_cap_limited_no_extra_dependency",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_moment_rank_cap": 18,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 18,
+            "basis_rows": 18,
+            "joined_rank": 18,
+            "matrix_rank": 18,
+            "max_degree": 9,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 6,
+          "first_prefix_with_full_ambient_rank": 65,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 15,
+            "first": {
+              "deficiency": 3,
+              "prefix": 7
+            },
+            "last": {
+              "deficiency": 45,
+              "prefix": 21
+            },
+            "max_deficiency": 45,
+            "records_sha256": "010f74d3d79cae697f826d3e904f047103d8b2de21f1f1bdeb9c7a8173cdda03"
+          },
+          "largest_nondegenerate_prefix_certified": 5,
+          "largest_nondegenerate_prefix_nullity": 49,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 3,
+              "expected_ambient_rank": 3,
+              "expected_degree_cap_rank": 3,
+              "nullity": 61,
+              "prefix_locators": 1,
+              "rank": 3
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 6,
+              "expected_ambient_rank": 6,
+              "expected_degree_cap_rank": 6,
+              "nullity": 58,
+              "prefix_locators": 2,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 9,
+              "expected_ambient_rank": 9,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 3,
+              "rank": 9
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 12,
+              "expected_ambient_rank": 12,
+              "expected_degree_cap_rank": 12,
+              "nullity": 52,
+              "prefix_locators": 4,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 18,
+              "expected_ambient_rank": 18,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 6,
+              "rank": 18
+            },
+            {
+              "deficiency_vs_ambient": 6,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 24,
+              "expected_ambient_rank": 24,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 8,
+              "rank": 18
+            },
+            {
+              "deficiency_vs_ambient": 30,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 48,
+              "expected_ambient_rank": 48,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 16,
+              "rank": 18
+            },
+            {
+              "deficiency_vs_ambient": 45,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 63,
+              "expected_ambient_rank": 63,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 21,
+              "rank": 18
+            },
+            {
+              "deficiency_vs_ambient": 46,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 96,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 32,
+              "rank": 18
+            },
+            {
+              "deficiency_vs_ambient": 46,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 192,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 18,
+              "nullity": 46,
+              "prefix_locators": 64,
+              "rank": 18
+            }
+          ],
+          "slope_mode": "distinct_geometric"
+        },
+        {
+          "all_prefix_rows_sha256": "be7bc023038f912703d2e47aab5d592c7ef9f0fbda52a4d860770a5815649315",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": true,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 55,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": true,
+            "zero_restriction_first_indices": [],
+            "zero_restriction_locator_count": 0
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 21,
+          "cap_saturation_degeneracy_certificate": null,
+          "classification": "same_slope_degree_cap_diagnostic_not_an_E3_distinct_slope_test",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_moment_rank_cap": 9,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 9,
+            "basis_rows": 9,
+            "joined_rank": 9,
+            "matrix_rank": 9,
+            "max_degree": 9,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 3,
+          "first_prefix_with_full_ambient_rank": 65,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 18,
+            "first": {
+              "deficiency": 3,
+              "nullity": 55,
+              "prefix": 4
+            },
+            "last": {
+              "deficiency": 54,
+              "nullity": 55,
+              "prefix": 21
+            },
+            "max_deficiency": 54,
+            "records_sha256": "929fe78fad820604b3f23bf51eb615fdbfd6febc3fd9cd9ab8e63dc089666ef5"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 18,
+            "first": {
+              "deficiency": 3,
+              "prefix": 4
+            },
+            "last": {
+              "deficiency": 54,
+              "prefix": 21
+            },
+            "max_deficiency": 54,
+            "records_sha256": "250adde831d1e89691f23d5b869d0d7c9b7633b2e9c5c66908156914c3f9ea78"
+          },
+          "largest_nondegenerate_prefix_certified": 64,
+          "largest_nondegenerate_prefix_nullity": 55,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 3,
+              "expected_ambient_rank": 3,
+              "expected_degree_cap_rank": 3,
+              "nullity": 61,
+              "prefix_locators": 1,
+              "rank": 3
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 6,
+              "expected_ambient_rank": 6,
+              "expected_degree_cap_rank": 6,
+              "nullity": 58,
+              "prefix_locators": 2,
+              "rank": 6
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 9,
+              "expected_ambient_rank": 9,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 3,
+              "rank": 9
+            },
+            {
+              "deficiency_vs_ambient": 3,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 12,
+              "expected_ambient_rank": 12,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 4,
+              "rank": 9
+            },
+            {
+              "deficiency_vs_ambient": 15,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 24,
+              "expected_ambient_rank": 24,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 8,
+              "rank": 9
+            },
+            {
+              "deficiency_vs_ambient": 39,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 48,
+              "expected_ambient_rank": 48,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 16,
+              "rank": 9
+            },
+            {
+              "deficiency_vs_ambient": 54,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 63,
+              "expected_ambient_rank": 63,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 21,
+              "rank": 9
+            },
+            {
+              "deficiency_vs_ambient": 55,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 96,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 32,
+              "rank": 9
+            },
+            {
+              "deficiency_vs_ambient": 55,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 192,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 9,
+              "nullity": 55,
+              "prefix_locators": 64,
+              "rank": 9
+            }
+          ],
+          "slope_mode": "constant_one"
+        }
+      ],
+      "t": 3
+    },
+    {
+      "A": 58,
+      "construction": "deterministic random-greedy 6-subset packing, pairwise intersections <= 1",
+      "family_size": 69,
+      "field": "F_193",
+      "interpretation": "NO_NONDEGENERATE_DISTINCT_SPREAD_COUNTEREXAMPLE",
+      "j": 6,
+      "k": 54,
+      "n": 64,
+      "name": "greedy_64_j6_lambda1",
+      "pairwise_spread_stats": {
+        "all_pairs_below_fm1_dependency_threshold": true,
+        "all_support_intersections_lt_k": true,
+        "cosupport_intersection_histogram": {
+          "0": 1199,
+          "1": 1147
+        },
+        "fm1_dependency_threshold_c_ge": 2,
+        "k": 54,
+        "max_cosupport_intersection": 1,
+        "max_support_intersection": 53,
+        "support_intersection_histogram": {
+          "52": 1199,
+          "53": 1147
+        }
+      },
+      "slope_mode_results": [
+        {
+          "all_prefix_rows_sha256": "a7daad8e98b6f0284cd3df1608a5669369d4e603459926a0a9bc2418ba1ca381",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": false,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 108,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": false,
+            "zero_restriction_first_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "zero_restriction_locator_count": 31
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 31,
+          "cap_saturation_degeneracy_certificate": {
+            "cap_saturation_forces_v_zero_on_full_tested_family": true,
+            "degree_cap": 20,
+            "full_family_size": 69,
+            "full_family_v_zero_restriction_count": 69,
+            "logic": "For distinct slopes, degree-cap saturation means the rowspace is the full W_u plus W_v moment quotient. The nullspace therefore annihilates W_v, so every tested locator syndrome S_T(v) is zero.",
+            "nullity": 108,
+            "prefix_size": 5,
+            "prefix_v_zero_restriction_count": 5,
+            "rank": 20,
+            "saturates_degree_cap": true
+          },
+          "classification": "moment_quotient_cap_limited_no_extra_dependency",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_moment_rank_cap": 20,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 20,
+            "basis_rows": 20,
+            "joined_rank": 20,
+            "matrix_rank": 20,
+            "max_degree": 10,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 5,
+          "first_prefix_with_full_ambient_rank": 70,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 27,
+            "first": {
+              "deficiency": 4,
+              "prefix": 6
+            },
+            "last": {
+              "deficiency": 108,
+              "prefix": 32
+            },
+            "max_deficiency": 108,
+            "records_sha256": "e66123618360c5d64dfdc85d4f5506847cf546ec5e6d8e3d09cc1ff522cce09d"
+          },
+          "largest_nondegenerate_prefix_certified": 4,
+          "largest_nondegenerate_prefix_nullity": 112,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 4,
+              "expected_ambient_rank": 4,
+              "expected_degree_cap_rank": 4,
+              "nullity": 124,
+              "prefix_locators": 1,
+              "rank": 4
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 8,
+              "expected_ambient_rank": 8,
+              "expected_degree_cap_rank": 8,
+              "nullity": 120,
+              "prefix_locators": 2,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 12,
+              "expected_ambient_rank": 12,
+              "expected_degree_cap_rank": 12,
+              "nullity": 116,
+              "prefix_locators": 3,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 16,
+              "expected_ambient_rank": 16,
+              "expected_degree_cap_rank": 16,
+              "nullity": 112,
+              "prefix_locators": 4,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 20,
+              "expected_ambient_rank": 20,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 5,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 12,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 32,
+              "expected_ambient_rank": 32,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 8,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 44,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 64,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 16,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 104,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 124,
+              "expected_ambient_rank": 124,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 31,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 108,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 128,
+              "expected_ambient_rank": 128,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 32,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 108,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 256,
+              "expected_ambient_rank": 128,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 64,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 108,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 276,
+              "expected_ambient_rank": 128,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 69,
+              "rank": 20
+            }
+          ],
+          "slope_mode": "distinct_linear"
+        },
+        {
+          "all_prefix_rows_sha256": "a7daad8e98b6f0284cd3df1608a5669369d4e603459926a0a9bc2418ba1ca381",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": false,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 108,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": false,
+            "zero_restriction_first_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "zero_restriction_locator_count": 31
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 31,
+          "cap_saturation_degeneracy_certificate": {
+            "cap_saturation_forces_v_zero_on_full_tested_family": true,
+            "degree_cap": 20,
+            "full_family_size": 69,
+            "full_family_v_zero_restriction_count": 69,
+            "logic": "For distinct slopes, degree-cap saturation means the rowspace is the full W_u plus W_v moment quotient. The nullspace therefore annihilates W_v, so every tested locator syndrome S_T(v) is zero.",
+            "nullity": 108,
+            "prefix_size": 5,
+            "prefix_v_zero_restriction_count": 5,
+            "rank": 20,
+            "saturates_degree_cap": true
+          },
+          "classification": "moment_quotient_cap_limited_no_extra_dependency",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_moment_rank_cap": 20,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 20,
+            "basis_rows": 20,
+            "joined_rank": 20,
+            "matrix_rank": 20,
+            "max_degree": 10,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 5,
+          "first_prefix_with_full_ambient_rank": 70,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 27,
+            "first": {
+              "deficiency": 4,
+              "prefix": 6
+            },
+            "last": {
+              "deficiency": 108,
+              "prefix": 32
+            },
+            "max_deficiency": 108,
+            "records_sha256": "e66123618360c5d64dfdc85d4f5506847cf546ec5e6d8e3d09cc1ff522cce09d"
+          },
+          "largest_nondegenerate_prefix_certified": 4,
+          "largest_nondegenerate_prefix_nullity": 112,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 4,
+              "expected_ambient_rank": 4,
+              "expected_degree_cap_rank": 4,
+              "nullity": 124,
+              "prefix_locators": 1,
+              "rank": 4
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 8,
+              "expected_ambient_rank": 8,
+              "expected_degree_cap_rank": 8,
+              "nullity": 120,
+              "prefix_locators": 2,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 12,
+              "expected_ambient_rank": 12,
+              "expected_degree_cap_rank": 12,
+              "nullity": 116,
+              "prefix_locators": 3,
+              "rank": 12
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 16,
+              "expected_ambient_rank": 16,
+              "expected_degree_cap_rank": 16,
+              "nullity": 112,
+              "prefix_locators": 4,
+              "rank": 16
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 20,
+              "expected_ambient_rank": 20,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 5,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 12,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 32,
+              "expected_ambient_rank": 32,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 8,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 44,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 64,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 16,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 104,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 124,
+              "expected_ambient_rank": 124,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 31,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 108,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 128,
+              "expected_ambient_rank": 128,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 32,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 108,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 256,
+              "expected_ambient_rank": 128,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 64,
+              "rank": 20
+            },
+            {
+              "deficiency_vs_ambient": 108,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 276,
+              "expected_ambient_rank": 128,
+              "expected_degree_cap_rank": 20,
+              "nullity": 108,
+              "prefix_locators": 69,
+              "rank": 20
+            }
+          ],
+          "slope_mode": "distinct_geometric"
+        },
+        {
+          "all_prefix_rows_sha256": "41f7831d8b0fce637cdd492325f23822104309bcbe0e9cc16550be98f628e38a",
+          "ambient_bound_prefix_nondegeneracy_certificate": {
+            "all_v_syndrome_restrictions_nonzero": true,
+            "logic": "Inside the nullspace, each condition S_T(v)=0 is a proper linear subspace. Since p is larger than the number of tested locators, the union of these proper subspaces cannot cover the nullspace.",
+            "nullity": 118,
+            "p_greater_than_locator_count": true,
+            "union_bound_certifies_nondegenerate_solution": true,
+            "zero_restriction_first_indices": [],
+            "zero_restriction_locator_count": 0
+          },
+          "ambient_linear_bound_floor((2n-1)/t)": 31,
+          "cap_saturation_degeneracy_certificate": null,
+          "classification": "same_slope_degree_cap_diagnostic_not_an_E3_distinct_slope_test",
+          "degree_cap_loss_nondegenerate_prefixes": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_cap_losses": {
+            "count": 0,
+            "first": null,
+            "last": null,
+            "max_deficiency": 0,
+            "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "degree_moment_rank_cap": 10,
+          "degree_moment_rank_cap_formula": "j+t for constant-slope rows; 2(j+t) for distinct-slope rows",
+          "degree_moment_rowspace_certificate": {
+            "basis_rank": 10,
+            "basis_rows": 10,
+            "joined_rank": 10,
+            "matrix_rank": 10,
+            "max_degree": 10,
+            "rowspace_included_in_degree_moment_basis": true
+          },
+          "first_prefix_reaching_degree_moment_cap": 3,
+          "first_prefix_with_full_ambient_rank": 70,
+          "hidden_loss_nondegenerate_prefixes": {
+            "count": 30,
+            "first": {
+              "deficiency": 2,
+              "nullity": 118,
+              "prefix": 3
+            },
+            "last": {
+              "deficiency": 118,
+              "nullity": 118,
+              "prefix": 32
+            },
+            "max_deficiency": 118,
+            "records_sha256": "1bc5f882d30e5d7998f1e03c20fe13d37d503ab0425a6e251a782fd4c4731ba8"
+          },
+          "hidden_losses_before_ambient_saturation": {
+            "count": 30,
+            "first": {
+              "deficiency": 2,
+              "prefix": 3
+            },
+            "last": {
+              "deficiency": 118,
+              "prefix": 32
+            },
+            "max_deficiency": 118,
+            "records_sha256": "bf0ae44a545c8d78521d65c4905ef65d7ef851c733210167cedafa02e23732e5"
+          },
+          "largest_nondegenerate_prefix_certified": 69,
+          "largest_nondegenerate_prefix_nullity": 118,
+          "sampled_prefix_rows": [
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 4,
+              "expected_ambient_rank": 4,
+              "expected_degree_cap_rank": 4,
+              "nullity": 124,
+              "prefix_locators": 1,
+              "rank": 4
+            },
+            {
+              "deficiency_vs_ambient": 0,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 8,
+              "expected_ambient_rank": 8,
+              "expected_degree_cap_rank": 8,
+              "nullity": 120,
+              "prefix_locators": 2,
+              "rank": 8
+            },
+            {
+              "deficiency_vs_ambient": 2,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 12,
+              "expected_ambient_rank": 12,
+              "expected_degree_cap_rank": 10,
+              "nullity": 118,
+              "prefix_locators": 3,
+              "rank": 10
+            },
+            {
+              "deficiency_vs_ambient": 6,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 16,
+              "expected_ambient_rank": 16,
+              "expected_degree_cap_rank": 10,
+              "nullity": 118,
+              "prefix_locators": 4,
+              "rank": 10
+            },
+            {
+              "deficiency_vs_ambient": 22,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 32,
+              "expected_ambient_rank": 32,
+              "expected_degree_cap_rank": 10,
+              "nullity": 118,
+              "prefix_locators": 8,
+              "rank": 10
+            },
+            {
+              "deficiency_vs_ambient": 54,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 64,
+              "expected_ambient_rank": 64,
+              "expected_degree_cap_rank": 10,
+              "nullity": 118,
+              "prefix_locators": 16,
+              "rank": 10
+            },
+            {
+              "deficiency_vs_ambient": 114,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 124,
+              "expected_ambient_rank": 124,
+              "expected_degree_cap_rank": 10,
+              "nullity": 118,
+              "prefix_locators": 31,
+              "rank": 10
+            },
+            {
+              "deficiency_vs_ambient": 118,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 128,
+              "expected_ambient_rank": 128,
+              "expected_degree_cap_rank": 10,
+              "nullity": 118,
+              "prefix_locators": 32,
+              "rank": 10
+            },
+            {
+              "deficiency_vs_ambient": 118,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 256,
+              "expected_ambient_rank": 128,
+              "expected_degree_cap_rank": 10,
+              "nullity": 118,
+              "prefix_locators": 64,
+              "rank": 10
+            },
+            {
+              "deficiency_vs_ambient": 118,
+              "deficiency_vs_degree_cap": 0,
+              "equation_rows": 276,
+              "expected_ambient_rank": 128,
+              "expected_degree_cap_rank": 10,
+              "nullity": 118,
+              "prefix_locators": 69,
+              "rank": 10
+            }
+          ],
+          "slope_mode": "constant_one"
+        }
+      ],
+      "t": 4
+    }
+  ],
+  "dag_nodes": [
+    "spread_regime_bound",
+    "r2_rigidity"
+  ],
+  "fable_evidence_item": "E3",
+  "hidden_cases": [],
+  "interpretation_table": {
+    "BOUNDED_EXCEPTION_WITNESS_FOUND": "A bounded-size AG(2,4) subfamily has nondegenerate below-cap rank loss. This does not show growth, but it rules out a literal no-exception lemma.",
+    "CANDIDATE_SPREAD_COUNTEREXAMPLE": "A nondegenerate distinct-slope rank loss below the degree-moment cap was found; package the minimal case as a counterexample candidate.",
+    "NO_NONDEGENERATE_DISTINCT_SPREAD_COUNTEREXAMPLE": "No tested spread design produced a nondegenerate distinct-slope rank-loss prefix beyond the degree-moment cap. Ambient rank losses are explained by the universal moment quotient."
+  },
+  "method": "For each design family, stack the linear systems S_T(u)+z_T S_T(v)=0 over F_193 for distinct slopes z_T. Pairwise intersections are below the FM1 dependency threshold, and the verifier compares rank both to the ambient 2n variable space and to the proved degree-moment cap 2(j+t).",
+  "overall_interpretation": "BOUNDED_EXCEPTION_WITNESS_FOUND",
+  "pre_registered_question": "Can co-support designs with pairwise support intersections < k create hidden distinct-slope alignment dependencies before the ambient 2n-variable rank limit?",
+  "prime": 193,
+  "script_sha256": "4fa7bde0bf62a116e9aafc602255d608f1fb48281f7fdde79359e28d9e860818",
+  "seed": 2026070203,
+  "status": "EXPERIMENTAL / AUDIT",
+  "title": "E3 spread-regime design evidence"
+}

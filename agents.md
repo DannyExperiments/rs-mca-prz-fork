@@ -8,12 +8,241 @@ The four papers are:
 
 ```text
 RS_disproof_v3.tex      Paper A: no-slack obstruction
-slackMCA_v3.tex         Paper B: slack / quotient / entropy theory
-cs25_cap_v4.tex         Paper D: universal field-size cap
-snarks_v4.tex           Paper C: SNARK / protocol ledger
+slackMCA_v4.tex         Paper B: slack / quotient / entropy theory
+cs25_cap_v12.tex        Paper D: two-sided cap, safe-side pincer, and certificate grammar
+snarks_v5.tex           Paper C: SNARK / protocol ledger
 ```
 
 Use logical order **A → B → D → C** unless you are working specifically on protocol ledgers.
+
+## Current focus: exact-threshold RS MCA submission
+
+The active exact-threshold integration draft is:
+
+```text
+experimental/rs_mca_thresholds.tex       coherent exact-threshold paper
+experimental/rs_mca_thresholds.pdf       compiled exact-threshold paper
+```
+
+This paper is now the first place to look for self-contained exact MCA
+staircases, certified prize rows, syndrome--secant geometry, quadratic/
+mean-overlap thresholds, half-distance completion, and the target-aware
+certificate formula.  It is more coherent than the older frontiers draft for
+exact threshold work.  The broader frontiers draft remains useful for audit
+comparison and for conditional profile-envelope/cell machinery:
+
+```text
+experimental/asymptotic_rs_mca_frontiers.tex       broad frontiers/audit draft
+experimental/asymptotic_rs_mca.tex                 compact predecessor / audit reference
+experimental/cap25_cap_v13_raw.tex                 long v13 working ledger
+experimental/grande_finale.tex                     compact final-ledger note
+```
+
+The exact-threshold paper contains the current clean theorem package: exact
+deep and quadratic MCA staircases, exact CA/sparse MCA decomposition, a
+self-contained half-Johnson bound, certified Proth prime rows at all four
+official rates, the F_17^32 exact 6/7 gate, smooth/circle transports, and a
+certificate formula for turning matching safe/unsafe rows into delta*.
+
+The remaining hard inputs are still exactly:
+
+```text
+witness-exhaustive first-match atlas;
+image-scale MI + MA, or a direct Sidon payment;
+residual ray compiler for higher-dimensional balanced cores;
+complete profile-envelope comparison with the target;
+lower reserve / unsafe-side comparison.
+```
+
+Agents should treat those five items as the current proof checklist.  Work that
+does not reduce, audit, formalize, or falsify one of them is secondary.
+
+The expected submission strategy is:
+
+1. keep the exact finite-row and deep-frontier theorems self-contained;
+2. make every conditional compiler input visible in theorem statements;
+3. prove or explicitly assume the five hard inputs above;
+4. use the Sidon/Fourier split and BSG/quasicube argument only after the
+   image-scale MI/MA or direct Sidon payment is available;
+5. compare the complete profile envelope, not only the identity prefix term,
+   against the actual target and lower reserve.
+
+Do not silently replace this with older Q/BC/SP shorthand.  If Q/BC/SP language
+is useful, translate it into the current frontiers-paper vocabulary: image-scale
+MI/MA or Sidon payment, balanced-core residual ray compiler, and complete
+profile-envelope comparison.
+
+## Highest priority now
+
+1. **Lean formalization.**  Formalize the exact-threshold paper first, then
+   the broader frontiers dependencies under `experimental/lean/`.  Highest
+   priority tracks are:
+
+   ```text
+   experimental/rs_mca_thresholds.tex
+   experimental/asymptotic_rs_mca_frontiers.tex
+   experimental/lean/grande_finale/
+   experimental/lean/cap25_cap_v13_raw_compact/
+   ```
+
+   Add a new package or module for the thresholds/frontiers papers only if
+   it is integrated coherently under `experimental/lean/`.  The formalization
+   should prioritize the MCA staircase definition, endpoint conversion, exact
+   CA/sparse decomposition, tangent floor, quadratic mean-overlap theorem,
+   syndrome-line incidence, first-match disjointization, profile-envelope
+   definitions, primitive Boolean slice, moment-to-max equivalence, Sidon split,
+   BSG/quasicube step, and target-aware threshold bracket.
+
+2. **Adversarial proof audit.**  Use independent LLM agents or human reviewers
+   to attack the proof.  Assign them specific failure modes:
+
+   ```text
+   missing witness in the first-match atlas
+   incorrect image-scale normalization for MI/MA or Sidon payment
+   unsupported major-arc aggregate
+   residual higher-dimensional balanced core without ray compiler
+   incomplete profile-envelope comparison with the target
+   unsafe-side lower reserve not actually crossing the target
+   incorrect first-match disjointization
+   wrong field denominator or base/extension-field ledger
+   misuse of BSG or quasicube growth
+   mismatch between asymptotic proof and finite deployed rows
+   ```
+
+   Every attack should end as either `NO ISSUE`, `FIXED`, `OPEN GAP`, or
+   `COUNTEREXAMPLE_NEW_FLOOR`, with exact file/label references.
+
+3. **Final computations and examples.**  Produce small and medium examples that
+   instantiate the proof objects: bad-line moduli strata, structured cases,
+   primitive Boolean prefix fibers, Fourier/Sidon cuts, and the entropy
+   threshold.  These examples are for auditing and exposition, not for replacing
+   the proof.
+
+4. **Clean write-up.**  Polish `experimental/rs_mca_thresholds.tex` as the coherent exact-threshold paper, while keeping `experimental/asymptotic_rs_mca_frontiers.tex` as the broader audit/frontiers reference.  The write-up should avoid internal
+   shorthand where possible, explain Reed--Solomon/MCA for external readers,
+   cite paid structured cases by theorem labels, and separate proved statements
+   from the five remaining hard inputs.
+
+Finite adjacent rows remain important, but they are now a separate constants
+and certificate project, not the main asymptotic proof bottleneck.
+
+## Three resolution tracks
+
+The project now has three different targets.  Keep them separate.
+
+1. **Finite deployed one-step resolution.**  For each deployed row, prove an
+   adjacent staircase certificate
+
+   ```text
+   U(a0 + 1) <= B* < L(a0),
+   ```
+
+   where `L` is the exact lower/unsafe staircase, `U` is the complete
+   upper/safe ledger, and `B* = floor(epsilon* Q_row)` is the row's integer
+   budget, with `Q_row` equal to the relevant sampling denominator (`q_line`
+   for MCA rows and the list denominator for list rows).  This proves the
+   first safe agreement is `a0 + 1`.  The current four v13 rows are the main
+   targets, but more exact adjacent examples are useful when they stress-test
+   the same Q/BC ledger and expose the constants.
+
+2. **Asymptotic frontier resolution.**  Formalize and audit the frontiers paper
+
+   ```text
+   delta*_C(epsilon*) = 1 - rho - g*(rho, log2 |B|) + o(1)
+   ```
+
+   where the stated hypotheses permit that identity-dominant specialization.
+   The active exact-threshold manuscript is `experimental/rs_mca_thresholds.tex`; the broader audit manuscript is `experimental/asymptotic_rs_mca_frontiers.tex`.
+   The main work is proving, auditing, or clearly isolating the five hard inputs
+   listed above.
+
+3. **Protocol resolution.**  Feed the finite/asymptotic theorem into the Paper C
+   ledger.  Generated field, line field, challenge field, list denominator,
+   interleaving arity, MCA/CA/list/line-decoding object, and endpoint convention
+   must all be printed separately.
+
+## Finite adjacent certificate
+
+A finite deployed threshold proof is an adjacent staircase certificate:
+
+```text
+B* = floor(epsilon* Q_row)
+L(a0)      > B*
+U(a0 + 1) <= B*
+```
+
+Here `L` is the exact unsafe lower staircase and `U` is the complete
+first-match upper ledger.  `Q_row` is the row's audited denominator, not the
+row-sharp Q problem.  Once this is proved, the first safe integer agreement is
+`a0 + 1`; the closed-ball endpoint convention must be printed.
+
+The upper ledger should be short and explicit:
+
+```text
+U(a) =
+  paid_tangent(a)
++ paid_quotient(a)
++ paid_extension(a)
++ paid_Q_prefix_boundary(a)
++ paid_BC_split_pencil(a)
++ explicitly named residuals.
+```
+
+Do not hide a residual branch inside a point estimate.  Mark every residual as
+`PAID_BY_THEOREM`, `PAID_BY_EXACT_CERTIFICATE`,
+`CONDITIONAL_ON_NAMED_INPUT`, `CONJECTURAL_WITH_FALSIFIER`, or
+`COUNTEREXAMPLE_NEW_FLOOR`.
+
+The asymptotic theorem is:
+
+```text
+delta*_C(epsilon*) = 1 - rho - g*(rho, log2 |B|) + o(1).
+```
+
+The exact-threshold paper in `experimental/rs_mca_thresholds.tex` is the
+current clean source for finite thresholds and certificate formulas; the broader
+frontiers paper in `experimental/asymptotic_rs_mca_frontiers.tex` remains the
+source for conditional profile-envelope limitations.  Finite deployed rows
+require exact constants and remain a separate certificate project.
+
+## What counts as progress now
+
+Highest-value contributions are:
+
+1. Lean formalization of `experimental/rs_mca_thresholds.tex`, then
+   `experimental/asymptotic_rs_mca_frontiers.tex` and imported v13 raw / Grande Finale dependencies;
+2. adversarial proof audits focused on the five remaining hard inputs:
+   witness-exhaustive atlas, image-scale MI/MA or Sidon payment, residual ray
+   compiler, profile-envelope target comparison, and lower reserve;
+3. proofs, counterexamples, or exact certificate packets for any one of those
+   five inputs;
+4. final computations and examples illustrating bad-line moduli strata,
+   primitive Boolean prefix fibers, image-scale Fourier/Sidon cuts, and target
+   reserves;
+5. finite adjacent certificates for the deployed rows, with exact constants and
+   replayable packets;
+6. only after the threshold theorem is stable, a Paper C protocol ledger
+   consuming it without merging `q_gen`, `q_line`, `q_chal`, and `q_list`.
+
+Every packet that changes `experimental/` must add a concise entry to
+`experimental/agents-log.md`.  A negative result is progress if it identifies a
+new obstruction floor and updates the certificate logic.
+
+## Paper authority and promotion rule
+
+`tex/cs25_cap_v12.tex` is the current complete Paper D authority.
+`tex/towards-prize.tex` is the compact prize-facing v12 note.
+`experimental/asymptotic_rs_mca.tex` is the active compact asymptotic proof.
+`experimental/cap25_cap_v13_raw.tex` and `experimental/grande_finale.tex` are
+the detailed source ledgers imported by that proof.
+
+Promotion from v13/grande-finale into Paper D requires:
+
+1. exact unsafe certificates and exact safe upper ledgers;
+2. a replayable certificate packet or printed integer proof for every finite
+   row inequality;
+3. a clean audit of endpoint conventions, denominators, and field ledgers;
+4. an explicit status split between theorem rows and conditional rows.
 
 ## Ground rules
 
@@ -77,12 +306,17 @@ Treat Papers A-D as stable reference documents unless a maintainer explicitly as
 
 ```text
 tex/RS_disproof_v3.tex
-tex/slackMCA_v3.tex
-tex/cs25_cap_v4.tex
-tex/snarks_v4.tex
+tex/slackMCA_v4.tex
+tex/cs25_cap_v12.tex
+tex/snarks_v5.tex
 ```
 
-New material should go into `experimental/` first. Use separate files there for proof notes, audits, theorem-label maps, formalization plans, reproducible experiments, and certificate generators. After review, stable `.tex` contributions can be promoted to `tex/`, and stable `.py` scripts can be promoted to `scripts/`.
+New material should go into `experimental/` first, except for explicit maintainer
+requests to edit the active Paper D/towards-prize drafts. Use separate files
+there for proof notes, audits, theorem-label maps, formalization plans,
+reproducible experiments, and certificate generators. After review, stable
+`.tex` contributions can be promoted to `tex/`, and stable `.py` scripts can be
+promoted to `scripts/`.
 
 Whenever you add or materially change something under `experimental/`, add an entry to `experimental/agents-log.md` with the date, agent/model, files changed, status, usefulness, and next step.
 
@@ -91,10 +325,18 @@ Whenever you add or materially change something under `experimental/`, add an en
 ### Minimal reading path
 
 1. Read the abstract and scope section of `RS_disproof_v3.tex`.
-2. Read the introduction and frontier/open-problems section of `slackMCA_v3.tex`.
-3. Read the main theorem and open problems of `cs25_cap_v4.tex`.
-4. Read the certificate ledgers and open problems of `snarks_v4.tex`.
-5. Return to Paper B for the exact theorem labels relevant to your task.
+2. Read the introduction and frontier/open-problems section of `slackMCA_v4.tex`.
+3. Read the abstract, direct conversion theorem, safe-side pincer, certificate
+   grammar, and open problems of `cs25_cap_v12.tex`.
+4. Read `tex/towards-prize.tex` as the compact prize-facing version of the v12
+   theorem package.
+5. Read `experimental/asymptotic_rs_mca.tex` as the active compact asymptotic
+   proof.
+6. For its imported structured cases, read `experimental/cap25_cap_v13_raw.tex`
+   and `experimental/grande_finale.tex`.
+7. Read the certificate ledgers and open problems of `snarks_v5.tex` only when
+   working on protocol consumption.
+8. Return to Paper B for the exact theorem labels relevant to your task.
 
 ### Fast orientation
 
@@ -103,186 +345,103 @@ The current research picture is:
 ```text
 Paper A gives explicit no-slack lower bounds.
 Paper B builds the corrected reserve theory and states the main missing local limits.
-Paper D gives a universal cap using a list-to-agreement conversion.
+Paper D v12 gives the current two-sided cap, safe-side pincer, map/rational
+smooth extensions, and finite certificate grammar.
+experimental/asymptotic_rs_mca.tex gives the active compact asymptotic proof:
+structured bad lines are imported from v13 raw / Grande Finale, and the
+primitive residual is ruled out by the Sidon/Fourier split plus BSG/quasicube
+growth.
 Paper C says how a protocol must consume the theory without mixing ledgers.
 ```
 
-The main mathematical unknowns are not in Paper A. They are in the positive local-limit, line/MCA, extension-transfer, and interleaved-list directions of Papers B/C/D.
+The main remaining work is verification and presentation: formalize the compact
+proof, adversarially audit every imported structured case, produce final
+examples, and write the clean paper version.
 
-## Highest-priority proof targets
+## Current work targets
 
-### L1. Generated-field locator local limit
+### L0. Lean formalization of the asymptotic proof
 
-**Goal.** Prove polynomial locator-fiber bounds for generated-field smooth domains above the entropy and quotient reserves.
+**Goal.** Formalize `experimental/asymptotic_rs_mca.tex` and its imported
+dependencies under `experimental/lean/`.
 
-A useful target statement is:
+Start with theorem statements for the whole proof, then prove the elementary
+pieces first: first-match disjointization, moment-to-max equivalence, the
+Sidon split, the Q-to-SP inequality, and the entropy-frontier calculation.
+External additive-combinatorics inputs such as BSG and quasicube growth may be
+axiomatized initially with exact statements and later linked to Mathlib or a
+dedicated formalization.
 
-```text
-For smooth domains H_n of size n, rate rho, and generated field q_gen = poly(n),
-all arbitrary received words U have locator fiber size <= n^B once
-sigma * log2(q_gen) exceeds log2 binomial(n, k + sigma)
-and active quotient-core contributions are absent or budgeted.
-```
+### A0. Adversarial proof audit
 
-**Why it matters.** This is the main positive list theorem missing from Paper B. Paper C needs it to create list certificates.
+**Goal.** Try to break `experimental/asymptotic_rs_mca.tex`.
 
-**First attacks.**
+Useful adversarial checks:
 
-- Prove monomial-prefix cases first.
-- Separate quotient-periodic fibers from aperiodic fibers.
-- Use characteristic-zero rigidity where possible.
-- Convert finite-field collisions into algebraic-integer divisibility or norm events.
-- Below norm thresholds, look for density-over-primes theorems first.
-- Build small scanners that enumerate locator fibers and collision templates.
+- Is every bad-line mechanism really covered by the cited structured cases?
+- Is the Fourier/Sidon-heavy branch paid without circular use of the conclusion?
+- Are major arcs routed to already-paid algebraic cases?
+- Is the BSG hypothesis exactly high additive energy in the Boolean fiber?
+- Does quasicube growth apply in the correct ambient abelian group?
+- Are base field, line field, and challenge denominator kept separate?
+- Does the entropy-frontier calculation match the threshold convention?
 
-**Useful toy cases.**
+Every audit should end with `NO ISSUE`, `FIXED`, `OPEN GAP`, or
+`COUNTEREXAMPLE_NEW_FLOOR`.
 
-```text
-q = 17,      n = 16,      rho = 1/2 or 1/4
-q = 257,     n = 256,     rho = 1/2 or 1/4
-q = 65537,   n = 65536,   rho = 1/2 or 1/4, only with optimized scripts
-n = 32,64,128 over small extension fields for collision-template scans
-```
+### W0. Clean proof write-up
 
-Start with tiny `n` and exact enumeration. Do not jump straight to deployed sizes.
+**Goal.** Turn `experimental/asymptotic_rs_mca.tex` into a clean external paper.
 
-### M1. Corrected MCA / residue-line local limit
+Avoid internal shorthand.  Explain Reed--Solomon codes, MCA, bad lines, the
+entropy threshold, and the additive-combinatorics step in reader-facing terms.
+Replace broad citations such as "v13 raw ledger" with precise theorem labels
+from `experimental/cap25_cap_v13_raw.tex` and `experimental/grande_finale.tex`.
 
-**Goal.** Prove that, above the corrected reserve, residue-line packing is small enough to give an MCA bound in the polynomial-field window.
+### C0. Final computations and examples
 
-**Why it matters.** This is the main MCA-side positive theorem missing from Paper B. Without it, Paper C remains conjectural outside theorem-backed fallback regimes.
+**Goal.** Produce examples that make the proof auditable.
 
-**First attacks.**
+Useful examples include small bad-line classifications, primitive Boolean
+prefix fibers, Fourier/Sidon-heavy versus high-energy splits, and numerical
+entropy-threshold checks.  These examples support audit and exposition; they
+do not replace the proof.
 
-- Work in the residue-line normal form from Paper B.
-- Classify low-slack templates first.
-- Prove aperiodic packing bounds after quotient-periodic components are removed.
-- Use inverse Littlewood--Offord style arguments for support-sum collisions.
-- Search for small counterexamples where list fibers are small but MCA bad slopes remain large.
+### F0. Finite adjacent deployed certificates
 
-**Toy cases.**
+**Goal.** Separately from the asymptotic proof, finish exact finite adjacent
+certificates for deployed rows.
 
-```text
-slack t = 1, 2, 3
-quotient order N = 8, 16, 32
-rates rho = 1/2, 1/4
-canonical directions before arbitrary directions
-zero-base or canonical-base strata before arbitrary-base strata
-```
+Each packet must print `L(a0)`, `U(a0+1)`, `B*`, denominators, endpoint
+convention, and first-match structured-case decomposition.  This is a constants
+project: asymptotic `exp(o(n))` losses do not decide the few-bit finite margins.
 
-### M2. Line-decoding form of the corrected conjecture
+### F1. Extension-line MCA theorem or counterexample
 
-**Goal.** Restate the corrected MCA conjecture as a line-decoding theorem with explicit parameters.
+**Goal.** Decide whether extension-valued MCA lines create a new corrected
+reserve obstruction after base-valued confinement is paid.
 
-**Why it matters.** Many protocol analyses consume line-decoding more naturally than support-wise MCA. A clean line-decoding statement could make the SNARK ledger easier to use.
+This is lower priority than Q for the deployed threshold, but still important
+for protocol ledgers.  A good result specifies `B`, `F`, `D`, `k`, `delta`, the
+line field, denominator, and whether the witness is genuinely `F`-valued.
 
-**First attacks.**
+### P1. Protocol ledger consumption
 
-- Translate a support-wise MCA-bad slope into a line-decoding ambiguity.
-- Identify the exact `(delta, a_LD, n+1)` parameters.
-- Determine whether line-decoding is equivalent to residue-line packing or strictly stronger.
-- Look for separations: small MCA but large line-decoding, or vice versa.
+**Goal.** After a finite or asymptotic threshold theorem exists, feed it into
+Paper C without merging ledgers.
 
-### F1. Extension-line MCA lift or counterexample
+Do not start from protocol claims.  Start from a row packet with exact
+`q_gen`, `q_line`, `q_chal`, `q_list`, interleaving arity, object
+(`MCA`, `CA`, `list`, `line-decoding`), and endpoint convention.
 
-**Goal.** Decide whether MCA bounds over a base/generated field `B` lift cleanly to extension-valued lines over `F`, or whether genuinely `F`-valued residue denominators create new bad slopes.
+## Audit targets
 
-**Why it matters.** Protocols often use extension challenges. Paper D shows that below the cap, `F`-valued witnesses exist and are not merely `B`-rational. A clean lift theorem or counterexample is needed.
+### A0. Audit Paper D v12 and older imported CA/list conversions
 
-**First attacks.**
-
-- Do not search only among `B`-rational lines; Paper D’s confinement result makes that search incomplete.
-- Parameterize residue-line denominators `E in F[X] \ B[X]`.
-- Start with quadratic and cubic extensions of small fields.
-- Compare extension-code/interleaving identities on the list side with MCA behavior.
-
-**Toy cases.**
-
-```text
-B = F_p, F = F_{p^2} for p = 5, 7, 17
-B = F_p, F = F_{p^3} for small p
-H <= B^* of order 4, 8, 16
-rho = 1/2, slack t = 1 or 2
-```
-
-A good counterexample should specify `B`, `F`, `H`, `k`, `delta`, the bad line family, and why no base-field theorem explains it.
-
-### L2. Sharp interleaved-list constants near capacity
-
-**Goal.** Bound
-
-```text
-|Lambda(Int(C, mu), 1 - rho - eta)|
-```
-
-for the concrete arities used in protocols, without overpaying by the trivial Cartesian-product exponent.
-
-**Why it matters.** Protocol soundness uses interleaved list size divided by the challenge field. Overcharging the exponent can make a good parameter set look impossible.
-
-**First attacks.**
-
-- Replace independent base lists by simultaneous agreement-support families.
-- Try to inject interleaved lists into feasible supports plus low-dimensional polynomial choices.
-- Test whether quotient-core lower bounds multiply under interleaving or share the same support structure.
-- Compare product bounds with GGR-style bounds near capacity.
-
-### L3. Quotient-profile constants and dimension dithering
-
-**Goal.** Turn the quotient profile into a finite-length scanner and theorem.
-
-**Why it matters.** Many obstructions disappear when `k = rho*n` is changed to `k = rho*n - 1` or another low-divisibility dimension. This must be proven and checked at actual parameters.
-
-**First attacks.**
-
-- Prove maximal-remainder lemmas for `k = rho*n - r`, not only `r = 1`.
-- Write a divisor scanner for active quotient scales.
-- Compare exact-rate and dithered dimensions across all prize rates.
-- Connect dithered `k` to real AIR/R1CS/Plonkish degree bounds.
-
-**Toy cases.**
-
-```text
-n = 2^m, m = 8..20
-rho in {1/2, 1/4, 1/8, 1/16}
-k0 = rho*n
-k = k0 - r for r = 1..16
-quotient orders N = 2^c dividing n
-```
-
-Record which quotient scales remain active.
-
-### X1. List--CA--MCA equivalence without square-root loss
-
-**Goal.** Determine when a corrected-reserve list bound implies a corrected-reserve CA/MCA/line-decoding bound at essentially the same radius.
-
-**Why it matters.** Paper D uses a list-to-agreement conversion in the contrapositive direction to cap the challenge. A forward positive equivalence would be powerful, but may be false.
-
-**First attacks.**
-
-- Translate many MCA-bad slopes into locator fibers.
-- Use line-decoding as a middle object.
-- Track all field-size factors; a true asymptotic implication may still be too weak for `2^-128`.
-- Search for examples with small lists but large MCA error.
-
-### X3. Domain shattering and alternatives to smooth subgroups
-
-**Goal.** Characterize domains by quotient degeneracy and find FFT-friendly domain modifications that destroy quotient-core obstructions.
-
-**Why it matters.** If smooth subgroups cannot support the desired reserve, protocols may need folded/subspace-design codes, random/punctured domains, circle domains, or partially shattered smooth domains.
-
-**First attacks.**
-
-- Treat `Qprof` as a degeneracy measure.
-- Study random puncturing of smooth subgroups.
-- Study unions of cosets and mixed-radix domains.
-- Test whether quotient locator identities survive partial shattering.
-- Preserve FFT structure as much as possible.
-
-## Highest-priority audit targets
-
-### A0. Audit the imported list-to-agreement conversion
-
-Paper D’s universal cap is conditional on an imported Crites--Stewart conversion. Audit:
+Paper D v12 is now the main Paper D package. Its direct conversion route is
+self-contained, while its half-distance safe edge uses an isolated BCIKS import
+and older CS25/ABF list-to-agreement routes remain relevant for CA and
+list-comparison statements. Audit:
 
 - exact admissible radius range,
 - exact definition of the augmented code,
@@ -333,27 +492,26 @@ Paper C thm:ledger         reserve-certificate ledger
 
 Update this map if theorem numbers or labels change.
 
-## Suggested scripts
+## Scripts and finite packets
 
-Agents should prefer reproducible scripts over hand calculations.
-
-Planned scripts:
+Agents should prefer reproducible scripts over hand calculations, but do not run
+heavy computations casually.  For the current v13/grande-finale program, useful
+scripts are those that support one of these objects:
 
 ```text
-scripts/run_frontier.py
-scripts/entropy_margin.py
-scripts/quotient_profile.py
-scripts/restricted_sum_dp.py
-scripts/locator_fiber_scan.py
-scripts/mca_slope_scan.py
-scripts/extension_line_scan.py
-scripts/interleaved_budget.py
-scripts/certificate_emit.py
+row-sharp Q max-fiber or moment bounds
+BC chart-decomposition certificates
+quotient/composite rung audits
+frontier-adjacent row packets
+endpoint/denominator/budget arithmetic
+small exact counterexamples to proposed Q/BC routes
 ```
 
-`scripts/run_frontier.py` is an EXPERIMENTAL Paper B heuristic: it fixes `N = 32` and `l = 18`, expects primes with `32 | p-1`, splits the multiplicative subgroup, and uses meet-in-the-middle enumeration to test coverage of the `psi_2` elementary-symmetric map `(e1, e2)`. Similar frontier heuristics are useful when they isolate one exact quotient, locator, residue-line, or interleaved-list object, make all parameters explicit, and record coverage or counterexample witnesses before anyone tries to promote the pattern to a theorem.
+`scripts/run_frontier.py` is still a useful historical Paper B heuristic, but it
+is not the current main path unless its output is being used to test a Q,
+quotient, or exact adjacent-packet claim.
 
-### Script output standard
+### Output standard
 
 A script should output:
 
@@ -368,76 +526,9 @@ A script should output:
 
 JSON plus a human-readable table is preferred.
 
-## Toy-case menu
-
-### Restricted sums and quotient locators
-
-Start with:
-
-```text
-H = cyclic subgroup of order n
-Q = quotient of order N
-N in {4, 8, 16, 32}
-rho in {1/2, 1/4}
-slack t in {1, 2, 3}
-```
-
-Compute restricted sums in `Q`, coverage of the field/subgroup, and the corresponding bad-slope counts.
-
-### Quotient-profile dithering
-
-For each `n = 2^m`, compare:
-
-```text
-k = rho*n
-k = rho*n - 1
-k = rho*n - 2
-...
-k = rho*n - 16
-```
-
-Record active quotient orders `N`, contribution size, and whether the dither is compatible with a plausible proof-system degree bound.
-
-### Locator fibers
-
-For small fields, enumerate feasible agreement supports and locator polynomials.
-
-Start with monomial-prefix received words, then random received words, then adversarially chosen received words.
-
-Look for:
-
-- quotient-periodic families,
-- aperiodic collision templates,
-- unexpectedly large fibers after quotient removal,
-- field-size thresholds where characteristic-zero behavior transfers.
-
-### MCA bad slopes
-
-For small `q,n,k`, enumerate pairs `(f,g)` and slopes `z` where `f + z g` is close to the code but no common support explains `f` and `g`.
-
-Record whether the witness is:
-
-```text
-canonical direction
-zero-base direction
-quotient-periodic
-residue-line normal form
-extension-valued only
-```
-
-### Extension-line witnesses
-
-Use tiny extensions first:
-
-```text
-F_{p^2}, F_{p^3}, F_{p^4}
-```
-
-Search for bad lines with denominator polynomial `E` not defined over the base field. Compare against base-field confinement statements.
-
-### Circle / Chebyshev analogues
-
-For small analogues of circle-group or isogeny-smooth domains, replace multiplicative locators `X^a - b` by Chebyshev-style locators. Test whether the universal-cap fiber construction still has an analogue.
+Small toy cases are useful only when they test a named route.  A toy-case note
+should say which label it attacks or supports, for example `prob:row-sharp-q`,
+`prob:saturated-bc`, a quotient rung audit, or an extension-line residual.
 
 ## What not to do
 
@@ -451,7 +542,6 @@ Do **not**:
 - replace interleaved-list size by base-list size without a bridge theorem;
 - replace MCA by CA or line-decoding without stating the conversion;
 - cite Paper D’s cap as error-one in the forbidden band;
-- treat the universal cap as unconditional before auditing the imported conversion;
 - present a small-case experiment as a theorem.
 - edit the main Papers A-D directly unless a maintainer explicitly asks for that change; put new material in `experimental/` first.
 
@@ -487,28 +577,155 @@ Attach script, seed, exact command, or symbolic certificate.
 
 ## Good first PRs
 
-1. Implement `quotient_profile.py` for dyadic `n` and dithered `k`.
-2. Implement `entropy_margin.py` and reproduce the reserve inequalities used in the papers.
-3. Write a theorem-label map across the four papers.
-4. Audit the Crites--Stewart import used by Paper D.
-5. Exhaust `q=17`, `n=16`, `rho=1/2,1/4` for locator fibers and MCA bad slopes.
-6. Compare base-list product bounds with direct interleaved-list enumeration for tiny `mu=2` cases.
-7. Search for the first genuinely extension-valued bad line over `F_{p^2}`.
-8. Produce a JSON schema for Paper C reserve certificates.
-9. Start a Lean formalization of the core definitions, reserve ledgers, quotient identities, and finite certificate statements.
+1. Write a small exact Q toy packet that tests `prob:row-sharp-q` on a row where
+   the full fiber distribution can be enumerated.
+2. Produce a quotient/composite rung audit for one active `a+` row, with exact
+   integer margins and a short note.
+3. Turn one residual BC chart into either a paid one-parameter pencil or a named
+   higher-dimensional obstruction.
+4. Add a theorem-statement Lean target for row-sharp Q in
+   `experimental/lean/grande_finale/`, or the corresponding v13 raw node in
+   `experimental/lean/cap25_cap_v13_raw_compact/`, without pretending it is
+   proved.
+5. Formalize one already-proved `grande_finale` local lemma that is still
+   TeX-only, such as the composite-prefix `gcd(e,N)` descent.
+6. Build a new exact adjacent example that prints `L(a0)`, `U(a0+1)`, `B*`,
+   denominators, endpoint convention, and first-match cells.
+7. Audit one Paper D v12/v13 raw finite inequality against its script or printed
+   integer certificate.
 
-Lean formalization would be very useful for this project, but it has not been done yet. Start small: formalize the finite-field/domain definitions, locator identities, quotient-profile predicates, and exact script-certificate statements before attempting the main local-limit conjectures.
+### Lean formalization correspondence
+
+All Lean material for this repository belongs under:
+
+```text
+experimental/lean/
+```
+
+Keep package names, module paths, and Lake `globs` coherent; for example a
+package named `Foo` should have either a root `Foo.lean` or modules under
+`Foo/`.
+
+The two most important formalization tracks are:
+
+```text
+experimental/lean/grande_finale/              final-ledger components
+experimental/lean/cap25_cap_v13_raw_compact/  v13 raw companion formalization
+experimental/lean/asymptotic_rs_mca/          add this if building the compact proof
+```
+
+Treat these as co-priority.  The first track targets
+`experimental/grande_finale.tex`: first-match ledger, BC reduction, SP-from-Q,
+Sidon/Fourier payment, and adjacent-threshold logic.  The second track targets
+the v13 raw/compact certificate ledger: identity-prefix floors, conversion
+steps, structured-cell payments, finite certificates, and the theorem nodes
+that may later be promoted into Paper D.  The compact proof track should target
+`experimental/asymptotic_rs_mca.tex`: closed-ledger package, primitive Boolean
+slice, BSG/quasicube proof, and entropy-frontier conclusion.
+
+Already represented in `experimental/lean/grande_finale/`:
+
+```text
+budget and staircase kernels
+support-wise CA/MCA predicates
+moment kernels for Q
+BC moving-root and saturation lemmas
+SP-from-Q
+selected finite arithmetic anchors
+```
+
+Still missing there:
+
+```text
+formal statement of the closed-ledger package used by asymptotic_rs_mca.tex
+full theorem-by-theorem map from asymptotic_rs_mca.tex to v13 raw / grande_finale
+formal primitive Boolean slice proof through BSG and quasicube growth
+formal entropy-frontier calculation
+finite adjacent deployed safe rows with exact constants
+```
+
+Use `experimental/lean/lean-blueprint.json` as the older formalization
+blueprint for `experimental/cap25_cap_v13_raw.tex`, and compare it against the
+package `experimental/lean/cap25_cap_v13_raw_compact/` when auditing v13
+coverage.  The blueprint is useful orientation, not a substitute for direct
+TeX/Lean statement comparison.  The current important v13 nodes are Q prefix
+flatness, BC chart decomposition, finite adjacent ledgers, identity-prefix
+floors, conversion/certificate steps, and full RS-MCA resolution; SP should be
+read together with the theorem `SP follows from Q` in `grande_finale`.
+
+Do not fill a `lean_file` / `lean_name` slot by guesswork.  Fill or update it
+only when an actual Lean declaration exists under `experimental/lean/` and the
+statement has been matched to the blueprint node.
+
+Maintain TeX/Lean correspondence manually.  Bulk source-scanning tools are not
+part of the workflow because they can attach generic helper declarations to the
+wrong theorem labels or overwrite curated notes.  When a Lean declaration is
+added, compare its statement directly against the TeX node before recording it.
+
+Interpret existing correspondence fields carefully:
+
+```text
+mapping_confidence  exact_label_match / curated_alias / name_heuristic / mixed
+audit_status        whether the match still needs statement audit or proof work
+related_lean        all Lean declarations supporting a split blueprint node
+statement_status    source-scan status; not a Lake build result
+```
+
+`lean-inventory.json` and `lean-blueprint-report.md` are static orientation
+snapshots, not authorities.  Prefer package-local README files, correspondence
+notes, and direct theorem-statement audits when deciding what has really been
+formalized.
+
+If you complete a Lean theorem, update the relevant package README or
+correspondence note by hand, add an entry to `experimental/agents-log.md`, and
+record any blueprint change explicitly.  Only call a result Lean-certified after
+the relevant Lake package has actually been built and the theorem statement has
+been compared against the TeX node.
+
+The highest-priority formalization tasks are now:
+
+1. formalize `experimental/asymptotic_rs_mca.tex` end to end, at least as
+   theorem statements plus proved elementary steps;
+2. in `experimental/lean/grande_finale/`, connect the imported structured
+   cases to the closed-ledger package used by the compact proof;
+3. in `experimental/lean/cap25_cap_v13_raw_compact/`, keep the v13 raw
+   companion formalization aligned with the raw/compact TeX ledger, especially
+   identity-prefix floors, structured-cell payments, and finite certificates;
+4. separately, formalize finite adjacent deployed certificates only after the
+   exact constants and replay packets are stable.
+
+The supplementary v13 package `experimental/lean/cs25_cap_v13_experimental/`
+can be used for threshold/list-side compiler pieces if it matches the current
+raw ledger.  Paper D v12 still has a substantial Lean skeleton under
+`experimental/lean/cs25_cap_v12/`, but that is now secondary unless a
+maintainer explicitly asks for Paper D v12 formalization.
+
+For the compact prize-facing theorem note, use the separate Mathlib package
+`experimental/lean/towards_prize/`.  Its entry point is `TowardsPrize.lean` and
+it targets `tex/towards-prize.tex`: MCA/CA definitions, sparse layer,
+half-distance/deep-regime statements, identity-prefix floor, and deep-point
+conversion.  Before citing any towards-prize result as Lean-certified, run the
+package in a Mathlib-enabled Lean 4.28 environment and add a theorem-by-theorem
+map; the deployed binomial-entropy cap rows remain outside this package unless
+explicitly formalized.
 
 ## Success criteria
 
 The project advances if an agent produces any of the following:
 
-- a new theorem clearing one reserve ledger,
-- a counterexample showing a proposed positive theorem is false,
-- a sharper explicit constant for a known bound,
-- a verified script certificate replacing a hand calculation,
-- a protocol reduction rewritten in exact ledger form,
-- a toy-case database that reveals a new obstruction template,
-- an audit that upgrades or corrects a conditional import.
+- a Lean theorem or accurately stated Lean target for
+  `experimental/asymptotic_rs_mca.tex`;
+- an adversarial audit that finds and fixes a real gap, or records a
+  checked `NO ISSUE` result with exact references;
+- a theorem-label map from `asymptotic_rs_mca.tex` to the v13 raw and Grande
+  Finale structured-case results;
+- a clean proof rewrite that is suitable for external readers;
+- a final computation or example that illustrates and checks a key proof
+  mechanism;
+- an exact finite adjacent certificate with all constants and denominators
+  printed;
+- a counterexample that identifies a new obstruction floor;
+- a protocol ledger that consumes an already-proved threshold theorem without
+  merging field denominators.
 
 A negative result is valuable. If a conjecture fails, identify the new obstruction floor and update the certificate logic accordingly.

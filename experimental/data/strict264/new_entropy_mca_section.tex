@@ -1,0 +1,419 @@
+\section{Generated-Field Entropy Floors and Deep-Point MCA Conversion}
+\label{sec:entropy-mca-floors}
+
+\textbf{Status: \textsc{New-local}.}
+This section records theorem-level lower floors that are independent of the
+Cycle84/116/119 finite numerator.  They are not positive theorems.  They say
+which reserve terms any positive Proximity-Prize theorem must clear before the
+aperiodic local-limit problem is even relevant.
+
+The field ledgers are kept separate.  Let
+\[
+  K\subseteq F,
+  \qquad D\subseteq K,
+  \qquad |D|=n,
+  \qquad q_K=|K|,
+  \qquad q=|F|.
+\]
+Here \(K\) is the generated/base field that pays for locator entropy, while
+\(F\) is the line or challenge field when the received word or deep-point line
+is allowed to be \(F\)-valued.
+
+\subsection{Generated-field prefix entropy floor}
+
+\begin{theorem}[generated-field prefix list floor]
+\label{thm:generated-prefix-list-floor}
+Let \(K\subseteq F\) be finite fields, let \(D\subset K\) have size \(n\), and
+let
+\[
+  C=\RS[F,D,k].
+\]
+Fix an agreement level
+\[
+  a=k+\sigma,\qquad 0\leq \sigma\leq n-k.
+\]
+Then there is a \(K\)-valued received word \(U:D\to K\) such that
+\[
+  \#\{P\in F[X]_{<k}: |\{x\in D:P(x)=U(x)\}|\geq a\}
+  \geq
+  \left\lceil {\binom{n}{a}\over q_K^{\sigma}}\right\rceil .
+\]
+Moreover \(U\) may be taken to be the evaluation on \(D\) of a monic degree
+\(a\) polynomial over \(K\), and the listed codewords are already defined over
+\(K\).
+\end{theorem}
+
+\begin{proof}
+For every \(a\)-subset \(S\subseteq D\), write its monic locator as
+\[
+  L_S(X)=\prod_{x\in S}(X-x)
+       =X^a+\ell_{a-1}(S)X^{a-1}+\cdots+\ell_0(S).
+\]
+Consider the prefix map
+\[
+  \pi(S)=(\ell_k(S),\ell_{k+1}(S),\ldots,\ell_{a-1}(S))\in K^\sigma .
+\]
+By pigeonhole, some vector \(h=(h_0,
+\ldots,h_{\sigma-1})\in K^\sigma\) has a fiber of size at least
+\(\lceil\binom{n}{a}/q_K^\sigma\rceil\).  Define
+\[
+  U_h(X)=X^a+\sum_{r=0}^{\sigma-1}h_r X^{k+r}.
+\]
+If \(\pi(S)=h\), then modulo \(L_S\) one has
+\[
+  X^a\equiv -\sum_{i=0}^{a-1}\ell_i(S)X^i,
+\]
+so the coefficients of the remainder of \(U_h\) in degrees
+\(k,k+1,\ldots,a-1\) all vanish.  Hence the remainder \(P_S=U_h\bmod L_S\)
+has degree \(<k\), and \(P_S\) agrees with \(U_h\) on every point of \(S\).
+
+It remains only to note that these codewords are distinct.  If
+\(P_S=P_{S'}\) for two different \(a\)-subsets, then \(U_h-P_S\) has degree at
+most \(a\) and vanishes on \(S\cup S'\), which has size larger than \(a\).  Thus
+\(U_h=P_S\), impossible because \(U_h\) is monic of degree \(a\) while
+\(\deg P_S<k\leq a\).
+\end{proof}
+
+\begin{corollary}[generated-field reserve is necessary]
+\label{cor:generated-reserve-necessary}
+Any worst-case list theorem at agreement \(a=k+\sigma\) with list bound \(L_0\)
+for all \(K\)-valued received words must have
+\[
+  q_K^\sigma\geq {\binom{n}{a}\over L_0}.
+\]
+In particular, for fixed rate \(a/n=\rho+o(1)\), the entropy term
+\(\log_2\binom{n}{a}=H_2(\rho)n+o(n)\) must be paid by
+\(\sigma\log_2 q_K\), up to the desired list budget.
+\end{corollary}
+
+\subsection{Quotient-fiber entropy floor}
+
+\begin{theorem}[quotient-fiber prefix list floor]
+\label{thm:quotient-prefix-list-floor}
+Assume, in addition, that \(D\subset K^*\) admits a polynomial quotient map
+\[
+  \phi:D\to Q,
+  \qquad \phi(x)=x^c,
+\]
+whose fibers all have size \(c\).  Let \(N=|Q|=n/c\).  Suppose the agreement
+level is a union-of-fibers level
+\[
+  a=cm,
+  \qquad 0\leq m\leq N,
+\]
+and put
+\[
+  \sigma_Q=m-\left\lceil {k\over c}\right\rceil .
+\]
+If \(\sigma_Q\geq0\), then there is a \(K\)-valued received word
+\(U:D\to K\) such that
+\[
+  \#\{P\in F[X]_{<k}: |\{x\in D:P(x)=U(x)\}|\geq a\}
+  \geq
+  \left\lceil {\binom{N}{m}\over q_K^{\sigma_Q}}\right\rceil .
+\]
+The witnesses are supported on fiber-union agreement sets.
+\end{theorem}
+
+\begin{proof}
+For \(A\subseteq Q\) of size \(m\), let
+\[
+  S_A=\phi^{-1}(A),
+  \qquad
+  L_A(X)=\prod_{y\in A}(X^c-y)
+        =X^{cm}+\sum_{r=0}^{m-1}\lambda_r(A)X^{cr}.
+\]
+The locator \(L_A\) vanishes exactly on \(S_A\).  Only monomials whose degree is
+multiple of \(c\) occur.  Record the high quotient coefficients
+\[
+  \pi_Q(A)=\bigl(\lambda_r(A):\lceil k/c\rceil\leq r\leq m-1\bigr)
+  \in K^{\sigma_Q}.
+\]
+Choose a heaviest fiber of \(\pi_Q\), say with value \(h_r\), and define
+\[
+  U_h(X)=X^{cm}+\sum_{r=\lceil k/c\rceil}^{m-1}h_r X^{cr}.
+\]
+For every \(A\) in this fiber, reducing modulo \(L_A\) cancels every monomial
+of degree at least \(k\).  Thus \(U_h\bmod L_A\) has degree \(<k\) and agrees
+with \(U_h\) on \(S_A\), which has size \(a\).  Distinctness follows as in
+Theorem~\ref{thm:generated-prefix-list-floor}: two different quotient subsets
+have fiber-union supports whose union has more than \(a\) points, while
+\(U_h-P\) has degree at most \(a\).
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:quotient-prefix-list-floor} is a lower floor, not a BCHKS
+import.  It is the elementary entropy pigeonhole restricted to quotient-periodic
+locators.  It explains why a positive theorem must budget quotient cores rather
+than treating them as a negligible aperiodic error term.
+\end{remark}
+
+\subsection{Base list floors survive interleaving}
+
+\begin{proposition}[base-list floor embeds into every interleaving arity]
+\label{prop:base-floor-embeds-interleaving}
+Let \(C=\RS[F,D,k]\).  If a received word \(U:D\to F\) has \(L\) distinct
+codewords of \(C\) agreeing with it on at least \(a\) positions, then for every
+\(\mu\geq1\) there is a \(\mu\)-row received word whose interleaved list at
+common agreement \(a\) has size at least \(L\).
+\end{proposition}
+
+\begin{proof}
+Use the \(\mu\)-row word \((U,0,\ldots,0)\).  If \(P_i\) are the listed
+one-row codewords, then \((P_i,0,
+\ldots,0)\in C^\mu\) agree with the received word on exactly the same agreement
+sets as \(P_i\) agrees with \(U\).  Thus the common-support interleaved list
+contains at least these \(L\) tuples.
+\end{proof}
+
+\begin{corollary}[challenge-field list budget gate]
+\label{cor:challenge-list-budget-gate}
+Any protocol ledger whose list term is divided by a challenge field of size
+\(q_{\rm chal}\) must, at minimum, clear
+\[
+  {1\over q_{\rm chal}}
+  \left\lceil {\binom{n}{a}\over q_K^{a-k}}\right\rceil
+\]
+for arbitrary \(K\)-valued received words.  At quotient-fiber levels \(a=cm\),
+it must also clear
+\[
+  {1\over q_{\rm chal}}
+  \left\lceil {\binom{N}{m}\over q_K^{m-\lceil k/c\rceil}}\right\rceil .
+\]
+These are lower floors for the interleaved-list term; an L1 positive theorem can
+only improve the aperiodic remainder after these floors are separated.
+\end{corollary}
+
+\subsection{Deep-point conversion from lists to support-wise MCA}
+
+\begin{theorem}[deep-point list-to-MCA conversion]
+\label{thm:deep-point-list-to-mca}
+Let \(F\) be a finite field, \(D\subset F\) have size \(n<q=|F|\), and let
+\[
+  C=\RS[F,D,k],
+  \qquad
+  C^+=\RS[F,D,k+1].
+\]
+Suppose a word \(U:D\to F\) has \(L\) distinct codewords
+\(P_1,
+\ldots,P_L\in C^+\) that agree with \(U\) on at least \(a\) points, where
+\(a>k\).  Then there is \(\alpha\in F\setminus D\) such that the received line
+\[
+  f_\alpha(x)={U(x)\over x-\alpha},
+  \qquad
+  g_\alpha(x)=-{1\over x-\alpha}
+\]
+has at least
+\[
+  {L\over 1+k(L-1)/(q-n)}
+\]
+distinct support-wise noncontained bad slopes at agreement \(a\).  Consequently,
+for the worst-line support-wise MCA error over the slope field \(F\),
+\[
+  \varepsilon_{\rm mca}(C,1-a/n)
+  \geq
+  {L(q-n)\over q\bigl(q-n+k(L-1)\bigr)}.
+\]
+\end{theorem}
+
+\begin{proof}
+For \(\alpha\in F\setminus D\) and each listed \(P_i\), put
+\(z_i=P_i(\alpha)\) and
+\[
+  Q_i(X)={P_i(X)-P_i(\alpha)\over X-\alpha}.
+\]
+Since \(\deg P_i<k+1\), we have \(Q_i\in F[X]_{<k}\).  On every point where
+\(P_i(x)=U(x)\),
+\[
+  Q_i(x)={U(x)-P_i(\alpha)\over x-\alpha}
+        =f_\alpha(x)+z_i g_\alpha(x),
+\]
+so \(z_i\) is an explaining slope at agreement \(a\).
+
+This explanation is support-wise noncontained.  Indeed, if
+\(g_\alpha\) agreed on the same support with a degree-\(<k\) polynomial \(R\),
+then \((X-\alpha)R(X)+1\) would have degree at most \(k\) and more than \(k\)
+roots, which is impossible.
+
+It remains to choose \(\alpha\) so that many of the values \(P_i(\alpha)\) are
+distinct.  Let \(\Omega=F\setminus D\), so \(|\Omega|=q-n\).  For two distinct
+polynomials \(P_i,P_j\in F[X]_{<k+1}\), the equation
+\(P_i(\alpha)=P_j(\alpha)\) has at most \(k\) solutions.  Hence the average over
+\(\alpha\in\Omega\) of the number of ordered colliding pairs \((i,j)\ne(i,i)\)
+is at most \(kL(L-1)/(q-n)\).  Choose \(\alpha\) no worse than average.  If
+\(M\) is the number of distinct values among \(P_1(\alpha),\ldots,P_L(\alpha)\),
+then Cauchy's inequality gives
+\[
+  L^2\leq M\left(L+{kL(L-1)\over q-n}\right),
+\]
+so
+\[
+  M\geq {L\over 1+k(L-1)/(q-n)}.
+\]
+Dividing by the slope-field size \(q\) gives the displayed MCA lower bound.
+\end{proof}
+
+\begin{corollary}[generated-field entropy floor for MCA]
+\label{cor:generated-entropy-mca-floor}
+Let \(K\subseteq F\), let \(D\subset K\), and let \(q_K=|K|\), \(q=|F|\),
+\(|D|=n<q\).  For \(C=\RS[F,D,k]\) and any agreement level \(a\geq k+1\), put
+\[
+  L_{\rm ent}^+(a)
+  =\left\lceil {\binom{n}{a}\over q_K^{a-k-1}}\right\rceil .
+\]
+Then
+\[
+  \varepsilon_{\rm mca}(C,1-a/n)
+  \geq
+  {L_{\rm ent}^+(a)(q-n)
+   \over
+   q\bigl(q-n+k(L_{\rm ent}^+(a)-1)\bigr)}.
+\]
+If, in addition, a quotient map with fiber size \(c\) is available and
+\(a=cm\), then the same lower bound holds with
+\[
+  L_{\rm quot}^+(a,c)
+  =\left\lceil
+    {\binom{n/c}{m}
+     \over
+     q_K^{m-\lceil (k+1)/c\rceil}}
+    \right\rceil
+\]
+whenever the exponent is nonnegative.
+\end{corollary}
+
+\begin{proof}
+Apply Theorem~\ref{thm:generated-prefix-list-floor} to the augmented code
+\(C^+=\RS[F,D,k+1]\), then apply
+Theorem~\ref{thm:deep-point-list-to-mca}.  The quotient version uses
+Theorem~\ref{thm:quotient-prefix-list-floor} at dimension \(k+1\).
+\end{proof}
+
+\begin{remark}[how to use the floor]
+For the Proximity-Prize target \(\varepsilon^*=2^{-128}\), a positive MCA theorem
+at agreement \(a\) cannot be true until the right-hand side of
+Corollary~\ref{cor:generated-entropy-mca-floor} is at most \(2^{-128}\), and the
+corresponding quotient-core variants are also below budget.  This is only a
+necessary condition; the remaining aperiodic residue-line local-limit theorem is
+still needed after the floors are cleared.
+\end{remark}
+
+
+\begin{corollary}[strict264 quotient-floor obstruction over \(\F_{17^{32}}\)]
+\label{cor:strict264-quotient-floor}
+Let \(F=\F_{17^{32}}\), let \(H\subset F^*\) be a multiplicative subgroup of
+order \(512\), and let
+\[
+  C=\RS[F,H,256].
+\]
+Then, for the support-wise finite-slope MCA quantity over \(F\),
+\[
+  \varepsilon_{\rm mca}(C,31/64)>2^{-128}.
+\]
+Equivalently, there is an \(F\)-valued received line with more than seven
+support-wise noncontained bad slopes at agreement
+\[
+  a=264.
+\]
+\end{corollary}
+
+\begin{proof}
+Use the quotient map \(x\mapsto x^8\) on \(H\).  Since \(H\) is cyclic of order
+\(512\), this map has fibers of size \(8\) and image size \(64\).  Put
+\[
+  c=8,
+  \qquad N=64,
+  \qquad a=264=8\cdot 33,
+  \qquad m=33.
+\]
+Apply Theorem~\ref{thm:quotient-prefix-list-floor} to the augmented code
+\[
+  C^+=\RS[F,H,257].
+\]
+Here
+\[
+  m-\left\lceil {257\over 8}\right\rceil=33-33=0,
+\]
+so no generated-field denominator is paid.  Concretely, for every
+\(33\)-subset \(A\subset H^8\), the locator
+\[
+  L_A(X)=\prod_{y\in A}(X^8-y)
+\]
+has degree \(264\), and the remainder of \(X^{264}\) modulo \(L_A\) has degree
+at most \(256\).  Thus the \(K\)-valued word \(U(x)=x^{264}\) has at least
+\[
+  L=\binom{64}{33}
+\]
+distinct \(C^+\)-codewords agreeing on \(264\) points.
+
+Now apply Theorem~\ref{thm:deep-point-list-to-mca} with \(q=17^{32}\),
+\(n=512\), and \(k=256\).  The number \(M\) of distinct support-wise bad slopes
+for a suitable deep point satisfies
+\[
+  M\geq {L\over 1+256(L-1)/(17^{32}-512)}.
+\]
+Since \(L>16\) and \(L<2^{64}\), we have
+\[
+  256(L-1)<2^{72}<17^{32}-512.
+\]
+Hence the denominator is less than \(2\), so \(M>L/2>8\).  In particular
+\(M\geq 9\).
+
+Finally,
+\[
+  7\cdot 2^{128}-17^{32}
+  =14064973686101998399515954701426232831>0,
+\]
+so even seven bad slopes over \(F\) would exceed the \(2^{-128}\) budget.  The
+constructed line has at least nine.  Therefore
+\(\varepsilon_{\rm mca}(C,31/64)>2^{-128}\).
+\end{proof}
+
+\begin{remark}
+This is a quotient-core lower floor, not an aperiodic strict264 certificate.  It
+shows that the agreement-264 obstruction for the \(\F_{17^{32}}\), \(|H|=512\),
+\(k=256\) row already follows from the augmented-code quotient entropy floor plus
+the deep-point conversion.  The remaining threshold-pinning problem is therefore
+the next-step upper bound at agreement \(265\), not the existence of seven bad
+slopes at agreement \(264\).
+\end{remark}
+
+\subsection{Subfield confinement for base-valued lines}
+
+\begin{theorem}[base-valued line slopes are subfield-confined]
+\label{thm:base-valued-subfield-confinement}
+Let \(K\subseteq F\) be finite fields, let \(D\subset K\), and let
+\(C=\RS[F,D,k]\).  Suppose \(f,g:D\to K\).  If a slope \(z\in F\setminus K\)
+has an explaining codeword on a support \(S\subseteq D\) with \(|S|\geq k\),
+then \(f\) and \(g\) are simultaneously explained on \(S\) by codewords of
+\(C\).  Therefore every support-wise noncontained bad slope for a \(K\)-valued
+line at agreement at least \(k\) lies in \(K\).
+\end{theorem}
+
+\begin{proof}
+Extend the \(K\)-linearly independent set \(\{1,z\}\) to a basis
+\(1,z,\theta_3,
+\ldots,\theta_d\) of \(F\) over \(K\).  Let \(P\in F[X]_{<k}\) explain
+\(f+zg\) on \(S\).  Write
+\[
+  P=P_0+zP_1+\theta_3P_3+\cdots+\theta_dP_d,
+  \qquad P_i\in K[X]_{<k}.
+\]
+For every \(x\in S\subset K\), comparing coordinates in this basis gives
+\[
+  P_0(x)=f(x),
+  \qquad
+  P_1(x)=g(x),
+  \qquad
+  P_i(x)=0\quad(i\geq3).
+\]
+Thus \(P_0\) and \(P_1\) simultaneously explain \(f\) and \(g\) on the same
+support \(S\).  Such a slope is contained, not support-wise MCA-bad.
+\end{proof}
+
+\begin{remark}
+This theorem is one-sided.  It does not rule out genuinely \(F\)-valued lines;
+in fact the deep-point construction above usually creates \(F\)-valued endpoints
+when \(\alpha\notin K\).  Thus extension-field MCA work must search among
+extension-valued residue lines, not only among base-valued lines.
+\end{remark}

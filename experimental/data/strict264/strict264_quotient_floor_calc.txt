@@ -1,0 +1,16 @@
+n=512 k=256 a=264
+log2 binom(n,a)              = 506.813519
+log2 L_ent base              = -539.576968
+log2 L_ent plus              = -408.778158
+log2 MCA entropy floor       = -539.576968
+above 2^-128?                = False
+
+quotient floor
+c=8 N=64 m=33
+log2 binom(N,m)              = 60.624223
+exp_base=m-ceil(k/c)         = 1
+exp_plus=m-ceil((k+1)/c)     = 0
+log2 L_quot base             = -70.174588
+log2 L_quot plus             = 60.624223
+log2 MCA quotient floor      = -70.174588
+above 2^-128?                = True

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "paper-a",
+    "letter": "A",
+    "title": "Paper A: No-Slack Obstruction",
+    "file": "RS_disproof_v3.pdf",
+    "pdf": "papers/RS_disproof_v3.pdf",
+    "githubPdf": "https://github.com/przchojecki/rs-mca/blob/main/RS_disproof_v3.pdf",
+    "tex": "https://github.com/przchojecki/rs-mca/blob/main/tex/RS_disproof_v3.tex",
+    "summary": "Refutes the old no-slack support-wise line-MCA statement for smooth multiplicative Reed-Solomon domains."
+  },
+  {
+    "id": "paper-b",
+    "letter": "B",
+    "title": "Paper B: Slack, Quotient, and Entropy Theory",
+    "file": "slackMCA_v4.pdf",
+    "pdf": "papers/slackMCA_v4.pdf",
+    "githubPdf": "https://github.com/przchojecki/rs-mca/blob/main/slackMCA_v4.pdf",
+    "tex": "https://github.com/przchojecki/rs-mca/blob/main/tex/slackMCA_v4.tex",
+    "summary": "Builds the corrected-reserve theory and adds the solved high-agreement line/list/curve boundary layer."
+  },
+  {
+    "id": "paper-c",
+    "letter": "C",
+    "title": "Paper C: SNARK and Protocol Ledger",
+    "file": "snarks_v5.pdf",
+    "pdf": "papers/snarks_v5.pdf",
+    "githubPdf": "https://github.com/przchojecki/rs-mca/blob/main/snarks_v5.pdf",
+    "tex": "https://github.com/przchojecki/rs-mca/blob/main/tex/snarks_v5.tex",
+    "summary": "Separates protocol soundness accounting and adds a theorem-backed high-agreement ledger compiler."
+  },
+  {
+    "id": "paper-d",
+    "letter": "D",
+    "title": "Paper D: Two-Sided Cap and Certificate Grammar",
+    "file": "cs25_cap_v12.pdf",
+    "pdf": "papers/cs25_cap_v12.pdf",
+    "githubPdf": "https://github.com/przchojecki/rs-mca/blob/main/cs25_cap_v12.pdf",
+    "tex": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v12.tex",
+    "summary": "Main Proximity Prize submission reference: self-contained cap route, safe-side pincer, deployed-row two-sided intervals, model transfers, explicit witnesses, optimized profile, and certificate grammar v2."
+  },
+  {
+    "id": "towards-prize",
+    "letter": "T",
+    "stackLabel": "Towards Prize",
+    "title": "Towards Prize: Sparse Threshold Note",
+    "file": "towards-prize.pdf",
+    "pdf": "papers/towards-prize.pdf",
+    "githubPdf": "https://github.com/przchojecki/rs-mca/blob/main/towards-prize.pdf",
+    "tex": "https://github.com/przchojecki/rs-mca/blob/main/tex/towards-prize.tex",
+    "summary": "Compact companion to Paper D: delta-star staircase, deployed KoalaBear pincer, and sparse residual reduction for the remaining MCA threshold task."
+  }
+]

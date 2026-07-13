@@ -1,0 +1,128 @@
+# Correspondence Map — L1 Threshold Ledger
+
+Status: stdlib-only arithmetic / counting certificates for tonight's L1/M1
+threshold results (PRs #222–#225).
+
+Scope: this map records exactly which Lean theorem certifies each finite gate the
+notes consume. The package proves only `Nat` arithmetic and `Nat`-list counting
+facts. Finite-field, polynomial, Reed–Solomon, and reconstruction-bijection
+statements remain cited proofs / verifier outputs, recorded as typed targets.
+
+Build:
+
+```sh
+cd experimental/lean/l1_threshold_ledger
+lake build
+```
+
+## Theorem R closing — `L1Threshold.PairCountClosing`
+
+Source: `experimental/notes/l1/l1_prime_ell_onset.md` (PR #223, Theorem R,
+Lemma R, §Tightness, §Scope); companion
+`experimental/notes/l1/l1_coset_mixed_vacancy_threshold.md` (PR #222, Theorem A);
+`experimental/thresholds.tex`.
+
+| Claim consumed by the note | Lean certificate | Source claim | Status |
+| --- | --- | --- | --- |
+| Discrete Cauchy–Schwarz over the `m = t+1` cosets: `(sum rho_j)^2 <= m sum rho_j^2`. | `cs4` (`m=4`), `cs3` (`m=3`); built from `amgm` (`2xy <= x^2+y^2`). | Note "Closing", the C–S step. | Lean-certified |
+| Integer closing: `R^2 <= 4R + 4(ell-1)(ell-2)` and `ell >= 3` ⟹ `R <= 2ell-1` (positive root `< 2ell` because `ell > 2`). | `quad_closing` | Note "Closing", the strict `(ell-1)(ell-2) < ell(ell-2)` step. | Lean-certified |
+| **Theorem R** (`t=3`, `m=4`): pair-count budget ⟹ `R = sum_j rho_j <= 2ell-1 < 2ell`, so no mixed minimal kernel set. | `closing_four`; `closing_four_capped` (note's full hypotheses incl. `rho_j <= ell-1`); `closing_four_list` (`sum_j` form). | Note "Theorem R". | Lean-certified (given Lemma R) |
+| The `(2,3)` cell (`t=2`, `m=3`) by the same proof over 3 cosets. | `closing_three`; `closing_three_list`. | Note Corollary, `(2,3)`. | Lean-certified (given Lemma R) |
+| Razor-tightness: `[3,2,2,2]` at `ell=5` attains the budget with equality (`sum rho(rho-1)=12=(ell-1)(ell-2)`) and hits `R=2ell-1=9`. | `tightness_four`; `tightness_four_inrange`. | Note §Tightness (`p in {41,61}`). | Lean-certified (`decide`, axiom-free) |
+| Method boundary is sharp in `t`: at `t=4` (`m=5`) profiles `[3,3,3,3,3]` (`ell=7`) and `[5,5,5,5,3]` (`ell=11`) meet the budget but have `R >= 2ell` — pair-counting closes exactly `t=3`. | `noclose_five`; `noclose_five_11`. | Note §Scope (IP-max `>= 2ell` for `t>=4`). | Lean-certified (`decide`, axiom-free) |
+
+## QF.10 fiber double-count — `L1Threshold.FiberDoubleCount`
+
+Source: `experimental/notes/m1/conjecture_f_fiber_scoped.md` (PR #225, Theorem A,
+§3 MDS input).
+
+| Claim consumed by the note | Lean certificate | Source claim | Status |
+| --- | --- | --- | --- |
+| Finite-set pigeonhole (no `Finset` in core): a `Nodup` list of naturals `< T` has length `<= T`. | `nodup_lt_length` | Counting primitive behind the double-count. | Lean-certified |
+| Injective packing / double-count: `#members * binom(j,d) <= binom(n,d)` from "each `d`-subset in `<= 1` member". | `double_count` | Note Theorem A proof (double-counting `d`-subsets). | Lean-certified (given `<= 1 owner`) |
+| Division step: `E * b <= T` ∧ `0 < b` ⟹ `E <= T / b`. | `fiber_card_bound` | Note Theorem A, the quotient bound. | Lean-certified |
+| **QF.10 Theorem A** (fiber bound): `#E_p <= binom(n,d)/binom(j,d)`. | `fiber_bound` (`b=binom(j,d)`, `T=binom(n,d)`, `d<=j`). | Note Theorem A. | Lean-certified (given §3 MDS input) |
+| Local `binom` reproduces standard values / ratios, e.g. `binom(6,2)/binom(4,2)=2`. | `choose_values`; `double_count_example`. | Note reserve-`d` ratio. | Lean-certified (`decide`, axiom-free) |
+
+## W3 collapse-edge finite graph gate — `L1Threshold.CollapseEdgeCertificate`
+
+Source notes: `experimental/notes/l1/l1_residual_excess_w3_collapse_edge_lean.md`,
+`experimental/notes/l1/l1_residual_excess_w3_collapse_edge_origin.md`.
+
+| Claim consumed by the note | Lean certificate | Source claim | Status |
+| --- | --- | --- | --- |
+| Activating the six stored dangerous-case edge-rule packets at their certified shifts gives the listed active edges and component decompositions. | `checkCase`; bundled by `collapseEdgeAllCasesOk`. | W3 collapse-edge finite graph certificate. | Lean-certified finite graph check (`decide`, axiom-free) |
+| In each of the six `(missing,stray)=(2,1)` cases, the only alternate component of size at least three is the coset-37 triple `[17,36,130]`. | `collapseEdgeAllCasesOk` | Collapse-edge certificate. | Lean-certified finite graph check (`decide`, axiom-free) |
+| The six cases have certified shifts `[67,103,111,17,20,121]`, split as two three-shift families in the compact packet. | `collapseEdgeShiftsAreTwoTriples`; companion metadata in `originSummaryTwoFamilies`. | Collapse-edge compact packet. | Lean-certified finite data check (`decide`, axiom-free) |
+| The unique survivor pattern is identical in all six cases: coset `37`, component `[17,36,130]`. | `collapseEdgeAllActualSurvivorsSame`; `collapseEdgeAllExpectedSurvivorsSame`. | Collapse-edge finite graph certificate. | Lean-certified finite graph check (`decide`, axiom-free) |
+| Therefore each dangerous case has alternate contribution `<= 1`. | `collapseEdgeCase0Contribution` ... `collapseEdgeCase5Contribution`; bundled by `collapseEdgeAllCaseContributionsLeOne`. | "head dangerous pattern forces alternate collapse." | Lean-certified finite graph check (`decide`, axiom-free) |
+| The alternate contribution is exactly `1` in each of the six stored cases. | `collapseEdgeAllAlternateContributionsExact`. | Collapse-edge finite graph certificate. | Lean-certified finite graph check (`decide`, axiom-free) |
+
+## W3 collapse-edge structural wrapper — `L1Threshold.CollapseEdgeStructuralLemma`
+
+| Mathematical / certificate statement | Lean theorem / definition | Source artifact | Verification status |
+|---|---|---|---|
+| For every stored dangerous `(missing,stray)=(2,1)` case, the alternate contribution is `<= 1`. | `dangerousPatternForcesAlternateCollapse`. | Repackaging of `CollapseEdgeCertificate`. | Lean-certified finite graph implication (`decide`, axiom-free) |
+| The unique large alternate survivor in every stored dangerous case is the coset-37 triple `[17,36,130]`. | `dangerousPatternForcesUniqueCoset37Survivor`. | Repackaging of `CollapseEdgeCertificate`. | Lean-certified finite graph implication (`decide`, axiom-free) |
+| The six-case structural packet combines the dangerous antecedent, alternate-collapse bound, and unique-survivor conclusion. | `dangerousPatternStructuralPacketOK`. | Repackaging of `CollapseEdgeCertificate`. | Lean-certified finite graph implication (`decide`, axiom-free) |
+
+## W3 collapse-edge graph mechanism — `L1Threshold.CollapseEdgeGraphMechanism`
+
+| Mathematical / certificate statement | Lean theorem / definition | Source artifact | Verification status |
+|---|---|---|---|
+| Every non-survivor alternate graph is matching-only in the six stored cases. | `allNonSurvivorAlternatesMatchingOnly`; rule-derived form `allNonSurvivorRuleAlternatesMatchingOnly`. | Pattern-signature packet. | Lean-certified finite graph/rule check (`decide`, axiom-free) |
+| The only large survivor is the coset-37 triangle `[17,36,130]`; the rule-derived graph has no boundary edge from it. | `allCasesHaveUniqueSurvivorTriangle`; rule-derived form `allCasesHaveRuleSurvivorTriangle`. | Pattern-signature packet. | Lean-certified finite graph/rule check (`decide`, axiom-free) |
+| The graph mechanism explains exact alternate contribution `[1,1,1,1,1,1]` for the six stored cases. | `allGraphMechanismsCertified`; `allEdgeRuleMechanismsCertified`; `graphMechanismAlternateContributionsExact`. | Pattern-signature packet. | Lean-certified finite graph/rule check (`decide`, axiom-free) |
+
+## W3 collapse-edge compact origin summary — `L1Threshold.CollapseEdgeOriginSummary`
+
+Source note: `experimental/notes/l1/l1_residual_excess_w3_collapse_edge_origin.md`.
+
+| Claim consumed by the note | Lean certificate | Source claim | Status |
+| --- | --- | --- | --- |
+| The compact origin-audit summary contains six cases and the expected two-family/three-shift case list. | `originSummaryCaseCount`; `originSummaryTwoFamilies`. | Compact origin-audit summary. | Lean-certified metadata check (`decide`, axiom-free) |
+| The compact origin-audit summary accounts for `6528` edge rules with zero mismatches. | `originSummaryEdgeRulesAudited`; `originSummaryNoMismatches`; bundled by `originSummaryAllCasesOK`. | Compact origin-audit summary. | Lean-certified metadata/count check (`decide`, axiom-free) |
+| All six compact origin summaries share the same eight-coset rule-count pattern. | `originSummaryRepeatedCosetPattern`. | Compact origin-audit summary. | Lean-certified metadata/count check (`decide`, axiom-free) |
+
+## W3 collapse-edge compact edge-origin arithmetic — `L1Threshold.CollapseEdgeOriginArithmetic`
+
+Source data:
+`experimental/data/certificates/l1-residual-excess-classifier/w3_collapse_edge_origin_arithmetic_compact_combo012_sizes10_2_3.json`.
+
+| Claim consumed by the note | Lean certificate | Source claim | Status |
+| --- | --- | --- | --- |
+| Each of the `6528` compact edge-origin rows has the stored rule kind certified by the modular affine equation `intercept + shift*slope = 0 mod 137`: `always` has slope/intercept zero, `never` has zero slope and nonzero intercept, and `at_shift` has nonzero slope and vanishes at the stored shift. | `edgeOriginArithmeticAllRowsOK`. | Compact arithmetic-origin packet. | Lean-certified finite modular arithmetic check (`decide`, axiom-free); does not reconstruct the W3 dot products that produced `(intercept,slope)`. |
+| The arithmetic packet contains `6528` rows, split evenly across the six stored cases. | `edgeOriginArithmeticRowCount`; `edgeOriginArithmeticCaseCounts`. | Compact arithmetic-origin packet. | Lean-certified finite count check (`decide`, axiom-free) |
+
+## W3 collapse-edge compact dot-product origin — `L1Threshold.CollapseEdgeOriginDot`
+
+Source data:
+`experimental/data/certificates/l1-residual-excess-classifier/w3_collapse_edge_origin_dot_compact_combo012_sizes10_2_3.json`.
+
+| Claim consumed by the note | Lean certificate | Source claim | Status |
+| --- | --- | --- | --- |
+| Each compact dot-product row has `intercept = <v(a)-v(b), quotient_base>` and `slope = <v(a)-v(b), seed_coords>` over `F_137`, using the supplied four-coordinate endpoint evaluations. | `edgeOriginDotAllRowsOK`. | Compact dot-origin packet. | Lean-certified finite modular dot-product check (`decide`, axiom-free); does not reconstruct the W3 basis polynomials that produced endpoint evaluations. |
+| The dot packet contains `6528` rows, split evenly across the six stored cases. | `edgeOriginDotRowCount`; `edgeOriginDotCaseCounts`. | Compact dot-origin packet. | Lean-certified finite count check (`decide`, axiom-free) |
+
+## W3 collapse-edge compact packet aggregate — `L1Threshold.CollapseEdgeCompactPacket`
+
+| Claim consumed by the note | Lean certificate | Source claim | Status |
+| --- | --- | --- | --- |
+| The compact packet passes the machine-checked layers: finite graph checker, structural wrapper, graph mechanism, compact origin-summary metadata/count checker, compact dot-product origin checker, and compact modular edge-origin arithmetic checker. It also records `6528` audited rules, zero summary mismatches, and exact alternate contribution `[1,1,1,1,1,1]`. | `compactPacketOK`. | Compact PR packet. | Lean-certified aggregate finite check (axiom-free); still not a symbolic W3 reconstruction. |
+
+## Typed Targets And Non-Claims
+
+| Claim boundary | Lean artifact | Classification |
+| --- | --- | --- |
+| Lemma R pair-count `sum_j rho_j(rho_j-1) <= (ell-1)(ell-2)`, whose proof is the `(*)` twisted-root bound over `F_p` (needs PRIME `ell` and polynomial root counting). | `LemmaR_pairCount` (interface `Prop`; the hypothesis of `closing_*`). | Typed target; verifier-backed (`verify_l1_prime_ell_onset.py`), not stdlib-certifiable. |
+| The PR #219 reconstruction bijection (listed full-petal codewords ↔ minimal kernel sets) turning `R < 2ell` into "no mixed kernel set". | (cited in module docstring) | Cited proof (`l1_general_reconstruction_collapse.md`). |
+| QF.10 "`<= 1 owner`" = shortened-RS MDS / dual-distance `d+1` (no `d` points carry a `V`-dependence). | `SingletonOwnerBound` (interface `Prop`; the `Nodup` hypothesis of `double_count`). | Typed target; verifier-backed (`verify_conjecture_f_fiber_scoped.py`), not stdlib-certifiable. |
+
+## Audit Rule
+
+A row is "Lean-certified" only if it is one of the arithmetic/counting rows above
+or a direct conjunction of them. "Given Lemma R" / "given the §3 MDS input" /
+"given `<= 1 owner`" flags that the field-theoretic hypothesis is supplied
+externally (typed target); the Lean theorem certifies the elementary step that
+consumes it. This map is not a proof of MCA/list-decoding, finite-field
+semantics, RS duality, or protocol soundness.

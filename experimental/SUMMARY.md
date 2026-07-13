@@ -6,13 +6,46 @@ This file summarizes the recent PR wave integrated into `experimental/`. It is
 not a proof-status authority and it does not promote any result into the main
 papers. The source triage records are:
 
-- `pr-triage-2026-06-17.md`: PRs #1, #2, #3, and #46 through #66.
-- `pr-triage-2026-06-18.md`: PRs #67 through #77, with #68 and #76
+- `notes/triage/pr-triage-2026-06-17.md`: PRs #1, #2, #3, and #46 through #66.
+- `notes/triage/pr-triage-2026-06-18.md`: PRs #67 through #77, with #68 and #76
   superseded by #77.
+- `notes/triage/pr-triage-2026-06-18-round3.md`: PRs #79 through #81.
+- `notes/triage/pr-triage-2026-06-19.md`: PRs #82 and #84 through #95, with #85 through
+  #91 superseded by #93 and PR #95 integrated only as a compact review layer.
+- `notes/triage/pr-triage-2026-06-22.md`: PRs #96 through #98, with #96
+  integrated only as a compact Cycle84 public replay audit and #97/#98 added as
+  experimental F1/L1 notes plus scripts.
+- `notes/triage/pr-triage-2026-06-25.md`: PRs #99 through #107, with #100 not
+  imported as a raw generated packet and the remaining useful material added as
+  experimental L1/M1/M2/F1/L2/X1 notes, verifiers, and Lean scaffolding.
+- `notes/triage/pr-triage-2026-06-26.md`: PRs #108 through #119, with theorem
+  material extracted into `experiments.tex`, structured triage data recorded in
+  `data/pr-triage-2026-06-26.json`, and no frontier-numerator upgrade.
+- `notes/triage/experiment-run-2026-06-26.md`: one-by-one run of the current
+  Cycle120, strict264, reserve-ladder, F1, L2, A0, and M2 validators, with
+  structured output summarized in `data/experiment-run-2026-06-26.json`.
+- `notes/triage/pr-triage-2026-06-26-round2.md`: PRs #120 and #121, adding a
+  full-affine Hooley--Katz route-cut audit and a `d=2` proper-subgroup cubic
+  twisted collision bound.
+- `data/tangent/`: high-agreement tangent staircase packet, showing a generic
+  moving-root floor and an exact very-high-agreement staircase.
+- `data/tangent-star/`: tangent-star barrier packet, adding the extremizer
+  classification and ruling out a seventh finite-slope branch past agreement
+  `506` for the current `F_17^32`, `n=512`, `k=256` row.
+- `data/adjacent-ledgers/`: adjacent high-agreement ledger packet, extending
+  the tangent staircase to CA, projective slopes, finite-parameter curves, and
+  interleaved lists, with a conditional protocol-facing integer ledger.
+- `data/generalized-ledgers/`: row-independent high-agreement ledger packet,
+  turning the tangent-star formulas into reusable `R=n-k`, `r=n-a`, and
+  `B_Q=floor(Q/2^128)` threshold calculators beyond the `F_17^32` row.
 
 The common policy was: keep Papers A-D unchanged, land new material in
 `experimental/`, preserve explicit status labels, and require review before any
 promotion into `tex/` or `scripts/`.
+
+The current directory map is in `README.md`. Notes live under `notes/`, scripts
+under `scripts/`, compact JSON/CSV fixtures under `data/`, and the Lean stub
+under `lean/`.
 
 ## Big Picture
 
@@ -25,7 +58,7 @@ main MCA/list questions into explicit ledgers:
 - extension-line and residue-line ledgers for F1;
 - line-decoding conversion and separation ledgers for M2;
 - full-agreement support intersection ledgers for L2;
-- audit/citation/certificate ledgers for Paper D and Paper C style protocol
+- audit/citation/proof-record ledgers for Paper D and Paper C style protocol
   accounting.
 
 The direction is constructive: after Paper A rules out no-slack MCA, the recent
@@ -35,6 +68,316 @@ large theorem yet; it is the reduction of several vague hazards into named,
 script-checkable walls.
 
 ## What Was Added
+
+### Latest tangent-staircase update
+
+The active finite-slope threshold picture for the concrete
+`RS[F_17^32,H,256]`, `|H|=512`, rate-`1/2` row changed substantially.  The
+tangent packet proves a generic moving-root floor
+
+```text
+LD_sw(C,a) >= n-a+1
+```
+
+for every Reed--Solomon code and every `k+1 <= a <= n`.  In the range
+
+```text
+3a - 2n >= k
+```
+
+the lower bound is exact:
+
+```text
+LD_sw(C,a) = n-a+1.
+```
+
+For the `F_17^32`, `n=512`, `k=256` row, exactness starts at `a=427`, hence
+
+```text
+LD_sw(C,a) = 513-a        for every a >= 427.
+```
+
+Because `floor(17^32/2^128)=6`, this pins the finite-slope support-wise
+`2^-128` staircase at
+
+```text
+LD_sw(C,506)=7   unsafe,
+LD_sw(C,507)=6   safe.
+```
+
+Thus the largest safe integer Hamming radius is `5`, while integer radius `6`
+is already unsafe.  Equivalently, the closed grid radius `3/256` fails and the
+real-radius safe supremum is approached from below.
+
+This supersedes the strict264/strict352 framing as a lower-bound frontier:
+agreement `353` already has the tangent lower bound `LD_sw(C,353)>=160`, and
+agreement `352` has `LD_sw(C,352)>=161`.  The quotient-core packets remain
+useful mechanism records.  The tangent-star refinement now closes the finite
+slope follow-up: no non-tangent finite-slope mechanism can add a seventh bad
+slope at agreement `a>=507`.  The adjacent-ledgers packet below handles the
+high-agreement CA, projective-slope, curve-MCA, and interleaved-list coding
+objects.  The remaining checks are protocol-facing: challenge-field,
+extension-lift, folding, query, and cryptographic ledgers must be added
+explicitly before making SNARK-style claims.
+
+### Latest adjacent-ledgers update
+
+The adjacent-ledgers packet extends the high-agreement tangent staircase beyond
+finite-slope support-wise MCA:
+
+- If `3a - 2n >= k`, then for `C=RS[F,D,k]`
+  `LD_sw(C,a) = LD_ca(C,a) = LD_sw,proj(C,a) = n-a+1`.
+- If `(d+2)a - (d+1)n >= k`, then finite-parameter degree-`d` curve CA/MCA has
+  exact numerator `min(q, d*(n-a+1))`.
+- If `2a - n >= k`, then every MDS interleaving arity has common-support list
+  size `Lambda_mu(C,a)=1`.
+
+For the `F_17^32`, `n=512`, `k=256` row, this gives a conditional
+line-plus-list coding ledger numerator `514-a` in the high-agreement range.
+Since `floor(17^32/2^128)=6`, that ledger is unsafe at agreement `a=507` and
+safe at agreement `a=508`, assuming no additional query, folding, hash,
+extension-lift, or cryptographic error term is being hidden.  This is a coding
+ledger, not a full protocol theorem.
+
+### Latest generalized-ledgers update
+
+The generalized-ledgers packet moves the adjacent-ledger formulas beyond the
+special `F_17^32` row.  For any `RS[F,D,k]` row, write
+
+```text
+R = n-k,    r = n-a,    B_Q = floor(Q/2^128),
+```
+
+where `Q` is the sampler/challenge denominator used by the ledger.  In the
+exact high-agreement range:
+
+- line, no-loss CA, and projective-slope MCA have numerator `r+1` for
+  `r <= floor(R/3)`;
+- degree-`d` finite-parameter curve CA/MCA has numerator `d(r+1)` for
+  `r <= floor(R/(d+2))`;
+- interleaved-list uniqueness gives numerator `1` for `r <= floor(R/2)`.
+
+Thus a single line term is safe at target `2^-128` for `r <= B_Q-1`, while a
+line term plus one interleaved-list term is safe for `r <= B_Q-2`, provided the
+radius lies inside the exact tangent range.  For prize rates at the maximal
+dimension `k=2^40`, this tangent method can pin line thresholds only up to field
+sizes around `2^166.4`, `2^168.0`, `2^169.2`, and `2^170.3` at rates
+`1/2`, `1/4`, `1/8`, and `1/16`, respectively.  Larger fields require the
+lower-agreement quotient-core, generated-field entropy, curve/folding, or
+aperiodic local-limit ledgers.
+
+### Latest 2026-06-26 round 2 integration
+
+PRs #120 and #121 do not add a new MCA frontier numerator, agreement endpoint,
+or rate leaderboard row.  They do add useful L1 infrastructure:
+
+- `notes/l1/l1_prefix_dual_odd_moment_projective_geometry.md` proves the
+  projective odd-moment collision geometry for `k>d` and records the
+  Hooley--Katz/Ghorpade--Lachaud constant ledger for the full-affine
+  point-count route.  Its reserve-scale audit is mainly a route cut: the
+  generic full-affine imported constants do not yet solve the subgroup L1
+  problem.
+- `notes/l1/l1_prefix_dual_d2_cubic_subgroup_twisted_bound.md` addresses the
+  actual proper-subgroup `H^{2k}` cubic collision object.  It expands `1_H`
+  into multiplicative characters and, using standard one-variable
+  Gauss/Kummer--Artin--Schreier input, proves exponential error decay once
+  `|H| > (3+epsilon) sqrt(p)`.
+
+These updates were added to the public site updates feed, but not to
+`rate-leaderboards.json`: the leaderboard remains reserved for rows with an
+explicit rate, radius, field denominator, endpoint convention, and certified
+retained mass.
+
+### Latest 2026-06-26 integration
+
+The 2026-06-26 PR round does not improve the Cycle116/119 numerator
+`52,747,567,092` and does not add a new prize-worthy frontier point.  It does
+add several proof-infrastructure results that are useful for the next theory
+pass:
+
+- `notes/f1/f1_syndrome_pencil_normal_form.md` gives a proved Hankel-pencil
+  normal form for support-wise line incidence and noncontainment.  This is a
+  clean F1 language upgrade, not a completed F1 theorem.
+- `notes/l2/l2_codegree_reduction_theorem.md` gives an unconditional
+  interleaved-list codegree reduction and arity recursion.  The actual L2
+  exponent saving remains conditional on an L1-family higher-agreement
+  tail-list input.
+- `notes/audits/a0_deep_point_cap_dependency_split.md` shows that Paper D's
+  headline MCA cap has a CS25-free local route using the elementary fiber
+  lower bound, simple-pole transfer, deep-point averaging, and support-wise
+  MCA monotonicity.  The original CA/list import surface still needs the CS25
+  audit.
+- `notes/m2/m2_common_code_line_residual_budget.md` gives a finite MDS
+  residual-budget lemma for common code-line exceptions in line-decoding
+  imports.
+- `notes/m1/m1_strict264_audit.md` keeps strict264 as a useful target: seven
+  retained slopes over `F_17^32` would clear `2^-128`, but no retained-slope
+  proof was supplied in this batch.
+
+The remaining PRs are audit, route-cut, or proof-program material: quotient
+occupancy ledgers, centered Krawtchouk and large-domain Weil route cuts,
+strict264 bridge audits, L1/M1 reserve audits, and L2 sharp-constant stress
+tests.  New theorem-level statements were added to `experiments.tex` and
+compiled into `experiments.pdf`; contributed scripts were not run locally.
+
+### 2026-06-26 experiment run
+
+The post-integration experiment run validated the current gates but did not
+produce a new frontier point:
+
+- Cycle120 standalone and gate-audit scripts pass, preserving the current
+  `52,747,567,092 / 17^32` obstruction as source-conditional and
+  computation-dependent.
+- All strict264 scripts pass as audits: admissibility, bridge arithmetic,
+  mechanism toy model, corrected two-ended transfer, and end-to-end toy
+  transfer.  The exact missing object remains seven actual retained slopes for
+  the `F_17^32` row at agreement `264`.
+- Reserve-scale bridge/richness scripts pass: seven slopes would clear the
+  `2^-128` gate at sigma `8`, `16`, `32`, and `57`, but no retained-slope
+  certificates were produced.
+- F1 syndrome-pencil, L2 codegree/reduction/profile, A0 deep-point algebra, and
+  M2 residual-budget verifiers pass.  The L2 profile run again shows why
+  quotient-periodic mass must be split before claiming an interleaved saving.
+
+This paragraph is superseded by the tangent-staircase update above.  Before the
+tangent floor was isolated, the next experimental task was the narrow strict264
+certificate:
+
+```text
+LD_sw(RS[F_17^32,H,256],264) >= 7.
+```
+
+The tangent floor now gives much stronger lower bounds at agreements `264`,
+`352`, and `353`, and the exact high-agreement gate is `506/507`.
+
+### Latest 2026-06-25 integration
+
+The 2026-06-25 PR round does not improve the Cycle120 numerator
+`52,747,567,092`. Its useful estimate changes are endpoint and bridge
+improvements:
+
+- `notes/m1/m1_cycle120_standalone_ldsw_proof.md` records a standalone
+  source-scoped proof note for
+  `LD_sw(RS[F_17^32,H,256],262) >= 52,747,567,092`. Together with the already
+  integrated Cycle119 strict-support note, the best current ABF-row obstruction
+  remains `epsilon_mca(C,125/256) >= 52,747,567,092/17^32 > 2^-128`, with the
+  sharper strict endpoint `delta*_C <= 249/512 < 125/256` if the finite inputs
+  are correct.
+- `notes/m2/m2_line_decoding_mca_bridge.md` gives the exact normalization
+  `epsilon_mca(C,delta)=LD_sw(C,ceil((1-delta)n))/|F|` for the support-wise
+  two-source object. This is the clean bridge future papers should use when
+  translating between MCA and line-decoding estimates.
+- `notes/f1/f1_fixed_rate_extension_counterexample.md` strengthens the F1
+  warning: fixed-rate extension-line families have floors on the order of
+  `(1-rho)^2/2` for sigma one and
+  `(1-rho)^(sigma+1)/(sigma+1)!` at fixed sigma before extension-degree
+  dilution.
+- `notes/m1/m1_beta_pushforward_spectral_audit.md` finds no hidden growing
+  `p^2` beta-pushforward mass in the scanned rows and leaves a conductor-style
+  proof target.
+- `notes/l2/l2_sharp_target_conjecture.md` sharpens the interleaved-list
+  target: charge quotient-core mass diagonally and avoid the naive Cartesian
+  numerator.
+
+The rest of the round is proof-program infrastructure: L1 characteristic-zero
+prefix reductions, quotient-budgeted locator targets, X1 deep-point and
+quotient-reduction bridges, audit notes, standard-library verifiers, and a
+small Lean formalization scaffold. No newly imported PR script was run locally.
+
+### Latest 2026-06-22 integration
+
+The 2026-06-22 PR round adds three useful but deliberately scoped items:
+
+- `notes/m1/m1_cycle84_public_replay_audit.md` records the public Cycle84
+  replay result. The finite-model computation is
+  `m_max(beta)=2`, `Occ(beta)=52,747,567,092`, `D=24`, twelve double fibers, and
+  no fibers of size at least three. This is important evidence for the finite
+  M1 wall, but it is not a prize-level theorem and was integrated without the
+  live workflow, zip bundles, or raw million-line cycle archive from PR #96.
+- `notes/f1/f1_deep_point_list_to_ca_mca.md` records a simple-pole deep-point
+  identity converting nearby `RS[F,D,k+1]` lists into CA/MCA bad slopes for
+  `RS[F,D,k]`. The identity is the durable part; the direct cap application
+  remains an audit target before any Paper D promotion.
+- `notes/l1/l1_prefix_fourier_orbit_cancellation.md` adds the dual-dilation
+  orbit-kernel reduction for the monomial-prefix L1 Fourier lane. It proves
+  exact orbit identities and records a route cut: pointwise kernel saving can
+  fail even in quotient-free prefix slices.
+
+No PR code was run locally during this triage pass. The new scripts were
+inspected as text for dangerous side effects and kept as experimental
+reproducibility tools pending explicit reviewer execution.
+
+### Latest 2026-06-23 review
+
+The only changed open PR was Danny's #96 branch, now extended through Cycle120.
+It remains non-mergeable as a branch: the new delta adds 678 files and about
+201k lines of raw/generated material, including zips, prompt packets, generated
+checkers, copied PDF extracts, and new generated proof-record directories.
+
+The useful part is summarized in
+`notes/m1/m1_cycle119_strict263_admissibility_review.md`. Cycle119 claims a
+two-ended locator transfer
+
+```text
+LD_sw(RS[F_17^32,H,256],263) >= 52,747,567,092,
+|H|=512.
+```
+
+If the proof and the Cycle84 finite computation it depends on are correct, the
+row appears admissible under the ABF grand MCA formulation: smooth
+power-of-two multiplicative subgroup, rate `1/2`, same-support MCA predicate,
+and uniform `gamma` from the code field. The exact ABF PDF should still be
+independently checked before any public claim. The right external framing is:
+under the printed ABF formulation, this is a prize-facing negative
+counterexample candidate for that row, not an accepted prize solution. The
+project should ask for a standalone human-readable proof, not
+another generated archive.
+
+The follow-up Cycle120 packet is integrated only as
+`notes/m1/m1_cycle120_abf_counterexample_candidate.md`. The key clarification is
+that Cycle116 agreement `262` already reaches the printed ABF closed threshold
+at `delta=125/256`; Cycle119 agreement `263` is a checked strict-ball
+strengthening. The counterexample is only to the ABF grand MCA inequality
+`epsilon_mca(C,125/256) <= 2^-128` for this one smooth row; equivalently, if
+the finite proof chain is correct then Cycle116 gives `delta*_C <= 125/256`
+under a supremum convention, and Cycle119 gives the sharper
+`delta*_C <= 249/512 < 125/256`. It is not an ordinary list-decoding claim, not
+a protocol soundness claim, and not an exact determination of `delta*_C`. The
+result remains conditional on the Cycle84/Cycle116 finite inputs and on
+independent source verification.
+
+### Latest 2026-06-19 integration
+
+The 2026-06-19 PR round adds five durable experimental bundles:
+
+- `notes/l1/l1_prefix_divisor_count.md` gives the cleanest current L1 split: exact
+  quotient-core divisor counts, dilation/localization, arbitrary-word `ImgFib`
+  lift, and a Fourier reduction for the aperiodic remainder.
+- The Scott L1 consolidation files
+  `notes/l1/l1_repaired_locator_theorem_package.md`,
+  `notes/l1/l1_syndrome_catalecticant_shells.md`,
+  `notes/l1/l1_periodic_support_multisequence_reduction.md`, and
+  `notes/l1/l1_quotient_defect_closure.md` turn raw locator fibers into a repaired,
+  quotient-defect-aware proof program.
+- `notes/m1/m1_residue_line_roadmap.md`,
+  `notes/m1/m1_depth_two_lift_window_theorem.md`, and the new depth-two Kummer notes
+  update the M1 low-slack ledger. They narrow the remaining wall to explicit
+  two-coordinate, line-conic, and conductor targets, but remain conditional or
+  experimental where they consume unproved Kummer estimates.
+- `notes/l2/l2_interleaved_dilation_constants.md` records dilation symmetry, exact
+  aligned quotient-core counts `Quot_mu`, extension-coordinate checks, and
+  small arity scans. This is the current best orientation for avoiding the
+  trivial Cartesian interleaved-list exponent.
+- The NFB frontier JSON data folder adds a compact
+  extension-valued deep-hole `F\B` proof-record packet related to Paper D's
+  `cor:Fvalued`, while `notes/f1/fable-loop/PRZ_REVIEW_INDEX.md` records the
+  selected Cycle 49--57 upper-side MCA route map from PR #95.
+
+This round is useful because it makes future work more modular: L1 has a
+quotient/aperiodic divisor ledger, M1 has a named low-slack conductor ledger,
+L2 has an aligned interleaving constant target, and the Fable loop now points
+future agents to the high-`j` constant-rate replacement instead of the cut
+`t=2,j=2` toy regime.
 
 ### Locator fibers and L1
 
@@ -51,7 +394,7 @@ The locator-fiber work now has three layers:
 
 This helps the MCA program because the corrected conjecture needs polynomial
 control of generated-field locator fibers after quotient obstructions are
-removed. The new material gives exact toy certificates, catches overstrong
+removed. The new material gives exact toy computations, catches overstrong
 proof routes, and provides a path for separating quotient-periodic fibers from
 aperiodic collisions.
 
@@ -136,7 +479,7 @@ an intersection-profile problem:
   full-agreement support formula.
 - `l2_exact_support_diagonalization.md` handles the exact-support case.
 - `interleaved_list_enum.py`, `interleaved_budget.py`, and
-  `quotient_core_interleaving.py` provide small enumerators and certificates.
+  `quotient_core_interleaving.py` provide small enumerators and proof records.
 
 This is directly useful for protocol parameters. It says that interleaving does
 not automatically multiply the list exponent by the row arity if the rows share
@@ -145,7 +488,7 @@ the same agreement columns and the full-support intersection profile is small.
 What is still missing: sharp constants near capacity for the concrete arities
 and radii used in protocols.
 
-### A0/A1 audits, certificate tooling, and formalization
+### A0/A1 audits, proof-record tooling, and formalization
 
 The support material is also important:
 
@@ -153,9 +496,9 @@ The support material is also important:
   `cs25_import_audit.md` track the imported Crites-Stewart/ABF dependency for
   Paper D.
 - `a1_paperA_finite_verification_crosswalk.md` maps Paper A finite claims to
-  scripts and certificates.
-- `certificate_emit.py`, `reserve_certificate_schema.json`, and
-  `protocol_ledger_template.md` move toward Paper C style reserve certificates.
+  scripts and proof records.
+- The reserve-emitter script, reserve JSON schema, and
+  `protocol_ledger_template.md` move toward Paper C style reserve records.
 - `theorem_label_map.md` and the TeX audit/inventory scripts support citation
   hygiene before promotion.
 - `lean_formalization/` is an initial Lean scaffold, not a completed
@@ -229,7 +572,7 @@ as settled.
    conversion being checked against primary sources and exact constants.
 
 7. Promotion discipline.
-   Several files contain local `PROVED` or `BANKABLE_LEMMA` claims, but the
+   Several files contain local `PROVED` or old proof-sketch claims, but the
    project should not promote them into the papers until a human review checks
    hypotheses, constants, notation compatibility, and field-ledger separation.
 
@@ -252,7 +595,7 @@ Recommended next work:
    point and expand it from tiny examples toward the `q=17`, `q=257`, and
    dyadic toy cases in `agents.md`.
 
-5. Convert the L2 full-support intersection formula into concrete certificates
+5. Convert the L2 full-support intersection formula into concrete proof records
    for `mu=2` and then for protocol-relevant arities.
 
 6. Finish the A0 Crites-Stewart/ABF import audit before relying on Paper D's
@@ -263,7 +606,8 @@ Recommended next work:
    lemma, and quotient-periodic overlap profile.
 
 8. Keep all new material in `experimental/` first, with an `agents-log.md`
-   entry and a reproducible command or certificate whenever possible.
+   entry and a reproducible command, proof record, or computation whenever
+   possible.
 
 ## Reading Order
 

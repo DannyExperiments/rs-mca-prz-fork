@@ -15,6 +15,7 @@
 \newtheorem{heuristic}{Heuristic}
 \newtheorem{remark}{Remark}
 \newtheorem{definition}{Definition}
+\newtheorem{conjecture}{Conjecture}
 
 \newcommand{\F}{\mathbb F}
 \newcommand{\RS}{\operatorname{RS}}
@@ -36,34 +37,480 @@
 \newcommand{\dist}{\Delta}
 \newcommand{\efib}{c_{\rm fib}}
 \newcommand{\ellpg}{\ell_{\rm pg}}
+\newcommand{\epsstar}{\varepsilon_*}
+\newcommand{\epsmca}{\varepsilon_{\rm mca}}
+\newcommand{\epsca}{\varepsilon_{\rm ca}}
+\newcommand{\Fib}{\operatorname{Fib}}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\Bad}{\operatorname{Bad}}
+\newcommand{\LD}{\operatorname{LD}}
+\newcommand{\Htwo}{H_2}
+\newcommand{\QH}{\mathcal Q_H}
 
-\title{Experimental Theorems and Imported-Locator Ledger for RS-MCA}
+\title{Experiments for Smooth RS-MCA Proximity Thresholds\\
+\large Fresh-Eyes Threshold Memo, Missing Theorems, and Retained Locator Ledger}
 \author{RS-MCA experimental notes}
-\date{June 18, 2026}
+\date{June 26, 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-This note is the experimental collection point for statements that are useful
-for the RS-MCA papers but are not yet main-paper theorems.  It has two jobs.
-First, it records the correct provenance of the quotient-locator construction
-used in a separate AI-generated packet: the locator proof underlying item (d)
-is an imported theorem/proof pattern from Ben-Sasson--Carmon--Hab\"ock--
-Kopparty--Saraf, \emph{On Proximity Gaps for Reed--Solomon Codes}
-\cite{BCHKS25}, especially their Theorem~7.1 and the Theorem~1.13 subgroup
-instantiation.  That proof is not a new contribution of this repository.
-Second, it records genuinely local material that may be reusable later: the
-smooth-quotient notation dictionary, a list-fiber pigeonhole wrapper around
-the imported locator construction, the slack-two/subfield bookkeeping target
-for Paper D, and a new divisibility gate for Paper B's quadratic-extension,
-slack-two, three-co-support resonance window.
+This replacement starts with the current ``fresh eyes'' synthesis for the
+smooth Reed--Solomon Proximity Prize problem.  The negative side is now quite
+rigid: Paper D v12 gives a prize-facing upper cap on the MCA threshold through a
+self-contained deep-point route, while Paper A and the list lower bounds rule
+out any no-slack capacity theorem.  The positive side is not yet a theorem; it
+should be organized around two local-limit problems, L1 arbitrary-word locator
+fibers and M1 all-line residue packing, plus extension-line MCA, Paper D
+conversion/radius audits, and exact protocol-ledger rewrites.
 
-Everything here is experimental or imported unless explicitly promoted by a
-main paper.  In particular, this note does not prove the corrected MCA
-conjecture, does not give a protocol consequence, and does not supersede
-Papers A--D.
+The main new additions over the old \texttt{experiments.tex} are two compact
+bridge lemmas.  First, for ordinary column-distance interleaving, interleaved
+lists inject into common feasible supports, so a uniform base locator-fiber
+theorem gives the same polynomial exponent for all protocol arities; there is no
+automatic \(n^{\mu B}\) product loss.  Second, a list bound plus an MCA bound
+implies a concrete line-decoding bound with loss \(M+nL+1\).  The older BCHKS
+provenance notes, quotient-locator dictionaries, normal forms, arithmetic gates,
+and finite-threshold infrastructure are retained below whenever they still look
+useful.
 \end{abstract}
+
+\tableofcontents
+
+\section{Fresh-Eyes Settlement Memo}
+\label{sec:fresh-eyes-settlement-memo}
+
+I would frame the current state as follows.  The attached suite substantially
+settles the negative side and gives a plausible corrected theorem shape, but it
+does not yet settle the Proximity Prize threshold in the sharp ``largest
+\(\delta^*\)'' sense.  The clean prize-relevant statement is no longer
+``prove smooth RS reaches capacity''.  It is
+\[
+  \delta=1-\rho-\eta,
+  \qquad
+  \eta\text{ must clear generated-field entropy, quotient-core, MCA-floor,}
+\]
+\[
+  \text{interleaving, line-field, and challenge-field budgets.}
+\]
+For
+\[
+  C=\RS[\F,D,k],\qquad n=|D|,
+  \qquad \rho=k/n\in\{1/2,1/4,1/8,1/16\},
+\]
+the official challenge statements use this MCA/list-threshold form; in this
+experimental ledger the concrete prize envelope is~\cite{ProximityPrize26}
+\[
+  \epsstar=2^{-128},\qquad k\le2^{40},\qquad |\F|<2^{256}.
+\]
+The protocol-relevant soundness contribution has the schematic form
+\[
+  \epsmca(C,\delta)
+  +\frac{|\Lam(C^{\equiv\mu},\delta)|}{\qline}
+  +\text{query error}.
+\]
+Thus a list theorem alone is not enough unless it is connected to the exact MCA,
+correlated-agreement, line-decoding, or curve-MCA quantity used by the protocol,
+and unless the denominator is the actual line or challenge field.
+
+\subsection{Bottom line}
+
+For the \textbf{MCA/correlated-agreement threshold}, the strongest attached
+result is Paper D v12's universal cap.  Through the self-contained deep-point
+route and the stated dyadic-divisor hypotheses,
+\[
+  \delta^*_{\rm MCA}(2^{-128})
+  \le 1-\rho-2^{-9}
+  \quad (\rho=1/2,1/4,1/8),
+\]
+and
+\[
+  \delta^*_{\rm MCA}(2^{-128})
+  \le 1-\rho-2^{-10}
+  \quad (\rho=1/16).
+\]
+Equivalently, throughout the relevant unsafe intervals Paper D gives
+\[
+  \epsmca(C,\delta)
+  >\frac1{2k}\left(1-\frac n{|\F|}\right)
+  \ge2^{-86}\gg2^{-128}.
+\]
+This is a real prize-facing cap, not merely a heuristic obstruction.  It is not
+an error-one theorem; it proves failure probability on the order of \(1/k\),
+which is already far above \(2^{-128}\), but it does not characterize the full
+failure curve.
+
+For the \textbf{interleaved-list threshold}, Paper A's base list lower bound
+plus the base-to-interleaved monotonicity gives a clean negative cap.  At quotient
+scale \(N\mid n\), with \(\rho N\in\mathbb Z\), there is a received word with at
+least
+\[
+  \binom{N}{\rho N+1}/q,
+  \qquad q=|\F|,
+\]
+base-code codewords at radius \(1-\rho-1/N\).  Therefore the same radius is
+unsafe for the interleaved-list budget whenever this exceeds \(2^{-128}q\).  In
+the worst case \(q<2^{256}\), the following choices suffice:
+\[
+\begin{array}{c|c|c|c|c}
+\hline
+\rho & N & \text{list-failure radius} &
+\log_2\binom{N}{\rho N+1}-256 &
+\text{margin over }2^{128}\\
+\hline
+1/2  & 512  & 1/2-2^{-9}    & 251.17 & 123.17\\
+1/4  & 512  & 3/4-2^{-9}    & 156.33 & 28.33\\
+1/8  & 1024 & 7/8-2^{-10}   & 298.68 & 170.68\\
+1/16 & 2048 & 15/16-2^{-11} & 433.89 & 305.89\\
+\hline
+\end{array}
+\]
+The fourth column is the exponent of the lower-bound list size after dividing by
+the worst-case field size \(2^{256}\); the fifth subtracts the target exponent
+\(128\).
+
+\subsection{What is already proved or very close to proved}
+
+The old no-slack smooth-domain capacity claim is dead.  The quotient-locator
+construction gives explicit bad slopes for canonical lines and, over deployed
+smooth prime fields such as BabyBear, KoalaBear, and \(3\cdot2^{30}+1\), yields
+support-wise line-MCA error one on intervals starting at
+\(1-\rho-2^{-18}\) for all four prize rates, with the sharper \(2^{-17}\) gap
+at rates \(1/2\) and \(1/4\).  These statements rule out any theorem saying
+that every radius below \(1-\rho\) has negligible MCA error.
+
+Paper D is the most prize-relevant negative theorem because it converts a deep
+point/list phenomenon into MCA at the exact \(2^{-128}\)-style threshold.  In
+v5, the headline MCA cap is routed locally through a self-contained deep-point
+argument rather than the Crites--Stewart list-to-agreement import.  The remaining
+CA/list comparison and fallback statements still need their own radius,
+normalization, augmented-code, and import audits.
+
+The list lower-bound side is also stronger than it is currently advertised.  It
+should be promoted to an explicit interleaved-list negative corollary: base lists
+embed into ordinary interleaved lists, and the binomial numerators above already
+exceed the \(2^{-128}|\F|\) budget in the full field envelope for the displayed
+quotient divisors.
+
+\subsection{The corrected positive theorem shape}
+
+The positive theorem should use
+\[
+  a=\lceil(1-\delta)n\rceil=k+\sigma,
+  \qquad \delta=1-\rho-\eta,
+\]
+and require at least
+\[
+  \sigma\log_2\qgen
+  \ge (1+\varepsilon)\log_2\binom n{k+\sigma},
+  \qquad
+  \sigma\ge C\frac n{\log n},
+\]
+plus explicit quotient-profile and failure-floor ledgers.  The first inequality
+uses the generated field \(\qgen\), not a larger extension or challenge field
+that merely appears later in the protocol.  The MCA numerator must be divided by
+the actual line field \(\qline\).
+
+The intended list target is an arbitrary-word locator-fiber theorem
+\[
+  \sup_U |\Fib_U(k+\sigma)|\le n^B.
+\]
+The intended MCA target is an all-line bound of the form
+\[
+  \epsmca(C,1-\rho-\eta)
+  \le
+  \frac{
+    n^{1+o(1)}
+    +2^{(\beta(\rho)/\Htwo(\rho))\QH(\eta)(1+o(1))}
+  }{\qline},
+\]
+where quotient-periodic classes are removed or charged by \(\QH(\eta)\).  The
+current packet contains important special cases and reductions, but not these
+full arbitrary-word and all-line theorems.
+
+\subsection{What remains missing}
+
+\begin{enumerate}
+\item \textbf{L1: arbitrary-word locator local limit.}  This is the real list
+upper-bound theorem.  Characteristic-zero rigidity, monomial-prefix lanes, and
+split-prime transfer results are useful but do not yet imply the uniform
+polynomial-field theorem needed for arbitrary received words.
+
+\item \textbf{M1: all-line aperiodic residue packing.}  Canonical-line exactness
+and quotient floors are lower-bound tools, not all-line upper bounds.  The
+positive MCA theorem needs a fixed-field, all-line, all-base residue-packing
+bound.
+
+\item \textbf{F1: extension-line MCA.}  The list side has a clean extension-code
+identity.  MCA does not.  Base-valued bad lines can deflate when sampled over an
+extension field, while Paper D's cap indicates that genuinely extension-valued
+bad lines exist in relevant regimes.  Any extension-line lift must therefore be
+a corrected-reserve theorem, not a blanket subfield statement.
+
+\item \textbf{Paper D conversion audit.}  Paper D v12's headline MCA cap is no
+longer load-bearing on the direct Crites--Stewart conversion.  The self-contained
+deep-point step, support-wise monotonicity, integer-radius conventions, and the
+remaining CA/list import statements should still be independently checked.
+
+\item \textbf{Protocol-ledger rewrite.}  Deployed FRI/WHIR/IOP analyses must be
+rewritten with exact terms
+\[
+  |\Lam(C^{\equiv\mu},\delta)|/\qline
+  \quad\text{and}\quad
+  \epsmca\text{ or line-decoding over the actual line field}.
+\]
+The survey toy protocol already has this shape; deployed analyses still need the
+same ledger.
+\end{enumerate}
+
+\section{New Bridge I: Common-Support Interleaved Fiber Injection}
+\label{sec:common-support-interleaved-fiber-injection}
+
+\textbf{Status: \textsc{New-local} wrapper.}
+The older ledger treated interleaving conservatively through a safe product
+bound \(L_\mu(\delta)\le L_1(\delta)^\mu\).  For ordinary column-distance RS
+interleaving, the following support-level injection gives the sharper upper
+bound: once the one-row locator-fiber theorem is proved, interleaving costs no
+extra exponent.
+
+For \(S\subseteq D\), let
+\[
+  L_S(X)=\prod_{x\in S}(X-x).
+\]
+For a received word \(U\in\F^D\), the condition \(\deg(U\bmod L_S)<k\) means
+that the unique polynomial of degree less than \(|S|\) interpolating \(U|_S\)
+has degree less than \(k\).
+
+\begin{definition}[one-row and common interleaved fibers]
+Let \(C=\RS[\F,D,k]\), let \(a\ge k\), and let
+\(\mathbf U=(U_1,\ldots,U_\mu)\in(\F^\mu)^D\).  Define
+\[
+  \Fib^{(\mu)}_{\mathbf U}(a)
+  =
+  \{S\subseteq D:
+    |S|=a,\ \deg(U_i\bmod L_S)<k
+    \text{ for every }i=1,\ldots,\mu\}.
+\]
+For one row, write \(\Fib_{U_i}(a)\) for the same condition with only \(U_i\).
+\end{definition}
+
+\begin{lemma}[common-support interleaved fiber injection]
+\label{lem:common-support-interleaved-fiber-injection}
+Let \(C=\RS[\F,D,k]\), \(n=|D|\), and let
+\(a=\lceil(1-\delta)n\rceil\ge k\).  For every received \(\mu\)-row word
+\(\mathbf U\in(\F^\mu)^D\), ordinary column-distance interleaving satisfies
+\[
+  |\Lam(C^{\equiv\mu},\delta,\mathbf U)|
+  \le |\Fib^{(\mu)}_{\mathbf U}(a)|
+  \le \min_{1\le i\le\mu}|\Fib_{U_i}(a)|.
+\]
+Consequently,
+\[
+  \sup_{\mathbf U}|\Lam(C^{\equiv\mu},\delta,\mathbf U)|
+  \le \sup_U |\Fib_U(a)|.
+\]
+In particular, if L1 proves \(\sup_U|\Fib_U(k+\sigma)|\le n^B\), then
+\[
+  |\Lam(C^{\equiv\mu},1-\rho-\sigma/n)|\le n^B
+\]
+for every ordinary column-distance protocol arity \(\mu\).
+\end{lemma}
+
+\begin{proof}
+Fix a total order on \(D\).  A listed interleaved codeword
+\((P_1,\ldots,P_\mu)\in C^{\equiv\mu}\) at column distance at most \(\delta\) from
+\(\mathbf U\) agrees with \(\mathbf U\) on at least \(a\) common columns.  Choose
+the first \(a\)-subset \(S\) of those agreeing columns.  For this \(S\), every
+row \(U_i|_S\) is interpolated by the degree-\(<k\) polynomial \(P_i\), hence
+\(S\in\Fib^{(\mu)}_{\mathbf U}(a)\).
+
+For fixed \(S\), the tuple \((P_1,\ldots,P_\mu)\) is uniquely determined,
+because each \(P_i\) has degree less than \(k\) and is fixed by its values on
+\(|S|\ge k\) points.  Thus the canonical-support map from listed interleaved
+codewords to common feasible supports is injective.  The second inequality is
+immediate because every common feasible support is feasible for each individual
+row.  Taking suprema gives the final claim.
+\end{proof}
+
+\begin{remark}[impact]
+For ordinary column-distance RS interleaving, L2 should be demoted from a
+separate product-exponent problem to a corollary of L1.  The hard list theorem
+remains the base arbitrary-word locator local limit.
+\end{remark}
+
+\section{New Bridge II: List plus MCA Gives Line Decoding}
+\label{sec:list-plus-mca-gives-line-decoding}
+
+\textbf{Status: \textsc{New-local} bridge.}
+The next proposition turns a line-decoding proof obligation into a finite-constant
+budget once L1 and M1 are available.  It uses finite slopes and the support-wise
+MCA normalization used in this packet.
+
+\begin{proposition}[list/MCA bridge to line decoding]
+\label{prop:list-mca-to-line-decoding-bridge}
+Let \(C=\RS[\F,D,k]\), let \(|D|=n\), and let
+\(a=\lceil(1-\delta)n\rceil>k\).  Suppose that every allowed received line
+\(f+\gamma g\) has at most \(M\) support-wise MCA-bad finite slopes at radius
+\(\delta\), equivalently \(\epsmca(C,\delta)\le M/|\F|\) for the chosen finite
+slope sampler.  Suppose also that the two-row interleaved list size satisfies
+\[
+  |\Lam(C^{\equiv2},\delta,W)|\le L
+  \qquad\text{for every }W\in(\F^2)^D.
+\]
+Then \(C\) is line-decodable with parameters
+\[
+  (\delta,\ M+nL+1,\ n+1)
+\]
+in the following sense: if an allowed received line \(f+\gamma g\) has more than
+\(M+nL\) finite slopes \(\gamma\) that are \(\delta\)-close to selected codewords
+\(U(\gamma)\in C\), then there are codewords \(c_1,c_2\in C\) such that
+\[
+  U(\gamma)=c_1+\gamma c_2
+\]
+for at least \(n+1\) of those slopes.
+\end{proposition}
+
+\begin{proof}
+For each close slope \(\gamma\), choose a support \(S_\gamma\subseteq D\) of size
+\(a\) on which \(f+\gamma g\) agrees with the selected codeword \(U(\gamma)\).
+Discard the at most \(M\) support-wise MCA-bad slopes.  For every remaining
+slope, support-wise containment gives codewords \(c_{1,\gamma},c_{2,\gamma}\in C\)
+such that
+\[
+  c_{1,\gamma}|_{S_\gamma}=f|_{S_\gamma},
+  \qquad
+  c_{2,\gamma}|_{S_\gamma}=g|_{S_\gamma}.
+\]
+Thus \((c_{1,\gamma},c_{2,\gamma})\) is a two-row interleaved codeword
+\(\delta\)-close to the received two-row word \((f,g)\), using the common support
+\(S_\gamma\).  There are at most \(L\) possible pairs.
+
+If the original line has more than \(M+nL\) close slopes, then after discarding
+bad slopes more than \(nL\) slopes remain.  By pigeonhole, one pair
+\((c_1,c_2)\) occurs for at least \(n+1\) slopes.  For each such slope, the
+codewords \(U(\gamma)\) and \(c_1+\gamma c_2\) both agree with \(f+\gamma g\) on
+\(S_\gamma\), hence agree with each other on \(a>k\) positions.  Since both have
+degree less than \(k\), they are identical codewords.  This proves the stated
+line-decoding conclusion.
+\end{proof}
+
+\begin{remark}[finite-constant consequence]
+If M1 gives \(M=n^{1+o(1)}\) and L1 plus
+Lemma~\ref{lem:common-support-interleaved-fiber-injection} gives \(L=n^B\), then
+Proposition~\ref{prop:list-mca-to-line-decoding-bridge} gives
+\[
+  M+nL+1\le n^{B+1+o(1)}.
+\]
+For \(n\le2^{44}\) and \(|\F|<2^{256}\), a raw list numerator \(n^B\) is
+compatible with a \(2^{-128}\) field budget only for about \(B\lesssim2.9\), and
+the line-decoding bridge is compatible only for about \(B\lesssim1.9\).  Thus the
+bridge is useful, but it leaves a real finite-constant target.
+\end{remark}
+
+\section{Updated Positive-Theorem Package}
+\label{sec:updated-positive-theorem-package}
+
+The clean theorem to aim for is the following finite-reserve package.  Let
+\[
+  C=\RS[\F_{\rm line},D,k],\qquad n=|D|,
+  \qquad a=k+\sigma,
+  \qquad \delta=1-a/n=1-\rho-\eta.
+\]
+Assume
+\[
+  \sigma\log_2\qgen
+  \ge (1+\varepsilon)\log_2\binom n{k+\sigma},
+  \qquad
+  \sigma\ge C_{\rho,B,\varepsilon}\frac n{\log n},
+\]
+the quotient profile \(\QH(\eta)\) is empty or explicitly budgeted, \(\eta\) lies
+above all proved failure floors including Paper D's universal-cap floor, and the
+MCA or line experiment is proved over \(\qline\), not merely over \(\qchal\).
+
+\begin{conjecture}[corrected finite reserve package]
+\label{conj:corrected-finite-reserve-package}
+Under the preceding hypotheses, the desired conclusions are
+\[
+  |\Lam(C^{\equiv\mu},\delta)|\le n^B
+\]
+for all ordinary column-distance protocol arities \(\mu\), by
+Lemma~\ref{lem:common-support-interleaved-fiber-injection}; and
+\[
+  \epsmca(C,\delta)
+  \le
+  \frac{
+    n^{1+o(1)}
+    +2^{(\beta(\rho)/\Htwo(\rho))\QH(\eta)(1+o(1))}
+  }{\qline},
+\]
+or the same bound over \(\qgen\) plus a proved extension-line lift.  If the
+consumed primitive is line decoding, then
+Proposition~\ref{prop:list-mca-to-line-decoding-bridge} should give
+\[
+  C\text{ is }(\delta,\ M+nL+1,\ n+1)\text{ line-decodable},
+\]
+with \(M\) and \(L\) supplied by M1 and L1.
+\end{conjecture}
+
+This package would turn the current negative cap into a sharp threshold program:
+below the cap one cannot hope for \(2^{-128}\) MCA soundness, while above the
+corrected reserve one would have finite numerators that can be checked against
+\(\qline\).
+
+\section{Immediate Experimental Additions}
+\label{sec:immediate-experimental-additions}
+
+\begin{enumerate}
+\item Add \texttt{experimental/interleaved\_fiber\_injection.md}, containing
+Lemma~\ref{lem:common-support-interleaved-fiber-injection}.  Update certificate
+logic so an L1 locator-fiber theorem gives \(L_\mu=n^B\), not \(n^{\mu B}\), for
+ordinary column-distance RS interleaving.
+
+\item Add \texttt{experimental/list\_mca\_to\_linedecoding.md}, containing
+Proposition~\ref{prop:list-mca-to-line-decoding-bridge}.  This gives a concrete
+M2 bridge and turns line decoding into a finite-constant ledger problem.
+
+\item Build a certificate scanner reporting generated-field entropy margin,
+quotient profile after \(k=\rho n-r\), Paper D cap floor, base and interleaved
+list numerators, MCA numerator, line-decoding numerator, field separation among
+\(\qgen\), \(\qline\), and \(\qchal\), extension status, and exact failure audit.
+
+\item Keep CA/list statements that use Crites--Stewart marked
+\textsc{Conditional} until audited.  Paper D v12's MCA cap should instead be
+tracked as \textsc{Proved} when the divisor, binomial, and subfield hypotheses
+are verified.
+\end{enumerate}
+
+\section{Fresh Non-Claims}
+\label{sec:fresh-nonclaims}
+
+This revision does not claim an exact settlement of the smooth-case Proximity
+Prize threshold.  It claims that the shape is now rigid:
+\[
+  \boxed{\text{No unslacked capacity theorem; prove a reserve theorem at }
+  1-\rho-\eta.}
+\]
+The theorem-backed negative side gives a draft universal MCA cap at constant gap
+\(2^{-9}\) for \(\rho=1/2,1/4,1/8\) and \(2^{-10}\) for \(\rho=1/16\).  The
+positive side should be pursued as
+\[
+  \text{L1 locator local limit}
+  +\text{M1 residue-line packing}
+  +\text{extension-line theorem}
+  +\text{protocol-ledger rewrite}.
+\]
+The interleaved-list problem is less fundamental than it looked in the old file:
+for column-distance interleaving, a uniform locator-fiber theorem immediately
+bounds the interleaved list at the same exponent.
+
+\section{Retained Previous Experiments Material}
+\label{sec:retained-previous-experiments-material}
+
+The remaining sections are retained from the previous \texttt{experiments.tex}
+whenever they still provide useful provenance, notation, normal forms, finite
+certificate gates, or non-claims.  The new front matter above should be read as
+the current threshold-level guide; the older material below remains a toolbox.
 
 \section{Status, Provenance, and What Counts as New}
 
@@ -98,11 +545,11 @@ The following items are the repository-side contributions collected here.
   many subset certificates to a smaller slope set, one heavy slope has many
   locator certificates, and, after a distinctness check, many nearby
   codewords.
-\item A slack-two and subfield-pigeonhole proof target for the Paper D route:
-  the imported locator construction should be run at the augmented-code rung
-  needed by the Crites--Stewart list-to-agreement conversion, and slopes should
-  be pigeonholed over the generated/base field when the construction really
-  takes values there.
+\item A slack-two and subfield-pigeonhole proof target for the older
+  Crites--Stewart/CA route: the imported locator construction should be run at
+  the augmented-code rung needed by that conversion, and slopes should be
+  pigeonholed over the generated/base field when the construction really takes
+  values there.
 \item A \textsc{New-local} divisibility gate in the restricted Paper B window
   \(B=\F_p\), \(F=\F_{p^2}\), \(D=\F_p\), \(t=\sigma=2\), \(j=3\).  This is
   independent of the BCHKS priority issue and is the main theorem proved in
@@ -274,13 +721,14 @@ whether the slope set is the ambient field \(\F\) or a generated/base subfield
 Those are the checks needed before using the construction in Papers A, B, or D.
 \end{remark}
 
-\subsection{Slack-two and subfield target for Paper D}
+\subsection{Slack-two and subfield target for the older CS25 route}
 
 \textbf{Status: \textsc{Target}.}
-The Paper D route needs a locator-heavy list fiber in the augmented code rung
-\(C^+=\RS[\F,D,k+1]\), because that is the object fed into the
-Crites--Stewart list-to-agreement conversion.  The proof obligation should be
-stated as follows.
+The older CS25/CA route needs a locator-heavy list fiber in the augmented code
+rung \(C^+=\RS[\F,D,k+1]\), because that is the object fed into the
+Crites--Stewart list-to-agreement conversion.  Paper D v12 no longer uses this
+as the load-bearing MCA-cap route, but the target remains useful for CA/list
+comparison audits.  The proof obligation should be stated as follows.
 
 \begin{proposition}[Slack-two/subfield locator target]
 \label{prop:slack-two-target}
@@ -730,6 +1178,1119 @@ The certificate should keep at least
 \end{gathered}
 \]
 
+\section{June 26 Normal-Form and Dependency Results}
+\label{sec:june26}
+
+\textbf{Status: mixed.}
+This section records the parts of the June 26 PR batch that survived a
+statement-level validity check.  The statements below are useful proof
+infrastructure, not prize claims.  In particular, they do not improve the
+current Cycle116/119 numerator \(52{,}747{,}567{,}092\) over
+\(\F_{17^{32}}\), and they do not prove the corrected Paper B MCA conjecture.
+
+\subsection{Syndrome-pencil normal form for support-wise line incidence}
+
+\textbf{Status: \textsc{New-local}.}
+This is the cleanest reusable F1 contribution from the batch.  It turns
+support-wise line incidence into a Hankel-pencil locator equation over the
+actual line field.
+
+Let \(D=\{x_1,\ldots,x_n\}\subset F\) have distinct points and let
+\(C=\RS[F,D,k]\) with redundancy \(r=n-k\).  For each \(x_i\), put
+\[
+  \lambda_i=\left(\prod_{h\ne i}(x_i-x_h)\right)^{-1}.
+\]
+For a word \(y:D\to F\), define
+\[
+  \operatorname{Syn}(y)_m
+  =\sum_i \lambda_i x_i^m y(x_i),
+  \qquad 0\le m<r.
+\]
+Then \(\operatorname{Syn}(y)=0\) if and only if \(y\in C\).  Fix
+\(T\subset D\) with \(|T|=j\), assume \(0\le j\le r\), and set \(t=r-j\).
+Write
+\[
+  L_T(X)=\prod_{x\in T}(X-x)=\ell_0+\ell_1X+\cdots+\ell_jX^j,
+  \qquad
+  \boldsymbol\ell_T=(\ell_0,\ldots,\ell_j)^T .
+\]
+For \(w\in F^r\), define the \(t\times(j+1)\) Hankel window
+\[
+  H_{t,j}(w)_{a,b}=w_{a+b},
+  \qquad 0\le a<t,\quad 0\le b\le j.
+\]
+
+\begin{theorem}[Hankel-pencil test]
+\label{thm:syndrome-pencil}
+Let \(f,g:D\to F\), put \(u=\operatorname{Syn}(f)\) and
+\(v=\operatorname{Syn}(g)\), and let \(S=D\setminus T\).  For a finite slope
+\(z\in F\), the word \(f+zg\) is explained by a codeword of \(C\) on \(S\) if
+and only if
+\[
+  \bigl(H_{t,j}(u)+zH_{t,j}(v)\bigr)\boldsymbol\ell_T=0.
+\]
+Moreover, this explanation is support-wise noncontained for the line
+\(f+zg\) on \(S\) if and only if, in addition,
+\[
+  H_{t,j}(v)\boldsymbol\ell_T\ne0.
+\]
+Consequently the support-wise MCA bad slopes at agreement \(k+t\) are exactly
+the slopes for which there is a squarefree \(D\)-split locator \(L_T\) of
+degree \(j=r-t\) satisfying the displayed incidence and noncontainment tests.
+\end{theorem}
+
+\begin{proof}
+Let \(W_T\subset F^r\) be the span of the parity-check columns indexed by
+\(T\):
+\[
+  W_T=\operatorname{span}_F\{\lambda_x(1,x,\ldots,x^{r-1}):x\in T\}.
+\]
+Equivalently, \(w\in W_T\) means that \(w\) is the syndrome of a word supported
+on \(T\).  For every \(w\in W_T\), write
+\[
+  w_m=\sum_{x\in T}c_xx^m.
+\]
+Then, for \(0\le a<t\),
+\[
+  \bigl(H_{t,j}(w)\boldsymbol\ell_T\bigr)_a
+  =\sum_{b=0}^j\ell_b w_{a+b}
+  =\sum_{x\in T}c_xx^aL_T(x)=0.
+\]
+Conversely, since \(L_T\) is monic, the recurrence
+\(\sum_{b=0}^j\ell_b w_{a+b}=0\) for \(0\le a<r-j\) determines all remaining
+coordinates from the first \(j\) coordinates, so its solution space has
+dimension at most \(j\).  The \(j\) columns indexed by the distinct points of
+\(T\) form a Vandermonde system of rank \(j\), hence the recurrence space is
+exactly \(W_T\).
+
+The word \(f+zg\) is explained on \(S\) if and only if there is \(c\in C\) such
+that \(f+zg-c\) is supported on \(T\).  Taking syndromes, this is equivalent to
+\(u+zv\in W_T\), which is the first displayed equation by the recurrence
+criterion.  Under that equation, simultaneous explanation of \(f\) and \(g\) on
+the same \(S\) is equivalent to \(u,v\in W_T\).  Since
+\(u=(u+zv)-zv\), this is equivalent to \(v\in W_T\), hence to
+\(H_{t,j}(v)\boldsymbol\ell_T=0\).  Noncontainment is therefore exactly the
+negation of that condition.
+\end{proof}
+
+\subsection{Interleaved codegree reduction}
+
+\textbf{Status: \textsc{New-local} reduction; saving remains conditional.}
+This result is useful for the L2 interleaved-list ledger because it replaces
+the naive Cartesian product by a recursion through higher-agreement tails.
+
+Let \(C=\RS[F,D,k]\).  For a word \(V:D\to F\) and codeword \(c\in C\), write
+\[
+  A_V(c)=\{x\in D:c(x)=V(x)\},
+  \qquad
+  \operatorname{Fib}_V(s)=\{c\in C:|A_V(c)|\ge s\},
+\]
+and \(M_V(s)=|\operatorname{Fib}_V(s)|\).  For a \(\mu\)-row word
+\(U=(U_1,\ldots,U_\mu)\), define
+\[
+  \Lambda_\mu^{(s)}(U)
+  =
+  \#\{(c_1,\ldots,c_\mu)\in C^\mu:
+  |\cap_i A_{U_i}(c_i)|\ge s\}.
+\]
+
+\begin{theorem}[two-regime codegree bound]
+\label{thm:l2-codegree}
+For every agreement threshold \(a\),
+\[
+  \Lambda_2^{(a)}(U_1,U_2)
+  \le
+  M_{U_2}(a)+M_{U_2}(2a-k)\,M_{U_1}(a).
+\]
+More generally,
+\[
+  \Lambda_\mu^{(a)}(U_1,\ldots,U_\mu)
+  \le
+  \Lambda_{\mu-1}^{(a)}(U_2,\ldots,U_\mu)
+  +
+  \Lambda_{\mu-1}^{(2a-k)}(U_2,\ldots,U_\mu)\,M_{U_1}(a).
+\]
+\end{theorem}
+
+\begin{proof}
+For the two-row case, sum over \(c_2\in\operatorname{Fib}_{U_2}(a)\), and put
+\(N_2=|A_{U_2}(c_2)|\).  The possible \(c_1\)'s are codewords agreeing with
+\(U_1\) on at least \(a\) points of \(A_{U_2}(c_2)\).  If
+\(N_2<2a-k\), then two such \(c_1\)'s would agree with each other on more than
+\(k\) points, forcing equality.  Thus this punctured list has size at most
+one.  If \(N_2\ge2a-k\), use the trivial bound \(M_{U_1}(a)\).  Summing these
+two regimes gives the displayed two-row inequality.
+
+For the \(\mu\)-row case, fix \((c_2,\ldots,c_\mu)\) and put
+\[
+  S=\bigcap_{i=2}^\mu A_{U_i}(c_i).
+\]
+The listed \(c_1\)'s must agree with \(U_1\) on at least \(a\) points of \(S\).
+If \(|S|<2a-k\), the same unique-decoding argument gives at most one such
+\(c_1\).  If \(|S|\ge2a-k\), use the bound \(M_{U_1}(a)\).  Counting the two
+classes of \((c_2,\ldots,c_\mu)\) gives the recursion.
+\end{proof}
+
+\begin{remark}
+The reduction is unconditional.  The desired L2 saving still requires an
+L1-family input saying that the tail lists at agreement \(2a-k\) are small
+after quotient-periodic contributions are budgeted.
+\end{remark}
+
+\subsection{Deep-point cap dependency split}
+
+\textbf{Status: \textsc{Wrapper} / \textsc{Audit}.}
+This result does not edit Paper D, but it explains why the headline MCA cap can
+be routed locally without using the imported Crites--Stewart conversion.
+
+\begin{proposition}[CS25-free route to the Paper D MCA cap]
+\label{prop:deep-point-cap}
+Assume the finite-field, coset, divisibility, and binomial hypotheses used in
+Paper D's universal cap theorem.  Let \(C=\RS[F,D,k]\), \(C^+=\RS[F,D,k+1]\),
+\(q=|F|\), and suppose the elementary quotient-locator fiber construction gives
+a \(C^+\)-list of size
+\[
+  L\ge \binom{N}{\rho N+2}/|B|\ge q/k+1
+\]
+at the endpoint \(\delta_N=1-\rho-2/N\).  Then there is a support-wise MCA-bad
+line for \(C\) with bad-slope density strictly larger than
+\[
+  \frac1{2k}\left(1-\frac nq\right).
+\]
+By support-wise MCA monotonicity, the same lower bound holds for all
+\(\delta_N\le\delta<1-\rho\).
+\end{proposition}
+
+\begin{proof}
+Let \(U:D\to F\) be the received word with a \(C^+\)-list
+\(\{P_1,\ldots,P_L\}\) at agreement \(m=k+2n/N\).  For
+\(\alpha\in F\setminus D\), form
+\[
+  f_\alpha(x)=\frac{U(x)}{x-\alpha},
+  \qquad
+  g_\alpha(x)=-\frac1{x-\alpha}.
+\]
+For every listed \(P_i\), the slope \(z=P_i(\alpha)\) gives the codeword
+\[
+  Q_i(X)=\frac{P_i(X)-P_i(\alpha)}{X-\alpha}\in F[X]_{<k}
+\]
+on the same agreement support.  Conversely every such slope comes from a
+listed \(P_i\).  Since \(m>k\), the direction \(g_\alpha\) cannot be explained
+by a degree-\(<k\) polynomial on the same support, so these slopes are
+support-wise MCA-bad.
+
+Averaging over \(\Omega=F\setminus D\), two distinct degree-\(<k+1\)
+polynomials collide at at most \(k\) points of \(\Omega\).  Therefore some
+\(\alpha\) has at least
+\[
+  M\ge \frac{L}{1+k(L-1)/(q-n)}
+\]
+distinct values among \(P_1(\alpha),\ldots,P_L(\alpha)\).  Its bad-slope
+density is at least
+\[
+  \frac{L(q-n)}{q(q-n+k(L-1))}.
+\]
+This is strictly greater than \((q-n)/(2kq)\) exactly when
+\[
+  2kL>q-n+k(L-1).
+\]
+The lower bound \(L\ge q/k+1\) gives \(kL\ge q+k\), so the left-minus-right
+quantity is at least \(n+2k>0\).  This proves the endpoint bound, and
+monotonicity in \(\delta\) extends it to the stated interval.
+\end{proof}
+
+\subsection{Common code-line residual budget}
+
+\textbf{Status: \textsc{New-local} finite MDS theorem.}
+This M2 lemma is a guardrail for line-decoding imports: a close common
+code-line exception still pays for residual coordinates outside the common
+support.
+
+\begin{proposition}[common code-line residual budget]
+\label{prop:common-residual}
+Let \(C\subseteq F^D\) be an MDS linear code of dimension \(k\), so every
+nonzero codeword has fewer than \(k\) zeros on \(D\).  Let
+\(\ell_z=f+zg\) be a received line and suppose that for some codewords
+\(c_f,c_g\in C\) there is a common support \(S_0\subseteq D\) of size \(b\)
+such that \(f=c_f\) and \(g=c_g\) on \(S_0\).  Fix an agreement threshold
+\(a\) with \(a+b-n\ge k\).  Put \(\Omega=D\setminus S_0\),
+\[
+  f'=f-c_f,\qquad g'=g-c_g,\qquad
+  h=\max(1,a-b),
+\]
+and
+\[
+  c_0=\#\{x\in\Omega:f'(x)=g'(x)=0\}.
+\]
+Every support-wise noncontained slope at agreement \(a\) satisfies
+\[
+  \#\{x\in\Omega:f'(x)+zg'(x)=0\}\ge h.
+\]
+Consequently, if \(h>c_0\), then the number of such slopes is at most
+\[
+  \left\lfloor\frac{|\Omega|-c_0}{h-c_0}\right\rfloor.
+\]
+\end{proposition}
+
+\begin{proof}
+If \(\ell_z\) is explained on a support \(S\) of size at least \(a\), then
+\[
+  |S\cap S_0|\ge a-|\Omega|=a+b-n\ge k.
+\]
+On \(S\cap S_0\), the explaining codeword agrees with \(c_f+zc_g\).  By the
+MDS zero-rigidity condition, the two codewords are equal.  Thus, outside
+\(S_0\), the line can only be explained where \(f'+zg'=0\), and at least
+\(h=\max(1,a-b)\) such outside zeros are needed for a noncontained support.
+
+Each non-common residual coordinate \(x\in\Omega\) with \((f'(x),g'(x))\ne
+(0,0)\) can vanish for at most one finite slope \(z\).  A bad slope needs at
+least \(h-c_0\) private non-common residual zeros after the \(c_0\) common zeros
+are counted.  Charging these private coordinates to slopes gives the stated
+packing bound.
+\end{proof}
+
+\section{Recent PR Triage: L1, F1, M1, and Challenge-Map Ledgers}
+\label{sec:recent-pr-triage}
+
+\textbf{Status: \textsc{Audit} / \textsc{Experimental} / bounded
+\textsc{Proved} notes.}
+The open PR batch of June 27, 2026, adds useful proof infrastructure but no new
+unconditional prize-scale threshold beyond the tangent-floor consequences already
+in the high-agreement ledger.  The promotion rule used here is conservative:
+bounded toy theorems and exact normal forms may enter the experimental notes,
+while computation-dependent numerators and generated proof programs remain
+labelled as such.
+
+\subsection{L1: proper-subgroup and monomial-prefix lanes}
+
+Scott Hughes' \(d=3\) proper-subgroup note records the actual \(H^{2k}\)
+collision object for the odd moments \(1,3,5\).  For \(p>5\), \(H\le\F_p^*\)
+of order \(n\), and
+\[
+  S_H(a_1,a_3,a_5)
+  =
+  \sum_{h\in H}\psi(a_1h+a_3h^3+a_5h^5),
+\]
+the exact Fourier identity is
+\[
+  V_{H,k}^{(3)}
+  =
+  p^{-3}\sum_{a_1,a_3,a_5\in\F_p}
+  |S_H(a_1,a_3,a_5)|^{2k}.
+\]
+After splitting frequencies into the linear, cubic, and quintic strata, and
+using the stated one-variable Gauss/Katz inputs, the note gives
+\[
+0\le
+V_{H,k}^{(3)}-\frac{n^{2k}}{p^3}
+\le
+\frac{p-1}{p^3}p^k
++\frac{p(p-1)}{p^3}(3\sqrt p)^{2k}
++\frac{p^2(p-1)}{p^3}(5\sqrt p)^{2k}.
+\]
+This is useful L1 infrastructure, not a reserve-scale arbitrary-word locator
+local limit.
+
+Vadim Avdeev's monomial-prefix note settles one bounded toy lane over
+\[
+  F=\F_{17}[z]/(z^{32}-3),\qquad H=\langle z\rangle,\qquad |H|=512,
+\]
+with degree convention \(\deg P\le256\).  In the range \(258\le A\le512\),
+the admissible monomial agreement sizes are
+\[
+\begin{gathered}
+258,259,260,262,264,268,272,280,\\
+288,304,320,352,384,512.
+\end{gathered}
+\]
+The proof combines a local length-\(16\) imbalance check over \(\F_{17}\), a
+dyadic power-sum descent gate, and quotient-complement survivor families.  This
+should be cited only as a monomial-prefix benchmark, not as an arbitrary-word
+list theorem.
+
+\subsection{F1: arbitrary-anchor residue clouds}
+
+The F1 arbitrary-anchor update splits the balanced residue-cloud problem from
+the residual-list problem.  If \(t<\sigma\), residue-line bad slopes inject into
+an ordinary list for \(\RS[F,D,k+t]\) at residual slack \(\sigma-t\).  In the
+balanced case \(t=\sigma\), arbitrary anchors have a real free-packing floor:
+\[
+  \Lambda_{\rm NC}
+  \ge
+  \left\lfloor\frac{|D|-k}{\sigma}\right\rfloor.
+\]
+Moreover this is the exact ceiling for ordered \(k\)-degenerate support
+families, so any larger arbitrary-anchor packet must use dense overlaps.  The
+dense-overlap gate is explicit: for two supports \(S,T\) with overlap \(J\),
+compatibility of distinct slopes is controlled by whether the residue direction
+\(N/E\) is degree-\(<k\) on \(J\).  This is a useful F1 warning and search
+normal form, not an extension-line lift theorem.
+
+\subsection{M1: all-line Hankel aperiodic packet}
+
+The large M1 PR is not promoted wholesale.  The useful distillation is the exact
+Hankel-pencil object.  For a line \((f,g)\), syndromes \(u=\operatorname{Syn}(f)\)
+and \(v=\operatorname{Syn}(g)\), and a split complement \(T\) with locator vector
+\(\ell_T\), finite bad slopes are governed by
+\[
+  \bigl(H_{t,j}(u)+zH_{t,j}(v)\bigr)\ell_T=0,
+  \qquad
+  H_{t,j}(v)\ell_T\ne0.
+\]
+In the \(t=2\) window this becomes
+\[
+  b_T\ne0,\qquad \det[a_T\ b_T]=0,
+  \qquad
+  a_T=H_{2,j}(u)\ell_T,\quad b_T=H_{2,j}(v)\ell_T.
+\]
+Same-slope one-exchange collisions lie in fixed-slope root slices, and the
+residual one-exchange graph can be further organized into quadratic companion
+slices and top packets.  These reductions define a promising M1 proof program,
+but they do not yet prove the desired uniform polynomial bound on residual
+aperiodic slope images.
+
+\subsection{M1: variable-line packet reduction}
+
+The follow-up variable-line packet note isolates a local reduction inside the
+same Hankel-pencil branch.  Fix a \((j-2)\)-core \(R\) and a non-fixed proper
+one-dimensional determinant component \(L\) in the two-root plane
+\[
+  T=R\cup\{x,y\},\qquad s=x+y,\quad p=xy .
+\]
+Under the stated packet hypotheses, the active-new mass \(r_L\) on \(L\) obeys
+\[
+  r_L
+  \le
+  {\bf 1}_{d_L=m_L=r_L=1}
+  +(d_L-m_L)+2\binom{m_L}{2}.
+\]
+The unordered packet pairs in the final term inject into the global
+different-slope two-exchange codegree ledger, so summing over non-fixed
+variable lines gives
+\[
+  \sum_L r_L
+  \le S_{\rm dom}+Q_{\rm def}+2E_{\rm pkt}.
+\]
+The remaining domain-singleton term is reduced to contained/tangent and
+one-outside target images:
+\[
+  S_{\rm dom}
+  \le
+  Z_0
+  +2\binom{j}{2}\binom{n-j}{2}|{\rm Target}_{\rm cb}|
+  +(j-1)\binom{n-j+1}{2}|{\rm Target}_{\rm off}|.
+\]
+Writing \(a=n-j\), the exceptional zero-lower term vanishes whenever
+\[
+  a>\frac{n+1}{2},
+\]
+and hence throughout the positive-slack rate-half range \(k\ge n/2\),
+\(a=k+t\), \(t\ge1\).  Consequently the non-fixed variable-line branch is
+reduced to two explicit residual estimates: the active different-slope
+two-exchange codegree and the one-outside boundary target image, after quotient
+defects and contained/tangent ledgers have been paid.
+
+\textbf{Status.}  This is a proved local packet lemma under the Hankel-pencil
+normal form and its non-fixed variable-line hypotheses.  It is not the final
+all-line M1 theorem and does not add a leaderboard row.
+
+\subsection{M1: width-one fixed-root closure}
+
+PR \#136, due to AllenGrahamHart, extracts a compact closure criterion for the
+width-one critical-tail branch.  At a base-free canonical \(b=2\) node, let
+\[
+  V=\langle P,Q\rangle\subset F[X]_{<q},\qquad |D^{can}|=q+s.
+\]
+A root-free width-one certificate is a direction \(A\in V\) whose root shadow
+on \(D^{can}\) has maximal size \(q-1\).  Writing \(Z=Z(A)\) and
+\(O=D^{can}\setminus Z\), one has
+\[
+  A=c\ell_Z,\qquad |Z|=q-1,\qquad |O|=s+1.
+\]
+Equivalently, \(O\) supports a width-one certificate if and only if
+\[
+  L_O=\ell_{D^{can}\setminus O}\in V,
+\]
+or equivalently all \(3\times3\) coefficient minors of \(P,Q,L_O\) vanish.
+Thus width-one certificates are bounded-complement rank tests rather than an
+unstructured projective-direction family.
+
+The large width-one cube descends losslessly under fixed-root absorption.  If
+\(P_m\subset Z\), then
+\[
+  A^{P_m}=A/\ell_{P_m}=c\ell_{Z\setminus P_m},\qquad
+  D^{can}\setminus P_m=(Z\setminus P_m)\sqcup O,
+\]
+so the descended width remains one and the bounded complement \(O\) is
+unchanged.  With \(a=\lfloor(q-2)/2\rfloor\), the co-small flag cube has the
+first-root partition
+\[
+  \sum_{e=1}^a\binom{q-1}{e}
+  =
+  \sum_{x\in Z}\sum_{f=0}^{a-1}\binom{|Z_{>x}|}{f}.
+\]
+After exposing the first root \(x\), every nonempty width-one flag injects into
+a one-root absorbed fixed-divisor/root-slice family.  Quantitatively, for
+\[
+  M_x=\#\{F\subset Z_{>x}: |F|\le a-1\},
+\]
+one gets
+\[
+  \max_{x\in Z}M_x
+  \ge {1\over q-1}\sum_{e=1}^a\binom{q-1}{e}
+  \ge {2^{q-1}\over 2q^2}\qquad(q\ge4).
+\]
+Thus a large width-one cube already produces a large one-root slice; it cannot
+hide as a many-first-root averaging phenomenon.
+
+PR \#137 sharpens the remaining one-root ledger into an explicit
+bounded-complement algebraic test.  Let \(\mathrm{W1Large}(A_0)\) be the set of
+active large-node pairs \((S,O)\) with \(q_S>s_S+2\), \(|O|=s_S+1\), and
+\(\ell_{D_S^{can}\setminus O}\in V_S\).  For
+\(Z_{S,O}=D_S^{can}\setminus O\) and \(a_S=\lfloor(q_S-2)/2\rfloor\), the
+large-node flag contribution is exactly
+\[
+  FR^{\mathrm{r1}}_1(A_0)
+  =
+  \sum_{(S,O)\in \mathrm{W1Large}(A_0)}
+  \sum_{x\in Z_{S,O}}
+  \sum_{f=0}^{a_S-1}\binom{|\{y\in Z_{S,O}:y>x\}|}{f}.
+\]
+Equivalently, with
+\[
+  b(q)=\sum_{e=1}^{\lfloor(q-2)/2\rfloor}\binom{q-1}{e},
+\]
+any surviving subledger \(U\subseteq \mathrm{W1Large}(A_0)\) has weight
+\[
+  FR^{\mathrm{r1}}_1(U)=\sum_{(S,O)\in U} b(q_S),
+  \qquad
+  {2^{q-1}\over 2q}\le b(q)\le2^{q-1}\quad(q\ge4).
+\]
+Thus polynomiality of the width-one one-root ledger is equivalent, up to the
+already-polynomial active-tree factor, to excluding surviving rank-test
+complements with \(q_S/\log Q\to\infty\).
+
+The same update gives a fixed-surplus tail readout.  If
+\[
+  L_O=\ell_{D\setminus O}
+  =
+  X^{q-1}+c_1X^{q-2}+\cdots+c_{s+1}X^{q-s-2}+\cdots ,
+\]
+then the top \(s+1\) coefficients determine \(O\) by the triangular identities
+coming from \(D=(D\setminus O)\sqcup O\).  After choosing a monic pencil
+\[
+  M+\lambda N\in V,
+\]
+the full bounded-complement rank test is equivalent to the one-parameter
+factorization
+\[
+  \ell_D(X)=E_\lambda(X)(M(X)+\lambda N(X)),
+\]
+where \(E_\lambda\) is the recovered degree-\(s+1\) complement factor.  The
+residual coefficients form a vector of univariate equations in \(\lambda\),
+each of degree at most \(s+2\).  Unless \(N=0\), this residual vector is not
+identically zero, so the scalar candidates are the roots of a fixed-degree node
+gcd; genuine split roots additionally have disjoint degree-\(q-1\) root shadows.
+This is still a local closure target, not a full M1 theorem.
+
+Consequently, in fixed surplus \(s_0\le\sigma\), small nodes are polynomial by
+the active-tree bound, and on \(q_S>s_S+2\) there is at most one width-one
+shadow per node.  The local closure criterion is
+\[
+  WO_1(A_0)
+  \le FR^{\mathrm{r1}}_1(A_0)+O_\sigma(Q^{\sigma+1}),
+\]
+where \(Q\) is the initial quotient width.  This closes the width-one
+critical-tail branch only after a polynomial bound for the displayed explicit
+one-root fixed-root/root-slice subledger is proved or imported.  It is not the
+final all-line M1 theorem and does not add a leaderboard row.
+
+\subsection{Challenge-map pullbacks and public status corrections}
+
+The adjacent-ledger update adds the missing pullback rule from slope ledgers to
+protocol challenge maps.  For a challenge-to-slope map \(\phi:K\to Z\), a bad
+set \(B\subseteq Z\) pulls back with probability
+\[
+  \frac{|\phi^{-1}(B)|}{|K|}.
+\]
+If the nonempty fibers have sizes \(s_1\ge s_2\ge\cdots\), the adversarial
+envelope for \(|B|=L\) is \((s_1+\cdots+s_L)/|K|\).  For an \(\F_q\)-linear map
+of rank \(r\), the effective denominator is \(q^r\), not the ambient challenge
+space size.  This prevents accidental multiplication of denominators in protocol
+ledgers.
+
+The public-board status corrections are:
+\[
+\begin{array}{c|c|c|c}
+\text{row} & a & \text{tangent floor} & \text{status}\\
+\hline
+\text{Cycle116 gate} & 262 & 251 & \text{gate unconditional; exact count conditional}\\
+\text{Cycle119 gate} & 263 & 250 & \text{gate unconditional; exact count conditional}\\
+\text{reserve272} & 272 & 241 & \text{proved but subsumed}\\
+\text{reserve288} & 288 & 225 & \text{proved but subsumed}\\
+\text{reserve313} & 313 & 200 & \text{proved but subsumed}
+\end{array}
+\]
+The exact Cycle84 numerator \(52{,}747{,}567{,}092\) remains a
+computation-dependent record; only the weaker \(>2^{-128}\) gate follows from
+the generic tangent floor without that finite census.
+
+% High-agreement material promoted to clean notes.
+\input{notes/high_agreement/tangent_staircase}
+\input{notes/high_agreement/line_ca_projective}
+\input{notes/high_agreement/curve_mca_ca}
+\input{notes/high_agreement/interleaved_uniqueness}
+\input{notes/high_agreement/current_row_protocol_ledger}
+\input{notes/high_agreement/general_threshold_compiler}
+\section{Towards-Prize Finite-Threshold Theorems}
+\label{sec:towards-prize-thresholds}
+
+\textbf{Status: \textsc{New-local} finite theorem infrastructure plus
+subsumed strict264 proof record.}
+The results in this section are deliberately finite and certificate-facing.  They
+are meant to move the experimental ledger from lower-bound numerators toward the
+integer agreement staircase needed by the Proximity Prize.  They do not prove the
+corrected Paper B local-limit conjecture.  The later
+high-agreement tangent staircase supersedes the old strict264/265 search target
+as a threshold-pinning route for the \(\F_{17^{32}}\), \(n=512\), \(k=256\)
+row; the strict264 material below remains useful as certificate language and
+as a record of quotient-core mechanisms.
+
+For a received line \(\ell_z=f+zg\), write
+\[
+  \operatorname{Bad}_{f,g}(C,a)
+\]
+for the set of finite slopes \(z\in F\) for which there is a support
+\(S\subseteq D\), \(|S|\ge a\), and a codeword \(c\in C\) satisfying
+\(c|_S=(f+zg)|_S\), but there is no pair of codewords
+\(c_f,c_g\in C\) with \(c_f|_S=f|_S\) and \(c_g|_S=g|_S\).  Put
+\[
+  \operatorname{LD}_{\rm sw}^{f,g}(C,a)
+  =|\operatorname{Bad}_{f,g}(C,a)|,
+  \qquad
+  \operatorname{LD}_{\rm sw}(C,a)
+  =\max_{f,g}\operatorname{LD}_{\rm sw}^{f,g}(C,a),
+\]
+where the maximum is over the line family allowed by the sampler under
+consideration.  The field paying the denominator is always \(\qline\), not
+silently \(\qgen\) or \(\qchal\).
+
+\begin{proposition}[certificate-to-\(\operatorname{LD}_{\rm sw}\) gate]
+\label{prop:certificate-to-ldsw}
+Let \(C=\RS[F,D,k]\), let \(a\ge k\), and fix a received line \(f+zg\).  Suppose
+there is a finite set \(\mathcal C\) of tuples
+\[
+  (z_i,S_i,P_i),
+  \qquad z_i\in F,
+  \quad S_i\subseteq D,
+  \quad |S_i|\ge a,
+  \quad P_i\in F[X]_{<k},
+\]
+with the following properties:
+\begin{enumerate}
+\item the slopes \(z_i\) are pairwise distinct;
+\item \(P_i(x)=f(x)+z_i g(x)\) for every \(x\in S_i\);
+\item there are no \(P_{i,f},P_{i,g}\in F[X]_{<k}\) satisfying
+  \(P_{i,f}|_{S_i}=f|_{S_i}\) and \(P_{i,g}|_{S_i}=g|_{S_i}\).
+\end{enumerate}
+Then
+\[
+  \operatorname{LD}_{\rm sw}^{f,g}(C,a)\ge |\mathcal C|,
+  \qquad
+  \operatorname{LD}_{\rm sw}(C,a)\ge |\mathcal C|.
+\]
+\end{proposition}
+
+\begin{proof}
+Each tuple certifies that the slope \(z_i\) is explained on a support of size at
+least \(a\), and the third condition is exactly support-wise noncontainment on
+that support.  Pairwise distinctness of the slopes prevents multiple tuples from
+paying for the same bad slope.  Thus all \(z_i\)'s lie in
+\(\operatorname{Bad}_{f,g}(C,a)\), giving the first inequality.  The second
+follows from the definition of \(\operatorname{LD}_{\rm sw}(C,a)\) as a maximum
+over lines.
+\end{proof}
+
+\begin{corollary}[strict264 certificate target]
+\label{cor:strict264-certificate-target}
+For the row
+\[
+  C=\RS[\F_{17^{32}},H,256],
+  \qquad |H|=512,
+\]
+a strict264 certificate consists of seven tuples in
+Proposition~\ref{prop:certificate-to-ldsw} with \(a=264\).  Such a certificate
+proves
+\[
+  \operatorname{LD}_{\rm sw}(C,264)\ge 7.
+\]
+\end{corollary}
+
+\begin{proof}
+Apply Proposition~\ref{prop:certificate-to-ldsw} with
+\(|\mathcal C|=7\) and \(a=264\).
+\end{proof}
+
+\begin{proposition}[fixed-locator unique-slope principle]
+\label{prop:fixed-locator-unique-slope}
+Use the notation of Theorem~\ref{thm:syndrome-pencil}.  Fix
+\(a\ge k\), put \(t=a-k\), \(j=n-a=r-t\), and fix a squarefree
+\(D\)-split locator \(L_T\) of degree \(j\).  Let
+\[
+  A_T=H_{t,j}(u)\boldsymbol\ell_T,
+  \qquad
+  B_T=H_{t,j}(v)\boldsymbol\ell_T.
+\]
+If \(B_T\ne0\), then this locator contributes at most one finite
+support-wise noncontained slope.  More precisely, a slope exists exactly when
+\(A_T\) is a scalar multiple of \(B_T\), in which case the unique slope is
+\[
+  z_T=-A_{T,m}/B_{T,m}
+\]
+for any coordinate \(m\) with \(B_{T,m}\ne0\), and the same value must be
+obtained from every nonzero coordinate of \(B_T\).
+Consequently
+\[
+  \operatorname{LD}_{\rm sw}^{f,g}(C,a)
+  \le
+  \#\{T\subset D:
+        |T|=n-a,
+        L_T\text{ squarefree and }D\text{-split},
+        B_T\ne0,
+        A_T\in F B_T\}.
+\]
+\end{proposition}
+
+\begin{proof}
+For the fixed locator, Theorem~\ref{thm:syndrome-pencil} gives the incidence
+equation
+\[
+  A_T+zB_T=0
+\]
+and the noncontainment condition \(B_T\ne0\).  If \(B_T\ne0\), any solution
+\(z\) is forced by any coordinate where \(B_T\) is nonzero.  Existence is exactly
+the consistency condition that all coordinates give the same scalar, equivalently
+\(A_T\in F B_T\).  Counting possible locators gives the final bound; different
+locators may still collide to the same slope, so the displayed quantity is an
+upper bound on distinct slopes.
+\end{proof}
+
+\begin{remark}[why this helps the 265 upper bound]
+For the current \(n=512,k=256\) row, this proposition remains useful for
+duplicate-aware locator searches.  The old proposed upper bound
+\(\operatorname{LD}_{\rm sw}(C,265)\le6\) is now known to be false by
+Theorem~\ref{thm:moving-root-tangent-floor}, which already gives
+\(\operatorname{LD}_{\rm sw}(C,265)\ge248\).  Future upper-bound searches should
+therefore start beyond the exact tangent gate, at agreement \(507\) and higher,
+or explicitly isolate non-tangent mechanisms.
+\end{remark}
+
+\begin{theorem}[subfield confinement for base-valued lines]
+\label{thm:subfield-confinement-base-lines}
+Let \(K\subseteq F\) be a subfield, let \(D\subset K\), and let
+\(C_F=\RS[F,D,k]\).  Suppose \(f,g:D\to K\), and let
+\(S\subseteq D\) have \(|S|\ge k\).  If \(z\in F\setminus K\) and there is a
+polynomial \(P\in F[X]_{<k}\) with
+\[
+  P(x)=f(x)+zg(x)
+  \qquad (x\in S),
+\]
+then there are polynomials \(P_f,P_g\in K[X]_{<k}\) such that
+\[
+  P_f|_S=f|_S,
+  \qquad
+  P_g|_S=g|_S.
+\]
+Consequently, for \(K\)-valued received lines and agreement \(a\ge k\), every
+support-wise noncontained finite slope lies in \(K\).
+\end{theorem}
+
+\begin{proof}
+Choose a subset \(S_0\subseteq S\) of size \(k\).  Interpolate the values of
+\(f\) and \(g\) on \(S_0\) to obtain unique polynomials
+\(P_f,P_g\in K[X]_{<k}\).  On \(S_0\), the polynomial
+\(P_f+zP_g\) agrees with \(P\).  Since both have degree less than \(k\) and agree
+on \(k\) points, they are equal as polynomials over \(F\).  For every
+\(x\in S\), therefore,
+\[
+  0=f(x)+zg(x)-P(x)
+   =(f(x)-P_f(x))+z(g(x)-P_g(x)).
+\]
+Both coefficients in the final expression lie in \(K\).  Since
+\(z\notin K\), the elements \(1,z\) are linearly independent over \(K\).  Hence
+both coefficients vanish for every \(x\in S\), proving the separate explanations
+of \(f\) and \(g\).  Thus any explained slope outside \(K\) is support-wise
+contained, so a noncontained slope must lie in \(K\).
+\end{proof}
+
+\begin{remark}[extension-field warning]
+Theorem~\ref{thm:subfield-confinement-base-lines} is intentionally one-sided.
+It only treats \(K\)-valued received lines.  It does not rule out genuinely
+\(F\)-valued residue-line witnesses, and therefore must not be used as an
+extension-field MCA theorem without an additional hypothesis forcing the line to
+be \(K\)-valued.
+\end{remark}
+
+\begin{theorem}[seven-slope arithmetic gate over \(\F_{17^{32}}\)]
+\label{thm:seven-slope-arithmetic-gate}
+Let \(\qline=17^{32}\).  If a row over \(\F_{17^{32}}\) has
+\(\operatorname{LD}_{\rm sw}(C,264)\ge7\), then at radius
+\[
+  \delta=1-\frac{264}{512}=\frac{31}{64}
+\]
+its support-wise MCA error is strictly larger than \(2^{-128}\).  In particular,
+for the \(n=512,k=256\) row, any strict264 seven-slope certificate proves
+\[
+  \varepsilon_{\rm mca}(C,31/64)>2^{-128}.
+\]
+\end{theorem}
+
+\begin{proof}
+The MCA sampler over finite slopes has denominator \(\qline=17^{32}\).  Seven
+bad slopes therefore give error at least \(7/17^{32}\).  The exact integer
+comparison is
+\[
+  7\cdot 2^{128}-17^{32}
+  =14064973686101998399515954701426232831>0.
+\]
+Thus \(7/17^{32}>2^{-128}\).  Agreement \(264\) on a domain of size \(512\)
+corresponds to relative radius \(1-264/512=31/64\), giving the claim.
+\end{proof}
+
+\begin{theorem}[one-step staircase pinning criterion]
+\label{thm:one-step-staircase}
+Fix a finite-slope sampler of denominator \(\qline\) and a target
+\(\varepsilon_*=2^{-128}\).  Let
+\[
+  B(a)=\operatorname{LD}_{\rm sw}(C,a)
+\]
+for the allowed line family, and let \(\delta_a=1-a/n\).  If, for some integer
+\(a\ge k\),
+\[
+  B(a)>\varepsilon_*\qline
+  \qquad\text{and}\qquad
+  B(a+1)\le \varepsilon_*\qline,
+\]
+then the closed-ball agreement staircase is unsafe at radius \(\delta_a\) and
+safe on the next open interval below it, including the grid radius
+\(\delta_{a+1}\).  Equivalently, the largest grid radius certified safe is
+\(\delta_{a+1}\), while the continuous supremum of certified safe radii is
+\(\delta_a\) and is not attained under the closed endpoint convention.
+
+Before the tangent staircase was isolated, the special case
+\[
+  B(264)\ge7,
+  \qquad
+  B(265)\le6
+\]
+would have pinned the finite row to an unsafe/safe transition between
+\[
+  \delta_{265}=247/512
+  \qquad\text{and}\qquad
+  \delta_{264}=31/64.
+\]
+For the \(\F_{17^{32}}\), \(n=512\), \(k=256\) row, the premise
+\(B(265)\le6\) is false by the moving-root tangent floor.  The actual
+finite-slope staircase gate supplied by Corollary~\ref{cor:f17-32-exact-tangent-gate}
+is \(B(506)=7\), \(B(507)=6\).
+\end{theorem}
+
+\begin{proof}
+The function \(B(a)\) is nonincreasing in \(a\), because raising the agreement
+threshold only removes valid supports.  At radius \(\delta_a\), the closed-ball
+predicate allows agreement at least \(a\), so the error is \(B(a)/\qline\), which
+is larger than \(\varepsilon_*\) by assumption.  At radius \(\delta_{a+1}\), the
+predicate requires agreement at least \(a+1\), so the error is
+\(B(a+1)/\qline\), which is at most \(\varepsilon_*\).
+
+More generally, any radius \(\delta<\delta_a\) sufficiently close to
+\(\delta_a\) has integer distance bound at most \(n-a-1\), hence agreement at
+least \(a+1\).  Thus the closed endpoint at \(\delta_a\) is the first unsafe
+grid step, while the safe side is immediately below that endpoint.  For
+\(\qline=17^{32}\), the inequalities
+\[
+  6\cdot2^{128}<17^{32}<7\cdot2^{128}
+\]
+convert the printed integer conditions into the two displayed error inequalities,
+and \(1-265/512=247/512\), \(1-264/512=31/64\).
+\end{proof}
+
+\section{June 29 Finite-Slope and Interleaved-List PR Packets}
+\label{sec:jun29-pr-packets}
+
+This section records the mathematically useful parts of PRs \#131--\#135.  The
+branches were not merged wholesale, because they were stale relative to the
+current Paper D v12 and public-site state.  The integrated source files are the
+compact notes and verifiers listed in
+\path{experimental/notes/triage/pr-triage-2026-06-29.md}.
+
+\subsection{Boundary-off external-anchor normal form}
+
+PR \#131, due to AllenGrahamHart, contributes a local M1 proof-program normal
+form.  For a shadow \(S\subset D\) of size \(j-1\) and an external anchor
+\(\beta\notin D\), the one-outside locator satisfies
+\[
+  \ell_{S,\beta}=\ell_S^+-\beta\ell_S^0 .
+\]
+Therefore the Hankel landing matrix
+\[
+  M_S(\beta)=
+  \bigl[H(u)\ell_{S,\beta}\quad H(v)\ell_{S,\beta}\bigr]
+\]
+has columns affine-linear in \(\beta\), and the rank-one condition is cut out
+by quadratic minors in \(\beta\).  Thus, for fixed \(S\), either a nonzero
+quadratic minor gives at most two external anchors, or all minors vanish
+identically and the branch is a ruled rank-one pencil.  This is recorded as
+PROVED-LOCAL / PROOF-PROGRAM / AUDIT, not as a proof of M1.
+
+\subsection{\(a=507\) adjacent bridge route cut}
+
+PR \#132, due to Scott Hughes, records a useful non-promotion result for the
+\(\F_{17^{32}},n=512,k=256\) row.  The tangent-star theorem gives
+\[
+  \operatorname{LD}_{\rm sw}(C,a)=513-a
+  \qquad (a\ge427),
+\]
+so in particular
+\[
+  \operatorname{LD}_{\rm sw}(C,507)=6.
+\]
+Any bridge that converted an adjacent line-plus-interleaved-list
+``\(6+1=7\)'' ledger into one additional same-denominator finite-slope
+support-wise event would imply
+\(\operatorname{LD}_{\rm sw}(C,507)\ge7\), contradicting the exact
+tangent-star bound.  Hence the adjacent arithmetic remains a separate
+BRIDGE-NEEDED ledger and is not a new MCA row.
+
+\subsection{Interleaved-list lower row at agreement \(326\)}
+
+PR \#133, due to Scott Hughes, belongs to the interleaved-list track, not the
+MCA slope track.  It proves high-agreement uniqueness
+\[
+  \Lambda_\mu(C,a)=1\qquad (384\le a\le512)
+\]
+and a support-occupancy route cut excluding seven witnesses for
+\[
+  373\le a\le383.
+\]
+It also gives lower-bound constructions at agreements \(291\), \(292\), \(320\),
+and, most usefully for the board, a hybrid quotient-residual construction with
+\[
+  \Lambda_\mu(C,326)\ge7 .
+\]
+Since
+\[
+  6\cdot2^{128}<17^{32}<7\cdot2^{128},
+\]
+this clears the separate interleaved-list numerical gate over denominator
+\(|F|=17^{32}\).  The packet does not claim an MCA numerator, protocol
+soundness, ordinary list-decoding exactness, or an exact \(\delta_C^*\).
+
+\subsection{Random simple-pole finite-slope floors}
+
+PR \#134, due to Vadim Avdeev, proves a general random simple-pole lower bound.
+For \(C=\RS[\F,D,k]\), \(|F|=q\), \(|D|=n\), \(\beta\in F\setminus D\), and
+\(k<a\le n\), put
+\[
+  C_a=\binom{n}{a},\qquad s=a-k,\qquad
+  R_a=\sum_{v=0}^{a-k-1}
+        \binom{a}{v}\binom{n-a}{v}q^{-v}.
+\]
+Then there is a simple-pole line with at least
+\[
+  \left\lceil
+    \frac{qC_a}{C_a+R_aq^s}
+  \right\rceil
+\]
+finite bad slopes at agreement \(a\).  In the row
+\[
+  F=\F_{17}[z]/(z^{32}-3),\quad H=\langle z\rangle,\quad |H|=512,\quad k=256,
+\]
+the verified floors are
+\[
+\begin{array}{c|c}
+a & \text{finite bad-slope lower bound}\\
+\hline
+257 & 17^{32}\\
+258 & 17^{32}\\
+259 & 17^{32}-68{,}904\\
+260 & 33{,}439{,}260{,}151{,}101{,}646{,}297{,}506{,}087{,}371{,}119{,}470 .
+\end{array}
+\]
+The direction is a genuine simple-pole direction: it is not a degree-\(<256\)
+codeword on any support of size \(>256\).
+
+\subsection{Coset-packet finite-slope floors for \(a=261,\ldots,288\)}
+
+PR \#135, also due to Vadim Avdeev, continues the finite-slope floor beyond the
+range where the random simple-pole second-moment bound is useful.  The
+construction uses full dyadic cosets \(K_M\le H\), whose locators have the form
+\[
+  \prod_{x\in hK_M}(X-x)=X^M-h^M,
+\]
+so unions of full \(K_M\)-cosets share low elementary coefficients.  After
+fixing a small partial coset when needed, this produces common-prefix support
+families.  A separating deep anchor then turns the corresponding numerator
+polynomials into distinct finite bad slopes.
+
+For the same \(\F_{17^{32}},n=512,k=256\) row, the certified floors are
+\[
+\begin{array}{c|c}
+a & \text{finite bad-slope lower bound}\\
+\hline
+261\ldots263 & \binom{63}{32}\\
+264 & \binom{64}{33}\\
+265\ldots271 & \binom{31}{16}\\
+272 & \binom{32}{17}\\
+273\ldots287 & \binom{15}{8}\\
+288 & \binom{16}{9}.
+\end{array}
+\]
+Every displayed row beats the moving-root tangent floor \(513-a\), but these
+are still lower-bound rows only.  They do not prove a safe-side theorem, an
+ordinary list-decoding theorem, an interleaved-list statement, or protocol
+soundness.
+
+\section{June 30 PR Batch: Mixed-Radix Counts, Formal Ledgers, and Audit Packets}
+\label{sec:jun30-pr-packets}
+
+This section records the parts of PRs \#137--\#149 that are useful for later
+theory or verification.  The largest proof-program dumps were not merged into
+this manuscript wholesale: the same-slope packet of PR \#138 is too broad for a
+single promoted theorem, and the \(a=327\) RIM packet of PR \#145 is explicitly
+a route cut rather than a new interleaved-list row.  Both are summarized in the
+triage note rather than upgraded to a proof of M1 or to the leaderboard.
+
+\subsection{Paper B: exact \(\{2,3\}\)-smooth canonical slope count}
+
+PR \#149, due to Holm Buar, supplies the missing mixed-radix analogue of the
+2-power count in Paper B.  Let \(N'=2^a3^b\) with \(a\ge1\), and let
+\[
+  A_{2,3}(N',\ell')
+  =
+  \#\{e_1(B):B\subseteq\mu_{N'},\ |B|=\ell'\}
+\]
+be the characteristic-zero canonical slope count.  Conditional on the same
+vanishing-sum import used by Paper B's \(\{2,3\}\)-rigidity theorem, the count
+is reduced to independent cells.  For \(b\ge1\), put
+\[
+  n_c=2^{a-1}3^{b-1}.
+\]
+Each \(2\times3\) cell has a fixed alphabet of \(19\) difference types, with
+size sets
+\[
+  6\cdot\{3\},\qquad
+  6\cdot\{2,4\},\qquad
+  6\cdot\{1,2,3,4,5\},\qquad
+  1\cdot\{0,2,3,4,6\}.
+\]
+Then
+\[
+  A_{2,3}(N',\ell')
+  =
+  \#\{(d_1,\ldots,d_{n_c})\in T^{n_c}:
+      \ell'\in \mathrm{Sizes}(d_1)\oplus\cdots\oplus
+      \mathrm{Sizes}(d_{n_c})\}.
+\]
+For \(b=0\), the cell is an antipodal pair and the formula collapses to the
+already proved 2-power closed form.  At half rate the new exponent is
+\[
+  \beta_{2,3}(1/2)=\frac{\log_2 19}{6}\approx0.707983,
+\]
+below the 2-power value \(\beta_2(1/2)\approx0.792481\).  This is a useful
+Paper B combinatorial input: it fixes the characteristic-zero class count for
+\(\{2,3\}\)-smooth canonical lines, but it does not by itself prove the finite
+field transfer, the M1 local limit, or an extension-line theorem.
+
+\subsection{F1: fixed-root star slope collapse}
+
+The F1 note from PR \#139 sharpens a branch that had already been moved to the
+non-aperiodic side of the ledger.  In the global monic-rank-one branch of the
+syndrome-pencil normal form, the first \(j+1\) syndrome entries are a rational
+normal point at \(\alpha\).  For every star complement
+\[
+  T=\{\alpha\}\cup U,\qquad |U|=j-1,
+\]
+the first row of the Hankel landing vector vanishes and the second row is
+independent of \(U\):
+\[
+  a_0=b_0=0,\qquad
+  a_1=u_{j+1}-a\alpha^{j+1},\qquad
+  b_1=v_{j+1}-b\alpha^{j+1}.
+\]
+Therefore the whole fixed-root star contributes at most one noncontained
+finite slope, and the entire global rank-one branch contributes at most two
+slopes after including the scalar-zero slope.  This replaces the older
+exponential star bound \(1+\binom{|D|-1}{j-1}\) inside this degenerate branch.
+It is a sharpening of a disposed branch, not progress on the genuinely
+aperiodic F1 obstruction.
+
+\subsection{High-agreement compiler and Lean ledger packets}
+
+PRs \#139 and \#147 add verification infrastructure around the already promoted
+high-agreement tangent staircase.  The certificate package records the exact
+row
+\[
+  C=\RS[\F_{17^{32}},H,256],\qquad |H|=512,
+\]
+where
+\[
+  \left\lfloor {17^{32}\over2^{128}}\right\rfloor=6,\qquad
+  6\cdot2^{128}<17^{32}<7\cdot2^{128}.
+\]
+In the exact tangent range this pins the finite-slope support-wise grid:
+agreement \(507\) is safe with numerator \(6\), while agreement \(506\) is
+unsafe with numerator \(7\).  The row-independent compiler condition is
+\[
+  1\le B_Q=\lfloor Q/2^{128}\rfloor
+     \le \left\lfloor {n-k\over3}\right\rfloor .
+\]
+For a rate \(1/d\) power-of-two field \(Q=2^\lambda\), this is equivalently
+\[
+  k\ge
+  \left\lceil {3\cdot2^{\lambda-128}\over d-1}\right\rceil .
+\]
+At the maximum official dimension \(k=2^{40}\), the pinned power-of-two bit
+ranges end at \(\lambda=166,168,169,170\) for rates
+\(1/2,1/4,1/8,1/16\), respectively.  Larger field sizes remain lower-agreement
+M1/L1/F1 work, not high-agreement consequences.
+
+The Lean packet is deliberately smaller than the papers: it formalizes integer
+ledger arithmetic, quotient-overlap divisibility gates, the width-one
+first-root identity, and the \(17^{32}\) threshold arithmetic.  It does not
+formalize Reed--Solomon finite-field decoding or the M1 local limit.  Local
+Lean build verification was not run here because the toolchain download was
+blocked by the sandbox; the files were checked for the absence of
+\texttt{sorry}, \texttt{admit}, \texttt{unsafe}, and executable IO hooks before
+integration.
+
+\subsection{Finite scans and source-conditioned audits}
+
+The remaining integrated PRs are audit or experimental support:
+\begin{itemize}
+\item Jose Brox's PR \#140 fixes stale paths in the L3 quotient-profile
+  documentation.
+\item Holm Buar's PR \#141 fixes repository-root handling in audit scripts and
+  adds a Paper A finite-verification crosswalk.
+\item Holm Buar's PR \#142 adds an exact \(p=257\) quotient-periodic locator
+  matrix for finite toy cases.
+\item Holm Buar's PRs \#143 and \#144 extend the M1 two-coordinate wall and
+  beta-pushforward conductor scans.  They are finite numerical evidence only:
+  they adjust empirical constants and find no tested violation of the stated
+  \(4p\) or bounded-conductor targets.
+\item AllenGrahamHart's PR \#148 adds an independent algebra-checker audit for
+  the \(\F_{17^{32}}\) row.
+\item Holm Buar's PR \#146 adds a compact self-contained \(40\)-slope witness
+  audit for the Cycle120 row.  It is retained as a finite witness/audit for
+  \(\varepsilon_{\rm mca}(\RS[\F_{17^{32}},H,256],125/256)>2^{-128}\), not as a
+  prize solve and not as an exact threshold theorem.
+\end{itemize}
+
+The same-slope local-reduction packet in PR \#138 and the \(a=327\) RIM
+route-cut packet in PR \#145 remain follow-up material.  They are useful search
+directions, but their current form is too large and too conditional to promote
+as a clean theorem, and neither moves the public leaderboard.
+
 \section{Non-Claims}
 \label{sec:nonclaims}
 
@@ -740,6 +2301,8 @@ This note does not claim:
 \item a \(\qgen\) local-limit theorem;
 \item a list, CA, MCA, line-decoding, SNARK, or protocol consequence;
 \item a large \(\Theta(p^2)\) counterpacket;
+\item a new prize-worthy numerator beyond the current Cycle116/119
+  \(52{,}747{,}567{,}092\) finite/source-scoped record;
 \item priority for the BCHKS quotient-locator proof pattern.
 \end{itemize}
 
@@ -764,7 +2327,12 @@ it can even be surface-sized.
 }
 \end{verbatim}
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
+\bibitem{ProximityPrize26}
+The Proximity Prize.  \emph{The Proximity Prize: Reed--Solomon Challenge}.
+Preliminary version, accessed June 26, 2026.
+\url{https://proximityprize.org/}.
+
 \bibitem{BCHKS25}
 Eli Ben-Sasson, Dan Carmon, Ulrich Hab\"ock, Swastik Kopparty, and Shubhangi
 Saraf.  \emph{On Proximity Gaps for Reed--Solomon Codes}.  Manuscript dated

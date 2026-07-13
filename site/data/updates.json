@@ -1,0 +1,417 @@
+[
+  {
+    "date": "2026-07-05",
+    "status": "PR integration / conditional imports and finite anchors",
+    "author": "Vadim Avdeev, latifkasuli, DannyExperiments, LegaSage/Ken Webster / Codex audit",
+    "title": "Johnson-import audits, sparse witnesses, and Lean staircase anchors integrated",
+    "summary": "PRs #271-#280 add conditional BCHKS25/Hab25 KoalaBear safe-edge audits, proof-audited corridor safe-edge imports for clean-rate rows, MCA-vs-CA sparse-layer toy structure, a seven-slope CCL/TDD split, paid-ledger replay repairs, a k=1 sparse-census counterexample family, an F_11 affine-shear eca/emca staircase, a deployed-shaped F_17^32 sparse moving-zero witness, and a Lean finite anchor for the (7,6,3) EMCA staircase.",
+    "impact": "No conditional or toy packet is promoted as a proved Paper D theorem row. The useful effect is sharper audit infrastructure for the adjacent-staircase program: external Johnson imports are status-labelled, sparse residual behavior has new finite anchors, and certificate replay hygiene improved.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/agents-log.md"
+  },
+  {
+    "date": "2026-07-04",
+    "status": "experimental v13 identity frontier",
+    "author": "Przemek Chojecki / Codex audit",
+    "title": "Identity-prefix KoalaBear frontier edge added",
+    "summary": "The CAP25 v13 experimental source now uses the c=1 identity-prefix floor, superseding the c=2 addendum. The deployed KoalaBear sextic MCA unsafe edge improves from 15331/32768 to 981109/2097152, with the exact checker reporting a +25.7 bit margin over the 2^-128 target.",
+    "impact": "This appears on the rho=1/2 MCA board as experimental v13 material. It is not promoted to the active Paper D v12 draft; the adjacent safe-side agreement 1116044 still needs an exact upper ledger.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/cap25_v13_experimental.tex"
+  },
+  {
+    "date": "2026-07-03",
+    "status": "exact finite-slope gate / PR batch",
+    "author": "AllenGrahamHart (majority), Vadim Avdeev, DannyExperiments/Gia / Codex audit",
+    "title": "A425/A426 prime-field adjacent threshold row added",
+    "summary": "PR #204 adds a two-core upper bound proving LD_sw(RS[F,D,256],426)=87 for every 512-point domain, and PR #208 records the direct A=425 unsafe witness. For p=22275*2^120+1, p is 1 mod 512 and 87*2^128 < p < 88*2^128, giving an adjacent finite-slope support-wise MCA gate for the smooth prime-field row.",
+    "impact": "This is a new exact finite-slope threshold row on the public frontier. It does not claim ordinary list decoding, protocol soundness, or anything about the F_17^32 denominator row. Allen authored most of the surrounding batch: DAG maintenance, quotient-census and compiler infrastructure, Conjecture F/M1/L1/F1/M5 proof-program packets, Lean certification-map updates, and the A425 unsafe fallback. The CAP25 sparse-sigma audit is from DannyExperiments/Gia.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/certificate_scanner/a426_two_core_exact_threshold_v26.md"
+  },
+  {
+    "date": "2026-07-02",
+    "status": "theorem note / sparse threshold plan",
+    "author": "Przemek Chojecki / Codex audit",
+    "title": "Towards-prize note adds the sparse residual threshold layer",
+    "summary": "The compact towards-prize note is now promoted as a companion to Paper D v12, which remains the main submission reference. It keeps the integer delta-star staircase and deployed KoalaBear pincer, then adds the sparse residual reduction emca = max(eca, sigma_C/q) under its stated conventions.",
+    "impact": "This is not a new numerical leaderboard record. It sharpens the route to threshold determination: audit the sparse reduction, then produce CA/list certificates or sparse-residual bounds for the remaining band.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/tex/towards-prize.tex"
+  },
+  {
+    "date": "2026-07-02",
+    "status": "paper promotion / audit focus",
+    "author": "Przemek Chojecki / Codex audit",
+    "title": "Paper D v12 is the main submission reference",
+    "summary": "Paper D v12 supersedes v10/v11 as the active cap draft and is now the main Proximity Prize submission reference. It keeps the self-contained cap route and adds the safe-side pincer, deployed-row two-sided intervals, map/rational smooth extensions, circle/genus-one transports, explicit witness machinery, optimized failure profile, and certificate grammar v2.",
+    "impact": "The current project focus is auditing v12: direct conversion and radius conventions, optional BCIKS half-distance import, exact-integer certificate replay, and deployed model transfers.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/tex/cs25_cap_v12.tex"
+  },
+  {
+    "date": "2026-06-30",
+    "status": "paper promotion / Hankel certificate atlas",
+    "author": "Przemek Chojecki / Codex audit",
+    "title": "Paper D v9 adds the aperiodic Hankel chart atlas",
+    "summary": "Paper D v9 preserves the v8 universal, first-grid, quotient-support, and quotient-image ledgers, then adds a certificate atlas for the aperiodic safe-side MCA task: regular Hankel minors, affine pivots, projective infinity, curve pivots, and named singular residual buckets.",
+    "impact": "This is proof-program infrastructure for building Hankel eliminant certificates. It is not a new numerical leaderboard row and does not close M1 by itself.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/archived/cs25_cap_v9.tex"
+  },
+  {
+    "date": "2026-06-30",
+    "status": "paper promotion / quotient ledger audit",
+    "author": "Przemek Chojecki / Codex audit",
+    "title": "Paper D v8 adds quotient support and image ledgers",
+    "summary": "Paper D v8 preserves the v7 universal and first-grid MCA caps, restores the endpoint/q>n fixes, and adds conservative quotient-support plus exact quotient image ledgers for line, projective-line, curve, and interleaved-list branch accounting.",
+    "impact": "Archived milestone. The active Paper D cap rows now cite v12; the v8 quotient ledgers remain useful provenance for the proof-program infrastructure, not a standalone safe-side M1 theorem.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/archived/cs25_cap_v8.tex"
+  },
+  {
+    "date": "2026-06-29",
+    "status": "paper promotion / first-grid theorem",
+    "author": "Przemek Chojecki / Codex audit",
+    "title": "Paper D v7 adds the first-grid MCA cap",
+    "summary": "Paper D v7 keeps the v6 self-contained universal cap, extends the no-loss CA endpoint from f<n-k-1 to f<=n-k-1, and adds a quotient-remainder/first-grid theorem showing that large official-envelope rows are already CA/MCA unsafe at delta=1-rho-1/n.",
+    "impact": "Historical version-promotion note: v7 added the first-grid cap. v8 now supersedes it as the public Paper D source while preserving the same cap rows.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/archived/cs25_cap_v7.tex"
+  },
+  {
+    "date": "2026-06-29",
+    "status": "proof record / lower bound",
+    "author": "Vadim Avdeev / Codex audit",
+    "title": "Finite-slope floors now cover a=257..288 on the F_17^32 row",
+    "summary": "PRs #134 and #135 add random simple-pole and coset-packet finite-slope lower floors for RS[F_17^32,H,256]. The strongest near-capacity rows give all finite slopes at a=257 and a=258; coset packets continue with explicit binomial lower floors through a=288.",
+    "impact": "This strengthens the finite-slope MCA lower-bound ledger without changing the known delta* cap. The rows are lower-bound proof records only, not safe-side theorems or protocol claims.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_random_simple_pole_entropy_floor.md"
+  },
+  {
+    "date": "2026-06-29",
+    "status": "interleaved-list proof record",
+    "author": "Scott Hughes / Codex audit",
+    "title": "Hybrid quotient-residual packet clears the interleaved-list gate at a=326",
+    "summary": "PR #133 contributes a standard interleaved-list lower bound Lambda_mu(C,326) >= 7 for the F_17^32, n=512, k=256 row, plus high-agreement route cuts and supporting verifiers.",
+    "impact": "This is a separate list-track row over denominator |F|=17^32. It does not add an MCA N_bad numerator or a protocol soundness claim.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_interleaved_list_hybrid_quotient_residual.md"
+  },
+  {
+    "date": "2026-06-29",
+    "status": "audit / proof program",
+    "author": "AllenGrahamHart and Scott Hughes / Codex audit",
+    "title": "Boundary-off normal form and a=507 bridge route cut integrated conservatively",
+    "summary": "PR #131 is distilled to a local external-anchor Hankel normal form for the M1 proof program. PR #132 records that adjacent 6+1 line/list arithmetic cannot be counted as a seventh finite-slope support-wise event at a=507.",
+    "impact": "Both are useful guardrails, but neither is a new public leaderboard row.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/triage/pr-triage-2026-06-29.md"
+  },
+  {
+    "date": "2026-06-29",
+    "status": "paper promotion / audit",
+    "author": "Przemek Chojecki / Codex audit",
+    "title": "Paper D v6 adds the prize-facing completion program",
+    "summary": "Paper D v6 kept the v5 universal MCA cap constants and CS25-free proof route, tightened the conversion collision-count derivation, and added the integer-staircase formulation plus conditional MCA/list completion theorems for turning the cap into a full threshold determination.",
+    "impact": "Historical version-promotion note: v6 made the cap self-contained and prize-facing. v7 now supersedes it as the public Paper D source.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/archived/cs25_cap_v6.tex"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "paper versions / leaderboard audit",
+    "author": "Codex",
+    "title": "Papers B v4, C v5, and D v12 are now the public theory set",
+    "summary": "Paper B v4 promotes the high-agreement line/list/curve boundary layer, Paper C v5 adds the theorem-backed protocol ledger compiler, and Paper D v12 is now the main submission reference with the safe-side pincer and certificate grammar.",
+    "impact": "The leaderboard impact is source/status hygiene plus proof-program infrastructure: existing Paper D cap rows remain cap-row records, while new Hankel rows should cite the v12 certificate grammar and schema.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/readme.md"
+  },
+  {
+    "date": "2026-04-08",
+    "status": "survey benchmark",
+    "author": "Arnon-Boneh-Fenzi",
+    "title": "Proximity Prize MCA benchmark regimes",
+    "summary": "Table 1 in Open Problems in List Decoding and Correlated Agreement separates the MCA landscape into zero-radius, unique-decoding, Johnson-radius, and capacity-edge regimes.",
+    "impact": "The current RS-MCA frontier is in the capacity-edge lower-bound regime, not the Johnson-radius positive upper-bound regime.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/open-proximity.tex"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "PROVED_PAPERD_V12_CAP rows",
+    "author": "Codex scanner audit",
+    "title": "Prime192 scanner rows instantiate Paper D v12 across all four rates",
+    "summary": "The leaderboard_sweep_192 packet contributes four concrete q\u22482^192 smooth subgroup rows with k=2^40, one for each official rate, plus a small F_17^32 Paper D example. They instantiate the proved Paper D v12 cap with exact primes q = 1 mod n and +87 bit margins on the prime192 rows.",
+    "impact": "These are scanner-backed examples of the Paper D v12 cap, not new theorems beyond Paper D and not explicit slope censuses. The scanner verifies the divisor, binomial, and field ledgers for each displayed cap row.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/certificate_scanner/outputs/leaderboard_sweep_192/site_candidate_rows.md"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "threshold package",
+    "author": "Codex",
+    "title": "Finite-row MCA threshold note packages the 506/507 gate",
+    "summary": "The F_17^32, n=512, k=256 row now has a standalone threshold note: finite-slope support-wise MCA is safe at agreement 507 and unsafe at agreement 506.",
+    "impact": "This supersedes the old strict264-next plan for pinning the finite row. The remaining prize work is definition audit plus the row-independent high-agreement threshold compiler.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/thresholds/f17_32_finite_mca_threshold.pdf"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "audit / proof program",
+    "author": "AllenGrahamHart / Codex audit",
+    "title": "All-line Hankel aperiodic packet distilled but not promoted",
+    "summary": "PR #127 is a large M1 packet around Hankel-pencil and aperiodic residue-line packing. The integration keeps only a concise audit/proof-program note instead of merging the whole generated packet.",
+    "impact": "Potentially important for M1, but no all-line upper bound is promoted until the branch bounds and imported finite computations are independently checkable.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_all_line_hankel_aperiodic_packet_audit.md"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "M1 proof-program",
+    "author": "AllenGrahamHart / Codex audit",
+    "title": "Variable-line packet lemmas reduce the M1 residual branch",
+    "summary": "PR #130 adds local Hankel variable-line packet lemmas: non-fixed packet mass is charged to quotient defects, active domain singletons, and different-slope two-exchange codegree; in the high-agreement rate-half range the zero-lower singleton class vanishes.",
+    "impact": "Useful M1 infrastructure, but not a final all-line residue-packing theorem and not a leaderboard row. The remaining targets are polynomial bounds for active codegree and one-outside boundary target images.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_hankel_variable_line_packet_lemma.md"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "M2 ledger infrastructure",
+    "author": "AllenGrahamHart",
+    "title": "Challenge-map pullback ledgers for adjacent high-agreement objects",
+    "summary": "PR #122 adds high-agreement adjacent ledgers for challenge-map pullbacks, keeping line, CA/projective, curve, list, folding/query, and denominator ledgers separate.",
+    "impact": "Useful for future protocol-facing calculators; not a new MCA numerator by itself.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/data/adjacent-ledgers/high_agreement_adjacent_ledgers_summary.md"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "F1 theory infrastructure",
+    "author": "AllenGrahamHart",
+    "title": "Arbitrary-anchor residue-cloud floors",
+    "summary": "PR #126 sharpens the F1 arbitrary-anchor split: residue-cloud floors must be separated into common-core, dense-overlap, and free-packing branches.",
+    "impact": "This is a warning against naive base-to-extension MCA lifts. It does not add a leaderboard numerator but gives a cleaner checklist for extension-valued line theorems.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/f1/f1_arbitrary_anchor_locator_split.md"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "toy theorem / audit",
+    "author": "Vadim / Codex audit",
+    "title": "L1 monomial dyadic descent survivor families",
+    "summary": "PR #129 records monomial-prefix dyadic descent survivor families and a local n=16 audit checklist/verifier.",
+    "impact": "Good bounded toy-model evidence for quotient-periodic survivor structure, but not an arbitrary-word locator local limit and not a protocol result.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/l1/l1_monomial_dyadic_descent_survivors.md"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "bounded L1 theorem",
+    "author": "Scott Hughes",
+    "title": "L1 d=3 proper-subgroup twisted collision bound",
+    "summary": "PR #125 adds the d=3 proper-subgroup prefix-dual twisted collision estimate, with the standard Katz/Gauss input kept explicit and an input-audit note beside it.",
+    "impact": "Useful L1 infrastructure for generated-field locator local limits. It is not a leaderboard MCA row and does not prove the arbitrary-word L1 theorem.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/l1/l1_prefix_dual_d3_subgroup_twisted_collision_bound.md"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "proved but subsumed",
+    "author": "AllenGrahamHart / Claude / Codex audit",
+    "title": "Reserve272/288/313 targets are now proved lower-bound rows",
+    "summary": "The moving-root tangent floor gives LD_sw(C,a) >= n-a+1 at a=272,288,313, namely 241,225,200 bad slopes. Strict352 independently covers the same range by quotient-core floors.",
+    "impact": "These rows should be displayed as subsumed proof records, not open search targets and not independent reserve-scale local-limit theorems.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_reserve_subsumed_by_strict352.md"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "gate theorem / exact count conditional",
+    "author": "AllenGrahamHart / Claude / Codex audit",
+    "title": "Cycle116/119 gates no longer need Cycle84 density",
+    "summary": "The moving-root tangent floor gives LD_sw(C,262) >= 251 and LD_sw(C,263) >= 250 for C = RS[F_17^32,H,256]. Since floor(17^32/2^128)=6, the >2^-128 gates at delta=125/256 and 249/512 do not depend on the Cycle84 census.",
+    "impact": "Keep 52,747,567,092 as the exact-density computation-dependent record; use the tangent floor for the unconditional threshold gate.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/audits/audit_prize_gate_unconditional_via_tangent.md"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "experimental scanner",
+    "author": "Codex audit",
+    "title": "Proximity certificate scanner prototype",
+    "summary": "The scanner turns a row/config JSON into JSON and Markdown reports for entropy reserve, quotient profile, Paper D cap hypotheses, high-agreement line/list/curve ledgers, and combined protocol-ledger verdicts.",
+    "impact": "Use it as the first replayable audit before adding public board rows. It makes q_gen, q_line, q_chal, quotient divisors, endpoint agreements, and theorem-backed versus conditional terms explicit, but it does not prove extension-line MCA or the missing local-limit theorems.",
+    "href": "https://github.com/przchojecki/rs-mca/tree/main/experimental/notes/certificate_scanner"
+  },
+  {
+    "date": "2026-06-27",
+    "status": "proof record",
+    "author": "Codex audit",
+    "title": "Tangent257 capacity-edge MCA row",
+    "summary": "The tangent lower-floor theorem gives LD_sw(C,257) >= 256 for C = RS[F_17^32,H,256], so epsilon_mca(C,255/512) >= 256/17^32.",
+    "impact": "This is now the closest-to-capacity theorem-backed finite MCA row on the public board, clearing 2^-128 by +5.20 bits. It is still only a finite-slope support-wise MCA lower floor, not an exact threshold or protocol soundness statement.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/certificate_scanner/outputs/f17_512.report.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "proof record",
+    "author": "Codex",
+    "title": "Strict264 quotient-floor proof record",
+    "summary": "The strict264 quotient-core construction uses the map x -> x^8, an augmented-code list of size binom(64,33), and deep-point conversion to produce at least nine support-wise bad slopes at agreement 264.",
+    "impact": "This remains a quotient-core mechanism record. The moving-root tangent floor now gives stronger lower bounds at agreement 264, so 265 is not the threshold-pinning target.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/data/strict264/strict264_quotient_floor.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "proof record",
+    "author": "Codex",
+    "title": "Strict352 dyadic quotient-core proof record",
+    "summary": "The strict352 dyadic quotient-core construction proves LD_sw(C,a) >= 7 for every agreement 264 <= a <= 352, and LD_sw(C,352) >= 16 for C = RS[F_17^32,H,256].",
+    "impact": "This was the quotient-core frontier before the tangent staircase was isolated. It remains a useful mechanism record, but agreement 353 is solved by the generic tangent floor.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/data/strict352/strict352_quotient_core_summary.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "exact finite-slope gate",
+    "author": "GPT-5.5 Pro / Codex audit",
+    "title": "Tangent-star barrier closes the finite-slope non-tangent branch",
+    "summary": "The moving-root tangent floor is exact in the high-agreement range, and the tangent-star refinement classifies extremizers there.",
+    "impact": "For RS[F_17^32,H,256], |H|=512, this gives LD_sw(C,506)=7 and LD_sw(C,507)=6 and rules out any seventh finite-slope support-wise MCA branch at agreement a>=507. Adjacent CA/projective/curve/list ledgers are now recorded separately.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/data/tangent-star/tangent_star_no_nontangent_summary.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "conditional protocol ledger",
+    "author": "GPT-5.5 Pro / Codex audit",
+    "title": "Adjacent high-agreement ledgers pin CA/projective/curve/list objects",
+    "summary": "The high-agreement tangent staircase extends to no-loss CA, projective slopes, finite-parameter degree-d curve CA/MCA, and MDS interleaved-list uniqueness.",
+    "impact": "For RS[F_17^32,H,256], |H|=512, the line-plus-list coding numerator is 514-a. With no query/folding loss, this is unsafe at agreement a=507 and safe at a=508; protocol use still needs explicit challenge-field, folding, query, extension-lift, and cryptographic ledgers.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/data/adjacent-ledgers/high_agreement_adjacent_ledgers_summary.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "general threshold calculator",
+    "author": "GPT-5.5 Pro / Codex audit",
+    "title": "Generalized high-agreement ledgers go beyond the F_17^32 row",
+    "summary": "The adjacent-ledger formulas are rewritten for arbitrary RS[F,D,k] rows using R=n-k, r=n-a, and the denominator budget B_Q=floor(Q/2^128).",
+    "impact": "In the exact tangent range, line/CA/projective numerators are r+1, degree-d curve numerators are d(r+1), and interleaved-list uniqueness contributes one. For prize-scale k=2^40, the tangent method pins line thresholds only up to roughly 166-170 field bits, depending on rate; larger fields need quotient, entropy, curve/folding, or local-limit ledgers.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/data/generalized-ledgers/generalized_high_agreement_ledgers_summary.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "proved subgroup bound",
+    "author": "Scott Hughes",
+    "title": "L1 d=2 cubic subgroup twisted bound",
+    "summary": "PR #121 proves a proper-subgroup H^{2k} cubic collision estimate using Fourier reconstruction, multiplicative-character expansion of 1_H, and one-variable Gauss/Kummer-Artin-Schreier input.",
+    "impact": "This is useful L1 infrastructure for generated-field local limits, but it is not a new MCA leaderboard row or a general higher-moment theorem.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/l1/l1_prefix_dual_d2_cubic_subgroup_twisted_bound.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "route-cut audit",
+    "author": "Scott Hughes",
+    "title": "L1 odd-moment Hooley-Katz audit",
+    "summary": "PR #120 proves the full-affine projective odd-moment collision geometry and audits the Hooley-Katz/Ghorpade-Lachaud constant route.",
+    "impact": "The audit keeps full-affine, full-torus, and proper-subgroup ledgers separate and shows why the generic full-affine point-count path is not yet enough for the subgroup L1 reserve-scale problem.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/l1/l1_prefix_dual_odd_moment_projective_geometry.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "proved normal form",
+    "author": "AllenGrahamHart",
+    "title": "F1 syndrome-pencil normal form",
+    "summary": "PR #118 gives a Hankel-pencil incidence test for support-wise line explanations and a matching noncontainment criterion.",
+    "impact": "This replaces vague extension-line language with an exact locator equation over the actual line field. It is theory infrastructure, not a completed F1 theorem.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/f1/f1_syndrome_pencil_normal_form.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "proved reduction",
+    "author": "AllenGrahamHart",
+    "title": "L2 interleaved codegree reduction",
+    "summary": "PR #108 proves a two-regime and recursive reduction from interleaved lists to base-code lists at agreements a and 2a-k.",
+    "impact": "The reduction is unconditional; the desired L2 exponent saving still needs an L1-family tail-list bound.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/l2/l2_codegree_reduction_theorem.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "dependency split",
+    "author": "AllenGrahamHart",
+    "title": "Paper D MCA cap gets a CS25-free route",
+    "summary": "PR #115 isolates a simple-pole/deep-point averaging proof route for the headline MCA cap under Paper D's finite-field hypotheses.",
+    "impact": "The MCA cap no longer has to load-bear on the CS25 import, though CA/list statements still need the external import audit.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/audits/a0_deep_point_cap_dependency_split.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "audit superseded",
+    "author": "AllenGrahamHart",
+    "title": "Seven-slope arithmetic gate for strict264",
+    "summary": "PR #110 confirmed the arithmetic gate: over F_17^32, seven retained slopes at agreement 264 clear 2^-128. The newer quotient-floor proof supplies at least nine slopes.",
+    "impact": "Kept as the arithmetic gate, but no longer the frontier status. The strict264 row is now a proof record.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_strict264_audit.md"
+  },
+  {
+    "date": "2026-06-26",
+    "status": "conditional route cut",
+    "author": "Scott Hughes",
+    "title": "Large-domain mixed-Weil energy floor",
+    "summary": "PR #119 adds a possible L1 route cut for large-domain prefix-dual energy, kept conditional pending the mixed Weil citation and constant check.",
+    "impact": "Useful as an audit target for L1; not promoted as a theorem and not included as a frontier estimate.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/l1/l1_prefix_dual_large_domain_weil_energy_floor.md"
+  },
+  {
+    "date": "2026-06-25",
+    "status": "gate theorem / exact count conditional",
+    "title": "Cycle119/Cycle120 ABF-row obstruction",
+    "summary": "The active exact-density numerator remains 52,747,567,092 bad challenges over F_17^32 and is still computation-dependent. Separately, the moving-root tangent floor proves the >2^-128 gates at agreements 262 and 263 without using that numerator.",
+    "impact": "Use the tangent floor for unconditional gate language; use Cycle84/116/119 only for the stronger exact-density record after independent finite-count review.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/audits/audit_prize_gate_unconditional_via_tangent.md"
+  },
+  {
+    "date": "2026-06-25",
+    "status": "proof-check-needed",
+    "title": "Standalone Cycle120 LDsw proof note",
+    "summary": "PR #105 adds a compact standalone note for the source-scoped lower bound LD_sw(RS[F_17^32,H,256],262) >= 52,747,567,092.",
+    "impact": "This is the human-review target that replaces a large raw generated packet for public communication.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_cycle120_standalone_ldsw_proof.md"
+  },
+  {
+    "date": "2026-06-25",
+    "status": "bridge",
+    "title": "Exact MCA to line-decoding normalization",
+    "summary": "PR #102 records the support-wise identity epsilon_mca(C,delta) = LD_sw(C,ceil((1-delta)n))/|F| for the two-source object.",
+    "impact": "Future updates should use this bridge to avoid denominator and endpoint drift.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m2/m2_line_decoding_mca_bridge.md"
+  },
+  {
+    "date": "2026-06-25",
+    "status": "counterexample family",
+    "title": "Extension-line lower floors",
+    "summary": "PR #103 strengthens the F1 warning: fixed-rate extension-line families have floors on the order of (1-rho)^2/2 for sigma one and (1-rho)^(sigma+1)/(sigma+1)! at fixed sigma before extension-degree dilution.",
+    "impact": "Naive base-to-extension transfer remains false without an explicit theorem.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/f1/f1_fixed_rate_extension_counterexample.md"
+  },
+  {
+    "date": "2026-06-25",
+    "status": "audit",
+    "title": "M1 beta-pushforward spectral audit",
+    "summary": "PR #104 scans beta-pushforward rows and finds no hidden growing p^2 mass in the tested windows.",
+    "impact": "This supports the current M1 conductor-style proof target but does not prove the missing bounded-conductor estimate.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_beta_pushforward_spectral_audit.md"
+  },
+  {
+    "date": "2026-06-25",
+    "status": "proof program",
+    "title": "L1 quotient-budgeted locator route",
+    "summary": "PRs #99 and #106 add characteristic-zero prefix reductions, bad-prime proof-record machinery, quotient-budgeted locator conjectures, and a full-list quotient proof program.",
+    "impact": "This is the main positive-route infrastructure for generated-field locator local limits.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/l1/l1_quotient_budgeted_locator_conjecture.md"
+  },
+  {
+    "date": "2026-06-25",
+    "status": "target",
+    "title": "Sharp interleaved-list target",
+    "summary": "PR #107 sharpens L2: interleaved-list analysis should charge quotient-core mass diagonally and avoid the naive Cartesian-product numerator.",
+    "impact": "This turns a vague interleaving hazard into a finite set of support/codegree targets.",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/l2/l2_sharp_target_conjecture.md"
+  },
+  {
+    "date": "2026-06-25",
+    "status": "scaffold",
+    "title": "X1 bridges and Lean formalization stub",
+    "summary": "PR #101 adds deep-point/interleaved bridge notes, quotient-reduction notes, prize-path maps, and a small Lean scaffold.",
+    "impact": "This gives future agents a cleaner path from experimental notes toward mechanized statements.",
+    "href": "https://github.com/przchojecki/rs-mca/tree/main/experimental/lean/rs_mca_formalization"
+  },
+  {
+    "author": "Vadim Avdeev / Codex audit",
+    "date": "2026-07-03",
+    "href": "https://github.com/przchojecki/rs-mca/blob/main/experimental/notes/m1/m1_a407_a408_residual_design_threshold_v1.md",
+    "impact": "Moves the prime-field rate-1/2 finite-slope MCA gate from A425/A426 down to A406/A407 for a smooth budget-106 prime row; deliberately does not claim A406 exactness or M1 closure.",
+    "status": "proved threshold row / M1 residual design",
+    "summary": "The A409 residual-design method proves exact support-wise finite-slope numerators LD_sw(408)=105 and LD_sw(407)=106 for every 512-point rate-half RS domain. For the prime p=27168*2^120+1, this pins a new adjacent finite-slope MCA gate: A=407 is safe and A=406 is unsafe.",
+    "title": "A407/A408 residual-design exact rows and budget-106 gate"
+  }
+]

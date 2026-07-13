@@ -1,0 +1,1468 @@
+% !TeX program = lualatex
+% Clean reconstructed LaTeX source from the uploaded PDF.
+% This is not the authors' original TeX source.
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\emergencystretch=3em
+\sloppy
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{claim}[theorem]{Claim}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\RS}[3]{\operatorname{RS}[#1,#2,#3]}
+\newcommand{\IRS}[4]{\operatorname{IRS}[#1,#2,#3,#4]}
+\newcommand{\FRS}[5]{\operatorname{FRS}[#1,#2,#3,#4,#5]}
+\newcommand{\UM}[4]{\operatorname{UM}[#1,#2,#3,#4]}
+\newcommand{\epspg}{\varepsilon_{\mathrm{pg}}}
+\newcommand{\epsca}{\varepsilon_{\mathrm{ca}}}
+\newcommand{\epsmca}{\varepsilon_{\mathrm{mca}}}
+\newcommand{\distmin}{\delta_{\min}}
+\newcommand{\fld}{\mathrm{fld}}
+\newcommand{\intr}{\mathrm{int}}
+\newcommand{\eqm}[1]{\begin{equation*}#1\end{equation*}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\angles}[1]{\left\langle #1\right\rangle}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\DeclareMathOperator{\Vol}{Vol}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\charop}{char}
+\DeclareMathOperator{\enc}{enc}
+\DeclareMathOperator{\ecor}{ecor}
+\DeclareMathOperator*{\Prb}{Pr}
+\DeclareMathOperator*{\E}{E}
+
+\title{Open Problems in List Decoding and Correlated Agreement}
+\author{Gal Arnon\\\texttt{galarnon42@gmail.com}\\Bocconi University
+\and Dan Boneh\\\texttt{dabo@cs.stanford.edu}\\Stanford University
+\and Giacomo Fenzi\\\texttt{giacomo.fenzi@epfl.ch}\\EPFL}
+\date{April 8, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The Ethereum Foundation recently announced the Proximity Prize\footnote{\url{https://proximityprize.org/}} which aims to resolve some open problems that play an important role in the design of succinct proof systems. This paper reviews the open problems relevant to the Proximity Prize. We focus on some grand challenges relating to list decoding bounds, proximity gaps, correlated agreement, and mutual correlated agreement, as they relate to proof systems and Reed--Solomon codes. Along the way we survey the known results on these topics.
+\end{abstract}
+
+\noindent\textbf{Keywords:} proximity gaps, correlated agreement, list decoding, proximity prize
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+Recent progress in succinct non-interactive proof systems, called SNARKs, gives rise to new concepts in coding theory called proximity gaps \cite{RVW13,AHIV17}, correlated agreement (CA) \cite{BGKS20,BCIKS20}, and mutual correlated agreement (MCA) \cite{ACFY25}. These SNARK systems also rely on classic list decoding bounds from coding theory \cite{Eli57,Woz58}. A better understanding of these concepts will lead to more efficient SNARKs, and this gives rise to a number of fascinating open problems that are both mathematically interesting and important in practice.
+
+The goal of this paper is to explicitly list these open problems and to survey our present state of knowledge. This is a fast-moving field with a rapid stream of new results. This paper covers the known results at the time of this writing.
+
+\paragraph{List decoding bounds.}
+Recall that a linear code $C$ is a linear subspace of $\F^n$, where $\F$ is a finite field, and $n$ is called the code length. For a word $f\in \F^n$ and $\delta\in[0,1]$ we write $\Lambda(C,\delta,f)$ for the set of codewords in $C$ whose Hamming distance from $f$ is at most $\delta n$. The list decoding bound of $C$ is defined as
+\[
+  \Lambda(C,\delta) := \max_{f\in\F^n} \abs{\Lambda(C,\delta,f)}.
+\]
+The main list decoding question of relevance to this paper is to find tight upper bounds on $\Lambda(C,\delta)$ for an interleaved Reed--Solomon code. In particular, the goal is to understand for what values of $\delta$ the list $\Lambda(C,\delta)$ is ``small.''
+
+\paragraph{Proximity gaps.}
+We next explain the notions of a proximity gap, correlated agreement, and mutual correlated agreement. We begin with some terminology.
+
+\begin{itemize}
+  \item For $\delta\in[0,1]$ we say that $g\in\F^n$ is $\delta$-close to $C$ if there is a codeword $c\in C$ whose Hamming distance from $g$ is at most $\delta n$. Furthermore, for $S\subseteq[n]$ we say that $g\in\F^n$ is $(S,\delta)$-close to $C$ if $\abs{S}\ge (1-\delta)n$ and there is a codeword $c\in C$ such that $g_i=c_i$ for all $i\in S$. Clearly, if $g$ is $(S,\delta)$-close to $C$ then $g$ is $\delta$-close to $C$. Conversely, if $g$ is $\delta$-close to $C$ then there is a set $S\subseteq[n]$ such that $g$ is $(S,\delta)$-close to $C$.
+
+  \item For a set $L\subseteq\F^n$ we say that $L$ is $\delta$-close to $C$ if every element in $L$ is $\delta$-close to $C$. Similarly, we say that $L$ is $(S,\delta)$-close to $C$ if every element of $L$ is $(S,\delta)$-close to $C$. Observe that if $g_1,\ldots,g_\ell\in\F^n$ are all $(S,\delta)$-close to $C$, then the entire linear span of $g_1,\ldots,g_\ell$ in $\F^n$ is $(S,\delta)$-close to $C$.
+
+  \item We define proximity gaps, correlated agreement, and mutual correlated agreement with respect to a family of sets $\calF\subseteq 2^{\F^n}$. Some set families of interest include
+  \begin{align*}
+    \calF_{\mathrm{lines}} &:= \set{\set{f_1+\gamma f_2}_{\gamma\in\F} : f_1,f_2\in\F^n},\\
+    \calF_{\mathrm{spaces}} &:= \set{\set{f_0+\gamma_1 f_1+\cdots+\gamma_\ell f_\ell}_{\gamma_1,\ldots,\gamma_\ell\in\F} : f_0,\ldots,f_\ell\in\F^n},\\
+    \calF_{\mathrm{curves}} &:= \set{\set{f_0+\gamma f_1+\cdots+\gamma^\ell f_\ell}_{\gamma\in\F} : f_0,\ldots,f_\ell\in\F^n}.
+  \end{align*}
+\end{itemize}
+Throughout the paper we primarily use $\calF_{\mathrm{lines}}$, but all the open problems we discuss can be similarly stated for other families of sets. It is not difficult to see that a line $L=\set{f_1+\gamma f_2}_{\gamma\in\F}$ is $(S,\delta)$-close to $C$ if and only if both $f_1$ and $f_2$ are $(S,\delta)$-close to $C$.
+
+With this terminology in place, we can explain the three concepts for a code $C\subseteq\F^n$ with respect to a family $\calF\subseteq 2^{\F^n}$.
+
+\begin{itemize}
+  \item \textbf{Proximity gap.} For $\delta\in[0,1]$ and $L\in\calF$, let $p(L)\in[0,1]$ be the fraction of points $g\in L$ such that $g$ is $\delta$-close to $C$. We say that $C$ has proximity gap error $\epspg(C,\delta)$ if for every $L\in\calF$ such that $p(L)>\epspg(C,\delta)$, we have that $L$ is $\delta$-close to $C$ (which implies $p(L)=1$). In other words, either $p(L)\le \epspg(C,\delta)$ or $p(L)=1$.
+
+  \item \textbf{Correlated agreement.} CA provides a stronger guarantee than a proximity gap: when $p(L)>\epsca(C,\delta)$, not only is $L$ $\delta$-close to $C$, but there is an $S\subseteq[n]$ such that $L$ is $(S,\delta)$-close to $C$.
+
+  \item \textbf{Mutual correlated agreement.} MCA provides a stronger guarantee than CA: when $p(L)>\epsmca(C,\delta)$, not only is $L$ $(S,\delta)$-close to $C$ for some $S$, it has to be $(S,\delta)$-close for the same $S$'s as the individual points on $L$. More precisely, for $\delta\in[0,1]$ and $L\in\calF$, we say that a point $g\in L$ is good if for every $S$ such that $g$ is $(S,\delta)$-close to $C$, it holds that $L$ is $(S,\delta)$-close to $C$. We say that $C$ has mutual correlated agreement error $\epsmca(C,\delta)$ if for every $L\in\calF$ at most $\epsmca(C,\delta)$ of the points on $L$ are bad.
+\end{itemize}
+Because each notion strengthens the previous one, for every linear code $C$ and distance $\delta$,
+\[
+  \epspg(C,\delta) \le \epsca(C,\delta) \le \epsmca(C,\delta).
+\]
+
+\paragraph{What is MCA good for?}
+MCA is important in the design of efficient SNARK systems. In Section~\ref{sec:toy} we present a toy protocol whose knowledge soundness error is directly related to the MCA error and list decoding bound of an underlying code $C$. The MCA property lets us argue that this natural protocol is knowledge sound. The weaker CA property lets us argue that the protocol proves closeness to some codewords in $C$, but as far as we know it does not let us prove properties of the messages encoded by these close-by codewords. For that we need MCA, although one can alternatively use a stronger notion called line-decoding.
+
+\paragraph{The grand MCA challenge.}
+From here we focus almost exclusively on the Reed--Solomon code $C:=\RS{\F}{L}{k}$ where $L$ is a multiplicative subgroup of $\F$ whose size is a power of two, since this is a widely used code in SNARK systems. For simplicity we only consider MCA with respect to $\calF_{\mathrm{lines}}$.
+
+The design of SNARK systems requires understanding how $\epsmca(C,\delta)$ behaves as $\delta$ varies in $[0,1]$. Here $n:=\abs{L}$ is the code length, $\distmin(C)$ denotes the relative minimum distance of $C$, and
+\[
+  J(\distmin(C)) := 1-\sqrt{1-\distmin(C)}
+\]
+is the Johnson radius of $C$. Note that $J(\distmin(C))\le\distmin(C)$ for all codes. We refer to $\distmin(C)$ as the capacity of $C$.
+
+\begin{center}
+\fbox{\begin{minipage}{0.92\linewidth}
+\textbf{The grand MCA challenge.}
+Given a Reed--Solomon code $C:=\RS{\F}{L}{k}$ over a smooth evaluation domain $L\subseteq\F$, with constant rate
+\[
+  \rho(C):=\frac{k}{\abs{L}}\in\set{\frac12,\frac14,\frac18,\frac1{16}},
+\]
+and given $\epsilon^*$, say $\epsilon^*=2^{-128}$, determine the largest $\delta_C^*\in[0,1]$ such that
+\[
+  \epsmca(C,\delta_C^*)\le \epsilon^*,
+\]
+assuming $\abs{\F}$ is sufficiently large so that such a $\delta_C^*$ exists.
+\end{minipage}}
+\end{center}
+
+Resolving the challenge for a code $C$ and $\epsilon^*$ requires specifying $\delta_C^*$ along with a proof that for all $\delta>\delta_C^*$ we have $\epsmca(C,\delta)>\epsilon^*$. Ideally this would be determined for every Reed--Solomon code $\RS{\F}{L}{k}$, namely for every choice of $\F$, $L$, and $k$. However, we are most interested in $L\subseteq\F$ a smooth domain, $k\le 2^{40}$, and $\abs{\F}<2^{256}$.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lll}
+\toprule
+Distance $\delta$ & Error $\epsmca(C,\delta)$ & Reference \\
+\midrule
+$\delta=0$ & $\epsmca(C,\delta)=2/\abs{\F}$ & trivial \\
+$\delta<\distmin(C)/2$ & $\epsmca(C,\delta)\le O(n)/\abs{\F}$ & \cite{ACFY25,BCIKS20} \\
+$\delta=J(\distmin(C))-\eta$ & $\epsmca(C,\delta)\le n\cdot\poly(1/\eta)/\abs{\F}$ & \cite{BCHKS25,Hab25,BCGM25,BCIKS20} \\
+$\delta\approx\distmin(C)-1/\Omega(\log n)$ & $\epsmca(C,\delta)\ge n^{\Omega(1)}/\abs{\F}$ & \cite{BCHKS25,KK25,CGHLL26} \\
+\bottomrule
+\end{tabular}
+\caption{The behavior of $\epsmca(C,\delta)$ for $\delta\in[0,1]$ and $C:=\RS{\F}{L}{k}$, where $n:=\abs{L}$.}
+\label{tab:mca}
+\end{table}
+
+\paragraph{The grand list decoding challenge.}
+In addition to MCA bounds, one often also requires good list decoding bounds. The following challenge is stated for an $m$-way interleaved Reed--Solomon code, denoted by $C^{\equiv m}$.
+
+\begin{center}
+\fbox{\begin{minipage}{0.92\linewidth}
+\textbf{The grand list decoding challenge.}
+Given a Reed--Solomon code $C$ as in the grand MCA challenge, a constant $m$, and $\epsilon^*$, say $\epsilon^*=2^{-128}$, determine the largest $\delta_C^*\in[0,1]$ such that
+\[
+  \abs{\Lambda(C^{\equiv m},\delta_C^*)}\le \epsilon^*\cdot\abs{\F},
+\]
+assuming $\abs{\F}$ is sufficiently large so that such a $\delta_C^*$ exists.
+\end{minipage}}
+\end{center}
+
+The reason for the bound $\epsilon^*\abs{\F}$ is that soundness errors of coding-based proof systems often include a term $\abs{\Lambda(C^{\equiv m},\delta)}/\abs{\F}$. Thus we seek the largest $\delta$ for which this expression is negligible.
+
+\section{Preliminaries}
+
+We use the following notation. Logarithms are base $2$ unless stated otherwise. A hat over a function, such as $\hat p$, denotes a polynomial. We interchangeably interpret vectors $f\in\Sigma^n$ as functions $f:[n]\to\Sigma$. For a field $\F$, variable count $m\in\N$, and individual degree bound $d\in\N$, let $\F^{<d}[X_1,\ldots,X_m]$ be the set of all $m$-variate polynomials over $\F$ of individual degree at most $d-1$. In random processes, $x\leftarrow S$ denotes sampling uniformly from a set $S$.
+
+\begin{lemma}[Polynomial identity lemma]
+Let $\hat p\in\F^{<d}[X_1,\ldots,X_m]$ be a non-zero polynomial. Then
+\[
+  \Prb_{v\leftarrow \F^m}[\hat p(v)=0]\le \frac{m(d-1)}{\abs{\F}}.
+\]
+\end{lemma}
+
+\subsection{Probability}
+
+We write $\set{x\mid x\leftarrow A}$ for the random variable obtained by sampling $x$ according to the probabilistic algorithm $A$. We write
+\[
+  \Prb[f(x)=1\mid x\leftarrow A]
+\]
+for the probability of the event $f(x)=1$ when $x$ is sampled according to $A$. If $D$ is randomized, then $\Prb[D(x)=1\mid x\leftarrow A]$ is over the randomness of both $A$ and $D$.
+
+Sometimes we define a random variable with pseudocode inside the probability expression, for example
+\[
+ \set{(y,z)\;\bigg|\; y\leftarrow B,
+       \ z\leftarrow C(y)}
+\]
+denotes the random variable obtained by sampling $y$ according to $B$, then sampling $z$ according to $C(y)$, and outputting $(y,z)$.
+
+\subsection{Information theory}
+
+\begin{definition}
+For $q\in\N$, the $q$-entropy function is $H_q:[0,1]\to\R$ defined by
+\[
+  H_q(x)=x\log_q(q-1)-x\log_q x-(1-x)\log_q(1-x).
+\]
+For a set $S$, let $H_S(x):=H_{\abs{S}}(x)$.
+\end{definition}
+
+\begin{definition}
+Let $f,g:S\to\Sigma$ and let $T\subseteq S$. The restricted fractional Hamming distance between $f$ and $g$ over $T$ is
+\[
+  \Delta_T(f,g)=\Prb_{i\leftarrow T}[f(i)\ne g(i)].
+\]
+The Hamming distance between $f$ and $g$ is $\Delta(f,g)=\Delta_S(f,g)$. For a set $C$, write
+\[
+  \Delta_T(f,C)=\min_{g\in C}\Delta_T(f,g),\qquad
+  \Delta(f,C)=\min_{g\in C}\Delta(f,g).
+\]
+\end{definition}
+
+\begin{definition}
+For $q,n\in\N$ and $\delta\in(0,1)$, the volume of the Hamming ball of radius $\delta$ in $q^n$ is
+\[
+  \Vol_q(\delta,n)=\sum_{i=0}^{\floor{\delta n}} \binom{n}{i}(q-1)^i.
+\]
+\end{definition}
+
+\subsection{Error correcting codes}
+
+\begin{definition}
+An error correcting code $C$ over an alphabet $\Sigma$ with block length $n$ is a subset $C\subseteq\Sigma^n$. The minimum distance of $C$ is
+\[
+  \distmin(C):=\min_{f,g\in C}\Delta(f,g),
+\]
+and the rate of $C$ is
+\[
+  \rho(C):=\frac{\log_{\abs{\Sigma}}\abs{C}}{n}.
+\]
+We also consider $C$ as an injective map $C:\Sigma^k\to\Sigma^n$ and write $\enc_C$ for its encoding time.
+\end{definition}
+
+\begin{lemma}[Singleton bound]
+Let $C\subseteq\Sigma^n$ be an error correcting code. Then
+\[
+  \abs{C}\le \abs{\Sigma}^{n(1-\distmin(C)+1/n)}.
+\]
+Consequently, $\rho(C)\le 1-\distmin(C)+1/n$. A code is maximum distance separable (MDS) if equality holds.
+\end{lemma}
+
+\begin{definition}
+Let $\F$ be a field. A code $C\subseteq\Sigma^n$ is $\F$-additive if $\Sigma=\F^s$ for some $s\in\N$ and $C$ is an $\F$-linear subspace of $\Sigma^n$. If $s=1$ the code is $\F$-linear.
+\end{definition}
+
+\begin{definition}
+Let $C$ be an error correcting code over alphabet $\Sigma$ with block length $n$. For any $f:[n]\to\Sigma$ and $\delta\in(0,1)$, define
+\[
+  \Lambda(C,\delta,f):=\set{g\in C\mid \Delta(f,g)\le\delta}.
+\]
+Write
+\[
+  \abs{\Lambda(C,\delta)}:=\max_f \abs{\Lambda(C,\delta,f)}.
+\]
+\end{definition}
+
+\begin{definition}
+Let $C$ be a code over alphabet $\Sigma$ with block length $n$, and let $m\in\N$. The $m$-interleaved code $C^{\equiv m}$ is the code over alphabet $\Sigma^m$ with block length $n$ defined by
+\[
+  C^{\equiv m}:=\set{(u_1,
+\ldots,u_m)\mid \forall i\in[m]: u_i\in C}\subseteq(\Sigma^m)^n.
+\]
+\end{definition}
+
+For any $m$ and $\delta$, one clearly has
+\[
+  \abs{\Lambda(C,\delta)}\le \abs{\Lambda(C^{\equiv m},\delta)}\le \abs{\Lambda(C,\delta)}^m.
+\]
+The following sharper relation is useful.
+
+\begin{lemma}[\cite{GGR11}]
+Let $C$ be a code and let $\delta\in[0,\distmin(C))$, $\eta:=\distmin(C)-\delta$,
+\[
+  b:=\ceil{\frac{\delta}{\eta}},\qquad r:=\ceil{\log\frac{\distmin(C)}{\eta}}.
+\]
+Then for every $m\ge1$,
+\[
+  \abs{\Lambda(C^{\equiv m},\delta)}\le \binom{b+r}{r}\cdot \abs{\Lambda(C,\delta)}^r.
+\]
+\end{lemma}
+
+\subsection{Reed--Solomon codes and variants}
+
+\begin{definition}
+Let $\F$ be a finite field, $L\subseteq\F$, and $k\in\N$. The Reed--Solomon code over alphabet $\F$ with message length $k$ and evaluation domain $L$ is
+\[
+  \RS{\F}{L}{k}:=\set{f:L\to\F\mid \exists \hat f\in\F^{<k}[X],\ \forall x\in L:\ \hat f(x)=f(x)}.
+\]
+Let $n:=\abs{L}$ denote the block length and $\rho:=k/n$ denote the rate.
+\end{definition}
+
+The Reed--Solomon code has distance
+\[
+  \distmin(C)=\frac{n-k+1}{n}=1-\rho+\frac1n,
+\]
+and is MDS.
+
+\begin{definition}
+A set $L\subseteq\F$ is smooth if it is a multiplicative coset of a subgroup $H\subseteq\F^*$ whose order is a power of two.
+\end{definition}
+
+\begin{definition}
+Let $\F$ be a finite field, $L\subseteq\F$, and $k,s\in\N$. The $s$-interleaved Reed--Solomon code is
+\[
+  \IRS{\F}{L}{k}{s}:=\RS{\F}{L}{k/s}^{\equiv s}.
+\]
+\end{definition}
+
+\begin{definition}
+Let $L\subseteq\F$ and $s\in\N$. We say that $\omega\in\F$ is $(L,s)$-admissible if for every $\alpha,\beta\in L$ and every $0\le i<s$, $\alpha\omega^i\ne\beta$ unless forced trivially by the same evaluation point.
+\end{definition}
+
+\begin{definition}[\cite{GR08}]
+Let $\F$ be a finite field, $k,s\in\N$, $L\subseteq\F$, and $\omega\in\F$ be $(L,s)$-admissible. The folded Reed--Solomon code is
+\[
+\FRS{\F}{L}{k}{s}{\omega}:=
+\left\{ f:L\to\F^s\ \middle|\
+\exists\hat f\in\F^{<k}[X],\ \forall x\in L:\
+ f(x)=\begin{bmatrix}
+ \hat f(x)\\
+ \hat f(x\omega)\\
+ \vdots\\
+ \hat f(x\omega^{s-1})
+ \end{bmatrix}
+\right\}.
+\]
+\end{definition}
+
+\subsection{Subspace-design codes}
+
+\begin{definition}[\cite{GX13}]
+An $\F$-additive code $C:\F^k\to(\F^s)^n$ is a $\tau$-subspace-design code if for every $r\in\N$ and every $\F$-linear subspace $A$ of $C$ with $\dim A\le r$,
+\[
+  \frac{1}{n}\sum_{i\in[n]} \dim A_i \le \dim A\cdot \tau(r),
+\]
+where $A_i:=\set{a\in A\mid a_i=0^s}$.
+\end{definition}
+
+\begin{lemma}[\cite{GG25}]
+If $C:\F^k\to(\F^s)^n$ is a $\tau$-subspace-design code of rate $\rho$, then
+\[
+  \min_{r\in\N}\tau(r)\ge \rho-\frac1n.
+\]
+\end{lemma}
+
+\begin{theorem}[\cite{GK16}]
+Let $C:\F^k\to(\F^s)^n$ be a code with rate $\rho$. If $C$ is either a folded Reed--Solomon code $\FRS{\F}{L}{k}{s}{\omega}$ or a univariate multiplicity code $\UM{\F}{L}{k}{s}$ with $\abs{\F}>n$ and $\charop(\F)>\rho sn>s$, then $C$ is $\tau$-subspace-design for
+\[
+ \tau(r):=
+ \begin{cases}
+   \dfrac{s\rho}{s-r+1}, & r\in[s],\\[0.6em]
+   1, & \text{otherwise.}
+ \end{cases}
+\]
+\end{theorem}
+
+\subsection{Extension fields}
+
+\begin{definition}
+A tuple $(\B,\F,e,\psi,\phi)$ is an extension field presentation if $\B$ and $\F$ are fields, $\psi:\B\hookrightarrow\F$ is an injective field homomorphism, $e\in\N$ is the dimension of $\F$ as a $\B$-vector space, and $\phi:\F\to\B^e$ is a $\B$-linear isomorphism. For each $i\in[e]$, $\phi_i:\F\to\B$ denotes the $i$-th component of $\phi$. The presentation is systematic if for every $x\in\B$, $\phi(\psi(x))=(x,0,\ldots,0)$.
+\end{definition}
+
+\begin{definition}
+Let $C_\B:\B^k\to\B^n$ be linear. The extension code of $C_\B$ over $\F$ with respect to $(\B,\F,e,\psi,\phi)$ is the linear code $C_\F:\F^k\to\F^n$ defined as
+\[
+  C_\F(v):=\phi^{-1}\Bigl(C_\B(\phi_1(v)),\ldots,C_\B(\phi_e(v))\Bigr).
+\]
+If the presentation is systematic, then $C_\F(\psi(v))=\psi(C_\B(v))$ for every $v\in\B^k$.
+\end{definition}
+
+\begin{lemma}[\cite{BCFW25}]
+Let $C_\B:\B^k\to\B^n$ be linear and let $(\B,\F,e,\psi,\phi)$ be an extension field presentation. For every $\delta\in(0,1)$,
+\[
+  \abs{\Lambda(C_\F,\delta)}=\abs{\Lambda(C_\B^{\equiv e},\delta)}.
+\]
+\end{lemma}
+
+\section{List decoding}
+
+List decoding \cite{Eli57,Woz58} is a fundamental question in coding theory. The combinatorial question is to pin down $\abs{\Lambda(C,\delta)}$ for different codes and to understand the regimes where the list size is small. The algorithmic question asks, given a word $f$ and proximity bound $\delta$ such that $\abs{\Lambda(C,\delta,f)}=\poly(n)$, to compute the list efficiently. In this paper we focus on the combinatorial question, as modern SNARK constructions typically do not require efficient list decoding.
+
+\subsection{Positive results}
+
+\begin{definition}
+For $q,\ell\in\N$, define the following Johnson-type functions:
+\begin{align*}
+J_{q,\ell}(\delta)
+&=\left(1-\frac1q\right)
+  \left(1-\sqrt{1-\frac{q}{q-1}\cdot\frac{\ell}{\ell-1}\cdot\delta}\right),\\
+J_q(\delta)&=\lim_{\ell\to\infty}J_{q,\ell}(\delta)
+=\left(1-\frac1q\right)
+  \left(1-\sqrt{1-\frac{q}{q-1}\cdot\delta}\right),\\
+J(\delta)&=\lim_{q\to\infty}J_q(\delta)=1-\sqrt{1-\delta}.
+\end{align*}
+\end{definition}
+
+\begin{theorem}[Johnson bound \cite{Joh62}]
+For every $C\subseteq\Sigma^n$ with $\abs{\Sigma}=q$,
+\[
+  \abs{\Lambda(C,J_{q,\ell}(\distmin(C)))}\le \ell.
+\]
+\end{theorem}
+
+\begin{corollary}
+For every MDS code $C$ with rate $\rho$ and every $\eta>0$,
+\[
+  \abs{\Lambda(C,1-\sqrt{\rho}-\eta)}\le \frac{1}{2\eta\rho}.
+\]
+\end{corollary}
+
+For generalized Reed--Solomon codes, the Guruswami--Sudan algorithm \cite{GS99} finds the list $\Lambda(C,1-\sqrt\rho-\eta,f)$ in polynomial time whenever the list size is polynomial. Thus for Reed--Solomon codes up to the Johnson bound, the combinatorial and algorithmic bounds match.
+
+Beyond the Johnson bound, general codes do not have non-trivial list-size bounds, but special codes can. A key example is subspace-design codes.
+
+\begin{theorem}[\cite{CZ25}]
+Let $C:\F^k\to(\F^s)^n$ be a $\tau$-subspace-design code. For every $\eta>0$,
+\[
+  \abs{\Lambda(C,1-\tau(1/\eta)-\eta)}\le \frac{1-\tau(1/\eta)}{\eta}.
+\]
+\end{theorem}
+
+\begin{corollary}[\cite{CZ25}]
+Let $C=\FRS{\F}{L}{k}{s}{\omega}$ be a folded Reed--Solomon code of rate $\rho$. Then for every $\eta>0$ with $1/\eta<s$,
+\[
+\left|\Lambda\left(C,1-\frac{\rho s}{s-1/\eta+1}-\eta\right)\right|
+\le
+\frac{s(1-\rho)+1-1/\eta}{\eta(s+1-1/\eta)}.
+\]
+In particular, if $\eta\ge\sqrt{3/s}$, then
+\[
+  \abs{\Lambda(C,1-\rho-\eta)}\le \frac1\eta.
+\]
+\end{corollary}
+
+A line of work shows that randomly punctured Reed--Solomon codes are list decodable close to capacity.
+
+\begin{theorem}[\cite{AGL24}]
+Let $\ell\ge2$, $\eta\in(0,1)$, $k,n\in\N$, and let $\F$ be a finite field with $\abs{\F}\ge n+k\cdot 2^{10\ell/\eta}$. Then
+\[
+\Prb\left[
+\left|\Lambda\left(C,\frac{\ell}{\ell+1}(1-\rho-\eta)\right)\right|\le \ell
+\ \middle|\
+ L\leftarrow \binom{\F}{n},\ C:=\RS{\F}{L}{k},\ \rho:=k/n
+\right]
+\ge 1-2^{-\ell n}.
+\]
+Consequently, by taking $\ell=2(1-\rho-\eta)/\eta$ and $\abs{\F}\ge n+k\cdot2^{20(1-\rho-\eta)/\eta^2}$, with probability at least $1-2^{-2n(1-\rho-\eta)/\eta}$,
+\[
+  \abs{\Lambda(C,1-\rho-\eta)}\le \frac{2(1-\rho-\eta)}{\eta}.
+\]
+\end{theorem}
+
+\subsection{Limitations}
+
+The earliest lower bound goes back to Elias: the list size is lower-bounded by the average number of codewords in a Hamming ball.
+
+\begin{lemma}[\cite{Eli57}]
+Let $C:\Sigma^k\to\Sigma^n$ be a code and let $q:=\abs{\Sigma}$. For every $\delta\in(0,1)$,
+\[
+  \abs{\Lambda(C,\delta)}\ge \frac{\Vol_q(\delta,n)}{q^{n-k}}.
+\]
+\end{lemma}
+
+\begin{proof}
+There exists a received word $g$ with at least the average number of codewords in its Hamming ball:
+\[
+\begin{aligned}
+\abs{\Lambda(C,\delta)}
+&\ge \E_{f\leftarrow\Sigma^n}\abs{\Lambda(C,\delta,f)} \\
+&=\sum_{u\in C}\Prb_{f\leftarrow\Sigma^n}[\Delta(f,u)\le\delta]
+=\sum_{u\in C}\frac{\Vol_q(\delta,n)}{q^n}
+=\frac{\Vol_q(\delta,n)}{q^{n-k}}.
+\end{aligned}
+\]
+\end{proof}
+
+\begin{corollary}
+Let $C:\Sigma^k\to\Sigma^n$ have rate $\rho$ and let $q:=\abs{\Sigma}$. For every $\delta\in(0,1)$,
+\[
+  \abs{\Lambda(C,\delta)}\ge
+  \frac{q^{n(\rho-1+H_q(\delta))}}{\sqrt{8n\delta(1-\delta)}}.
+\]
+\end{corollary}
+
+\begin{theorem}[Generalized Singleton bound \cite{ST20}]
+Let $\F$ be a finite field, $0<\ell<\abs{\F}$, $\delta\in(0,1)$, and let $C:\F^k\to\F^n$ be a linear code of rate $\rho$. If $\abs{\Lambda(C,\delta)}\le\ell$, then
+\[
+  \abs{C}\le \abs{\F}^{n-\floor{\frac{\ell+1}{\ell}\delta n}}.
+\]
+Consequently, $\delta\le \frac{\ell}{\ell+1}(1-\rho)$.
+\end{theorem}
+
+\begin{theorem}[\cite{BDG24,AGL23}]
+Let $\ell\ge2$ and $\rho\in(0,1)$ be constants. There exists a constant $\alpha_{\ell,\rho}$ such that for every $\eta>0$ and sufficiently large $n\ge\Omega_{\ell,\rho}(1/\eta)$, any code $C:\Sigma^k\to\Sigma^n$ of rate $\rho$ with
+\[
+  \left|\Lambda\left(C,\frac{\ell}{\ell+1}(1-\rho-\eta)\right)\right|\le\ell
+\]
+has $\abs{\Sigma}\ge 2^{\alpha_{\ell,\rho}/\eta}$.
+\end{theorem}
+
+\begin{theorem}[\cite{GLMRSW22}]
+Fix a prime power $q$, fix $\delta\in(0,1-1/q)$, and fix $\varepsilon\in(0,1)$. There exists $\gamma>0$ such that for all $1-h_q(\delta)-\gamma<\rho<1-h_q(\delta)$ and all sufficiently large $n$, a uniformly random linear code $C\subseteq\F_q^n$ of rate $\rho$ satisfies
+\[
+  \abs{\Lambda(C,\delta)}>
+  \left\lfloor \frac{h_q(\delta)}{1-h_q(\delta)-\rho}-\varepsilon\right\rfloor
+\]
+with probability $1-q^{-\Omega(n)}$.
+\end{theorem}
+
+For Reed--Solomon codes, stronger and more specialized lower bounds are known.
+
+\begin{theorem}[\cite{BKR06}]
+Fix $0<\alpha<\beta<1$. For infinitely many prime powers $q$, there exists $w:\F_q\to\F_q$ such that for $C:=\RS{\F_q}{\F_q}{\floor{q^\alpha}}$,
+\[
+  \abs{\Lambda(C,1-q^{\beta-1},w)}\ge q^{(\alpha-\beta^2)\log q}=2^{(\alpha-\beta^2)(\log q)^2}.
+\]
+\end{theorem}
+
+\begin{theorem}[\cite{GHSZ02}]
+Fix $0<\alpha,\beta<1$. For all sufficiently large primes $p$, there exists $C:=\RS{\F_p}{\F_p}{\floor{p^\alpha}}$ and a word $w:\F_p\to\F_p$ such that
+\[
+  \left|\Lambda\left(C,1-\frac{1-\beta}{\alpha}p^{\alpha-1},w\right)\right|>
+  \Omega\left(p^{\sqrt{\alpha\beta/2}}\right).
+\]
+\end{theorem}
+
+\begin{theorem}[\cite{JH01}]
+Fix an integer $j\ge2$. For infinitely many prime powers $q$ satisfying $q\equiv1\pmod{j+1}$, there exists $C:=\RS{\F_q}{L}{k}$ with $\abs{L}=j+1$ and rate $\rho\approx (j-1)/(j+1)$, and a word $w:L\to\F_q$ such that
+\[
+  \left|\Lambda\left(C,\frac1{j+1},w\right)\right|>j.
+\]
+\end{theorem}
+
+\begin{theorem}[\cite{CW07}]
+Fix a prime power $q$ and consider $C:=\RS{\F_q}{L}{k}$ with $\abs{L}=n$. Let $t$ be the smallest integer such that
+\[
+  \binom{n}{t}/q^{t-k}\le1,
+\]
+and let $\delta:=1-t/n$. If there is a polynomial-time algorithm that, given any received word $f\in\F^n$, outputs all codewords in $\Lambda(C,\delta,f)$, then there is a randomized polynomial-time algorithm for the discrete logarithm problem in $\F_{q^{t-k}}$.
+\end{theorem}
+
+\section{Correlated agreement conjectures}
+
+\subsection{Definitions}
+
+Let $f_1,f_2\in\F^n$ and let $L:=\set{f_1+\gamma f_2}_{\gamma\in\F}$ be the corresponding line in $\F^n$. For $\delta\in(0,1)$, write
+\[
+  p(L):=\Prb_{g\leftarrow L}[\Delta(g,C)\le\delta]
+\]
+for the fraction of points on $L$ that are $\delta$-close to $C$. A linear code $C$ has a proximity gap $\epspg(C,\delta)$ if for all $f_1,f_2\in\F^n$, either $p(L)\le\epspg(C,\delta)$ or $p(L)=1$.
+
+\begin{definition}
+The correlated agreement error of an $\F$-additive code $C\subseteq(\F^s)^n$ with respect to distances $\delta_{\fld},\delta_{\intr}\in(0,1)$, where $\delta_{\fld}\le\delta_{\intr}$, is
+\[
+\epsca(C,\delta_{\fld},\delta_{\intr})
+:=\max_{f_1,f_2\in(\F^s)^n}
+\Prb_{\gamma\leftarrow\F}\left[
+\begin{array}{c}
+\Delta(f_1+\gamma f_2,C)\le\delta_{\fld}\ \wedge\\
+\Delta((f_1,f_2),C^{\equiv2})>\delta_{\intr}
+\end{array}
+\right].
+\]
+The quantity $\epsilon=\delta_{\intr}-\delta_{\fld}$ is called the proximity loss. When $\epsilon=0$ we write $\epsca(C,\delta)$.
+\end{definition}
+
+\begin{remark}
+For every $f,g\in(\F^s)^n$, $\Delta(f,g)\in\set{0,1/n,\ldots,1}$. Hence for any $\beta,\beta'\in[0,1/n)$,
+\[
+  \epsca(C,\delta,\delta+\beta)=\epsca(C,\delta,\delta+\beta')=\epsca(C,\delta).
+\]
+\end{remark}
+
+\begin{definition}
+The mutual correlated agreement error of an $\F$-additive code $C\subseteq(\F^s)^n$ with respect to distance $\delta\in(0,1)$ is
+\[
+\epsmca(C,\delta):=\max_{f_1,f_2\in(\F^s)^n}
+\Prb_{\gamma\leftarrow\F}\left[
+\begin{array}{c}
+\exists S=S_\gamma\subseteq[n]\text{ with }\abs{S}\ge(1-\delta)n:\\
+\Delta_S(f_1+\gamma f_2,C)=0\ \wedge\\
+\Delta_S((f_1,f_2),C^{\equiv2})>0
+\end{array}
+\right].
+\]
+\end{definition}
+
+\begin{remark}
+One could define a version of mutual correlated agreement with proximity loss, analogous to CA, but this remains to be explored.
+\end{remark}
+
+\begin{fact}
+For every $\F$-additive code $C\subseteq(\F^s)^n$ and distance $\delta\in(0,1)$,
+\[
+  \epspg(C,\delta)\le\epsca(C,\delta)\le\epsmca(C,\delta).
+\]
+\end{fact}
+
+\begin{lemma}[\cite{ACFY25}]
+For any $\F$-additive code $C\subseteq(\F^s)^n$ and $\delta<\distmin(C)/2$,
+\[
+  \epsmca(C,\delta)=\epsca(C,\delta).
+\]
+\end{lemma}
+
+\begin{lemma}
+For any $\F$-additive code $C\subseteq(\F^s)^n$, $t\in\N$, and $\delta\in(0,1)$,
+\[
+  \epsmca(C^{\equiv t},\delta)\le t\cdot\epsmca(C,\delta).
+\]
+\end{lemma}
+
+\subsection{Positive results}
+
+\subsubsection{Unique decoding}
+
+\begin{theorem}[\cite{AHIV17}]
+For any linear code $C$ and $\delta\le\distmin(C)/3$,
+\[
+  \epsmca(C,\delta)=\epsca(C,\delta)\le \frac{n\delta+1}{\abs{\F}}.
+\]
+\end{theorem}
+
+\begin{theorem}
+Let $C:=\RS{\F}{L}{k}$ have rate $\rho$. Then for $\delta_{\fld}\le(1-\rho)/2<\distmin(C)/2$:
+\begin{enumerate}
+  \item \cite{BCIKS20} $\epsmca(C,\delta_{\fld})=\epsca(C,\delta_{\fld})\le n/\abs{\F}$.
+  \item \cite{BCHKS25} For $\distmin(C)/3\le\delta_{\fld}<\delta_{\intr}$,
+\[
+\epsca(C,\delta_{\fld},\delta_{\intr})\le
+\max\left\{
+\frac{1-\rho-\delta_{\fld}}{\delta_{\fld}(1-\rho-2\delta_{\fld})\abs{\F}},
+\frac{\delta_{\intr}}{(\delta_{\intr}-\delta_{\fld})\abs{\F}}
+\right\}.
+\]
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+Using Remark~4.2, if $\delta_{\intr}-\delta_{\fld}<1/n$ then
+\[
+\epsmca(C,\delta_{\fld})=\epsca(C,\delta_{\fld})
+\le
+\max\left\{
+\frac{1-\rho-\delta_{\fld}}{\delta_{\fld}(1-\rho-2\delta_{\fld})\abs{\F}},
+\frac{n\delta_{\fld}+\gamma}{\gamma\abs{\F}}
+\right\}
+\]
+by setting $\delta_{\intr}=\delta_{\fld}+\gamma/n$.
+\end{remark}
+
+\subsubsection{List decoding}
+
+\begin{theorem}
+For any linear code $C\subseteq\F^n$, $\eta>0$, and
+\[
+  \delta\le 1-\sqrt[3]{1-\distmin(C)}+\eta,
+\]
+the following hold:
+\begin{align*}
+\epsmca(C,\delta)&\le
+\left(n+\frac6\eta+
+\frac{2}{\eta(\sqrt[3]{1-\distmin(C)}+\eta-\sqrt{1-\distmin(C)}+\eta)}\right)\frac1{\abs{\F}}\tag{\cite{GKL24}}\\
+&=O\left(\frac{n}{\eta\abs{\F}}\right),\\
+\epsca(C,\delta,\delta+\eta)&\le \frac{2}{\eta^2\abs{\F}}.\tag{\cite{BGKS20}}
+\end{align*}
+\end{theorem}
+
+\begin{theorem}[\cite{BCHKS25}]
+Let $C:=\RS{\F}{L}{k}$ have rate $\rho$ and let $\eta>0$. Let $\rho_+:=\rho+1/n$ and
+\[
+  m:=\max\left\{\left\lceil\frac{\sqrt{\rho_+}}{2\eta}\right\rceil,3\right\}.
+\]
+For $\delta<1-\sqrt{\rho_+}-\eta$,
+\[
+\epsmca(C,\delta)
+\le
+\frac1{\abs{\F}}\left(
+\frac{2(m+1/2)^5+3(m+1/2)\delta\rho_+}{3\rho_+^{3/2}}\cdot n
++\frac{m+1/2}{\sqrt{\rho_+}}
+\right)
+=O_\rho\left(\frac{n}{\eta^5\abs{\F}}\right).
+\]
+\end{theorem}
+
+\begin{theorem}[\cite{GG25}]
+Let $C:\F^k\to(\F^s)^n$ be a $\tau$-subspace-design code. Then for $t\in\N$,
+\[
+  \epsmca\left(C,1-\tau(t+1)-\frac{3}{2t}\right)
+  \le \frac{tn+4t^2}{\abs{\F}}.
+\]
+\end{theorem}
+
+\begin{theorem}[\cite{GG25}]
+Let $\eta\in(0,1)$ and let $C:=\FRS{\F}{L}{k}{s}{\omega}$ be a folded Reed--Solomon code with $s>16\eta^{-2}$. Then
+\[
+  \epsmca(C,1-\rho-\eta)
+  \le \frac{2n}{\eta\abs{\F}}+\frac{24}{\eta^3\abs{\F}}
+  =O\left(\frac{n}{\eta\abs{\F}}+\frac{1}{\eta^3\abs{\F}}\right).
+\]
+\end{theorem}
+
+\begin{theorem}[\cite{GG25}]
+There is a constant $c_1$ such that for every $n\in\N$, $\eta\in(0,1)$, and $\rho\in(0,1)$ with $\eta>c_1n^{-1/9}$, there is a constant $c_2$ such that for every prime field $\F=\F_p$ with $p>c_2n$,
+\[
+\Prb\left[
+\epsmca(C,1-\rho-\eta)\le
+\frac{2n(1-\rho)+O(1/\eta^4)}{\eta\abs{\F}}
+\ \middle|\
+L\leftarrow\binom{\F}{n},\ C:=\RS{\F}{L}{\rho n}
+\right]
+\ge \frac23.
+\]
+\end{theorem}
+
+\subsection{Limitations}
+
+\begin{theorem}[\cite{BCHKS25,KK25}]
+For every $c>0$ and rate $\rho\in(0,1/2)$ there exists a power of two $n\in\N$ and a Reed--Solomon code $C:=\RS{\F}{L}{k}$ of rate $\rho$, where $\abs{\F}=\poly(n)$ is prime and $L$ is smooth with $\abs{L}=n$, such that
+\[
+  \epsca\left(C,1-\rho-\Theta\left(\frac1{\log n}\right)\right)
+  \ge \frac{n^c}{\abs{\F}}.
+\]
+\end{theorem}
+
+\begin{theorem}[\cite{CS25}]
+Let $C:=\RS{\F}{L}{k}$ with $q=\abs{\F}\ge10$ and rate $\rho$, and let $\delta$ be such that
+\[
+  1-H_q(\delta)+\frac2n+\frac{\sqrt{H_q(\delta)-\delta}}{n}\le \rho\le 1-\delta-\frac2n.
+\]
+Then $\epsca(C,\delta)=1$.
+\end{theorem}
+
+As $q$ grows, $H_q(\delta)\approx \delta-1/\log q$. Thus CA breaks down at distances $1-\rho-\eta$ for roughly
+\[
+  \eta\approx \frac{1}{\sqrt{n\log q}}+\frac2n-\frac1{\log q}.
+\]
+
+\begin{theorem}[\cite{BCHKS25}]
+Fix a constant $\epsilon>0$ and let $\delta=15/16$. For all fields $\F$ of characteristic $2$, there exists $C:=\RS{\F}{L}{k}$ with $n=\abs{\F}^{\frac12(1+\epsilon)}$ and $\distmin(C)=15/16$ such that
+\[
+  \epsca\left(C,\delta_{\fld}=J(\distmin(C)),\delta_{\intr}=J(\distmin(C))+\frac18+\frac1n\right)
+  \ge \frac{n^{2(1-\epsilon)}}{\abs{\F}}.
+\]
+\end{theorem}
+
+\begin{lemma}[\cite{DG25}]
+Let $C\subseteq\F^n$ be linear and let $\delta':=\max_{u\in\F^n}\set{\Delta(u,C)}$ be the covering radius. For every $\delta\in(0,\delta')$,
+\[
+  \epsca(C,\delta)\ge \frac{q-1}{q}\Prb_{u\leftarrow\F^n}[\Delta(u,C)\le\delta].
+\]
+\end{lemma}
+
+\subsection{Line-decoding}
+
+\begin{definition}[\cite{GG25}]
+Let $\F$ be finite and let $C\subseteq(\F^s)^n$ be an $\F$-additive code. The code $C$ is $(\delta,a,b)$ line-decodable if for every $f_1,f_2\in\Sigma^n$ and every function $U:\F\to C$, whenever
+\[
+  \Prb_{\gamma\leftarrow\F}[\Delta(f_1+\gamma f_2,U(\gamma))\le\delta]\ge \frac{a}{\abs{\F}},
+\]
+there exist $u_1,u_2\in C$ such that
+\[
+  \Prb_{\gamma\leftarrow\F}[U(\gamma)=u_1+\gamma u_2]\ge \frac{b}{\abs{\F}}.
+\]
+\end{definition}
+
+\begin{theorem}[\cite{GG25}]
+Let $\F$ be finite and let $C\subseteq(\F^s)^n$ be $\F$-additive. If $C$ is $(\delta,a,n+1)$ line-decodable, then
+\[
+  \epsmca(C,\delta)\le \frac{a}{\abs{\F}}.
+\]
+\end{theorem}
+
+\section{Connections between list decoding and correlated agreement}
+
+This section surveys known relationships between list decoding and correlated agreement. Finding a formal connection between these notions is a fundamental question. If list decoding implied CA under useful hypotheses, then improving list decoding bounds could suffice. If CA implied list decoding, then list decoding bounds would be necessary before proving CA.
+
+\begin{theorem}[\cite{GCXK25}]
+Let $C\subseteq\F^n$ be a linear code and let $\delta,\eta\in(0,1)$. If $\abs{\Lambda(C,\delta)}\le L$, then
+\[
+  \epsmca\left(C,1-\sqrt{1-\delta}+\eta\right)
+  \le \frac{L^2\delta n+1/\eta}{\abs{\F}}
+  =O_\delta\left(\frac{L^2 n}{\eta\abs{\F}}\right).
+\]
+\end{theorem}
+
+For Reed--Solomon codes, this implies MCA up to the ``two Johnson bounds'' regime by applying the Johnson bound. Since random Reed--Solomon codes are list decodable up to capacity, it also implies MCA for random Reed--Solomon codes up to the Johnson bound.
+
+\begin{theorem}[\cite{BCHKS25}]
+Let $C:=\RS{\F}{L}{k}$ have rate $\rho$ and let $\delta\in(0,1-\rho)$. If
+\[
+  \epsca\left(C,\delta_{\fld}=\delta+\frac2n,
+                 \delta_{\intr}=1-\rho-\frac1n\right)<\frac1{2n},
+\]
+then $\abs{\Lambda(C,\delta)}<\abs{\F}$.
+\end{theorem}
+
+\begin{theorem}[\cite{CS25}]
+Let $C:=\RS{\F}{L}{k}$ and $C^+:=\RS{\F}{L}{k+1}$ with $\abs{L}=n$. For $\delta\in(0,\distmin(C))$ and $\eta\in[0,1)$, if
+\[
+  \epsca(C,\delta)\le \eta\left(\frac1k-\frac{n}{k\abs{\F}}\right),
+\]
+then
+\[
+  \abs{\Lambda(C^+,\delta)}\le
+  \left\lceil \frac{\abs{\F}}{1-\eta}\cdot\epsca(C,\delta)\right\rceil.
+\]
+\end{theorem}
+
+\begin{theorem}[\cite{BGKS20}]
+For all fields $\F$ of characteristic $2$, the code $C:=\RS{\F}{\F}{\abs{\F}/8}$ of rate $\rho=1/8$ has
+\[
+  \epsca\left(C,1-\rho^{1/3}\right)
+  \ge 1-\frac1{\abs{\F}}.
+\]
+The statement also holds with proximity loss for $\delta_{\fld}=1-\rho^{1/3}$ and $\delta_{\intr}=1-\rho^{2/3}$.
+\end{theorem}
+
+This example shows that list decoding cannot tightly imply correlated agreement in full generality. The code is full-domain, however, so a relationship may still hold for codes where $\abs{\F}$ is much larger than $n$.
+
+\section{Toy problem}\label{sec:toy}
+
+We describe a simple toy problem and protocol whose soundness proof captures many complexities that appear in more involved protocols. The analysis demonstrates the need for both MCA and list decoding.
+
+\subsection{Protocol}
+
+\begin{definition}
+Let $\ell\in\N$ and let $C:\F^k\to(\F^s)^n$ be $\F$-additive. Define the toy relation
+\[
+R_C^\ell:=\set{((v,\mu),F,\mathsf{F})\mid
+F=C^{\equiv\ell}(\mathsf{F})\ \wedge\ \mathsf{F}v=\mu},
+\]
+where $v\in\F^k$, $\mu\in\F^\ell$, $F:[n]\to\F^{\ell s}$, and $\mathsf{F}\in\F^{\ell\times k}$.
+\end{definition}
+
+In the toy protocol we take $\ell=2$, so $\mu=(\mu_1,\mu_2)$, $F=(f_1,f_2)$, and $\mathsf{F}=(\mathsf{f}_1,\mathsf{f}_2)$. The verifier receives $(v,\mu_1,\mu_2)$ and oracle access to purported codewords $f_1,f_2$.
+
+\begin{construction}
+Let $C:\F^k\to(\F^s)^n$ be $\F$-additive and let $t\in\N$. The protocol $T[C,t]=(P,V)$ is as follows.
+\begin{itemize}
+  \item \textbf{Inputs.} The verifier receives explicit input $x=(v,\mu_1,\mu_2)$ and implicit input $y=f_1,f_2:[n]\to\F^s$. The honest prover additionally receives $w=(\mathsf{f}_1,\mathsf{f}_2)\in(\F^k)^2$ such that $\angles{\mathsf{f}_1,v}=\mu_1$, $\angles{\mathsf{f}_2,v}=\mu_2$, $f_1=C(\mathsf{f}_1)$, and $f_2=C(\mathsf{f}_2)$.
+  \item \textbf{Interactive phase.}
+  \begin{enumerate}
+    \item The verifier samples and sends $\gamma\leftarrow\F$.
+    \item The prover sends $g\in\F^k$. In the honest case, $g:=\mathsf{f}_1+\gamma\mathsf{f}_2$.
+    \item The verifier samples and sends $x_1,\ldots,x_t\leftarrow[n]$.
+  \end{enumerate}
+  \item \textbf{Decision phase.} The verifier computes $\bar g:=C(g)$ and checks:
+  \begin{enumerate}
+    \item $\angles{g,v}=\mu_1+\gamma\mu_2$.
+    \item For every $i\in[t]$, $\bar g(x_i)=f_1(x_i)+\gamma f_2(x_i)$.
+  \end{enumerate}
+\end{itemize}
+\end{construction}
+
+Compiled into a non-interactive argument using standard techniques, the argument size is approximately
+\[
+  2t\cdot(\abs{H}\log n+s\log\abs{\F})\text{ bits},
+\]
+where $\abs{H}$ is the digest size of the Merkle hash function.
+
+\subsection{Soundness}
+
+\begin{definition}
+Let $\ell\in\N$, let $C:\F^k\to(\F^s)^n$ be $\F$-additive, and let $\delta\in(0,1)$. The relaxed toy relation is
+\[
+\widetilde R_{C,\delta}^\ell
+:=\set{(x,y,(w,y^*))\mid \Delta(y,y^*)\le\delta\ \wedge\ (x,y^*,w)\in R_C^\ell}.
+\]
+\end{definition}
+
+\begin{definition}
+A code $C\subseteq\Sigma^n$ supports erasure correction with correction time $\ecor_C$ if there is a deterministic algorithm $EC$ such that, on input $f:[n]\to\Sigma\cup\set{\bot}$:
+\begin{itemize}
+  \item if $\abs{f^{-1}(\bot)}<\distmin(C)n$ and there is a codeword $u\in C$ agreeing with $f$ outside the erasures, then $EC(f)=u$; and
+  \item otherwise, $EC(f)=\bot$.
+\end{itemize}
+\end{definition}
+
+\begin{lemma}[\cite{GRS12}]
+Every additive code $C:\F^k\to(\F^s)^n$ supports erasure correction with correction time
+\[
+  \ecor_C=O((sn)^3).
+\]
+\end{lemma}
+
+\begin{lemma}
+For every $\delta\in(0,\distmin(C))$, the protocol $T[C,t]$ has knowledge soundness with respect to $\widetilde R_{C,\delta}^2$ with extraction time $O(\enc_C+\ecor_C)$ and error
+\[
+  \max\left\{
+    \epsmca(C,\delta)+\frac{\abs{\Lambda(C^{\equiv2},\delta)}}{\abs{\F}},
+    (1-\delta)^t
+  \right\}.
+\]
+\end{lemma}
+
+\begin{proof}
+The extractor receives $(y,(\gamma,g))$, parses $y=(f_1,f_2)$, computes $\bar g=C(g)$, and lets $S\subseteq[n]$ be the largest set on which
+\[
+  \bar g=f_1+\gamma f_2.
+\]
+It erasure-decodes $f_1$ and $f_2$ on $S$ to obtain messages $\mathsf{f}_1,\mathsf{f}_2$, aborting if either decoding fails, and outputs $(\mathsf{f}_1,\mathsf{f}_2)$.
+
+Let $E$ be the event, over $\gamma$, that there exists $S\subseteq[n]$ with $\abs{S}\ge(1-\delta)n$ such that
+\[
+  \Delta_S(f_1+\gamma f_2,C)=0
+  \qquad\text{and}\qquad
+  \Delta_S((f_1,f_2),C^{\equiv2})>0.
+\]
+By MCA, $\Prb_\gamma[E]\le\epsmca(C,\delta)$. Assume $\neg E$. If $\Delta(f_1+\gamma f_2,C(g))>\delta$, then the spot-check accepts with probability at most $(1-\delta)^t$. Otherwise there is a large set $S$ on which $f_1+\gamma f_2$ agrees with a codeword. Since $\neg E$, the pair $(f_1,f_2)$ agrees on $S$ with a pair of codewords $(C(\mathsf{f}_1),C(\mathsf{f}_2))$, so erasure correction succeeds.
+
+Moreover,
+\[
+ C(g)(S)=f_1(S)+\gamma f_2(S)=C(\mathsf{f}_1)(S)+\gamma C(\mathsf{f}_2)(S)=C(\mathsf{f}_1+\gamma\mathsf{f}_2)(S).
+\]
+Since $\delta<\distmin(C)$, this implies $g=\mathsf{f}_1+\gamma\mathsf{f}_2$. If either $\angles{\mathsf{f}_1,v}\ne\mu_1$ or $\angles{\mathsf{f}_2,v}\ne\mu_2$, then the verifier's linear constraint
+\[
+  \angles{\mathsf{f}_1+\gamma\mathsf{f}_2,v}=\mu_1+\gamma\mu_2
+\]
+holds for at most one value of $\gamma$. There are at most $\abs{\Lambda(C^{\equiv2},\delta)}$ relevant decoded pairs, so a union bound gives the second error term.
+\end{proof}
+
+\begin{remark}
+The soundness argument relies on MCA rather than just CA. With CA alone one cannot show that every codeword in $\Lambda(C,f_1+\gamma f_2,\delta)$ decomposes as $u_1+\gamma u_2$ for $(u_1,u_2)\in\Lambda(C^{\equiv2},(f_1,f_2),\delta)$.
+\end{remark}
+
+\begin{lemma}
+For every $\delta\in(0,\distmin(C))$, the protocol $T[C,t]$ has round-by-round knowledge soundness with respect to $\widetilde R_{C,\delta}^2$ with total extraction time $O(\enc_C+\ecor_C)$ and errors
+\[
+\left(
+\epsmca(C,\delta)+\frac{\abs{\Lambda(C^{\equiv2},\delta)}}{\abs{\F}},
+(1-\delta)^t
+\right).
+\]
+\end{lemma}
+
+\subsection{Concrete parametrizations}
+
+Consider the setting where $\F$ is a sextic extension of $\B=\F_q$ for
+\[
+  q=2^{31}-2^{24}+1
+\]
+(the Koala Bear prime), $k=2^{20}$, $sn=2^{21}$ so that $\rho=1/2$, and $t=128$.
+
+In both code families below, $C$ is an extension code of a code $C_\B$ over the base field $\B$. When input messages are over the base field and are committed within the same Merkle tree, the argument size becomes
+\[
+  128\cdot(256\log n+2\cdot31\cdot s)\text{ bits}.
+\]
+This is minimized at $n=2^{18}$ and $s=2^3$, giving $79.75$ KiB.
+
+\subsubsection{Interleaved Reed--Solomon codes}
+
+Let $L\subseteq\B$ be a smooth domain with $\abs{L}=n$, and let
+\[
+  C:=\IRS{\F}{L}{k}{s},\qquad C_\B:=\IRS{\B}{L}{k}{s}.
+\]
+Let $\eta>0$, set
+\[
+  \delta:=1-\sqrt\rho-\eta,
+  \qquad
+  m:=\max\left\{\left\lceil\frac{\sqrt\rho}{2\eta}\right\rceil,3\right\}+\frac12.
+\]
+By Theorem~4.12 and Lemma~4.7,
+\[
+\epsmca(C,\delta)
+\le s\epsmca(\RS{\F}{L}{k/s},\delta)
+\le
+\frac{2m^5+3m\delta\rho}{3\rho^{3/2}\abs{\F}}sn
++\frac{sm}{\sqrt\rho\abs{\F}}
+\le
+\frac{2m^5+3m\delta\rho}{2^{165}}+\frac{sm}{2^{185.5}}.
+\]
+By the Johnson bound,
+\[
+  \abs{\Lambda(C^{\equiv2},\delta)}\le \frac{1}{2\eta\sqrt\rho}=\frac{\sqrt2}{2\eta}.
+\]
+Thus the round-by-round knowledge errors are bounded by
+\[
+\min_{\eta\in(0,1)}\left(
+\frac{2m^5+3m\delta\rho}{2^{165}}+\frac{sm}{2^{185.5}}+\frac{2^{-186.5}}{\eta},
+(1/\sqrt2+\eta)^t
+\right).
+\]
+For $t=128$, this analysis gives at most $64$ bits of security because $(1/\sqrt2)^128=2^{-64}$.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llll}
+\toprule
+$s$ & $\eta$ & bits & size \\
+\midrule
+$2^0$ & $2^{-21}$ & $2^{-64.00}$ & 85.0 KiB \\
+$2^1$ & $2^{-20}$ & $2^{-64.00}$ & 81.9 KiB \\
+$2^2$ & $2^{-19}$ & $2^{-64.00}$ & 79.9 KiB \\
+$2^3$ & $2^{-18}$ & $2^{-64.00}$ & 79.8 KiB \\
+$2^4$ & $2^{-17}$ & $2^{-64.00}$ & 83.5 KiB \\
+$2^5$ & $2^{-16}$ & $2^{-64.00}$ & 95.0 KiB \\
+$2^6$ & $2^{-15}$ & $2^{-63.99}$ & 122.0 KiB \\
+$2^7$ & $2^{-14}$ & $2^{-63.98}$ & 180.0 KiB \\
+$2^8$ & $2^{-13}$ & $2^{-63.97}$ & 300.0 KiB \\
+$2^9$ & $2^{-12}$ & $2^{-63.94}$ & 544.0 KiB \\
+$2^{10}$ & $2^{-11}$ & $2^{-63.87}$ & 1.01 MiB \\
+$2^{11}$ & $2^{-10}$ & $2^{-63.75}$ & 1.98 MiB \\
+$2^{12}$ & $2^{-9}$ & $2^{-63.49}$ & 3.91 MiB \\
+\bottomrule
+\end{tabular}
+\caption{Round-by-round knowledge soundness for interleaved Reed--Solomon codes with $t=128$.}
+\end{table}
+
+To enforce $128$ bits of soundness, one minimizes
+\[
+  t(256\log n+62s)
+\]
+subject to
+\[
+\frac{2m^5+3m\delta\rho}{2^{165}}+\frac{sm}{2^{185.5}}+\frac{2^{-186.5}}{\eta}\le 2^{-128},
+\qquad
+(1/\sqrt2+\eta)^t\le2^{-128}.
+\]
+For example, for $s=2^0$ the minimizing pair is approximately $(\eta,t)=(2^{-8.57},259)$.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lllll}
+\toprule
+$s$ & $\eta$ & $t$ & bits & size \\
+\midrule
+$2^0$ & $2^{-8.57}$ & 259 & $2^{-128.11}$ & 171.9 KiB \\
+$2^1$ & $2^{-8.57}$ & 259 & $2^{-128.11}$ & 165.8 KiB \\
+$2^2$ & $2^{-8.57}$ & 259 & $2^{-128.11}$ & 161.6 KiB \\
+$2^3$ & $2^{-8.57}$ & 259 & $2^{-128.11}$ & 161.4 KiB \\
+$2^4$ & $2^{-8.57}$ & 259 & $2^{-128.11}$ & 169.0 KiB \\
+$2^5$ & $2^{-8.56}$ & 259 & $2^{-128.11}$ & 192.2 KiB \\
+$2^6$ & $2^{-8.56}$ & 259 & $2^{-128.10}$ & 246.9 KiB \\
+$2^7$ & $2^{-8.60}$ & 259 & $2^{-128.14}$ & 364.2 KiB \\
+$2^8$ & $2^{-8.65}$ & 259 & $2^{-128.18}$ & 607.0 KiB \\
+$2^9$ & $2^{-8.43}$ & 260 & $2^{-128.47}$ & 1.08 MiB \\
+$2^{10}$ & $2^{-8.36}$ & 260 & $2^{-128.39}$ & 2.06 MiB \\
+$2^{11}$ & $2^{-8.42}$ & 260 & $2^{-128.46}$ & 4.01 MiB \\
+$2^{12}$ & $2^{-8.55}$ & 259 & $2^{-128.09}$ & 7.91 MiB \\
+\bottomrule
+\end{tabular}
+\caption{Interleaved Reed--Solomon parameters when enforcing $128$ bits of security.}
+\end{table}
+
+\subsubsection{Subspace-design codes}
+
+Let $C:\F^k\to(\F^s)^n$ be a $\tau$-subspace-design code of rate $1/2$. For folded Reed--Solomon codes, take $L\subseteq\B$ smooth with $\abs{L}=n$ and $\omega\in\F$ $(L,s)$-admissible, and set
+\[
+  C:=\FRS{\F}{L}{k}{s}{\omega},\qquad C_\B:=\FRS{\B}{L}{k}{s}{\omega}.
+\]
+Let
+\[
+  \tau(r)=\begin{cases}
+  \dfrac{s\rho}{s-r+1}, & 1\le r\le s,\\[0.5em]
+  1, & \text{otherwise.}
+  \end{cases}
+\]
+Fix $r\in\N$ and
+\[
+  \delta:=1-\tau(r+1)-\frac{3}{2r}.
+\]
+By Theorem~4.13,
+\[
+  \epsmca(C,\delta)\le\frac{rn+4r^3}{\abs{\F}}.
+\]
+Since $\delta\le1-\tau(r+1)-1/(r+1)$, Theorem~3.4 gives
+\[
+  \abs{\Lambda(C,\delta)}\le (1-\tau(r+1))(r+1).
+\]
+Let
+\[
+  b_r:=\left\lceil\frac{\delta}{\distmin(C)-\delta}\right\rceil,
+  \qquad
+  c_r:=\left\lceil\log\frac{\distmin(C)}{\distmin(C)-\delta}\right\rceil.
+\]
+Then Lemma~2.10 gives
+\[
+\abs{\Lambda(C^{\equiv2},\delta)}
+\le \binom{b_r+c_r}{c_r}\cdot\bigl((1-\tau(r+1))(r+1)\bigr)^{c_r}.
+\]
+Therefore the round-by-round knowledge errors are bounded by
+\[
+\min_{r\in\N}\left(
+\frac{rn+4r^3}{\abs{\F}}
++\frac{\binom{b_r+c_r}{c_r}\bigl((1-\tau(r+1))(r+1)\bigr)^{c_r}}{\abs{\F}},
+\left(\tau(r+1)+\frac{3}{2r}\right)^t
+\right).
+\]
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llll}
+\toprule
+$s$ & $r$ & bits & size \\
+\midrule
+$2^5$ & 8 & $2^{-29.11}$ & 95.0 KiB \\
+$2^6$ & 11 & $2^{-55.57}$ & 122.0 KiB \\
+$2^7$ & 17 & $2^{-75.39}$ & 180.0 KiB \\
+$2^8$ & 25 & $2^{-90.04}$ & 300.0 KiB \\
+$2^9$ & 36 & $2^{-100.76}$ & 544.0 KiB \\
+$2^{10}$ & 53 & $2^{-108.53}$ & 1.01 MiB \\
+$2^{11}$ & 75 & $2^{-114.13}$ & 1.98 MiB \\
+$2^{12}$ & 108 & $2^{-118.14}$ & 3.91 MiB \\
+\bottomrule
+\end{tabular}
+\caption{Round-by-round knowledge soundness for folded Reed--Solomon codes with $t=128$.}
+\end{table}
+
+To enforce $128$ bits, minimize $t(256\log n+62s)$ subject to the two error terms being at most $2^{-128}$.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lllll}
+\toprule
+$s$ & $r$ & $t$ & bits & size \\
+\midrule
+$2^5$ & 8 & 563 & $2^{-128.03}$ & 417.9 KiB \\
+$2^6$ & 11 & 295 & $2^{-128.07}$ & 281.2 KiB \\
+$2^7$ & 16 & 218 & $2^{-128.22}$ & 306.6 KiB \\
+$2^8$ & 25 & 182 & $2^{-128.02}$ & 426.6 KiB \\
+$2^9$ & 32 & 163 & $2^{-128.01}$ & 692.8 KiB \\
+$2^{10}$ & 50 & 151 & $2^{-128.00}$ & 1.19 MiB \\
+$2^{11}$ & 61 & 144 & $2^{-128.03}$ & 2.22 MiB \\
+$2^{12}$ & 86 & 139 & $2^{-128.01}$ & 4.25 MiB \\
+\bottomrule
+\end{tabular}
+\caption{Folded Reed--Solomon parameters when enforcing $128$ bits of security.}
+\end{table}
+
+\subsection{Attacks}
+
+We analyze a simplified interactive oracle reduction from $R_C^2$ to $R_C^1$.
+
+\begin{construction}
+Let $C:\F^k\to(\F^s)^n$ be $\F$-additive. The verifier receives $x=(v,\mu_1,\mu_2)$ and oracle access to $y=(f_1,f_2)$. It samples and sends $\gamma\leftarrow\F$, then outputs the new instance
+\[
+  x^*:=(v,\mu_1+\gamma\mu_2),\qquad y^*:=f_1+\gamma f_2.
+\]
+The honest prover outputs $w^*:=\mathsf{f}_1+\gamma\mathsf{f}_2$.
+\end{construction}
+
+\begin{lemma}
+For every $\delta\in(0,\distmin(C))$, Construction~6.9 has knowledge soundness from $\widetilde R_{C,\delta}^2$ to $\widetilde R_{C,\delta}^1$ with total extraction time $O(\enc_C+\ecor_C)$ and error
+\[
+  \epsmca(C,\delta)+\frac{\abs{\Lambda(C^{\equiv2},\delta)}}{\abs{\F}}.
+\]
+\end{lemma}
+
+\begin{definition}
+The winning set of Construction~6.9 is
+\[
+  \Omega^{f_1,f_2}_{v,\mu_1,\mu_2}:=
+  \set{\gamma\in\F\mid f_1+\gamma f_2\in \widetilde R_{C,\delta}^1[v,\mu_1+\gamma\mu_2]}.
+\]
+\end{definition}
+
+The soundness error is exactly
+\[
+  \max_{x,y}\frac{\abs{\Omega_x^y}}{\abs{\F}}
+  \quad\text{subject to}\quad
+  \Delta(y,R_C^2[x])>\delta.
+\]
+
+\subsubsection{List decoding lower bound}
+
+\begin{lemma}
+Let $\delta\in(0,1)$ be such that $\abs{\F}>\binom{\abs{\Lambda(C^{\equiv2},\delta)}}{2}$. Then the soundness error of Construction~6.9 from $\widetilde R_{C,\delta}^2$ to $\widetilde R_{C,\delta}^1$ is at least
+\[
+  \frac{\abs{\Lambda(C^{\equiv2},\delta)}}{\abs{\F}+\abs{\Lambda(C^{\equiv2},\delta)}-1}.
+\]
+\end{lemma}
+
+\begin{proof}
+Fix $f_1,f_2$ attaining the maximum list size and define
+\[
+S:=\set{(\mathsf{f}_1,\mathsf{f}_2)\mid
+C^{\equiv2}(\mathsf{f}_1,\mathsf{f}_2)\in\Lambda(C^{\equiv2},\delta,(f_1,f_2))}.
+\]
+For $v\in\F^k$, let
+\[
+  \varphi_v(\mathsf{f}_1,\mathsf{f}_2):=(\angles{\mathsf{f}_1,v},\angles{\mathsf{f}_2,v}),
+  \qquad S_v:=\varphi_v(S).
+\]
+For distinct $F_1,F_2\in S$, $\Prb_v[\varphi_v(F_1)=\varphi_v(F_2)]\le1/\abs{\F}$. Claim~B.1 gives a $v$ such that
+\[
+  \abs{S_v}\ge \frac{\abs{S}}{1+(\abs{S}-1)/\abs{\F}}
+  =\frac{\abs{\F}\abs{\Lambda(C^{\equiv2},\delta)}}{\abs{\F}+\abs{\Lambda(C^{\equiv2},\delta)}-1}.
+\]
+Choosing $\mu_2$ outside the set of second coordinates of $S_v$, and choosing $\mu_1$ to avoid the finitely many collisions, yields an injective map $S_v\to\Gamma_{\mu_1,
+\mu_2}\subseteq\Omega_x^y$, proving the lower bound.
+\end{proof}
+
+\subsubsection{Correlated agreement lower bound}
+
+\begin{lemma}
+The soundness error of Construction~6.9 from $\widetilde R_{C,\delta}^2$ to $\widetilde R_{C,\delta}^1$ is at least $\epsca(C,\delta)$.
+\end{lemma}
+
+\begin{proof}
+Let $f_1,f_2$ maximize the CA error:
+\[
+\Prb_{\gamma\leftarrow\F}\left[
+\Delta(f_1+\gamma f_2,C)\le\delta
+\ \wedge\
+\Delta((f_1,f_2),C^{\equiv2})>\delta
+\right]=\epsca(C,\delta).
+\]
+Taking $x=(0^k,0,0)$, every such $\gamma$ belongs to the winning set, which proves the claim.
+\end{proof}
+
+\begin{remark}
+The lower bound uses CA rather than MCA. A lower bound based on MCA would be qualitatively stronger, but no attack that succeeds all the way to $\epsmca(C,\delta)$ when $\epsmca(C,\delta)>\epsca(C,\delta)$ is currently known.
+\end{remark}
+
+\section{Related problems and promising directions}
+
+\paragraph{Mutual correlated agreement for non-polynomial codes.}
+This paper focuses on Reed--Solomon codes and related polynomial codes. Many constructions instead use non-polynomial codes such as expander codes, turbo codes, sketched codes, and tensor-like codes to enable linear-time provers. For many such codes, the best known list-decoding and MCA bounds are those for general linear codes. A natural direction is to prove better bounds for these families.
+
+\paragraph{Characterization of degenerate codes.}
+Some list-decoding and MCA bounds for general linear codes are tight because there exist degenerate codes for which no better bounds hold. It is natural to seek a structural characterization of well-behaved codes that satisfy stronger bounds.
+
+\paragraph{The effect of interleaving.}
+The interleaved code $C^{\equiv s}$ has many applications. Lemma~2.10 relates list decoding of $C^{\equiv s}$ to list decoding of $C$, while Lemma~4.7 gives $\epsmca(C^{\equiv s},\delta)\le s\epsmca(C,\delta)$. It remains open whether these bounds are tight and whether better bounds hold for important code families.
+
+\paragraph{Improved parameters for subspace-design codes.}
+Subspace-design codes have good list-decoding and MCA properties up to capacity, but known constructions require alphabet size $s=O(1/\eta^2)$ to reach distance $\distmin(C)-\eta$. This increase in alphabet size can eliminate the proof-size gains from larger proximity parameters. Improving the dependence between $s$ and $\eta$ could make such codes more practical.
+
+\paragraph{MCA for univariate powers.}
+IOP design often requires combinations beyond $f_0+\gamma f_1$, such as polynomial generators or curves of the form $\sum_{i=0}^\ell \gamma^i f_i$. The work of \cite{BCGM25} shows that MCA for affine combinations and univariate combinations suffices for every polynomial generator. Understanding which codes satisfy these properties is open.
+
+\paragraph{Derandomizing Reed--Solomon results.}
+Randomly punctured Reed--Solomon codes exhibit strong list-decoding and MCA properties. A possible route for explicit Reed--Solomon codes is to derandomize these results by replacing uniformly random subsets $L$ by structured domains.
+
+\appendix
+
+\section{Additional preliminaries}
+
+\subsection{Interactive oracle reductions}
+
+A relation is a set of triples $(x,y,w)$, where $x$ is the explicit instance, $y$ is the implicit instance, and $w$ is the witness. A public-coin interactive oracle reduction (IOR) of proximity from $R$ to $R'$ lets a prover and verifier interact over several rounds; at the end the verifier either rejects or outputs a new explicit and implicit instance $(x',y')$, and the prover outputs a witness $w'$ such that $(x',y',w')\in R'$.
+
+\begin{definition}
+An IOR $(P,V)$ has perfect completeness if for every $(x,y,w)\in R$,
+\[
+\Prb[(x',y',w')\in R'\mid (x',y',w')\leftarrow\angles{P,V}(x,y,w)]=1.
+\]
+\end{definition}
+
+\begin{remark}
+An IOP for a relation $R$ is an IOR from $R$ to the trivial relation $R_\bot:=\set{(\bot,\bot,\bot)}$.
+\end{remark}
+
+\begin{definition}
+An IOR $(P,V)$ has knowledge soundness from $\widetilde R$ to $\widetilde R'$ with error $\kappa$ and extraction time $et$ if there is an extractor $E$ running in time $et$ such that for every statement $(x,y)$ and malicious prover $\widetilde P$,
+\[
+\Prb\left[
+\begin{array}{c}
+(x',y',w')\in\widetilde R'\ \wedge\ (x,y,w)\notin\widetilde R
+\end{array}
+\ \middle|\
+\begin{array}{c}
+(x',y',w')\leftarrow\angles{\widetilde P,V}(x,y),\\
+w\leftarrow E(x,y,\mathrm{tr},x',y',w')
+\end{array}
+\right]
+\le \kappa(x,y).
+\]
+\end{definition}
+
+\begin{definition}
+Let $IOR=(P,V)$ be an IOR from $R$ to $R'$. A knowledge state function from $\widetilde R$ to $\widetilde R'$ is a function $\mathrm{State}$ satisfying:
+\begin{itemize}
+  \item for the empty transcript, $\mathrm{State}(x,y,\emptyset,w)=1$ iff $(x,y,w)\in\widetilde R$;
+  \item prover moves cannot turn a zero state into a one state;
+  \item for a full transcript, the state is one iff the verifier's output, together with $w$, lies in $\widetilde R'$.
+\end{itemize}
+\end{definition}
+
+\begin{definition}
+An IOR has round-by-round knowledge soundness from $\widetilde R$ to $\widetilde R'$, errors $(\varepsilon_1,\ldots,\varepsilon_k)$, and extraction times $(et_1,\ldots,et_k)$ if there is a knowledge state function and deterministic extractor $E_{\mathrm{rbr}}$ such that for every round $i$ and every transcript $\mathrm{tr}$ where the verifier is about to move,
+\[
+\Prb_{\rho_i}\left[
+\exists w:\
+\mathrm{State}(x,y,\mathrm{tr},E_{\mathrm{rbr}}(x,y,\mathrm{tr}\|\rho_i,w))=0
+\ \wedge\
+\mathrm{State}(x,y,\mathrm{tr}\|\rho_i,w)=1
+\right]
+\le \varepsilon_i(x,y).
+\]
+\end{definition}
+
+\subsection{Univariate multiplicity codes}
+
+\begin{definition}
+Let $k\in\N$, let $\F$ be a finite field with $\charop(\F)\ge k$, and let
+\[
+  \hat f(X)=\sum_{i=0}^{k-1}a_iX^i\in\F^{<k}[X].
+\]
+The formal derivative is
+\[
+  \hat f'(X)=\sum_{i=1}^{k-1}(a_i i)X^{i-1}.
+\]
+For $s\in\N$ define recursively $\hat f^{(0)}=\hat f$ and $\hat f^{(s)}=(\hat f^{(s-1)})'$.
+\end{definition}
+
+\begin{definition}[\cite{GW13,KSY14}]
+Let $n,k,s\in\N$, let $\F$ be finite with $\charop(\F)\ge k$ and $\abs{\F}\ge n$, and let $L\subseteq\F$ with $\abs{L}=n$. The univariate multiplicity code is
+\[
+\UM{\F}{L}{k}{s}:=
+\left\{ f:L\to\F^s\ \middle|\
+\exists \hat f\in\F^{<k}[X],\ \forall x\in L:\
+f(x)=\begin{bmatrix}
+\hat f^{(0)}(x)\\
+\hat f^{(1)}(x)\\
+\vdots\\
+\hat f^{(s-1)}(x)
+\end{bmatrix}
+\right\}.
+\]
+\end{definition}
+
+\section{Omitted claim for Lemma 6.12}
+
+\begin{claim}
+Let $S,T$ be finite sets and let $\Phi$ be a distribution on functions from $S$ to $T$ such that for every distinct $x,y\in S$,
+\[
+  \Prb_{\varphi\leftarrow\Phi}[\varphi(x)=\varphi(y)]\le\epsilon.
+\]
+Then there exists $\varphi$ in the support of $\Phi$ such that
+\[
+  \abs{\varphi(S)}\ge \frac{\abs{S}}{1+(\abs{S}-1)\epsilon}.
+\]
+\end{claim}
+
+\begin{proof}
+Let
+\[
+  C_\varphi:=\set{(x,y)\in\binom{S}{2}:\varphi(x)=\varphi(y)}.
+\]
+Then
+\[
+  \E_{\varphi\leftarrow\Phi}\abs{C_\varphi}\le \binom{\abs{S}}{2}\epsilon.
+\]
+For fixed $\varphi$,
+\[
+\abs{C_\varphi}=\frac12\left(-\abs{S}+\sum_{\mu\in\varphi(S)}\abs{\varphi^{-1}(\mu)}^2\right).
+\]
+By Cauchy--Schwarz,
+\[
+\abs{\varphi(S)}(2\abs{C_\varphi}+\abs{S})
+=\abs{\varphi(S)}\sum_{\mu\in\varphi(S)}\abs{\varphi^{-1}(\mu)}^2
+\ge\left(\sum_{\mu\in\varphi(S)}\abs{\varphi^{-1}(\mu)}\right)^2=\abs{S}^2.
+\]
+Hence
+\[
+  \abs{\varphi(S)}\ge \frac{\abs{S}^2}{2\abs{C_\varphi}+\abs{S}}.
+\]
+Taking expectations and applying Jensen's inequality gives
+\[
+\E\abs{\Phi(S)}\ge
+\frac{\abs{S}^2}{2\E\abs{C_\Phi}+\abs{S}}
+\ge
+\frac{\abs{S}^2}{2\binom{\abs{S}}{2}\epsilon+\abs{S}}
+=\frac{\abs{S}}{1+(\abs{S}-1)\epsilon}.
+\]
+Thus some $\varphi$ has the desired property.
+\end{proof}
+
+\section*{Acknowledgements}
+We thank Justin Drake for creating the Proximity Gaps Prize. We also thank Alessandro Chiesa, Elizabeth Crites, Rohan Goyal, Venkatesan Guruswami, Ulrich Hab\"ock, Antonio Kambir\'e, Dmitry Krachun, Swastik Kopparty, and Eylon Yogev. Gal Arnon is supported by the European Research Council under the EU Horizon 2020 research and innovation program (Grant No. 101019547) and Stellar Foundation Grant. Dan Boneh was supported by grants from NSF and DARPA. Giacomo Fenzi was supported in part by the Ethereum Foundation and the Sui Foundation.
+
+\begin{thebibliography}{99}
+\bibitem{ACFY25} Gal Arnon, Alessandro Chiesa, Giacomo Fenzi, and Eylon Yogev. WHIR: Reed--Solomon Proximity Testing with Super-Fast Verification. EUROCRYPT 2025.
+\bibitem{AGGLZ25} Omar Alrabiah, Zeyu Guo, Venkatesan Guruswami, Ray Li, and Zihan Zhang. Random Reed-Solomon Codes Achieve List-Decoding Capacity With Linear-Sized Alphabets. Advances in Combinatorics, 2025.
+\bibitem{AGL23} Omar Alrabiah, Venkatesan Guruswami, and Ray Li. AG codes have no list-decoding friends: Approaching the generalized Singleton bound requires exponential alphabets. arXiv:2308.13424, 2023.
+\bibitem{AGL24} Omar Alrabiah, Venkatesan Guruswami, and Ray Li. Randomly Punctured Reed-Solomon Codes Achieve List-Decoding Capacity over Linear-Sized Fields. STOC 2024.
+\bibitem{AHIV17} Scott Ames, Carmit Hazay, Yuval Ishai, and Muthuramakrishnan Venkitasubramaniam. Ligero: Lightweight Sublinear Arguments Without a Trusted Setup. CCS 2017.
+\bibitem{BCFRRZ25} Martijn Brehm, Binyi Chen, Ben Fisch, Nicolas Resch, Ron D. Rothblum, and Hadas Zeilberger. Blaze: Fast SNARKs from Interleaved RAA Codes. EUROCRYPT 2025.
+\bibitem{BCFW25} Benedikt B\"unz, Alessandro Chiesa, Giacomo Fenzi, and William Wang. Linear time accumulation schemes. Cryptology ePrint Archive, Report 2025/753.
+\bibitem{BCG20} Jonathan Bootle, Alessandro Chiesa, and Jens Groth. Linear-Time Arguments with Sublinear Verification from Tensor Codes. TCC 2020.
+\bibitem{BCGGHJ17} Jonathan Bootle, Andrea Cerulli, Essam Ghadafi, Jens Groth, Mohammad Hajiabadi, and Sune K. Jakobsen. Linear-Time Zero-Knowledge Proofs for Arithmetic Circuit Satisfiability. ASIACRYPT 2017.
+\bibitem{BCGGRS19} Eli Ben-Sasson, Alessandro Chiesa, Lior Goldberg, Tom Gur, Michael Riabzev, and Nicholas Spooner. Linear-Size Constant-Query IOPs for Delegating Computation. TCC 2019.
+\bibitem{BCGM25} Sarah Bordage, Alessandro Chiesa, Ziyi Guan, and Ignacio Manzur. All Polynomial Generators Preserve Distance with Mutual Correlated Agreement. Cryptology ePrint Archive, Paper 2025/2051.
+\bibitem{BCHKS25} Eli Ben-Sasson, Dan Carmon, Ulrich Hab\"ock, Swastik Kopparty, and Shubhangi Saraf. On Proximity Gaps for Reed--Solomon Codes. Cryptology ePrint Archive, Paper 2025/2055.
+\bibitem{BCIKS20} Eli Ben-Sasson, Dan Carmon, Yuval Ishai, Swastik Kopparty, and Shubhangi Saraf. Proximity Gaps for Reed--Solomon Codes. FOCS 2020.
+\bibitem{BCL22} Jonathan Bootle, Alessandro Chiesa, and Siqi Liu. Zero-Knowledge IOPs with Linear-Time Prover and Polylogarithmic-Time Verifier. EUROCRYPT 2022.
+\bibitem{BCS16} Eli Ben-Sasson, Alessandro Chiesa, and Nicholas Spooner. Interactive Oracle Proofs. TCC 2016-B.
+\bibitem{BDG24} Joshua Brakensiek, Manik Dhar, and Sivakanth Gopi. Improved Field Size Bounds for Higher Order MDS Codes. IEEE Transactions on Information Theory, 2024.
+\bibitem{BFRW25} Benedikt B\"unz, Giacomo Fenzi, Ron D. Rothblum, and William Wang. TensorSwitch: Nearly Optimal Polynomial Commitments from Tensor Codes. Cryptology ePrint Archive, Report 2025/2065.
+\bibitem{BGKS20} Eli Ben-Sasson, Lior Goldberg, Swastik Kopparty, and Shubhangi Saraf. DEEP-FRI: Sampling Outside the Box Improves Soundness. ITCS 2020.
+\bibitem{BGM23} Joshua Brakensiek, Sivakanth Gopi, and Visu Makam. Generic Reed-Solomon Codes Achieve List-Decoding Capacity. STOC 2023.
+\bibitem{BKR06} Eli Ben-Sasson, Swastik Kopparty, and Jaikumar Radhakrishnan. Subspace Polynomials and List Decoding of Reed-Solomon Codes. FOCS 2006.
+\bibitem{BKS18} Eli Ben-Sasson, Swastik Kopparty, and Shubhangi Saraf. Worst-Case to Average Case Reductions for the Distance to a Code. CCS 2018.
+\bibitem{BMMS25a} Anubhav Baweja, Pratyush Mishra, Tushar Mopuri, and Matan Shtepel. FICS and FACS: Fast IOPPs and Accumulation via Code-Switching. Cryptology ePrint Archive, Report 2025/737.
+\bibitem{BMMS25b} Anubhav Baweja, Pratyush Mishra, Tushar Mopuri, and Matan Shtepel. Query-Optimal IOPPs for Linear-Time Encodable Codes. Cryptology ePrint Archive, Report 2025/1588.
+\bibitem{BMNW25} Benedikt B\"unz, Pratyush Mishra, Wilson Nguyen, and William Wang. Arc: Accumulation for Reed--Solomon Codes. CRYPTO 2025.
+\bibitem{CFW26} Alessandro Chiesa, Giacomo Fenzi, and Guy Weissenberg. Zero-Knowledge IOPPs for Constrained Interleaved Codes. Cryptology ePrint Archive, Report 2026/391.
+\bibitem{CGHLL26} Dan Carmon, Lior Goldberg, Ulrich Hab\"ock, Leonardo Lerer, and Ilya Lesokhin. S-two Whitepaper. Cryptology ePrint Archive, 2026.
+\bibitem{CHK25} Soham Chatterjee, Prahladh Harsha, and Mrinal Kumar. Deterministic list decoding of Reed-Solomon codes. ECCC TR25-170, 2025.
+\bibitem{CS25} Elizabeth Crites and Alistair Stewart. On Reed--Solomon Proximity Gaps Conjectures. Cryptology ePrint Archive, Paper 2025/2046.
+\bibitem{CW07} Qi Cheng and Daqing Wan. On the List and Bounded Distance Decodability of Reed-Solomon Codes. SIAM Journal on Computing, 2007.
+\bibitem{CY24} Alessandro Chiesa and Eylon Yogev. Building Cryptographic Proofs from Hash Functions. 2024.
+\bibitem{CZ25} Yeyuan Chen and Zihan Zhang. Explicit Folded Reed-Solomon and Multiplicity Codes Achieve Relaxed Generalized Singleton Bounds. STOC 2025.
+\bibitem{DG24} Benjamin Diamond and Angus Gruen. Proximity Gaps in Interleaved Codes. Cryptology ePrint Archive, Report 2024/1351.
+\bibitem{DG25} Benjamin E. Diamond and Angus Gruen. On the Distribution of the Distances of Random Words. Cryptology ePrint Archive, Paper 2025/2010.
+\bibitem{DP25} Benjamin Diamond and Jim Posen. Succinct Arguments over Towers of Binary Fields. EUROCRYPT 2025.
+\bibitem{Eli57} Peter Elias. List decoding for noisy channels. 1957.
+\bibitem{FS25} Giacomo Fenzi and Antonio Sanso. Small-field hash-based SNARGs are less sound than conjectured. Cryptology ePrint Archive, Report 2025/2197.
+\bibitem{FS86} Amos Fiat and Adi Shamir. How to prove yourself: practical solutions to identification and signature problems. CRYPTO 1986.
+\bibitem{GCXK25} Yiwen Gao, Dongliang Cai, Yang Xu, and Haibin Kan. From List-Decodability to Proximity Gaps. Cryptology ePrint Archive, Paper 2025/870.
+\bibitem{GG25} Rohan Goyal and Venkatesan Guruswami. Optimal Proximity Gaps for Subspace-Design Codes and (Random) Reed-Solomon Codes. Cryptology ePrint Archive, Paper 2025/2054.
+\bibitem{GGR11} Parikshit Gopalan, Venkatesan Guruswami, and Prasad Raghavendra. List Decoding Tensor Products and Interleaved Codes. SIAM Journal on Computing, 2011.
+\bibitem{GHSZ02} Venkatesan Guruswami, Johan H\aa{}stad, Madhu Sudan, and David Zuckerman. Combinatorial bounds for list decoding. IEEE Transactions on Information Theory, 2002.
+\bibitem{GK16} Venkatesan Guruswami and Swastik Kopparty. Explicit subspace designs. Combinatorica, 2016.
+\bibitem{GKL24} Yiwen Gao, Haibin Kan, and Yuan Li. Linear Proximity Gap for Linear Codes within the 1.5 Johnson Bound. Cryptology ePrint Archive, Report 2024/1810.
+\bibitem{GLMRSW22} Venkatesan Guruswami, Ray Li, Jonathan Mosheiff, Nicolas Resch, Shashwat Silas, and Mary Wootters. Bounds for List-Decoding and List-Recovery of Random Linear Codes. IEEE Transactions on Information Theory, 2022.
+\bibitem{GLSTW23} Alexander Golovnev, Jonathan Lee, Srinath T. V. Setty, Justin Thaler, and Riad S. Wahby. Brakedown: Linear-time and field-agnostic SNARKs for R1CS. CRYPTO 2023.
+\bibitem{GR08} Venkatesan Guruswami and Atri Rudra. Explicit Codes Achieving List Decoding Capacity: Error-Correction With Optimal Redundancy. IEEE Transactions on Information Theory, 2008.
+\bibitem{GRS12} Venkatesan Guruswami, Atri Rudra, and Madhu Sudan. Essential coding theory. 2012.
+\bibitem{GS03} Venkatesan Guruswami and Igor E. Shparlinski. Unconditional proof of tightness of Johnson bound. SODA 2003.
+\bibitem{GS99} Venkatesan Guruswami and Madhu Sudan. Improved decoding of Reed-Solomon and algebraic-geometry codes. IEEE Transactions on Information Theory, 1999.
+\bibitem{GW13} Venkatesan Guruswami and Carol Wang. Linear-Algebraic List Decoding for Variants of Reed-Solomon Codes. IEEE Transactions on Information Theory, 2013.
+\bibitem{GX13} Venkatesan Guruswami and Chaoping Xing. Combinatorial list-decoding of Reed-Solomon codes beyond the Johnson radius. STOC 2013.
+\bibitem{GZ23} Zeyu Guo and Zihan Zhang. Randomly Punctured Reed-Solomon Codes Achieve the List Decoding Capacity over Polynomial-Size Alphabets. FOCS 2023.
+\bibitem{Gur02} Venkatesan Guruswami. Limits to list decodability of linear codes. STOC 2002.
+\bibitem{Hab24} Ulrich Hab\"ock. Basefold in the List Decoding Regime. IACR ePrint 2024/1571.
+\bibitem{Hab25} Ulrich Hab\"ock. A note on mutual correlated agreement for Reed-Solomon codes. Cryptology ePrint Archive, Paper 2025/2110.
+\bibitem{JH01} J\o{}rn Justesen and Tom H\o{}holdt. Bounds on list decoding of MDS codes. IEEE Transactions on Information Theory, 2001.
+\bibitem{JLR26} Fernando Granha Jeronimo, Lenny Liu, and Pranav Rajpal. Optimal Proximity Gap for Folded Reed-Solomon Codes via Subspace Designs. arXiv:2601.10047, 2026.
+\bibitem{Joh62} Selmer M. Johnson. A new upper bound for error-correcting codes. IRE Transactions in Information Theory, 1962.
+\bibitem{KK25} Dmitry Krachun and Stepan Kazanin. Failure of the proximity gap conjecture for Reed--Solomon code close to the capacity regime. Personal communication, 2025.
+\bibitem{KR26} Mrinal Kumar and Noga Ron-Zewi. Advances in List Decoding of Polynomial Codes. ECCC TR26-032, 2026.
+\bibitem{KSY14} Swastik Kopparty, Shubhangi Saraf, and Sergey Yekhanin. High-rate codes with sublinear-time decoding. Journal of the ACM, 2014.
+\bibitem{MS77} Florence Jessie MacWilliams and Neil James Alexander Sloane. The theory of error-correcting codes. Elsevier, 1977.
+\bibitem{NA25} Andrija Novakovic and Guillermo Angeris. Ligerito: A Small and Concretely Fast Polynomial Commitment Scheme. Cryptology ePrint Archive, Report 2025/1187.
+\bibitem{RRR16} Omer Reingold, Ron Rothblum, and Guy Rothblum. Constant-Round Interactive Proofs for Delegating Computation. STOC 2016.
+\bibitem{RVW13} Guy N. Rothblum, Salil P. Vadhan, and Avi Wigderson. Interactive proofs of proximity: delegating computation in sublinear time. STOC 2013.
+\bibitem{ST20} Chong Shangguan and Itzhak Tamo. Combinatorial list-decoding of Reed-Solomon codes beyond the Johnson radius. STOC 2020.
+\bibitem{Sin64} R. Singleton. Maximum distance q-nary codes. IEEE Transactions on Information Theory, 1964.
+\bibitem{Woz58} John M. Wozencraft. List decoding. 1958.
+\bibitem{Zei24} Hadas Zeilberger. Khatam: Reducing the Communication Complexity of Code-Based SNARKs. Cryptology ePrint Archive, Report 2024/1843.
+\end{thebibliography}
+
+\end{document}
