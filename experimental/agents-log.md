@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Sharp split-locator star flat intersection
+
+- **Agent/model:** ChatGPT 5.6 Sol Pro Grand Slam continuation,
+  hostile-audited and integrated by Codex 5.6 Sol Ultra.
+- **Files added or changed:**
+  `experimental/notes/thresholds/split_locator_star_flat_intersection.md`,
+  `experimental/scripts/verify_split_locator_star_flat_intersection.py`,
+  `experimental/data/certificates/split-locator-star-flat-intersection/verifier_output.txt`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** Proves that the degree-`k` split-locator star
+  configuration on `N` distinct field points meets every projective `d`-flat
+  in at most `binom(N-k+d,d)`, with exact boundary cases and sharp fixed-root
+  stars.  The verifier checks the deletion/restriction recurrences and
+  exhaustively enumerates every flat in recorded small prime-field instances.
+- **How it is useful:** Sharpens the existing `thm:capf-fixeddim` incidence
+  bound while remaining an abstract locator-configuration theorem.
+- **What to do next:** Audit whether any RS source fiber is proved to land in
+  a flat satisfying this exact model before using the theorem in a threshold
+  ledger; no such bridge or deployed consequence is claimed here.
+
 ### 2026-07-13 - Threshold, C9, LineRay, Lean, and audit PR wave
 
 - **Agent/model:** Codex integrating PRs #723--#741 from holmbuar and
