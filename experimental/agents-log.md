@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-13 - Projective-line lift feasibility wall
+
+- **Agent/model:** Codex publication worker for RS-MCA R13 Role 04.
+- **Files added or changed:**
+  `experimental/notes/thresholds/projective_line_lift_feasibility_wall.md`,
+  `experimental/scripts/verify_projective_line_lift_feasibility_wall.py`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED route cut / EXACT_NEW_WALL / AUDIT. No stable paper TeX
+  is changed, and no deployed Grand List bound is claimed.
+- **What is being added:** Proves that the deployed integral scalar
+  nested-MacWilliams family remains feasible through `T+1`, derives the exact
+  `K+2` shadow ratio and endpoint cut, gives a `2^61` support model surviving
+  every pairwise and `K+2`-local line constraint, and proves that literal GRS
+  realization is equivalent to the global projective-line hyperplane lift.
+  The assert-free stdlib verifier replays all deployed arithmetic in normal
+  and optimized Python modes.
+- **How it is useful:** Closes scalar integrality and fixed-depth local support
+  geometry as routes to the pending one-row Grand List ceiling, while replacing
+  them with the exact cross-support projective-hyperplane realization wall.
+- **What to do next:** Prove the inverse-Krawtchouk tail bound over every
+  projective hyperplane of the literal dual GRS code, or construct a genuine
+  line-law lift with tail above `T`; do not return to scalar integrality,
+  pairwise block distance, or only the coordinate-shortened `K+2` lines.
+
 ### 2026-07-12 - A6, L2, ILO, B2, and lower-reserve PR wave
 
 - **Agent/model:** Codex integrating PRs #658--#698 from
