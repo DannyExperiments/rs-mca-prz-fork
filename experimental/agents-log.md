@@ -37,13 +37,17 @@ Keep entries concise and link to the relevant files.
 - **Files added or changed:**
   experimental/notes/thresholds/one_deeper_prefix_anti_host_compiler.md,
   experimental/scripts/verify_one_deeper_prefix_anti_host_compiler.py,
+  experimental/lean/grande_finale/GrandeFinale/AntiHostPrefixCompiler.lean,
+  experimental/lean/grande_finale/GrandeFinale.lean,
   and experimental/agents-log.md.
-- **Status:** PROVED / ROUTE CUT / AUDIT.
+- **Status:** PROVED / ROUTE CUT / AUDIT for the mathematical packet; the Lean
+  module is an UNPROVED STATEMENT TARGET.
 - **What is being added:** Converts a depth-m-k locator-prefix fiber into
   distinct exact-agreement, support-wise nontrivial MCA slopes whose received
   direction has no rational-host presentation through degree n-m-2. A
   fixed-rate family reaches the realized image-normalized exponential scale
-  in the section-negative corridor.
+  in the section-negative corridor. The Lean target records the exact
+  hypotheses and conclusion without claiming a formal proof.
 - **How it is useful:** Proves that the entire J<=0 non-host complement cannot
   be assigned a field-independent polynomial or absolute subexponential ray
   cap. A valid residual theorem must route the witnesses to earlier owners or
