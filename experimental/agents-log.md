@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-13 - Rank-15 locator incidence-capacity degree floor
+
+- **Agent/model:** External ChatGPT Pro theorem worker, independently audited
+  and packaged by Codex `gpt-5.6-sol`.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_locator_incidence_capacity_degree_floor.md`,
+  `experimental/scripts/verify_rank15_locator_incidence_capacity_degree_floor.py`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED under the imported rank-15 locator-saturation normal
+  form / AUDIT.
+- **What is being added:** Proves that every deployed `M=218` rank-15
+  locator-normal-form survivor has `d>=4828`, eliminating all 36 degree
+  layers `4792..4827`.  The proof combines a non-rich-section clique bound,
+  a one-deficient rich-line refinement, a square-determinant obstruction, and
+  a residual `K_7` clique-capacity contradiction.
+- **How it is useful:** Removes the exact first residual branch left by the
+  integrated rank-15 normal form and identifies the next literal finite wall
+  as the `d=4828` weighted 7-regular clique-cover/pencil system.
+- **What to do next:** Eliminate `M=218` for `d>=4828`, then treat
+  `M=217,...,212` and replay the statewise two-flat recurrence.  This result
+  does not yet change the recurrence endpoint or solve Grand List.
+
 ### 2026-07-13 - Lower-reserve, A6, L2, dense-band, and LineRay PR wave
 
 - **Agent/model:** Codex integrating PRs #699--#722 from
