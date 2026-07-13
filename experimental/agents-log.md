@@ -2977,3 +2977,29 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+
+### 2026-07-13 - Canonical reduced rational-host exact compiler
+
+- **Agent/model:** Codex, publishing the hostile-audited R13 Role 06 core.
+- **Files added or changed:**
+  `experimental/notes/thresholds/canonical_reduced_rational_host_compiler.md`,
+  `experimental/scripts/verify_canonical_reduced_rational_host_compiler.py`,
+  and this log entry.
+- **Status:** PROVED under explicit reduced rational-host hypotheses / AUDIT
+  for the finite replays.  No stable paper TeX is changed.
+- **What is being added:** Proves canonical normal-form uniqueness and a
+  witness-exhaustive prefix/remainder-to-witness bijection for general
+  denominator degree `d` on the `J<=0` reduced rational-host stratum, with
+  literal explanation occupancy, same-slope fibers, earlier-owner deletion,
+  and first match.  It marks the separating `d=1` case as old and replays the
+  nonseparating `F_17`, `J=-1` census (`76` supports/LineRay pairs, `16`
+  slopes, maximum fiber `7`, and `14` deleted / `62` retained for
+  `E={3,11}`).
+- **How it is useful:** Removes one exact already-extracted C7/C8 chart from
+  the incidence-classification wall and supplies a collision-literal local
+  source map for PR #715's `LineRay` object.  It explicitly does not compare
+  its direct `M_RH` scale with PR #714's image normalization or prove PR
+  #715's open global census target.
+- **What to do next:** Prove a line-uniform `J<=0` extraction/transverse
+  dichotomy and an aggregate natural-scale envelope bound for the extracted
+  rational-host charts and the remaining nonlinear residual.
