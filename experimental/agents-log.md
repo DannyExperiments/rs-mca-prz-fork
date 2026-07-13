@@ -30,6 +30,38 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Repair the heavy-fiber twin-pair hypothesis
+
+- **Agent/model:** ChatGPT 5.6 Sol Pro (counterexample), independently audited
+  and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/heavy_fiber_planted_emission.md`,
+  `experimental/lean/heavy_fiber_planted_emission/HeavyFiberPlantedEmission.lean`,
+  `experimental/scripts/verify_heavy_fiber_planted_emission.py`,
+  `experimental/scripts/verify_heavy_fiber_planted_emission_hypothesis_repair.py`,
+  `experimental/data/certificates/heavy-fiber-planted-emission/hypothesis_repair_verifier_output.txt`,
+  `experimental/notes/thresholds/staircase_concentration_sidon_paired.md`,
+  `experimental/scripts/verify_staircase_concentration_sidon_paired.py`,
+  `experimental/lean/staircase_concentration_sidon_paired/StaircaseConcentrationSidonPaired.lean`,
+  `experimental/agents-log.md`.
+- **Status:** COUNTEREXAMPLE / PROVED STRUCTURAL REPAIR / AUDITED IMPORT OF
+  INTEGRATED #739 / AUDIT.
+- **What is being added:** The former hypothesis `c > 2 max P` is refuted by
+  `P={3,5,6,7}, c=15`, whose central fiber has two non-pair supports.  The
+  structural theorem and proof are repaired under the sufficient condition
+  `c > max(sum P, 2 max P)` with even `B`.  Integrated #739's exact-profile
+  theorem is cited separately for 2-dissociated `P` under `c > 2 sum P`, where
+  the occupied image has exact size `(3^B+1)/2`; that corollary is not claimed
+  as new here.  A deterministic regression verifier
+  records the exact eight-support counterexample and both repaired regimes over
+  integers and modulo `c`.
+- **How it is useful:** Prevents the semantic-emission ledger from consuming a
+  false planted-fiber theorem while preserving the intended depth-one
+  involution construction under the hypothesis actually needed by the proof.
+- **What to do next:** Re-audit any further consumer that instantiated the old
+  theorem with a center satisfying only `c > 2 max P`.  The synchronized #739
+  consumers use `c > 2 sum P` and therefore remain inside corrected Theorem 2a.
+
 ### 2026-07-13 - Threshold, C9, LineRay, Lean, and audit PR wave
 
 - **Agent/model:** Codex integrating PRs #723--#741 from holmbuar and
