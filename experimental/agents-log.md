@@ -2977,3 +2977,28 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+
+### 2026-07-13 - Rank-15 two-flat locator-saturation normal form
+
+- **Agent/model:** Codex publication worker for RS-MCA R13 Role 03.
+- **Files added or changed:**
+  `experimental/notes/thresholds/rank15_locator_saturation_normal_form.md`,
+  `experimental/scripts/verify_rank15_locator_saturation_normal_form.py`, and
+  this appended log entry.
+- **Status:** PROVED necessary structural theorem / AUDIT.  No stable paper
+  TeX changed, and no value in `M=212,...,218` is eliminated.
+- **What is being added:** A field-uniform gcd-reduced normal form for every
+  survivor of the deployed rank-15 residual two-flat state: 2,373-fold rich
+  lines, pairwise-coprime rational-map fibers, the exact locator identity
+  `L_Z L_C Q_T=E L_H`, the complete degree/inactive-root ledger, and the sharp
+  `M=218,d=4,792` 7-regular uncovered-pair configuration.  The stdlib-only,
+  optimization-safe verifier independently replays every printed integer and
+  cross-checks the pair-capacity formula against 1,200 literal small DPs.
+- **How it is useful:** Replaces unconstrained weighted-line survivors by a
+  simultaneous polynomial-pencil and near-domain-factorization obstruction,
+  excluding all residual-degree-at-most-4,096 mechanisms from `M>=212` while
+  preserving the exact no-closure status.
+- **What to do next:** Eliminate the `M=218,d=4,792,t=b=218,r<=8` locator and
+  pair-divisor system first, then the remaining `M=217` down to `M=212`
+  normal forms; replay the statewise recurrence only after a true ceiling 211
+  theorem, and treat affine dimension at least 16 as a separate wall.
