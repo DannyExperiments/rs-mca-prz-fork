@@ -3072,3 +3072,34 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+
+### 2026-07-13 - R14 Role 03 rank-15 common-root hyperplane slicing
+
+- **Agent/model:** Native GPT-5.6 Sol Ultra hostile integration worker,
+  production replay by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_common_root_hyperplane_slicing.md`,
+  `experimental/scripts/verify_rank15_common_root_hyperplane_slicing.py`,
+  `experimental/data/certificates/rank15-common-root-hyperplane-slicing/rank15_common_root_hyperplane_slicing.json`,
+  `experimental/data/certificates/rank15-common-root-hyperplane-slicing/verifier_output.txt`,
+  `experimental/lean/grande_finale/GrandeFinale/Rank15CommonRootHyperplaneSlicing.lean`,
+  `experimental/lean/grande_finale/GrandeFinale.lean`,
+  and this log entry.
+- **Status:** PROVED narrow slicing theorem / CONDITIONAL residual-ledger
+  consumer / ROUTE_CUT diagnostics; the matching Lean module is an UNPROVED
+  STATEMENT TARGET, not a formal proof.
+- **What is being added:** Proves that a primitive normalized rank-15 affine
+  list with a 14-dimensional direction subspace having at least
+  `k_A-4,985` common roots has size at most
+  `p*20,008,483=42,632,203,442,671,139<T`. The packet also records exact
+  annihilator identities, the corrected admissible-state scalar route cut,
+  and a literal 15-point rank-one-normal overcount construction. Live overlap
+  is checked through PR `#741`; PRs `#737`--`#741` are nonoverlapping.
+- **How it is useful:** Removes the large-common-root nullity-14 mechanism on
+  the conditional diagonal tail while preserving the exact nonclaims: no
+  `(u,c)` state is eliminated, nullities `1,...,13` remain unpaid, no rank-15
+  list bound is proved, and the official score remains `0/2`.
+- **What to do next:** Bound the canonical full-kernel first-owner excess for
+  nullities `1,...,13` using simultaneous RS/projective realizability; keep
+  the unpublished R13 recurrence labeled as a conditional consumer rather
+  than an upstream theorem.
