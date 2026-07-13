@@ -37,14 +37,19 @@ Keep entries concise and link to the relevant files.
 - **Files added or changed:**
   `experimental/notes/l2/rank15_locator_incidence_capacity_degree_floor.md`,
   `experimental/scripts/verify_rank15_locator_incidence_capacity_degree_floor.py`,
+  `experimental/lean/grande_finale/GrandeFinale/Rank15LocatorDegreeFloor.lean`,
+  `experimental/lean/grande_finale/GrandeFinale.lean`,
   and `experimental/agents-log.md`.
-- **Status:** PROVED under the imported rank-15 locator-saturation normal
-  form / AUDIT.
+- **Status:** Mathematical theorem PROVED under the imported rank-15
+  locator-saturation normal form / AUDIT; Lean declaration is an UNPROVED
+  STATEMENT TARGET.
 - **What is being added:** Proves that every deployed `M=218` rank-15
   locator-normal-form survivor has `d>=4828`, eliminating all 36 degree
   layers `4792..4827`.  The proof combines a non-rich-section clique bound,
   a one-deficient rich-line refinement, a square-determinant obstruction, and
-  a residual `K_7` clique-capacity contradiction.
+  a residual `K_7` clique-capacity contradiction.  The Grande Finale package
+  now also exposes the exact deployed hypotheses and conclusion as an
+  explicitly unproved Lean `Prop` statement target.
 - **How it is useful:** Removes the exact first residual branch left by the
   integrated rank-15 normal form and identifies the next literal finite wall
   as the `d=4828` weighted 7-regular clique-cover/pencil system.

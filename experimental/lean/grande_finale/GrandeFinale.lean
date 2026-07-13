@@ -1,4 +1,5 @@
 import Mathlib
+import GrandeFinale.Rank15LocatorDegreeFloor
 
 /-!
 # Self-contained core of "Final Inputs for RS-MCA" (`grande_finale.tex`)
