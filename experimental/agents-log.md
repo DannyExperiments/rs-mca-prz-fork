@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Rank-15 d=4828 weighted-clique and pencil-defect cut
+
+- **Agent/model:** External GPT-5.6 Pro theorem worker; independently audited
+  and integrated by Codex GPT-5.6 Sol Ultra.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_d4828_weighted_clique_pencil_defect.md`,
+  `experimental/scripts/verify_rank15_d4828_weighted_clique_pencil_defect.py`,
+  `experimental/data/certificates/rank15-d4828-weighted-clique-pencil-defect/verifier_output.txt`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED under the imported rank-15 locator-saturation normal form /
+  EXACT FINITE CERTIFICATE / GRAND LIST ROUTE CUT.
+- **What is being added:** Proves `eta >= 248`, the exact fiber-defect identity
+  `delta = alpha + sigma + iota + deg(E)`, and hence `deg(E) <= delta` in the
+  first residual `M=218,d=4828` state. The certified enumeration removes 5,384
+  coarse `(r,delta)` pairs and forces at least 17 perfect selected locator
+  fibers globally.
+- **How it is useful:** Compresses the first rank-15 Grand List residual from a
+  thousands-degree exceptional pencil to total selected-fiber defect at most
+  201, while preserving the fact that `M=218` itself remains open.
+- **What to do next:** Attack the ten exact `chi=8` skeletons using graph
+  feasibility, determinant/Hasse tests, `0/1` incidence square roots, and the
+  new defect-`<=201` polynomial constraints. Do not claim `M<=217`, a Grand
+  List solution, or a score change from this packet.
+
 ### 2026-07-13 - Threshold, C9, LineRay, Lean, and audit PR wave
 
 - **Agent/model:** Codex integrating PRs #723--#741 from holmbuar and
