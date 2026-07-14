@@ -30,6 +30,33 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Weighted cyclic-GRS half-footprint salvage
+
+- **Agent/model:** Codex, auditing and narrowing R16 Role 02 after two hostile
+  reviews.
+- **Files added or changed:** Added
+  `experimental/notes/thresholds/weighted_cyclic_grs_half_footprint_compiler.md`,
+  its dependency-free verifier and frozen output, and the unproved
+  `GrandeFinale/WeightedCyclicGRSHalfFootprint.lean` statement targets; updated
+  the `GrandeFinale.lean` import aggregator.
+- **Status:** PROVED / NARROW SALVAGE / LEAN TARGETS UNPROVED.  Official score
+  remains `0/2`.
+- **What is being added:** The literal arbitrarily weighted cyclic-GRS sextic
+  extension-field layer to arbitrary-linear-`Phi` compiler,
+  including source realization and exact
+  discrepancy/nonvanishing, plus the conditional exact-footprint core-root
+  budget `sum |Z_a(U_A)|<=L-1`.
+- **How it is useful:** It supplies a source-valid `q0=64` outer-quotient
+  algebraic interface and a
+  reusable obstruction on simultaneous universal root batches without
+  promoting locator invariants into the live `r_T/g_inner` residual.
+- **What to do next:** Combine this interface with an exhaustive owner map only
+  after proving a true weighted occupancy cap and paid tail consumer, and
+  prove a genuine compiler to the live invariants before using the consumed
+  `#747` caps in any one-row ledger.  The separate base-field one-row object
+  requires a fresh source attachment; no stable-paper TeX promotion is
+  justified by this packet.
+
 ### 2026-07-13 - Threshold, C9, LineRay, Lean, and audit PR wave
 
 - **Agent/model:** Codex integrating PRs #723--#741 from holmbuar and

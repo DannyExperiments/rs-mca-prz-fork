@@ -5,6 +5,7 @@ import GrandeFinale.DeployedC9OddMonomialFourierBudget
 import GrandeFinale.DirectionDistanceAllPairs
 import GrandeFinale.GeneralRConstantWeilCycleFlatness
 import GrandeFinale.Rank15LocatorDegreeFloor
+import GrandeFinale.WeightedCyclicGRSHalfFootprint
 
 /-!
 # Self-contained core of "Final Inputs for RS-MCA" (`grande_finale.tex`)
