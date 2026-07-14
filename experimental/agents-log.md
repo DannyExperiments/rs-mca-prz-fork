@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Exact Hahn payment at Grand List state u=1,043,460
+
+- **Agent/model:** External ChatGPT Pro theorem worker; independently audited
+  and integrated by `gpt-5.6-sol` Ultra and Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_u1043460_hahn_lp_payment.md`,
+  `experimental/scripts/verify_rank16_u1043460_hahn_lp_payment.rb`,
+  `experimental/data/certificates/rank16-u1043460-hahn-lp-payment/verifier_output.txt`,
+  `experimental/lean/grande_finale/GrandeFinale/Rank16U1043460HahnPaymentTarget.lean`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / EXACT FINITE CERTIFICATE.
+- **What is being added:** A degree-five normalized Hahn/Delsarte certificate
+  bounds the entire selected-support family at the exact state `u=1,043,460`
+  by `41,358,983,685,320,209`, below the one-row target by
+  `233,495,126,810,867,383`, uniformly in affine rank.
+- **How it is useful:** It pays one previously unresolved all-rank Grand List
+  state without line, two-flat, locator, or recurrence inputs and exposes
+  `u=1,043,459` as the next all-rank obstruction after imported higher-state
+  payments.
+- **What to do next:** Attack `u=1,043,459` with fixed-syndrome or stronger
+  semidefinite structure; ordinary distance-distribution LP is handled by the
+  companion all-degree route cut.  Formalize the explicit Hahn certificate in
+  the included statement target before calling the result Lean-certified.
+
 ### 2026-07-13 - Threshold, C9, LineRay, Lean, and audit PR wave
 
 - **Agent/model:** Codex integrating PRs #723--#741 from holmbuar and
