@@ -4,8 +4,10 @@
 
 `RIGOROUS SOURCE-SPECIFIC RELAXATION COUNTERMODEL; NO STATE PAYMENT.`
 
-This packet is pinned to `origin/main` commit
-`9262f63cf093a7510a2df435f220390f59e2bcd5`.  Its verifier independently
+This packet was derived at `origin/main`
+`9262f63cf093a7510a2df435f220390f59e2bcd5` and rebased and replayed at
+`c35a6da31ed0905afcbaaefe4eb0f242572ebb35`.  The consumed source note has
+unchanged blob SHA `90be3164bc9a31d86374d5c0e2d3659968494e47`.  Its verifier independently
 reconstructs the child-state Hahn cap; it does not consume a pending PR or
 alter the base-field/code-field versus `p^6` challenge-denominator ledger.
 
