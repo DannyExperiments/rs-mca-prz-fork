@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Rank-15 M214 active-deletion nonexistence
+
+- **Agent/model:** External GPT-5.6 Pro theorem worker, independently audited
+  and packaged by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_m214_b149_full_active_deletion_nonexistence.md`,
+  `experimental/data/certificates/rank15-m214-b149-active-deletion/`,
+  `experimental/lean/rank15_m214_b149_active_deletion/Rank15M214B149.lean`,
+  and this log.
+- **Status:** PROVED / AUDIT; the Lean declaration is an explicitly unproved
+  statement target.
+- **What is being added:** Proves that in characteristic zero or greater than
+  214 there is no active projective line arrangement with
+  `149 <= b <= d <= 214`, every marked point exactly 15-fold, and every line
+  meeting a marked point. The exact verifier replays 2,411,034,031 relaxed
+  joint states and every algebraic terminal branch.
+- **How it is useful:** Supplies the geometry input that conditionally lowers
+  the unpublished rank-15 two-flat cap from 214 to 213 at shifted row `c=57`;
+  an independent consumer replay has positive slack
+  `1,304,429,054,365,816`.
+- **What to do next:** Publish and audit the source transport and recurrence as
+  separate objects; then attack the next `M=213` and `M=212` geometry walls.
+
 ### 2026-07-14 - L1/L2 threshold PR integration wave
 
 - **Agent/model:** Codex integrating PRs #742--#754 from DannyExperiments,
