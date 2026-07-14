@@ -133,8 +133,10 @@ prefix, this proves full dual feasibility and hence (2).
   exactly in the prefix or uniformly by (5)-(6).
 - Source dependence: this uses only the already-audited support selection and
   pairwise intersection cap at `u=1,043,459`.
-- Source pin: `origin/main` commit
-  `9262f63cf093a7510a2df435f220390f59e2bcd5`; no pending PR is consumed.
+- Source pin: derived at `origin/main`
+  `9262f63cf093a7510a2df435f220390f59e2bcd5`, then rebased and replayed at
+  `c35a6da31ed0905afcbaaefe4eb0f242572ebb35`.  The consumed source note has
+  unchanged blob SHA `90be3164bc9a31d86374d5c0e2d3659968494e47`; no pending PR is consumed.
 - Nonclaim: it does not pay the state, improve the official score, analyze a
   Terwilliger SDP, or exploit the fixed received-word syndrome.
 
