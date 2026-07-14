@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Dyadic complete-fiber slicing route cut
+
+- **Agent/model:** Codex, packaging the independently audited R17B Role 07
+  result.
+- **Files added or changed:**
+  `experimental/notes/l2/dyadic_complete_fiber_slicing_route_cut.md`,
+  `experimental/data/certificates/dyadic-complete-fiber-slicing/`,
+  `experimental/lean/dyadic_complete_fiber_slicing/DyadicCompleteFiberSlicingTarget.lean`,
+  and this log.
+- **Status:** PROVED route cut / EXPERIMENTAL unproved Lean statement target.
+- **What is being added:** A field-uniform complete-fiber intersection theorem
+  for canonical received-word supports, its exact subset/Johnson packing
+  consequences, and the deployed dyadic ledger paying
+  `57121027290597096` list elements while leaving `1792` residual profiles.
+- **How it is useful:** Any Grand List violator must place at least
+  `121502836610263` elements in one fixed residual profile. A uniform cap of
+  `121502836610262` for every such profile would close the deployed row with
+  margin `992`; the official score remains `0/2`.
+- **What to do next:** Prove the fixed-profile cap and replace the Lean
+  target's explicit `sorry` with a Mathlib proof. The Python certificate is
+  only an exact arithmetic replay and must not be cited as proof of the
+  field-theoretic theorem.
+
 ### 2026-07-14 - L1/L2 threshold PR integration wave
 
 - **Agent/model:** Codex integrating PRs #742--#754 from DannyExperiments,
