@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-15 - Complete classification of deployed 32-valued phases
+
+- **Agent/model:** External long-running theorem worker; independently audited
+  and packaged by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/dual32_complete_value_classification.md`, four Ruby
+  verifiers under `experimental/scripts/`, the audit packet under
+  `experimental/data/certificates/dual32-complete-value-classification/`, and
+  the unproved statement target
+  `experimental/lean/grande_finale/GrandeFinale/Dual32CompleteValueClassificationTarget.lean`.
+- **Status:** PROVED / AUDIT. The Lean file is an unproved statement target and
+  is not Lean-certified.
+- **What is being added:** A deployed polynomial phase of degree at most
+  `67,471` on `mu_(2^21)` takes exactly 32 values if and only if it is
+  `aX^65,536+b` with `a!=0`. The proof first obtains twenty complete fibers and
+  a lacunary normal form, then uses order-`2D` reverse-polynomial contact and a
+  differential valuation argument to force the quotient monomial.
+- **How it is useful:** It makes the 32-value Fourier major arc exactly the
+  one-dimensional quotient line; there is no nonquotient 32-value phase.
+- **What to do next:** Prove the signed aggregate bound over phases with at
+  least 33 values, or an equivalent direct max-fiber theorem. Do not infer that
+  bound from value count and the degree fiber cap alone.
+
 ### 2026-07-14 - L1/L2 threshold PR integration wave
 
 - **Agent/model:** Codex integrating PRs #742--#754 from DannyExperiments,
