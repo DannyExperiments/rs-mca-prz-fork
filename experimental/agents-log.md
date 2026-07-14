@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - Rank-15 global-covector weighted excess bound
+
+- **Agent/model:** External ChatGPT Pro theorem worker, three independent
+  hostile audit layers, and Codex director integration.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_global_covector_weighted_excess_bound.md`,
+  `experimental/data/certificates/rank15-global-covector-weighted-excess/`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT / EXACT CERTIFICATE.
+- **What is being added:** Proves the characteristic-safe inequality
+  `E+S <= (3q-B)(q+1)` for a reduced invariant line arrangement with isolated
+  field zeros and nonzero extactic factorization. The source-locked compiler
+  closes the 12,607-state residual cubic cell `(q,B,a)=(24,69,3)` with exact
+  margin `86-75=11` and reduces the five-cell rank-15 boundary from 29,768 to
+  2,043 exact necessary states.
+- **How it is useful:** Removes an entire rank-15 Grand List cell by a general
+  local-to-global projective theorem rather than a census-only exclusion. The
+  certificate contains the frozen proof, exact dependencies, three hostile
+  audits, and a standalone no-import source compiler.
+- **What to do next:** Classify the 919 degree-four near-equality states and
+  attack the separate rank-16 fixed-syndrome wall. Do not infer Grand List
+  closure or an official-score change from this rank-15 payment.
+
 ### 2026-07-14 - L1/L2 threshold PR integration wave
 
 - **Agent/model:** Codex integrating PRs #742--#754 from DannyExperiments,
