@@ -6,6 +6,7 @@ import GrandeFinale.DeployedC9OddMonomialFourierBudget
 import GrandeFinale.DirectionDistanceAllPairs
 import GrandeFinale.ExactWeightAllPairs
 import GrandeFinale.GeneralRConstantWeilCycleFlatness
+import GrandeFinale.PavingBasisAllPairs
 import GrandeFinale.Rank15CommonRootHyperplaneSlicing
 import GrandeFinale.Rank15LocatorDegreeFloor
 import GrandeFinale.Rank15PlateauSuffixUniformizer

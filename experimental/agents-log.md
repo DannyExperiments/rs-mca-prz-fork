@@ -30,6 +30,34 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-14 - All-pair paving-basis multiplicity compiler
+
+- **Agent/model:** Codex, packaging an independently audited R17B Role 09
+  theorem return.
+- **Files added or changed:**
+  `experimental/notes/thresholds/all_pair_paving_basis_multiplicity_compiler.md`,
+  `experimental/scripts/verify_all_pair_paving_basis_compiler.py`,
+  `experimental/data/certificates/all-pair-paving-basis-compiler/`,
+  `experimental/lean/grande_finale/GrandeFinale/PavingBasisAllPairs.lean`,
+  `experimental/lean/grande_finale/GrandeFinale.lean`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED narrow theorem / EXPERIMENTAL finite formula verifier /
+  Lean UNPROVED STATEMENT TARGET. No stable paper or score change.
+- **What is being added:** Proves a selector-free augmented-basis charge for
+  every retained weighted-RS `(slope,witness)` pair, including same-slope
+  multiplicity, with direction-distance and deep-hole refinements. The note
+  corrects the monotonicity ratio to `>1` and explicitly separates this result
+  from the existing selected-slope denominator, affine-core all-pair compiler,
+  and punctured direction-distance compiler.
+- **How it is useful:** Replaces a field-size residual-kernel surrogate on one
+  actual chart by the intrinsic ratio
+  `beta_(kappa+1)(A)/Lambda_(d,t)` without a witness selector. The attached
+  standard-library verifier checks only exact finite formulas and mutation
+  rejection; it is not represented as proof evidence.
+- **What to do next:** Resolve the basis-heavy deep-hole owner dichotomy at
+  `d=R, R-t=1`: either prove the basis ratio is subexponential at the actual
+  profile scale or route the complete pair fibers to a named earlier owner.
+
 ### 2026-07-14 - L1/L2 threshold PR integration wave
 
 - **Agent/model:** Codex integrating PRs #742--#754 from DannyExperiments,
