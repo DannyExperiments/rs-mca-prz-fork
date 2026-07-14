@@ -22,8 +22,11 @@ input, or higher-state frontier compiler is used.
 
 The source reduction is the selected-support argument in
 `experimental/notes/l2/affine_section_one_row_rank_reduction.md`, evaluated at
-the deployed one-row parameters.  This packet is based on `origin/main` commit
-`9262f63cf093a7510a2df435f220390f59e2bcd5`; it does not consume a pending PR.
+the deployed one-row parameters.  This packet was derived at `origin/main`
+`9262f63cf093a7510a2df435f220390f59e2bcd5` and rebased and replayed at
+`c35a6da31ed0905afcbaaefe4eb0f242572ebb35`.  The consumed source note has the
+same blob SHA `90be3164bc9a31d86374d5c0e2d3659968494e47` at both commits, and no
+pending PR is consumed.
 The list and selected supports are over `F_p`; `q=p^6` enters only through the
 downstream challenge denominator defining `T`.  The Johnson calculation itself
 is field-free.
