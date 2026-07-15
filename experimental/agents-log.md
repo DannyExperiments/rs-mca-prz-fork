@@ -30,6 +30,25 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-16 - Rank-15 `M=212` double-count exclusions through `D=65`
+
+- **Agent/model:** External GPT-5.6 Sol Pro Roles 01--03; Codex director and
+  independent replay audit.
+- **Files added or changed:** Extended
+  `experimental/notes/l2/rank15_m212_q14_b42_double_count_exclusions.md` and
+  added the `D=62..65` theorem, Python verifier, independent Ruby audit, frozen
+  outputs, and hostile-audit report to its certificate packet.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** Exact moment and packing censuses plus heavy-line
+  and projective subset-pair inequalities exclude `D=62,63,64,65` in both
+  source-realized aggregate rows.
+- **How it is useful:** Advances the conservative local rank-15 boundary from
+  `62<=D<=146` to `66<=D<=146` and repairs the held stale-digest cell with an
+  independent reconstruction.
+- **What to do next:** Attack `D=66` or prove a uniform mechanism on
+  `66<=D<=146`; separately retain the rank-16 official wall. This result does
+  not remove a recurrence parent or move either official score.
+
 ### 2026-07-15 - L1/BC/L2 threshold and Lean PR wave
 
 - **Agent/model:** Codex integrating non-draft PRs #775, #777, #779--#792,
