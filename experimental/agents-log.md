@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-15 - Exact Profile1792 e15=32 nested-pattern payment
+
+- **Agent/model:** External theorem-worker result, independently reconstructed
+  and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/profile1792_e15_pattern_payment.md`,
+  `experimental/data/certificates/profile1792-e15-pattern-payment/`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED finite source-valid theorem / exact direct-ledger
+  improvement / AUDIT.
+- **What is being added:** For the public dyadic complete-fiber residual
+  ledger, injects each `e_15=32` fixed-profile sublist into its exact nested
+  32-of-64 fiber patterns. This pays 110 profiles with aggregate
+  `904093061906432`, saves `12461218965222388`, and relaxes the sufficient
+  uniform cap on the remaining 1,682 profiles from `121502836610262` to
+  `128911409122285` with exact add-back margin 694.
+- **How it is useful:** It strictly narrows the direct deployed Grand List
+  base-row obligation using actual canonical agreement supports and the
+  already integrated 1,792-profile compiler.
+- **What to do next:** Prove the relaxed cap for all remaining 1,682 profiles,
+  or add further exact profile-specific payments. Do not infer a recurrence,
+  rank-cell closure, Grand List theorem, or official score movement from this
+  packet.
+
 ### 2026-07-15 - L1/L2, LineRay, circle, and charge-obstruction PR wave
 
 - **Agent/model:** Codex integrating non-draft PRs #755--#774 and #776 from
