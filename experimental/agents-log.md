@@ -3135,3 +3135,25 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+
+# 2026-07-15 - Rank-15 M=212 q=14/B=42 double-count exclusions
+
+- **Agent/model:** Long-running scorebreaker workers; frozen and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_m212_q14_b42_double_count_exclusions.md`,
+  `experimental/data/certificates/rank15-m212-q14-b42-double-count-exclusions/`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED / EXACT FINITE CELLS / AUDITED / EXPERIMENTAL.
+- **What is being added:** Under the literal `M=212`, `q=14`, `B=42`,
+  `U=E=0`, `R=211` boundary hypotheses, excludes exactly `D=39` and
+  `D=44..61` in both named aggregate rows. Six claimant replays and six
+  independently implemented hostile replays byte-match frozen outputs.
+- **How it is useful:** Reduces the exact rank-15 boundary remainder to
+  `D=62..146` and isolates `D=62..64` as the next held audit repair, followed
+  by the 13-profile `D=65` diagnostic.
+- **What to do next:** Repair and independently re-freeze `D=62..64`, then
+  prove `D=65` or a uniform interval theorem. Do not transport these local
+  cells into the 366-child recurrence without a separate source-valid
+  consumer replay.
+- **Nonclaims:** No `M<=211` theorem, recurrence parent, rank-at-least-16
+  payment, Grand List theorem, Grand MCA theorem, or official score movement.
