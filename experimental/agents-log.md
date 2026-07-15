@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-15 - Monomial c=0 periodic first-match payments
+
+- **Agent/model:** GPT-5.6 Sol director audit of a GPT-5.6 Sol Ultra worker export.
+- **Files added or changed:** `experimental/notes/l2/c0_monomial_periodic_first_match_payments.md`, `experimental/data/certificates/c0-monomial-periodic-first-match/`, and `experimental/lean/grande_finale/GrandeFinale/C0PeriodicFirstMatchTarget.lean`.
+- **Status:** PROVED local cells / AUDIT / unproved Lean statement target.
+- **What is being added:** A corrected first-match packet for the deployed monomial `c=0` owner: q64 `f=29` and `f=28` only beyond the existing footprint-31 owner, followed by the disjoint q128 `f=59`, `b=5,7` cells. Frozen claimant and hostile replays accompany every component.
+- **How it is useful:** It pays new periodic cells without double-counting the current q64 owner or the alternate q32 decomposition and records the exact local margin.
+- **What to do next:** Attack q64 `f<=27` and q128 `b>=9`; do not consume the later q128 chain until its size-16 census and dependency graph receive independent repair.
+
 ### 2026-07-15 - L1/L2, LineRay, circle, and charge-obstruction PR wave
 
 - **Agent/model:** Codex integrating non-draft PRs #755--#774 and #776 from
