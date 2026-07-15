@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-16 - Correct twisted-cylinder cube-flatness claim
+
+- **Agent/model:** GPT-5.6 Pro Role 09, independently reproduced and integrated
+  by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/cylinder_renormalization.md`,
+  `experimental/scripts/verify_cylinder_renormalization.py`,
+  `experimental/data/certificates/cylinder-renormalization/cylinder_renormalization.json`,
+  `experimental/lean/cylinder_renormalization/CylinderRenormalization.lean`,
+  `experimental/agents-log.md`.
+- **Status:** COUNTEREXAMPLE / FIXED / AUDIT.
+- **What is being added:** Corrects the integrated twisted-cylinder
+  cube-flatness assertion.  The former verifier used only the cosine projection
+  of a generally complex coefficient; the literal `B=6,k=1,r=1` coefficient
+  has magnitude `sqrt(3)`, and a symmetric depth-two union has real coefficient
+  `-1.336932620625273...`.
+- **How it is useful:** Preserves subgroup-cylinder renormalization and
+  subgroup cube-flatness while preventing their unsupported promotion to
+  twisted cosets or arbitrary hierarchy-measurable unions.
+- **What to do next:** Use the exact cube-spectrum criterion from the
+  band-uniform packet to classify, compress, or pay twisted and general
+  non-subgroup failing bands case by case.
+
 ### 2026-07-15 - L1/BC/L2 threshold and Lean PR wave
 
 - **Agent/model:** Codex integrating non-draft PRs #775, #777, #779--#792,
