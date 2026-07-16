@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Rank-15 `D=73` anchor-trace exclusion
+
+- **Agent/model:** External ChatGPT Pro Role 03, integrated and independently
+  audited by Codex `gpt-5.6-sol`.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_m212_q14_b42_d73_anchor_trace_exclusion.md`,
+  `experimental/scripts/verify_rank15_m212_q14_b42_d73_anchor_trace_exclusion.py`,
+  and the matching frozen transcript under `experimental/data/certificates/`.
+- **Status:** PROVED / CONDITIONAL ARRANGEMENT INTERFACE / FIELD-INDEPENDENT
+  LEMMA / FIELD-SPECIFIC CONSUMER / AUDIT.
+- **What is being added:** A field-independent anchor-trace packing theorem
+  gives the exact `29>28` contradiction for the 27-point affine `D=73`
+  object left open by the integrated `D=69..72` arrangement packet.
+- **How it is useful:** It extends the conditional rank-15 arrangement
+  exclusion through `D=73` while keeping source transport and finite-ledger
+  claims explicitly separate.
+- **What to do next:** Attack the immediate conditional geometry wall `D=74`
+  and independently prove the literal source compiler/first-match consumer;
+  do not charge a child or recurrence parent from this packet alone.
+
 ### 2026-07-16 - KoalaBear branch-3 low-excess carrier cut
 
 - **Agent/model:** Codex integrating Scott Hughes PR #849.
