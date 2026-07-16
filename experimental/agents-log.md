@@ -30,6 +30,32 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Rank-16 fixed-26 divided-difference source compiler
+
+- **Agent/model:** Codex, packaging an external ChatGPT Pro Role 03 return
+  after native hostile audit.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed26_divided_difference_source_compiler.md`,
+  `experimental/scripts/verify_rank16_fixed26_divided_difference_source_compiler.py`,
+  `experimental/data/certificates/rank16-fixed26-divided-difference-source-compiler/manifest.json`,
+  `experimental/data/certificates/rank16-fixed26-divided-difference-source-compiler/verify_fixed26_compiler.expected.txt`,
+  `experimental/data/certificates/rank16-fixed26-divided-difference-source-compiler/SHA256SUMS.txt`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** A fixed-26 source theorem compiling all 703 pair
+  positions from 38 one-label Pade interpolants, together with the special
+  monomial-generator bound `|E|<=37` for `g=X^67472`. Splitting,
+  squarefreeness, footprint, q32-pairing, prior-owner, and canonical
+  first-match predicates remain filters.
+- **How it is useful:** Replaces the stale Role 03 cap-116 presentation with a
+  fail-closed, replayable theorem packet. It makes zero finite payment,
+  preserves the ownership of open PRs #826/#838/#843/#844, and isolates the
+  arbitrary-generator size-nine or dense size-eight collision-class wall.
+- **What to do next:** Independently review the source hypotheses and
+  monomial inverse formula, then attack the arbitrary-`g` wall without
+  composing a local pair cap into #838's global ledger unless uniformity and
+  disjoint first-match ownership are proved.
+
 ### 2026-07-16 - RS-MCA paving ePrint submission package
 
 - **Agent/model:** Codex logging a human-added ePrint submission candidate by
