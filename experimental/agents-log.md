@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-16 - Rank-15 conditional arrangement exclusions at four D-values
+
+- **Agent/model:** External GPT-5.6 Sol Pro Role 02; Codex director with three
+  independent hostile audits.
+- **Files added or changed:** Added
+  `experimental/notes/l2/rank15_m212_q14_b42_uniform_geometric_transport.md`
+  and the exact certificate, verifier, frozen output, README, and hostile audit
+  under `experimental/data/certificates/rank15-m212-q14-b42-uniform-geometric-transport/`.
+- **Status:** PROVED / EXACT CERTIFICATE / AUDIT.
+- **What is being added:** Under the conditional rank-15 `M=212`, `q=14`,
+  `B=42`, `R=211` arrangement interface, exact certificate and geometric
+  arguments exclude `D=66,67,68,146`. The director audit repaired an omitted
+  no-heavy-pair concurrency lemma in the initial `D=68` proof.
+- **How it is useful:** Together with pending #804, it reduces the conditional
+  arrangement wall to `69<=D<=145`.
+- **What to do next:** Attack `D=69..145` with a new geometric invariant. This
+  result proves no source-to-arrangement or child-state transport, removes zero
+  recurrence parents, leaves the rank-16 wall open, and does not move the
+  official `0/2` score.
+
 ### 2026-07-15 - L1/BC/L2 threshold and Lean PR wave
 
 - **Agent/model:** Codex integrating non-draft PRs #775, #777, #779--#792,
