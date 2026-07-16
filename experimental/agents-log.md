@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-16 - Rank-16 fixed-27-core block-wedge stratification
+
+- **Agent/model:** External ChatGPT Pro R26 Roles 01--02, consolidated and
+  repaired by Codex with two independent `gpt-5.6-sol` ultra hostile audits.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed27_block_wedge_stratification.md`,
+  `experimental/scripts/verify_rank16_fixed27_block_wedge_stratification.py`,
+  `experimental/scripts/verify_rank16_fixed27_block_wedge_stratification.expected.txt`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED local theorem / STRUCTURAL REDUCTION / AUDIT.  No finite
+  ledger payment and official score `0/2`.
+- **What is being added:** A source-uniform block-wedge dichotomy for seven
+  labels in one fixed-27-core cell.  In affine quotient rank two the generator
+  divides a cubic or quartic polynomial in `X^32768`, and all residual locators
+  lie in a fixed two-block space of dimension at most six or four.
+- **How it is useful:** Strictly extends the affine-line obstruction of pending
+  #826 for arbitrary root-free generators and reduces rank two to explicit
+  cubic/quartic split-block families.  It does not convert one local cell into
+  the global 1,682-profile payment of pending #838.
+- **What to do next:** Exclude or construct the cubic/quartic split residual
+  families with every source restriction, then address the surviving rank
+  three through six branches and a uniform all-core owner.
+
 ### 2026-07-16 - RS-MCA paving ePrint submission package
 
 - **Agent/model:** Codex logging a human-added ePrint submission candidate by
