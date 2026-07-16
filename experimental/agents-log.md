@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Rank-16 global c=0 residual payment
+
+- **Agent/model:** External ChatGPT Pro Role 08 theorem, independently reconstructed and hostile-audited by Codex gpt-5.6-sol.
+- **Files added or changed:** `experimental/notes/l2/rank16_global_c0_residual_payment.md`, `experimental/scripts/verify_rank16_global_c0_residual_payment.py`, and `experimental/data/certificates/rank16-global-c0-residual-payment/`.
+- **Status:** PROVED finite source-valid first-match ledger theorem and exact certificate.
+- **What is being added:** After integrated owners `D`, `Q110`, and `M`, deterministic first-match owners `Q41`, `X175`, and `J48` add cap `178244340267914072`, leaving residual allowance `6363455582520` across 1,641 truncated rank-16 `c=0` profiles.
+- **How it is useful:** It sharply reduces the deployed rank-16 degree-saturated residual while preserving one arbitrary received-word scope and exact owner disjointness.
+- **What to do next:** Prove a simultaneous source constraint across the remaining error-label sets; do not claim a parent closure, generator/ray multiplication, Grand List, Grand MCA, or score movement.
+
 ### 2026-07-16 - KoalaBear branch-3 low-excess carrier cut
 
 - **Agent/model:** Codex integrating Scott Hughes PR #849.
