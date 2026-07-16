@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Fixed-27 residual specialization curve
+
+- **Agent/model:** External ChatGPT Pro theorem worker, independently audited
+  and packaged by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed27_residual_specialization_curve.md`,
+  `experimental/data/certificates/rank16-fixed27-residual-specialization-curve/`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / AUDIT. The theorem is conditional only on
+  the integrated rank-two syzygetic source hypotheses; it makes zero ledger or
+  score payment.
+- **What is being added:** Proves that the cubic/quartic fixed-27 residuals are
+  nonzero scalar normalizations of one label-degree-two/three specialization
+  curve, with the exact dependence, base, occupancy, gcd, and union package.
+  Independently, a quadratic whole-`B`-block factor in the generator permits at
+  most two labels.
+- **How it is useful:** Replaces the surviving rank-two split-block wall by the
+  sharper local object `e in {3,4}`, `kappa_B(g)<=1`, while preserving every
+  literal source and residual restriction.
+- **What to do next:** Exclude or construct that local specialization-curve
+  object, then prove a source-cell-disjoint global aggregation. Do not charge a
+  fixed-core, recurrence, Grand List, Grand MCA, or official-score payment from
+  this packet.
+
 ### 2026-07-16 - KoalaBear branch-3 low-excess carrier cut
 
 - **Agent/model:** Codex integrating Scott Hughes PR #849.
