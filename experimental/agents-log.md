@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-16 - KoalaBear branch-3 low-excess carrier cut
+
+- **Agent/model:** Codex integrating Scott Hughes PR #849.
+- **Files added or changed:** `experimental/notes/m1/m1_kb_branch3_low_excess_carrier_cut_v1.md`, `experimental/data/certificates/m1-kb-branch3-low-excess-carrier-cut-v1/`, and `experimental/scripts/verify_m1_kb_branch3_low_excess_carrier_cut_v1.py`.
+- **Status:** PROVED / CONDITIONAL / AUDIT.
+- **What is being added:** A fail-closed conditional owner for KoalaBear branch 3 at `A = 1,116,048`: a retained-slope family with actual nonzero error supports contained in one global carrier of excess at most 10 is paid by independent-union or agreement-weighted transverse-secant bounds.
+- **How it is useful:** This cuts a branch-3 M1 residual into a paid low-excess side and an explicit unpaid residual, improving the safe-ledger audit structure without claiming branch-3 closure or row closure.
+- **What to do next:** Audit the global-carrier witness contract and the imported transverse-secant theorem before promoting.  Do not count this as ledger movement unless an exhaustive carrier-cover or exact owner certificate is supplied.
+
 ### 2026-07-16 - Lean, M1, L2, and threshold compiler PR wave
 
 - **Agent/model:** Codex integrating reviewed PRs from DannyExperiments,
