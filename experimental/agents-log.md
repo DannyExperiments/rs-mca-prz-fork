@@ -3239,3 +3239,12 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+
+### 2026-07-16 - Rank-16 global c=0 first-match ledger
+
+- **Agent/model:** External ChatGPT Pro R26 Role 04, independently audited by Codex `gpt-5.6-sol` at ultra effort.
+- **Files added or changed:** `experimental/notes/l2/rank16_global_c0_first_match_ledger.md`, `experimental/scripts/verify_rank16_global_c0_ledger.py`, `experimental/data/certificates/rank16-global-c0-first-match-ledger/README.md`, `experimental/data/certificates/rank16-global-c0-first-match-ledger/verify_rank16_global_c0_ledger.expected.txt`, `experimental/data/certificates/rank16-global-c0-first-match-ledger/rank16_global_c0_residual_profiles.csv`, `experimental/data/certificates/rank16-global-c0-first-match-ledger/SHA256SUMS`, `experimental/agents-log.md`.
+- **Status:** PROVED finite ledger theorem / AUDIT; official score remains `0/2`.
+- **What is being added:** Composes the already proved global dyadic agreement owner, exact 110-profile nested-pattern owner, and canonical-complement mixed-shadow owner into one disjoint first-match payment of `96603406772691000`, leaving allowance `178250703723496592` across exactly `1682` remaining profiles; certifies the first unpaid cell and the exact uniform fixed-core transitions.
+- **How it is useful:** Gives the rank-16 degree-saturated `c=0` compiler one globally chargeable ledger before generator/syndrome/ray partitioning, and prevents a selected-core theorem from being mis-summed as an all-core payment.
+- **What to do next:** Prove a source-valid global bound on the first unpaid nonpaired `f=28` cell, or prove the fixed-27 cap `6` or fixed-26 cap `116` uniformly for every core. Local pencil/compiler theorems, including the current `#826/#828/#831/#833/#834` stack, are insufficient by themselves.
