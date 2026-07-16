@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Rank-15 two-flat four-cut extension through u=1,043,902
+
+- **Agent/model:** ChatGPT Pro R27 Role 01, independently audited and packaged by Codex gpt-5.6-sol.
+- **Files added or changed:** `experimental/notes/l2/rank15_two_flat_u1043902_four_cut_extension.md`, `experimental/scripts/verify_rank15_two_flat_u1043902_four_cut_extension.py`, and `experimental/data/certificates/rank15-two-flat-u1043902-four-cut-extension/`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** Four exact point-capacity cuts prove `D_2(u)<=211` for `u=1,043,902..1,043,916`; with integrated #847 the field-uniform theorem holds through `u=1,043,957`.  The exact next relaxed wall is `u=1,043,901` at `+1,707`, where a source counterexample must have `d=4,674`, `deg G=0`, and `r=0`.
+- **How it is useful:** Adds 15 literal rank-15 source children and isolates a full-degree gcd-free realizability wall.  The recurrence replay shows zero higher-rank parent payment and leaves the official score at `0/2`.
+- **What to do next:** Classify or exclude the full-degree rational-fiber profiles at `u=1,043,901`; do not spend the 15 child entries as a rank-15 parent saving.
+
 ### 2026-07-16 - KoalaBear branch-3 low-excess carrier cut
 
 - **Agent/model:** Codex integrating Scott Hughes PR #849.
