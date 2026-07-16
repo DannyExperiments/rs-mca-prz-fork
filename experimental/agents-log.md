@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Rank-15 exact two-flat final-41 source cap
+
+- **Agent/model:** External ChatGPT Pro R26 Role 05, independently audited by
+  `gpt-5.6-sol` xhigh and repaired/packaged by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_two_flat_final41_source_cap.md`,
+  `experimental/data/certificates/rank15-two-flat-final41-source-cap/`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** A self-contained source theorem proving
+  `D_2(u) <= 211` only for the 41 exact affine two-flat children
+  `u=1,043,917..1,043,957`, together with the rank-one derivation of the proper
+  section cap 15, exact incidence budgets, a formal discrete-convex exchange
+  lemma, and a strict stdlib verifier with frozen outputs and tamper controls.
+- **How it is useful:** These 41 child entries, and only these entries, may be
+  replaced by 211 in a later independently replayed recurrence.  The theorem
+  is source-side and does not consume conditional arrangement transport.
+- **What to do next:** The immediate wall is `u=1,043,916`, where this exact
+  relaxation has margin `+878`.  Find another universally valid incidence cut
+  or a stronger exact optimizer before making any claim about the remaining
+  325 children, the parent recurrence, or the 261-parent target.
+
 ### 2026-07-16 - RS-MCA paving ePrint submission package
 
 - **Agent/model:** Codex logging a human-added ePrint submission candidate by
