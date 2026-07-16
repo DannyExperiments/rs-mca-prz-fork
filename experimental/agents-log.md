@@ -30,6 +30,33 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Rank-15 conditional D=69..72 arrangement exclusion
+
+- **Agent/model:** External ChatGPT Pro R26 Role 06, repaired and packaged by
+  Codex after an independent `gpt-5.6-sol` ultra hostile audit.
+- **Files added or changed:**
+  `experimental/notes/l2/rank15_m212_q14_b42_d69_d72_arrangement_exclusion.md`,
+  `experimental/scripts/verify_rank15_m212_q14_b42_d69_d73_arrangement_profiles.py`,
+  `experimental/data/certificates/rank15-m212-q14-b42-d69-d72-arrangement-exclusion/`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL ARRANGEMENT INTERFACE / EXACT ARITHMETIC
+  CERTIFICATE / AUDIT.
+- **What is being added:** Proves over `F_p`, `p=2,130,706,433`, that the
+  exact 42-line, 211-point, 15-intersections-per-line arrangement interface
+  has no profile with `n_2=69..72`, and reduces `n_2=73` to one necessary
+  multiplicity profile.  The repair changes the product-coset step from
+  "exactly fourteen" to "at most fourteen" target values and writes the
+  coordinate, matching, Kneser, extra-line, and PBD arguments explicitly.
+- **How it is useful:** Extends the integrated conditional rank-15 arrangement
+  exclusions from `D<=68` to `D<=72` and isolates the exact `D=73` affine
+  direction-set wall.  The stdlib verifier freezes the arithmetic/profile
+  layer and states explicitly that it does not machine-prove the geometric
+  lemmas.
+- **What to do next:** Exclude or construct the remaining 27-point `D=73`
+  affine direction profile, propagate the new high-point/PBD invariants through
+  `D=74..145`, and separately prove literal first-match source transport for
+  all 366 children before claiming any child, parent, or score payment.
+
 ### 2026-07-16 - RS-MCA paving ePrint submission package
 
 - **Agent/model:** Codex logging a human-added ePrint submission candidate by
