@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Fixed-26 spectral resolvent and split-star constraints
+
+- **Agent/model:** External ChatGPT Pro R27 Role 06, hostile-audited and
+  packaged by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed26_spectral_resolvent.md`,
+  `experimental/scripts/verify_rank16_fixed26_spectral_resolvent.py`,
+  `experimental/data/certificates/rank16-fixed26-spectral-resolvent/`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT / CONDITIONAL.
+- **What is being added:** A local theorem for one literal fixed-26 source
+  cell: the minimal polynomial of `X^B` gives an exact resolvent and Krylov
+  collapse, while actual split edges obey a shared-anchor gcd cap, split
+  S-unit triangle floor, resultant cycle invariant, and constant-term
+  subgroup constraint.
+- **How it is useful:** It reduces the non-global seven-star branch, after
+  the separately owned rank-two classification, to spectral ranks at least
+  three and isolates `G64-CAP` as the exact global local-cell wall. It makes
+  no cap-116, all-core, ledger, parent, or score claim.
+- **What to do next:** Prove `G64-CAP` or exclude the rank-at-least-3 split
+  star with every source filter retained, then separately prove a global
+  aggregation across generators, rays, cores, and first-match source cells.
+
 ### 2026-07-16 - KoalaBear branch-3 low-excess carrier cut
 
 - **Agent/model:** Codex integrating Scott Hughes PR #849.
