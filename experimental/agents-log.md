@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-16 - Rank-16 fixed-core quotient-line obstruction
+
+- **Agent/model:** GPT-5.6 Pro theorem return, repaired and independently
+  audited by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed_core_quotient_line_obstruction.md`,
+  `experimental/scripts/verify_rank16_fixed_core_quotient_line_obstruction.py`,
+  its expected transcript, the matching Grande Finale Lean statement target,
+  and the Grande Finale import surface.
+- **Status:** PROVED local theorem / ROUTE_CUT; Lean target UNPROVED.
+- **What is being added:** In one literal root-free fixed-syndrome cell with a
+  fixed 27-label q64 core, six distinct extra full-fiber labels cannot have
+  normalized Pade quotients on one affine line.
+- **How it is useful:** Every unresolved six-candidate family, and therefore
+  every nine-label counterexample to the pending cap eight, must have quotient
+  affine dimension at least two. This names the higher-dimensional obstruction
+  without charging an unproved owner or ledger payment.
+- **What to do next:** Attack the exact simultaneous-Pade object of affine
+  dimension 2 through 8, or construct a source-realized nine-label witness;
+  do not charge the conditional cap-eight margin until that wall is paid.
+  The independent hostile audit and exact use rule are recorded in
+  `experimental/notes/audits/rank16_fixed_core_quotient_line_obstruction_audit.md`.
+
 ### 2026-07-16 - L1, M1, rank-cell, and public-board PR wave
 
 - **Agent/model:** Codex integrating ready PRs #803--#809, #811, #813, and
