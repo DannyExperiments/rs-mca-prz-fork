@@ -30,6 +30,32 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Fixed-27 cubic reducibility and conductor budget
+
+- **Agent/model:** External ChatGPT Pro R28 Role 03, theorem prose
+  hostile-audited and missing replay attachments reconstructed by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed27_cubic_divisor_conductor.md`,
+  `experimental/data/certificates/rank16-fixed27-cubic-divisor-conductor/source_manifest.json`,
+  `experimental/scripts/verify_rank16_fixed27_cubic_divisor_conductor.py`,
+  `experimental/scripts/verify_rank16_fixed27_cubic_divisor_conductor.expected.txt`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED LOCAL THEOREM / CONDITIONAL ON PR #863 / ZERO PAYMENT.
+- **What is being added:** In one literal fixed-27 cubic rank-two source cell,
+  the accepted theorem excludes irreducible primitive cubics, derives the
+  exact divided-difference remainder and nested `30,832` deficit budget,
+  forces a conductor-at-most-16 block with the quadratic at-most-8
+  alternative, and factors the squarefree resultant as `g^2 M` with
+  `deg M<=55,859`.
+- **How it is useful:** This is a narrow structural reduction inside the
+  surviving `e=3, kappa_B(g)<=1` wall. It proves no seven-label closure and
+  makes zero finite, asymptotic, parent, Grand List, Grand MCA, or score
+  payment; the official score remains `0/2`.
+- **What to do next:** Review against exact PR #863 head
+  `55fa998275db505214347db296bdd8e38a3896e6`, replay the reconstructed
+  verifier in normal and optimized modes, and attack the surviving reducible
+  cubic terminals without aggregating across source cells.
+
 ### 2026-07-16 - KoalaBear branch-3 low-excess carrier cut
 
 - **Agent/model:** Codex integrating Scott Hughes PR #849.
