@@ -3283,3 +3283,12 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+### 2026-07-17 - Rank-16 integer-subcore residual owner
+
+- **Agent/model:** ChatGPT 5.6 Pro theorem worker, independently audited and packaged by Codex.
+- **Files added or changed:** `experimental/notes/l2/rank16_integer_subcore_owner.md`, `experimental/scripts/verify_rank16_integer_subcore_owner.py`, and `experimental/data/certificates/rank16-integer-subcore-owner/`.
+- **Status:** PROVED / CONDITIONAL / AUDIT.
+- **What is being added:** Conditional on pending PR #861, exact integer second moments and coupled lower-core deficit duals add a canonical first-match owner with cap `6,363,455,582,517`, raising the deployed rank-16 `c=0` paid subtotal to `T-3`.
+- **How it is useful:** It replaces nearly the entire #861 residual allowance by a source-valid append-only owner and prints the first unpaid exact `(A,F)` bucket.
+- **What to do next:** Prove that at most three candidates remain outside the expanded owner, or directly exclude the printed first unpaid bucket. Do not claim rank-16 parent closure, Grand List, Grand MCA, or score movement from this packet.
+
