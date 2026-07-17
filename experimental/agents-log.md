@@ -1,5 +1,6 @@
 # Agents Log
 
+
 This file is the working ledger for agent-created material in `experimental/`.
 Use it to record every new note, script, scan, formalization stub, or audit before
 the material is promoted into `tex/` or `scripts/`.
@@ -30,6 +31,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+
+### 2026-07-18 - Affine-prefix line fibre bifurcation
+
+- **Agent/model:** ChatGPT Pro theorem worker, independently hostile-audited by
+  a separate ChatGPT Pro conversation, packaged by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/affine_prefix_line_fibre_bifurcation.md`,
+  `experimental/scripts/verify_affine_prefix_line_fibre_bifurcation.py`,
+  `experimental/data/certificates/affine-prefix-line-fibre-bifurcation/verify_affine_prefix_line_fibre_bifurcation.expected.txt`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / COUNTEREXAMPLE / AUDIT / EXPERIMENTAL.
+- **What is being added:** An exact affine-prefix Reed--Solomon line compiler,
+  its second-projection multiplicities, and a same-row construction in which
+  the identical complete support fibre has one direct slope or many pole
+  slopes.
+- **How it is useful:** It makes the source-incidence/second-projection barrier
+  explicit and blocks automatic promotion of support emissions or
+  representation moments into actual slope payments.
+- **What to do next:** Prove an image-scale source-incidence theorem uniformly
+  for actual primitive semantic first-match cells, then add those budgets over
+  a complete atlas. Do not count this as Grand MCA hard input 2 or a deployed
+  payment.
 ### 2026-07-17 - RS-MCA Paving v9.2 ePrint submission package
 
 - **Agent/model:** Codex logging a human-submitted ePrint package by Przemek Chojecki.
