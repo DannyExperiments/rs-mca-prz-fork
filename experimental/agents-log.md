@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Fixed-26 global spectral-rank gap
+
+- **Agent/model:** External ChatGPT Pro R28 Role 05, hostile-audited and
+  packaged by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed26_global_spectral_rank_gap.md`,
+  `experimental/scripts/verify_rank16_fixed26_global_spectral_rank_gap.py`,
+  `experimental/scripts/verify_rank16_fixed26_global_spectral_rank_gap.expected.txt`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL ON PR #862 / ZERO FINITE PAYMENT.
+- **What is being added:** In one fixed-26 source cell under the imported
+  global 64-step collapse, a primary-layer argument valid for nonsquarefree
+  generators proves `a >= 3871 nu`, excluding all spectral ranks `18..64`.
+  The same note derives the exact split-complement identity
+  `q_yz W L_yz = 1 + g A_yz` and its degree/resultant consequences.
+- **How it is useful:** It narrows the global fixed-cell `G64-CAP` wall to
+  ranks `3..17` and `>=65`. It makes no finite, parent, Grand List, Grand MCA,
+  aggregation, seven-star, or score claim; PRs #872 and #873 remain explicit
+  nonclaims, and the official score remains `0/2`.
+- **What to do next:** Review and land only on exact PR #862 head
+  `d2b11f1914dea4cb4a7670736cf00d1422c878de`, replay normal/`-O` and semantic
+  tamper checks, then attack the two surviving spectral branches without
+  aggregating across generators, rays, cores, or first-match source cells.
+
 ### 2026-07-17 - Fixed-26 spectral resolvent and split-star constraints
 
 - **Agent/model:** External ChatGPT Pro R27 Role 06, hostile-audited and
