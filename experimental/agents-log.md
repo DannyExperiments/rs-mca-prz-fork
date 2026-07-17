@@ -3283,3 +3283,12 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+### 2026-07-17 - Rank-16 fixed-core global-owner counterexample
+
+- **Agent/model:** ChatGPT 5.6 Pro theorem worker, independently audited and packaged by Codex.
+- **Files added or changed:** `experimental/notes/l2/rank16_fixed_core_global_owner_counterexample.md`, `experimental/scripts/verify_rank16_fixed_core_global_owner_counterexample.py`, and `experimental/data/certificates/rank16-fixed-core-global-owner-counterexample/`.
+- **Status:** COUNTEREXAMPLE / ROUTE CUT / AUDIT.
+- **What is being added:** One literal received word simultaneously realizes an unpaid `f64=0` candidate and an unpaid valid nonpaired `f64=28` candidate. The lower candidate has no fixed-26/fixed-27 core, while the top candidate occupies exactly 28 or 378 core-indexed local cells for the same generator and residue ray.
+- **How it is useful:** It blocks a total fixed-core owner and multiplicity-one top-layer aggregation without challenging the local algebraic theorems.
+- **What to do next:** Split off the lower-`f64` lane and prove a marked-incidence or occupied-source-key cap for the top lane. Do not count this packet as a finite payment or official-score movement.
+
