@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Fixed-26 weighted-primary rank extension
+
+- **Agent/model:** External ChatGPT Pro Role 04, independent external-Pro
+  hostile audit, and Codex director integration.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed26_weighted_primary_rank_extension.md`,
+  `experimental/scripts/verify_rank16_fixed26_weighted_primary_rank_extension.py`,
+  `experimental/data/certificates/rank16-fixed26-weighted-primary-rank-extension/verify_rank16_fixed26_weighted_primary_rank_extension.expected.txt`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED conditional local theorem; ledger delta zero.
+- **What is being added:** Under the inherited 64-step collapse and existence
+  of one actual valid fixed-26 edge, the weighted-primary inequality excludes
+  spectral ranks 65 and 66, extends the local wall to `18..66`, and gives the
+  per-fibre residual cap `28,897`.
+- **How it is useful:** It advances the fixed-26 spectral route while keeping
+  the valid-edge, source-cell, and first-match hypotheses explicit.
+- **Nonclaims:** No valid-edge existence, edge count, owner aggregation,
+  rank-16 parent payment, recurrence, Grand theorem, or score change.
+- **What to do next:** Handle ranks `3..17` and `>=67`, then supply a
+  source-valid aggregation and owner/add-back argument.
+
 ### 2026-07-17 - RS-MCA Paving v9.2 ePrint submission package
 
 - **Agent/model:** Codex logging a human-submitted ePrint package by Przemek Chojecki.
