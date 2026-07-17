@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Direct Sidon signed-root and diagonal-pair emissions
+
+- **Agent/model:** ChatGPT 5.6 Pro theorem worker, independently audited and
+  reconstructed by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/direct_sidon_pair_emission.md`,
+  `experimental/scripts/verify_direct_sidon_pair_emission.py`,
+  `experimental/data/certificates/direct-sidon-pair-emission/`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT / EXPERIMENTAL.
+- **What is being added:** A narrow source theorem giving an
+  all-characteristic canonical signed-root emission and, under injective
+  doubling, an odd-characteristic ternary diagonal-pair emission. The packet
+  also records the exact half-density cutoff gain
+  `0.156870036510644` nats = `0.226315623737977` bits.
+- **How it is useful:** It adds an aggregate support-capacity alternative to
+  the direct-Sidon lane while preserving pending PR #872's exact finite
+  `T-3` ledger and charging no finite owner.
+- **What to do next:** Prove the appropriate weighted occupied-emission
+  estimate using actual shared-prefix locator equations. Keep the ternary WOE
+  odd-characteristic and the signed-root all-characteristic analogue
+  separate; do not claim hard-input-2 closure, parent movement, Grand MCA,
+  Grand List, or official-score movement.
+
 ### 2026-07-16 - KoalaBear branch-3 low-excess carrier cut
 
 - **Agent/model:** Codex integrating Scott Hughes PR #849.
