@@ -3319,3 +3319,25 @@ Keep entries concise and link to the relevant files.
 - **What to do next:** Run verifiers and audits on the integrated material,
   review mathematical notes before promotion, and close the original PRs as
   manually integrated once the integration commit is pushed.
+### 2026-07-18 - Rank-16 expanded-owner cap-three counterexample
+
+- **Agent/model:** External ChatGPT Pro Roles 01/03, two independent external
+  Pro hostile audits, and Codex director integration.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_expanded_owner_cap3_counterexample.md`,
+  `experimental/scripts/verify_rank16_expanded_owner_cap3_counterexample.py`,
+  `experimental/data/certificates/rank16-expanded-owner-cap3-counterexample/verify_rank16_expanded_owner_cap3_counterexample.expected.txt`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED finite source-valid route cut; ledger delta zero.
+- **What is being added:** One deployed base-field word with 15 distinct
+  degree-`<K` polynomials, each having exactly `m` agreements, zero dyadic
+  agreement profile, `f64=0`, and membership outside every stage of the
+  integrated expanded owner for every canonical total order.
+- **How it is useful:** Refutes the proposed universal claim that the
+  complement of the unchanged `T-3` owner has size at most three. It prevents
+  a false rank-16 parent closure and isolates the need for a different global
+  payment or replacement owner covering zero-profile scalar sunflowers.
+- **Nonclaims:** No list larger than `T`, no owner-cap refutation, no parent or
+  all-rank closure, no Grand theorem, and no official score change.
+- **What to do next:** Build a marked-incidence or occupied-source-key owner
+  that covers this family without double spending the integrated stack.
