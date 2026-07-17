@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Rank-15 two-flat cross-class extension through u=1,043,899
+
+- **Agent/model:** ChatGPT Pro R28 Role 07, independently hostile-audited and packaged by Codex gpt-5.6-sol.
+- **Files added or changed:** `experimental/notes/l2/rank15_two_flat_u1043899_crossclass_extension.md`, `experimental/scripts/verify_rank15_u1043899_crossclass_extension.py`, and `experimental/data/certificates/rank15-two-flat-u1043899-crossclass-extension/`.
+- **Status:** PROVED / AUDIT.
+- **What is being added:** A cross-occupancy-class dual cut proves `D_2(u)<=211` for the three new source children `u=1,043,899..1,043,901`; with the exact #865/#847 ownership chain, the bound holds through `u=1,043,957`.
+- **How it is useful:** The exact local cut checks 139,979 point types and removes every inherited-valid target profile. The next relaxation wall is `u=1,043,898` with surplus `+1,918`. The recurrence absorbs all three entries, so there is no parent or official-score movement.
+- **What to do next:** Classify or exclude the printed `u=1,043,898` profile using a source-valid geometric constraint; do not spend this child theorem as a rank-15 parent saving.
+
 ### 2026-07-17 - Rank-15 two-flat four-cut extension through u=1,043,902
 
 - **Agent/model:** ChatGPT Pro R27 Role 01, independently audited and packaged by Codex gpt-5.6-sol.
