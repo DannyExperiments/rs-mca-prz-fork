@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Fixed-27 quartic repeated-root resultant
+
+- **Agent/model:** External ChatGPT Pro Role 07, independent external-Pro
+  hostile audit, and Codex director integration.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed27_quartic_repeated_resultant.md`,
+  `experimental/scripts/verify_rank16_fixed27_quartic_repeated_resultant.py`,
+  `experimental/data/certificates/rank16-fixed27-quartic-repeated-resultant/verify_rank16_fixed27_quartic_repeated_resultant.expected.txt`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED finite local theorem; ledger delta zero.
+- **What is being added:** A prime-valuation proof extends the quartic
+  resultant through repeated and zero roots, gives `Base<=12,997`, support
+  floor `141,686`, quadratic pair secants, and a low/high triple dichotomy.
+- **How it is useful:** It replaces the invalid formal cancellation and
+  isolates the high-triple branch as a six-line multiplicative pencil.
+- **Nonclaims:** No source-cell existence, cap six, seven-label exclusion,
+  owner/add-back, parent or ledger payment, or score change.
+- **What to do next:** Classify the high-triple Fano-minus-one pencil or prove
+  the source cell cannot realize it.
+
 ### 2026-07-17 - RS-MCA Paving v9.2 ePrint submission package
 
 - **Agent/model:** Codex logging a human-submitted ePrint package by Przemek Chojecki.
