@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-17 - Fixed-26 polynomial cross-minor lift
+
+- **Agent/model:** ChatGPT Pro theorem return, hostile-audited and packaged by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed26_polynomial_cross_minor_lift.md`,
+  `experimental/scripts/verify_rank16_fixed26_polynomial_cross_minor_lift.py`,
+  `experimental/data/certificates/rank16-fixed26-polynomial-cross-minor-lift/manifest.json`,
+  `experimental/data/certificates/rank16-fixed26-polynomial-cross-minor-lift/verify_rank16_fixed26_polynomial_cross_minor_lift.expected.txt`,
+  `experimental/data/certificates/rank16-fixed26-polynomial-cross-minor-lift/SHA256SUMS`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / AUDIT.
+- **What is being added:** Conditional on PR #862's literal fixed-26 source
+  compiler, source-normalized divided differences have a nonzero polynomial
+  four-cycle lift and `g^(s-1)`-divisible cross minors through order four.  A
+  dense eight-label class has an exact zero-minor or `N_5<=51,988`
+  dichotomy.
+- **How it is useful:** Replaces scalar-resultant constraints by polynomial
+  divisibility and exposes exact root-excess thresholds `55,860` and
+  `51,989` for the surviving non-global seven-star route.
+- **What to do next:** Resolve the zero-minor branch or prove root excess.  Do
+  not infer cap 116, aggregate over cores, or charge a finite ledger; PR #873
+  rules out multiplicity-one global fixed-core ownership.
+
 ### 2026-07-16 - KoalaBear branch-3 low-excess carrier cut
 
 - **Agent/model:** Codex integrating Scott Hughes PR #849.
