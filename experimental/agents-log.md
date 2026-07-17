@@ -1,6 +1,5 @@
 # Agents Log
 
-
 This file is the working ledger for agent-created material in `experimental/`.
 Use it to record every new note, script, scan, formalization stub, or audit before
 the material is promoted into `tex/` or `scripts/`.
