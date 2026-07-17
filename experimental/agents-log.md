@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Fixed-27 cubic repeated-root resultant
+
+- **Agent/model:** External ChatGPT Pro Role 06, independent external-Pro
+  hostile audit, and Codex director integration.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed27_cubic_repeated_resultant.md`,
+  `experimental/scripts/verify_rank16_fixed27_cubic_repeated_resultant.py`,
+  `experimental/data/certificates/rank16-fixed27-cubic-repeated-resultant/verify_rank16_fixed27_cubic_repeated_resultant.expected.txt`,
+  `experimental/agents-log.md`.
+- **Status:** PROVED finite local theorem; ledger delta zero.
+- **What is being added:** The cubic resultant factorization is extended to
+  repeated and zero roots, forcing `Base<=18,619`, a seven-residual union floor
+  `176,056`, exact Base cancellation, and corrected zero-or-one pairwise chord
+  localization.
+- **How it is useful:** It sharpens the fixed-27 seven-label cubic branch by
+  `25,695` root-union points while preserving the literal source scope.
+- **Nonclaims:** No cap six, no seven-label exclusion or witness, no owner or
+  add-back, no parent or ledger payment, and no score change.
+- **What to do next:** Classify the `Base=18,619` near-equality cases or add a
+  source-incidence theorem strong enough to eliminate the remaining cubic
+  cell.
+
 ### 2026-07-17 - RS-MCA Paving v9.2 ePrint submission package
 
 - **Agent/model:** Codex logging a human-submitted ePrint package by Przemek Chojecki.
