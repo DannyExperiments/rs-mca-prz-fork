@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+
+### 2026-07-18 - Fixed-27 quartic high-triple exclusion
+
+- **Agent/model:** ChatGPT Pro theorem worker, independently hostile-audited by
+  a separate ChatGPT Pro conversation, packaged by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed27_quartic_high_triple_exclusion.md`,
+  `experimental/scripts/verify_rank16_fixed27_quartic_high_triple.py`,
+  `experimental/data/certificates/rank16-fixed27-quartic-high-triple/verify_rank16_fixed27_quartic_high_triple.expected.txt`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / AUDIT / EXPERIMENTAL.
+- **What is being added:** Conditional on the exact fixed-27 primitive-quartic
+  source setup in PR #894, the high-triple six-line branch is empty:
+  `n3 <= 5 lambda`. The resulting local residual-union floor is `150,361`, up
+  from `141,686`.
+- **How it is useful:** It closes the listed high-triple Fano-minus-one terminal
+  without claiming the low-triple branch, a cap of six, a global owner, or any
+  score-facing payment.
+- **What to do next:** Settle the low-triple branch or prove that every literal
+  seven-label quartic source cell enters the high branch; then separately prove
+  the global owner and same-word add-back needed for a rank-16 payment.
+
 ### 2026-07-17 - RS-MCA Paving v9.2 ePrint submission package
 
 - **Agent/model:** Codex logging a human-submitted ePrint package by Przemek Chojecki.
