@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-19 - Rank-16 finite owner-prefix source theorem
+
+- **Agent/model:** ChatGPT Pro claimant, independent repaired-proof and
+  source/compiler audits, integrated and replayed by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_owner_prefix_source.md`,
+  `experimental/scripts/verify_rank16_owner_prefix_source.py`,
+  `experimental/data/certificates/rank16-owner-prefix-source/`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / FINITE PREFIX / AUDIT / ZERO SCORE.
+- **What is being added:** A branch-qualified finite accounting theorem that
+  pays the rank-16 same-word residual prefix through source key
+  `(14,649,665,301)` after the inherited replacement owner, conditional on the
+  exact PR #890 scalar-core source.
+- **How it is useful:** It moves the exact owner-prefix wall to
+  `(14,649,665,302)` while recording that the matching is cardinality-only and
+  does not establish the source-incidence Hall theorem or rank-16 parent.
+- **What to do next:** Pay the five-unit overflow at `(14,649,665,302)` with a
+  source-valid owner/add-back mechanism, then control all later residual
+  cells. Do not charge this finite prefix to either official theorem.
+
 ### 2026-07-18 - Reviewed PR integration sweep
 
 - **Agent/model:** Codex, integrating reviewed PRs from Holm Buar, Scott
