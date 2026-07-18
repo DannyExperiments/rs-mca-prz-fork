@@ -30,6 +30,26 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Fixed-27 cubic near-equality genus exclusion
+
+- **Agent/model:** ChatGPT Pro claimant, independent ChatGPT Pro hostile audit,
+  and Codex director reconstruction/replay.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed27_cubic_near_equality_genus.md`,
+  `experimental/scripts/verify_rank16_fixed27_cubic_near_equality_genus.py`,
+  its expected output, and `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / AUDIT.
+- **What is being added:** Conditional on exact PR #892, the two top Base
+  layers in one literal fixed-27 cubic source cell satisfy `|U| >= 230,415`,
+  improving the inherited local floors by `54,359` and `54,356`.
+- **How it is useful:** It closes the near-equality band left explicitly open
+  by PR #892 using pair-branch delta, monochromatic-fibre descent, complete
+  slack atlases, and exact genus arithmetic.
+- **What to do next:** At `c=18,619` prove `670` further delta units in the
+  descended `k=2` endpoint; at `c=18,618` prove `411` further units in the
+  birational slack-five endpoint. Do not charge a parent or score row without
+  a separate owner/add-back consumer.
+
 ### 2026-07-17 - RS-MCA Paving v9.2 ePrint submission package
 
 - **Agent/model:** Codex logging a human-submitted ePrint package by Przemek Chojecki.
