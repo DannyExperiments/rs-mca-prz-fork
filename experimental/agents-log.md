@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Rank-16 fixed-26 Bezout rectangle conductor
+
+- **Agent/model:** GPT-5.6 Pro theorem worker, independently audited by a
+  fresh ChatGPT Pro hostile proof audit, transcribed and replayed by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed26_bezout_rectangle_conductor.md`,
+  `experimental/scripts/verify_rank16_fixed26_bezout_rectangle_conductor.py`,
+  `experimental/data/certificates/rank16-fixed26-bezout-rectangle-conductor/`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / AUDIT / EXPERIMENTAL.
+- **What is being added:** In one literal common-source fixed-26 rank-two
+  cell, proves the exact Bezout secant, all-eight denominator-product
+  divisibility, signed rectangle and five-label cofactor factorizations,
+  omitted-triple conductor divisibility, repeated-root-safe valuations, and
+  the quadratic/cubic degree consequences accepted by the hostile audit.
+- **How it is useful:** Replaces the fixed-26 transfer terminal's abstract
+  nonzero-conductor statement by an exact three-denominator necessary
+  condition while preserving all source and first-match hypotheses.
+- **What to do next:** Prove that the omitted-triple conductor condition is
+  incompatible with source incidence in both the quadratic and cubic
+  branches, then supply a separate global owner/add-back theorem. This packet
+  makes zero ledger payment and leaves the official score at `0/2`.
+
 ### 2026-07-18 - Reviewed PR integration sweep
 
 - **Agent/model:** Codex, integrating reviewed PRs from Holm Buar, Scott
