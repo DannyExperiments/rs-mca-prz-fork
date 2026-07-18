@@ -30,6 +30,29 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Rank-16 zero-profile scalar-line route cut
+
+- **Agent/model:** ChatGPT Pro claimant and independent hostile audit,
+  integrated and replayed by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_zero_profile_scalar_line_route_cut.md`,
+  `experimental/scripts/verify_rank16_zero_profile_scalar_line_route_cut.py`,
+  `experimental/data/certificates/rank16-zero-profile-scalar-line-route-cut/`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / ROUTE CUT / AUDIT / ZERO LEDGER CHARGE.
+- **What is being added:** A finite deployed-field cap of 15 on scalar-line
+  list intersections, the exact equality-case core/petal/remainder normal
+  form, a 2,213 missed-core floor, and literal all-delta zero-profile packets
+  with one nonlinear companion and zero deficit under the current pairwise
+  complete-block deletion interface.
+- **How it is useful:** It bounds and normalizes the scalar-line support family
+  around the PR #890 obstruction while proving that the current complete-block
+  resource masks still do not pay the value-aware owner wall.
+- **What to do next:** Prove a source-valid value-aware owner-deficit/add-back
+  inequality that controls every additional candidate outside the displayed
+  affine line. Do not charge this theorem to the rank-16 parent or either
+  official theorem.
+
 ### 2026-07-17 - RS-MCA Paving v9.2 ePrint submission package
 
 - **Agent/model:** Codex logging a human-submitted ePrint package by Przemek Chojecki.
