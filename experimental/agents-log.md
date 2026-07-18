@@ -30,6 +30,28 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Fixed-27 quartic low-triple band exclusion
+
+- **Agent/model:** Codex director with an independent external Pro hostile
+  proof audit.
+- **Files added or changed:** Added
+  `experimental/notes/l2/rank16_fixed27_quartic_low_triple_band.md`,
+  `experimental/scripts/verify_rank16_fixed27_quartic_low_triple.py`, and
+  `experimental/data/certificates/rank16-fixed27-quartic-low-triple/`; updated
+  `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / AUDIT / EXPERIMENTAL.
+- **What is being added:** Conditional on exact PR #894 and PR #902 heads,
+  excludes six nonempty maximal three-label lines and the finite band
+  `5*lambda-7319 <= n3 <= 5*lambda`, proving `n3 <= 5*lambda-7320` and the
+  seven-residual union floor `|U| >= 154021` for one literal fixed-27
+  primitive-quartic source cell.
+- **How it is useful:** Advances the local quartic source-cell wall by 3,660
+  support points beyond PR #902 while preserving zero owner, add-back, ledger,
+  recurrence, and official-score charge.
+- **What to do next:** Exclude the surviving low-triple region or prove a
+  global first-match owner/add-back theorem. Do not promote this local theorem
+  to cap six, seven-label exclusion, or score movement.
+
 ### 2026-07-17 - RS-MCA Paving v9.2 ePrint submission package
 
 - **Agent/model:** Codex logging a human-submitted ePrint package by Przemek Chojecki.
