@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Dense-shell terminal two-level decorated charge
+
+- **Agent/model:** ChatGPT Pro theorem worker, independently audited by a
+  fresh ChatGPT Pro conversation, replayed and integrated by Codex.
+- **Files added or changed:**
+  `experimental/notes/thresholds/dense_shell_terminal_two_level_charge.md`,
+  `experimental/scripts/verify_dense_shell_terminal_two_level_charge.py`,
+  `experimental/data/certificates/dense-shell-terminal-two-level-charge/`,
+  and `experimental/agents-log.md`.
+- **Status:** PROVED / AUDIT / LOCAL THEOREM.
+- **What is being added:** An all-depth proof that every fully decorated
+  terminal two-level dense-shell subtree has positive charge, with the explicit
+  lower bound `T_pi({B-1,B}) > beta_0 m_2`, and that the corresponding
+  root-anchored terminal triple is positive. The verifier replays the exact
+  suffix formulas, finite prefixes, root-anchor identity, optimized-mode
+  parity, and three load-bearing mutations.
+- **How it is useful:** It closes one nontrivial infinite family inside the
+  still-open general decorated-charge wall without consuming the pending
+  singleton transfer or the disputed parity-dependent charge-accounting
+  interface.
+- **What to do next:** Prove an all-depth closure rule for separated or
+  nonterminal decorations. Do not infer arbitrary-`K` positivity, an emission
+  payment, Grand MCA, Grand List, or official score movement from this packet.
+
 ### 2026-07-17 - RS-MCA Paving v9.2 ePrint submission package
 
 - **Agent/model:** Codex logging a human-submitted ePrint package by Przemek Chojecki.
