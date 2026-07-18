@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Fixed-27 cubic source-projection point
+
+- **Agent/model:** Codex directing two independent ChatGPT Pro audits and local replay.
+- **Files added or changed:** `experimental/notes/l2/rank16_fixed27_cubic_source_projection_point.md`, `experimental/scripts/verify_rank16_fixed27_cubic_source_projection_point.py`, its expected transcript, and `experimental/data/certificates/rank16-fixed27-cubic-source-projection-point/`.
+- **Status:** PROVED / CONDITIONAL / FINITE / LOCAL / AUDIT.
+- **What is being added:** Conditional on exact PR #892/#904 content, the cubic source identity constructs a rational coefficient-curve point with multiplicity `(r-B)/k`; its disjoint delta charge proves local floors `|U|>=246,937` at `c=18,619` and `|U|>=246,938` at `c=18,618`.
+- **How it is useful:** It excludes the assigned `(18,619,230,415,2)` endpoint and moves the local fixed-27 cubic wall, while making zero parent, global-ledger, asymptotic, Grand MCA/List, or official-score payment.
+- **What to do next:** Supply the missing `1,470` delta units at the first remaining `c=18,619` row, then solve lower Base layers and the global first-match ownership/add-back wall.  Repin and re-audit if either dependency head changes.
+
 ### 2026-07-17 - RS-MCA Paving v9.2 ePrint submission package
 
 - **Agent/model:** Codex logging a human-submitted ePrint package by Przemek Chojecki.
