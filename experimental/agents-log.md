@@ -30,6 +30,32 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Rank-16 fixed-26 direct eliminant
+
+- **Agent/model:** GPT-5 Pro hostile proof audit, transcribed and replayed by
+  Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed26_direct_eliminant.md`,
+  `experimental/scripts/verify_rank16_fixed26_direct_eliminant.py`,
+  `experimental/data/certificates/rank16-fixed26-direct-eliminant/`, and
+  `experimental/agents-log.md`.
+- **Status:** PROVED / CONDITIONAL / AUDIT / EXACT NEW WALL.
+- **What is being added:** A conditional finite common-source fixed-26 local
+  eliminant theorem with explicit Sylvester convention, repeated-factor-safe
+  identities, degree caps `100237/133003`, and the quadratic/cubic scalar-root
+  restrictions.  The dedicated standard-library replay passes normal and
+  optimized execution, exact expected-output parity, 10 semantic mutations,
+  four package hashes, and all four inherited fixed-26 dependency replays.
+- **How it is useful:** It converts the conductor branch left open by PR #957
+  into a direct algebraic target `M`: the next local task is to force a genuine
+  source-incidence divisor of `M` or classify `M=0`.  It makes no owner,
+  payment, global, asymptotic, Grand List/MCA, or official-score claim.
+- **What to do next:** Exclude both `m=2` and `m=3` under the literal source
+  contract by proving the missing source-incidence divisor or classifying the
+  zero-resultant branch, then supply a separate global aggregation theorem.
+  The finite owner subtotal remains `274854110496187589`, three below the
+  target, and the official score remains `0/2`.
+
 ### 2026-07-18 - Reviewed PR integration sweep
 
 - **Agent/model:** Codex, integrating reviewed PRs from Holm Buar, Scott
