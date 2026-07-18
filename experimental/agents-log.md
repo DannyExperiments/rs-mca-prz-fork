@@ -30,6 +30,34 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-18 - Affine-prefix direct-partition phase route cut
+
+- **Agent/model:** Codex director transcription of R31 Role 14, independently
+  audited by GPT-5.2 Pro (`ACCEPT_NARROWED`).
+- **Files added or changed:** Added
+  `experimental/notes/thresholds/affine_prefix_direct_partition_phase.md`,
+  `experimental/scripts/verify_affine_prefix_direct_partition_phase.py`, and
+  the certificate package under
+  `experimental/data/certificates/affine-prefix-direct-partition-phase/`.
+- **Status:** PROVED / CONDITIONAL / AUDIT / ROUTE CUT.
+- **What is being added:** A finite characteristic-five affine-prefix line
+  theorem with the missing support-wise nontriviality argument, exact
+  witness/slope census, representation moments, reciprocal covering optimum,
+  the inclusive `500j >= 447B` phase cut, and two direct-partition lower
+  bounds.  The frozen proof-audit packet and return hashes are
+  `042fea916cc584c4c54c534142e3bedf1a14df31380a430b1268d5fb6e02f3e1`
+  and `f029f6cfdcd2da3c2e368af988790cc5aae17a6ede3be9d104b9ccd698e059c1`.
+- **How it is useful:** The package rules out subexponential-cardinality
+  direct source-fibre partitions in the stated line family and identifies the
+  exact phase wall.  Normal and optimized replay match the checked transcript,
+  all `4,935` finite-band/compiler cells and source pins pass, and all ten
+  semantic mutations are caught.
+- **What to do next:** Prove a source-valid image-scale bound for every actual
+  primitive semantic first-match cell, then sum disjoint same-line cells
+  without interchanging `sup_line sum_lambda` and `sum_lambda sup_line`.
+  This package proves no C1--C9 survival, source incidence, ledger payment,
+  Grand MCA/List theorem, or official-score movement; the score remains `0/2`.
+
 ### 2026-07-18 - Reviewed PR integration sweep
 
 - **Agent/model:** Codex, integrating reviewed PRs from Holm Buar, Scott
