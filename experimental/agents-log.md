@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-20 - Quadratic-exact last-predeep O5c repair counterexample
+
+- **Agent/model:** Codex directing R33 Role 12, with independent GPT-5.2 Pro hostile-proof and source/compiler audits.
+- **Files added or changed:** `experimental/notes/thresholds/quadratic_exact_last_predeep_target_counterexample.md`, `experimental/scripts/verify_quadratic_exact_last_predeep_target_counterexample.py`, `experimental/data/certificates/quadratic-exact-last-predeep-target-counterexample/`, and `experimental/agents-log.md`.
+- **Status:** PROVED / COUNTEREXAMPLE / AUDIT / ZERO PAYMENT.
+- **What is being added:** For every `s>=129`, the ordinary RS row over `GF(2^(2s))` with `n=2^(2s)-1`, `R=3*2^s-1`, and `a=n-2^s` lies one unit outside exact-deep yet has exact MCA numerator `2^s+1`, strictly below the frozen target `2^(2s-128)`. Both required independent audits accepted only this necessary route cut, and the local verifier rebinds it to current source files.
+- **How it is useful:** It rules out repairing the false universal O5c strict-crossing target by excluding exact-deep rows alone. Any viable replacement must also exclude the quadratic-exact target-closed family covered here.
+- **What to do next:** Formulate and prove a sufficient target-viable exclusion covering every quadratic-exact target-closed row, then establish the full profile comparison on the surviving regime. This contribution pays no ledger unit and leaves the official score at `0/2`.
+
 ### 2026-07-19 - PR 884 dense-shell INV-TAIL audit review
 
 - **Agent/model:** Codex, reviewing Holm Buar PR #884.
