@@ -1,0 +1,40 @@
+{
+  "name": "affine-prefix-fixed-point-half-slice",
+  "status": "independently-audited-zero-payment-local-theorem",
+  "base": "3404d21b64c876c6d9b995ad3e29d7120ab27a54",
+  "claim": "For every B>=2 in the displayed characteristic-five affine-prefix row, the no-diagonal supports containing p=a_1 have size c_B/2, inject into depth-one slopes, yield exact nontrivial RS witnesses, and have common monic locator gcd X-p. Any later paid retained partition satisfies 2 K_B r_B >= c_B/2-e_B.",
+  "proof_audit_sha256": "5d80191c49a2d9915ed6ba56e884e8fa77dd81448efa6965784506939fd8ecb8",
+  "source_audit_sha256": "56d1c489d3421d072cb031f3c5054d8631bdea37e79bb4fdc9379e3d2acf046f",
+  "live_dependencies": {
+    "pr_888": "7b4bb19875b41a46f6a637c14b37a8506ce10bdb",
+    "pr_903": "7a216f1617d2cde1f0e5e52d39379664c6522b10",
+    "pr_959": "19d72e12082dad1348d0469322727e0e4536accf"
+  },
+  "finite_replay": {
+    "fields": [
+      "F_(5^6)",
+      "F_(5^9)"
+    ],
+    "censuses": [
+      "B=2: U=50, P=25",
+      "B=3: U=568, P=284"
+    ],
+    "semantic_mutations": 18,
+    "normal_optimized_expected_parity": true
+  },
+  "nonclaims": [
+    "no semantic C1-C9 owner",
+    "no survival theorem or bound on e_B",
+    "no unconditional payment",
+    "no finite or asymptotic ledger delta",
+    "no recurrence or Grand parent",
+    "no official-score movement"
+  ],
+  "remaining_wall": "Classify and pay the earlier owners covering all but exp(o(n)) fixed-point slopes, or prove a source-valid retained-set lower bound and reconcile it with the conditional inequality.",
+  "files": {
+    "experimental/scripts/verify_affine_prefix_fixed_point_half_slice.py": "6fa62ab947af27e7640ff178a4bf9ad101868f4cd0aa4809db6e7b74ae834056",
+    "experimental/notes/thresholds/affine_prefix_fixed_point_half_slice.md": "d0ad963a90d12c5d1de35b5b5ad7d84563cd7d9847572071a794a0a18e854083",
+    "experimental/data/certificates/affine-prefix-fixed-point-half-slice/source_pins.json": "b0a18ca3b79f2f16402aebad4f11de03d3895c8848bb19417f23a53a4dc0cde8",
+    "experimental/data/certificates/affine-prefix-fixed-point-half-slice/verify_affine_prefix_fixed_point_half_slice.expected.txt": "9abdfc6f333f55431d4fe3507be8190126d8ea3847b036160bded602c2a5da65"
+  }
+}

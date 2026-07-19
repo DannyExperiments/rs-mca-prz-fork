@@ -1,0 +1,11 @@
+AFFINE_PREFIX_FIXED_POINT_HALF_SLICE: PASS
+base=3404d21b64c876c6d9b995ad3e29d7120ab27a54
+source_pins=PASS,count=4
+proof_audit_sha256=5d80191c49a2d9915ed6ba56e884e8fa77dd81448efa6965784506939fd8ecb8
+source_audit_sha256=56d1c489d3421d072cb031f3c5054d8631bdea37e79bb4fdc9379e3d2acf046f
+B=2 field=5^6 U=50 P=25 slopes=25 gcd=X-p mutations=9/9
+B=3 field=5^9 U=568 P=284 slopes=284 gcd=X-p mutations=9/9
+semantic_tamper_selftests=PASS,count=18
+accepted_scope=finite_fixed_point_j0_half_slice_and_conditional_retention_only
+nonclaims=no_semantic_owner,no_payment,no_parent,no_recurrence,no_score
+finite_ledger_delta=0 asymptotic_ledger_delta=0 official_score=0/2
