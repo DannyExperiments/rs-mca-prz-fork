@@ -30,6 +30,34 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-19 - Affine-prefix full-union image obstruction
+
+- **Agent/model:** Codex director repair of R32 Role 09, independently audited
+  by GPT-5.2 Pro under hostile-proof and source/compiler lenses
+  (`ACCEPT_NARROWED`).
+- **Files added or changed:** Added
+  `experimental/notes/thresholds/affine_prefix_full_union_image_obstruction.md`,
+  `experimental/scripts/verify_affine_prefix_full_union_image_obstruction.py`,
+  and the certificate package under
+  `experimental/data/certificates/affine-prefix-full-union-image-obstruction/`.
+- **Status:** PROVED / CONDITIONAL / AUDIT / ZERO-LEDGER ROUTE CUT.
+- **What is being added:** For the literal characteristic-five affine-prefix
+  row, the full mixed-stratum profile forces exponential effective-Fourier
+  multipliers at bases `25/3` and `125/8`, and its full-image Sidon-heavy
+  moment has positive normalized rate `(1/4)log(15/8)`. The retained-slice
+  mean consequence is conditional on the exact active set `N=4B`, same
+  boundary, full support slice, and intact all-diagonal fibre.
+- **How it is useful:** This closes the full-union calculation omitted by the
+  existing PR #959 direct-partition package and gives a precise target for a
+  later semantic compiler. Normal and optimized replay, source pins, exact
+  dependencies, semantic mutations, and live overlap are required before the
+  updated PR is treated as publication-ready.
+- **What to do next:** Compile actual primitive C1--C9 first-match cells and
+  prove a source-valid image-scale or replacement-incidence theorem for every
+  retained cell. This package proves no semantic owner, routing, ledger
+  payment, Grand theorem, recurrence, or official-score movement; the score
+  remains `0/2`.
+
 ### 2026-07-18 - Affine-prefix direct-partition phase route cut
 
 - **Agent/model:** Codex director transcription of R31 Role 14, independently
