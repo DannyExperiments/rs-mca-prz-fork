@@ -30,6 +30,27 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-19 - Rank-16 fixed-26 zero-eliminant exclusion
+
+- **Agent/model:** ChatGPT Pro hostile-proof and source/compiler audits,
+  transcribed and replayed by Codex.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed26_mzero_exclusion.md`,
+  `experimental/scripts/verify_rank16_fixed26_mzero_exclusion.py`, and
+  `experimental/data/certificates/rank16-fixed26-mzero-exclusion/`.
+- **Status:** PROVED / CONDITIONAL / EXPERIMENTAL.
+- **What is being added:** Conditional on one literal deployed fixed-26
+  rank-two common-source 4x4 cell satisfying all sixteen actual-valid edges and
+  the frozen PR #957/#958 source hypotheses, excludes `M=0` for both transfer
+  degrees, including repeated factors, and proves the cubic `deg_X J<=26962`
+  endpoint. The finite ledger delta is zero and the official score is `0/2`.
+- **How it is useful:** Closes the direct-eliminant zero branch at one exact
+  local cell while preserving the source-existence and global-aggregation
+  walls. It explicitly deletes the unaudited quadratic-rigidity overclaim.
+- **What to do next:** Prove a literal source-cell existence or incidence
+  theorem that consumes `M!=0`, then establish a separate source-valid global
+  aggregation theorem before claiming any parent or score movement.
+
 ### 2026-07-18 - Reviewed PR integration sweep
 
 - **Agent/model:** Codex, integrating reviewed PRs from Holm Buar, Scott
