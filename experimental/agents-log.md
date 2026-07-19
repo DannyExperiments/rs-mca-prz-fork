@@ -30,6 +30,31 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-19 - Fixed-27 primitive-quartic branch envelope
+
+- **Agent/model:** Codex, transcribing an independently narrowed R32 Pro
+  theorem and rebuilding its absent certificate package.
+- **Files added or changed:**
+  `experimental/notes/l2/rank16_fixed27_quartic_branch_envelope.md`,
+  `experimental/scripts/verify_rank16_fixed27_quartic_branch_envelope.py`,
+  and `experimental/data/certificates/rank16-fixed27-quartic-branch-envelope/`.
+- **Status:** CONDITIONAL / EXPERIMENTAL / AUDIT.
+- **What is being added:** For one hypothetical fixed-27 primitive-quartic data
+  package independently satisfying all pinned PR #894/#902/#930 hypotheses, a
+  branch-aware finite envelope `n3<=J(c)`. It removes 3 through
+  37,170 integer values from the PR #930 wall on each nonmaximal Base layer
+  and gives support floor at least 154,023 there. The maximal layer remains at
+  support floor 154,021.
+- **How it is useful:** The package replaces the absent claimant artifacts
+  with a deterministic standard-library verifier, all 12,998 envelope rows,
+  all 25,996 dyadic states, exact expected output, and 11 semantic mutations.
+  It also restores the PR #894 affine scalar orientation and records the full
+  non-arithmetic branch compiler.
+- **What to do next:** Certify upstream source-cell production, complete the
+  final branch diff/tree and live-overlap checks, and retain explicit
+  nonclaims: no source-cell existence, aggregation, ledger payment, cap-six
+  theorem, or official-score movement.
+
 ### 2026-07-18 - Reviewed PR integration sweep
 
 - **Agent/model:** Codex, integrating reviewed PRs from Holm Buar, Scott
