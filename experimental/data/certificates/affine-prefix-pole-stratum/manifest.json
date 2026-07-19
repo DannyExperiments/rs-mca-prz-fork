@@ -1,0 +1,21 @@
+{
+  "artifact": "affine-prefix-pole-stratum",
+  "base": "999b8f3a1da959b8002ecf1819d37725af56d383",
+  "status": "PROVED_STRUCTURAL_ZERO_LEDGER",
+  "field": "GF(5^(30t))",
+  "parameters": {
+    "t": "integer >= 1",
+    "B": "10t",
+    "n": "40t",
+    "m": "20t",
+    "k": "20t-1",
+    "j": "9t"
+  },
+  "source_pins": 10,
+  "semantic_mutations": 11,
+  "finite_ledger_delta": 0,
+  "asymptotic_ledger_delta": 0,
+  "official_score": "0/2",
+  "proof_audit_packet_sha256": "a95bed5161d30335153443a4e731522eaab8234e18bd7014a7dfe0771b581648",
+  "source_audit_packet_sha256": "6b884c03248240927ede0f553978706ed2770034af0755786265fb9443b44d5a"
+}
