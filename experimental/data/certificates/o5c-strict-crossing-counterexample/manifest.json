@@ -1,0 +1,22 @@
+{
+  "schema": "rs-mca-o5c-strict-crossing-counterexample-v1",
+  "status": "COUNTEREXAMPLE",
+  "source_base": "6f4e918f27a11995d3951f4ebe7546d4add0f345",
+  "claim": "The literal universal O5c strict-crossing demand fails on the sparse occurring-length GF(2^m) family for every m>=129.",
+  "endpoint": {
+    "m": 129,
+    "target": 2,
+    "actual_mca_numerator": 2,
+    "strict_crossing": false
+  },
+  "family": {
+    "length": "2^m-1",
+    "m_min": 129,
+    "actual_mca_numerator": 2,
+    "target": "2^(m-128)"
+  },
+  "semantic_mutations": 12,
+  "finite_ledger_delta": 0,
+  "asymptotic_ledger_delta": 0,
+  "official_score": "0/2"
+}

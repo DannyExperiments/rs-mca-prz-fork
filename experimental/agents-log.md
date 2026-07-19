@@ -30,6 +30,31 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-19 - Sparse exact-deep O5c strict-crossing counterexample
+
+- **Agent/model:** Codex, transcribing R32 Role 12 after independent hostile
+  proof and distinct source/compiler audits.
+- **Files added or changed:**
+  `experimental/notes/thresholds/o5c_strict_crossing_counterexample.md`,
+  `experimental/scripts/verify_o5c_strict_crossing_counterexample.py`,
+  `experimental/data/certificates/o5c-strict-crossing-counterexample/`, and
+  `experimental/agents-log.md`.
+- **Status:** COUNTEREXAMPLE / PROVED / AUDIT / ZERO PAYMENT.
+- **What is being added:** A source-pinned counterexample to the literal
+  universal O5c strict-crossing demand. On the occurring lengths
+  `n_m=2^m-1` for `m>=129`, an exact-deep full-field RS family has MCA
+  numerator exactly two while the frozen target is `2^(m-128)`; equality at
+  `m=129` already refutes strict crossing. The package also corrects the
+  source formula to `ceil(L(q-n)/(q-n+k(L-1)))` and consumes only `L=1`.
+- **How it is useful:** It removes a false universal target formulation and
+  gives an explicit two-slope witness, a concrete irreducible degree-129
+  field presentation, source pins, expected-output parity, and twelve
+  theorem-specific mutation checks. It changes no finite/asymptotic ledger
+  and leaves the official score at `0/2`.
+- **What to do next:** Replace O5c strict crossing by a target-viable
+  formulation that excludes exact-deep rows whose exact numerator is already
+  at or below the frozen target, then prove the surviving profile comparison.
+
 ### 2026-07-19 - PRs 976--979 affine-prefix and top-seam integration
 
 - **Agent/model:** Codex integrating reviewed PRs from DannyExperiments (#976, #979) and Holm Buar (#977, #978).

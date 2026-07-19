@@ -1,0 +1,25 @@
+O5C_STRICT_CROSSING_COUNTEREXAMPLE: PASS
+base=6f4e918f27a11995d3951f4ebe7546d4add0f345
+source_pins=PASS,count=6
+field=GF(2^129),polynomial=T^129+T^5+1,irreducible=True
+q=680564733841876926926749214863536422912
+n=680564733841876926926749214863536422911
+k=340282366920938463463374607431768211455
+a=680564733841876926926749214863536422910
+n_minus_k=340282366920938463463374607431768211456
+minimum_distance=340282366920938463463374607431768211457
+two_list_margin=340282366920938463463374607431768211454
+target=2
+profile_list_cap=1
+profile_floor=1
+tangent_floor=2
+actual_numerator=2
+complete_floor=2
+strict_crossing=False
+bad_slope_count=2
+exact_support_cells=680564733841876926926749214863536422911
+family_checks=m129..m512,count=384
+semantic_mutations=PASS,12/12
+finite_ledger_delta=0
+asymptotic_ledger_delta=0
+official_score=0/2
