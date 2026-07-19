@@ -1,0 +1,16 @@
+{
+  "base": "3404d21b64c876c6d9b995ad3e29d7120ab27a54",
+  "proof_audit_sha256": "5d80191c49a2d9915ed6ba56e884e8fa77dd81448efa6965784506939fd8ecb8",
+  "source_audit_sha256": "56d1c489d3421d072cb031f3c5054d8631bdea37e79bb4fdc9379e3d2acf046f",
+  "live_dependencies": {
+    "pr_888": "7b4bb19875b41a46f6a637c14b37a8506ce10bdb",
+    "pr_903": "7a216f1617d2cde1f0e5e52d39379664c6522b10",
+    "pr_959": "19d72e12082dad1348d0469322727e0e4536accf"
+  },
+  "files": {
+    "experimental/asymptotic_rs_mca_frontiers.tex": "0e3aa7b1ba79b1065439ae484f4cb989d80cabe18afb68ec63a6b21d1f3370fd",
+    "experimental/data/certificates/affine-prefix-line-fibre-bifurcation/verify_affine_prefix_line_fibre_bifurcation.expected.txt": "fcd33611d672700bce545019a1f41226dfc97f458888be8e5af4c6a029142f48",
+    "experimental/notes/thresholds/affine_prefix_line_fibre_bifurcation.md": "6ed0b5a3fc1197cf9292805cac31b6b148dc8c74a2f41ab5618b00e0296a9bbe",
+    "experimental/scripts/verify_affine_prefix_line_fibre_bifurcation.py": "a165db9343e045e13af7cb6a8608e859575ed7ff9696d1347164377153019ae2"
+  }
+}
