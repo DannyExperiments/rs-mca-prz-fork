@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-20 - R33 Role 10 fixed-point horizontal partial occupancy
+
+- **Agent/model:** ChatGPT Pro theorem worker with independent hostile-proof and source/compiler audits; Codex director replay.
+- **Files added or changed:** Added `experimental/notes/thresholds/affine_prefix_fixed_point_horizontal_partial_occupancy.md`, `experimental/scripts/verify_affine_prefix_fixed_point_horizontal_partial_occupancy.py`, and `experimental/data/certificates/affine-prefix-fixed-point-horizontal-partial-occupancy/`; updated `experimental/agents-log.md`.
+- **Status:** PROVED LOCAL / AUDIT / ZERO PAYMENT.
+- **What is being added:** An exact raw horizontal profile theorem for the characteristic-five fixed-point no-local-diagonal affine-prefix family, including its two transfer polynomials, coefficient enumerator, add-back identity, disjoint slope images, realized-image mean one, and raw max-profile exponent `(1/4) log 14`.
+- **How it is useful:** It gives a source-valid concrete specialization of the generic partial-occupancy mechanism and separates the raw occupancy/slope partition from every semantic first-match or ledger claim.
+- **What to do next:** Supply the literal C1--C9 classifier and first-match order, then determine `e_B`, the retained C3 set, and any degree-two locator composition. This packet proves none of those objects and makes no payment, Grand theorem, recurrence, or score claim.
+
 ### 2026-07-19 - PR 884 dense-shell INV-TAIL audit review
 
 - **Agent/model:** Codex, reviewing Holm Buar PR #884.
