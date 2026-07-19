@@ -1,0 +1,10 @@
+R32_ROLE11_POLE_STRATUM: PASS
+base=999b8f3a1da959b8002ecf1819d37725af56d383 source_pins=PASS,count=10
+local_signatures=15 ambiguity_pattern=14x1+1x2 Q=1,4,4,4,1
+t1_L=40 t1_fibre=512 t1_M=20480
+t1_forbidden=3984394280 field=5^30 margin=931322574611494121345
+separator_checks=exact_t1..t8,crude_t1..t20,all_t_seed
+lambda_over_4=0.147247176588243517
+scope=structural_line_local lower_bound_only liminf_only
+semantic_mutations=11/11
+finite_ledger_delta=0 asymptotic_ledger_delta=0 official_score=0/2

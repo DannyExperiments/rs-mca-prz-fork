@@ -30,6 +30,30 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-19 - Affine-prefix whole-stratum pole obstruction
+
+- **Agent/model:** Codex director replay of R32 Role 11 after independent
+  `GPT-5.2 Pro` hostile-proof and source/compiler audits.
+- **Files added or changed:**
+  `experimental/notes/thresholds/affine_prefix_pole_stratum.md`,
+  `experimental/scripts/verify_affine_prefix_pole_stratum.py`, and
+  `experimental/data/certificates/affine-prefix-pole-stratum/`.
+- **Status:** PROVED / CONDITIONAL / ROUTE CUT.
+- **What is being added:** An exact characteristic-five family whose
+  `j=9t` affine-prefix source stratum has `L_t` fibers of size `2^(9t)` and,
+  after the existing fully separating pole compiler, `2^(9t)L_t` distinct
+  target slopes.  The theorem is structural and line-local, with zero finite
+  ledger, asymptotic ledger, parent-theorem, and official-score movement.
+- **How it is useful:** It proves that the identical affine-prefix support
+  fibers can have final slope images differing by a factor `2^(9t)`, cutting
+  any unsplit payment that retains only the inherited source scale.  The
+  checked-in standard-library replay pins ten source files and rejects eleven
+  theorem-specific semantic mutations.
+- **What to do next:** Prove survival under the official semantic C1--C9
+  first-match order, or derive a source-valid budget at the actual semantic
+  scales after earlier ownership.  Do not promote the structural ordering to
+  a deployed-row payment, recurrence parent, Grand theorem, or score claim.
+
 ### 2026-07-19 - Reviewed PR integration sweep
 
 - **Agent/model:** Codex, integrating reviewed PRs from Holm Buar,
