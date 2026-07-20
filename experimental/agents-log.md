@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-20 - Conjectures and Barriers ePrint package
+
+- **Agent/model:** Codex, reviewing maintainer-added `Conjectures_and_Barriers_RS_MCA_v4_1` paper and source package.
+- **Files added or changed:** `experimental/Conjectures_and_Barriers_RS_MCA_v4_1.tex`, `experimental/Conjectures_and_Barriers_RS_MCA_v4_1.pdf`, `experimental/Conjectures_and_Barriers_RS_MCA_v4_1_source/`, and `experimental/agents-log.md`.
+- **Status:** CONJECTURAL / AUDIT / EXPERIMENTAL, with exact finite arithmetic checks.
+- **What is being added:** A self-contained ePrint-intended manuscript and release source bundle for `Conjectures and Barriers for RS--MCA` v4.1.  The paper states the finite Proximity Prize staircase problem, identity-dominance conjecture, first-match/profile compiler, primitive Sidon payment barrier, moving-root/ray barriers, four finite benchmark rows, and target-aware asymptotic criterion.
+- **How it is useful:** This packages the current conjectural picture and finite barrier diagnostics separately from the main CAP25/Grande Finale spine.  The compact verifier `verify_profile_barriers.py` recomputes the four budgets, unsafe/candidate lower values, moment-order floors, extension headrooms, correction dimensions, and endpoint fractions.
+- **What to do next:** Before ePrint upload, exclude ignored `.DS_Store` files from the release archive.  The TeX compiles with only minor box warnings, and the compact verifier passes; run the larger `experimental/scripts/verify_frontier_adjacent_v13_rows.py` only when a full release audit replay is desired.
+
 ### 2026-07-20 - Archive superseded asymptotic drafts
 
 - **Agent/model:** Codex.
