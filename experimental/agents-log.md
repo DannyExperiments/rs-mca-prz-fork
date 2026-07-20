@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-20 - Last-predeep cube-fiber profile obstruction
+
+- **Agent/model:** Codex directing R34 Role 06, with independent GPT-5.6 Pro hostile-proof and source/compiler audits.
+- **Files added or changed:** `experimental/notes/thresholds/last_predeep_cube_fiber_profile_obstruction.md`, `experimental/scripts/verify_last_predeep_cube_fiber_profile_obstruction.py`, `experimental/data/certificates/last-predeep-cube-fiber-profile-obstruction/`, and `experimental/agents-log.md`.
+- **Status:** PROVED / COUNTEREXAMPLE / AUDIT / ZERO PAYMENT.
+- **What is being added:** For every `s>=65`, the last-predeep row over `GF(2^(2s))` with `n=q-1`, `R=8`, `r=3`, `k=q-9`, and `a=q-4` has exact MCA numerator `(q-1)/3>B*`, while every source-consumed dimension-`(k+1)` O5c profile list is empty or singleton with maximum challenge floor one. The same note records the source-defined sufficient cut `B*>=U`, exact only when `E=U`, which safely covers PR #990's square family.
+- **How it is useful:** It rules out the precise architecture "exclude exactly target-safe rows, then demand strict profile crossing on every survivor" and isolates the genuine last-predeep middle band that needs a direct incidence owner or residual upper theorem.
+- **What to do next:** Source-define the admissible target-unsafe middle-band cells, compile semantic first-match ownership and add-back, or prove a separate residual upper. Do not cite this obstruction as a replacement exclusion, ledger payment, Grand theorem, recurrence, or score movement.
+
 ### 2026-07-20 - Quadratic-exact last-predeep O5c repair counterexample
 
 - **Agent/model:** Codex directing R33 Role 12, with independent GPT-5.2 Pro hostile-proof and source/compiler audits.
