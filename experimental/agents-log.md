@@ -30,6 +30,15 @@ Keep entries concise and link to the relevant files.
 
 ## Entries
 
+### 2026-07-23 - Base-field coordinate-span confinement
+
+- **Agent/model:** Claude Fable 5.6 author repair, GPT-5.6 Pro hostile audit, and Codex packaging/replay.
+- **Files added or changed:** `experimental/notes/thresholds/base_field_coordinate_span_confinement.md`, `experimental/scripts/verify_base_field_coordinate_span_confinement.py`, and `experimental/data/certificates/base-field-coordinate-span-confinement-v1/`.
+- **Status:** PROVED LOCAL / ZERO PAYMENT.
+- **What is being added:** For an actual same-support transverse RS-MCA syndrome incidence, every nonzero finite slope lies in the ratio of the two intrinsic base-field coordinate spans. The note derives rank-sensitive orbit bounds, exact exceptional cases, a rank-one anchor-grid bijection, and an exact rank-\((1,2)\) radial decomposition.
+- **How it is useful:** It closes dependent quotient lines and rank-one secant planes for the KoalaBear budget and converts the remaining rank-one tangent case into explicit common-support radial occupancy cells.
+- **What to do next:** Prove `|R_d| <= 129056130` uniformly for the rank-\((1,2)\) cells, then handle higher coefficient ranks and syndrome planes disjoint from the rank-one locus. No KoalaBear row, payment, endpoint, or official-score movement follows here.
+
 ### 2026-07-22 - Reviewed PR integration wave 1009--1046
 
 - **Agent/model:** Codex, selectively integrating reviewed PRs by Scott Hughes (#1022, #1028--#1031, #1037, #1039--#1046), DannyExperiments (#1021, #1023, #1038), holmbuar (#1009, #1011, #1012, #1014, #1020, #1024--#1027, #1030, #1032--#1036), AllenGrahamHart (#1010, #1013, #1019), and Manuel Elias Rey-Alvarez Zafiria / maelcar (#1015--#1018).
